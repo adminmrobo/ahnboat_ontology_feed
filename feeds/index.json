@@ -27,7 +27,11 @@
    "parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/machine-learning.xml"
    ],
-   "jsonld": "https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/machine-learning.jsonld"
+   "jsonld": "https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/machine-learning.jsonld",
+   "txt": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/txt/machine-learning.txt",
+   "txt_parts": [
+    "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/txt/machine-learning.txt"
+   ]
   },
   {
    "name": "딥러닝·뇌과학",
@@ -43,7 +47,11 @@
    "parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/deep-learning-neuroscience.xml"
    ],
-   "jsonld": "https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/deep-learning-neuroscience.jsonld"
+   "jsonld": "https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/deep-learning-neuroscience.jsonld",
+   "txt": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/txt/deep-learning-neuroscience.txt",
+   "txt_parts": [
+    "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/txt/deep-learning-neuroscience.txt"
+   ]
   },
   {
    "name": "AI 감각·생성",
@@ -59,7 +67,11 @@
    "parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/ai-senses-generation.xml"
    ],
-   "jsonld": "https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/ai-senses-generation.jsonld"
+   "jsonld": "https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/ai-senses-generation.jsonld",
+   "txt": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/txt/ai-senses-generation.txt",
+   "txt_parts": [
+    "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/txt/ai-senses-generation.txt"
+   ]
   },
   {
    "name": "LLM·추론 엔지니어링",
@@ -76,7 +88,12 @@
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/llm-inference-engineering-p1.xml",
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/llm-inference-engineering-p2.xml"
    ],
-   "jsonld": "https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/llm-inference-engineering.jsonld"
+   "jsonld": "https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/llm-inference-engineering.jsonld",
+   "txt": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/txt/llm-inference-engineering.txt",
+   "txt_parts": [
+    "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/txt/llm-inference-engineering-p1.txt",
+    "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/txt/llm-inference-engineering-p2.txt"
+   ]
   },
   {
    "name": "경제·수학·최적화",
@@ -93,7 +110,12 @@
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/economics-math-optimization-p1.xml",
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/economics-math-optimization-p2.xml"
    ],
-   "jsonld": "https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/economics-math-optimization.jsonld"
+   "jsonld": "https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/economics-math-optimization.jsonld",
+   "txt": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/txt/economics-math-optimization.txt",
+   "txt_parts": [
+    "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/txt/economics-math-optimization-p1.txt",
+    "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/txt/economics-math-optimization-p2.txt"
+   ]
   },
   {
    "name": "금융·핀테크·블록체인",
@@ -110,7 +132,12 @@
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/finance-fintech-blockchain-p1.xml",
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/finance-fintech-blockchain-p2.xml"
    ],
-   "jsonld": "https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/finance-fintech-blockchain.jsonld"
+   "jsonld": "https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/finance-fintech-blockchain.jsonld",
+   "txt": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/txt/finance-fintech-blockchain.txt",
+   "txt_parts": [
+    "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/txt/finance-fintech-blockchain-p1.txt",
+    "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/txt/finance-fintech-blockchain-p2.txt"
+   ]
   },
   {
    "name": "통계·데이터 기초",
@@ -127,7 +154,12 @@
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/statistics-data-basics-p1.xml",
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/statistics-data-basics-p2.xml"
    ],
-   "jsonld": "https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/statistics-data-basics.jsonld"
+   "jsonld": "https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/statistics-data-basics.jsonld",
+   "txt": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/txt/statistics-data-basics.txt",
+   "txt_parts": [
+    "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/txt/statistics-data-basics-p1.txt",
+    "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/txt/statistics-data-basics-p2.txt"
+   ]
   },
   {
    "name": "인공지능 응용",
@@ -144,7 +176,12 @@
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/applied-ai-p1.xml",
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/applied-ai-p2.xml"
    ],
-   "jsonld": "https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/applied-ai.jsonld"
+   "jsonld": "https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/applied-ai.jsonld",
+   "txt": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/txt/applied-ai.txt",
+   "txt_parts": [
+    "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/txt/applied-ai-p1.txt",
+    "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/txt/applied-ai-p2.txt"
+   ]
   }
  ],
  "all_parts": [
@@ -155,5 +192,10 @@
   "bg_hero": "https://adminmrobo.github.io/ahnboat_ontology_feed/assets/bg_hero.webp",
   "bg_banner": "https://adminmrobo.github.io/ahnboat_ontology_feed/assets/bg_banner.webp",
   "cover": "https://adminmrobo.github.io/ahnboat_ontology_feed/assets/cover.webp"
- }
+ },
+ "all_txt": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/txt/all.txt",
+ "all_txt_parts": [
+  "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/txt/all-p1.txt",
+  "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/txt/all-p2.txt"
+ ]
 }

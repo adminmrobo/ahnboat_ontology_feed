@@ -106,6 +106,22 @@
   .hint { font-size:13px; color:var(--sub); display:flex; gap:8px; align-items:center; margin:4px 0 10px; }
   .hint img { width:36px; height:36px; border-radius:8px; background:var(--soft); }
 
+  /* 관련 개념 미리 찾기 · 답 형식 · 답 확인 도우미 */
+  .found { margin-top:14px; border:1px solid var(--line); border-radius:12px; padding:12px 16px; }
+  .found h3 { font-size:15px; margin:0 0 4px; }
+  .found .list { display:grid; gap:4px; margin-top:6px; font-size:14px; }
+  .found label { display:flex; gap:8px; align-items:flex-start; line-height:1.5; }
+  .found label small { color:var(--sub); }
+  .found .other { margin-top:10px; padding-top:8px; border-top:1px dashed var(--line); }
+  .found .addf { font-size:12px; padding:1px 8px; margin-left:4px; }
+  .fmt { margin-top:14px; display:flex; gap:8px 18px; flex-wrap:wrap; font-size:14px; align-items:center; background:var(--soft); border-radius:10px; padding:10px 14px; }
+  .fmt b { font-size:13px; color:var(--sub); }
+  .chk table { margin-top:10px; }
+  .chk .st { white-space:nowrap; font-weight:700; }
+  .ok { color:#2f7d5b; } .mid { color:#9a5b00; } .bad { color:#b53a3a; }
+  .tally { display:flex; gap:10px; flex-wrap:wrap; margin-top:10px; }
+  .tally span { background:var(--soft); border-radius:99px; padding:2px 12px; font-size:13px; }
+
   /* AI 판단 코너 */
   .judge { border:2px dashed #d7b4b4; border-radius:14px; padding:16px 20px; }
   .ans { background:var(--soft); border-radius:10px; padding:12px 16px; font-size:14px; }
@@ -234,7 +250,8 @@
     <div class="tstep" data-t="4" data-label="④ 답 확인하기">
       <div class="say c-sia"><img class="px" src="assets/char/sia_signal.webp" alt="시아"><div class="bub"><b>시아</b>마지막으로 답을 확인해요. 세 가지만 보세요. ① 문장 앞에 [피드]와 [일반 지식] 표시가 있나 ② [피드] 문장의 링크를 하나쯤 눌러서 정말 그 내용이 있나 ③ "찾지 못했다"는 말이 있나.</div></div>
       <div class="say c-sia"><img class="px" src="assets/char/sia_proud.webp" alt="시아"><div class="bub"><b>시아</b>③은 나쁜 소식이 아니에요. AI가 정직하게 답했다는 뜻이고, 연구실에 아직 없는 주제를 찾았다는 뜻이기도 해요. 여기서 한 번 멈춰서 천천히 봐도 괜찮아요.</div></div>
-      <div class="tnav"><button data-go="judge">AI 판단 코너로 연습하기</button></div>
+      <div class="say c-sia"><img class="px" src="assets/char/sia_guide.webp" alt="시아"><div class="bub"><b>시아</b>②번은 직접 누르지 않아도 돼요. 받은 답을 '답 확인 도우미'에 붙여 넣으면 링크가 진짜 연구실 페이지를 가리키는지 한 번에 확인해 줘요.</div></div>
+      <div class="tnav"><button data-go="step4">④ 답 확인 도우미로 가기</button><button data-go="judge">AI 판단 코너로 연습하기</button></div>
     </div>
 
     <div class="tnav"><button id="tprev">← 이전</button><button id="tnext" class="primary">다음 →</button></div>
@@ -254,6 +271,20 @@
     <div class="hint"><img class="px" src="assets/char/moa_guide.webp" alt="">모아: 본 것 → 드는 생각 → 확인하고 싶은 질문 하나.</div>
     <textarea id="idea" placeholder="예: 네트워크경제학의 네트워크와 신경망의 뉴런 연결이 많이 닮은 것 같다. 그렇다면 …"></textarea>
     <div class="row2"><button data-example>예시 불러오기</button></div>
+    <div class="found" id="found">
+      <h3>관련 개념 미리 찾기</h3>
+      <div class="note">아이디어 글을 쓰면 연구실 개념 지도에서 관련 개념을 찾아 지시문에 함께 넣습니다. AI가 피드 링크를 읽지 못해도 근거가 전달됩니다. 빼고 싶은 개념은 체크를 끄세요.</div>
+      <div id="foundBody" class="note" style="margin-top:6px">아이디어를 쓰면 여기에 나타납니다.</div>
+    </div>
+    <div class="fmt">
+      <b>답 길이</b>
+      <label><input type="radio" name="len" value="short"> 핵심만</label>
+      <label><input type="radio" name="len" value="mid" checked> 보통</label>
+      <label><input type="radio" name="len" value="long"> 보고서</label>
+      <b style="margin-left:6px">더하기</b>
+      <label><input type="checkbox" id="optPlain" checked> 수식은 일반 글자로</label>
+      <label><input type="checkbox" id="optNew" checked> 온톨로지에 없는 개념 제안 받기</label>
+    </div>
   </div>
 
   <h2 id="step3">③ 지시문 복사하기</h2>
@@ -261,7 +292,15 @@
     <div class="hint"><img class="px" src="assets/char/asst_smile.webp" alt="">하루: 복사해서 평소 쓰는 AI 대화창에 그대로 붙이세요.</div>
     <pre id="prompt"></pre>
     <div class="row2"><button class="primary" id="copy">지시문 복사</button><span class="note" id="copied"></span></div>
-    <p class="note">AI가 링크를 읽지 못한다고 하면, 피드 주소를 브라우저로 열어 내용을 복사해 지시문 아래에 붙여 주세요.</p>
+    <p class="note">지시문에는 AI가 읽기 쉬운 텍스트판 피드(.txt)가 들어갑니다. 그래도 AI가 링크를 읽지 못한다고 하면, 피드 주소를 브라우저로 열어 내용을 복사해 지시문 아래에 붙여 주세요.</p>
+  </div>
+
+  <h2 id="step4">④ 답 확인하기 — 답 확인 도우미</h2>
+  <div class="tool chk" id="tool4">
+    <div class="hint"><img class="px" src="assets/char/fly_magnify.webp" alt="">초파리 연구원: AI 답을 통째로 붙여 넣어. [피드] 링크가 진짜인지 내가 다 대조해 주지.</div>
+    <textarea id="answer" placeholder="AI가 준 답을 여기에 붙여 넣으세요."></textarea>
+    <div class="row2"><button class="primary" id="checkBtn">확인하기</button><span class="note">붙여 넣은 글은 이 브라우저 안에서만 확인하고 어디에도 보내지 않습니다.</span></div>
+    <div id="checkOut"></div>
   </div>
 
   <!-- AI 판단 코너 -->
@@ -337,9 +376,10 @@
         <li>연결 데이터는 피드의 <a href="https://adminmrobo.github.io/fof-money-meridian-/02_fof_who_to_whom.html#lv4">상호연계비율</a>처럼 한국은행 상세자금순환표에서 구할 수 있습니다.</li>
       </ul>
       <p><b>5. 더 읽을 페이지</b>: <a href="https://adminmrobo.github.io/micro_economics/01_consumer_choice.html">미시경제학 연구실 · 소비자 선택</a> · <a href="https://adminmrobo.github.io/micro_economics/v2/09_demand.html">수요</a> · <a href="https://adminmrobo.github.io/micro_economics/v2/24_externalities.html">외부성</a> · <a href="https://adminmrobo.github.io/fof-money-meridian-/03_fof_between_stations.html">돈의 경맥 3</a> · <a href="https://adminmrobo.github.io/AI_Model_Review_Fruit_fly_special/1_fruitfly_brain_deep_learning.html">초파리 특별편 1</a> · <a href="https://adminmrobo.github.io/neural_network_atlas/2_neural_network_atlas_after.html">신경망 구조 도감 2</a></p>
-      <p class="note">덤으로 얻은 것: 사이트에 '네트워크 효과·네트워크 외부성' 개념이 아직 없다는 사실입니다. 아이디어 검증이 곧 다음 콘텐츠 후보 찾기가 됩니다.</p>
+      <p class="note">덤으로 얻은 것: 고른 두 분야에는 '네트워크 효과·네트워크 외부성' 개념이 없었습니다. 사이트 전체로 넓히면 금융·핀테크 쪽에 '네트워크 효과'가 하나 있고, '네트워크 외부성'은 아직 어디에도 없습니다. 아이디어 검증이 곧 다음 콘텐츠 후보 찾기가 됩니다. (지금은 '관련 개념 미리 찾기'가 고르지 않은 분야의 개념도 알려 줍니다.)</p>
     </div>
   </details>
+  <p class="note">다른 AI(ChatGPT)로도 같은 지시문을 돌려 봤습니다. 그 AI는 처음에 XML 피드를 읽지 못해 우회해서 읽었고(그래서 지금은 텍스트판 피드를 넣습니다), 답에 달린 연구실 링크 13개는 답 확인 도우미로 대조한 결과 모두 실제 개념 위치와 맞았습니다.</p>
 
 
   <!-- 피드 -->
@@ -438,7 +478,7 @@
   document.getElementById("tprev").addEventListener("click", function () { show(cur - 1); });
   document.getElementById("tnext").addEventListener("click", function () { show(cur === steps.length - 1 ? 0 : cur + 1); });
   show(0);
-  var TOOL = { step1: "tool1", step2: "tool2", step3: "tool3", judge: "tooljudge" };
+  var TOOL = { step1: "tool1", step2: "tool2", step3: "tool3", step4: "tool4", judge: "tooljudge" };
   document.querySelectorAll("[data-go]").forEach(function (b) {
     b.addEventListener("click", function () {
       var id = b.dataset.go, t = document.getElementById(TOOL[id]);
@@ -465,7 +505,7 @@
   var $ = function (id) { return document.getElementById(id); };
 
   function selected() {
-    if ($("all").checked) return [{ name: "전체 분야(요약)", parts: data.all_parts || [data.all] }];
+    if ($("all").checked) return [{ name: "전체 분야(요약)", parts: data.all_parts || [data.all], txt_parts: data.all_txt_parts }];
     return data.fields.filter(function (f) { return chosen[f.name]; });
   }
   function render() {
@@ -475,24 +515,159 @@
     $("warn").style.display = (!$("all").checked && nUrl > 4) ? "block" : "none";
     var idea = $("idea").value.trim() || "(여기에 내 아이디어를 적어 주세요)";
     var feeds = fs.length ? fs.map(function (f) {
-          var ps = f.parts || [f.feed];
+          var ps = f.txt_parts || f.parts || [f.feed];
           return ps.map(function (u, i) { return "- " + u + "  (" + f.name + (ps.length > 1 ? " " + (i + 1) + "/" + ps.length : "") + ")"; }).join("\n");
         }).join("\n")
       : "- (분야를 하나 이상 골라 주세요)";
     $("prompt").textContent =
       "너는 아이디어 검증 도우미야. 아래 ahnboat lab 온톨로지 피드(RSS)를 먼저 읽고, 그 안의 개념·정의·관계를 근거로 내 아이디어를 검증해 줘.\n\n" +
-      "[근거 피드] — 주소가 여러 개면 모두 읽어 줘.\n" + feeds + "\n\n" +
+      "[근거 피드] — 일반 텍스트 파일이야. 주소가 여러 개면 모두 읽어 줘.\n" + feeds + "\n\n" +
+      foundBlock() +
       "[내 아이디어]\n" + idea + "\n\n" +
       "[요청]\n" +
       "1. 내 아이디어와 관련된 개념을 피드에서 찾아, 개념 이름과 출처 링크를 함께 적어 줘.\n" +
       "2. 닮은 점과 다른 점을 나눠 정리해 줘.\n" +
       "3. 아이디어가 성립하지 않을 수 있는 반례나 한계를 들어 줘.\n" +
       "4. 아이디어를 확인할 방법(데이터·실험·수식)을 제안해 줘.\n" +
-      "5. 더 읽어 볼 ahnboat lab 페이지를 골라 줘.\n\n" +
+      "5. 더 읽어 볼 ahnboat lab 페이지를 골라 줘.\n" +
+      ($("optNew").checked ? "6. 피드에는 없지만 이 아이디어에 필요한 개념을 '온톨로지에 추가할 개념 제안'으로 따로 적어 줘.\n" : "") + "\n" +
+      "[답 형식]\n" + LEN[lenVal()] + "\n" +
+      ($("optPlain").checked ? "- 수식은 LaTeX 대신 일반 글자로 써 줘. 예: dQ/dP = ∂H/∂P − Q·∂Q/∂I\n" : "") + "\n" +
       "[규칙]\n" +
       "- 피드에서 가져온 내용에는 [피드], 너의 일반 지식에는 [일반 지식]이라고 표시해 줘.\n" +
       "- 피드에서 찾지 못한 것은 찾지 못했다고 말해 줘. 출처 링크를 지어내지 마.\n" +
-      "- 피드를 읽지 못했다면 답하기 전에 그 사실부터 알려 줘.";
+      "- 피드를 읽지 못했다면 답하기 전에 그 사실부터 알려 줘. 그때는 [미리 찾은 관련 개념] 목록만 [피드] 근거로 써.";
+  }
+  var LEN = { short: "- 핵심만 짧게: 요청마다 2~3문장, 전체 한 화면 안팎.", mid: "- 보통 길이: 요청마다 한 단락 안팎, 표는 꼭 필요할 때만.",
+              long: "- 보고서 형식: 소제목과 표를 써서 자세히." };
+  function lenVal() { var r = document.querySelector('input[name="len"]:checked'); return r ? r.value : "mid"; }
+
+  /* ---------- 관련 개념 미리 찾기 ---------- */
+  var SX = null, sxLoading = false, found = [], foundOff = {}, timer = null;
+  var STOP = "그렇다면 그러면 무엇 무엇이 것 것은 같다 같은 같은데 있을까 있다 있는 하는 한다 된다 되는 방식 방식으로 정도 많이 매우 구조가 추정할 수 다르고 다른 처럼 이런 그런 어떤 통해 대한 위한 관련 생각 아이디어 이것 그것 우리 내가 나는 경우 때문 때문에 하면 해서 보면 봐야 싶다 확인 검증 가능 가능한 가능할까 정말 아주 조금 거의 모든 각각 서로 사이 기존 전통적".split(" ");
+  function toks(t) {
+    var out = [];
+    t.split(/[^0-9A-Za-z가-힣]+/).forEach(function (w) {
+      if (!w) return;
+      if (/^[가-힣]+$/.test(w) && w.length > 2) w = w.replace(/(으로|에서|에게|까지|부터|처럼|보다|이며|이고|이란|라는|하는|으로서|와의|과의|은|는|이|가|을|를|의|와|과|로|에|도|만)$/, "");
+      if (w.length < 2 || STOP.indexOf(w) >= 0) return;
+      if (out.indexOf(w) < 0) out.push(w);
+    });
+    return out;
+  }
+  function loadSX(cb) {
+    if (SX) return cb();
+    if (sxLoading) return;
+    sxLoading = true;
+    $("foundBody").textContent = "개념 지도를 불러오는 중…";
+    fetch("feeds/search.json").then(function (r) { return r.json(); }).then(function (d) { SX = d; sxLoading = false; cb(); })
+      .catch(function () { sxLoading = false; $("foundBody").textContent = "개념 지도를 불러오지 못했습니다. 피드 주소만으로 지시문을 만듭니다."; });
+  }
+  function search() {
+    var idea = $("idea").value.trim();
+    if (idea.length < 6) { found = []; drawFound(); render(); return; }
+    loadSX(function () {
+      var tk = toks(idea), low = idea.toLowerCase(), sel = {};
+      data.fields.forEach(function (f) { if (chosen[f.name] || $("all").checked) sel[SX.fields.indexOf(f.name)] = 1; });
+      var seen = {}, res = [], W = {};
+      tk.forEach(function (t) {   // 낱말 무게: 개념 이름에 드물게 나오는 낱말일수록 무겁게 (네트워크·학습처럼 흔한 낱말은 가볍게)
+        var df = 0; SX.concepts.forEach(function (c) { if (c[0].indexOf(t) >= 0) df++; });
+        W[t] = df === 0 ? 0 : df <= 3 ? 5 : df <= 12 ? 4 : df <= 40 ? 2 : 1;
+      });
+      SX.concepts.forEach(function (c) {
+        var ko = c[0], en = (c[1] || "").toLowerCase(), def = c[3] || "", sc = 0, dhit = 0;
+        if (ko.length >= 2 && idea.indexOf(ko) >= 0) sc += ko.length >= 3 ? 7 : 5;
+        if (en.length >= 4 && low.indexOf(en) >= 0) sc += 4;
+        tk.forEach(function (t) {
+          if (ko.indexOf(t) >= 0) sc += W[t] + (ko === t ? 2 : 0);
+          else if (/^[a-z]/i.test(t) && en.indexOf(t.toLowerCase()) >= 0) sc += 2;
+          if (dhit < 2 && def.indexOf(t) >= 0 && (W[t] || 0) >= 2) { sc += 1; dhit++; }
+        });
+        if (!def) sc -= 2;   // 정의가 없는 개념은 근거로 약하니 뒤로
+        if (sc < 4) return;
+        var key = ko + "|" + c[4];
+        if (seen[key]) return; seen[key] = 1;
+        var mine = c[5].some(function (i) { return sel[i]; });
+        res.push({ c: c, sc: sc + (mine ? 1 : 0), mine: mine });
+      });
+      res.sort(function (a, b) { return b.sc - a.sc || a.c[0].length - b.c[0].length; });
+      var anySel = Object.keys(sel).length > 0;
+      found = res.filter(function (r) { return r.mine || !anySel; }).slice(0, 12)
+        .concat(anySel ? res.filter(function (r) { return !r.mine; }).slice(0, 6) : []);
+      drawFound(); render();
+    });
+  }
+  function fname(c) { return c[5].map(function (i) { return SX.fields[i]; }).join("·"); }
+  function drawFound() {
+    var box = $("foundBody");
+    if (!found.length) { box.innerHTML = $("idea").value.trim().length < 6 ? "아이디어를 쓰면 여기에 나타납니다." : "관련 개념을 찾지 못했습니다. 다른 낱말로 써 보거나 분야를 바꿔 보세요."; return; }
+    var mine = found.filter(function (r) { return r.mine || !Object.keys(chosen).some(function (k) { return chosen[k]; }); });
+    var other = found.filter(function (r) { return mine.indexOf(r) < 0; });
+    function row(r) {
+      var k = r.c[0] + "|" + r.c[4];
+      return '<label><input type="checkbox" data-k="' + encodeURIComponent(k) + '"' + (foundOff[k] ? "" : " checked") + '><span><b>' + esc(r.c[0]) +
+        '</b> <small>(' + esc(r.c[2]) + ' · ' + esc(fname(r.c)) + ')</small> — ' + esc(r.c[3] || "정의 없음") + ' <a href="' + r.c[4] + '" target="_blank" rel="noopener">출처</a></span></label>';
+    }
+    var h = '<div class="list">' + mine.map(row).join("") + '</div>';
+    if (other.length) {
+      var fs = [];
+      other.forEach(function (r) { r.c[5].forEach(function (i) { var n = SX.fields[i]; if (fs.indexOf(n) < 0) fs.push(n); }); });
+      h += '<div class="other"><b style="font-size:13px">고르지 않은 분야에도 관련 개념이 있어요</b> ' +
+        fs.map(function (n) { return '<button class="addf" data-f="' + esc(n) + '">+ ' + esc(n) + ' 고르기</button>'; }).join("") +
+        '<div class="list">' + other.map(row).join("") + '</div></div>';
+    }
+    box.innerHTML = h;
+    box.querySelectorAll("input[data-k]").forEach(function (i) {
+      i.addEventListener("change", function () { var k = decodeURIComponent(i.dataset.k); if (i.checked) delete foundOff[k]; else foundOff[k] = 1; render(); });
+    });
+    box.querySelectorAll("button.addf").forEach(function (b) {
+      b.addEventListener("click", function () { chosen[b.dataset.f] = true; $("all").checked = false; drawFields(); search(); });
+    });
+  }
+  function esc(t) { return String(t).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function foundBlock() {
+    var on = found.filter(function (r) { return !foundOff[r.c[0] + "|" + r.c[4]]; });
+    if (!on.length) return "";
+    return "[미리 찾은 관련 개념] — 이 페이지가 연구실 개념 지도에서 미리 찾은 것이야. 피드와 같은 출처이니 [피드] 근거로 써도 돼.\n" +
+      on.map(function (r) { return "- " + r.c[0] + " (" + r.c[2] + ", " + fname(r.c) + ") — " + (r.c[3] || "정의 없음") + " · " + r.c[4]; }).join("\n") + "\n\n";
+  }
+
+  /* ---------- 답 확인 도우미 ---------- */
+  function checkAnswer() {
+    var t = $("answer").value;
+    if (!t.trim()) { $("checkOut").innerHTML = '<p class="note">먼저 AI 답을 붙여 넣어 주세요.</p>'; return; }
+    loadSX(function () {
+      var re = /https?:\/\/adminmrobo\.github\.io\/[^\s)\]>"'`,]+/g, m, urls = [], seen = {};
+      while ((m = re.exec(t))) {
+        var u = m[0].replace(/[.;:!?]+$/, ""), clean = u.replace(/\?[^#]*/, "");
+        if (!seen[clean]) { seen[clean] = 1; urls.push({ raw: u, clean: clean, utm: u !== clean }); }
+      }
+      var byUrl = {};
+      SX.concepts.forEach(function (c) { (byUrl[c[4]] = byUrl[c[4]] || []).push(c[0]); });
+      var ok = 0, mid = 0, bad = 0, rows = urls.map(function (x) {
+        var page = x.clean.split("#")[0], anc = x.clean.indexOf("#") >= 0 ? "#" + x.clean.split("#")[1] : "";
+        var pa = SX.pages[page], st, cls, note;
+        if (byUrl[x.clean]) { st = "있음"; cls = "ok"; ok++; note = byUrl[x.clean].slice(0, 4).join(", "); }
+        else if (pa && pa.indexOf(anc) >= 0) { st = "있음"; cls = "ok"; ok++; note = anc ? "그 위치에 개념이 걸려 있음" : "연구실 페이지"; }
+        else if (pa) { st = "위치 확인 필요"; cls = "mid"; mid++; note = "페이지는 있지만 " + anc + " 위치에는 개념이 없음"; }
+        else if (x.clean.indexOf("/ahnboat_ontology_feed/") >= 0) { st = "피드 주소"; cls = "ok"; ok++; note = "근거 피드 자체"; }
+        else { st = "없는 주소"; cls = "bad"; bad++; note = "개념 지도에 없는 주소 — 지어낸 출처일 수 있음"; }
+        return "<tr><td class=\"st " + cls + "\">" + st + "</td><td><a href=\"" + esc(x.clean) + "\" target=\"_blank\" rel=\"noopener\"><code>" +
+          esc(x.clean.replace("https://adminmrobo.github.io/", "")) + "</code></a>" + (x.utm ? " <small class=\"note\">(추적 꼬리표는 떼고 확인)</small>" : "") + "</td><td>" + esc(note) + "</td></tr>";
+      });
+      var nFeed = (t.match(/\[피드\]/g) || []).length, nGen = (t.match(/\[일반 지식/g) || []).length;
+      var noLink = t.split("\n").filter(function (l) { return l.indexOf("[피드]") >= 0 && !/adminmrobo\.github\.io/.test(l); }).length;
+      var h = '<div class="tally"><span>[피드] 표시 ' + nFeed + '번</span><span>[일반 지식] 표시 ' + nGen + '번</span><span>연구실 링크 ' + urls.length +
+        '개</span><span class="ok">있음 ' + ok + '</span><span class="mid">위치 확인 ' + mid + '</span><span class="bad">없는 주소 ' + bad + '</span></div>';
+      if (urls.length) h += '<table><thead><tr><th>판정</th><th>링크</th><th>내용</th></tr></thead><tbody>' + rows.join("") + "</tbody></table>";
+      var fly = bad ? "없는 주소가 " + bad + "개 있어. 그 문장은 출처를 지어냈을 수 있으니 \"그 링크를 그대로 보여 줘\"라고 되물어 봐."
+        : (!urls.length ? "연구실 링크가 하나도 없네. [피드]라고 쓴 문장이 정말 피드에서 왔는지 링크를 달아 달라고 해 봐."
+        : "링크는 모두 실제 연구실 페이지를 가리켜. 합격! 그래도 중요한 문장 한두 개는 직접 눌러서 내용까지 맞는지 봐.");
+      if (noLink) fly += " 그리고 링크 없이 [피드]라고만 한 줄이 " + noLink + "개 있어. 표 제목일 수도 있지만, 내용이 있는 줄이면 어디서 왔는지 물어봐.";
+      if (nFeed === 0 && nGen === 0) fly = "[피드]·[일반 지식] 표시가 없어. 지시문을 통째로 붙였는지 확인하고, 표시를 붙여 다시 답해 달라고 해 봐. " + (urls.length ? "링크 판정은 위 표를 봐." : "");
+      h += '<div class="say c-fly"><img class="px" src="assets/char/' + (bad ? "fly_point" : "fly_arms") + '.webp" alt="초파리 연구원"><div class="bub"><b>초파리 연구원</b>' + esc(fly) + "</div></div>";
+      $("checkOut").innerHTML = h;
+    });
   }
   function drawFields() {
     var box = $("fields"); box.innerHTML = "";
@@ -505,7 +680,7 @@
       el.querySelector("input").addEventListener("change", function (e) {
         chosen[f.name] = e.target.checked;
         if (e.target.checked) $("all").checked = false;
-        drawFields(); render();
+        drawFields(); render(); if ($("idea").value.trim().length >= 6) search();
       });
       box.appendChild(el);
     });
@@ -526,11 +701,13 @@
   function loadExample() {
     $("idea").value = EXAMPLE; $("all").checked = false; chosen = {};
     EX_FIELDS.forEach(function (n) { chosen[n] = true; });
-    if (data) { drawFields(); render(); }
+    if (data) { drawFields(); render(); search(); }
     $("step2").scrollIntoView({ block: "start" });
   }
   $("all").addEventListener("change", function () { if ($("all").checked) chosen = {}; drawFields(); render(); });
-  $("idea").addEventListener("input", render);
+  $("idea").addEventListener("input", function () { render(); clearTimeout(timer); timer = setTimeout(search, 600); });
+  document.querySelectorAll('input[name="len"], #optPlain, #optNew').forEach(function (i) { i.addEventListener("change", render); });
+  $("checkBtn").addEventListener("click", checkAnswer);
   document.querySelectorAll("[data-example]").forEach(function (b) { b.addEventListener("click", loadExample); });
   $("copy").addEventListener("click", function () {
     var t = $("prompt").textContent;

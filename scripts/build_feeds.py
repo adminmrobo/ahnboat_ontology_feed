@@ -324,6 +324,8 @@ def build(src):
         json.dump(index, f, ensure_ascii=False, indent=1)
         f.write("\n")
     index["images"] = prepare_images()
+    write_text_feeds(index)
+    write_search_index(onto, fields, index)
     with open(os.path.join(ROOT, "feeds", "index.json"), "w", encoding="utf-8") as f:
         json.dump(index, f, ensure_ascii=False, indent=1)
         f.write("\n")
@@ -383,6 +385,61 @@ def prepare_images():
             out[name] = BASE + "assets/%s.webp" % name
     return out
 
+def write_text_feeds(index):
+    """XML을 못 읽는 AI 웹 도구를 위해 각 피드를 같은 내용의 일반 텍스트(feeds/txt/*.txt)로도 쓴다."""
+    import xml.dom.minidom as minidom
+    tdir = os.path.join(ROOT, "feeds", "txt")
+    os.makedirs(tdir, exist_ok=True)
+    for old in os.listdir(tdir):
+        if old.endswith(".txt"):
+            os.remove(os.path.join(tdir, old))
+    def text(node, tag):
+        el = node.getElementsByTagName(tag)
+        return "".join(c.data for c in el[0].childNodes if c.nodeType in (c.TEXT_NODE, c.CDATA_SECTION_NODE)) if el else ""
+    for name in sorted(os.listdir(os.path.join(ROOT, "feeds"))):
+        if not name.endswith(".xml"):
+            continue
+        dom = minidom.parse(os.path.join(ROOT, "feeds", name))
+        ch = dom.getElementsByTagName("channel")[0]
+        out = ["# " + text(ch, "title"), text(ch, "description"),
+               "기준: " + text(ch, "lastBuildDate") + " · 라이선스 CC BY-NC 4.0 · 원본 RSS: " + BASE + "feeds/" + name, ""]
+        for it in ch.getElementsByTagName("item"):
+            out += ["", "## " + text(it, "title"), "주소: " + text(it, "link"), text(it, "description").strip()]
+        with open(os.path.join(tdir, name[:-4] + ".txt"), "w", encoding="utf-8") as f:
+            f.write("\n".join(out) + "\n")
+    def t(u):
+        return u.replace("/feeds/", "/feeds/txt/").replace(".xml", ".txt")
+    for f in index["fields"]:
+        f["txt"] = t(f["feed"])
+        f["txt_parts"] = [t(u) for u in f["parts"]]
+    index["all_txt"] = t(index["all"])
+    index["all_txt_parts"] = [t(u) for u in index.get("all_parts", [index["all"]])]
+
+
+def write_search_index(onto, fields, index):
+    """지시문 생성 페이지가 아이디어 글에서 관련 개념을 미리 찾고, AI 답의 링크를 확인하는 데 쓰는 색인.
+    concepts: [한국어 이름, 영문 이름, 유형, 정의, 출처 주소, 분야 번호들]"""
+    pages = {p["id"]: p for p in onto["pages"]}
+    fidx = {n: i for i, n in enumerate(fields)}
+    rows, anchors = [], collections.defaultdict(set)
+    for n in onto["nodes"]:
+        url = ""
+        for pid, a in n.get("p", []):
+            p = pages.get(pid)
+            if p:
+                anchors[p["url"]].add(a or "")
+                if not url:
+                    url = p["url"] + (a or "")
+        rows.append([n.get("ko") or n["id"], n.get("en") or "", TYPE_KO.get(n.get("t"), n.get("t") or ""),
+                     n.get("def") or "", url, [fidx[c] for c in n.get("c", []) if c in fidx]])
+    for p in onto["pages"]:
+        anchors[p["url"]].add("")
+    doc = {"updated": index["updated"], "fields": fields, "concepts": rows,
+           "pages": {u: sorted(a) for u, a in sorted(anchors.items())}}
+    with open(os.path.join(ROOT, "feeds", "search.json"), "w", encoding="utf-8") as f:
+        json.dump(doc, f, ensure_ascii=False, separators=(",", ":"))
+
+
 def write_llms(index):
     s = index.get("summary", {})
     out = ["# ahnboat lab 온톨로지 피드", "",
@@ -395,7 +452,8 @@ def write_llms(index):
            "- 항목마다 [페이지] 목록이 먼저 나온다(`p1 = 제목 — 주소`). 개념 줄 `- 이름 (유형) — 정의 [p1#lv3]`의 대괄호는 출처 페이지 기호와 그 안의 위치다. 출처 주소 = 해당 페이지 주소 + #위치.",
            "- 관계 줄: `- A → B : 관계`. 영문 이름과 관계 원어는 분야별 JSON-LD에 있다.",
            "- 근거로 인용할 때는 개념 이름과 출처 URL을 함께 적는다. 피드에 없는 내용은 일반 지식이라고 구분한다.",
-           "- 피드는 하루 두 번 다시 만들어지며 최신판만 담는다. 라이선스 CC BY-NC 4.0.", "",
+           "- 피드는 하루 두 번 다시 만들어지며 최신판만 담는다. 라이선스 CC BY-NC 4.0.",
+           "- XML을 읽기 어려우면 같은 내용의 텍스트판을 쓴다: 피드 주소의 /feeds/ 를 /feeds/txt/ 로, .xml 을 .txt 로 바꾼 주소.", "",
            "## 분야별 피드", ""]
     for f in index["fields"]:
         out.append("- [%s](%s): 콘텐츠 %d개, 개념 %s개 — %s (JSON-LD: %s)" % (
