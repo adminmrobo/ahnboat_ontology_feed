@@ -1,7 +1,88 @@
 # ahnboat lab 온톨로지 — LLM·추론 엔지니어링
-LLM·추론 엔지니어링 분야 공개 콘텐츠의 최신 지식 색인(개념·정의·관계). 기준일 2026-11-24. 대형 언어모델이 답을 만들어 내는 과정과, 그것을 빠르고 싸게 서빙하는 추론 엔지니어링을 스터디로 읽습니다.
-기준: Tue, 24 Nov 2026 00:00:00 +0900 · 라이선스 CC BY-NC 4.0 · 원본 RSS: https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/llm-inference-engineering.xml
+LLM·추론 엔지니어링 분야 공개 콘텐츠의 최신 지식 색인(개념·정의·관계). 기준일 2026-11-25. 대형 언어모델이 답을 만들어 내는 과정과, 그것을 빠르고 싸게 서빙하는 추론 엔지니어링을 스터디로 읽습니다.
+기준: Wed, 25 Nov 2026 00:00:00 +0900 · 라이선스 CC BY-NC 4.0 · 원본 RSS: https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/llm-inference-engineering.xml
 
+
+## 스터디 보드 · Inference Korea
+주소: https://adminmrobo.github.io/inference_korea_study_page/
+분야: LLM·추론 엔지니어링 · 학문 분야: 인공지능(공통), LLM·추론 엔지니어링 · 페이지 3쪽 · 개념 6개 · 관계 1개
+사이트: https://adminmrobo.github.io/inference_korea_study_page/
+
+[페이지] 기호 = 제목 — 주소
+p1 = Inference Korea 스터디 안내 — https://adminmrobo.github.io/inference_korea_study_page/guide.html
+p2 = Inference Korea 스터디 보드 — https://adminmrobo.github.io/inference_korea_study_page/index.html
+p3 = 추론 엔지니어링 주제 안내 — https://adminmrobo.github.io/inference_korea_study_page/topic.html
+
+[개념] 이름 (유형) — 정의 [출처 페이지 기호#위치]
+- 프롬프트 (개념) — AI에게 무엇을 만들지 알려 주는 글. [p1#prep-h]
+- 양자화 (방법) — 가중치를 2ᵇ개 눈금 중 가장 가까운 값으로 [p2#crew-h]
+- 추론 (개념) — 생성 AI 모델을 서비스에서 돌리는 과정. [p1#faq-h]
+- 추론 엔지니어링 (개념) — CUDA부터 쿠버네티스까지, 생성 AI 서비스를 더 빠르고 싸고 안정적으로 만드는 일. [p1#faq-h]
+- 추론 엔진 (개념) — 규칙을 사실과 맞춰 보며 결론을 이어 붙이는 장치. [p2#log-h]
+- 길 전체에 점수 매기기 — 작용 (개념) — 정의 없음 [p2#lcTheme]
+
+[관계] A → B, C : 관계
+- 추론 → 추론 엔지니어링 : 먼저 알아야 함
+
+## 2장 후반 발표 · 병목을 찾아라
+주소: https://adminmrobo.github.io/inference_engineering_study_week_02_textbook_ch02_p3_to_end_slide/
+분야: LLM·추론 엔지니어링 · 학문 분야: 인공지능(공통), LLM·추론 엔지니어링 · 페이지 3쪽 · 개념 20개 · 관계 8개
+사이트: https://adminmrobo.github.io/inference_engineering_study_week_02_textbook_ch02_p3_to_end_slide/
+
+[페이지] 기호 = 제목 — 주소
+p1 = 병목을 찾아라 · 쉬운 가이드 — https://adminmrobo.github.io/inference_engineering_study_week_02_textbook_ch02_p3_to_end_slide/easy_guide.html
+p2 = 춤춰 GPU 시뮬레이터 — https://adminmrobo.github.io/inference_engineering_study_week_02_textbook_ch02_p3_to_end_slide/gpu_dance_simulator.html
+p3 = 병목을 찾아라 발표 — https://adminmrobo.github.io/inference_engineering_study_week_02_textbook_ch02_p3_to_end_slide/index.html
+
+[개념] 이름 (유형) — 정의 [출처 페이지 기호#위치]
+- 잠재공간 (개념) — 그림 하나 = 지도 위 점 하나 [p1#gMap]
+- LLM (용어) — 수십억~수조 파라미터의 대규모 언어모델. 범용성·창발성. [p1#gPick]
+- 인내(숙성 후 현금화) (개념) — 바로 쓰지 않고 오래 키운 뒤 돈으로 바꾼다 [p2#patCard]
+- 손실 (개념) — 그린 그림과 정답이 얼마나 다른지 나타내는 숫자. 이 페이지에서는 픽셀 차이의 제곱 평균. [p1#gMap]
+- 기울기 (개념) — 변수를 아주 조금 바꿨을 때 손실이 얼마나 변하는지. 손실을 줄이려면 기울기 반대쪽으로 고친다. [p1#dsMsg]
+- 경사하강 (용어) — 손실이 줄어드는 방향으로 가중치를 조금씩 옮기는 최적화 방법. [p1#dsMsg]
+- 대시보드 (개념) — 정의 없음 [p1#pIntro]
+- 병목 (개념) — 상자 가운데 가장 좁은 층. 접은 지도. [p1#stage]
+- 순전파 (개념) — 입력에서 출력 쪽으로 층마다 계산을 이어 가며 예측을 내는 과정. [p1#gMap]
+- 조각 (토큰) (개념) — 모델이 글을 읽는 단위. 낱말보다 잘게 나뉘기도 한다. [p3#cfEq]
+- 행렬곱 (개념) — 입력 벡터를 가중치 행렬에 곱해 출력 벡터를 만드는 계산. [p3#pR]
+- 프리필 (개념) — 입력 열 전체를 처리해 토큰마다 어텐션 값을 계산하고 KV 캐시에 저장하는 단계. [p1#gMap]
+- 디코드 (개념) — 순전파를 반복해 토큰을 하나씩 자기회귀로 만드는 단계. [p1#pR]
+- KV 캐시 (방법) — 앞 토큰들의 키·값 쌍을 저장해 다시 계산하지 않게 하는 저장소. 기본적으로 GPU 메모리에 있다. [p3#aR]
+- 번개 어텐션 (FlashAttention) (방법) — 블록으로 쪼개기와 다시 계산하기로 창고 메모리(HBM) 왕복을 줄인, IO를 따지는 정확한 어텐션 알고리즘. [p1#gFix]
+- 디노이저 (방법) — 잡음에서 시작해 프롬프트에 맞춰 이미지를 반복해서 고치는 핵심 모델. [p1#gPick]
+- 디노이징 단계 (개념) — 잠재 공간 전체를 한 번 고치는 단위. 대부분 30–50단계. [p1#faKp]
+- PagedAttention (방법) — KV 캐시를 페이지로 나눠 조회표로 찾아 조각난 메모리에 저장. [p1#gFix]
+- 영상 생성 (개념) — 정의 없음 [p1#pIntro]
+- (이 피드 위쪽에 이미 정의된 개념) 프롬프트
+
+[관계] A → B, C : 관계
+- 프롬프트 → LLM : 관련
+- 손실 → 기울기 : 먼저 알아야 함
+- 병목 → 잠재공간 : 먼저 알아야 함
+- 순전파 → 디노이징 단계 : ~의 일부
+- 프리필 → 디코드 : 먼저 알아야 함
+- 프리필 → KV 캐시 : 관련
+- 디노이저 → 잠재공간 : 관련
+- 디노이징 단계 → 디노이저 : ~의 일부
+
+## LLM의 마법 주문서 — Automate Anything
+주소: https://adminmrobo.github.io/Automate_prompt_lab/
+분야: LLM·추론 엔지니어링 · 학문 분야: LLM·추론 엔지니어링 · 페이지 1쪽 · 개념 4개 · 관계 3개
+사이트: https://adminmrobo.github.io/Automate_prompt_lab/
+
+[페이지] 기호 = 제목 — 주소
+p1 = LLM의 마법 주문서 — Automate Anything (하루판) — https://adminmrobo.github.io/Automate_prompt_lab/index.html
+
+[개념] 이름 (유형) — 정의 [출처 페이지 기호#위치]
+- 프롬프트 엔지니어링 (개념) — 모델이 원하는 출력을 내도록 지시문을 설계하는 기술. [p1#scroll]
+- 에이전트 (개념) — 목표를 받아 도구를 부르고 여러 단계를 스스로 실행하는 AI 시스템. [p1#scroll]
+- (이 피드 위쪽에 이미 정의된 개념) LLM, 프롬프트
+
+[관계] A → B, C : 관계
+- 프롬프트 엔지니어링 → 프롬프트 : 사용
+- 프롬프트 → LLM : 관련
+- 에이전트 → LLM : 사용
 
 ## 왜 지금 온톨로지인가 · 연구실 리포트(동향)
 주소: https://adminmrobo.github.io/ontology_trend_report/
@@ -13,7 +94,6 @@ p1 = 왜 지금 온톨로지인가 — 연구실 리포트(동향) · 2026년 11
 
 [개념] 이름 (유형) — 정의 [출처 페이지 기호#위치]
 - LLM과 RAG (방법) — 대규모 언어모델에 벡터 데이터베이스에서 검색한 관련 문서를 함께 넣어, 최신·조직 고유 정보를 근거로 답을 생성하게 하는 방법. [p1#g-graphrag]
-- 에이전트 (개념) — 목표를 받아 도구를 부르고 여러 단계를 스스로 실행하는 AI 시스템. [p1#g-agent]
 - 지식 그래프 (개념) — 대상과 관계를 뽑아 “누가 — 무슨 관계 — 무엇”으로 이어 둔 기록. [p1#g-kg]
 - 온톨로지 (개념) — 한 분야에 무엇이 있고 서로 어떤 관계인지를 사람과 기계가 같은 뜻으로 읽도록 적어 둔 명세. [p1#sec-4-1]
 - 시맨틱 계층 (개념) — 데이터 위에 업무 용어와 지표의 정의를 얹어 도구마다 같은 뜻으로 계산하게 하는 층. [p1#g-semantic-layer]
@@ -32,6 +112,7 @@ p1 = 왜 지금 온톨로지인가 — 연구실 리포트(동향) · 2026년 11
 - Palantir 분기 매출 (지표) — Palantir가 분기마다 공시하는 매출(단위: 10억 달러). [p1#fig-5-1]
 - 에이전트형 AI 정확도 (지표) — 정의 없음 [p1#kpi-gartner]
 - 지식 그래프 사실 수 (지표) — 정의 없음 [p1#tbl-5-2]
+- (이 피드 위쪽에 이미 정의된 개념) 에이전트
 
 [관계] A → B, C : 관계
 - LLM과 RAG → GraphRAG : 먼저 알아야 함
@@ -57,25 +138,6 @@ p1 = 왜 지금 온톨로지인가 — 연구실 리포트(동향) · 2026년 11
 - ISO 23726-3 산업 데이터 온톨로지(IDO) → OWL 2 : governedBy
 - ISO 23726-3 산업 데이터 온톨로지(IDO) → 온톨로지 : ~의 일부
 - Open Semantic Interchange (OSI) → 시맨틱 계층 : ~의 일부
-
-## LLM의 마법 주문서 — Automate Anything
-주소: https://adminmrobo.github.io/Automate_prompt_lab/
-분야: LLM·추론 엔지니어링 · 학문 분야: LLM·추론 엔지니어링 · 페이지 1쪽 · 개념 4개 · 관계 3개
-사이트: https://adminmrobo.github.io/Automate_prompt_lab/
-
-[페이지] 기호 = 제목 — 주소
-p1 = LLM의 마법 주문서 — Automate Anything (하루판) — https://adminmrobo.github.io/Automate_prompt_lab/index.html
-
-[개념] 이름 (유형) — 정의 [출처 페이지 기호#위치]
-- 프롬프트 엔지니어링 (개념) — 모델이 원하는 출력을 내도록 지시문을 설계하는 기술. [p1#scroll]
-- LLM (용어) — 수십억~수조 파라미터의 대규모 언어모델. 범용성·창발성. [p1#scroll]
-- 프롬프트 (개념) — AI에게 무엇을 만들지 알려 주는 글. [p1#scrollText]
-- (이 피드 위쪽에 이미 정의된 개념) 에이전트
-
-[관계] A → B, C : 관계
-- 프롬프트 엔지니어링 → 프롬프트 : 사용
-- 프롬프트 → LLM : 관련
-- 에이전트 → LLM : 사용
 
 ## 하루에 다 끝내는 자연어 분석 서머리 노트
 주소: https://adminmrobo.github.io/LLM_summary_note/
@@ -265,27 +327,6 @@ p2 = 토론의 밤 — 비밀번호가 새어 나간 사건, 누가 막아야 �
 - 비밀값 → 비밀값 유출 : ~의 일부
 - AI 코딩 비서 → .claude/settings.local.json : 관련
 
-## 스터디 보드 · Inference Korea
-주소: https://adminmrobo.github.io/inference_korea_study_page/
-분야: LLM·추론 엔지니어링 · 학문 분야: 인공지능(공통), LLM·추론 엔지니어링 · 페이지 3쪽 · 개념 6개 · 관계 1개
-사이트: https://adminmrobo.github.io/inference_korea_study_page/
-
-[페이지] 기호 = 제목 — 주소
-p1 = Inference Korea 스터디 안내 — https://adminmrobo.github.io/inference_korea_study_page/guide.html
-p2 = Inference Korea 스터디 보드 — https://adminmrobo.github.io/inference_korea_study_page/index.html
-p3 = 추론 엔지니어링 주제 안내 — https://adminmrobo.github.io/inference_korea_study_page/topic.html
-
-[개념] 이름 (유형) — 정의 [출처 페이지 기호#위치]
-- 양자화 (방법) — 가중치를 2ᵇ개 눈금 중 가장 가까운 값으로 [p2#crew-h]
-- 추론 (개념) — 생성 AI 모델을 서비스에서 돌리는 과정. [p1#faq-h]
-- 추론 엔지니어링 (개념) — CUDA부터 쿠버네티스까지, 생성 AI 서비스를 더 빠르고 싸고 안정적으로 만드는 일. [p1#faq-h]
-- 추론 엔진 (개념) — 규칙을 사실과 맞춰 보며 결론을 이어 붙이는 장치. [p2#log-h]
-- 길 전체에 점수 매기기 — 작용 (개념) — 정의 없음 [p2#lcTheme]
-- (이 피드 위쪽에 이미 정의된 개념) 프롬프트
-
-[관계] A → B, C : 관계
-- 추론 → 추론 엔지니어링 : 먼저 알아야 함
-
 ## rule base에서 일하는 AI까지
 주소: https://adminmrobo.github.io/rulebase_to_agent/
 분야: LLM·추론 엔지니어링 · 학문 분야: LLM·추론 엔지니어링, 논리학 · 페이지 15쪽 · 개념 122개 · 관계 136개
@@ -337,7 +378,6 @@ p15 = 강화학습이 꿰는 실 — https://adminmrobo.github.io/rulebase_to_ag
 - 원-핫 (개념) — 어휘 수만큼 긴 줄에서 제 번호 자리에만 1 [p5#s4]
 - 질문·열쇠·내용 (Q·K·V) (개념) — 조각마다 만드는 세 가지. Q와 K의 내적을 소프트맥스로 비율로 바꾸고 그 비율대로 V를 섞어 새 내용으로 쓴다. [p6#s3]
 - 컨텍스트 (개념) — 모델이 한 번에 보는 모든 것(지시, 대화, 문서, 도구 결과)을 고르고 배치하는 일. [p11#s3]
-- 조각 (토큰) (개념) — 모델이 글을 읽는 단위. 낱말보다 잘게 나뉘기도 한다. [p5#s7]
 - 자기일관성 (방법) — 여러 답을 만들어 가장 일관된 결론을 고르는 방법. 교재는 세 접근의 가격 통합으로 응용한다. [p9#s3]
 - REACT (ReAct) (방법) — 생각·행동·관찰을 반복하며 해법을 고치는 방법. [p10#s2]
 - Reflexion (방법) — 실패를 글로 돌아보고 그 기록으로 다음 시도를 고치는 문헌의 방법. [p12#s5]
@@ -421,7 +461,7 @@ p15 = 강화학습이 꿰는 실 — https://adminmrobo.github.io/rulebase_to_ag
 - 구조·훈련·운용 세 층 (개념) — 정의 없음 [p15#s4]
 - 사람의 자리 이동 (개념) — 정의 없음 [p15#s5]
 - 현장 도입 체크리스트 (개념) — 정의 없음 [p15#s11]
-- (이 피드 위쪽에 이미 정의된 개념) RNN, 트랜스포머와 셀프 어텐션, GPT, BERT, LLM과 RAG, 프롬프트, 로지스틱 회귀 (다항), 에이전트, 추론 엔진, 문맥형 임베딩
+- (이 피드 위쪽에 이미 정의된 개념) RNN, 트랜스포머와 셀프 어텐션, GPT, BERT, LLM과 RAG, 프롬프트, 로지스틱 회귀 (다항), 에이전트, 조각 (토큰), 추론 엔진, 문맥형 임베딩
 
 [관계] A → B, C : 관계
 - 언어 모델 → N-gram : 먼저 알아야 함
@@ -674,7 +714,6 @@ p15 = 페이지드 어텐션 — KV 캐시를 서랍처럼 나눠 담는다 (Pag
 p16 = 엔진 제어실 — 추론 소프트웨어 네 층 (Inference Engineering 4장 연구실 해설) — https://adminmrobo.github.io/inference_engineering_study/week_05_textbook_ch04/index.html
 
 [개념] 이름 (유형) — 정의 [출처 페이지 기호#위치]
-- 잠재공간 (개념) — 그림 하나 = 지도 위 점 하나 [p12#lv3]
 - 토큰 (용어) — 분석의 최소 단위로 나눈 조각. 단어·형태소·글자·부분 단어 등. [p8#lv3]
 - 어휘집 (용어) — 분석에 쓰는 고유 단어 목록과 각 단어에 붙인 번호(vocabulary). [p8#lv3]
 - 빔 서치와 Seq2Seq 개선 방안 (방법) — 디코딩 때 단계마다 확률이 높은 후보 몇 개(빔)를 남겨 문장 전체 확률이 큰 출력을 찾는 방법과, 어텐션·잔차 연결·층 정규화 같은 Seq2Seq 개선책. [p6#method]
@@ -689,7 +728,6 @@ p16 = 엔진 제어실 — 추론 소프트웨어 네 층 (Inference Engineering
 - 가용성 (지표) — 시스템이 필요할 때 실제로 동작하고 있는 시간의 비율. [p5#lv3]
 - 커널(선형·RBF)과 gamma (개념) — 데이터를 높은 차원으로 옮긴 것처럼 계산해 곡선 경계를 만드는 함수. 선형, RBF 등. [p10#method]
 - 상태 (개념) — 지금까지 읽은 것을 요약한 64칸짜리 숫자 묶음 h. 걸음마다 새로 계산되어 덮어써진다. [p8#summary]
-- 순전파 (개념) — 입력에서 출력 쪽으로 층마다 계산을 이어 가며 예측을 내는 과정. [p12#lv3]
 - 컴퓨트(연산 설비) (개념) — GPU가 초당 할 수 있는 부동소수점 연산 수. [p12#lv1]
 - HBM 메모리 (개념) — GPU의 큰 주 메모리. A100에서 40~80GB, 1.5~2.0TB/s. [p10#q]
 - 제약 (C) (개념) — 예산·시간·인력·규모의 한계를 숫자로 밝히는 요소. [p4#lv1]
@@ -777,7 +815,6 @@ p16 = 엔진 제어실 — 추론 소프트웨어 네 층 (Inference Engineering
 - 토큰과 다음 토큰 고르기 (개념) — 글을 토큰 번호로 바꾸고, 출력 로짓을 확률로 만든 뒤 하나를 뽑는 과정. [p8#lv3]
 - 어텐션과 KV 캐시 (방법) — 앞 토큰들과의 관계를 어텐션으로 계산하고, 앞 토큰의 키·값을 캐시에 저장해 다시 계산하지 않는 추론 방식. [p8#lv4]
 - 전문가 혼합 (MoE) (방법) — 큰 행렬 하나 대신 작은 전문가 행렬 여러 개를 두고, 라우터가 입력마다 몇 개만 활성화하는 구조. [p8#lv5]
-- 행렬곱 (개념) — 입력 벡터를 가중치 행렬에 곱해 출력 벡터를 만드는 계산. [p8#lv1]
 - SiLU (방법) — z·σ(z). 음수 쪽을 부드럽게 0 근처로 보내는 활성화 함수. [p8#lv2]
 - 토크나이저 (개념) — 문자열과 토큰 번호를 짝짓는 표. 신경망이 필요 없다. [p8#lv3]
 - 로짓 (용어) — 출력층이 어휘의 토큰마다 내는 점수. 정규화하면 확률이 된다. [p8#lv3]
@@ -786,9 +823,6 @@ p16 = 엔진 제어실 — 추론 소프트웨어 네 층 (Inference Engineering
 - top-p (방법) — 확률을 더해 p가 되는 가장 작은 토큰 묶음만 남긴다. [p8#lv3]
 - 채팅 템플릿 (용어) — 역할이 있는 대화, 도구 설명 등을 한 줄 입력으로 합치는 형식. 모델마다 조금씩 다르다. [p8#lv3]
 - 문맥 창 (용어) — 한 요청에서 처리·생성할 수 있는 토큰 총수. [p8#lv3]
-- 프리필 (개념) — 입력 열 전체를 처리해 토큰마다 어텐션 값을 계산하고 KV 캐시에 저장하는 단계. [p8#lv4]
-- 디코드 (개념) — 순전파를 반복해 토큰을 하나씩 자기회귀로 만드는 단계. [p8#lv4]
-- KV 캐시 (방법) — 앞 토큰들의 키·값 쌍을 저장해 다시 계산하지 않게 하는 저장소. 기본적으로 GPU 메모리에 있다. [p8#lv4]
 - 인과 마스크 (용어) — 뒤에 오는 토큰을 보지 못하게 가리는 장치. [p8#lv4]
 - 크로스 어텐션 (방법) — Q가 K·V와 다른 열에서 오는 어텐션. 이미지 생성·멀티모달 모델이 쓴다. [p8#lv4]
 - 피드포워드 층 (개념) — 트랜스포머 블록 안의 다층 퍼셉트론. 학습 가능한 가중치의 대부분을 차지한다. [p8#summary]
@@ -805,7 +839,6 @@ p16 = 엔진 제어실 — 추론 소프트웨어 네 층 (Inference Engineering
 - 켜진 전문가 비율 (지표) — 한 디코드 단계에서 한 번이라도 선택된 전문가의 비율. [p8#lv5]
 - 예측 오차 (지표) — 예측한 켜진 비율과 측정한 비율의 차이(%p). 작을수록 좋다. [p8#duel]
 - 발화 문턱 (생물 대응) — 뉴런은 입력이 문턱을 넘어야 발화한다. ReLU의 꺾임과 닮았다(실제 뉴런은 스파이크를 낸다). [p8#lv2]
-- 번개 어텐션 (FlashAttention) (방법) — 블록으로 쪼개기와 다시 계산하기로 창고 메모리(HBM) 왕복을 줄인, IO를 따지는 정확한 어텐션 알고리즘. [p10#method]
 - 표준 어텐션 (방법) — S=QKᵀ, P=softmax(S)를 창고 메모리에 쓰고 다시 읽어 O=PV를 계산하는 구현(알고리즘 0). [p10#q]
 - 블록 희소 번개 어텐션 (방법) — 마스크가 0인 블록을 건너뛰는 근사 어텐션. 창고 접근이 희소도 s에 비례해 준다. [p10#reread]
 - 근사 어텐션 (방법) — 희소·저랭크 근사로 계산을 줄인 어텐션. 실행 시간이 줄지 않는 경우가 많았다. [p10#q]
@@ -830,9 +863,7 @@ p16 = 엔진 제어실 — 추론 소프트웨어 네 층 (Inference Engineering
 - Long-range Arena (데이터) — 긴 문맥 트랜스포머를 비교하는 벤치마크 (길이 1K~4K 다섯 과제). [p10#r3]
 - 이미지 생성 파이프라인 (방법) — 텍스트 인코더·디노이저·VAE가 이어진 여러 모델의 파이프라인. [p12#lv2]
 - 텍스트 인코더 (방법) — 텍스트 프롬프트를 이미지 생성 모델이 이해하는 지시로 바꾸는 부품. [p12#lv2]
-- 디노이저 (방법) — 잡음에서 시작해 프롬프트에 맞춰 이미지를 반복해서 고치는 핵심 모델. [p12#lv2]
 - VAE(변분 오토인코더) (방법) — 잠재 공간의 출력을 픽셀 공간으로 바꾸는 부품. [p12#lv2]
-- 디노이징 단계 (개념) — 잠재 공간 전체를 한 번 고치는 단위. 대부분 30–50단계. [p12#lv2]
 - 가이던스 스케일 (개념) — 조건 있는/없는 두 순전파 결과를 섞는 비율. 창의성과 프롬프트 충실도의 균형, 보통 4 안팎의 정수. [p12#lv3]
 - 네거티브 프롬프트 (개념) — 이미지에 없어야 할 화풍·물체를 따로 적는 인자. [p12#lv3]
 - LoRA (방법) — 화풍을 바꾸고 품질을 올리는 가벼운 파인튜닝. [p12#lv2]
@@ -851,7 +882,6 @@ p16 = 엔진 제어실 — 추론 소프트웨어 네 층 (Inference Engineering
 - KV 캐시 (개념) — 앞 토큰들의 키·값 계산 결과를 저장해 디코드 어텐션을 선형 시간으로 만드는 저장소. [p12#lv8]
 - 어텐션 (개념) — 가장 비싼 추론 연산. 입력 길이의 제곱으로 늘어난다. [p12#lv7]
 - FP16 (용어) — 값 하나가 2바이트인 16비트 부동소수점 형식. [p12#lv1]
-- PagedAttention (방법) — KV 캐시를 페이지로 나눠 조회표로 찾아 조각난 메모리에 저장. [p12#lv8]
 - 슬라이딩 윈도우 어텐션 (방법) — 직전 w개 토큰만 봐서 O(N²)을 O(Nw)로. w는 흔히 8K–32K. [p12#lv9]
 - 게이트 어텐션 (방법) — 훈련 때 넣은 층으로 일부 구간의 어텐션을 선형 시간으로 근사. [p12#lv9]
 - 선형 어텐션 (방법) — 제곱인 소프트맥스 식을 선형 시간 근사로 바꿈. [p12#lv9]
@@ -931,7 +961,7 @@ p16 = 엔진 제어실 — 추론 소프트웨어 네 층 (Inference Engineering
 - 벤치마크 · 부하 시험 (방법) — 실제와 닮은 트래픽으로 지연 · 처리량을 재기. [p16#bench]
 - 프로파일링 (방법) — 시간이 추론 과정의 어디에 쓰였는지 단계별로 쪼개 보기. [p16#prof]
 - 한 번에 하나씩 바꾸기 (개념) — 기준선을 두고 최적화와 측정 설정을 하나씩만 바꿔 원인을 가리는 원칙. [p16#bench]
-- (이 피드 위쪽에 이미 정의된 개념) RNN, LSTM, 어텐션 메커니즘, 트랜스포머와 셀프 어텐션, 셀프 어텐션, 파인튜닝, 머리 (멀티헤드), 양자화, F1 점수, 계산량(FLOPs), 추론, 추론 엔지니어링, 바이트 쌍 인코딩
+- (이 피드 위쪽에 이미 정의된 개념) 잠재공간, RNN, LSTM, 어텐션 메커니즘, 트랜스포머와 셀프 어텐션, 셀프 어텐션, 파인튜닝, 머리 (멀티헤드), 양자화, F1 점수, 순전파, 계산량(FLOPs), 추론, 추론 엔지니어링, 바이트 쌍 인코딩, 행렬곱, 프리필, 디코드, KV 캐시, 번개 어텐션 (FlashAttention), 디노이저, 디노이징 단계, PagedAttention
 
 [관계] A → B, C : 관계
 - 잠재공간 → 영상 생성 모델 : 먼저 알아야 함
@@ -1190,36 +1220,6 @@ p16 = 엔진 제어실 — 추론 소프트웨어 네 층 (Inference Engineering
 - 그림자 트래픽 → 벤치마크 · 부하 시험 : ~의 일부
 - 벤치마크 · 부하 시험 → 프로파일링 : 먼저 알아야 함
 - 한 번에 하나씩 바꾸기 → 벤치마크 · 부하 시험 : ~의 일부
-
-## 2장 후반 발표 · 병목을 찾아라
-주소: https://adminmrobo.github.io/inference_engineering_study_week_02_textbook_ch02_p3_to_end_slide/
-분야: LLM·추론 엔지니어링 · 학문 분야: 인공지능(공통), LLM·추론 엔지니어링 · 페이지 3쪽 · 개념 20개 · 관계 8개
-사이트: https://adminmrobo.github.io/inference_engineering_study_week_02_textbook_ch02_p3_to_end_slide/
-
-[페이지] 기호 = 제목 — 주소
-p1 = 병목을 찾아라 · 쉬운 가이드 — https://adminmrobo.github.io/inference_engineering_study_week_02_textbook_ch02_p3_to_end_slide/easy_guide.html
-p2 = 춤춰 GPU 시뮬레이터 — https://adminmrobo.github.io/inference_engineering_study_week_02_textbook_ch02_p3_to_end_slide/gpu_dance_simulator.html
-p3 = 병목을 찾아라 발표 — https://adminmrobo.github.io/inference_engineering_study_week_02_textbook_ch02_p3_to_end_slide/index.html
-
-[개념] 이름 (유형) — 정의 [출처 페이지 기호#위치]
-- 인내(숙성 후 현금화) (개념) — 바로 쓰지 않고 오래 키운 뒤 돈으로 바꾼다 [p2#patCard]
-- 손실 (개념) — 그린 그림과 정답이 얼마나 다른지 나타내는 숫자. 이 페이지에서는 픽셀 차이의 제곱 평균. [p1#gMap]
-- 기울기 (개념) — 변수를 아주 조금 바꿨을 때 손실이 얼마나 변하는지. 손실을 줄이려면 기울기 반대쪽으로 고친다. [p1#dsMsg]
-- 경사하강 (용어) — 손실이 줄어드는 방향으로 가중치를 조금씩 옮기는 최적화 방법. [p1#dsMsg]
-- 대시보드 (개념) — 정의 없음 [p1#pIntro]
-- 병목 (개념) — 상자 가운데 가장 좁은 층. 접은 지도. [p1#stage]
-- 영상 생성 (개념) — 정의 없음 [p1#pIntro]
-- (이 피드 위쪽에 이미 정의된 개념) 잠재공간, LLM, 프롬프트, 순전파, 조각 (토큰), 행렬곱, 프리필, 디코드, KV 캐시, 번개 어텐션 (FlashAttention), 디노이저, 디노이징 단계, PagedAttention
-
-[관계] A → B, C : 관계
-- 프롬프트 → LLM : 관련
-- 손실 → 기울기 : 먼저 알아야 함
-- 병목 → 잠재공간 : 먼저 알아야 함
-- 순전파 → 디노이징 단계 : ~의 일부
-- 프리필 → 디코드 : 먼저 알아야 함
-- 프리필 → KV 캐시 : 관련
-- 디노이저 → 잠재공간 : 관련
-- 디노이징 단계 → 디노이저 : ~의 일부
 
 ## AI 에이전트 공식 속성 가이드 — 하루봇을 만들며 배우는 13장
 주소: https://adminmrobo.github.io/agentic_ai_crash_guide/

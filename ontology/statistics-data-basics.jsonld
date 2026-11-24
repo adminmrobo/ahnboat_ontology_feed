@@ -7,10 +7,973 @@
  },
  "@id": "https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/statistics-data-basics.jsonld",
  "dct:title": "ahnboat lab 온톨로지 — 통계·데이터 기초",
- "dct:modified": "2026-11-24",
+ "dct:modified": "2026-11-25",
  "dct:license": "https://creativecommons.org/licenses/by-nc/4.0/",
  "dct:creator": "안상선 (Ahn Sangsun)",
  "@graph": [
+  {
+   "@id": "lab:concept/standard-deviation",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "표준편차",
+     "@language": "ko"
+    },
+    {
+     "@value": "standard deviation",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "데이터가 평균에서 보통 얼마나 떨어져 있는지 나타내는 폭. 표준화의 한 눈금.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/tables.html#h-words"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/dispersion"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/dispersion"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/variance",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "분산",
+     "@language": "ko"
+    },
+    {
+     "@value": "variance",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "값이 평균에서 흩어진 정도. 주성분이 담은 분산의 몫으로 정보량을 가늠한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/dictionary.html#h-prompt"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/dispersion"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/dispersion"
+    }
+   ],
+   "lab:usedIn": [
+    {
+     "@id": "lab:method/standardize"
+    }
+   ],
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/covariance"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/mean",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "평균",
+     "@language": "ko"
+    },
+    {
+     "@value": "mean",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "모든 값을 더해 개수로 나눈 값. 데이터의 가운데를 나타냄.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/dictionary.html#h-prompt"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/central-tendency"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/dispersion"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/independence",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "독립 사건",
+     "@language": "ko"
+    },
+    {
+     "@value": "independent events",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "한 사건이 일어났다는 사실이 다른 사건의 확률을 바꾸지 않는 관계. P(A∩B) = P(A) × P(B).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/dictionary.html#reltable"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/independence"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:distribution/binomial"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/ab-test",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "A/B 테스트",
+     "@language": "ko"
+    },
+    {
+     "@value": "A/B test",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "사용자를 무작위로 두 무리로 나눠 한쪽에만 바꾼 버전을 보여 주고 지표를 비교하는 실험.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/tables.html#sim-ins"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/ab-testing"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/bayesian-average"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/confidence-interval",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "신뢰구간",
+     "@language": "ko"
+    },
+    {
+     "@value": "confidence interval",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "같은 방법으로 반복하면 그중 약 95%가 참값을 포함하는 구간(빈도주의). \"이 구간에 참값이 있을 확률 95%\"로 읽지 않음.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/tables.html#h-map"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/confidence-interval"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/diagnostic-uncertainty"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/power",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "검정력",
+     "@language": "ko"
+    },
+    {
+     "@value": "statistical power",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "진짜 효과가 있을 때 그것을 잡아낼 확률(보통 80%).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/tables.html#h-map"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/statistical-power"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/bayesian-ab-rollout"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/p-value",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "p값",
+     "@language": "ko"
+    },
+    {
+     "@value": "p-value",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "차이가 없다고 가정할 때 이만큼 또는 더 극단적인 결과가 나올 확률. 가설이 참일 확률이 아님.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/dictionary.html#h-py"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/p-value"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/bayesian-ab-rollout"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/sample-size",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "표본 크기",
+     "@language": "ko"
+    },
+    {
+     "@value": "sample size",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "전체(모집단) 가운데 실제로 관측한 일부. 표본이 작으면 우연한 차이가 크게 보인다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/tables.html#h-duel"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/sample-size"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/ab-test"
+    }
+   ],
+   "lab:derivedFrom": [
+    {
+     "@id": "lab:metric/power"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/standard-error"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/qq-plot",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "QQ 플롯",
+     "@language": "ko"
+    },
+    {
+     "@value": "Quantile-Quantile plot",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "내 데이터가 정규분포(또는 기준 분포)를 따르나? 점이 대각선 위에 있으면 기준 분포와 닮았습니다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/dictionary.html#h-prompt"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/probability-statistics"
+    },
+    {
+     "@id": "lab:topic/statistical-graphics"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/chart-distribution-view"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/residual-plot"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/type-i-error",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "1종 오류",
+     "@language": "ko"
+    },
+    {
+     "@value": "Type I error",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "차이가 없는데 있다고 판정하는 실수(헛경보), 확률 α",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/tables.html#h-s4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/probability-statistics"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:concept/type-ii-error"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/type-ii-error",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "2종 오류",
+     "@language": "ko"
+    },
+    {
+     "@value": "Type II error",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "차이가 있는데 놓치는 실수, 확률 β",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/tables.html#h-s4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/probability-statistics"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/distributions",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "확률분포(정규·포아송·지수·균등·이항)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Probability distributions",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "데이터 모양의 이름표. 확률 = 넓이",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/dictionary.html#kg"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/distribution-family-map"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/vector-2d",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "화살표(벡터)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Vector",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "자리가 아닌 이동. 같은 자리끼리 더한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/dictionary.html#h-notes"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/vectors-geometry"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/norm",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "길이(노름)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Norm",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "피타고라스로 잰 화살표 길이",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/dictionary.html#h-py"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/normed-spaces"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/pmf",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "확률질량함수",
+     "@language": "ko"
+    },
+    {
+     "@value": "PMF",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/dictionary.html#h-py"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/discrete-distributions"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/pdf"
+    },
+    {
+     "@id": "lab:dist/bernoulli"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/cdf",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "누적분포함수",
+     "@language": "ko"
+    },
+    {
+     "@value": "CDF",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/dictionary.html#h-py"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/continuous-distributions"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:dist/discrete-uniform"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/pdf",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "확률밀도함수",
+     "@language": "ko"
+    },
+    {
+     "@value": "PDF",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/dictionary.html#h-py"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/continuous-distributions"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:dist/continuous-uniform"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/alternative",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "대립가설",
+     "@language": "ko"
+    },
+    {
+     "@value": "alternative hypothesis",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/tables.html#h-words"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/null-alternative"
+    }
+   ]
+  },
+  {
+   "@id": "lab:dist/binomial",
+   "@type": [
+    "skos:Concept",
+    "lab:Distribution"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "이항분포",
+     "@language": "ko"
+    },
+    {
+     "@value": "binomial",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/tables.html#pane-b"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:dist/poisson"
+    },
+    {
+     "@id": "lab:dist/hypergeometric"
+    },
+    {
+     "@id": "lab:dist/multinomial"
+    }
+   ]
+  },
+  {
+   "@id": "lab:dist/poisson",
+   "@type": [
+    "skos:Concept",
+    "lab:Distribution"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "포아송분포",
+     "@language": "ko"
+    },
+    {
+     "@value": "Poisson",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/tables.html#tw-b"
+   }
+  },
+  {
+   "@id": "lab:concept/contour-line",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "등고선",
+     "@language": "ko"
+    },
+    {
+     "@value": "Contour line",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "높이(목표 값)가 같은 점을 이은 선.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/learn-python-by-doing_Korean/ep2/03-mean-or-sum/index.html#kg"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/gradient"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/gradient"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/s09-01",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "SUM",
+     "@language": "ko"
+    },
+    {
+     "@value": "SUM",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "범위의 숫자를 더하거나 평균을 구해요.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/learn-python-by-doing_Korean/ep2/03-mean-or-sum/index.html#2-3-ch-03"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/spreadsheets-automation"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/s09-02"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/s09-33",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "SORT",
+     "@language": "ko"
+    },
+    {
+     "@value": "SORT",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "지정한 열을 기준으로 행 전체를 정렬해 새 표로 반환해요.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/learn-python-by-doing_Korean/ep2/03-mean-or-sum/index.html#2-3-ch-03"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/sql"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/s09-34"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/gradient",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "기울기",
+     "@language": "ko"
+    },
+    {
+     "@value": "gradient",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "변수를 아주 조금 바꿨을 때 손실이 얼마나 변하는지. 손실을 줄이려면 기울기 반대쪽으로 고친다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/learn-pandas-visually_korean/index.html#kg"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/calculus-optimization-math"
+    },
+    {
+     "@id": "lab:topic/gradient"
+    },
+    {
+     "@id": "lab:topic/gradient-descent"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/gradient-descent"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/table",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "테이블",
+     "@language": "ko"
+    },
+    {
+     "@value": "table",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "행과 열로 이루어진 표. 관계형 데이터베이스는 데이터를 테이블에 담습니다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/learn-pandas-visually_korean/index.html#ckit-h"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/relational-model"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/database"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/index",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "인덱스",
+     "@language": "ko"
+    },
+    {
+     "@value": "index",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "책 뒤의 찾아보기처럼, 특정 열로 빨리 찾도록 미리 정리해 둔 구조.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/learn-pandas-visually_korean/index.html#kg"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/keys-constraints"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/database-design-overview"
+    },
+    {
+     "@id": "lab:concept/physical-design-implementation"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/weighted-mean",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "가중평균",
+     "@language": "ko"
+    },
+    {
+     "@value": "weighted mean",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "항목마다 중요도(가중치)를 곱해 더한 뒤 가중치 합으로 나눈 평균.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/learn-pandas-visually_korean/index.html#kg"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/central-tendency"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/s09-22",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "VLOOKUP",
+     "@language": "ko"
+    },
+    {
+     "@value": "VLOOKUP",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "범위의 첫 열에서 키를 찾아 같은 행의 값을 가져와요.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/learn-pandas-visually_korean/index.html#ckit-h"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/joins"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/s09-23"
+    }
+   ]
+  },
   {
    "@id": "lab:concept/overfitting",
    "@type": [
@@ -571,48 +1534,6 @@
    "lab:evaluatedBy": [
     {
      "@id": "lab:metric/ks-statistic"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/qq-plot",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "QQ 플롯",
-     "@language": "ko"
-    },
-    {
-     "@value": "Quantile-Quantile plot",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "내 데이터가 정규분포(또는 기준 분포)를 따르나? 점이 대각선 위에 있으면 기준 분포와 닮았습니다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/data_visualization_lab/index.html#c-qq"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/probability-statistics"
-    },
-    {
-     "@id": "lab:topic/statistical-graphics"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/chart-distribution-view"
-    }
-   ],
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:method/residual-plot"
     }
    ]
   },
@@ -2083,69 +3004,6 @@
    ]
   },
   {
-   "@id": "lab:concept/type-i-error",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "1종 오류",
-     "@language": "ko"
-    },
-    {
-     "@value": "Type I error",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "차이가 없는데 있다고 판정하는 실수(헛경보), 확률 α",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/data_visualization_lab/index.html#c-err"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/probability-statistics"
-    }
-   ],
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:concept/type-ii-error"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/type-ii-error",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "2종 오류",
-     "@language": "ko"
-    },
-    {
-     "@value": "Type II error",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "차이가 있는데 놓치는 실수, 확률 β",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/data_visualization_lab/index.html#c-err"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/probability-statistics"
-    }
-   ]
-  },
-  {
    "@id": "lab:concept/accuracy-paradox",
    "@type": [
     "skos:Concept",
@@ -2607,40 +3465,6 @@
    "lab:prerequisiteOf": [
     {
      "@id": "lab:method/s10-02"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/s09-01",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "SUM",
-     "@language": "ko"
-    },
-    {
-     "@value": "SUM",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "범위의 숫자를 더하거나 평균을 구해요.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/google-sheets-lab/index.html#s09-01"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/spreadsheets-automation"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/s09-02"
     }
    ]
   },
@@ -3754,40 +4578,6 @@
    }
   },
   {
-   "@id": "lab:method/s09-22",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "VLOOKUP",
-     "@language": "ko"
-    },
-    {
-     "@value": "VLOOKUP",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "범위의 첫 열에서 키를 찾아 같은 행의 값을 가져와요.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/google-sheets-lab/index.html#s09-22"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/joins"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/s09-23"
-    }
-   ]
-  },
-  {
    "@id": "lab:dataset/s09-22",
    "@type": [
     "skos:Concept",
@@ -4368,40 +5158,6 @@
    "lab:topic": [
     {
      "@id": "lab:topic/sql"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/s09-33",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "SORT",
-     "@language": "ko"
-    },
-    {
-     "@value": "SORT",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "지정한 열을 기준으로 행 전체를 정렬해 새 표로 반환해요.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/google-sheets-lab/index.html#s09-33"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/sql"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/s09-34"
     }
    ]
   },
@@ -9068,40 +9824,6 @@
    ]
   },
   {
-   "@id": "lab:term/table",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "테이블",
-     "@language": "ko"
-    },
-    {
-     "@value": "table",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "행과 열로 이루어진 표. 관계형 데이터베이스는 데이터를 테이블에 담습니다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/data_base_design/weeks/w01_course_guide.html#lv1"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/relational-model"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/database"
-    }
-   ]
-  },
-  {
    "@id": "lab:term/dbms",
    "@type": [
     "skos:Concept",
@@ -9238,43 +9960,6 @@
     },
     {
      "@id": "lab:concept/requirements-analysis"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/index",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "인덱스",
-     "@language": "ko"
-    },
-    {
-     "@value": "index",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "책 뒤의 찾아보기처럼, 특정 열로 빨리 찾도록 미리 정리해 둔 구조.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/data_base_design/weeks/w01_course_guide.html#lv4"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/keys-constraints"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/database-design-overview"
-    },
-    {
-     "@id": "lab:concept/physical-design-implementation"
     }
    ]
   },
@@ -20370,50 +21055,6 @@
    ]
   },
   {
-   "@id": "lab:concept/sample-size",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "표본 크기",
-     "@language": "ko"
-    },
-    {
-     "@value": "sample size",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "전체(모집단) 가운데 실제로 관측한 일부. 표본이 작으면 우연한 차이가 크게 보인다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/statistics_note_ch04_Statistical-Estimation_01_a/index.html#lv3"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/sample-size"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/ab-test"
-    }
-   ],
-   "lab:derivedFrom": [
-    {
-     "@id": "lab:metric/power"
-    }
-   ],
-   "lab:relatedTo": [
-    {
-     "@id": "lab:concept/standard-error"
-    }
-   ]
-  },
-  {
    "@id": "lab:concept/standard-error",
    "@type": [
     "skos:Concept",
@@ -21597,40 +22238,6 @@
    ]
   },
   {
-   "@id": "lab:concept/independence",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "독립 사건",
-     "@language": "ko"
-    },
-    {
-     "@value": "independent events",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "한 사건이 일어났다는 사실이 다른 사건의 확률을 바꾸지 않는 관계. P(A∩B) = P(A) × P(B).",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/statistics_note/ch02/2-1_probability_basics.html#lv3"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/independence"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:distribution/binomial"
-    }
-   ]
-  },
-  {
    "@id": "lab:concept/probability",
    "@type": [
     "skos:Concept",
@@ -21743,108 +22350,6 @@
    "lab:prerequisiteOf": [
     {
      "@id": "lab:method/sequential-bayesian-update"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/confidence-interval",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "신뢰구간",
-     "@language": "ko"
-    },
-    {
-     "@value": "confidence interval",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "같은 방법으로 반복하면 그중 약 95%가 참값을 포함하는 구간(빈도주의). \"이 구간에 참값이 있을 확률 95%\"로 읽지 않음.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/statistics_note/ch04/2-1a_point_interval.html#lv4"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/confidence-interval"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/diagnostic-uncertainty"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/power",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "검정력",
-     "@language": "ko"
-    },
-    {
-     "@value": "statistical power",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "진짜 효과가 있을 때 그것을 잡아낼 확률(보통 80%).",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/statistics_note/ch05/3-1_hypothesis_testing.html#lv6"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/statistical-power"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/bayesian-ab-rollout"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/p-value",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "p값",
-     "@language": "ko"
-    },
-    {
-     "@value": "p-value",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "차이가 없다고 가정할 때 이만큼 또는 더 극단적인 결과가 나올 확률. 가설이 참일 확률이 아님.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/statistics_note/ch05/3-1_hypothesis_testing.html#lv5"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/p-value"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/bayesian-ab-rollout"
     }
    ]
   },
@@ -22133,175 +22638,6 @@
      "@id": "lab:topic/minkowski-spacetime"
     }
    ]
-  },
-  {
-   "@id": "lab:concept/pmf",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "확률질량함수",
-     "@language": "ko"
-    },
-    {
-     "@value": "PMF",
-     "@language": "en"
-    }
-   ],
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/statistics_note/ch03/1-1_discrete_distributions.html#lv1"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/discrete-distributions"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/pdf"
-    },
-    {
-     "@id": "lab:dist/bernoulli"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/cdf",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "누적분포함수",
-     "@language": "ko"
-    },
-    {
-     "@value": "CDF",
-     "@language": "en"
-    }
-   ],
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/statistics_note/ch03/1-2_pmf_pdf.html#lv3"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/continuous-distributions"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:dist/discrete-uniform"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/pdf",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "확률밀도함수",
-     "@language": "ko"
-    },
-    {
-     "@value": "PDF",
-     "@language": "en"
-    }
-   ],
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/statistics_note/ch03/1-1_discrete_distributions.html#lv1"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/continuous-distributions"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:dist/continuous-uniform"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/alternative",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "대립가설",
-     "@language": "ko"
-    },
-    {
-     "@value": "alternative hypothesis",
-     "@language": "en"
-    }
-   ],
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/statistics_note/ch05/3-1_hypothesis_testing.html#lv3"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/null-alternative"
-    }
-   ]
-  },
-  {
-   "@id": "lab:dist/binomial",
-   "@type": [
-    "skos:Concept",
-    "lab:Distribution"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "이항분포",
-     "@language": "ko"
-    },
-    {
-     "@value": "binomial",
-     "@language": "en"
-    }
-   ],
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/statistics_note/ch03/1-1_discrete_distributions.html#lv3"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:dist/poisson"
-    },
-    {
-     "@id": "lab:dist/hypergeometric"
-    },
-    {
-     "@id": "lab:dist/multinomial"
-    }
-   ]
-  },
-  {
-   "@id": "lab:dist/poisson",
-   "@type": [
-    "skos:Concept",
-    "lab:Distribution"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "포아송분포",
-     "@language": "ko"
-    },
-    {
-     "@value": "Poisson",
-     "@language": "en"
-    }
-   ],
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/statistics_note/ch03/1-1_discrete_distributions.html#lv6"
-   }
   },
   {
    "@id": "lab:concept/statistics",
@@ -24093,40 +24429,6 @@
    ]
   },
   {
-   "@id": "lab:concept/standard-deviation",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "표준편차",
-     "@language": "ko"
-    },
-    {
-     "@value": "standard deviation",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "데이터가 평균에서 보통 얼마나 떨어져 있는지 나타내는 폭. 표준화의 한 눈금.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/bayesian-statistics-for-data-scientists/01_what_is_statistics.html#lv1"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/dispersion"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/dispersion"
-    }
-   ]
-  },
-  {
    "@id": "lab:concept/bias",
    "@type": [
     "skos:Concept",
@@ -24207,50 +24509,6 @@
    "lab:contrastsWith": [
     {
      "@id": "lab:method/mlp"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/variance",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "분산",
-     "@language": "ko"
-    },
-    {
-     "@value": "variance",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "값이 평균에서 흩어진 정도. 주성분이 담은 분산의 몫으로 정보량을 가늠한다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/bayesian-statistics-for-data-scientists/01_what_is_statistics.html#lv1"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/dispersion"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/dispersion"
-    }
-   ],
-   "lab:usedIn": [
-    {
-     "@id": "lab:method/standardize"
-    }
-   ],
-   "lab:motivates": [
-    {
-     "@id": "lab:concept/covariance"
     }
    ]
   },
@@ -25300,40 +25558,6 @@
    ]
   },
   {
-   "@id": "lab:concept/mean",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "평균",
-     "@language": "ko"
-    },
-    {
-     "@value": "mean",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "모든 값을 더해 개수로 나눈 값. 데이터의 가운데를 나타냄.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/bayesian-statistics-for-data-scientists/01_what_is_statistics.html#lv1"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/central-tendency"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/dispersion"
-    }
-   ]
-  },
-  {
    "@id": "lab:concept/coefficient-of-variation",
    "@type": [
     "skos:Concept",
@@ -25997,40 +26221,6 @@
    "lab:partOf": [
     {
      "@id": "lab:method/naive-bayes"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/ab-test",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "A/B 테스트",
-     "@language": "ko"
-    },
-    {
-     "@value": "A/B test",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "사용자를 무작위로 두 무리로 나눠 한쪽에만 바꾼 버전을 보여 주고 지표를 비교하는 실험.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/bayesian-statistics-for-data-scientists/04_ab_test.html#lv1"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/ab-testing"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/bayesian-average"
     }
    ]
   },
@@ -29596,196 +29786,6 @@
    "rdfs:isDefinedBy": {
     "@id": "https://adminmrobo.github.io/what_is_p_value_lab/index.html#lv7"
    }
-  },
-  {
-   "@id": "lab:concept/contour-line",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "등고선",
-     "@language": "ko"
-    },
-    {
-     "@value": "Contour line",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "높이(목표 값)가 같은 점을 이은 선.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/learn-python-by-doing_Korean/ep2/03-mean-or-sum/index.html#kg"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/gradient"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/gradient"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/weighted-mean",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "가중평균",
-     "@language": "ko"
-    },
-    {
-     "@value": "weighted mean",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "항목마다 중요도(가중치)를 곱해 더한 뒤 가중치 합으로 나눈 평균.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/learn-python-by-doing_Korean/ep3/05-weekend-ffill/index.html#3-5-ch-10"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/central-tendency"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/gradient",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "기울기",
-     "@language": "ko"
-    },
-    {
-     "@value": "gradient",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "변수를 아주 조금 바꿨을 때 손실이 얼마나 변하는지. 손실을 줄이려면 기울기 반대쪽으로 고친다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/learn-pandas-visually_korean/index.html#kg"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/calculus-optimization-math"
-    },
-    {
-     "@id": "lab:topic/gradient"
-    },
-    {
-     "@id": "lab:topic/gradient-descent"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/gradient-descent"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/distributions",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "확률분포(정규·포아송·지수·균등·이항)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Probability distributions",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "데이터 모양의 이름표. 확률 = 넓이",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/dictionary.html#kg"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/distribution-family-map"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/vector-2d",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "화살표(벡터)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Vector",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "자리가 아닌 이동. 같은 자리끼리 더한다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/dictionary.html#h-notes"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/vectors-geometry"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/norm",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "길이(노름)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Norm",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "피타고라스로 잰 화살표 길이",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/dictionary.html#h-py"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/normed-spaces"
-    }
-   ]
   }
  ]
 }

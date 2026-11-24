@@ -1,16 +1,16 @@
 {
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "base": "https://adminmrobo.github.io/ahnboat_ontology_feed/",
  "all": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/all.xml",
  "summary": {
   "fields": 8,
   "contents": 116,
-  "pages": 730,
+  "pages": 728,
   "listed_indexed": 146,
   "listed": 153,
-  "concepts": 5114,
-  "relations": 6241,
-  "shared": 532,
+  "concepts": 5119,
+  "relations": 6251,
+  "shared": 533,
   "domains": 18,
   "topic_linked": 1691
  },
@@ -133,8 +133,8 @@
    "desc": "주식시장 변동성과 가상자산 연구, 블록체인 장부, 인슈어테크 사례, 회계와 기업가치까지 금융 속의 데이터와 AI를 살펴봅니다.",
    "contents": 14,
    "listed": 19,
-   "concepts": 771,
-   "relations": 922,
+   "concepts": 777,
+   "relations": 932,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/finance-fintech-blockchain.xml",
    "parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/finance-fintech-blockchain-p1.xml",

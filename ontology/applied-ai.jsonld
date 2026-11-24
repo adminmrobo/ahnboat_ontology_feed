@@ -7,10 +7,486 @@
  },
  "@id": "https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/applied-ai.jsonld",
  "dct:title": "ahnboat lab 온톨로지 — 인공지능 응용",
- "dct:modified": "2026-11-24",
+ "dct:modified": "2026-11-25",
  "dct:license": "https://creativecommons.org/licenses/by-nc/4.0/",
  "dct:creator": "안상선 (Ahn Sangsun)",
  "@graph": [
+  {
+   "@id": "lab:term/temperature",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "온도",
+     "@language": "ko"
+    },
+    {
+     "@value": "Temperature",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "점수를 나누어 고르기를 날카롭게 또는 고르게 하는 챗봇 설정값.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/smart_factory_world/cement/factory/index.html#kE"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/autoregressive-generation"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/prompt",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "프롬프트",
+     "@language": "ko"
+    },
+    {
+     "@value": "prompt",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "AI에게 무엇을 만들지 알려 주는 글.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/smart_factory_world/cement/factory/index.html#chairT"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/prompting"
+    },
+    {
+     "@id": "lab:topic/system-prompts"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/llm"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/context-engineering"
+    },
+    {
+     "@id": "lab:method/six-element-prompt"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/bottleneck",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "병목",
+     "@language": "ko"
+    },
+    {
+     "@value": "bottleneck",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "상자 가운데 가장 좁은 층. 접은 지도.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/smart_factory_world/cement/factory/index.html#answer"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/autoencoder"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/autoencoder"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/utilization"
+    }
+   ],
+   "lab:raises": [
+    {
+     "@id": "lab:concept/work-in-process"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/llm-agent",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "에이전트",
+     "@language": "ko"
+    },
+    {
+     "@value": "LLM agent",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "목표를 받아 도구를 부르고 여러 단계를 스스로 실행하는 AI 시스템.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/smart_factory_world/cement/factory/index.html#tab3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/mdp"
+    },
+    {
+     "@id": "lab:topic/planning-agents"
+    },
+    {
+     "@id": "lab:topic/pretrained-lm"
+    },
+    {
+     "@id": "lab:topic/prompting"
+    }
+   ],
+   "lab:uses": [
+    {
+     "@id": "lab:concept/llm"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/react"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/context-engineering",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "컨텍스트",
+     "@language": "ko"
+    },
+    {
+     "@value": "Context (engineering)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "모델이 한 번에 보는 모든 것(지시, 대화, 문서, 도구 결과)을 고르고 배치하는 일.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/smart_factory_world/cement/factory/index.html#chairT"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/prompting"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/harness"
+    }
+   ]
+  },
+  {
+   "@id": "lab:metric/utilization",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "가동률",
+     "@language": "ko"
+    },
+    {
+     "@value": "Utilization",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/smart_factory_world/cement/factory/index.html#verdict"
+   }
+  },
+  {
+   "@id": "lab:concept/harness",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "하네스",
+     "@language": "ko"
+    },
+    {
+     "@value": "Agent harness",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "고정된 모델을 둘러싼 프롬프트·스킬·도구 규칙·메모리 묶음",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/smart_factory_world/cement/factory/index.html#chairT"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/deployment"
+    },
+    {
+     "@id": "lab:topic/prompting"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/tokenization",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "토큰화",
+     "@language": "ko"
+    },
+    {
+     "@value": "tokenization",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "글을 분석 가능한 최소 단위(토큰)로 나누는 일.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Gen_AI_Hannam_univ/index.html#scr-title"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/tokenization"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/token",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "토큰",
+     "@language": "ko"
+    },
+    {
+     "@value": "token",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "분석의 최소 단위로 나눈 조각. 단어·형태소·글자·부분 단어 등.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Gen_AI_Hannam_univ/index.html#scr-title"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:method/tokenization"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/llm",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "LLM",
+     "@language": "ko"
+    },
+    {
+     "@value": "large language model",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "수십억~수조 파라미터의 대규모 언어모델. 범용성·창발성.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Gen_AI_Hannam_univ/index.html#scr-title"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/decoder-only"
+    },
+    {
+     "@id": "lab:topic/pretrained-lm"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/rag"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/embedding",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "임베딩",
+     "@language": "ko"
+    },
+    {
+     "@value": "embedding",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "그림·글을 의미가 담긴 짧은 숫자 묶음으로 바꾼 것.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Gen_AI_Hannam_univ/index.html#scr-title"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/embedding-space"
+    },
+    {
+     "@id": "lab:topic/word-embedding"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/softmax"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/rule-based",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "규칙 기반",
+     "@language": "ko"
+    },
+    {
+     "@value": "Rule-based system",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "사람(또는 진화)이 미리 규칙을 써 두는 방식. 설명은 쉽지만 환경이 바뀌면 직접 고쳐야 한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Gen_AI_Hannam_univ/index.html#kg"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/rule-vs-learning"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/machine-learning"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/context-window",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "메모장(문맥)",
+     "@language": "ko"
+    },
+    {
+     "@value": "context",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "AI가 지금 펼쳐 두고 읽는 글 전체. 질문, 대화, 검색 결과가 모두 여기에 쌓인다. 한도가 있다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Gen_AI_Hannam_univ/index.html#kg"
+   }
+  },
+  {
+   "@id": "lab:concept/token",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "조각 (토큰)",
+     "@language": "ko"
+    },
+    {
+     "@value": "token",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "모델이 글을 읽는 단위. 낱말보다 잘게 나뉘기도 한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Gen_AI_Hannam_univ/index.html#kg"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/tokenization"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/context-window"
+    }
+   ]
+  },
   {
    "@id": "lab:concept/sm-appA-01",
    "@type": [
@@ -21944,309 +22420,6 @@
    }
   },
   {
-   "@id": "lab:method/tokenization",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "토큰화",
-     "@language": "ko"
-    },
-    {
-     "@value": "tokenization",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "글을 분석 가능한 최소 단위(토큰)로 나누는 일.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Gen_AI_Hannam_univ/index.html#scr-title"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/tokenization"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/token",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "토큰",
-     "@language": "ko"
-    },
-    {
-     "@value": "token",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "분석의 최소 단위로 나눈 조각. 단어·형태소·글자·부분 단어 등.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Gen_AI_Hannam_univ/index.html#scr-title"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:method/tokenization"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/llm",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "LLM",
-     "@language": "ko"
-    },
-    {
-     "@value": "large language model",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "수십억~수조 파라미터의 대규모 언어모델. 범용성·창발성.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Gen_AI_Hannam_univ/index.html#scr-title"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/decoder-only"
-    },
-    {
-     "@id": "lab:topic/pretrained-lm"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/rag"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/prompt",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "프롬프트",
-     "@language": "ko"
-    },
-    {
-     "@value": "prompt",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "AI에게 무엇을 만들지 알려 주는 글.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Gen_AI_Hannam_univ/index.html#scr-title"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/prompting"
-    },
-    {
-     "@id": "lab:topic/system-prompts"
-    }
-   ],
-   "lab:relatedTo": [
-    {
-     "@id": "lab:concept/llm"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/context-engineering"
-    },
-    {
-     "@id": "lab:method/six-element-prompt"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/embedding",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "임베딩",
-     "@language": "ko"
-    },
-    {
-     "@value": "embedding",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "그림·글을 의미가 담긴 짧은 숫자 묶음으로 바꾼 것.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Gen_AI_Hannam_univ/index.html#scr-title"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/embedding-space"
-    },
-    {
-     "@id": "lab:topic/word-embedding"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/softmax"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/rule-based",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "규칙 기반",
-     "@language": "ko"
-    },
-    {
-     "@value": "Rule-based system",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "사람(또는 진화)이 미리 규칙을 써 두는 방식. 설명은 쉽지만 환경이 바뀌면 직접 고쳐야 한다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Gen_AI_Hannam_univ/index.html#kg"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/rule-vs-learning"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/machine-learning"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/context-engineering",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "컨텍스트",
-     "@language": "ko"
-    },
-    {
-     "@value": "Context (engineering)",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "모델이 한 번에 보는 모든 것(지시, 대화, 문서, 도구 결과)을 고르고 배치하는 일.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Gen_AI_Hannam_univ/index.html#scr-title"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/prompting"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/harness"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/context-window",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "메모장(문맥)",
-     "@language": "ko"
-    },
-    {
-     "@value": "context",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "AI가 지금 펼쳐 두고 읽는 글 전체. 질문, 대화, 검색 결과가 모두 여기에 쌓인다. 한도가 있다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Gen_AI_Hannam_univ/index.html#kg"
-   }
-  },
-  {
-   "@id": "lab:concept/token",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "조각 (토큰)",
-     "@language": "ko"
-    },
-    {
-     "@value": "token",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "모델이 글을 읽는 단위. 낱말보다 잘게 나뉘기도 한다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Gen_AI_Hannam_univ/index.html#kg"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/tokenization"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/context-window"
-    }
-   ]
-  },
-  {
    "@id": "lab:method/lstm",
    "@type": [
     "skos:Concept",
@@ -26486,50 +26659,6 @@
    ]
   },
   {
-   "@id": "lab:concept/bottleneck",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "병목",
-     "@language": "ko"
-    },
-    {
-     "@value": "bottleneck",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "상자 가운데 가장 좁은 층. 접은 지도.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/how_to_make_ai_model_factory_version/factory.html#bottleneck"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/autoencoder"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/autoencoder"
-    }
-   ],
-   "lab:evaluatedBy": [
-    {
-     "@id": "lab:metric/utilization"
-    }
-   ],
-   "lab:raises": [
-    {
-     "@id": "lab:concept/work-in-process"
-    }
-   ]
-  },
-  {
    "@id": "lab:concept/parameter",
    "@type": [
     "skos:Concept",
@@ -28361,26 +28490,6 @@
    ]
   },
   {
-   "@id": "lab:metric/utilization",
-   "@type": [
-    "skos:Concept",
-    "lab:Metric"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "가동률",
-     "@language": "ko"
-    },
-    {
-     "@value": "Utilization",
-     "@language": "en"
-    }
-   ],
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/how_to_make_ai_model_factory_version/factory.html#bottleneck"
-   }
-  },
-  {
    "@id": "lab:concept/littles-law",
    "@type": [
     "skos:Concept",
@@ -29354,115 +29463,6 @@
    "rdfs:isDefinedBy": {
     "@id": "https://adminmrobo.github.io/how_to_make_ai_model_factory_version/testlab.html#build"
    }
-  },
-  {
-   "@id": "lab:term/temperature",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "온도",
-     "@language": "ko"
-    },
-    {
-     "@value": "Temperature",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "점수를 나누어 고르기를 날카롭게 또는 고르게 하는 챗봇 설정값.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/smart_factory_world/cement/factory/index.html#kE"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/autoregressive-generation"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/llm-agent",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "에이전트",
-     "@language": "ko"
-    },
-    {
-     "@value": "LLM agent",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "목표를 받아 도구를 부르고 여러 단계를 스스로 실행하는 AI 시스템.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/smart_factory_world/cement/factory/index.html#tab3"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/mdp"
-    },
-    {
-     "@id": "lab:topic/planning-agents"
-    },
-    {
-     "@id": "lab:topic/pretrained-lm"
-    },
-    {
-     "@id": "lab:topic/prompting"
-    }
-   ],
-   "lab:uses": [
-    {
-     "@id": "lab:concept/llm"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/react"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/harness",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "하네스",
-     "@language": "ko"
-    },
-    {
-     "@value": "Agent harness",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "고정된 모델을 둘러싼 프롬프트·스킬·도구 규칙·메모리 묶음",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/smart_factory_world/cement/factory/index.html#chairT"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/deployment"
-    },
-    {
-     "@id": "lab:topic/prompting"
-    }
-   ]
   },
   {
    "@id": "lab:method/rag",

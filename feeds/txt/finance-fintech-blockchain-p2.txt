@@ -1,6 +1,6 @@
 # ahnboat lab 온톨로지 — 금융·핀테크·블록체인 (2/2)
-생성 AI가 한 번에 읽도록 나눈 2/2. 전체는 https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/finance-fintech-blockchain.xml. 금융·핀테크·블록체인 분야 공개 콘텐츠의 최신 지식 색인(개념·정의·관계). 기준일 2026-11-24. 주식시장 변동성과 가상자산 연구, 블록체인 장부, 인슈어테크 사례, 회계와 기업가치까지 금융 속의 데이터와 AI를 살펴봅니다.
-기준: Tue, 24 Nov 2026 00:00:00 +0900 · 라이선스 CC BY-NC 4.0 · 원본 RSS: https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/finance-fintech-blockchain-p2.xml
+생성 AI가 한 번에 읽도록 나눈 2/2. 전체는 https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/finance-fintech-blockchain.xml. 금융·핀테크·블록체인 분야 공개 콘텐츠의 최신 지식 색인(개념·정의·관계). 기준일 2026-11-25. 주식시장 변동성과 가상자산 연구, 블록체인 장부, 인슈어테크 사례, 회계와 기업가치까지 금융 속의 데이터와 AI를 살펴봅니다.
+기준: Wed, 25 Nov 2026 00:00:00 +0900 · 라이선스 CC BY-NC 4.0 · 원본 RSS: https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/finance-fintech-blockchain-p2.xml
 
 
 ## 핀테크 데이터 연구실
@@ -524,150 +524,6 @@ p1 = 가상자산 시계열 데이터의 분석과 예측 - 시계열 모델 및
 - 은닉 마르코프 모델(HMM) → HMM 최적 경로 디코딩 : ~의 일부
 - 은닉 마르코프 모델(HMM) → LSTM : 먼저 알아야 함
 
-## 인슈어테크 #3 · 회귀 모델
-주소: https://adminmrobo.github.io/insurtech__case_regreesion_model_01/
-분야: 금융·핀테크·블록체인 · 학문 분야: 경영학, 머신러닝, 통계학 · 페이지 7쪽 · 개념 21개 · 관계 1개
-사이트: https://adminmrobo.github.io/insurtech__case_regreesion_model_01/
-
-[페이지] 기호 = 제목 — 주소
-p1 = 1편 · 모두에게 평균만: 평균의 함정 | 인슈어테크 #3 — https://adminmrobo.github.io/insurtech__case_regreesion_model_01/1_charges_question.html
-p2 = 2편 · 지우지 말고 지킨다: 중복 · 이상치 · 로그 | 인슈어테크 #3 — https://adminmrobo.github.io/insurtech__case_regreesion_model_01/2_data_cleaning.html
-p3 = 3편 · 모델 다섯, 곡선 다섯 | 인슈어테크 #3 — https://adminmrobo.github.io/insurtech__case_regreesion_model_01/3_five_models.html
-p4 = 4편 · 여유분과 비용 실험실 | 인슈어테크 #3 — https://adminmrobo.github.io/insurtech__case_regreesion_model_01/4_margin_lab.html
-p5 = 5편 · 최고 모델을 흉내 내는 나무 | 인슈어테크 #3 — https://adminmrobo.github.io/insurtech__case_regreesion_model_01/5_surrogate_tree.html
-p6 = 6편 · 기준서가 곧 견적: 의료비 견적 앱 | 인슈어테크 #3 — https://adminmrobo.github.io/insurtech__case_regreesion_model_01/6_quote_app.html
-p7 = 교육자용 정답 | 인슈어테크 #3 — https://adminmrobo.github.io/insurtech__case_regreesion_model_01/answers.html
-
-[개념] 이름 (유형) — 정의 [출처 페이지 기호#위치]
-- 학습률 (용어) — 새 나무의 예측을 반영하는 배수. [p3#tune]
-- 결정 트리 (개념) — 예/아니오 질문을 이어 나누기 [p3#lv-1]
-- 프롬프트 (개념) — AI에게 무엇을 만들지 알려 주는 글. [p1#prompt]
-- 손실 (개념) — 그린 그림과 정답이 얼마나 다른지 나타내는 숫자. 이 페이지에서는 픽셀 차이의 제곱 평균. [p7#a5]
-- 특징 (개념) — 사진을 비교하려고 뽑은 숫자들. [p3#full]
-- 그래디언트 부스팅 (방법) — 작은 나무를 차례로 더해 오답을 보정 [p3#lv-3]
-- 불일치 (개념) — 중복 저장된 같은 데이터가 서로 다른 값을 갖는 상태. [p6#q6-2]
-- SPLIT (방법) — 구분기호로 문자열을 여러 셀에 나눠요. [p1#data]
-- 교차검증 (방법) — 다섯 조각으로 다섯 번 재기 [p3#traits]
-- 조각 (토큰) (개념) — 모델이 글을 읽는 단위. 낱말보다 잘게 나뉘기도 한다. [p3#glossary]
-- 교육 (개념) — 정의 없음 [p1#author-sec]
-- 공정성 (개념) — 정의 없음 [p1#data]
-- 비용곡선 (개념) — 정의 없음 [p4#practice]
-- 추정 (개념) — 표본의 결과를 모집단의 값으로 쓰는 일. [p1#rule-cap]
-- (이 피드 위쪽에 이미 정의된 개념) R² (결정계수), 과적합, 정확도, 평균, 왜도, 상관계수, KNN
-
-[관계] A → B, C : 관계
-- 과적합 → R² (결정계수) : ~로 평가
-
-## 인슈어테크 #1 · 분류 모델
-주소: https://adminmrobo.github.io/insurtech__case_classification_model_01/
-분야: 금융·핀테크·블록체인 · 학문 분야: 경영학, 머신러닝 · 페이지 8쪽 · 개념 33개 · 관계 16개
-사이트: https://adminmrobo.github.io/insurtech__case_classification_model_01/
-
-[페이지] 기호 = 제목 — 주소
-p1 = 1편 · 청구는 1.5%: 정확도의 함정 | 인슈어테크 #1 — https://adminmrobo.github.io/insurtech__case_classification_model_01/1_claim_question.html
-p2 = 2편 · 지우지 말고 고친다: 결측값과 이상치 | 인슈어테크 #1 — https://adminmrobo.github.io/insurtech__case_classification_model_01/2_data_cleaning.html
-p3 = 3편 · 모델 다섯, 경계 다섯 | 인슈어테크 #1 — https://adminmrobo.github.io/insurtech__case_classification_model_01/3_five_models.html
-p4 = 4편 · 임계값과 비용 실험실 | 인슈어테크 #1 — https://adminmrobo.github.io/insurtech__case_classification_model_01/4_threshold_lab.html
-p5 = 5편 · 최고 모델을 흉내 내는 나무 | 인슈어테크 #1 — https://adminmrobo.github.io/insurtech__case_classification_model_01/5_surrogate_tree.html
-p6 = 6편 · 기준서가 곧 판정: 청구 판정 앱 | 인슈어테크 #1 — https://adminmrobo.github.io/insurtech__case_classification_model_01/6_judge_app.html
-p7 = 교육자용 정답 | 인슈어테크 #1 — https://adminmrobo.github.io/insurtech__case_classification_model_01/answers.html
-p8 = AI(인공지능) x 비즈니스 #1 인슈어테크_01_분류모델 — https://adminmrobo.github.io/insurtech__case_classification_model_01/index.html
-
-[개념] 이름 (유형) — 정의 [출처 페이지 기호#위치]
-- 데이터 증강 (개념) — 원본을 조금씩 바꿔 시료를 늘리는 것. 늘린 시료는 원본과 닮았다. [p2#checklist]
-- 규제 (개념) — 계수에 벌점을 줘 0 쪽으로 당기기. [p7#a3]
-- 가중치 (개념) — 이 입력을 얼마나 크게 들을지 정하는 값. 시냅스의 강도에 해당한다. [p2#practice]
-- 학습/시험 나누기 (방법) — 20%를 시험지로 봉인하고 80%로만 학습 [p1#prompt]
-- 정확도의 함정 (개념) — 양성이 드물면 모두 음성이라고 해도 정확도가 높게 나와, 정확도만으로는 모델을 고를 수 없다 [p1#outro]
-- 층화 추출 (개념) — 집단 비율을 지키며 표본을 뽑는 방법. 적은 어종이 시험에서 빠지지 않게 한다. [p1#data]
-- random_state (시작 번호) (개념) — 무작위 섞기의 시작 번호. 같은 번호면 같은 결과가 다시 나온다. 재현성 도구이지 튜닝 대상이 아니다. [p1#prompt]
-- 보상 (개념) — 정의 없음 [p1#data]
-- ROC·AUC (개념) — 정의 없음 [p1#practice]
-- 배포 (개념) — 정의 없음 [p6#operate]
-- (이 피드 위쪽에 이미 정의된 개념) 과적합, 정확도, 재현율, 정밀도, SVM, 결정 트리, 프롬프트, 혼동 행렬, 표준화, 평균, 불균형 데이터, 불일치, KNN, 임계값, AUC, SPLIT, 결측값과 이상치, 사분위수, IQR, 교차검증, 교육, 공정성, 비용곡선
-
-[관계] A → B, C : 관계
-- 과적합 → 학습/시험 나누기 : addressedBy
-- 정확도 → 불균형 데이터 : 한계
-- 정확도 → 혼동 행렬 : ~의 일부
-- 재현율 → 정밀도 : 대비
-- 재현율 → 혼동 행렬 : ~의 일부
-- 정밀도 → 혼동 행렬 : ~의 일부
-- 정밀도 → 재현율 : 대비
-- SVM → 표준화 : 먼저 알아야 함
-- 표준화 → 혼동 행렬 : 먼저 알아야 함
-- KNN → SVM : 먼저 알아야 함
-- 임계값 → 혼동 행렬 : ~의 일부
-- 사분위수 → 결측값과 이상치 : ~의 일부
-- IQR → 결측값과 이상치 : ~의 일부
-- 교차검증 → 학습/시험 나누기 : 상위 개념
-- 층화 추출 → 학습/시험 나누기 : ~의 일부
-- random_state (시작 번호) → 학습/시험 나누기 : ~의 일부
-
-## 인슈어테크 #2 · 분류 모델 실전
-주소: https://adminmrobo.github.io/insurtech__case_classification_model_02/
-분야: 금융·핀테크·블록체인 · 학문 분야: 경영학, 머신러닝 · 페이지 7쪽 · 개념 28개 · 관계 6개
-사이트: https://adminmrobo.github.io/insurtech__case_classification_model_02/
-
-[페이지] 기호 = 제목 — 주소
-p1 = 1편 · 증강 없이 5-Fold로 성능 재기 | 인슈어테크 #2 실전 — https://adminmrobo.github.io/insurtech__case_classification_model_02/1_kfold_cv.html
-p2 = 2편 · 청구자만, 미청구자만 맞힌 비율 | 인슈어테크 #2 실전 — https://adminmrobo.github.io/insurtech__case_classification_model_02/2_conditional_accuracy.html
-p3 = 3편 · 그 숫자를 성능이라 부르면 생기는 일 | 인슈어테크 #2 실전 — https://adminmrobo.github.io/insurtech__case_classification_model_02/3_problems_fixes.html
-p4 = 4편 · 그 모델, HTML에 그대로 넣어도 될까 | 인슈어테크 #2 실전 — https://adminmrobo.github.io/insurtech__case_classification_model_02/4_html_deploy.html
-p5 = 5편 · 희소 이벤트는 어디에나 있다 | 인슈어테크 #2 실전 — https://adminmrobo.github.io/insurtech__case_classification_model_02/5_similar_cases.html
-p6 = 교육자용 정답 | 인슈어테크 #2 실전 — https://adminmrobo.github.io/insurtech__case_classification_model_02/answers.html
-p7 = AI(인공지능) x 비즈니스 #1 인슈어테크_02_분류모델_실전 — https://adminmrobo.github.io/insurtech__case_classification_model_02/index.html
-
-[개념] 이름 (유형) — 정의 [출처 페이지 기호#위치]
-- 조건부확률 (개념) — B가 일어났다는 조건 아래에서 A가 일어날 확률. P(A|B) = P(A∩B)/P(B). [p2#define]
-- 기저율 (개념) — 증거를 보기 전, 모집단에서 그 사건이 일어나는 비율. [p3#summary]
-- 민감도 (개념) — 실제 있는 경우를 양성으로 잡아내는 비율. TP ÷ (TP+FN) [p2#define]
-- 신뢰구간 (개념) — 같은 방법으로 반복하면 그중 약 95%가 참값을 포함하는 구간(빈도주의). "이 구간에 참값이 있을 확률 95%"로 읽지 않음. [p3#p3]
-- 원-핫 (개념) — 어휘 수만큼 긴 줄에서 제 번호 자리에만 1 [p4#glossary]
-- 계수 (가중치) (개념) — 학습으로 정해지는 숫자. ①층위. [p6#a4]
-- 균형 정확도 (지표) — 재현율과 특이도의 평균 [p2#compare]
-- 95% 신뢰구간 (방법) — z = 1.96으로 만든 구간 (초파리 선택). [p3#p3]
-- 벤치마크 (개념) — 정의 없음 [p5#cases]
-- 대변 (용어) — 거래를 적을 때 오른쪽 칸. 부채·자본·수익이 늘면 오른쪽에 적는다. [p5#cases]
-- (이 피드 위쪽에 이미 정의된 개념) 정확도, 재현율, 정밀도, 판단나무, SVM, 결정 트리, 프롬프트, 데이터 증강, 손실, 표준화, 평균, KNN, AUC, 정확도의 함정, 가중평균, 교차검증, 교육, ROC·AUC
-
-[관계] A → B, C : 관계
-- 재현율 → 정밀도 : 대비
-- 정밀도 → 재현율 : 대비
-- SVM → 표준화 : 먼저 알아야 함
-- KNN → SVM, 판단나무 : 먼저 알아야 함
-- 계수 (가중치) → 민감도 : 먼저 알아야 함
-
-## 인슈어테크 #4 · 회귀 모델 실전
-주소: https://adminmrobo.github.io/insurtech__case_regreesion_model_02/
-분야: 금융·핀테크·블록체인 · 학문 분야: 경영학, 머신러닝, 통계학 · 페이지 7쪽 · 개념 22개 · 관계 4개
-사이트: https://adminmrobo.github.io/insurtech__case_regreesion_model_02/
-
-[페이지] 기호 = 제목 — 주소
-p1 = 1편 · 이상치를 지우지 않고 5-Fold로 성능 재기 | 인슈어테크 #4 실전 — https://adminmrobo.github.io/insurtech__case_regreesion_model_02/1_kfold_cv.html
-p2 = 2편 · 흡연자만, 비흡연자만, 고액만: 그룹별 오차 | 인슈어테크 #4 실전 — https://adminmrobo.github.io/insurtech__case_regreesion_model_02/2_group_errors.html
-p3 = 3편 · 그 숫자를 성능이라 부르면 생기는 일 | 인슈어테크 #4 실전 — https://adminmrobo.github.io/insurtech__case_regreesion_model_02/3_problems_fixes.html
-p4 = 4편 · 그 모델, HTML에 그대로 넣어도 될까 | 인슈어테크 #4 실전 — https://adminmrobo.github.io/insurtech__case_regreesion_model_02/4_html_deploy.html
-p5 = 5편 · 꼬리가 긴 금액은 어디에나 있다 | 인슈어테크 #4 실전 — https://adminmrobo.github.io/insurtech__case_regreesion_model_02/5_similar_cases.html
-p6 = 교육자용 정답 | 인슈어테크 #4 실전 — https://adminmrobo.github.io/insurtech__case_regreesion_model_02/answers.html
-p7 = 인슈어테크 #4 실전 | 처음 화면 — https://adminmrobo.github.io/insurtech__case_regreesion_model_02/index.html
-
-[개념] 이름 (유형) — 정의 [출처 페이지 기호#위치]
-- 편향 (개념) — 가중합에 더하는 값. 얼마나 쉽게 반응할지를 정한다. [p2#define]
-- 독립 사건 (개념) — 한 사건이 일어났다는 사실이 다른 사건의 확률을 바꾸지 않는 관계. P(A∩B) = P(A) × P(B). [p4#task]
-- 부트스트랩 (개념) — 중복을 허용해 다시 뽑기. [p3#fix1]
-- 검증 데이터 (개념) — 학습에 쓰지 않고 설정과 멈출 때를 고르는 데 쓰는 데이터. [p1#split-top]
-- 기대 (개념) — 정의 없음 [p2#define]
-- 군 (개념) — 정의 없음 [p2#foldvar]
-- 평균·중앙값 (개념) — 평균은 이상치에 끌리고 중앙값은 버틴다 [p5#practice]
-- (이 피드 위쪽에 이미 정의된 개념) 판단나무, 프롬프트, 표준편차, 데이터 증강, 손실, 표준화, 평균, 그래디언트 부스팅, KNN, 원-핫, 가중평균, 교차검증, 조각 (토큰), 교육, 추정
-
-[관계] A → B, C : 관계
-- 판단나무 → 그래디언트 부스팅 : 먼저 알아야 함
-- 표준편차 → 표준화 : 먼저 알아야 함
-- 그래디언트 부스팅 → 판단나무 : builtOn
-- KNN → 판단나무 : 먼저 알아야 함
-
 ## 암호화폐 자산의 정보 효율성
 주소: https://adminmrobo.github.io/my_article_01_bitcoin_price_analytics/
 분야: 금융·핀테크·블록체인 · 학문 분야: 금융·핀테크·블록체인, 통계학 · 페이지 1쪽 · 개념 29개 · 관계 36개
@@ -677,6 +533,7 @@ p7 = 인슈어테크 #4 실전 | 처음 화면 — https://adminmrobo.github.io/
 p1 = 암호화폐 정보 효율성 해설 — https://adminmrobo.github.io/my_article_01_bitcoin_price_analytics/crypto_info_efficiency.html
 
 [개념] 이름 (유형) — 정의 [출처 페이지 기호#위치]
+- 신뢰구간 (개념) — 같은 방법으로 반복하면 그중 약 95%가 참값을 포함하는 구간(빈도주의). "이 구간에 참값이 있을 확률 95%"로 읽지 않음. [p1#r3]
 - 효율적 시장가설 (개념) — 가격이 이미 정보를 반영하고 있어서, 그 정보로는 남보다 더 벌 수 없다는 가설. 약형·준강형·강형으로 나뉜다. [p1#q1]
 - 승자·패자 역전 (개념) — 과거 성과가 나빴던 패자 묶음이 이후 승자 묶음보다 높은 성과를 내는 현상. [p1#q1]
 - 가성회귀 (개념) — 서로 무관한 두 추세(비정상) 계열을 회귀하면 우연히 유의한 관계가 나오는 현상. 차분하면 사라진다. [p1#method]
@@ -704,7 +561,7 @@ p1 = 암호화폐 정보 효율성 해설 — https://adminmrobo.github.io/my_ar
 - 공포 온도계(VKOSPI) (용어) — 변동성 지수 일별 종가(KRX). [p1#cast]
 - 금 가격 (용어) — 금 가격지수 일별 종가(KRX, 원). [p1#cast]
 - 달러 선물 지수 (용어) — 달러 선물지수 일별 종가(KRX). [p1#cast]
-- (이 피드 위쪽에 이미 정의된 개념) 신뢰구간, 차분
+- (이 피드 위쪽에 이미 정의된 개념) 차분
 
 [관계] A → B, C : 관계
 - 차분 → 피어슨 상관계수 : 먼저 알아야 함

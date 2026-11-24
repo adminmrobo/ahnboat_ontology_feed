@@ -3,12 +3,91 @@
   <channel>
     <title>ahnboat lab 온톨로지 — 인공지능 응용 (2/2)</title>
     <link>https://adminmrobo.github.io/ahnboat_ontology_feed/</link>
-    <description>생성 AI가 한 번에 읽도록 나눈 2/2. 전체는 https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/applied-ai.xml. 인공지능 응용 분야 공개 콘텐츠의 최신 지식 색인(개념·정의·관계). 기준일 2026-11-24. 제조 공정, 경영·회계, 생성형 AI 업무 활용, 이상탐지처럼 AI를 실제 현장 문제에 적용한 강의와 연구입니다.</description>
+    <description>생성 AI가 한 번에 읽도록 나눈 2/2. 전체는 https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/applied-ai.xml. 인공지능 응용 분야 공개 콘텐츠의 최신 지식 색인(개념·정의·관계). 기준일 2026-11-25. 제조 공정, 경영·회계, 생성형 AI 업무 활용, 이상탐지처럼 AI를 실제 현장 문제에 적용한 강의와 연구입니다.</description>
     <language>ko</language>
-    <lastBuildDate>Tue, 24 Nov 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 00:00:00 +0900</lastBuildDate>
     <ttl>720</ttl>
     <copyright>CC BY-NC 4.0 · 안상선 ((주)M-Robo)</copyright>
     <atom:link href="https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/applied-ai-p2.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>산업재해 패널 데이터를 활용한 머신러닝 모델 (목차) — 재활 서비스 예측 연구실</title>
+      <link>https://adminmrobo.github.io/industrial-accident-prediction/</link>
+      <guid isPermaLink="false">ahnboat:industrial-accident-prediction:59a6e7d310</guid>
+      <pubDate>Mon, 23 Nov 2026 07:30:50 +0000</pubDate>
+      <category>인공지능 응용</category>
+      <category domain="lab:domain">머신러닝</category>
+      <category domain="lab:domain">통계학</category>
+      <description><![CDATA[분야: 인공지능 응용 · 학문 분야: 머신러닝, 통계학 · 페이지 7쪽 · 개념 36개 · 관계 20개
+사이트: https://adminmrobo.github.io/industrial-accident-prediction/
+
+[페이지] 기호 = 제목 — 주소
+p1 = 제1장 · 왜 재활 서비스 이용을 예측하나 — 재활 서비스 예측 연구실 — https://adminmrobo.github.io/industrial-accident-prediction/ch1_why.html
+p2 = 제2장 · 데이터 읽기 — 재활 서비스 예측 연구실 — https://adminmrobo.github.io/industrial-accident-prediction/ch2_data.html
+p3 = 제3장 · 세 가지 분류 모델 — 재활 서비스 예측 연구실 — https://adminmrobo.github.io/industrial-accident-prediction/ch3_models.html
+p4 = 제4장 · 성적표 읽기 — 재활 서비스 예측 연구실 — https://adminmrobo.github.io/industrial-accident-prediction/ch4_score.html
+p5 = 제5장 · 불균형 데이터와 보완 — 재활 서비스 예측 연구실 — https://adminmrobo.github.io/industrial-accident-prediction/ch5_imbalance.html
+p6 = 제6장 · 직접 해 보기 · 현장에 옮기기 — 재활 서비스 예측 연구실 — https://adminmrobo.github.io/industrial-accident-prediction/ch6_practice.html
+p7 = 산업재해 패널 데이터를 활용한 머신러닝 모델 (목차) — 재활 서비스 예측 연구실 — https://adminmrobo.github.io/industrial-accident-prediction/index.html
+
+[개념] 이름 (유형) — 정의 [출처 페이지 기호#위치]
+- 표준화 (개념) — 비교 전에 상관없는 차이(단위·자리·크기)를 없앤다. [p3#s1]
+- 결정 트리 (개념) — 예/아니오 질문을 이어 나누기 [p3#s3]
+- 시그모이드 (개념) — 점수를 0~1 사이 확률로 바꾸는 함수. [p3#s2]
+- 혼동 행렬 (개념) — 정답 클래스와 모델이 고른 클래스를 표로 세어 어떤 실수를 했는지 보여 준다. [p4#s1]
+- 지도 학습 (개념) — 사람이 붙인 이름표(정답)를 맞히도록 배우는 방식. [p1#s2]
+- 기계 학습 (개념) — 데이터에서 규칙을 배워 새 데이터를 다루는 방법. [p1#s2]
+- 상관계수 (개념) — 두 값이 함께 움직이는 정도. −1(반대로)~+1(똑같이). [p2#s3]
+- 특이도 (개념) — 실제 없을 때 음성으로 판정하는 비율. TN ÷ (TN+FP) [p1#p12]
+- 학습/시험 나누기 (방법) — 20%를 시험지로 봉인하고 80%로만 학습 [p1#s3]
+- 특성 중요도 (지표) — 나무가 단서를 쓴 크기, 원인 아님 [p5#p54]
+- 재현성 (개념) — 같은 데이터로 같은 분석을 하면 언제나 같은 결과가 나오는 성질. 도구 버전·코드·처리 과정을 기록해 지킨다. [p6#s2]
+- 임계값 (개념) — 확률이 이 값을 넘으면 양성으로 부르는 기준. [p4#s4]
+- 원-핫 (개념) — 어휘 수만큼 긴 줄에서 제 번호 자리에만 1 [p6#s5]
+- 교차검증 (방법) — 다섯 조각으로 다섯 번 재기 [p5#s4]
+- 랜덤 포레스트 (방법) — 나무 수백 그루의 다수결 [p5#s3]
+- k-최근접 이웃 (개념) — 가장 가까운 점으로 판단하는 방법. [p3#s1]
+- 예측 확률로 우선순위 매기기 (방법) — 모델 점수 순으로 연락 대상을 고르는 쓰임 [p1#p11]
+- 전통적인 프로그래밍 (개념) — 사람이 규칙을 적고 컴퓨터가 적용 [p1#s2]
+- 재현율 (지표) — 실제 이용자 중 찾아낸 비율 [p1#p12]
+- 분류 모형 여섯 단계 (방법) — 수집·전처리·분할·선택·학습·평가 [p1#s4]
+- 산재보험패널 2차 코호트 5차년도 (데이터) — 2,728명 × 72열 분석용 파일 [p2#s1]
+- 패널 데이터 (개념) — 같은 사람을 해마다 다시 조사한 자료 [p2#s1]
+- 범주형 변수 (개념) — 번호가 이름표인 변수 [p2#s1]
+- 빈칸을 0으로 채우기 (방법) — 재현 코드의 결측값 처리 [p2#s1]
+- 타깃 변수 세 개 (개념) — y_service · y_job · y_soc [p2#s2]
+- 무리별 이용률 (방법) — 범주별로 이용 비율을 직접 세기 [p2#s4]
+- 로지스틱 회귀 (방법) — 점수를 시그모이드로 확률로 바꿔 분류 [p3#s2]
+- 정확도 (지표) — 전체 중 맞힌 비율 [p4#s1]
+- 정밀도 (지표) — "이용"으로 고른 사람 중 실제 이용자 비율 [p4#s1]
+- 균형 정확도 (지표) — 재현율과 특이도의 평균 [p4#s2]
+- AUC (지표) — 기준선을 모두 바꿔 본 종합 점수 [p4#s4]
+- 복제 오버샘플링 (방법) — 적은 쪽을 복제해 늘림 [p5#s2]
+- SMOTE (방법) — 적은 쪽 점 사이에 새 점을 만듦 [p5#s2]
+- 클래스 가중치 (방법) — 적은 쪽을 틀리면 벌점을 크게 [p5#s2]
+- 사람이 최종 결정 (방법) — 모델은 제안, 사람이 결정 [p6#s4]
+- 분류 모형 (개념) — 입력을 미리 정한 범주로 나누는 모델 [p7#big]
+
+[관계] A → B, C : 관계
+- 표준화 → k-최근접 이웃 : 먼저 알아야 함
+- 시그모이드 → 로지스틱 회귀 : 먼저 알아야 함
+- 혼동 행렬 → 재현율, 특이도 : 먼저 알아야 함
+- 지도 학습 → 기계 학습 : 상위 개념
+- 기계 학습 → 전통적인 프로그래밍 : 대비
+- 상관계수 → 범주형 변수 : 한계
+- 학습/시험 나누기 → 분류 모형 여섯 단계 : ~의 일부
+- 임계값 → 혼동 행렬 : ~의 일부
+- 임계값 → AUC : 먼저 알아야 함
+- 교차검증 → 학습/시험 나누기 : 상위 개념
+- 랜덤 포레스트 → 특성 중요도 : 관련
+- k-최근접 이웃 → 결정 트리 : 대비
+- 예측 확률로 우선순위 매기기 → 사람이 최종 결정 : 대비
+- 재현율 → 균형 정확도 : 먼저 알아야 함
+- 산재보험패널 2차 코호트 5차년도 → 패널 데이터 : 상위 개념
+- 범주형 변수 → 산재보험패널 2차 코호트 5차년도 : ~의 일부
+- 빈칸을 0으로 채우기 → 범주형 변수 : 한계
+- 무리별 이용률 → 상관계수 : 대비
+- 복제 오버샘플링 → SMOTE : 대비]]></description>
+    </item>
     <item>
       <title>가짜 사이트를 잡아라 — 피싱 사이트 탐지 연구실</title>
       <link>https://adminmrobo.github.io/catch_phishing/</link>
@@ -42,12 +121,10 @@ p7 = 가짜 사이트를 잡아라 — 피싱 사이트 탐지 연구실 (목차
 - 특징 (개념) — 사진을 비교하려고 뽑은 숫자들. [p2#dict]
 - Z 점수 (방법) — (값 − 평균) ÷ 표준편차. 평균에서 표준편차 몇 개만큼 떨어졌는지. [p3#s2]
 - 고립 숲 (방법) — 무작위로 선을 그어 한 점을 따로 떼어 내기까지 걸리는 횟수로 이상을 재는 방법. 빨리 떨어지면 이상. [p3#s4]
-- 상관계수 (개념) — 두 값이 함께 움직이는 정도. −1(반대로)~+1(똑같이). [p2#s4]
 - 피싱 사이트 (개념) — 진짜 사이트를 흉내 내 개인정보를 빼내는 가짜 페이지 [p1#s1]
 - 사람이 쓴 규칙 (방법) — 경험으로 정한 if-then 규칙 하나 [p1#s2]
 - 3클래스 분류 (개념) — 정상·의심·피싱 중 하나를 고르는 분류 [p1#s3]
 - 불균형 데이터 (개념) — 정답 한쪽이 매우 적은 데이터 (의심 7.6%) [p1#s3]
-- 학습/시험 나누기 (방법) — 20%를 시험지로 봉인하고 80%로만 학습 [p1#s4]
 - 층화 추출 (방법) — 나눌 때 정답 비율을 양쪽에 똑같이 맞춤 [p1#s4]
 - UCI Website Phishing 데이터 (데이터) — 1,353개 사이트, 단서 9개, 정답 3종 [p1#s3]
 - SFH (입력 폼이 가는 곳) (개념) — 폼 입력값을 처리하는 서버가 비었거나 외부 도메인인지 [p2#v_SFH]
@@ -66,13 +143,13 @@ p7 = 가짜 사이트를 잡아라 — 피싱 사이트 탐지 연구실 (목차
 - LOF (방법) — 이웃보다 밀도가 낮은 점을 이상치로 [p3#s4]
 - SMOTE (방법) — 적은 쪽 데이터 사이에 새 데이터를 만들어 늘림 [p4#s1]
 - 그래디언트 부스팅 (방법) — 작은 나무를 차례로 더해 오답을 보정 [p4#s4]
-- 특성 중요도 (지표) — 나무가 단서를 쓴 크기, 원인 아님 [p4#s4]
 - 혼동행렬 (지표) — 실제 × 예측 3×3 표 [p5#s2]
 - macro F1 (지표) — 정답별 F1의 단순 평균 [p5#s2]
 - 5겹 교차검증 (방법) — 다섯 판 평균과 흔들림 [p5#s3]
 - 처음 보는 단서 조합 (개념) — 시험지 중 98개 [p5#s4]
 - 배포 전 점검 (개념) — 데이터 시점·단서 추출·의심 처리·비용·감시 [p6#s4]
 - 모델 대회 형식 (방법) — 출전·심사·방청, 네 라운드, 반칙 규정 [p7#rules]
+- (이 피드 위쪽에 이미 정의된 개념) 상관계수, 학습/시험 나누기, 특성 중요도
 
 [관계] A → B, C : 관계
 - 과적합 → 학습/시험 나누기 : addressedBy
@@ -104,37 +181,6 @@ p7 = 가짜 사이트를 잡아라 — 피싱 사이트 탐지 연구실 (목차
 - 그래디언트 부스팅 → 판단나무 : builtOn
 - 혼동행렬 → 재현율 : 먼저 알아야 함
 - 5겹 교차검증 → 데이터 누수 : 관련]]></description>
-    </item>
-    <item>
-      <title>생성형 AI 활용전략 · 중간고사 시뮬레이션</title>
-      <link>https://adminmrobo.github.io/Gen_AI_Hannam_univ/</link>
-      <guid isPermaLink="false">ahnboat:Gen_AI_Hannam_univ:d9747ca92c</guid>
-      <pubDate>Mon, 23 Nov 2026 07:30:45 +0000</pubDate>
-      <category>인공지능 응용</category>
-      <category domain="lab:domain">생성형 AI</category>
-      <category domain="lab:domain">LLM·추론 엔지니어링</category>
-      <description><![CDATA[분야: 인공지능 응용 · 학문 분야: 생성형 AI, LLM·추론 엔지니어링 · 페이지 1쪽 · 개념 9개 · 관계 4개
-사이트: https://adminmrobo.github.io/Gen_AI_Hannam_univ/
-
-[페이지] 기호 = 제목 — 주소
-p1 = 중간고사 시뮬레이션 — 생성형 AI의 활용전략 — https://adminmrobo.github.io/Gen_AI_Hannam_univ/index.html
-
-[개념] 이름 (유형) — 정의 [출처 페이지 기호#위치]
-- 토큰화 (개념) — 글을 분석 가능한 최소 단위(토큰)로 나누는 일. [p1#scr-title]
-- 토큰 (용어) — 분석의 최소 단위로 나눈 조각. 단어·형태소·글자·부분 단어 등. [p1#scr-title]
-- LLM (용어) — 수십억~수조 파라미터의 대규모 언어모델. 범용성·창발성. [p1#scr-title]
-- 프롬프트 (개념) — AI에게 무엇을 만들지 알려 주는 글. [p1#scr-title]
-- 임베딩 (개념) — 그림·글을 의미가 담긴 짧은 숫자 묶음으로 바꾼 것. [p1#scr-title]
-- 규칙 기반 (개념) — 사람(또는 진화)이 미리 규칙을 써 두는 방식. 설명은 쉽지만 환경이 바뀌면 직접 고쳐야 한다. [p1#kg]
-- 컨텍스트 (개념) — 모델이 한 번에 보는 모든 것(지시, 대화, 문서, 도구 결과)을 고르고 배치하는 일. [p1#scr-title]
-- 메모장(문맥) (개념) — AI가 지금 펼쳐 두고 읽는 글 전체. 질문, 대화, 검색 결과가 모두 여기에 쌓인다. 한도가 있다. [p1#kg]
-- 조각 (토큰) (개념) — 모델이 글을 읽는 단위. 낱말보다 잘게 나뉘기도 한다. [p1#kg]
-
-[관계] A → B, C : 관계
-- 토큰 → 토큰화 : ~의 일부
-- 프롬프트 → LLM : 관련
-- 프롬프트 → 컨텍스트 : 먼저 알아야 함
-- 조각 (토큰) → 메모장(문맥) : ~의 일부]]></description>
     </item>
     <item>
       <title>금융 이상탐지 모델 보안과 적대적 공격</title>
@@ -497,7 +543,6 @@ p6 = 시제품 테스트 랩실 — 생선 통조림 분류 장비를 만들고 
 - 뉴런 하나 (개념) — 가중합 z = Σwx + b를 만들고 활성화 함수를 거쳐 내보내는 단위. 파라미터 3개(입력 2개일 때). [p2#w2]
 - 편향 (개념) — 가중합에 더하는 값. 얼마나 쉽게 반응할지를 정한다. [p2#w1]
 - 기울기 (개념) — 변수를 아주 조금 바꿨을 때 손실이 얼마나 변하는지. 손실을 줄이려면 기울기 반대쪽으로 고친다. [p2#w6]
-- 시그모이드 (개념) — 점수를 0~1 사이 확률로 바꾸는 함수. [p2#w2]
 - Adam (방법) — 걸음 크기를 기울기의 크기에 맞춰 알아서 조절하는 경사 하강법. [p2#w7]
 - 조기 종료 (방법) — 검증 손실이 다시 오르기 전에 학습을 멈추는 방법 [p2#w8]
 - 오토인코더 (방법) — 그림을 숫자 몇 개로 접었다 펴서, 넣은 그림 자신을 맞히도록 배우는 신경망. [p2#atlas]
@@ -600,7 +645,7 @@ p6 = 시제품 테스트 랩실 — 생선 통조림 분류 장비를 만들고 
 - 봉인 시료 실제 테스트 (방법) — 정의 없음 [p6#test]
 - 모델 선택의 선택 편향 (개념) — 여러 후보 중 최고 점수를 고르면 그 점수에 운이 섞여 부푼다. [p6#gap]
 - 표준화 (StandardScaler) (방법) — 정의 없음 [p6#build]
-- (이 피드 위쪽에 이미 정의된 개념) 학습률, 과적합, 데이터 누수, 정확도, 재현율, 랜덤포레스트 소프트센서, 판단나무, 로지스틱 회귀 (다항), 불균형 데이터, 그래디언트 부스팅, 혼동행렬, 5겹 교차검증
+- (이 피드 위쪽에 이미 정의된 개념) 학습률, 과적합, 데이터 누수, 정확도, 재현율, 랜덤포레스트 소프트센서, 판단나무, 로지스틱 회귀 (다항), 시그모이드, 불균형 데이터, 그래디언트 부스팅, 혼동행렬, 5겹 교차검증
 
 [관계] A → B, C : 관계
 - 학습률 → Adam, 배치 크기 : 먼저 알아야 함
@@ -758,31 +803,6 @@ p6 = 시제품 테스트 랩실 — 생선 통조림 분류 장비를 만들고 
 - 봉인 시료 실제 테스트 → 혼동행렬, 정확도, 로그 손실 : ~로 평가]]></description>
     </item>
     <item>
-      <title>스마트 팩토리 World · 시멘트 제조업</title>
-      <link>https://adminmrobo.github.io/smart_factory_world/</link>
-      <guid isPermaLink="false">ahnboat:smart_factory_world:58f8390fea</guid>
-      <pubDate>Thu, 12 Nov 2026 15:37:47 +0000</pubDate>
-      <category>인공지능 응용</category>
-      <category domain="lab:domain">인공지능(공통)</category>
-      <category domain="lab:domain">경영학</category>
-      <description><![CDATA[분야: 인공지능 응용 · 학문 분야: 인공지능(공통), 경영학 · 페이지 1쪽 · 개념 7개 · 관계 3개
-사이트: https://adminmrobo.github.io/smart_factory_world/
-
-[페이지] 기호 = 제목 — 주소
-p1 = 시멘트 공장 World — 가마 37분 재생 — https://adminmrobo.github.io/smart_factory_world/cement/factory/index.html
-
-[개념] 이름 (유형) — 정의 [출처 페이지 기호#위치]
-- 온도 (용어) — 점수를 나누어 고르기를 날카롭게 또는 고르게 하는 챗봇 설정값. [p1#kE]
-- 에이전트 (개념) — 목표를 받아 도구를 부르고 여러 단계를 스스로 실행하는 AI 시스템. [p1#tab3]
-- 하네스 (용어) — 고정된 모델을 둘러싼 프롬프트·스킬·도구 규칙·메모리 묶음 [p1#chairT]
-- (이 피드 위쪽에 이미 정의된 개념) 프롬프트, 병목, 컨텍스트, 가동률
-
-[관계] A → B, C : 관계
-- 프롬프트 → 컨텍스트 : 먼저 알아야 함
-- 병목 → 가동률 : ~로 평가
-- 컨텍스트 → 하네스 : 먼저 알아야 함]]></description>
-    </item>
-    <item>
       <title>생성형 AI 활용 전략 · 목차</title>
       <link>https://adminmrobo.github.io/generative-ai-prompt-strategy/</link>
       <guid isPermaLink="false">ahnboat:generative-ai-prompt-strategy:18449ef326</guid>
@@ -801,6 +821,7 @@ p3 = 캐릭터를 설계도로 그리기 — AI 연구실 — https://adminmrobo
 [개념] 이름 (유형) — 정의 [출처 페이지 기호#위치]
 - 정책 π (개념) — 어느 상태에서 무엇을 할지 정한 규칙. [p2#lv3]
 - LLM과 RAG (방법) — 대규모 언어모델에 벡터 데이터베이스에서 검색한 관련 문서를 함께 넣어, 최신·조직 고유 정보를 근거로 답을 생성하게 하는 방법. [p2#lv5]
+- 프롬프트 (개념) — AI에게 무엇을 만들지 알려 주는 글. [p3#why]
 - 원근 (개념) — 사진 속 크기 = f × 실제 크기 ÷ 거리. [p3#lv2]
 - 사이 장면 (개념) — 앞·뒤 진짜 장면 사이 시각의 장면. 그리지 않고 만든다. [p3#lv4]
 - 민감도 (개념) — 실제 있는 경우를 양성으로 잡아내는 비율. TP ÷ (TP+FN) [p1#lv2]
@@ -892,7 +913,6 @@ p3 = 캐릭터를 설계도로 그리기 — AI 연구실 — https://adminmrobo
 - 고정 블록 + 한 칸 수정 (방법) — 외형 설계도는 그대로 복사하고 바꿀 칸 하나만 고치는 방식(초파리 쪽). [p3#duel]
 - 매 장면 새로 쓰기 (방법) — 장면마다 프롬프트를 처음부터 더 화려하게 다시 쓰는 방식(주판봇 쪽). [p3#duel]
 - 기준 시트 일치율 (지표) — 기준 시트의 외형 속성 8개 중 같게 나온 비율. [p3#duel]
-- (이 피드 위쪽에 이미 정의된 개념) 프롬프트
 
 [관계] A → B, C : 관계
 - 정책 π → 형식 (F) : 먼저 알아야 함
