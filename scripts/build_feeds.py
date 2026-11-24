@@ -124,6 +124,11 @@ def build(src):
     repos = load_src(src, "repos.json")
     hub = load_src(src, "hub_meta.json")
     meta = field_meta(hub)
+    # 홈페이지(서버실 랙·카탈로그)에 올라간 콘텐츠 수 — 지식 색인이 있는 콘텐츠 수와 나란히 보여 준다
+    try:
+        listed = collections.Counter(it.get("cat") for it in load_src(src, "catalog.json").get("items", []))
+    except Exception:
+        listed = collections.Counter()
     repo_info = {r["repo"]: r for r in repos if isinstance(r, dict) and r.get("repo")}
     dom_ko = {d["code"]: d.get("ko", d["code"]) for d in onto.get("domains", [])}
     updated = onto.get("updated") or dt.date.today().isoformat()
@@ -252,7 +257,7 @@ def build(src):
         lst.sort(key=lambda c: c["pushed"], reverse=True)
 
     index = {"updated": updated, "base": BASE, "all": BASE + "feeds/all.xml",
-             "summary": onto.get("summary", {}), "fields": []}
+             "summary": dict(onto.get("summary", {}), listed=onto.get("summary", {}).get("listed") or sum(listed.values())), "fields": []}
     fstats = {f["cat"]: f for f in onto.get("fields", [])}
     all_items = []
     for name in fields:
@@ -295,7 +300,7 @@ def build(src):
         st = fstats.get(name, {})
         index["fields"].append({"name": name, "en": m.get("en", ""), "slug": slug, "rack": m.get("rack"),
                                 "color": m.get("color") or st.get("color", ""), "desc": m.get("desc", ""),
-                                "contents": len(lst), "concepts": st.get("concepts"), "relations": st.get("relations"),
+                                "contents": st.get("contents") or len(lst), "listed": st.get("listed") or listed.get(name) or len(lst), "concepts": st.get("concepts"), "relations": st.get("relations"),
                                 "feed": url, "parts": parts, "jsonld": BASE + "ontology/%s.jsonld" % slug})
         all_items.extend(lst)
     all_items.sort(key=lambda c: c["pushed"], reverse=True)

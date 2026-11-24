@@ -194,6 +194,46 @@
    ]
   },
   {
+   "@id": "lab:method/quantization",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "양자화",
+     "@language": "ko"
+    },
+    {
+     "@value": "Quantization",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "가중치를 2ᵇ개 눈금 중 가장 가까운 값으로",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/vector_db_lab/03_vector_store.html#s1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/audio-signal"
+    },
+    {
+     "@id": "lab:topic/deployment"
+    },
+    {
+     "@id": "lab:topic/quantization"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/vector-record"
+    }
+   ]
+  },
+  {
    "@id": "lab:concept/embedding",
    "@type": [
     "skos:Concept",
@@ -237,46 +277,6 @@
    "lab:prerequisiteOf": [
     {
      "@id": "lab:concept/vector-database"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/quantization",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "양자화",
-     "@language": "ko"
-    },
-    {
-     "@value": "Quantization",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "가중치를 2ᵇ개 눈금 중 가장 가까운 값으로",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/vector_db_lab/03_vector_store.html#s1"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/audio-signal"
-    },
-    {
-     "@id": "lab:topic/deployment"
-    },
-    {
-     "@id": "lab:topic/quantization"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/vector-record"
     }
    ]
   },
@@ -1624,6 +1624,43 @@
    ]
   },
   {
+   "@id": "lab:concept/normal-distribution",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "정규분포",
+     "@language": "ko"
+    },
+    {
+     "@value": "normal distribution",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "종 모양 분포. 비율 추정에서 모집단이 이 모양일 필요는 없다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/my_article_08_poll_reweighting_lab/X1_poll_reweighting.html#big"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/continuous-distributions"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/central-limit-theorem"
+    },
+    {
+     "@id": "lab:concept/standardization"
+    }
+   ]
+  },
+  {
    "@id": "lab:method/partial-pooling",
    "@type": [
     "skos:Concept",
@@ -2298,43 +2335,6 @@
    }
   },
   {
-   "@id": "lab:concept/normal-distribution",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "정규분포",
-     "@language": "ko"
-    },
-    {
-     "@value": "normal distribution",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "종 모양 분포. 비율 추정에서 모집단이 이 모양일 필요는 없다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/my_article_08_poll_reweighting_lab/X1_poll_reweighting.html#big"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/continuous-distributions"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/central-limit-theorem"
-    },
-    {
-     "@id": "lab:concept/standardization"
-    }
-   ]
-  },
-  {
    "@id": "lab:concept/central-limit-theorem",
    "@type": [
     "skos:Concept",
@@ -2819,6 +2819,14 @@
      "@id": "lab:topic/learning-rate-schedule"
     }
    ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/adam"
+    },
+    {
+     "@id": "lab:concept/batch-size"
+    }
+   ],
    "lab:partOf": [
     {
      "@id": "lab:method/gradient-descent"
@@ -2830,14 +2838,6 @@
      "@id": "lab:method/learning-rate-sweep"
     }
    ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/adam"
-    },
-    {
-     "@id": "lab:concept/batch-size"
-    }
-   ],
    "lab:motivates": [
     {
      "@id": "lab:concept/hessian-convex"
@@ -2846,6 +2846,79 @@
    "lab:hasLimitation": [
     {
      "@id": "lab:concept/divergence-of-training"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/vector",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "벡터",
+     "@language": "ko"
+    },
+    {
+     "@value": "Vector",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "숫자 한 줄. 데이터 한 행, 가중치, 임베딩",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/math_for_ai_lab/index.html#c03"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/vector-spaces"
+    }
+   ],
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/dot-product"
+    }
+   ],
+   "lab:hasPart": [
+    {
+     "@id": "lab:concept/norm"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/matrix"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/regularization",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "정규화",
+     "@language": "ko"
+    },
+    {
+     "@value": "regularization",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "모델이 너무 복잡해지지 않게 벌점을 주는 방법. (표준화·정규분포와 다른 뜻)",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/math_for_ai_lab/part3.html#c15"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/weight-decay"
     }
    ]
   },
@@ -2899,17 +2972,17 @@
      "@id": "lab:concept/learning-rate"
     }
    ],
-   "lab:broader": [
-    {
-     "@id": "lab:method/adam"
-    }
-   ],
    "lab:relatedTo": [
     {
      "@id": "lab:concept/gradient"
     },
     {
      "@id": "lab:method/euler-method"
+    }
+   ],
+   "lab:broader": [
+    {
+     "@id": "lab:method/adam"
     }
    ]
   },
@@ -2987,10 +3060,10 @@
    ],
    "lab:motivates": [
     {
-     "@id": "lab:concept/bayes"
+     "@id": "lab:concept/distributions"
     },
     {
-     "@id": "lab:concept/distributions"
+     "@id": "lab:concept/bayes"
     }
    ]
   },
@@ -3023,6 +3096,69 @@
     },
     {
      "@id": "lab:topic/normalization-layers"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/activation",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "활성화 함수(시그모이드·ReLU)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Activation functions",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "신경망에 쓰는 비선형 함수. 시그모이드 치역 0~1",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/math_for_ai_lab/index.html#c01"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/activation-function"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/distributions",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "확률분포(정규·포아송·지수·균등·이항)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Probability distributions",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "데이터 모양의 이름표. 확률 = 넓이",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/math_for_ai_lab/part2.html#c11"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/distribution-family-map"
+    }
+   ],
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/entropy"
     }
    ]
   },
@@ -3064,34 +3200,10 @@
     {
      "@id": "lab:concept/matmul"
     }
-   ]
-  },
-  {
-   "@id": "lab:method/regularization",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
    ],
-   "skos:prefLabel": [
+   "lab:prerequisiteOf": [
     {
-     "@value": "정규화",
-     "@language": "ko"
-    },
-    {
-     "@value": "regularization",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "모델이 너무 복잡해지지 않게 벌점을 주는 방법. (표준화·정규분포와 다른 뜻)",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/math_for_ai_lab/part3.html#c15"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/weight-decay"
+     "@id": "lab:concept/cosine-similarity"
     }
    ]
   },
@@ -3238,6 +3350,40 @@
    ]
   },
   {
+   "@id": "lab:concept/mean-median",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "평균·중앙값",
+     "@language": "ko"
+    },
+    {
+     "@value": "Mean, median",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "평균은 이상치에 끌리고 중앙값은 버틴다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/math_for_ai_lab/part2.html#c06"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/central-tendency"
+    }
+   ],
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/variance"
+    }
+   ]
+  },
+  {
    "@id": "lab:concept/function",
    "@type": [
     "skos:Concept",
@@ -3309,35 +3455,6 @@
    ]
   },
   {
-   "@id": "lab:concept/activation",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "활성화 함수(시그모이드·ReLU)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Activation functions",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "신경망에 쓰는 비선형 함수. 시그모이드 치역 0~1",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/math_for_ai_lab/index.html#c01"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/activation-function"
-    }
-   ]
-  },
-  {
    "@id": "lab:concept/matrix",
    "@type": [
     "skos:Concept",
@@ -3368,50 +3485,6 @@
    "lab:hasPart": [
     {
      "@id": "lab:concept/vector"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/vector",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "벡터",
-     "@language": "ko"
-    },
-    {
-     "@value": "Vector",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "숫자 한 줄. 데이터 한 행, 가중치, 임베딩",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/math_for_ai_lab/index.html#c03"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/vector-spaces"
-    }
-   ],
-   "lab:motivates": [
-    {
-     "@id": "lab:concept/dot-product"
-    }
-   ],
-   "lab:hasPart": [
-    {
-     "@id": "lab:concept/norm"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/matrix"
     }
    ]
   },
@@ -3576,40 +3649,6 @@
    }
   },
   {
-   "@id": "lab:concept/mean-median",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "평균·중앙값",
-     "@language": "ko"
-    },
-    {
-     "@value": "Mean, median",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "평균은 이상치에 끌리고 중앙값은 버틴다",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/math_for_ai_lab/part2.html#c06"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/central-tendency"
-    }
-   ],
-   "lab:motivates": [
-    {
-     "@id": "lab:concept/variance"
-    }
-   ]
-  },
-  {
    "@id": "lab:method/iqr",
    "@type": [
     "skos:Concept",
@@ -3708,40 +3747,6 @@
    "lab:explains": [
     {
      "@id": "lab:concept/precision"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/distributions",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "확률분포(정규·포아송·지수·균등·이항)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Probability distributions",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "데이터 모양의 이름표. 확률 = 넓이",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/math_for_ai_lab/part2.html#c11"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/distribution-family-map"
-    }
-   ],
-   "lab:motivates": [
-    {
-     "@id": "lab:concept/entropy"
     }
    ]
   },
@@ -4175,35 +4180,6 @@
    ]
   },
   {
-   "@id": "lab:concept/sigmoid",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "시그모이드",
-     "@language": "ko"
-    },
-    {
-     "@value": "Sigmoid",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "점수를 0~1 사이 확률로 바꾸는 함수.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/optimization_3d_map/first_step_0.html#s01"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/activation-function"
-    }
-   ]
-  },
-  {
    "@id": "lab:method/backpropagation",
    "@type": [
     "skos:Concept",
@@ -4231,64 +4207,20 @@
      "@id": "lab:topic/backpropagation"
     }
    ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/gradient-descent"
-    },
-    {
-     "@id": "lab:method/adam"
-    },
-    {
-     "@id": "lab:concept/saddle-point"
-    }
-   ],
    "lab:solves": [
     {
      "@id": "lab:concept/gradient"
     }
-   ]
-  },
-  {
-   "@id": "lab:method/early-stopping",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
    ],
-   "skos:prefLabel": [
+   "lab:prerequisiteOf": [
     {
-     "@value": "조기 종료",
-     "@language": "ko"
+     "@id": "lab:method/adam"
     },
     {
-     "@value": "Early stopping",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "검증 손실이 다시 오르기 전에 학습을 멈추는 방법",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/optimization_3d_map/2_experiment_lab.html#s4"
-   },
-   "lab:topic": [
+     "@id": "lab:method/gradient-descent"
+    },
     {
-     "@id": "lab:topic/early-stopping"
-    }
-   ],
-   "lab:relatedTo": [
-    {
-     "@id": "lab:concept/epoch"
-    }
-   ],
-   "lab:evaluatedBy": [
-    {
-     "@id": "lab:metric/validation-loss"
-    }
-   ],
-   "lab:evaluatedOn": [
-    {
-     "@id": "lab:concept/validation-set"
+     "@id": "lab:concept/saddle-point"
     }
    ]
   },
@@ -4336,13 +4268,13 @@
      "@id": "lab:concept/tangency-condition"
     },
     {
+     "@id": "lab:concept/laplacian"
+    },
+    {
      "@id": "lab:concept/lagrange-multiplier"
     },
     {
      "@id": "lab:concept/divergence"
-    },
-    {
-     "@id": "lab:concept/laplacian"
     },
     {
      "@id": "lab:concept/gradient-invariance"
@@ -4356,6 +4288,35 @@
    "lab:evaluatedOn": [
     {
      "@id": "lab:concept/scalar-field"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/sigmoid",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "시그모이드",
+     "@language": "ko"
+    },
+    {
+     "@value": "Sigmoid",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "점수를 0~1 사이 확률로 바꾸는 함수.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/optimization_3d_map/first_step_0.html#s01"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/activation-function"
     }
    ]
   },
@@ -4405,6 +4366,109 @@
      "@id": "lab:method/momentum-sgd"
     }
    ]
+  },
+  {
+   "@id": "lab:concept/regularization",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "규제",
+     "@language": "ko"
+    },
+    {
+     "@value": "regularization",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "계수에 벌점을 줘 0 쪽으로 당기기.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/optimization_3d_map/first_step_2.html#s54"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/weight-decay"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/hyperparameter"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/lagrangian"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/early-stopping",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "조기 종료",
+     "@language": "ko"
+    },
+    {
+     "@value": "Early stopping",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "검증 손실이 다시 오르기 전에 학습을 멈추는 방법",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/optimization_3d_map/2_experiment_lab.html#s4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/early-stopping"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/epoch"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/validation-loss"
+    }
+   ],
+   "lab:evaluatedOn": [
+    {
+     "@id": "lab:concept/validation-set"
+    }
+   ]
+  },
+  {
+   "@id": "lab:metric/validation-loss",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "검증 손실",
+     "@language": "ko"
+    },
+    {
+     "@value": "Validation loss",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/optimization_3d_map/2_experiment_lab.html#s3"
+   }
   },
   {
    "@id": "lab:concept/distribution-shift",
@@ -4613,6 +4677,90 @@
    ]
   },
   {
+   "@id": "lab:concept/epoch",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "에포크",
+     "@language": "ko"
+    },
+    {
+     "@value": "epoch",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "훈련 데이터 전체를 한 번 다 보기.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/optimization_3d_map/2_experiment_lab.html#s4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/sgd-minibatch"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/hyperparameter"
+    },
+    {
+     "@id": "lab:method/early-stopping"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/overfitting"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/batch-size",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "배치 크기",
+     "@language": "ko"
+    },
+    {
+     "@value": "batch size",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "기울기를 계산할 때 보는 데이터 수.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/optimization_3d_map/2_experiment_lab.html#s1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/sgd-minibatch"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/epoch"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/hyperparameter"
+    },
+    {
+     "@id": "lab:method/minibatch-sgd"
+    }
+   ]
+  },
+  {
    "@id": "lab:concept/hyperparameter",
    "@type": [
     "skos:Concept",
@@ -4672,129 +4820,6 @@
    "lab:contrastsWith": [
     {
      "@id": "lab:concept/validation-set"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/batch-size",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "배치 크기",
-     "@language": "ko"
-    },
-    {
-     "@value": "batch size",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "기울기를 계산할 때 보는 데이터 수.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/optimization_3d_map/2_experiment_lab.html#s1"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/sgd-minibatch"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/epoch"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/hyperparameter"
-    },
-    {
-     "@id": "lab:method/minibatch-sgd"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/epoch",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "에포크",
-     "@language": "ko"
-    },
-    {
-     "@value": "epoch",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "훈련 데이터 전체를 한 번 다 보기.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/optimization_3d_map/2_experiment_lab.html#s4"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/sgd-minibatch"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/hyperparameter"
-    },
-    {
-     "@id": "lab:method/early-stopping"
-    }
-   ],
-   "lab:relatedTo": [
-    {
-     "@id": "lab:concept/overfitting"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/regularization",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "규제",
-     "@language": "ko"
-    },
-    {
-     "@value": "regularization",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "계수에 벌점을 줘 0 쪽으로 당기기.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/optimization_3d_map/first_step_2.html#s54"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/weight-decay"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/hyperparameter"
-    }
-   ],
-   "lab:relatedTo": [
-    {
-     "@id": "lab:concept/lagrangian"
     }
    ]
   },
@@ -4949,26 +4974,6 @@
      "@id": "lab:concept/test-set"
     }
    ]
-  },
-  {
-   "@id": "lab:metric/validation-loss",
-   "@type": [
-    "skos:Concept",
-    "lab:Metric"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "검증 손실",
-     "@language": "ko"
-    },
-    {
-     "@value": "Validation loss",
-     "@language": "en"
-    }
-   ],
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/optimization_3d_map/2_experiment_lab.html#s3"
-   }
   },
   {
    "@id": "lab:concept/recall",
@@ -5194,6 +5199,48 @@
    ]
   },
   {
+   "@id": "lab:concept/curvature-eigenvalue",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "고유값(굽음)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Curvature eigenvalue",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "헤시안을 어느 방향으로 봐도 변하지 않는 굽음 숫자.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/optimization_3d_map/1_math_map.html#s3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/calculus-optimization-math"
+    },
+    {
+     "@id": "lab:topic/eigenvalues"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/second-order-critical-test"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/hessian"
+    }
+   ]
+  },
+  {
    "@id": "lab:method/momentum",
    "@type": [
     "skos:Concept",
@@ -5232,6 +5279,142 @@
    "lab:broader": [
     {
      "@id": "lab:method/gradient-descent"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/scale-factor",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "배율(스케일 인자)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Scale factor",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "좌표 1만큼이 실제 거리 몇인가. 원통 (1, r, 1), 구면 (1, r, r sin θ).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/optimization_3d_map/3_arrow_field.html#s6"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/calculus-optimization-math"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/gradient-invariance"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/laplacian",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "라플라시안",
+     "@language": "ko"
+    },
+    {
+     "@value": "Laplacian",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "2차 편미분의 합 = 헤시안 고유값의 합 = ∇·∇f.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/optimization_3d_map/1_math_map.html#s3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/calculus-optimization-math"
+    },
+    {
+     "@id": "lab:topic/divergence-curl"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/divergence"
+    }
+   ],
+   "lab:derivedFrom": [
+    {
+     "@id": "lab:concept/hessian"
+    },
+    {
+     "@id": "lab:concept/del-operator"
+    }
+   ],
+   "lab:evaluatedOn": [
+    {
+     "@id": "lab:concept/scalar-field"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/coordinate-systems"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/curl",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "회전",
+     "@language": "ko"
+    },
+    {
+     "@value": "Curl",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "∇×F. 작은 바람개비가 가장 빨리 도는 축과 세기(빠르기의 두 배).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/optimization_3d_map/3_arrow_field.html#s4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/calculus-optimization-math"
+    },
+    {
+     "@id": "lab:topic/divergence-curl"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/laplacian"
+    }
+   ],
+   "lab:derivedFrom": [
+    {
+     "@id": "lab:concept/del-operator"
+    }
+   ],
+   "lab:evaluatedOn": [
+    {
+     "@id": "lab:concept/vector-field"
     }
    ]
   },
@@ -5481,103 +5664,6 @@
    "lab:prerequisiteOf": [
     {
      "@id": "lab:method/curvature-step-limit"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/curvature-eigenvalue",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "고유값(굽음)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Curvature eigenvalue",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "헤시안을 어느 방향으로 봐도 변하지 않는 굽음 숫자.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/optimization_3d_map/1_math_map.html#s3"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/calculus-optimization-math"
-    },
-    {
-     "@id": "lab:topic/eigenvalues"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/second-order-critical-test"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/hessian"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/laplacian",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "라플라시안",
-     "@language": "ko"
-    },
-    {
-     "@value": "Laplacian",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "2차 편미분의 합 = 헤시안 고유값의 합 = ∇·∇f.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/optimization_3d_map/1_math_map.html#s3"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/calculus-optimization-math"
-    },
-    {
-     "@id": "lab:topic/divergence-curl"
-    }
-   ],
-   "lab:relatedTo": [
-    {
-     "@id": "lab:concept/divergence"
-    }
-   ],
-   "lab:derivedFrom": [
-    {
-     "@id": "lab:concept/hessian"
-    },
-    {
-     "@id": "lab:concept/del-operator"
-    }
-   ],
-   "lab:evaluatedOn": [
-    {
-     "@id": "lab:concept/scalar-field"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/coordinate-systems"
     }
    ]
   },
@@ -6516,53 +6602,6 @@
    ]
   },
   {
-   "@id": "lab:concept/curl",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "회전",
-     "@language": "ko"
-    },
-    {
-     "@value": "Curl",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "∇×F. 작은 바람개비가 가장 빨리 도는 축과 세기(빠르기의 두 배).",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/optimization_3d_map/3_arrow_field.html#s4"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/calculus-optimization-math"
-    },
-    {
-     "@id": "lab:topic/divergence-curl"
-    }
-   ],
-   "lab:derivedFrom": [
-    {
-     "@id": "lab:concept/del-operator"
-    }
-   ],
-   "lab:evaluatedOn": [
-    {
-     "@id": "lab:concept/vector-field"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/laplacian"
-    }
-   ]
-  },
-  {
    "@id": "lab:concept/right-hand-rule",
    "@type": [
     "skos:Concept",
@@ -6947,40 +6986,6 @@
    "lab:relatedTo": [
     {
      "@id": "lab:concept/scale-factor"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/scale-factor",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "배율(스케일 인자)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Scale factor",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "좌표 1만큼이 실제 거리 몇인가. 원통 (1, r, 1), 구면 (1, r, r sin θ).",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/optimization_3d_map/3_arrow_field.html#s6"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/calculus-optimization-math"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/gradient-invariance"
     }
    ]
   },
@@ -7850,6 +7855,46 @@
    }
   },
   {
+   "@id": "lab:concept/standardization",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "표준화",
+     "@language": "ko"
+    },
+    {
+     "@value": "standardization",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "비교 전에 상관없는 차이(단위·자리·크기)를 없앤다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/hello_space_lab/01_number_line.html#s13"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/high-dim-geometry"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/learning-rate"
+    },
+    {
+     "@id": "lab:method/adam"
+    },
+    {
+     "@id": "lab:concept/knn"
+    }
+   ]
+  },
+  {
    "@id": "lab:concept/projection",
    "@type": [
     "skos:Concept",
@@ -7893,46 +7938,6 @@
    "lab:prerequisiteOf": [
     {
      "@id": "lab:method/pca"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/standardization",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "표준화",
-     "@language": "ko"
-    },
-    {
-     "@value": "standardization",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "비교 전에 상관없는 차이(단위·자리·크기)를 없앤다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/hello_space_lab/01_number_line.html#s13"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/high-dim-geometry"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/adam"
-    },
-    {
-     "@id": "lab:concept/learning-rate"
-    },
-    {
-     "@id": "lab:concept/knn"
     }
    ]
   },
@@ -8059,6 +8064,35 @@
    "lab:prerequisiteOf": [
     {
      "@id": "lab:concept/trilateration"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/knn",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "k-최근접 이웃",
+     "@language": "ko"
+    },
+    {
+     "@value": "k-nearest neighbors",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "가장 가까운 점으로 판단하는 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/hello_space_lab/06_data_space.html#s62"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/knn"
     }
    ]
   },
@@ -8892,35 +8926,6 @@
    "lab:prerequisiteOf": [
     {
      "@id": "lab:concept/knn"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/knn",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "가장 가까운 이웃(KNN)",
-     "@language": "ko"
-    },
-    {
-     "@value": "k-nearest neighbors",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "가장 가까운 점으로 판단하는 방법.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/hello_space_lab/06_data_space.html#s62"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/knn"
     }
    ]
   },
@@ -10606,6 +10611,40 @@
    ]
   },
   {
+   "@id": "lab:concept/contour-line",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "등고선",
+     "@language": "ko"
+    },
+    {
+     "@value": "Contour line",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "높이(목표 값)가 같은 점을 이은 선.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/lagrange_multiplier_lab/index.html#s1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/gradient"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/gradient"
+    }
+   ]
+  },
+  {
    "@id": "lab:method/ridge-regression",
    "@type": [
     "skos:Concept",
@@ -10641,40 +10680,6 @@
    "lab:prerequisiteOf": [
     {
      "@id": "lab:method/lasso-regression"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/contour-line",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "등고선",
-     "@language": "ko"
-    },
-    {
-     "@value": "Contour line",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "높이(목표 값)가 같은 점을 이은 선.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/lagrange_multiplier_lab/index.html#s1"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/gradient"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/gradient"
     }
    ]
   },
@@ -10989,6 +10994,36 @@
    }
   },
   {
+   "@id": "lab:room/r02",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "길 전체에 점수 매기기 — 작용",
+     "@language": "ko"
+    },
+    {
+     "@value": "Action (path score)",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/lagrangian_hamiltonian_lab/01_lagrangian.html#r02"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/euler-lagrange"
+    }
+   ],
+   "lab:motivates": [
+    {
+     "@id": "lab:room/r03"
+    }
+   ]
+  },
+  {
    "@id": "lab:concept/hamiltonian",
    "@type": [
     "skos:Concept",
@@ -11054,36 +11089,6 @@
    "lab:motivates": [
     {
      "@id": "lab:room/r02"
-    }
-   ]
-  },
-  {
-   "@id": "lab:room/r02",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "길 전체에 점수 매기기 — 작용",
-     "@language": "ko"
-    },
-    {
-     "@value": "Action (path score)",
-     "@language": "en"
-    }
-   ],
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/lagrangian_hamiltonian_lab/01_lagrangian.html#r02"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/euler-lagrange"
-    }
-   ],
-   "lab:motivates": [
-    {
-     "@id": "lab:room/r03"
     }
    ]
   },
@@ -12952,6 +12957,35 @@
    }
   },
   {
+   "@id": "lab:term/gradient-descent",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "경사하강",
+     "@language": "ko"
+    },
+    {
+     "@value": "gradient descent",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "손실이 줄어드는 방향으로 가중치를 조금씩 옮기는 최적화 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/vector_calculus_lab/01_differential.html"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/gradient-descent"
+    }
+   ]
+  },
+  {
    "@id": "lab:term/noise",
    "@type": [
     "skos:Concept",
@@ -13055,23 +13089,23 @@
    ]
   },
   {
-   "@id": "lab:term/gradient-descent",
+   "@id": "lab:term/gradient-term",
    "@type": [
     "skos:Concept",
     "lab:Term"
    ],
    "skos:prefLabel": [
     {
-     "@value": "경사하강",
+     "@value": "그래디언트",
      "@language": "ko"
     },
     {
-     "@value": "gradient descent",
+     "@value": "gradient term",
      "@language": "en"
     }
    ],
    "skos:definition": {
-    "@value": "손실이 줄어드는 방향으로 가중치를 조금씩 옮기는 최적화 방법.",
+    "@value": "높이 지도에서 가장 가파르게 오르는 방향과 가파름을 나타내는 화살표.",
     "@language": "ko"
    },
    "rdfs:isDefinedBy": {
@@ -13079,7 +13113,12 @@
    },
    "lab:topic": [
     {
-     "@id": "lab:topic/gradient-descent"
+     "@id": "lab:topic/gradient"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/gradient"
     }
    ]
   },
@@ -13117,6 +13156,35 @@
    "lab:partOf": [
     {
      "@id": "lab:method/gradient-descent"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/dot-product",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "내적",
+     "@language": "ko"
+    },
+    {
+     "@value": "dot product",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "같은 자리끼리 곱해 더한 값.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/vector_calculus_lab/01_differential.html"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/inner-product-orthogonality"
     }
    ]
   },
@@ -13339,40 +13407,6 @@
    ]
   },
   {
-   "@id": "lab:term/gradient-term",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "그래디언트",
-     "@language": "ko"
-    },
-    {
-     "@value": "gradient term",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "높이 지도에서 가장 가파르게 오르는 방향과 가파름을 나타내는 화살표.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/vector_calculus_lab/01_differential.html"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/gradient"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/gradient"
-    }
-   ]
-  },
-  {
    "@id": "lab:term/divergence-term",
    "@type": [
     "skos:Concept",
@@ -13537,35 +13571,6 @@
    "lab:partOf": [
     {
      "@id": "lab:concept/gradient"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/dot-product",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "내적",
-     "@language": "ko"
-    },
-    {
-     "@value": "dot product",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "같은 자리끼리 곱해 더한 값.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/vector_calculus_lab/01_differential.html"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/inner-product-orthogonality"
     }
    ]
   },
@@ -29943,6 +29948,1325 @@
    ]
   },
   {
+   "@id": "lab:concept/open-interval",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "열린 구간과 여유",
+     "@language": "ko"
+    },
+    {
+     "@value": "open interval",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "끝점이 빠진 구간. 모든 점 둘레에 구간 안에만 있는 작은 여유가 있다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/topology_ai_lab/01_open_sets.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/topology"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/topology",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "위상 (열린 집합의 세 규칙)",
+     "@language": "ko"
+    },
+    {
+     "@value": "topology",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "전체와 빈 집합을 담고, 합집합과 유한 교집합에 대해 닫혀 있는 부분집합 목록.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/topology_ai_lab/01_open_sets.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/closed-set-boundary"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/closed-set-boundary",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "닫힌 집합과 경계",
+     "@language": "ko"
+    },
+    {
+     "@value": "closed set and boundary",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "바깥이 열린 집합인 집합이 닫힌 집합, 아무리 작은 이웃도 안과 밖을 함께 담는 점들이 경계.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/topology_ai_lab/01_open_sets.html#lv3"
+   }
+  },
+  {
+   "@id": "lab:concept/discrete-topology",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "이산 위상",
+     "@language": "ko"
+    },
+    {
+     "@value": "discrete topology",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "모든 부분집합이 열린 집합인 위상. 모든 집합이 열리면서 닫혀 있고, 경계는 항상 공집합이다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/topology_ai_lab/02_discrete_indiscrete.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/indiscrete-topology"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/indiscrete-topology",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "밀착 위상",
+     "@language": "ko"
+    },
+    {
+     "@value": "indiscrete topology",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "열린 집합이 공집합과 전체뿐인 위상. 서로 다른 점을 열린 집합으로 구별할 수 없다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/topology_ai_lab/02_discrete_indiscrete.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/counting-topologies"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/counting-topologies",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "위상의 촘촘함과 개수",
+     "@language": "ko"
+    },
+    {
+     "@value": "finer and coarser topologies",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "열린 집합 목록의 포함 관계로 위상의 촘촘함을 비교하며, 점 3개 집합에는 29가지, 4개에는 355가지 위상이 있다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/topology_ai_lab/02_discrete_indiscrete.html#lv3"
+   }
+  },
+  {
+   "@id": "lab:concept/connectedness",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "연결과 분리",
+     "@language": "ko"
+    },
+    {
+     "@value": "connectedness",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "공간을 비어 있지 않고 서로 겹치지 않는 두 열린 집합으로 나눌 수 없으면 연결이다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/topology_ai_lab/03_connectedness.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/totally-disconnected"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/totally-disconnected",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "완전히 끊긴 공간",
+     "@language": "ko"
+    },
+    {
+     "@value": "totally disconnected space",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "연결된 부분집합이 한 점짜리뿐인 공간. 이산 공간이 대표 예이며 위상 차원은 0이다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/topology_ai_lab/03_connectedness.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/path-connected-plane-minus-countable"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/path-connected-plane-minus-countable",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "구멍 뚫린 평면의 길 연결",
+     "@language": "ko"
+    },
+    {
+     "@value": "plane minus a countable set is path-connected",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "평면에서 셀 수 있는 점 집합을 빼도 두 점을 꺾은선으로 이을 수 있어 길 연결이다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/topology_ai_lab/03_connectedness.html#lv3"
+   }
+  },
+  {
+   "@id": "lab:concept/compactness",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "콤팩트",
+     "@language": "ko"
+    },
+    {
+     "@value": "compactness",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "모든 열린 덮개에서 유한 개를 골라 공간 전체를 덮을 수 있는 성질.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/topology_ai_lab/04_compactness.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/infinite-discrete-not-compact"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/infinite-discrete-not-compact",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "무한 이산 공간은 콤팩트가 아님",
+     "@language": "ko"
+    },
+    {
+     "@value": "infinite discrete space is not compact",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "한 점짜리 집합들의 덮개는 유한 부분 덮개가 없으므로, 무한 이산 공간은 콤팩트가 아니다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/topology_ai_lab/04_compactness.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/heine-borel"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/heine-borel",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "닫힌 상자의 콤팩트성 (하이네-보렐)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Heine-Borel theorem",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "ℝⁿ에서 닫혀 있고 유계인 집합은 콤팩트이며, 닫힌 상자는 반복 등분으로 이를 보일 수 있다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/topology_ai_lab/04_compactness.html#lv3"
+   }
+  },
+  {
+   "@id": "lab:concept/digital-adjacency",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "픽셀 이웃 규칙과 연결 역설",
+     "@language": "ko"
+    },
+    {
+     "@value": "digital adjacency paradox",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "4-이웃만 또는 8-이웃만 쓰면 픽셀 고리가 안과 밖을 나누는 성질이 깨지므로 선과 바탕에 다른 규칙을 짝지어 쓴다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/topology_ai_lab/05_digital_topology.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/khalimsky-line"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/khalimsky-line",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "칼림스키 직선",
+     "@language": "ko"
+    },
+    {
+     "@value": "Khalimsky line",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "홀수는 열린 점, 짝수는 양옆 홀수를 포함하는 가장 작은 이웃을 갖는 닫힌 점으로 정한 정수 위의 연결된 위상.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/topology_ai_lab/05_digital_topology.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/khalimsky-plane"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/khalimsky-plane",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "칼림스키 평면",
+     "@language": "ko"
+    },
+    {
+     "@value": "Khalimsky plane",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "칼림스키 직선 두 개의 곱으로, 순수한 점끼리만 대각선으로 이어져 픽셀 연결 역설을 없애는 위상.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/topology_ai_lab/05_digital_topology.html#lv3"
+   }
+  },
+  {
+   "@id": "lab:concept/alexandroff-space",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "알렉산드로프 공간과 가장 작은 이웃",
+     "@language": "ko"
+    },
+    {
+     "@value": "Alexandroff space",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "열린 집합의 임의 교집합이 열린 공간으로, 모든 점에 가장 작은 열린 이웃이 있다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/topology_ai_lab/06_alexandroff_posets.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/poset-topology-correspondence"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/poset-topology-correspondence",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "순서와 위상의 짝 (위로 닫힌 집합)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Alexandroff topology of a poset",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "부분순서에서 위로 닫힌 집합을 열린 집합으로 삼은 위상으로, T0 알렉산드로프 공간과 부분순서가 일대일로 대응한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/topology_ai_lab/06_alexandroff_posets.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/semi-pre-topology"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/semi-pre-topology",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "반위상과 앞위상",
+     "@language": "ko"
+    },
+    {
+     "@value": "semitopology and pretopology",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "교집합 규칙을 뺀 반위상, 닫힘 연산의 일부 조건만 지키는 앞위상처럼 위상의 공리를 느슨하게 한 공간.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/topology_ai_lab/06_alexandroff_posets.html#lv3"
+   }
+  },
+  {
+   "@id": "lab:concept/group-action-orbit",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "군의 작용과 궤도",
+     "@language": "ko"
+    },
+    {
+     "@value": "group action and orbit",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "군의 각 원소가 공간의 점을 옮기되 항등원은 점을 그대로 두고 이어 찍기가 곱과 맞는 규칙이 작용이며, 한 점이 옮겨 갈 수 있는 자리 전체가 궤도이다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/topology_ai_lab/07_group_actions.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/stabilizer-free-action"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/stabilizer-free-action",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "안정자와 자유 작용",
+     "@language": "ko"
+    },
+    {
+     "@value": "stabilizer and free action",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "점을 고정하는 군 원소들의 모음이 안정자이며, 모든 점의 안정자가 항등원뿐이면 자유 작용이다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/topology_ai_lab/07_group_actions.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/quotient-space"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/quotient-space",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "몫공간",
+     "@language": "ko"
+    },
+    {
+     "@value": "quotient space",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "군 작용의 궤도 하나를 점 하나로 보고, 접기 전에 열린 집합에서 온 것을 열린 집합으로 삼은 공간.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/topology_ai_lab/07_group_actions.html#lv3"
+   }
+  },
+  {
+   "@id": "lab:concept/transporter-set",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "운반자 집합과 고유 불연속 작용",
+     "@language": "ko"
+    },
+    {
+     "@value": "transporter set, properly discontinuous action",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "gA와 B가 겹치게 하는 군 원소의 모음이 운반자 집합이며, 모든 콤팩트 K에 대해 (K|K)가 유한하면 작용이 고유 불연속이다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/topology_ai_lab/08_proper_actions.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/proper-action-hierarchy"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/proper-action-hierarchy",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "얌전한 작용의 등급",
+     "@language": "ko"
+    },
+    {
+     "@value": "hierarchy of discontinuous actions",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "고유 불연속 ⇒ 떠도는 작용 ⇒ 이산 궤도 ⇒ 이산 작용 순으로 조건이 약해지는 작용의 등급.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/topology_ai_lab/08_proper_actions.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/kapovich-counterexample"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/kapovich-counterexample",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "카포비치 반례",
+     "@language": "ko"
+    },
+    {
+     "@value": "Kapovich counterexample",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "정수가 원점 뺀 평면에 (2x, y/2)로 작용하면 자유롭고 떠도는 작용이지만 고유 불연속이 아니어서 몫공간이 하우스도르프가 아니다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/topology_ai_lab/08_proper_actions.html#lv3"
+   }
+  },
+  {
+   "@id": "lab:concept/fundamental-domain",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "기본 영역과 타일 덮기",
+     "@language": "ko"
+    },
+    {
+     "@value": "fundamental domain and tessellation",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "각 궤도에서 대표를 모은 영역으로, 그 사본들이 안쪽이 겹치지 않게 공간 전체를 덮는다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/topology_ai_lab/09_tiles_lattices.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/dirichlet-domain"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/dirichlet-domain",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "디리클레 영역",
+     "@language": "ko"
+    },
+    {
+     "@value": "Dirichlet domain",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "한 점이 그 궤도의 다른 모든 점보다 가까운 영역으로, 수직이등분선으로 둘러싸이며 고유 불연속 등거리 작용의 기본 영역이 된다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/topology_ai_lab/09_tiles_lattices.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/lattice-modular-group"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/lattice-modular-group",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "격자와 모듈러 군",
+     "@language": "ko"
+    },
+    {
+     "@value": "lattice, modular group",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "몫공간의 넓이가 유한한 이산 부분군이 격자이며, 모듈러 군은 넓이 π/3의 기본 영역을 가진 코콤팩트가 아닌 격자이다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/topology_ai_lab/09_tiles_lattices.html#lv3"
+   }
+  },
+  {
+   "@id": "lab:concept/covering-space",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "덮개 공간과 올",
+     "@language": "ko"
+    },
+    {
+     "@value": "covering space and fiber",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "바닥의 각 점에 작은 이웃이 있어 그 위가 서로 떨어지고 같은 모양인 조각들로 나뉘는 지도 p: X̃ → X이며, 한 점 위의 점들을 올이라 한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/topology_ai_lab/10_covering_spaces.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/path-lifting"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/path-lifting",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "유일한 길 들어올리기",
+     "@language": "ko"
+    },
+    {
+     "@value": "unique path lifting",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "덮개 공간에서 바닥의 길과 올 위의 출발점을 정하면, 그 길을 덮는 위층의 길이 유일하게 존재한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/topology_ai_lab/10_covering_spaces.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/fiber-bijection"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/fiber-bijection",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "올 위의 일대일 대응",
+     "@language": "ko"
+    },
+    {
+     "@value": "monodromy bijection of fibers",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "길 γ를 모든 출발점에서 들어 올려 출발점을 도착점으로 보내는 대응 L_γ는 올 사이의 일대일 대응이다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/topology_ai_lab/10_covering_spaces.html#lv3"
+   }
+  },
+  {
+   "@id": "lab:concept/universal-cover",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "보편 덮개와 기본군",
+     "@language": "ko"
+    },
+    {
+     "@value": "universal cover and fundamental group",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "단일 연결인 덮개 공간으로, 모든 연결된 덮개 위에 놓이며 원의 경우 수직선이다. 원의 기본군은 감은 수의 군 ℤ이다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/topology_ai_lab/11_galois_correspondence.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/galois-correspondence"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/galois-correspondence",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "위상적 갈루아 대응",
+     "@language": "ko"
+    },
+    {
+     "@value": "Galois correspondence for covering spaces",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "적당히 좋은 공간의 연결된 덮개들과 기본군의 부분군(켤레류)이 포함 관계를 거꾸로 하여 일대일로 대응한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/topology_ai_lab/11_galois_correspondence.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/deck-transformation"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/deck-transformation",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "층 바꾸기 (덱 변환)",
+     "@language": "ko"
+    },
+    {
+     "@value": "deck transformation group",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "바닥을 바꾸지 않고 덮개를 통째로 옮기는 변형들의 군으로, 정규 덮개에서는 기본군을 부분군 H로 나눈 몫과 같다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/topology_ai_lab/11_galois_correspondence.html#lv3"
+   }
+  },
+  {
+   "@id": "lab:concept/functor",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "함자 (이산 함자와 망각 함자)",
+     "@language": "ko"
+    },
+    {
+     "@value": "functor: discrete and forgetful",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "한 범주의 대상과 사상을 규칙에 맞게 다른 범주로 옮기는 대응으로, 이산 함자는 집합에 이산 위상을 입히고 망각 함자는 위상을 잊는다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/topology_ai_lab/12_functors_adjunction.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/continuity-from-discrete"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/continuity-from-discrete",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "이산 공간에서 나가는 함수의 연속성",
+     "@language": "ko"
+    },
+    {
+     "@value": "maps out of discrete spaces are continuous",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "출발 공간이 이산이면 모든 역상이 열려 있으므로 어떤 함수도 연속이다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/topology_ai_lab/12_functors_adjunction.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/disc-forgetful-adjunction"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/disc-forgetful-adjunction",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "짝 관계 (이산–망각 수반)",
+     "@language": "ko"
+    },
+    {
+     "@value": "discrete–forgetful adjunction",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "모든 집합 S와 공간 X에 대해 Hom(Disc S, X) ≅ Hom(S, U X)가 자연스럽게 성립하여, 이산 함자가 망각 함자의 왼쪽 수반이 된다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/topology_ai_lab/12_functors_adjunction.html#lv3"
+   }
+  },
+  {
+   "@id": "lab:concept/ultrafilter",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "필터와 울트라필터",
+     "@language": "ko"
+    },
+    {
+     "@value": "filter and ultrafilter",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "공집합을 포함하지 않고 교집합과 상위 집합에 대해 닫힌 「큰 집합」 모음이 필터이며, 모든 집합 A에 대해 A나 그 여집합을 포함하면 울트라필터이다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/topology_ai_lab/13_ultrafilters_stone_cech.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/points-at-infinity"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/points-at-infinity",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "무한 끝의 점 (자유 울트라필터)",
+     "@language": "ko"
+    },
+    {
+     "@value": "free ultrafilters as points at infinity",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "자연수의 자유 울트라필터 하나하나가 βℕ에 새로 붙는 「무한으로 가는 서로 다른 방법」에 해당하는 점이다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/topology_ai_lab/13_ultrafilters_stone_cech.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/stone-cech"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/stone-cech",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "스톤-체흐 콤팩트화",
+     "@language": "ko"
+    },
+    {
+     "@value": "Stone–Čech compactification",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "X에서 콤팩트 하우스도르프 공간으로 가는 모든 연속 함수가 유일하게 확장되는 콤팩트화 βX로, 이산 X에서는 울트라필터들의 공간이다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/topology_ai_lab/13_ultrafilters_stone_cech.html#lv3"
+   }
+  },
+  {
+   "@id": "lab:concept/extremally-disconnected",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "아주 끊긴 공간",
+     "@language": "ko"
+    },
+    {
+     "@value": "extremally disconnected space",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "모든 열린 집합의 닫힘이 열려 있는 공간으로, 이산 공간과 βℕ가 예이고 캔터 집합은 완전히 끊겼지만 아주 끊기지는 않았다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/topology_ai_lab/14_extremal_profinite.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/inverse-limit"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/inverse-limit",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "역극한과 프로유한 공간",
+     "@language": "ko"
+    },
+    {
+     "@value": "inverse limit, profinite space",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "유한 이산 공간들과 층 사이 지도로 이루어진 역계에서 모든 층이 맞물린 줄들의 모음으로, 콤팩트하고 완전히 끊긴 프로유한 공간이 된다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/topology_ai_lab/14_extremal_profinite.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/p-adic-integers"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/p-adic-integers",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "2진 정수",
+     "@language": "ko"
+    },
+    {
+     "@value": "2-adic integers",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "2ᵏ으로 나눈 나머지들의 역극한 ℤ₂로, 모든 정수를 담는 프로유한 공간이며 −1은 …1111로 표기된다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/topology_ai_lab/14_extremal_profinite.html#lv3"
+   }
+  },
+  {
+   "@id": "lab:concept/three-pillars",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "세 기둥 (이산 위상의 구조)",
+     "@language": "ko"
+    },
+    {
+     "@value": "three pillars of discrete topology",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "공간 분류, 대수적 작용, 범주적 보편 대상의 세 줄기가 모두 이산 위상에서 출발한다는 시리즈의 요약 틀.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/topology_ai_lab/15_final_review.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/counterexample-museum"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/counterexample-museum",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "반례 박물관",
+     "@language": "ko"
+    },
+    {
+     "@value": "gallery of counterexamples",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "무한 교집합, 무한 이산 공간, 픽셀 역설, 카포비치 반례, 모듈러 군, 캔터 집합처럼 흔한 일반화를 깨는 예들의 모음.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/topology_ai_lab/15_final_review.html#lv2"
+   }
+  },
+  {
+   "@id": "lab:concept/dashboards",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "대시보드",
+     "@language": "ko"
+    },
+    {
+     "@value": "Dashboards",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/riemann_hypothesis_lab/briefing.html#prog"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/dashboards"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/llm-agent",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "에이전트",
+     "@language": "ko"
+    },
+    {
+     "@value": "LLM agent",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "목표를 받아 도구를 부르고 여러 단계를 스스로 실행하는 AI 시스템.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/riemann_hypothesis_lab/briefing.html#c3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/mdp"
+    },
+    {
+     "@id": "lab:topic/planning-agents"
+    },
+    {
+     "@id": "lab:topic/pretrained-lm"
+    },
+    {
+     "@id": "lab:topic/prompting"
+    }
+   ],
+   "lab:uses": [
+    {
+     "@id": "lab:concept/llm"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/riemann-hypothesis",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "리만 가설",
+     "@language": "ko"
+    },
+    {
+     "@value": "Riemann hypothesis",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/riemann_hypothesis_lab/briefing.html#prog"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/riemann-hypothesis"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/zeta-function",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "제타 함수",
+     "@language": "ko"
+    },
+    {
+     "@value": "Zeta function",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/riemann_hypothesis_lab/briefing.html#d5-lmsg"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/zeta-function"
+    }
+   ]
+  },
+  {
    "@id": "lab:concept/tangent-slope",
    "@type": [
     "skos:Concept",
@@ -30120,6 +31444,124 @@
    "rdfs:isDefinedBy": {
     "@id": "https://adminmrobo.github.io/optimization_test_lab/index.html#p5"
    }
+  },
+  {
+   "@id": "lab:concept/volatility",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "변동성",
+     "@language": "ko"
+    },
+    {
+     "@value": "volatility",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "수익률이 얼마나 크게 출렁이는지. 이 페이지에서는 수익률의 표준편차(σ)로 잰다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/nabla_field_lab/index.html#room-4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/volatility-models"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/cosine-similarity",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "코사인 유사도",
+     "@language": "ko"
+    },
+    {
+     "@value": "cosine similarity",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "두 벡터가 이루는 각도의 코사인. −1(반대)~1(같은 방향) 값을 가지며 벡터의 길이는 무시한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/vector_analysis_lab/03_ai_ml.html#room-14"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/embedding-space"
+    },
+    {
+     "@id": "lab:topic/inner-product-orthogonality"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/euclid-distance",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "두 점 사이 거리",
+     "@language": "ko"
+    },
+    {
+     "@value": "Euclidean distance",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "피타고라스 정리로 재는 두 숫자 줄 사이 거리",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/vector_analysis_lab/00_orientation.html#room-e"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/distance-angle"
+    },
+    {
+     "@id": "lab:topic/knn"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/combinatorics",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "조합",
+     "@language": "ko"
+    },
+    {
+     "@value": "Combinatorics",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/vector_analysis_lab/02_economy.html#room-12"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/combinatorics"
+    }
+   ]
   },
   {
    "@id": "lab:method/random-forest",

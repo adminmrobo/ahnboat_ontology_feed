@@ -2865,9 +2865,6 @@
    ],
    "lab:evaluatedBy": [
     {
-     "@id": "lab:method/ljung-box-test"
-    },
-    {
      "@id": "lab:concept/return-effect"
     }
    ],
@@ -10282,30 +10279,6 @@
    ]
   },
   {
-   "@id": "lab:concept/diversification",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "분산투자",
-     "@language": "ko"
-    },
-    {
-     "@value": "diversification",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "상관이 낮은 자산을 섞어 위험을 줄이는 것.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/my_article_00_Korean_stockmarket_volatility_study/ch2/2-6_independence-correlation.html#lv4"
-   }
-  },
-  {
    "@id": "lab:concept/sector-index",
    "@type": [
     "skos:Concept",
@@ -11136,16 +11109,6 @@
     {
      "@id": "lab:concept/contagion"
     }
-   ],
-   "lab:evaluatedBy": [
-    {
-     "@id": "lab:term/pearson-correlation"
-    }
-   ],
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:concept/diversification"
-    }
    ]
   },
   {
@@ -11670,19 +11633,6 @@
    "lab:prerequisiteOf": [
     {
      "@id": "lab:method/lm-test"
-    },
-    {
-     "@id": "lab:concept/nonlinear-dependence"
-    }
-   ],
-   "lab:evaluatedOn": [
-    {
-     "@id": "lab:dataset/thesis-q"
-    }
-   ],
-   "lab:evaluatedBy": [
-    {
-     "@id": "lab:metric/misclass"
     }
    ]
   },
@@ -14121,180 +14071,6 @@
    }
   },
   {
-   "@id": "lab:concept/nonlinear-dependence",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "비선형 종속성",
-     "@language": "ko"
-    },
-    {
-     "@value": "nonlinear dependence",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "수익률 자체는 서로 상관이 없어도, 수익률의 크기(제곱·절대값)끼리는 상관이 있는 상태. 변동성 군집의 다른 이름.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/my_article_00_Korean_stockmarket_volatility_study/ch2/2-6_independence-correlation.html#lv2"
-   },
-   "lab:relatedTo": [
-    {
-     "@id": "lab:concept/volatility-clustering"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/pearson-correlation",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "피어슨 상관계수",
-     "@language": "ko"
-    },
-    {
-     "@value": "pearson correlation",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "두 변수가 직선적으로 함께 움직이는 정도(−1~1). 원문 표 4.24~4.27의 값.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/my_article_00_Korean_stockmarket_volatility_study/ch2/2-6_independence-correlation.html#lv3"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/diversification"
-    }
-   ],
-   "lab:evaluatedOn": [
-    {
-     "@id": "lab:dataset/thesis-corr"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/multiple-testing",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "다중검정",
-     "@language": "ko"
-    },
-    {
-     "@value": "multiple testing",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "여러 번 검정하면 우연히 '유의'가 나올 기회도 늘어나는 문제.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/my_article_00_Korean_stockmarket_volatility_study/ch2/2-6_independence-correlation.html#duel"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:method/ljung-box-test"
-    }
-   ],
-   "lab:relatedTo": [
-    {
-     "@id": "lab:metric/claim-error"
-    }
-   ],
-   "lab:evaluatedBy": [
-    {
-     "@id": "lab:metric/wrong"
-    }
-   ]
-  },
-  {
-   "@id": "lab:metric/misclass",
-   "@type": [
-    "skos:Concept",
-    "lab:Metric"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "독립성 판정 오류율",
-     "@language": "ko"
-    },
-    {
-     "@value": "misclassification rate",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "종속인 계열을 독립으로, 독립인 계열을 종속으로 판정한 비율.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/my_article_00_Korean_stockmarket_volatility_study/ch2/2-6_independence-correlation.html#duel"
-   }
-  },
-  {
-   "@id": "lab:dataset/thesis-q",
-   "@type": [
-    "skos:Concept",
-    "lab:Dataset"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "논문 표 4.6~4.11 Ljung-Box Q (원문 수치)",
-     "@language": "ko"
-    },
-    {
-     "@value": "thesis Ljung-Box tables",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "12개 계열의 수익률 Q(1~12), 제곱·절대값 Q(1~5, 12).",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/my_article_00_Korean_stockmarket_volatility_study/ch2/2-6_independence-correlation.html#lv1"
-   }
-  },
-  {
-   "@id": "lab:dataset/thesis-corr",
-   "@type": [
-    "skos:Concept",
-    "lab:Dataset"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "논문 표 4.24~4.27 상관 행렬 (원문 수치)",
-     "@language": "ko"
-    },
-    {
-     "@value": "thesis correlation tables",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "시장과 8개 섹터의 전체·2·3·4기 피어슨 상관.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/my_article_00_Korean_stockmarket_volatility_study/ch2/2-6_independence-correlation.html#lv3"
-   }
-  },
-  {
    "@id": "lab:concept/sample-length",
    "@type": [
     "skos:Concept",
@@ -14935,6 +14711,40 @@
    "lab:evaluatedOn": [
     {
      "@id": "lab:dataset/fig55"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/multiple-testing",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "다중검정",
+     "@language": "ko"
+    },
+    {
+     "@value": "multiple testing",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "여러 번 검정하면 우연히 '유의'가 나올 기회도 늘어나는 문제.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/my_article_00_Korean_stockmarket_volatility_study/ch3/3-5_vkospi-return-effect.html#duel"
+   },
+   "lab:relatedTo": [
+    {
+     "@id": "lab:metric/claim-error"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/wrong"
     }
    ]
   },
@@ -15891,6 +15701,11 @@
     {
      "@id": "lab:concept/generalization"
     }
+   ],
+   "lab:addressedBy": [
+    {
+     "@id": "lab:concept/train-test-split"
+    }
    ]
   },
   {
@@ -15921,6 +15736,11 @@
      "@id": "lab:topic/data-leakage"
     }
    ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/accuracy"
+    }
+   ],
    "lab:partOf": [
     {
      "@id": "lab:concept/data-dictionary"
@@ -15934,11 +15754,6 @@
    "lab:relatedTo": [
     {
      "@id": "lab:concept/test-set"
-    }
-   ],
-   "lab:evaluatedBy": [
-    {
-     "@id": "lab:metric/accuracy"
     }
    ]
   },
@@ -16312,6 +16127,9 @@
    "lab:partOf": [
     {
      "@id": "lab:metric/regression-metrics"
+    },
+    {
+     "@id": "lab:concept/validation-set"
     }
    ],
    "lab:contrastsWith": [
@@ -16356,11 +16174,203 @@
    "lab:prerequisiteOf": [
     {
      "@id": "lab:method/feature-engineering"
+    },
+    {
+     "@id": "lab:method/gradient-boosting"
     }
    ],
    "lab:evaluatedBy": [
     {
      "@id": "lab:metric/gini-impurity"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/svm",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "SVM",
+     "@language": "ko"
+    },
+    {
+     "@value": "support vector machine",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "두 클래스 사이 여백(마진)이 가장 넓은 경계를 찾는 분류 알고리즘.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/fintech_data_analysis/06_knn_svm.html#lv2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/svm"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/standardization"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/standard-deviation",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "표준편차",
+     "@language": "ko"
+    },
+    {
+     "@value": "standard deviation",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "데이터가 평균에서 보통 얼마나 떨어져 있는지 나타내는 폭. 표준화의 한 눈금.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/fintech_data_analysis/12_visualization.html#lv1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/dispersion"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/standardization"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/central-tendency-skewness"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/logistic-regression",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "로지스틱 회귀 (다항)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Multinomial logistic regression",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "정답별 점수 → 소프트맥스 → 확률",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/fintech_data_analysis/10_logistic_tree.html#lv1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/glm-logistic"
+    },
+    {
+     "@id": "lab:topic/logistic-regression"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/accuracy"
+    },
+    {
+     "@id": "lab:metric/f1"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/decision-tree"
+    },
+    {
+     "@id": "lab:method/knn"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/support-vector",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "서포트 벡터",
+     "@language": "ko"
+    },
+    {
+     "@value": "support vector",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "경계 가까이 있어 경계 위치를 결정하는 데이터 점.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/fintech_data_analysis/06_knn_svm.html#lv2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/svm"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/svm"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/activation-function",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "활성화 함수",
+     "@language": "ko"
+    },
+    {
+     "@value": "Activation function",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "가중합을 비선형으로 바꾸는 함수. 시그모이드, tanh, ReLU 등이 있고, 없으면 층을 쌓아도 직선 하나와 같다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/fintech_data_analysis/11_deep_learning_timeseries.html#lv1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/activation-function"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/artificial-neuron"
     }
    ]
   },
@@ -16399,6 +16409,40 @@
    ]
   },
   {
+   "@id": "lab:method/regularization",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "정규화",
+     "@language": "ko"
+    },
+    {
+     "@value": "regularization",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "모델이 너무 복잡해지지 않게 벌점을 주는 방법. (표준화·정규분포와 다른 뜻)",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/fintech_data_analysis/07_model_evaluation.html#lv3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/weight-decay"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/model-optimization"
+    }
+   ]
+  },
+  {
    "@id": "lab:method/gradient-descent",
    "@type": [
     "skos:Concept",
@@ -16429,6 +16473,11 @@
    "lab:partOf": [
     {
      "@id": "lab:method/logistic-regression"
+    }
+   ],
+   "lab:hasPart": [
+    {
+     "@id": "lab:concept/learning-rate"
     }
    ],
    "lab:relatedTo": [
@@ -16468,6 +16517,11 @@
    "lab:partOf": [
     {
      "@id": "lab:concept/generalization"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/regularization"
     }
    ]
   },
@@ -16539,45 +16593,6 @@
     },
     {
      "@id": "lab:method/linear-regression"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/standard-deviation",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "표준편차",
-     "@language": "ko"
-    },
-    {
-     "@value": "standard deviation",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "데이터가 평균에서 보통 얼마나 떨어져 있는지 나타내는 폭. 표준화의 한 눈금.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/fintech_data_analysis/12_visualization.html#lv1"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/dispersion"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/standardization"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/central-tendency-skewness"
     }
    ]
   },
@@ -17930,54 +17945,6 @@
    ]
   },
   {
-   "@id": "lab:method/logistic-regression",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "로지스틱 회귀 (다항)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Multinomial logistic regression",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "정답별 점수 → 소프트맥스 → 확률",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/fintech_data_analysis/10_logistic_tree.html#lv1"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/glm-logistic"
-    },
-    {
-     "@id": "lab:topic/logistic-regression"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/decision-tree"
-    },
-    {
-     "@id": "lab:method/knn"
-    }
-   ],
-   "lab:evaluatedBy": [
-    {
-     "@id": "lab:metric/f1"
-    },
-    {
-     "@id": "lab:metric/accuracy"
-    }
-   ]
-  },
-  {
    "@id": "lab:method/cross-validation",
    "@type": [
     "skos:Concept",
@@ -18474,40 +18441,6 @@
    ]
   },
   {
-   "@id": "lab:method/svm",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "SVM",
-     "@language": "ko"
-    },
-    {
-     "@value": "support vector machine",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "두 클래스 사이 여백(마진)이 가장 넓은 경계를 찾는 분류 알고리즘.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/fintech_data_analysis/06_knn_svm.html#lv2"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/svm"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/standardization"
-    }
-   ]
-  },
-  {
    "@id": "lab:concept/kernel",
    "@type": [
     "skos:Concept",
@@ -18957,36 +18890,31 @@
    ]
   },
   {
-   "@id": "lab:concept/activation-function",
+   "@id": "lab:metric/mse",
    "@type": [
     "skos:Concept",
     "lab:Concept"
    ],
    "skos:prefLabel": [
     {
-     "@value": "활성화 함수",
+     "@value": "MSE",
      "@language": "ko"
     },
     {
-     "@value": "Activation function",
+     "@value": "mean squared error",
      "@language": "en"
     }
    ],
    "skos:definition": {
-    "@value": "가중합을 비선형으로 바꾸는 함수. 시그모이드, tanh, ReLU 등이 있고, 없으면 층을 쌓아도 직선 하나와 같다.",
+    "@value": "평균 제곱 오차. 큰 오차에 민감.",
     "@language": "ko"
    },
    "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/fintech_data_analysis/11_deep_learning_timeseries.html#lv1"
+    "@id": "https://adminmrobo.github.io/fintech_data_analysis/09_regression.html#lv3"
    },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/activation-function"
-    }
-   ],
    "lab:partOf": [
     {
-     "@id": "lab:concept/artificial-neuron"
+     "@id": "lab:metric/regression-metrics"
     }
    ]
   },
@@ -20258,6 +20186,14 @@
    "lab:partOf": [
     {
      "@id": "lab:concept/generalization"
+    },
+    {
+     "@id": "lab:concept/train-test-split"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:concept/validation-set"
     }
    ]
   },
@@ -20647,40 +20583,6 @@
    ]
   },
   {
-   "@id": "lab:concept/support-vector",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "서포트 벡터",
-     "@language": "ko"
-    },
-    {
-     "@value": "support vector",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "경계 가까이 있어 경계 위치를 결정하는 데이터 점.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/fintech_data_analysis/06_knn_svm.html#lv2"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/svm"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/svm"
-    }
-   ]
-  },
-  {
    "@id": "lab:term/class-weight",
    "@type": [
     "skos:Concept",
@@ -20850,40 +20752,6 @@
    ]
   },
   {
-   "@id": "lab:method/regularization",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "정규화",
-     "@language": "ko"
-    },
-    {
-     "@value": "regularization",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "모델이 너무 복잡해지지 않게 벌점을 주는 방법. (표준화·정규분포와 다른 뜻)",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/fintech_data_analysis/07_model_evaluation.html#lv3"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/weight-decay"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/model-optimization"
-    }
-   ]
-  },
-  {
    "@id": "lab:metric/regression-metrics",
    "@type": [
     "skos:Concept",
@@ -20977,35 +20845,6 @@
    "lab:prerequisiteOf": [
     {
      "@id": "lab:method/ar-model"
-    }
-   ]
-  },
-  {
-   "@id": "lab:metric/mse",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "MSE",
-     "@language": "ko"
-    },
-    {
-     "@value": "mean squared error",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "평균 제곱 오차. 큰 오차에 민감.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/fintech_data_analysis/09_regression.html#lv3"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:metric/regression-metrics"
     }
    ]
   },
@@ -22420,6 +22259,835 @@
    }
   },
   {
+   "@id": "lab:concept/learning-rate",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "학습률",
+     "@language": "ko"
+    },
+    {
+     "@value": "Learning rate",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "새 나무의 예측을 반영하는 배수.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/insurtech__case_regreesion_model_01/3_five_models.html#tune"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/gradient-descent"
+    },
+    {
+     "@id": "lab:topic/learning-rate-schedule"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/gradient-descent"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/decision-tree",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "결정 트리",
+     "@language": "ko"
+    },
+    {
+     "@value": "Decision tree",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "예/아니오 질문을 이어 나누기",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/insurtech__case_regreesion_model_01/3_five_models.html#lv-1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/decision-tree"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/prompt",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "프롬프트",
+     "@language": "ko"
+    },
+    {
+     "@value": "prompt",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "AI에게 무엇을 만들지 알려 주는 글.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/insurtech__case_regreesion_model_01/1_charges_question.html#prompt"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/prompting"
+    },
+    {
+     "@id": "lab:topic/system-prompts"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/loss",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "손실",
+     "@language": "ko"
+    },
+    {
+     "@value": "loss",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "그린 그림과 정답이 얼마나 다른지 나타내는 숫자. 이 페이지에서는 픽셀 차이의 제곱 평균.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/insurtech__case_regreesion_model_01/answers.html#a5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/loss-function"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/feature",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "특징",
+     "@language": "ko"
+    },
+    {
+     "@value": "feature",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "사진을 비교하려고 뽑은 숫자들.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/insurtech__case_regreesion_model_01/3_five_models.html#full"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/feature-engineering"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/euclidean-distance"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/gradient-boosting",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "그래디언트 부스팅",
+     "@language": "ko"
+    },
+    {
+     "@value": "Gradient boosting",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "작은 나무를 차례로 더해 오답을 보정",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/insurtech__case_regreesion_model_01/3_five_models.html#lv-3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/boosting"
+    }
+   ],
+   "lab:builtOn": [
+    {
+     "@id": "lab:method/decision-tree"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/inconsistency",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "불일치",
+     "@language": "ko"
+    },
+    {
+     "@value": "inconsistency",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "중복 저장된 같은 데이터가 서로 다른 값을 갖는 상태.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/insurtech__case_regreesion_model_01/6_quote_app.html#q6-2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/normalization-db"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/s10-01",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "SPLIT",
+     "@language": "ko"
+    },
+    {
+     "@value": "SPLIT",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "구분기호로 문자열을 여러 셀에 나눠요.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/insurtech__case_regreesion_model_01/1_charges_question.html#data"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/data-cleaning"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/cross-validation",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "교차검증",
+     "@language": "ko"
+    },
+    {
+     "@value": "Cross-validation",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "다섯 조각으로 다섯 번 재기",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/insurtech__case_regreesion_model_01/3_five_models.html#traits"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/cross-validation"
+    }
+   ],
+   "lab:broader": [
+    {
+     "@id": "lab:concept/train-test-split"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/token",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "조각 (토큰)",
+     "@language": "ko"
+    },
+    {
+     "@value": "token",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "모델이 글을 읽는 단위. 낱말보다 잘게 나뉘기도 한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/insurtech__case_regreesion_model_01/3_five_models.html#glossary"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/tokenization"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/training-development",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "교육",
+     "@language": "ko"
+    },
+    {
+     "@value": "Training and development",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/insurtech__case_regreesion_model_01/1_charges_question.html#author-sec"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/training-development"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/fairness",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "공정성",
+     "@language": "ko"
+    },
+    {
+     "@value": "Fairness",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/insurtech__case_regreesion_model_01/1_charges_question.html#data"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/fairness"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/cost-curves",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "비용곡선",
+     "@language": "ko"
+    },
+    {
+     "@value": "Cost curves",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/insurtech__case_regreesion_model_01/4_margin_lab.html#practice"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/cost-curves"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/estimation",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "추정",
+     "@language": "ko"
+    },
+    {
+     "@value": "estimation",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "표본의 결과를 모집단의 값으로 쓰는 일.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/insurtech__case_regreesion_model_01/1_charges_question.html#rule-cap"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/unbiasedness"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/data-augmentation",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "데이터 증강",
+     "@language": "ko"
+    },
+    {
+     "@value": "Data augmentation",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "원본을 조금씩 바꿔 시료를 늘리는 것. 늘린 시료는 원본과 닮았다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/insurtech__case_classification_model_01/2_data_cleaning.html#checklist"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/data-augmentation"
+    }
+   ],
+   "lab:raises": [
+    {
+     "@id": "lab:concept/data-leakage"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/regularization",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "규제",
+     "@language": "ko"
+    },
+    {
+     "@value": "regularization",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "계수에 벌점을 줘 0 쪽으로 당기기.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/insurtech__case_classification_model_01/answers.html#a3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/weight-decay"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/logistic-regression"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/kernel"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/generalization"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/weight",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "가중치",
+     "@language": "ko"
+    },
+    {
+     "@value": "Weight",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "이 입력을 얼마나 크게 들을지 정하는 값. 시냅스의 강도에 해당한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/insurtech__case_classification_model_01/2_data_cleaning.html#practice"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/weights-and-biases"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/train-test-split",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "학습/시험 나누기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Train-test split",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "20%를 시험지로 봉인하고 80%로만 학습",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/insurtech__case_classification_model_01/1_claim_question.html#prompt"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/data-splitting"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/cross-validation"
+    },
+    {
+     "@id": "lab:concept/data-leakage"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/accuracy-paradox",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "정확도의 함정",
+     "@language": "ko"
+    },
+    {
+     "@value": "Accuracy paradox",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "양성이 드물면 모두 음성이라고 해도 정확도가 높게 나와, 정확도만으로는 모델을 고를 수 없다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/insurtech__case_classification_model_01/1_claim_question.html#outro"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/accuracy-metrics"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/stratified-sampling",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "층화 추출",
+     "@language": "ko"
+    },
+    {
+     "@value": "stratified sampling",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "집단 비율을 지키며 표본을 뽑는 방법. 적은 어종이 시험에서 빠지지 않게 한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/insurtech__case_classification_model_01/1_claim_question.html#data"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/train-test-split"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/random-state",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "random_state (시작 번호)",
+     "@language": "ko"
+    },
+    {
+     "@value": "random seed (random_state)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "무작위 섞기의 시작 번호. 같은 번호면 같은 결과가 다시 나온다. 재현성 도구이지 튜닝 대상이 아니다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/insurtech__case_classification_model_01/1_claim_question.html#prompt"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/train-test-split"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/compensation",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "보상",
+     "@language": "ko"
+    },
+    {
+     "@value": "Compensation",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/insurtech__case_classification_model_01/1_claim_question.html#data"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/compensation"
+    },
+    {
+     "@id": "lab:topic/reward"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/roc-auc",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "ROC·AUC",
+     "@language": "ko"
+    },
+    {
+     "@value": "ROC and AUC",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/insurtech__case_classification_model_01/1_claim_question.html#practice"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/roc-auc"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/deployment",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "배포",
+     "@language": "ko"
+    },
+    {
+     "@value": "Deployment",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/insurtech__case_classification_model_01/6_judge_app.html#operate"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/deployment"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/conditional-probability",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "조건부확률",
+     "@language": "ko"
+    },
+    {
+     "@value": "conditional probability",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "B가 일어났다는 조건 아래에서 A가 일어날 확률. P(A|B) = P(A∩B)/P(B).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/insurtech__case_classification_model_02/2_conditional_accuracy.html#define"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/conditional-probability"
+    },
+    {
+     "@id": "lab:topic/probability-statistics"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/independence"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/base-rate",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "기저율",
+     "@language": "ko"
+    },
+    {
+     "@value": "base rate",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "증거를 보기 전, 모집단에서 그 사건이 일어나는 비율.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/insurtech__case_classification_model_02/3_problems_fixes.html#summary"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/bayes-theorem"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/sensitivity",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "민감도",
+     "@language": "ko"
+    },
+    {
+     "@value": "sensitivity",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "실제 있는 경우를 양성으로 잡아내는 비율. TP ÷ (TP+FN)",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/insurtech__case_classification_model_02/2_conditional_accuracy.html#define"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/precision-recall"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/overfitting"
+    }
+   ]
+  },
+  {
    "@id": "lab:concept/confidence-interval",
    "@type": [
     "skos:Concept",
@@ -22440,11 +23108,361 @@
     "@language": "ko"
    },
    "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/my_article_01_bitcoin_price_analytics/crypto_info_efficiency.html#r3"
+    "@id": "https://adminmrobo.github.io/insurtech__case_classification_model_02/3_problems_fixes.html#p3"
    },
    "lab:topic": [
     {
      "@id": "lab:topic/confidence-interval"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/one-hot",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "원-핫",
+     "@language": "ko"
+    },
+    {
+     "@value": "One-hot encoding",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "어휘 수만큼 긴 줄에서 제 번호 자리에만 1",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/insurtech__case_classification_model_02/4_html_deploy.html#glossary"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/encoding-categorical"
+    },
+    {
+     "@id": "lab:topic/word-embedding"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/coefficient",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "계수 (가중치)",
+     "@language": "ko"
+    },
+    {
+     "@value": "coefficient (weight)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "학습으로 정해지는 숫자. ①층위.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/insurtech__case_classification_model_02/answers.html#a4"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/regularization"
+    },
+    {
+     "@id": "lab:concept/sensitivity"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/balanced-accuracy",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "균형 정확도",
+     "@language": "ko"
+    },
+    {
+     "@value": "Balanced accuracy",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "재현율과 특이도의 평균",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/insurtech__case_classification_model_02/2_conditional_accuracy.html#compare"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/accuracy-metrics"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/ci-95",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "95% 신뢰구간",
+     "@language": "ko"
+    },
+    {
+     "@value": "95% confidence interval",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "z = 1.96으로 만든 구간 (초파리 선택).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/insurtech__case_classification_model_02/3_problems_fixes.html#p3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/confidence-interval"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/llm-benchmarks",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "벤치마크",
+     "@language": "ko"
+    },
+    {
+     "@value": "Benchmarks",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/insurtech__case_classification_model_02/5_similar_cases.html#cases"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/llm-benchmarks"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/credit",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "대변",
+     "@language": "ko"
+    },
+    {
+     "@value": "credit",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "거래를 적을 때 오른쪽 칸. 부채·자본·수익이 늘면 오른쪽에 적는다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/insurtech__case_classification_model_02/5_similar_cases.html#cases"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/journal-entries"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/bias",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "편향",
+     "@language": "ko"
+    },
+    {
+     "@value": "Bias",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "가중합에 더하는 값. 얼마나 쉽게 반응할지를 정한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/insurtech__case_regreesion_model_02/2_group_errors.html#define"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/unbiasedness"
+    },
+    {
+     "@id": "lab:topic/weights-and-biases"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/bootstrap",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "부트스트랩",
+     "@language": "ko"
+    },
+    {
+     "@value": "bootstrap",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "중복을 허용해 다시 뽑기.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/insurtech__case_regreesion_model_02/3_problems_fixes.html#fix1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/bootstrap"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/validation-set",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "검증 데이터",
+     "@language": "ko"
+    },
+    {
+     "@value": "Validation set",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "학습에 쓰지 않고 설정과 멈출 때를 고르는 데 쓰는 데이터.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/insurtech__case_regreesion_model_02/1_kfold_cv.html#split-top"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/data-splitting"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/test-set"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/expectations",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "기대",
+     "@language": "ko"
+    },
+    {
+     "@value": "Expectations",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/insurtech__case_regreesion_model_02/2_group_errors.html#define"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/expectations"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/groups",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "군",
+     "@language": "ko"
+    },
+    {
+     "@value": "Groups",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/insurtech__case_regreesion_model_02/2_group_errors.html#foldvar"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/groups"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/mean-median",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "평균·중앙값",
+     "@language": "ko"
+    },
+    {
+     "@value": "Mean, median",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "평균은 이상치에 끌리고 중앙값은 버틴다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/insurtech__case_regreesion_model_02/5_similar_cases.html#practice"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/central-tendency"
     }
    ]
   },

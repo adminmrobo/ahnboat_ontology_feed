@@ -262,6 +262,7 @@
   <div class="tool" id="tool1">
     <div class="hint"><img class="px" src="assets/char/sia_guide.webp" alt="">시아: 아이디어와 가까운 분야를 1~2개, 모르겠으면 '모두'.</div>
     <div class="fields" id="fields"></div>
+    <p class="note" id="fieldsNote" style="font-size:.85em;color:#666;margin:.4em 0">콘텐츠 수는 홈페이지 랙과 같은 단위로 셉니다. '14/19개'처럼 두 숫자가 다르면, 홈페이지에 올라간 19개 가운데 지식 색인이 있어 AI가 읽을 수 있는 것이 14개라는 뜻입니다. 나머지는 논문·특허·외부 사이트처럼 GitHub 밖에 있는 콘텐츠입니다.</p>
     <label class="all"><input type="checkbox" id="all"> 모두 (전체 분야 요약 피드 — 개념 이름만 담겨 가볍습니다)</label>
     <div class="warn" id="warn">읽을 피드 주소가 4개를 넘었습니다. AI가 일부만 읽고 답할 수 있으니, 분야를 줄이거나 '모두'(요약)를 쓰는 편이 안전합니다.</div>
   </div>
@@ -704,7 +705,7 @@
       var el = document.createElement("label");
       el.className = "field" + (chosen[f.name] ? " on" : "");
       el.innerHTML = '<input type="checkbox"' + (chosen[f.name] ? " checked" : "") + '><div><div class="name"><span class="dot" style="background:' +
-        f.color + '"></span>' + f.name + '</div><div class="n">콘텐츠 ' + f.contents + '개 · 개념 ' + (f.concepts || 0).toLocaleString() +
+        f.color + '"></span>' + f.name + '</div><div class="n">색인 콘텐츠 ' + f.contents + (f.listed && f.listed !== f.contents ? '/' + f.listed : '') + '개 · 개념 ' + (f.concepts || 0).toLocaleString() +
         '개 · 관계 ' + (f.relations || 0).toLocaleString() + '개</div></div>';
       el.querySelector("input").addEventListener("change", function (e) {
         chosen[f.name] = e.target.checked;
@@ -717,7 +718,7 @@
   function link(u, i) { return "<a href=\"" + u + "\">" + (i + 1) + "</a>"; }
   function drawTable() {
     var rows = data.fields.map(function (f) {
-      return "<tr><td><span class=\"dot\" style=\"background:" + f.color + "\"></span>" + f.name + "</td><td>" + f.contents +
+      return "<tr><td><span class=\"dot\" style=\"background:" + f.color + "\"></span>" + f.name + "</td><td>" + f.contents + (f.listed && f.listed !== f.contents ? " / " + f.listed : "") +
         "</td><td><a href=\"" + f.feed + "\"><code>" + f.feed.replace(data.base, "") + "</code></a></td><td>" +
         ((f.parts && f.parts.length > 1) ? f.parts.map(link).join(" · ") : "-") +
         "</td><td><a href=\"" + f.jsonld + "\"><code>" + f.jsonld.replace(data.base, "") + "</code></a></td></tr>";
@@ -752,9 +753,9 @@
   fetch("feeds/index.json").then(function (r) { return r.json(); }).then(function (d) {
     data = d;
     var s = d.summary || {}, c = (s.concepts || 0).toLocaleString(), r = (s.relations || 0).toLocaleString();
-    $("meta").textContent = "온톨로지 기준일 " + d.updated + " · 분야 " + d.fields.length + "개 · 콘텐츠 " + (s.contents || "-") +
-      "개 · 개념 " + c + "개 · 관계 " + r + "개";
-    $("robonums").textContent = "보고합니다! 오늘(" + d.updated + ") 기준 분야 " + d.fields.length + "개, 콘텐츠 " + (s.contents || "-") +
+    $("meta").textContent = "온톨로지 기준일 " + d.updated + " · 분야 " + d.fields.length + "개 · 콘텐츠 " + (s.listed_indexed || s.contents || "-") +
+      "개" + (s.listed && s.listed !== (s.listed_indexed || s.contents) ? "(홈페이지 " + s.listed + "개 중 지식 색인이 있는 것)" : "") + " · 개념 " + c + "개 · 관계 " + r + "개";
+    $("robonums").textContent = "보고합니다! 오늘(" + d.updated + ") 기준 분야 " + d.fields.length + "개, 콘텐츠 " + (s.listed_indexed || s.contents || "-") +
       "개, 개념 " + c + "개, 관계 " + r + "개예요. 숫자가 이렇게 크다니, 행복해서 주판알이 저절로 튀어요!";
     $("robooutro").textContent = "분야 " + d.fields.length + "개, 개념 " + c + "개가 하루 두 번 새로 고쳐진다니! 이렇게 큰 숫자가 매일 최신이라니, 오늘은 정말 최고의 날이에요!";
     if (d.images && d.images.bg_hero) {
