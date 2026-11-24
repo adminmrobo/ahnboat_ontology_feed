@@ -10,7 +10,7 @@
    - `ahnboat_lab_explainer/packs/character/setting_shots/` 의 k02(박사)·k03(조수 하루)·k04(초파리 연구원) 3면도
    - `ahnboat_lab_explainer/packs/character/jupanbot_genspark/ref/` 의 주판봇 참조 그림
    - 시아·모아·미공개 X1~X3은 `ahnboat_lab_explainer/packs/character/character_pack/webp/192/` 의 기본 표정 그림
-3. 아래 프롬프트를 **그대로** 붙여 넣고, 네거티브 프롬프트 칸에는 공통 네거티브를 넣습니다.
+3. 아래 프롬프트를 **그대로** 붙여 넣고, 네거티브 프롬프트 입력 상자에는 공통 네거티브를 넣습니다.
 4. **G1부터** 만들고, 마음에 들면 G1을 G2·G3의 참조 이미지로 함께 올려 같은 방·같은 색감을 유지합니다.
 5. 받은 PNG를 이 저장소 `assets/`에 지정한 이름으로 올리면 끝입니다. 자동 갱신 작업이 WebP로 바꾸고, 페이지와 배너가 다음 갱신부터 그림을 배경으로 씁니다(아래 「반영」).
 
