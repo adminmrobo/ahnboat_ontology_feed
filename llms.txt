@@ -7,7 +7,8 @@
 ## 읽는 법
 
 - 피드 항목 하나 = 콘텐츠(해설 시리즈) 하나. 설명(description)에 개념 목록, 관계 목록, 페이지 목록이 들어 있다.
-- 개념 줄: `- 이름 / 영문 (유형) — 정의 · 출처 URL`. 관계 줄: `- A → B (관계 이름 · 한국어 뜻)`.
+- 항목마다 [페이지] 목록이 먼저 나온다(`p1 = 제목 — 주소`). 개념 줄 `- 이름 (유형) — 정의 [p1#lv3]`의 대괄호는 출처 페이지 기호와 그 안의 위치다. 출처 주소 = 해당 페이지 주소 + #위치.
+- 관계 줄: `- A → B : 관계`. 영문 이름과 관계 원어는 분야별 JSON-LD에 있다.
 - 근거로 인용할 때는 개념 이름과 출처 URL을 함께 적는다. 피드에 없는 내용은 일반 지식이라고 구분한다.
 - 피드는 하루 두 번 다시 만들어지며 최신판만 담는다. 라이선스 CC BY-NC 4.0.
 
@@ -17,10 +18,15 @@
 - [딥러닝·뇌과학](https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/deep-learning-neuroscience.xml): 콘텐츠 6개, 개념 394개 — 신경망이 어떻게 배우는지, 그리고 초파리 뇌 연구가 딥러닝에 주는 힌트를 함께 따라갑니다. (JSON-LD: https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/deep-learning-neuroscience.jsonld)
 - [AI 감각·생성](https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/ai-senses-generation.xml): 콘텐츠 8개, 개념 420개 — AI가 이미지를 구분하고, 동작을 알아보고, 장면을 그려 내고, 글을 읽는 방식을 긴급 미션으로 풀어 봅니다. (JSON-LD: https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/ai-senses-generation.jsonld)
 - [LLM·추론 엔지니어링](https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/llm-inference-engineering.xml): 콘텐츠 11개, 개념 909개 — 대형 언어모델이 답을 만들어 내는 과정과, 그것을 빠르고 싸게 서빙하는 추론 엔지니어링을 스터디로 읽습니다. (JSON-LD: https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/llm-inference-engineering.jsonld)
+  - 한 번에 읽기 어려우면 나눔 파일: https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/llm-inference-engineering-p1.xml · https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/llm-inference-engineering-p2.xml
 - [경제·수학·최적화](https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/economics-math-optimization.xml): 콘텐츠 18개, 개념 955개 — 경제학 이론과 경제 연구, 그리고 그 밑바탕인 최적화 모델·좌표 공간·선형대수를 함께 읽습니다. MR = MC에서 라그랑지안·해밀토니안, 벡터와 ∇까지 이어집니다. (JSON-LD: https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/economics-math-optimization.jsonld)
+  - 한 번에 읽기 어려우면 나눔 파일: https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/economics-math-optimization-p1.xml · https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/economics-math-optimization-p2.xml
 - [금융·핀테크·블록체인](https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/finance-fintech-blockchain.xml): 콘텐츠 10개, 개념 738개 — 주식시장 변동성과 가상자산 연구, 블록체인 장부, 인슈어테크 사례, 회계와 기업가치까지 금융 속의 데이터와 AI를 살펴봅니다. (JSON-LD: https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/finance-fintech-blockchain.jsonld)
+  - 한 번에 읽기 어려우면 나눔 파일: https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/finance-fintech-blockchain-p1.xml · https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/finance-fintech-blockchain-p2.xml
 - [통계·데이터 기초](https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/statistics-data-basics.xml): 콘텐츠 9개, 개념 934개 — 확률분포, 추정, 시계열, 베이지안 통계와 파이썬·판다스·데이터베이스·데이터 시각화로 데이터 분석의 기초 체력을 기릅니다. (JSON-LD: https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/statistics-data-basics.jsonld)
+  - 한 번에 읽기 어려우면 나눔 파일: https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/statistics-data-basics-p1.xml · https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/statistics-data-basics-p2.xml
 - [인공지능 응용](https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/applied-ai.xml): 콘텐츠 17개, 개념 1044개 — 제조 공정, 경영·회계, 생성형 AI 업무 활용, 이상탐지처럼 AI를 실제 현장 문제에 적용한 강의와 연구입니다. (JSON-LD: https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/applied-ai.jsonld)
+  - 한 번에 읽기 어려우면 나눔 파일: https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/applied-ai-p1.xml · https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/applied-ai-p2.xml
 
 ## 전체
 

@@ -12,6 +12,710 @@
  "dct:creator": "안상선 (Ahn Sangsun)",
  "@graph": [
   {
+   "@id": "lab:method/rag",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "LLM과 RAG",
+     "@language": "ko"
+    },
+    {
+     "@value": "large language models and retrieval-augmented generation",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "대규모 언어모델에 벡터 데이터베이스에서 검색한 관련 문서를 함께 넣어, 최신·조직 고유 정보를 근거로 답을 생성하게 하는 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_trend_report/index.html#g-graphrag"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/rag"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/llm"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/graphrag"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/context-engineering"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/knowledge-graph",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "지식 그래프",
+     "@language": "ko"
+    },
+    {
+     "@value": "knowledge graph",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "대상과 관계를 뽑아 “누가 — 무슨 관계 — 무엇”으로 이어 둔 기록.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_trend_report/index.html#g-kg"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/knowledge-graph"
+    }
+   ],
+   "lab:solves": [
+    {
+     "@id": "lab:concept/conflicting-memories"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/graphrag"
+    }
+   ],
+   "lab:governedBy": [
+    {
+     "@id": "lab:standard/shacl"
+    }
+   ],
+   "lab:measuredBy": [
+    {
+     "@id": "lab:metric/kg-fact-count"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/ontology",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "온톨로지",
+     "@language": "ko"
+    },
+    {
+     "@value": "ontology",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "한 분야에 무엇이 있고 서로 어떤 관계인지를 사람과 기계가 같은 뜻으로 읽도록 적어 둔 명세.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_trend_report/index.html#sec-4-1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/knowledge-graph"
+    },
+    {
+     "@id": "lab:topic/ontology-reasoning"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/knowledge-graph"
+    },
+    {
+     "@id": "lab:concept/semantic-layer"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/context-layer"
+    }
+   ],
+   "lab:governedBy": [
+    {
+     "@id": "lab:standard/owl2"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/semantic-layer",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "시맨틱 계층",
+     "@language": "ko"
+    },
+    {
+     "@value": "semantic layer",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "데이터 위에 업무 용어와 지표의 정의를 얹어 도구마다 같은 뜻으로 계산하게 하는 층.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_trend_report/index.html#g-semantic-layer"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/knowledge-graph"
+    },
+    {
+     "@id": "lab:topic/rdf-owl"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:concept/knowledge-graph"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/context-layer"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/llm-agent",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "에이전트",
+     "@language": "ko"
+    },
+    {
+     "@value": "AI agent",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "목표를 받아 도구를 부르고 여러 단계를 스스로 실행하는 AI 시스템.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_trend_report/index.html#g-agent"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/mdp"
+    },
+    {
+     "@id": "lab:topic/planning-agents"
+    },
+    {
+     "@id": "lab:topic/pretrained-lm"
+    },
+    {
+     "@id": "lab:topic/prompting"
+    }
+   ],
+   "lab:hasLimitation": [
+    {
+     "@id": "lab:concept/hallucination"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/react"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/task-horizon"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/context-layer",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "맥락 계층",
+     "@language": "ko"
+    },
+    {
+     "@value": "context layer",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "에이전트가 조직 데이터의 관계와 규칙을 읽도록 데이터·분석 기반에 두는 층(Gartner 권고의 용어).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_trend_report/index.html#pos-a"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/knowledge-graph"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/agentic-ai-accuracy"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/ontology-learning",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "온톨로지 학습",
+     "@language": "ko"
+    },
+    {
+     "@value": "ontology learning",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "문서와 데이터에서 용어·계층·관계를 자동 또는 반자동으로 뽑아 온톨로지를 만드는 일.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_trend_report/index.html#sec-4-2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/knowledge-graph"
+    },
+    {
+     "@id": "lab:topic/ontology-reasoning"
+    },
+    {
+     "@id": "lab:topic/pretrained-lm"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/llm-ontology-drafting"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/hallucination",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "환각",
+     "@language": "ko"
+    },
+    {
+     "@value": "hallucination",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_trend_report/index.html#sec-4-3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/ai-safety"
+    },
+    {
+     "@id": "lab:topic/hallucination"
+    }
+   ],
+   "lab:addressedBy": [
+    {
+     "@id": "lab:concept/context-layer"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/graphrag",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "GraphRAG",
+     "@language": "ko"
+    },
+    {
+     "@value": "GraphRAG",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "문서에서 지식 그래프를 만든 뒤 그 그래프를 근거로 답을 찾는 검색 증강 생성 방식.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_trend_report/index.html#sec-4-2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/graph-rag"
+    },
+    {
+     "@id": "lab:topic/knowledge-graph"
+    },
+    {
+     "@id": "lab:topic/rag"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/rag"
+    }
+   ],
+   "lab:derivedFrom": [
+    {
+     "@id": "lab:concept/knowledge-graph"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/fabric-iq-ontology",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "Fabric IQ 온톨로지",
+     "@language": "ko"
+    },
+    {
+     "@value": "Microsoft Fabric IQ Ontology",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "업무의 대상·관계·속성·규칙·행동을 모델로 정의하는 Microsoft Fabric IQ의 기능.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_trend_report/index.html#tl-2025-11-18"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/knowledge-graph"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/context-layer"
+    },
+    {
+     "@id": "lab:concept/ontology"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/agentic-ai-accuracy"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/palantir-ontology",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "Palantir 온톨로지(AIP)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Palantir Ontology (AIP)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "Palantir가 AI 운영의 중간 표현이라고 설명하는 자사 플랫폼의 온톨로지 계층.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_trend_report/index.html#tl-2026-05-04"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/knowledge-graph"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/ontology"
+    }
+   ],
+   "lab:measuredBy": [
+    {
+     "@id": "lab:metric/palantir-quarterly-revenue"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/llm-ontology-drafting",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "LLM으로 온톨로지 초안 쓰기",
+     "@language": "ko"
+    },
+    {
+     "@value": "LLM-assisted ontology drafting",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "기존 데이터 모델·문서를 LLM이 읽어 대상·관계·규칙을 먼저 제안하고 사람이 검토하는 방식.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_trend_report/index.html#sec-4-3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/knowledge-graph"
+    },
+    {
+     "@id": "lab:topic/ontology-reasoning"
+    },
+    {
+     "@id": "lab:topic/prompting"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/fabric-iq-ontology"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/minimum-viable-ontology",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "한 사용 사례로 좁혀 시작하기",
+     "@language": "ko"
+    },
+    {
+     "@value": "minimum viable ontology",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "수익이 큰 한 가지 문제에 맞춘 최소 온톨로지를 먼저 만들고, 가치를 보인 뒤 넓히는 방식(Thoughtworks 권고).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_trend_report/index.html#pos-b"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/knowledge-graph"
+    }
+   ]
+  },
+  {
+   "@id": "lab:standard/owl2",
+   "@type": [
+    "skos:Concept",
+    "lab:Standard"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "OWL 2",
+     "@language": "ko"
+    },
+    {
+     "@value": "OWL 2 Web Ontology Language",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_trend_report/index.html#sec-4-2"
+   }
+  },
+  {
+   "@id": "lab:standard/shacl",
+   "@type": [
+    "skos:Concept",
+    "lab:Standard"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "SHACL",
+     "@language": "ko"
+    },
+    {
+     "@value": "Shapes Constraint Language",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_trend_report/index.html#sec-4-2"
+   }
+  },
+  {
+   "@id": "lab:standard/iso-23726-3",
+   "@type": [
+    "skos:Concept",
+    "lab:Standard"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "ISO 23726-3 산업 데이터 온톨로지(IDO)",
+     "@language": "ko"
+    },
+    {
+     "@value": "ISO 23726-3 Industrial Data Ontology",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_trend_report/index.html#tl-2026-06-03"
+   },
+   "lab:governedBy": [
+    {
+     "@id": "lab:standard/owl2"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/ontology"
+    }
+   ]
+  },
+  {
+   "@id": "lab:standard/open-semantic-interchange",
+   "@type": [
+    "skos:Concept",
+    "lab:Standard"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "Open Semantic Interchange (OSI)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Open Semantic Interchange",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_trend_report/index.html#tl-2025-09-23"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/semantic-layer"
+    }
+   ]
+  },
+  {
+   "@id": "lab:metric/palantir-quarterly-revenue",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "Palantir 분기 매출",
+     "@language": "ko"
+    },
+    {
+     "@value": "Palantir quarterly revenue",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "Palantir가 분기마다 공시하는 매출(단위: 10억 달러).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_trend_report/index.html#fig-5-1"
+   }
+  },
+  {
+   "@id": "lab:metric/agentic-ai-accuracy",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "에이전트형 AI 정확도",
+     "@language": "ko"
+    },
+    {
+     "@value": "agentic AI accuracy",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_trend_report/index.html#kpi-gartner"
+   }
+  },
+  {
+   "@id": "lab:metric/kg-fact-count",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "지식 그래프 사실 수",
+     "@language": "ko"
+    },
+    {
+     "@value": "number of facts in a knowledge graph",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_trend_report/index.html#tbl-5-2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/knowledge-graph"
+    }
+   ]
+  },
+  {
    "@id": "lab:method/lexicon-sentiment",
    "@type": [
     "skos:Concept",
@@ -571,50 +1275,6 @@
     },
     {
      "@id": "lab:method/bert"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/rag",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "LLM과 RAG",
-     "@language": "ko"
-    },
-    {
-     "@value": "large language models and retrieval-augmented generation",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "대규모 언어모델에 벡터 데이터베이스에서 검색한 관련 문서를 함께 넣어, 최신·조직 고유 정보를 근거로 답을 생성하게 하는 방법.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/LLM_summary_note/index.html#r11"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/rag"
-    }
-   ],
-   "lab:relatedTo": [
-    {
-     "@id": "lab:concept/llm"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/graphrag"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/context-engineering"
     }
    ]
   },
@@ -1360,666 +2020,6 @@
    "rdfs:isDefinedBy": {
     "@id": "https://adminmrobo.github.io/LLM_summary_note/index.html#ref"
    }
-  },
-  {
-   "@id": "lab:concept/knowledge-graph",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "지식 그래프",
-     "@language": "ko"
-    },
-    {
-     "@value": "knowledge graph",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "대상과 관계를 뽑아 “누가 — 무슨 관계 — 무엇”으로 이어 둔 기록.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ontology_trend_report/index.html#g-kg"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/knowledge-graph"
-    }
-   ],
-   "lab:solves": [
-    {
-     "@id": "lab:concept/conflicting-memories"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/graphrag"
-    }
-   ],
-   "lab:governedBy": [
-    {
-     "@id": "lab:standard/shacl"
-    }
-   ],
-   "lab:measuredBy": [
-    {
-     "@id": "lab:metric/kg-fact-count"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/ontology",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "온톨로지",
-     "@language": "ko"
-    },
-    {
-     "@value": "ontology",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "한 분야에 무엇이 있고 서로 어떤 관계인지를 사람과 기계가 같은 뜻으로 읽도록 적어 둔 명세.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ontology_trend_report/index.html#sec-4-1"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/knowledge-graph"
-    },
-    {
-     "@id": "lab:topic/ontology-reasoning"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/knowledge-graph"
-    },
-    {
-     "@id": "lab:concept/semantic-layer"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/context-layer"
-    }
-   ],
-   "lab:governedBy": [
-    {
-     "@id": "lab:standard/owl2"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/semantic-layer",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "시맨틱 계층",
-     "@language": "ko"
-    },
-    {
-     "@value": "semantic layer",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "데이터 위에 업무 용어와 지표의 정의를 얹어 도구마다 같은 뜻으로 계산하게 하는 층.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ontology_trend_report/index.html#g-semantic-layer"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/knowledge-graph"
-    },
-    {
-     "@id": "lab:topic/rdf-owl"
-    }
-   ],
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:concept/knowledge-graph"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/context-layer"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/llm-agent",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "에이전트",
-     "@language": "ko"
-    },
-    {
-     "@value": "AI agent",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "목표를 받아 도구를 부르고 여러 단계를 스스로 실행하는 AI 시스템.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ontology_trend_report/index.html#g-agent"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/mdp"
-    },
-    {
-     "@id": "lab:topic/planning-agents"
-    },
-    {
-     "@id": "lab:topic/pretrained-lm"
-    },
-    {
-     "@id": "lab:topic/prompting"
-    }
-   ],
-   "lab:hasLimitation": [
-    {
-     "@id": "lab:concept/hallucination"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/react"
-    }
-   ],
-   "lab:evaluatedBy": [
-    {
-     "@id": "lab:metric/task-horizon"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/context-layer",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "맥락 계층",
-     "@language": "ko"
-    },
-    {
-     "@value": "context layer",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "에이전트가 조직 데이터의 관계와 규칙을 읽도록 데이터·분석 기반에 두는 층(Gartner 권고의 용어).",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ontology_trend_report/index.html#pos-a"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/knowledge-graph"
-    }
-   ],
-   "lab:evaluatedBy": [
-    {
-     "@id": "lab:metric/agentic-ai-accuracy"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/ontology-learning",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "온톨로지 학습",
-     "@language": "ko"
-    },
-    {
-     "@value": "ontology learning",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "문서와 데이터에서 용어·계층·관계를 자동 또는 반자동으로 뽑아 온톨로지를 만드는 일.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ontology_trend_report/index.html#sec-4-2"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/knowledge-graph"
-    },
-    {
-     "@id": "lab:topic/ontology-reasoning"
-    },
-    {
-     "@id": "lab:topic/pretrained-lm"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/llm-ontology-drafting"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/hallucination",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "환각",
-     "@language": "ko"
-    },
-    {
-     "@value": "hallucination",
-     "@language": "en"
-    }
-   ],
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ontology_trend_report/index.html#sec-4-3"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/ai-safety"
-    },
-    {
-     "@id": "lab:topic/hallucination"
-    }
-   ],
-   "lab:addressedBy": [
-    {
-     "@id": "lab:concept/context-layer"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/graphrag",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "GraphRAG",
-     "@language": "ko"
-    },
-    {
-     "@value": "GraphRAG",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "문서에서 지식 그래프를 만든 뒤 그 그래프를 근거로 답을 찾는 검색 증강 생성 방식.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ontology_trend_report/index.html#sec-4-2"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/graph-rag"
-    },
-    {
-     "@id": "lab:topic/knowledge-graph"
-    },
-    {
-     "@id": "lab:topic/rag"
-    }
-   ],
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:method/rag"
-    }
-   ],
-   "lab:derivedFrom": [
-    {
-     "@id": "lab:concept/knowledge-graph"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/fabric-iq-ontology",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "Fabric IQ 온톨로지",
-     "@language": "ko"
-    },
-    {
-     "@value": "Microsoft Fabric IQ Ontology",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "업무의 대상·관계·속성·규칙·행동을 모델로 정의하는 Microsoft Fabric IQ의 기능.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ontology_trend_report/index.html#tl-2025-11-18"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/knowledge-graph"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/context-layer"
-    },
-    {
-     "@id": "lab:concept/ontology"
-    }
-   ],
-   "lab:evaluatedBy": [
-    {
-     "@id": "lab:metric/agentic-ai-accuracy"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/palantir-ontology",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "Palantir 온톨로지(AIP)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Palantir Ontology (AIP)",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "Palantir가 AI 운영의 중간 표현이라고 설명하는 자사 플랫폼의 온톨로지 계층.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ontology_trend_report/index.html#tl-2026-05-04"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/knowledge-graph"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/ontology"
-    }
-   ],
-   "lab:measuredBy": [
-    {
-     "@id": "lab:metric/palantir-quarterly-revenue"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/llm-ontology-drafting",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "LLM으로 온톨로지 초안 쓰기",
-     "@language": "ko"
-    },
-    {
-     "@value": "LLM-assisted ontology drafting",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "기존 데이터 모델·문서를 LLM이 읽어 대상·관계·규칙을 먼저 제안하고 사람이 검토하는 방식.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ontology_trend_report/index.html#sec-4-3"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/knowledge-graph"
-    },
-    {
-     "@id": "lab:topic/ontology-reasoning"
-    },
-    {
-     "@id": "lab:topic/prompting"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/fabric-iq-ontology"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/minimum-viable-ontology",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "한 사용 사례로 좁혀 시작하기",
-     "@language": "ko"
-    },
-    {
-     "@value": "minimum viable ontology",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "수익이 큰 한 가지 문제에 맞춘 최소 온톨로지를 먼저 만들고, 가치를 보인 뒤 넓히는 방식(Thoughtworks 권고).",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ontology_trend_report/index.html#pos-b"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/knowledge-graph"
-    }
-   ]
-  },
-  {
-   "@id": "lab:standard/owl2",
-   "@type": [
-    "skos:Concept",
-    "lab:Standard"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "OWL 2",
-     "@language": "ko"
-    },
-    {
-     "@value": "OWL 2 Web Ontology Language",
-     "@language": "en"
-    }
-   ],
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ontology_trend_report/index.html#sec-4-2"
-   }
-  },
-  {
-   "@id": "lab:standard/shacl",
-   "@type": [
-    "skos:Concept",
-    "lab:Standard"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "SHACL",
-     "@language": "ko"
-    },
-    {
-     "@value": "Shapes Constraint Language",
-     "@language": "en"
-    }
-   ],
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ontology_trend_report/index.html#sec-4-2"
-   }
-  },
-  {
-   "@id": "lab:standard/iso-23726-3",
-   "@type": [
-    "skos:Concept",
-    "lab:Standard"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "ISO 23726-3 산업 데이터 온톨로지(IDO)",
-     "@language": "ko"
-    },
-    {
-     "@value": "ISO 23726-3 Industrial Data Ontology",
-     "@language": "en"
-    }
-   ],
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ontology_trend_report/index.html#tl-2026-06-03"
-   },
-   "lab:governedBy": [
-    {
-     "@id": "lab:standard/owl2"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/ontology"
-    }
-   ]
-  },
-  {
-   "@id": "lab:standard/open-semantic-interchange",
-   "@type": [
-    "skos:Concept",
-    "lab:Standard"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "Open Semantic Interchange (OSI)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Open Semantic Interchange",
-     "@language": "en"
-    }
-   ],
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ontology_trend_report/index.html#tl-2025-09-23"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/semantic-layer"
-    }
-   ]
-  },
-  {
-   "@id": "lab:metric/palantir-quarterly-revenue",
-   "@type": [
-    "skos:Concept",
-    "lab:Metric"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "Palantir 분기 매출",
-     "@language": "ko"
-    },
-    {
-     "@value": "Palantir quarterly revenue",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "Palantir가 분기마다 공시하는 매출(단위: 10억 달러).",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ontology_trend_report/index.html#fig-5-1"
-   }
-  },
-  {
-   "@id": "lab:metric/agentic-ai-accuracy",
-   "@type": [
-    "skos:Concept",
-    "lab:Metric"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "에이전트형 AI 정확도",
-     "@language": "ko"
-    },
-    {
-     "@value": "agentic AI accuracy",
-     "@language": "en"
-    }
-   ],
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ontology_trend_report/index.html#kpi-gartner"
-   }
-  },
-  {
-   "@id": "lab:metric/kg-fact-count",
-   "@type": [
-    "skos:Concept",
-    "lab:Metric"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "지식 그래프 사실 수",
-     "@language": "ko"
-    },
-    {
-     "@value": "number of facts in a knowledge graph",
-     "@language": "en"
-    }
-   ],
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ontology_trend_report/index.html#tbl-5-2"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/knowledge-graph"
-    }
-   ]
   },
   {
    "@id": "lab:concept/conditional-probability",

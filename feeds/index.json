@@ -24,6 +24,9 @@
    "concepts": 330,
    "relations": 527,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/machine-learning.xml",
+   "parts": [
+    "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/machine-learning.xml"
+   ],
    "jsonld": "https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/machine-learning.jsonld"
   },
   {
@@ -37,6 +40,9 @@
    "concepts": 394,
    "relations": 578,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/deep-learning-neuroscience.xml",
+   "parts": [
+    "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/deep-learning-neuroscience.xml"
+   ],
    "jsonld": "https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/deep-learning-neuroscience.jsonld"
   },
   {
@@ -50,6 +56,9 @@
    "concepts": 420,
    "relations": 538,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/ai-senses-generation.xml",
+   "parts": [
+    "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/ai-senses-generation.xml"
+   ],
    "jsonld": "https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/ai-senses-generation.jsonld"
   },
   {
@@ -63,6 +72,10 @@
    "concepts": 909,
    "relations": 1052,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/llm-inference-engineering.xml",
+   "parts": [
+    "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/llm-inference-engineering-p1.xml",
+    "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/llm-inference-engineering-p2.xml"
+   ],
    "jsonld": "https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/llm-inference-engineering.jsonld"
   },
   {
@@ -76,6 +89,10 @@
    "concepts": 955,
    "relations": 1059,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/economics-math-optimization.xml",
+   "parts": [
+    "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/economics-math-optimization-p1.xml",
+    "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/economics-math-optimization-p2.xml"
+   ],
    "jsonld": "https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/economics-math-optimization.jsonld"
   },
   {
@@ -89,6 +106,10 @@
    "concepts": 738,
    "relations": 908,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/finance-fintech-blockchain.xml",
+   "parts": [
+    "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/finance-fintech-blockchain-p1.xml",
+    "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/finance-fintech-blockchain-p2.xml"
+   ],
    "jsonld": "https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/finance-fintech-blockchain.jsonld"
   },
   {
@@ -102,6 +123,10 @@
    "concepts": 934,
    "relations": 1001,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/statistics-data-basics.xml",
+   "parts": [
+    "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/statistics-data-basics-p1.xml",
+    "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/statistics-data-basics-p2.xml"
+   ],
    "jsonld": "https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/statistics-data-basics.jsonld"
   },
   {
@@ -115,7 +140,15 @@
    "concepts": 1044,
    "relations": 1194,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/applied-ai.xml",
+   "parts": [
+    "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/applied-ai-p1.xml",
+    "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/applied-ai-p2.xml"
+   ],
    "jsonld": "https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/applied-ai.jsonld"
   }
+ ],
+ "all_parts": [
+  "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/all-p1.xml",
+  "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/all-p2.xml"
  ]
 }

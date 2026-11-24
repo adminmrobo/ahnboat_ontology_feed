@@ -716,1459 +716,427 @@
    }
   },
   {
-   "@id": "lab:method/transfer-learning",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "전이학습",
-     "@language": "ko"
-    },
-    {
-     "@value": "transfer learning",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "대규모 코퍼스로 사전훈련한 모델을 특정 작업·언어·도메인의 소량 데이터로 미세조정해 지식을 옮겨 쓰는 기계학습 기법.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#uses"
-   }
-  },
-  {
-   "@id": "lab:method/fine-tuning",
+   "@id": "lab:concept/silhouette-mood",
    "@type": [
     "skos:Concept",
     "lab:Concept"
    ],
    "skos:prefLabel": [
     {
-     "@value": "파인튜닝",
+     "@value": "실루엣으로 읽히는 기분",
      "@language": "ko"
     },
     {
-     "@value": "fine-tuning",
+     "@value": "Mood readable from silhouette",
      "@language": "en"
     }
    ],
    "skos:definition": {
-    "@value": "사전훈련 모델을 특정 작업·도메인 데이터로 추가 학습.",
+    "@value": "팔 모양과 몸의 기울기만으로 기분의 큰 방향이 갈린다",
     "@language": "ko"
    },
    "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/part2.html#r26"
-   },
-   "lab:broader": [
-    {
-     "@id": "lab:method/transfer-learning"
-    }
-   ],
-   "lab:relatedTo": [
-    {
-     "@id": "lab:method/bert"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/gradient-descent",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "경사하강법",
-     "@language": "ko"
-    },
-    {
-     "@value": "Gradient descent",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "예측 → 오차 → 책임 나누기 → 반대 방향으로 조금 옮기기를 반복한다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r17"
+    "@id": "https://adminmrobo.github.io/drawing_lab_01/01_body_mood.html#s1"
    },
    "lab:topic": [
     {
-     "@id": "lab:topic/gradient-descent"
+     "@id": "lab:topic/gesture"
     }
    ],
-   "lab:prerequisiteOf": [
+   "lab:motivates": [
     {
-     "@id": "lab:method/backpropagation"
-    }
-   ],
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:method/coordinate-search"
-    }
-   ],
-   "lab:evaluatedOn": [
-    {
-     "@id": "lab:dataset/cup-photo"
-    }
-   ],
-   "lab:broader": [
-    {
-     "@id": "lab:method/adam"
-    }
-   ],
-   "lab:relatedTo": [
-    {
-     "@id": "lab:concept/gradient"
+     "@id": "lab:method/head-neck-shoulder"
     }
    ]
   },
   {
-   "@id": "lab:method/backpropagation",
+   "@id": "lab:method/head-neck-shoulder",
    "@type": [
     "skos:Concept",
     "lab:Method"
    ],
    "skos:prefLabel": [
     {
-     "@value": "역전파",
+     "@value": "머리·목·어깨 세 선",
      "@language": "ko"
     },
     {
-     "@value": "Backpropagation",
+     "@value": "Head, neck and shoulder lines",
      "@language": "en"
     }
    ],
    "skos:definition": {
-    "@value": "출력의 오차를 누구 책임인가에 따라 거꾸로 나눠 주는 계산.",
+    "@value": "얼굴 정중선과 어깨선의 방향·엇갈림이 밝기와 움직임을 정한다",
     "@language": "ko"
    },
    "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r17"
+    "@id": "https://adminmrobo.github.io/drawing_lab_01/01_body_mood.html#s2"
    },
    "lab:topic": [
     {
-     "@id": "lab:topic/backpropagation"
+     "@id": "lab:topic/gesture"
     }
    ],
-   "lab:prerequisiteOf": [
+   "lab:motivates": [
     {
-     "@id": "lab:method/gradient-descent"
-    },
-    {
-     "@id": "lab:method/adam"
-    }
-   ],
-   "lab:solves": [
-    {
-     "@id": "lab:concept/gradient"
+     "@id": "lab:concept/neck-range"
     }
    ]
   },
   {
-   "@id": "lab:method/cnn",
+   "@id": "lab:concept/neck-range",
    "@type": [
     "skos:Concept",
-    "lab:Method"
+    "lab:Concept"
    ],
    "skos:prefLabel": [
     {
-     "@value": "합성곱 신경망",
+     "@value": "목의 가동 범위",
      "@language": "ko"
     },
     {
-     "@value": "Convolutional neural network",
+     "@value": "Neck range of motion",
      "@language": "en"
     }
    ],
    "skos:definition": {
-    "@value": "좁은 영역만 보는 같은 계산을 모든 위치에 반복하고, 층이 올라갈수록 보는 범위가 넓어진다.",
+    "@value": "얼굴 방향 = 몸 돌린 각 + 목 돌린 각, 목은 한계가 있다",
     "@language": "ko"
    },
    "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#map"
+    "@id": "https://adminmrobo.github.io/drawing_lab_01/01_body_mood.html#s3"
    },
    "lab:topic": [
     {
-     "@id": "lab:topic/convolution"
+     "@id": "lab:topic/gesture"
     }
    ],
-   "lab:evaluatedBy": [
+   "lab:motivates": [
     {
-     "@id": "lab:metric/validation-accuracy-shifted"
-    }
-   ],
-   "lab:evaluatedOn": [
-    {
-     "@id": "lab:dataset/toy-dot-faces"
-    },
-    {
-     "@id": "lab:dataset/digits"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/sliding-window-detection"
-    },
-    {
-     "@id": "lab:method/feature-extraction"
-    },
-    {
-     "@id": "lab:method/data-augmentation"
-    },
-    {
-     "@id": "lab:method/transfer-learning"
+     "@id": "lab:concept/gait-mood"
     }
    ]
   },
   {
-   "@id": "lab:concept/weight-sharing",
+   "@id": "lab:concept/gait-mood",
    "@type": [
     "skos:Concept",
     "lab:Concept"
    ],
    "skos:prefLabel": [
     {
-     "@value": "가중치 공유",
+     "@value": "기분과 걸음",
      "@language": "ko"
     },
     {
-     "@value": "Weight sharing",
+     "@value": "Gait and mood",
      "@language": "en"
     }
    ],
    "skos:definition": {
-    "@value": "같은 계산(필터)을 모든 위치에 반복해 쓰는 것.",
+    "@value": "보폭 = 키 × (0.35 + 0.15 × 기분)",
     "@language": "ko"
    },
    "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r18"
+    "@id": "https://adminmrobo.github.io/drawing_lab_01/01_body_mood.html#s4"
    },
    "lab:topic": [
     {
-     "@id": "lab:topic/convolution"
+     "@id": "lab:topic/gesture"
     }
    ],
-   "lab:partOf": [
+   "lab:motivates": [
     {
-     "@id": "lab:method/cnn"
-    }
-   ],
-   "lab:broader": [
-    {
-     "@id": "lab:concept/parameter-count"
+     "@id": "lab:method/brow-mouth-axes"
     }
    ]
   },
   {
-   "@id": "lab:metric/iou",
-   "@type": [
-    "skos:Concept",
-    "lab:Metric"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "겹친 비율",
-     "@language": "ko"
-    },
-    {
-     "@value": "intersection over union",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "두 실루엣의 겹친 넓이 ÷ 합친 넓이.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/part2.html#r23"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/non-maximum-suppression"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/template-matching",
+   "@id": "lab:method/brow-mouth-axes",
    "@type": [
     "skos:Concept",
     "lab:Method"
    ],
    "skos:prefLabel": [
     {
-     "@value": "통째 비교(자리 그대로 비교)",
+     "@value": "눈썹·입 두 축",
      "@language": "ko"
     },
     {
-     "@value": "Pixel-wise template matching",
+     "@value": "Brow and mouth axes",
      "@language": "en"
     }
    ],
    "skos:definition": {
-    "@value": "저장한 판과 새 판을 같은 자리끼리 비교해 같은 칸 수를 세는 방법.",
+    "@value": "눈썹 안쪽과 입꼬리 조합으로 감정이 갈리고, 어긋나면 섞인 감정",
     "@language": "ko"
    },
    "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r2"
-   },
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:method/cnn"
-    }
-   ],
-   "lab:evaluatedBy": [
-    {
-     "@id": "lab:metric/validation-accuracy-shifted"
-    }
-   ],
-   "lab:evaluatedOn": [
-    {
-     "@id": "lab:dataset/toy-dot-faces"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/cross-correlation",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "합성곱(교차 상관)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Convolution (cross-correlation)",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "돋보기를 옮겨 가며 겹친 칸끼리 곱해서 더하는 계산. CNN 도구들은 돋보기를 뒤집지 않는다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r3"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/conv-output-size"
-    },
-    {
-     "@id": "lab:method/relu"
-    },
-    {
-     "@id": "lab:method/transfer-learning"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/cnn"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/relu",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "ReLU",
-     "@language": "ko"
-    },
-    {
-     "@value": "Rectified linear unit",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "0보다 작은 값을 0으로 바꾸는 규칙. f(x) = max(0, x).",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r8"
+    "@id": "https://adminmrobo.github.io/drawing_lab_01/02_six_emotions.html#s1"
    },
    "lab:topic": [
     {
-     "@id": "lab:topic/activation-function"
+     "@id": "lab:topic/facial-expression"
     }
    ],
-   "lab:prerequisiteOf": [
+   "lab:motivates": [
     {
-     "@id": "lab:method/max-pooling"
+     "@id": "lab:concept/anger-stages"
     }
    ],
-   "lab:partOf": [
+   "lab:explains": [
     {
-     "@id": "lab:method/cnn"
+     "@id": "lab:method/blendshapes"
     }
    ]
   },
   {
-   "@id": "lab:method/max-pooling",
+   "@id": "lab:concept/anger-stages",
    "@type": [
     "skos:Concept",
-    "lab:Method"
+    "lab:Concept"
    ],
    "skos:prefLabel": [
     {
-     "@value": "최대 풀링",
+     "@value": "분노의 두 단계",
      "@language": "ko"
     },
     {
-     "@value": "Max pooling",
+     "@value": "Two stages of anger",
      "@language": "en"
     }
    ],
    "skos:definition": {
-    "@value": "구역마다 가장 큰 값 하나만 남기는 요약.",
+    "@value": "참는 단계(입을 다묾) → 터지는 단계(입을 열고 주름을 늘림)",
     "@language": "ko"
    },
    "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r9"
+    "@id": "https://adminmrobo.github.io/drawing_lab_01/02_six_emotions.html#s2"
    },
    "lab:topic": [
     {
-     "@id": "lab:topic/pooling"
+     "@id": "lab:topic/facial-expression"
     }
    ],
-   "lab:prerequisiteOf": [
+   "lab:motivates": [
     {
-     "@id": "lab:concept/channel"
-    },
-    {
-     "@id": "lab:concept/invariance"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/cnn"
+     "@id": "lab:concept/surprise-white"
     }
    ]
   },
   {
-   "@id": "lab:method/average-pooling",
+   "@id": "lab:concept/surprise-white",
    "@type": [
     "skos:Concept",
-    "lab:Method"
+    "lab:Concept"
    ],
    "skos:prefLabel": [
     {
-     "@value": "평균 풀링",
+     "@value": "놀람의 흰자 비율",
      "@language": "ko"
     },
     {
-     "@value": "Average pooling",
+     "@value": "Eye white ratio in surprise",
      "@language": "en"
     }
    ],
    "skos:definition": {
-    "@value": "구역마다 평균을 남기는 요약.",
+    "@value": "흰자 = 1 − r², 눈은 크게 눈동자는 작게",
     "@language": "ko"
    },
    "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r10"
-   },
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:method/max-pooling"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/flattening",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "펼치기",
-     "@language": "ko"
-    },
-    {
-     "@value": "Flattening",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "여러 장의 판을 숫자 한 줄로 세우는 것. 길이는 C × H × W.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r13"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/fully-connected-layer"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/cnn"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/fully-connected-layer",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "완전연결층",
-     "@language": "ko"
-    },
-    {
-     "@value": "Fully connected (dense) layer",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "모든 입력에 가중치를 곱해 더하는 층. y = Wx + b.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r14"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/softmax"
-    },
-    {
-     "@id": "lab:concept/parameter-count"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/cnn"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/softmax",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "소프트맥스",
-     "@language": "ko"
-    },
-    {
-     "@value": "Softmax",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "점수 여러 개를 합이 1인 확률로 바꾸는 계산.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r15"
+    "@id": "https://adminmrobo.github.io/drawing_lab_01/02_six_emotions.html#s3"
    },
    "lab:topic": [
     {
-     "@id": "lab:topic/activation-function"
+     "@id": "lab:topic/facial-expression"
     }
    ],
-   "lab:prerequisiteOf": [
+   "lab:motivates": [
     {
-     "@id": "lab:concept/cross-entropy-loss"
+     "@id": "lab:concept/blank-states"
     }
    ],
-   "lab:partOf": [
+   "lab:explains": [
     {
-     "@id": "lab:method/cnn"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/pixel-grid",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "숫자판(픽셀 격자)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Pixel grid",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "사진을 칸으로 나누고 칸마다 밝기를 숫자로 적은 판. (H, W, C)로 크기를 적는다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r1"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/template-matching"
-    },
-    {
-     "@id": "lab:method/cross-correlation"
+     "@id": "lab:method/eyes-by-mood"
     }
    ]
   },
   {
-   "@id": "lab:concept/kernel-filter",
+   "@id": "lab:concept/blank-states",
    "@type": [
     "skos:Concept",
     "lab:Concept"
    ],
    "skos:prefLabel": [
     {
-     "@value": "돋보기(필터·커널)",
+     "@value": "밝은 멍함과 어두운 멍함",
      "@language": "ko"
     },
     {
-     "@value": "Filter (kernel)",
+     "@value": "Bright and dark blankness",
      "@language": "en"
     }
    ],
    "skos:definition": {
-    "@value": "사진 위를 훑는 작은 숫자판. 숫자 배치가 찾는 무늬를 정한다.",
+    "@value": "楽의 끝은 초점 어긋남, 哀의 끝은 흰 눈과 처진 어깨",
     "@language": "ko"
    },
    "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r3"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:method/cross-correlation"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/feature-map",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "무늬 지도(특징 맵)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Feature map",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "돋보기가 자리마다 매긴 점수를 모은 판.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r3"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:method/cross-correlation"
-    },
-    {
-     "@id": "lab:method/cnn"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/conv-output-size",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "출력 크기 공식",
-     "@language": "ko"
-    },
-    {
-     "@value": "Convolution output size",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "⌊(H + 2P − K) ÷ S⌋ + 1. 돋보기가 설 수 있는 자리 수.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r5"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/padding"
-    },
-    {
-     "@id": "lab:concept/stride"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/padding",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "패딩(덧대기)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Padding",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "입력 둘레에 0을 덧대는 것.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r6"
-   }
-  },
-  {
-   "@id": "lab:concept/stride",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "스트라이드(건너뛰기)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Stride",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "돋보기가 한 번에 건너뛰는 칸 수.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r7"
-   }
-  },
-  {
-   "@id": "lab:concept/translation-tolerance",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "자리 변화에 견디기",
-     "@language": "ko"
-    },
-    {
-     "@value": "Tolerance to small translations",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "같은 돋보기를 모든 자리에 쓰고 구역으로 요약하기 때문에 작은 밀림에 덜 흔들리는 성질.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r11"
-   },
-   "lab:relatedTo": [
-    {
-     "@id": "lab:concept/weight-sharing"
-    },
-    {
-     "@id": "lab:method/max-pooling"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/channel",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "채널",
-     "@language": "ko"
-    },
-    {
-     "@value": "Channel",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "포개 놓은 판의 장 수. 돋보기 개수만큼 무늬 지도가 생긴다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r12"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/flattening"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/logit",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "로짓",
-     "@language": "ko"
-    },
-    {
-     "@value": "Logit",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "확률로 바꾸기 전의 점수.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r15"
+    "@id": "https://adminmrobo.github.io/drawing_lab_01/02_six_emotions.html#s4"
    },
    "lab:topic": [
     {
-     "@id": "lab:topic/loss-function"
+     "@id": "lab:topic/facial-expression"
     }
    ],
-   "lab:partOf": [
+   "lab:motivates": [
     {
-     "@id": "lab:method/softmax"
+     "@id": "lab:concept/eye-foreshortening"
     }
    ]
   },
   {
-   "@id": "lab:concept/cross-entropy-loss",
+   "@id": "lab:concept/eye-foreshortening",
    "@type": [
     "skos:Concept",
     "lab:Concept"
    ],
    "skos:prefLabel": [
     {
-     "@value": "손실(교차 엔트로피)",
+     "@value": "각도에 따른 눈 폭",
      "@language": "ko"
     },
     {
-     "@value": "Cross-entropy loss",
+     "@value": "Eye width by head angle",
      "@language": "en"
     }
    ],
    "skos:definition": {
-    "@value": "정답에 준 확률이 낮을수록 커지는 벌점. L = −Σ y log ŷ.",
+    "@value": "보이는 눈 폭 = 실제 폭 × cos(사이각)",
     "@language": "ko"
    },
    "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r16"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/gradient-descent"
-    }
-   ],
-   "lab:broader": [
-    {
-     "@id": "lab:concept/loss"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/parameter-count",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "파라미터 수",
-     "@language": "ko"
-    },
-    {
-     "@value": "Parameter count",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "학습으로 바뀌는 숫자의 개수. 합성곱 층 (Kh·Kw·Cin + 1)·Cout, 완전연결층 (nin + 1)·nout.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r18"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/loss"
-    }
-   ]
-  },
-  {
-   "@id": "lab:metric/validation-accuracy-shifted",
-   "@type": [
-    "skos:Concept",
-    "lab:Metric"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "한 칸 밀린 얼굴 정확도",
-     "@language": "ko"
-    },
-    {
-     "@value": "Accuracy on one-pixel-shifted faces",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "연습 때 보지 못한, 한 칸 밀린 얼굴 120장에서 맞힌 비율. 이 페이지의 대결 판정 기준.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#duel"
-   }
-  },
-  {
-   "@id": "lab:dataset/toy-dot-faces",
-   "@type": [
-    "skos:Concept",
-    "lab:Dataset"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "8×8 도트 얼굴 장난감 데이터",
-     "@language": "ko"
-    },
-    {
-     "@value": "Toy 8×8 dot-face data",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "하루·시아·모아의 머리 모양만 다르게 그린 도식에 잡음을 섞은 설명용 데이터.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r1"
-   }
-  },
-  {
-   "@id": "lab:method/lenet-5",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "LeNet-5",
-     "@language": "ko"
-    },
-    {
-     "@value": "LeNet-5",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "1998년의 초기 CNN. 합성곱 층과 요약 층을 번갈아 두 번 쌓아 손글씨 숫자를 읽었다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#atlas"
-   },
-   "lab:broader": [
-    {
-     "@id": "lab:method/cnn"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/alexnet"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/alexnet",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "AlexNet",
-     "@language": "ko"
-    },
-    {
-     "@value": "AlexNet",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "2012년 ImageNet 대회에서 우승한 깊은 CNN. ReLU와 GPU 학습을 썼다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#atlas"
-   },
-   "lab:broader": [
-    {
-     "@id": "lab:method/cnn"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/vgg"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/vgg",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "VGG",
-     "@language": "ko"
-    },
-    {
-     "@value": "VGG",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "3×3 필터만으로 16~19층까지 쌓은 CNN.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#atlas"
-   },
-   "lab:broader": [
-    {
-     "@id": "lab:method/cnn"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/resnet"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/resnet",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "ResNet",
-     "@language": "ko"
-    },
-    {
-     "@value": "ResNet",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "건너뛰는 연결을 넣어 50~152층까지 쌓은 CNN.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#atlas"
+    "@id": "https://adminmrobo.github.io/drawing_lab_01/03_eyes.html#s1"
    },
    "lab:topic": [
     {
-     "@id": "lab:topic/residual-connections"
+     "@id": "lab:topic/perspective"
     }
    ],
-   "lab:broader": [
+   "lab:motivates": [
     {
-     "@id": "lab:method/cnn"
+     "@id": "lab:concept/iris-on-sphere"
+    }
+   ],
+   "lab:explains": [
+    {
+     "@id": "lab:concept/light-direction"
     }
    ]
   },
   {
-   "@id": "lab:concept/skip-connection",
+   "@id": "lab:concept/iris-on-sphere",
    "@type": [
     "skos:Concept",
     "lab:Concept"
    ],
    "skos:prefLabel": [
     {
-     "@value": "건너뛰는 연결",
+     "@value": "공 위의 눈동자",
      "@language": "ko"
     },
     {
-     "@value": "Skip (residual) connection",
+     "@value": "Iris on an eyeball sphere",
      "@language": "en"
     }
    ],
    "skos:definition": {
-    "@value": "몇 층의 결과 F(x)에 입력 x를 그대로 더해 내보내는 지름길. 출력 = F(x) + x.",
+    "@value": "시선을 돌린 만큼 눈동자가 납작한 타원이 된다",
     "@language": "ko"
    },
    "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#atlas"
+    "@id": "https://adminmrobo.github.io/drawing_lab_01/03_eyes.html#s2"
    },
-   "lab:partOf": [
+   "lab:topic": [
     {
-     "@id": "lab:method/resnet"
+     "@id": "lab:topic/facial-expression"
+    }
+   ],
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/eyelid-steps"
     }
    ]
   },
   {
-   "@id": "lab:method/sliding-window-detection",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "창 밀기",
-     "@language": "ko"
-    },
-    {
-     "@value": "Sliding-window detection",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "작은 창을 옮겨 가며 자리마다 분류기를 돌리는 탐지 방법.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/part2.html#r22"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/non-maximum-suppression"
-    },
-    {
-     "@id": "lab:method/region-based-detectors"
-    },
-    {
-     "@id": "lab:method/single-shot-detectors"
-    }
-   ],
-   "lab:evaluatedOn": [
-    {
-     "@id": "lab:dataset/toy-face-scenes"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/non-maximum-suppression",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "겹친 상자 정리(NMS)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Non-maximum suppression",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "확신 점수가 가장 높은 상자를 남기고 그것과 많이 겹친 상자를 지운다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/part2.html#r23"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:metric/hits-misses-false-alarms"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/semantic-segmentation",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "의미 분할",
-     "@language": "ko"
-    },
-    {
-     "@value": "Semantic segmentation",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "칸마다 종류를 답한다. 같은 종류는 같은 색.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/part2.html#r25"
-   },
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:method/instance-segmentation"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/instance-segmentation",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "개체 분할",
-     "@language": "ko"
-    },
-    {
-     "@value": "Instance segmentation",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "같은 종류라도 물체 하나하나를 따로 칠한다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/part2.html#r25"
-   }
-  },
-  {
-   "@id": "lab:method/feature-extraction",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "특징 추출",
-     "@language": "ko"
-    },
-    {
-     "@value": "Feature extraction (frozen backbone)",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "미리 만든 돋보기 부분을 고정하고 뒤의 분류기만 새로 배운다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/part2.html#r26"
-   },
-   "lab:broader": [
-    {
-     "@id": "lab:method/transfer-learning"
-    }
-   ],
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:method/fine-tuning"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/region-based-detectors",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "후보부터 뽑는 탐지 (R-CNN 계열)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Region-based detectors (R-CNN family)",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "물체가 있을 만한 영역을 먼저 뽑고 그 영역만 CNN으로 맞힌다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/part2.html#names"
-   },
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:method/single-shot-detectors"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/single-shot-detectors",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "한 번에 내는 탐지 (YOLO·SSD)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Single-shot detectors (YOLO, SSD)",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "사진을 한 번만 통과시켜 상자의 자리와 이름을 한꺼번에 낸다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/part2.html#names"
-   }
-  },
-  {
-   "@id": "lab:concept/bounding-box",
+   "@id": "lab:concept/eyelid-steps",
    "@type": [
     "skos:Concept",
     "lab:Concept"
    ],
    "skos:prefLabel": [
     {
-     "@value": "경계 상자",
+     "@value": "눈꺼풀 단계와 감은 눈 곡선",
      "@language": "ko"
     },
     {
-     "@value": "Bounding box",
+     "@value": "Eyelid steps and closed-eye curves",
      "@language": "en"
     }
    ],
    "skos:definition": {
-    "@value": "찾은 물체를 두른 네모.",
+    "@value": "위아래 눈꺼풀이 함께 움직이고, 조용히 ‿ 웃으면 ⌒",
     "@language": "ko"
    },
    "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/part2.html#r22"
-   }
-  },
-  {
-   "@id": "lab:concept/confidence-score",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
+    "@id": "https://adminmrobo.github.io/drawing_lab_01/03_eyes.html#s3"
+   },
+   "lab:topic": [
     {
-     "@value": "확신 점수",
-     "@language": "ko"
-    },
-    {
-     "@value": "Confidence score",
-     "@language": "en"
+     "@id": "lab:topic/facial-expression"
     }
    ],
-   "skos:definition": {
-    "@value": "모형이 그 답에 준 확률.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/part2.html#r22"
-   }
-  },
-  {
-   "@id": "lab:concept/background-class",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
+   "lab:motivates": [
     {
-     "@value": "\"없음\" 답",
-     "@language": "ko"
-    },
-    {
-     "@value": "Background class",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "창 안에 찾는 물체가 없을 때 고르는 답.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/part2.html#r21"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/sliding-window-detection"
+     "@id": "lab:method/eyes-by-mood"
     }
    ]
   },
   {
-   "@id": "lab:metric/hits-misses-false-alarms",
+   "@id": "lab:method/eyes-by-mood",
    "@type": [
     "skos:Concept",
-    "lab:Metric"
+    "lab:Method"
    ],
    "skos:prefLabel": [
     {
-     "@value": "맞힘 · 놓침 · 헛짚음",
+     "@value": "기분별 눈 모양",
      "@language": "ko"
     },
     {
-     "@value": "True positives, misses, false positives",
+     "@value": "Eye shapes by emotion",
      "@language": "en"
     }
    ],
    "skos:definition": {
-    "@value": "찾기 결과를 정답 자리와 견줘 세 가지로 센 성적표.",
+    "@value": "눈꺼풀 곡선·눈동자 크기·반짝임으로 여섯 감정을 나눈다",
     "@language": "ko"
    },
    "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/part2.html#r24"
-   }
-  },
-  {
-   "@id": "lab:dataset/toy-face-scenes",
-   "@type": [
-    "skos:Concept",
-    "lab:Dataset"
-   ],
-   "skos:prefLabel": [
+    "@id": "https://adminmrobo.github.io/drawing_lab_01/03_eyes.html#s4"
+   },
+   "lab:topic": [
     {
-     "@value": "24×12 도트 얼굴 판 장난감 데이터",
-     "@language": "ko"
-    },
-    {
-     "@value": "Toy 24×12 dot-face scenes",
-     "@language": "en"
+     "@id": "lab:topic/facial-expression"
     }
    ],
-   "skos:definition": {
-    "@value": "하루·시아·모아의 도트 얼굴을 넓은 판에 놓은 설명용 데이터.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/part2.html#r21"
-   }
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/light-direction"
+    }
+   ]
   },
   {
    "@id": "lab:concept/light-direction",
@@ -2191,7 +1159,7 @@
     "@language": "ko"
    },
    "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/structure_first_drawing_lab_02/04_light_dir.html#s1"
+    "@id": "https://adminmrobo.github.io/drawing_lab_01/04_light_mood.html#s1"
    },
    "lab:topic": [
     {
@@ -2206,6 +1174,258 @@
      "@id": "lab:concept/under-light"
     }
    ]
+  },
+  {
+   "@id": "lab:concept/two-lights",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "빛 둘의 명·중·암",
+     "@language": "ko"
+    },
+    {
+     "@value": "Light, mid and dark tones with two lights",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "보조 빛이 그림자 일부를 밝혀 중간 톤이 생긴다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_01/04_light_mood.html#s2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/light-shadow"
+    }
+   ],
+   "lab:motivates": [
+    {
+     "@id": "lab:method/rim-reflector"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/rim-reflector",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "역광·테두리 빛·반사판",
+     "@language": "ko"
+    },
+    {
+     "@value": "Backlight, rim light and reflector",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "얼굴은 어둡게, 윤곽은 희게, 반사광으로 표정",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_01/04_light_mood.html#s3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/light-shadow"
+    }
+   ],
+   "lab:motivates": [
+    {
+     "@id": "lab:method/mood-touches"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/mood-touches",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "기분 터치",
+     "@language": "ko"
+    },
+    {
+     "@value": "Emotional manga touches",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "喜 붉은 빗금, 哀 세로선, 怒 얼굴 그늘",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_01/04_light_mood.html#s4"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/expression-prompt"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/expression-prompt",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "표정 문장 여섯 조각",
+     "@language": "ko"
+    },
+    {
+     "@value": "Six-part expression prompt",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "감정·얼굴·눈·몸·빛·고정",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_01/05_ai_vfx.html#s1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/prompt-for-images"
+    }
+   ],
+   "lab:motivates": [
+    {
+     "@id": "lab:method/face-inpaint"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/face-inpaint",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "얼굴만 다시 그리기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Inpainting only the face",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "바뀌는 비율 = 가린 넓이 ÷ 전체 넓이",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_01/05_ai_vfx.html#s2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/image-editing-inpainting"
+    }
+   ],
+   "lab:motivates": [
+    {
+     "@id": "lab:method/blendshapes"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/blendshapes",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "표정 값 섞기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Blending facial blendshapes",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "섞인 위치 = 기본 + Σ(값 × 움직이는 양)",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_01/05_ai_vfx.html#s3"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/style-exaggeration"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/style-exaggeration",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "화풍별 과장 배수",
+     "@language": "ko"
+    },
+    {
+     "@value": "Exaggeration factor per art style",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "실제 표정 값 = 세기 × 과장 배수",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_01/05_ai_vfx.html#s4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/style-transfer-drawing"
+    }
+   ],
+   "lab:motivates": [
+    {
+     "@id": "lab:method/expression-diagnosis"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/expression-diagnosis",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "표정 그림 진단 순서",
+     "@language": "ko"
+    },
+    {
+     "@value": "Expression drawing diagnosis checklist",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "몸 → 눈썹·입 → 눈 → 빛·터치 → 문장·가림 영역",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_01/06_failure_lab.html#s1"
+   }
   },
   {
    "@id": "lab:concept/contact-point",
@@ -2848,681 +2068,6 @@
      "@id": "lab:topic/light-shadow"
     }
    ]
-  },
-  {
-   "@id": "lab:concept/silhouette-mood",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "실루엣으로 읽히는 기분",
-     "@language": "ko"
-    },
-    {
-     "@value": "Mood readable from silhouette",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "팔 모양과 몸의 기울기만으로 기분의 큰 방향이 갈린다",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/drawing_lab_01/01_body_mood.html#s1"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/gesture"
-    }
-   ],
-   "lab:motivates": [
-    {
-     "@id": "lab:method/head-neck-shoulder"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/head-neck-shoulder",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "머리·목·어깨 세 선",
-     "@language": "ko"
-    },
-    {
-     "@value": "Head, neck and shoulder lines",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "얼굴 정중선과 어깨선의 방향·엇갈림이 밝기와 움직임을 정한다",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/drawing_lab_01/01_body_mood.html#s2"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/gesture"
-    }
-   ],
-   "lab:motivates": [
-    {
-     "@id": "lab:concept/neck-range"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/neck-range",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "목의 가동 범위",
-     "@language": "ko"
-    },
-    {
-     "@value": "Neck range of motion",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "얼굴 방향 = 몸 돌린 각 + 목 돌린 각, 목은 한계가 있다",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/drawing_lab_01/01_body_mood.html#s3"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/gesture"
-    }
-   ],
-   "lab:motivates": [
-    {
-     "@id": "lab:concept/gait-mood"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/gait-mood",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "기분과 걸음",
-     "@language": "ko"
-    },
-    {
-     "@value": "Gait and mood",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "보폭 = 키 × (0.35 + 0.15 × 기분)",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/drawing_lab_01/01_body_mood.html#s4"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/gesture"
-    }
-   ],
-   "lab:motivates": [
-    {
-     "@id": "lab:method/brow-mouth-axes"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/brow-mouth-axes",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "눈썹·입 두 축",
-     "@language": "ko"
-    },
-    {
-     "@value": "Brow and mouth axes",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "눈썹 안쪽과 입꼬리 조합으로 감정이 갈리고, 어긋나면 섞인 감정",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/drawing_lab_01/02_six_emotions.html#s1"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/facial-expression"
-    }
-   ],
-   "lab:motivates": [
-    {
-     "@id": "lab:concept/anger-stages"
-    }
-   ],
-   "lab:explains": [
-    {
-     "@id": "lab:method/blendshapes"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/anger-stages",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "분노의 두 단계",
-     "@language": "ko"
-    },
-    {
-     "@value": "Two stages of anger",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "참는 단계(입을 다묾) → 터지는 단계(입을 열고 주름을 늘림)",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/drawing_lab_01/02_six_emotions.html#s2"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/facial-expression"
-    }
-   ],
-   "lab:motivates": [
-    {
-     "@id": "lab:concept/surprise-white"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/surprise-white",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "놀람의 흰자 비율",
-     "@language": "ko"
-    },
-    {
-     "@value": "Eye white ratio in surprise",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "흰자 = 1 − r², 눈은 크게 눈동자는 작게",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/drawing_lab_01/02_six_emotions.html#s3"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/facial-expression"
-    }
-   ],
-   "lab:motivates": [
-    {
-     "@id": "lab:concept/blank-states"
-    }
-   ],
-   "lab:explains": [
-    {
-     "@id": "lab:method/eyes-by-mood"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/blank-states",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "밝은 멍함과 어두운 멍함",
-     "@language": "ko"
-    },
-    {
-     "@value": "Bright and dark blankness",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "楽의 끝은 초점 어긋남, 哀의 끝은 흰 눈과 처진 어깨",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/drawing_lab_01/02_six_emotions.html#s4"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/facial-expression"
-    }
-   ],
-   "lab:motivates": [
-    {
-     "@id": "lab:concept/eye-foreshortening"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/eye-foreshortening",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "각도에 따른 눈 폭",
-     "@language": "ko"
-    },
-    {
-     "@value": "Eye width by head angle",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "보이는 눈 폭 = 실제 폭 × cos(사이각)",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/drawing_lab_01/03_eyes.html#s1"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/perspective"
-    }
-   ],
-   "lab:motivates": [
-    {
-     "@id": "lab:concept/iris-on-sphere"
-    }
-   ],
-   "lab:explains": [
-    {
-     "@id": "lab:concept/light-direction"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/iris-on-sphere",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "공 위의 눈동자",
-     "@language": "ko"
-    },
-    {
-     "@value": "Iris on an eyeball sphere",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "시선을 돌린 만큼 눈동자가 납작한 타원이 된다",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/drawing_lab_01/03_eyes.html#s2"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/facial-expression"
-    }
-   ],
-   "lab:motivates": [
-    {
-     "@id": "lab:concept/eyelid-steps"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/eyelid-steps",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "눈꺼풀 단계와 감은 눈 곡선",
-     "@language": "ko"
-    },
-    {
-     "@value": "Eyelid steps and closed-eye curves",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "위아래 눈꺼풀이 함께 움직이고, 조용히 ‿ 웃으면 ⌒",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/drawing_lab_01/03_eyes.html#s3"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/facial-expression"
-    }
-   ],
-   "lab:motivates": [
-    {
-     "@id": "lab:method/eyes-by-mood"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/eyes-by-mood",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "기분별 눈 모양",
-     "@language": "ko"
-    },
-    {
-     "@value": "Eye shapes by emotion",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "눈꺼풀 곡선·눈동자 크기·반짝임으로 여섯 감정을 나눈다",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/drawing_lab_01/03_eyes.html#s4"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/facial-expression"
-    }
-   ],
-   "lab:motivates": [
-    {
-     "@id": "lab:concept/light-direction"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/two-lights",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "빛 둘의 명·중·암",
-     "@language": "ko"
-    },
-    {
-     "@value": "Light, mid and dark tones with two lights",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "보조 빛이 그림자 일부를 밝혀 중간 톤이 생긴다",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/drawing_lab_01/04_light_mood.html#s2"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/light-shadow"
-    }
-   ],
-   "lab:motivates": [
-    {
-     "@id": "lab:method/rim-reflector"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/rim-reflector",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "역광·테두리 빛·반사판",
-     "@language": "ko"
-    },
-    {
-     "@value": "Backlight, rim light and reflector",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "얼굴은 어둡게, 윤곽은 희게, 반사광으로 표정",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/drawing_lab_01/04_light_mood.html#s3"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/light-shadow"
-    }
-   ],
-   "lab:motivates": [
-    {
-     "@id": "lab:method/mood-touches"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/mood-touches",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "기분 터치",
-     "@language": "ko"
-    },
-    {
-     "@value": "Emotional manga touches",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "喜 붉은 빗금, 哀 세로선, 怒 얼굴 그늘",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/drawing_lab_01/04_light_mood.html#s4"
-   },
-   "lab:motivates": [
-    {
-     "@id": "lab:method/expression-prompt"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/expression-prompt",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "표정 문장 여섯 조각",
-     "@language": "ko"
-    },
-    {
-     "@value": "Six-part expression prompt",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "감정·얼굴·눈·몸·빛·고정",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/drawing_lab_01/05_ai_vfx.html#s1"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/prompt-for-images"
-    }
-   ],
-   "lab:motivates": [
-    {
-     "@id": "lab:method/face-inpaint"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/face-inpaint",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "얼굴만 다시 그리기",
-     "@language": "ko"
-    },
-    {
-     "@value": "Inpainting only the face",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "바뀌는 비율 = 가린 넓이 ÷ 전체 넓이",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/drawing_lab_01/05_ai_vfx.html#s2"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/image-editing-inpainting"
-    }
-   ],
-   "lab:motivates": [
-    {
-     "@id": "lab:method/blendshapes"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/blendshapes",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "표정 값 섞기",
-     "@language": "ko"
-    },
-    {
-     "@value": "Blending facial blendshapes",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "섞인 위치 = 기본 + Σ(값 × 움직이는 양)",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/drawing_lab_01/05_ai_vfx.html#s3"
-   },
-   "lab:motivates": [
-    {
-     "@id": "lab:method/style-exaggeration"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/style-exaggeration",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "화풍별 과장 배수",
-     "@language": "ko"
-    },
-    {
-     "@value": "Exaggeration factor per art style",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "실제 표정 값 = 세기 × 과장 배수",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/drawing_lab_01/05_ai_vfx.html#s4"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/style-transfer-drawing"
-    }
-   ],
-   "lab:motivates": [
-    {
-     "@id": "lab:method/expression-diagnosis"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/expression-diagnosis",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "표정 그림 진단 순서",
-     "@language": "ko"
-    },
-    {
-     "@value": "Expression drawing diagnosis checklist",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "몸 → 눈썹·입 → 눈 → 빛·터치 → 문장·가림 영역",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/drawing_lab_01/06_failure_lab.html#s1"
-   }
   },
   {
    "@id": "lab:concept/big-folds-first",
@@ -5072,6 +3617,1461 @@
    },
    "rdfs:isDefinedBy": {
     "@id": "https://adminmrobo.github.io/adminmrobo-structure_first_drawing_lab/06_failure_lab.html#s1"
+   }
+  },
+  {
+   "@id": "lab:method/transfer-learning",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "전이학습",
+     "@language": "ko"
+    },
+    {
+     "@value": "transfer learning",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "대규모 코퍼스로 사전훈련한 모델을 특정 작업·언어·도메인의 소량 데이터로 미세조정해 지식을 옮겨 쓰는 기계학습 기법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#uses"
+   }
+  },
+  {
+   "@id": "lab:method/fine-tuning",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "파인튜닝",
+     "@language": "ko"
+    },
+    {
+     "@value": "fine-tuning",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "사전훈련 모델을 특정 작업·도메인 데이터로 추가 학습.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/part2.html#r26"
+   },
+   "lab:broader": [
+    {
+     "@id": "lab:method/transfer-learning"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:method/bert"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/gradient-descent",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "경사하강법",
+     "@language": "ko"
+    },
+    {
+     "@value": "Gradient descent",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "예측 → 오차 → 책임 나누기 → 반대 방향으로 조금 옮기기를 반복한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r17"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/gradient-descent"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/backpropagation"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/coordinate-search"
+    }
+   ],
+   "lab:evaluatedOn": [
+    {
+     "@id": "lab:dataset/cup-photo"
+    }
+   ],
+   "lab:broader": [
+    {
+     "@id": "lab:method/adam"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/gradient"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/backpropagation",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "역전파",
+     "@language": "ko"
+    },
+    {
+     "@value": "Backpropagation",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "출력의 오차를 누구 책임인가에 따라 거꾸로 나눠 주는 계산.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r17"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/backpropagation"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/gradient-descent"
+    },
+    {
+     "@id": "lab:method/adam"
+    }
+   ],
+   "lab:solves": [
+    {
+     "@id": "lab:concept/gradient"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/cnn",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "합성곱 신경망",
+     "@language": "ko"
+    },
+    {
+     "@value": "Convolutional neural network",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "좁은 영역만 보는 같은 계산을 모든 위치에 반복하고, 층이 올라갈수록 보는 범위가 넓어진다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#map"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/convolution"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/validation-accuracy-shifted"
+    }
+   ],
+   "lab:evaluatedOn": [
+    {
+     "@id": "lab:dataset/toy-dot-faces"
+    },
+    {
+     "@id": "lab:dataset/digits"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/sliding-window-detection"
+    },
+    {
+     "@id": "lab:method/feature-extraction"
+    },
+    {
+     "@id": "lab:method/data-augmentation"
+    },
+    {
+     "@id": "lab:method/transfer-learning"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/weight-sharing",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "가중치 공유",
+     "@language": "ko"
+    },
+    {
+     "@value": "Weight sharing",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "같은 계산(필터)을 모든 위치에 반복해 쓰는 것.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r18"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/convolution"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/cnn"
+    }
+   ],
+   "lab:broader": [
+    {
+     "@id": "lab:concept/parameter-count"
+    }
+   ]
+  },
+  {
+   "@id": "lab:metric/iou",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "겹친 비율",
+     "@language": "ko"
+    },
+    {
+     "@value": "intersection over union",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "두 실루엣의 겹친 넓이 ÷ 합친 넓이.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/part2.html#r23"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/non-maximum-suppression"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/template-matching",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "통째 비교(자리 그대로 비교)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Pixel-wise template matching",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "저장한 판과 새 판을 같은 자리끼리 비교해 같은 칸 수를 세는 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r2"
+   },
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/cnn"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/validation-accuracy-shifted"
+    }
+   ],
+   "lab:evaluatedOn": [
+    {
+     "@id": "lab:dataset/toy-dot-faces"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/cross-correlation",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "합성곱(교차 상관)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Convolution (cross-correlation)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "돋보기를 옮겨 가며 겹친 칸끼리 곱해서 더하는 계산. CNN 도구들은 돋보기를 뒤집지 않는다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r3"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/conv-output-size"
+    },
+    {
+     "@id": "lab:method/relu"
+    },
+    {
+     "@id": "lab:method/transfer-learning"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/cnn"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/relu",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "ReLU",
+     "@language": "ko"
+    },
+    {
+     "@value": "Rectified linear unit",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "0보다 작은 값을 0으로 바꾸는 규칙. f(x) = max(0, x).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r8"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/activation-function"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/max-pooling"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/cnn"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/max-pooling",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "최대 풀링",
+     "@language": "ko"
+    },
+    {
+     "@value": "Max pooling",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "구역마다 가장 큰 값 하나만 남기는 요약.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r9"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/pooling"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/channel"
+    },
+    {
+     "@id": "lab:concept/invariance"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/cnn"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/average-pooling",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "평균 풀링",
+     "@language": "ko"
+    },
+    {
+     "@value": "Average pooling",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "구역마다 평균을 남기는 요약.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r10"
+   },
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/max-pooling"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/flattening",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "펼치기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Flattening",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "여러 장의 판을 숫자 한 줄로 세우는 것. 길이는 C × H × W.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r13"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/fully-connected-layer"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/cnn"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/fully-connected-layer",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "완전연결층",
+     "@language": "ko"
+    },
+    {
+     "@value": "Fully connected (dense) layer",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "모든 입력에 가중치를 곱해 더하는 층. y = Wx + b.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r14"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/softmax"
+    },
+    {
+     "@id": "lab:concept/parameter-count"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/cnn"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/softmax",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "소프트맥스",
+     "@language": "ko"
+    },
+    {
+     "@value": "Softmax",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "점수 여러 개를 합이 1인 확률로 바꾸는 계산.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r15"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/activation-function"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/cross-entropy-loss"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/cnn"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/pixel-grid",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "숫자판(픽셀 격자)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Pixel grid",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "사진을 칸으로 나누고 칸마다 밝기를 숫자로 적은 판. (H, W, C)로 크기를 적는다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/template-matching"
+    },
+    {
+     "@id": "lab:method/cross-correlation"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/kernel-filter",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "돋보기(필터·커널)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Filter (kernel)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "사진 위를 훑는 작은 숫자판. 숫자 배치가 찾는 무늬를 정한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r3"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:method/cross-correlation"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/feature-map",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "무늬 지도(특징 맵)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Feature map",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "돋보기가 자리마다 매긴 점수를 모은 판.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r3"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:method/cross-correlation"
+    },
+    {
+     "@id": "lab:method/cnn"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/conv-output-size",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "출력 크기 공식",
+     "@language": "ko"
+    },
+    {
+     "@value": "Convolution output size",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "⌊(H + 2P − K) ÷ S⌋ + 1. 돋보기가 설 수 있는 자리 수.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r5"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/padding"
+    },
+    {
+     "@id": "lab:concept/stride"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/padding",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "패딩(덧대기)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Padding",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "입력 둘레에 0을 덧대는 것.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r6"
+   }
+  },
+  {
+   "@id": "lab:concept/stride",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "스트라이드(건너뛰기)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Stride",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "돋보기가 한 번에 건너뛰는 칸 수.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r7"
+   }
+  },
+  {
+   "@id": "lab:concept/translation-tolerance",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "자리 변화에 견디기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Tolerance to small translations",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "같은 돋보기를 모든 자리에 쓰고 구역으로 요약하기 때문에 작은 밀림에 덜 흔들리는 성질.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r11"
+   },
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/weight-sharing"
+    },
+    {
+     "@id": "lab:method/max-pooling"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/channel",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "채널",
+     "@language": "ko"
+    },
+    {
+     "@value": "Channel",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "포개 놓은 판의 장 수. 돋보기 개수만큼 무늬 지도가 생긴다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r12"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/flattening"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/logit",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "로짓",
+     "@language": "ko"
+    },
+    {
+     "@value": "Logit",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "확률로 바꾸기 전의 점수.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r15"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/loss-function"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/softmax"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/cross-entropy-loss",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "손실(교차 엔트로피)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Cross-entropy loss",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "정답에 준 확률이 낮을수록 커지는 벌점. L = −Σ y log ŷ.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r16"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/gradient-descent"
+    }
+   ],
+   "lab:broader": [
+    {
+     "@id": "lab:concept/loss"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/parameter-count",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "파라미터 수",
+     "@language": "ko"
+    },
+    {
+     "@value": "Parameter count",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "학습으로 바뀌는 숫자의 개수. 합성곱 층 (Kh·Kw·Cin + 1)·Cout, 완전연결층 (nin + 1)·nout.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r18"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/loss"
+    }
+   ]
+  },
+  {
+   "@id": "lab:metric/validation-accuracy-shifted",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "한 칸 밀린 얼굴 정확도",
+     "@language": "ko"
+    },
+    {
+     "@value": "Accuracy on one-pixel-shifted faces",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "연습 때 보지 못한, 한 칸 밀린 얼굴 120장에서 맞힌 비율. 이 페이지의 대결 판정 기준.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#duel"
+   }
+  },
+  {
+   "@id": "lab:dataset/toy-dot-faces",
+   "@type": [
+    "skos:Concept",
+    "lab:Dataset"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "8×8 도트 얼굴 장난감 데이터",
+     "@language": "ko"
+    },
+    {
+     "@value": "Toy 8×8 dot-face data",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "하루·시아·모아의 머리 모양만 다르게 그린 도식에 잡음을 섞은 설명용 데이터.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r1"
+   }
+  },
+  {
+   "@id": "lab:method/lenet-5",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "LeNet-5",
+     "@language": "ko"
+    },
+    {
+     "@value": "LeNet-5",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "1998년의 초기 CNN. 합성곱 층과 요약 층을 번갈아 두 번 쌓아 손글씨 숫자를 읽었다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#atlas"
+   },
+   "lab:broader": [
+    {
+     "@id": "lab:method/cnn"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/alexnet"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/alexnet",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "AlexNet",
+     "@language": "ko"
+    },
+    {
+     "@value": "AlexNet",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "2012년 ImageNet 대회에서 우승한 깊은 CNN. ReLU와 GPU 학습을 썼다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#atlas"
+   },
+   "lab:broader": [
+    {
+     "@id": "lab:method/cnn"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/vgg"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/vgg",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "VGG",
+     "@language": "ko"
+    },
+    {
+     "@value": "VGG",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "3×3 필터만으로 16~19층까지 쌓은 CNN.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#atlas"
+   },
+   "lab:broader": [
+    {
+     "@id": "lab:method/cnn"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/resnet"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/resnet",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "ResNet",
+     "@language": "ko"
+    },
+    {
+     "@value": "ResNet",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "건너뛰는 연결을 넣어 50~152층까지 쌓은 CNN.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#atlas"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/residual-connections"
+    }
+   ],
+   "lab:broader": [
+    {
+     "@id": "lab:method/cnn"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/skip-connection",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "건너뛰는 연결",
+     "@language": "ko"
+    },
+    {
+     "@value": "Skip (residual) connection",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "몇 층의 결과 F(x)에 입력 x를 그대로 더해 내보내는 지름길. 출력 = F(x) + x.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#atlas"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:method/resnet"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/sliding-window-detection",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "창 밀기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Sliding-window detection",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "작은 창을 옮겨 가며 자리마다 분류기를 돌리는 탐지 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/part2.html#r22"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/non-maximum-suppression"
+    },
+    {
+     "@id": "lab:method/region-based-detectors"
+    },
+    {
+     "@id": "lab:method/single-shot-detectors"
+    }
+   ],
+   "lab:evaluatedOn": [
+    {
+     "@id": "lab:dataset/toy-face-scenes"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/non-maximum-suppression",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "겹친 상자 정리(NMS)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Non-maximum suppression",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "확신 점수가 가장 높은 상자를 남기고 그것과 많이 겹친 상자를 지운다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/part2.html#r23"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:metric/hits-misses-false-alarms"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/semantic-segmentation",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "의미 분할",
+     "@language": "ko"
+    },
+    {
+     "@value": "Semantic segmentation",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "칸마다 종류를 답한다. 같은 종류는 같은 색.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/part2.html#r25"
+   },
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/instance-segmentation"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/instance-segmentation",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "개체 분할",
+     "@language": "ko"
+    },
+    {
+     "@value": "Instance segmentation",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "같은 종류라도 물체 하나하나를 따로 칠한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/part2.html#r25"
+   }
+  },
+  {
+   "@id": "lab:method/feature-extraction",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "특징 추출",
+     "@language": "ko"
+    },
+    {
+     "@value": "Feature extraction (frozen backbone)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "미리 만든 돋보기 부분을 고정하고 뒤의 분류기만 새로 배운다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/part2.html#r26"
+   },
+   "lab:broader": [
+    {
+     "@id": "lab:method/transfer-learning"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/fine-tuning"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/region-based-detectors",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "후보부터 뽑는 탐지 (R-CNN 계열)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Region-based detectors (R-CNN family)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "물체가 있을 만한 영역을 먼저 뽑고 그 영역만 CNN으로 맞힌다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/part2.html#names"
+   },
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/single-shot-detectors"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/single-shot-detectors",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "한 번에 내는 탐지 (YOLO·SSD)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Single-shot detectors (YOLO, SSD)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "사진을 한 번만 통과시켜 상자의 자리와 이름을 한꺼번에 낸다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/part2.html#names"
+   }
+  },
+  {
+   "@id": "lab:concept/bounding-box",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "경계 상자",
+     "@language": "ko"
+    },
+    {
+     "@value": "Bounding box",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "찾은 물체를 두른 네모.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/part2.html#r22"
+   }
+  },
+  {
+   "@id": "lab:concept/confidence-score",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "확신 점수",
+     "@language": "ko"
+    },
+    {
+     "@value": "Confidence score",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "모형이 그 답에 준 확률.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/part2.html#r22"
+   }
+  },
+  {
+   "@id": "lab:concept/background-class",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "\"없음\" 답",
+     "@language": "ko"
+    },
+    {
+     "@value": "Background class",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "창 안에 찾는 물체가 없을 때 고르는 답.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/part2.html#r21"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/sliding-window-detection"
+    }
+   ]
+  },
+  {
+   "@id": "lab:metric/hits-misses-false-alarms",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "맞힘 · 놓침 · 헛짚음",
+     "@language": "ko"
+    },
+    {
+     "@value": "True positives, misses, false positives",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "찾기 결과를 정답 자리와 견줘 세 가지로 센 성적표.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/part2.html#r24"
+   }
+  },
+  {
+   "@id": "lab:dataset/toy-face-scenes",
+   "@type": [
+    "skos:Concept",
+    "lab:Dataset"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "24×12 도트 얼굴 판 장난감 데이터",
+     "@language": "ko"
+    },
+    {
+     "@value": "Toy 24×12 dot-face scenes",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "하루·시아·모아의 도트 얼굴을 넓은 판에 놓은 설명용 데이터.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/part2.html#r21"
    }
   },
   {

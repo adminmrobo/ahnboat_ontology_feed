@@ -33,6 +33,7 @@ SRC_REPO = "ahnboat_lab_cover_status"
 BASE = "https://adminmrobo.github.io/ahnboat_ontology_feed/"
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SLUGS = os.path.join(ROOT, "config", "field_slugs.json")
+LIMIT = 90000   # 생성 AI의 웹 읽기 도구가 한 번에 읽는 분량(약 10만 자)보다 작게. 넘으면 AI용 나눔 파일을 더 만든다
 
 REL_KO = {
     "partOf": "~의 일부", "prerequisiteOf": "먼저 알아야 함", "evaluatedBy": "~로 평가",
@@ -171,37 +172,63 @@ def build(src):
                 return p["url"] + (anchor or "")
         return c["link"]
 
-    def item_xml(c, detailed):
+    def item_xml(c, detailed, seen=None):
         cat_slug = slugs[c["cat"]]
-        lines = ["분야: %s · 학문 분야: %s · 페이지 %d쪽 · 개념 %d개 · 관계 %d개" % (
-            c["cat"], ", ".join(dom_ko.get(d, d) for d in sorted(c["domains"])) or "-",
-            len(c["pages"]), len(c["nodes"]), len(c["edges"]))]
-        lines.append("사이트: %s" % c["link"])
         if detailed:
+            lines = ["분야: %s · 학문 분야: %s · 페이지 %d쪽 · 개념 %d개 · 관계 %d개" % (
+                c["cat"], ", ".join(dom_ko.get(d, d) for d in sorted(c["domains"])) or "-",
+                len(c["pages"]), len(c["nodes"]), len(c["edges"]))]
+            lines.append("사이트: %s" % c["link"])
+        else:
+            lines = ["%s · 개념 %d개" % (c["cat"], len(c["nodes"]))]
+        if detailed:
+            code = {}
+            for i, p in enumerate(c["pages"], 1):
+                code[p["id"]] = "p%d" % i
             lines.append("")
-            lines.append("[개념] 이름 (유형) — 정의 · 출처")
+            lines.append("[페이지] 기호 = 제목 — 주소")
+            for p in c["pages"]:
+                lines.append("%s = %s — %s" % (code[p["id"]], p["title"], p["url"]))
+            lines.append("")
+            lines.append("[개념] 이름 (유형) — 정의 [출처 페이지 기호#위치]")
+            again = []
             for nid in c["nodes"]:
                 n = nodes[nid]
-                en = (" / " + n["en"]) if n.get("en") and n.get("en") != n.get("ko") else ""
-                lines.append("- %s%s (%s) — %s · %s" % (n.get("ko") or nid, en, TYPE_KO.get(n.get("t"), n.get("t")),
-                                                    n.get("def") or "정의 없음", src_link(n, c)))
+                if seen is not None and nid in seen:
+                    again.append(n.get("ko") or nid)
+                    continue
+                if seen is not None:
+                    seen.add(nid)
+                where = ""
+                for pid, anchor in n.get("p", []):
+                    if pid in code:
+                        where = code[pid] + (anchor or "")
+                        break
+                lines.append("- %s (%s) — %s [%s]" % (n.get("ko") or nid, TYPE_KO.get(n.get("t"), n.get("t")),
+                                                   n.get("def") or "정의 없음", where))
+            if again:
+                lines.append("- (이 피드 위쪽에 이미 정의된 개념) " + ", ".join(again))
             if c["edges"]:
                 lines.append("")
-                lines.append("[관계] A → B (관계 이름)")
+                lines.append("[관계] A → B, C : 관계")
+                grp = collections.OrderedDict()
                 for a, b, rel in c["edges"]:
-                    lines.append("- %s → %s (%s · %s)" % (nodes[a].get("ko") or a, nodes[b].get("ko") or b,
-                                                         rel, REL_KO.get(rel, rel)))
-            lines.append("")
-            lines.append("[페이지]")
-            for p in c["pages"]:
-                lines.append("- %s — %s" % (p["title"], p["url"]))
+                    grp.setdefault((a, rel), []).append(nodes[b].get("ko") or b)
+                for (a, rel), bs in grp.items():
+                    lines.append("- %s → %s : %s" % (nodes[a].get("ko") or a, ", ".join(bs), REL_KO.get(rel, rel)))
         else:
-            names = [nodes[nid].get("ko") or nid for nid in c["nodes"]]
-            lines.append("개념: " + ", ".join(names))
-            lines.append("자세한 정의·관계: %sfeeds/%s.xml" % (BASE, cat_slug))
+            names = []
+            for nid in c["nodes"]:
+                if seen is not None and nid in seen:
+                    continue
+                if seen is not None:
+                    seen.add(nid)
+                names.append(nodes[nid].get("ko") or nid)
+            lines.append("개념: " + (", ".join(names) or "(위 항목들과 같은 개념)"))
         guid = "ahnboat:%s:%s" % (c["repo"], hashlib.sha1(c["title"].encode()).hexdigest()[:10])
-        cats = ["<category>%s</category>" % esc(c["cat"])] + \
-               ["<category domain=\"lab:domain\">%s</category>" % esc(dom_ko.get(d, d)) for d in sorted(c["domains"])]
+        cats = ["<category>%s</category>" % esc(c["cat"])]
+        if detailed:
+            cats += ["<category domain=\"lab:domain\">%s</category>" % esc(dom_ko.get(d, d)) for d in sorted(c["domains"])]
         return ("    <item>\n      <title>%s</title>\n      <link>%s</link>\n      <guid isPermaLink=\"false\">%s</guid>\n"
                 "      <pubDate>%s</pubDate>\n      %s\n      <description>%s</description>\n    </item>\n") % (
             esc(c["title"]), esc(c["link"]), esc(guid), rfc822(c["pushed"]), "\n      ".join(cats),
@@ -233,24 +260,66 @@ def build(src):
         lst = by_field.get(name, [])
         m = meta.get(name, {})
         url = BASE + "feeds/%s.xml" % slug
-        xml = channel("ahnboat lab 온톨로지 — %s" % name,
-                      "%s 분야 공개 콘텐츠의 최신 지식 색인(개념·정의·관계). 기준일 %s. %s" % (name, updated, m.get("desc", "")),
-                      url, [item_xml(c, True) for c in lst])
+        seen = set()
+        title = "ahnboat lab 온톨로지 — %s" % name
+        desc = "%s 분야 공개 콘텐츠의 최신 지식 색인(개념·정의·관계). 기준일 %s. %s" % (name, updated, m.get("desc", ""))
+        xml = channel(title, desc, url, [item_xml(c, True, seen) for c in lst])
         with open(os.path.join(ROOT, "feeds", slug + ".xml"), "w", encoding="utf-8") as f:
             f.write(xml)
+        for old in os.listdir(os.path.join(ROOT, "feeds")):
+            if re.fullmatch(re.escape(slug) + r"-p\d+\.xml", old):
+                os.remove(os.path.join(ROOT, "feeds", old))
+        parts = [url]
+        if len(xml) > LIMIT:
+            groups, cur, size = [], [], 0
+            for c in lst:
+                one = len(item_xml(c, True, set()))
+                if cur and size + one > LIMIT - 3000:
+                    groups.append(cur)
+                    cur, size = [], 0
+                cur.append(c)
+                size += one
+            if cur:
+                groups.append(cur)
+            parts = []
+            for i, g in enumerate(groups, 1):
+                purl = BASE + "feeds/%s-p%d.xml" % (slug, i)
+                pseen = set()
+                pxml = channel("%s (%d/%d)" % (title, i, len(groups)),
+                               "생성 AI가 한 번에 읽도록 나눈 %d/%d. 전체는 %s. " % (i, len(groups), url) + desc,
+                               purl, [item_xml(c, True, pseen) for c in g])
+                with open(os.path.join(ROOT, "feeds", "%s-p%d.xml" % (slug, i)), "w", encoding="utf-8") as f:
+                    f.write(pxml)
+                parts.append(purl)
         write_jsonld(slug, name, lst, nodes, onto["edges"], updated, src_link)
         st = fstats.get(name, {})
         index["fields"].append({"name": name, "en": m.get("en", ""), "slug": slug, "rack": m.get("rack"),
                                 "color": m.get("color") or st.get("color", ""), "desc": m.get("desc", ""),
                                 "contents": len(lst), "concepts": st.get("concepts"), "relations": st.get("relations"),
-                                "feed": url, "jsonld": BASE + "ontology/%s.jsonld" % slug})
+                                "feed": url, "parts": parts, "jsonld": BASE + "ontology/%s.jsonld" % slug})
         all_items.extend(lst)
     all_items.sort(key=lambda c: c["pushed"], reverse=True)
     xml = channel("ahnboat lab 온톨로지 — 전체 분야",
-                  "ahnboat lab 공개 콘텐츠 전체의 최신 지식 색인 요약(개념 이름). 정의·관계는 분야별 피드에 있다. 기준일 %s." % updated,
-                  BASE + "feeds/all.xml", [item_xml(c, False) for c in all_items])
+                  "ahnboat lab 공개 콘텐츠 전체의 최신 지식 색인 요약(개념 이름). 정의·관계는 분야별 피드(%sfeeds/<분야>.xml, 목록은 %sllms.txt)에 있다. 기준일 %s." % (BASE, BASE, updated),
+                  BASE + "feeds/all.xml", [item_xml(c, False, set()) for c in all_items])
     with open(os.path.join(ROOT, "feeds", "all.xml"), "w", encoding="utf-8") as f:
         f.write(xml)
+    for old in os.listdir(os.path.join(ROOT, "feeds")):
+        if re.fullmatch(r"all-p\d+\.xml", old):
+            os.remove(os.path.join(ROOT, "feeds", old))
+    index["all_parts"] = [BASE + "feeds/all.xml"]
+    if len(xml) > LIMIT:
+        half = (len(all_items) + 1) // 2
+        groups = [all_items[:half], all_items[half:]]
+        index["all_parts"] = []
+        for i, g in enumerate(groups, 1):
+            purl = BASE + "feeds/all-p%d.xml" % i
+            pxml = channel("ahnboat lab 온톨로지 — 전체 분야 (%d/2)" % i,
+                           "생성 AI가 한 번에 읽도록 나눈 %d/2. 전체는 %sfeeds/all.xml." % (i, BASE), purl,
+                           [item_xml(c, False, set()) for c in g])
+            with open(os.path.join(ROOT, "feeds", "all-p%d.xml" % i), "w", encoding="utf-8") as f:
+                f.write(pxml)
+            index["all_parts"].append(purl)
     with open(os.path.join(ROOT, "feeds", "index.json"), "w", encoding="utf-8") as f:
         json.dump(index, f, ensure_ascii=False, indent=1)
         f.write("\n")
@@ -267,13 +336,16 @@ def write_llms(index):
                index["updated"], len(index["fields"]), s.get("contents", "-"), s.get("concepts", "-"), s.get("relations", "-")), "",
            "## 읽는 법", "",
            "- 피드 항목 하나 = 콘텐츠(해설 시리즈) 하나. 설명(description)에 개념 목록, 관계 목록, 페이지 목록이 들어 있다.",
-           "- 개념 줄: `- 이름 / 영문 (유형) — 정의 · 출처 URL`. 관계 줄: `- A → B (관계 이름 · 한국어 뜻)`.",
+           "- 항목마다 [페이지] 목록이 먼저 나온다(`p1 = 제목 — 주소`). 개념 줄 `- 이름 (유형) — 정의 [p1#lv3]`의 대괄호는 출처 페이지 기호와 그 안의 위치다. 출처 주소 = 해당 페이지 주소 + #위치.",
+           "- 관계 줄: `- A → B : 관계`. 영문 이름과 관계 원어는 분야별 JSON-LD에 있다.",
            "- 근거로 인용할 때는 개념 이름과 출처 URL을 함께 적는다. 피드에 없는 내용은 일반 지식이라고 구분한다.",
            "- 피드는 하루 두 번 다시 만들어지며 최신판만 담는다. 라이선스 CC BY-NC 4.0.", "",
            "## 분야별 피드", ""]
     for f in index["fields"]:
         out.append("- [%s](%s): 콘텐츠 %d개, 개념 %s개 — %s (JSON-LD: %s)" % (
             f["name"], f["feed"], f["contents"], f.get("concepts", "-"), f.get("desc", ""), f["jsonld"]))
+        if len(f["parts"]) > 1:
+            out.append("  - 한 번에 읽기 어려우면 나눔 파일: " + " · ".join(f["parts"]))
     out += ["", "## 전체", "", "- [전체 분야 요약](%s): 개념 이름만 담은 가벼운 피드" % index["all"],
             "- [분야 목록 JSON](%sfeeds/index.json)" % index["base"],
             "- [지시문 생성 페이지](%s)" % index["base"], ""]
