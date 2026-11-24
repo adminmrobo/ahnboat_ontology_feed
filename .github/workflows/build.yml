@@ -1,0 +1,44 @@
+name: 온톨로지 피드 만들기
+
+on:
+  schedule:
+    # 원본(ahnboat_lab_cover_status)의 수집이 한국 시간 03:27·15:27에 걸려 있어(보통 몇 시간 밀림),
+    # 그 뒤에 돌도록 정각을 피해 건다.
+    - cron: "43 23 * * *"   # 한국 시간 오전 8시 43분
+    - cron: "43 11 * * *"   # 한국 시간 오후 8시 43분
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["scripts/**", "config/**", ".github/workflows/build.yml"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: feed-build
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 최신 온톨로지로 피드 만들기
+        run: python scripts/build_feeds.py
+
+      - name: 바뀐 것이 있으면 커밋
+        run: |
+          git config user.name "adminmrobo"
+          git config user.email "sangsun.ahn@gmail.com"
+          git add feeds ontology config llms.txt
+          if git diff --cached --quiet; then
+            echo "바뀐 것 없음"
+          else
+            git commit -m "피드 갱신: $(python -c 'import json;print(json.load(open("feeds/index.json"))["updated"])')"
+            git push
+          fi

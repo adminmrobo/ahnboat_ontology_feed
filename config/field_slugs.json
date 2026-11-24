@@ -1,0 +1,10 @@
+{
+  "머신러닝": "machine-learning",
+  "딥러닝·뇌과학": "deep-learning-neuroscience",
+  "AI 감각·생성": "ai-senses-generation",
+  "LLM·추론 엔지니어링": "llm-inference-engineering",
+  "경제·수학·최적화": "economics-math-optimization",
+  "금융·핀테크·블록체인": "finance-fintech-blockchain",
+  "통계·데이터 기초": "statistics-data-basics",
+  "인공지능 응용": "applied-ai"
+}

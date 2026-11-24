@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>내 아이디어 검증하기 — ahnboat lab 온톨로지 피드</title>
+<meta name="description" content="ahnboat lab 공개 콘텐츠의 최신 온톨로지를 분야별 RSS로 받아, 생성 AI에게 내 아이디어를 검증해 달라고 요청하는 지시문을 만듭니다.">
+<link rel="alternate" type="application/rss+xml" title="ahnboat lab 온톨로지 — 전체 분야" href="feeds/all.xml">
+<style>
+  :root { --ink:#1d2330; --sub:#5b6474; --line:#e3e6ec; --soft:#f6f7f9; --accent:#2f5f9e; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:#fff; color:var(--ink); font:16px/1.7 "Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif; }
+  main { max-width:920px; margin:0 auto; padding:40px 20px 80px; }
+  h1 { font-size:28px; margin:0 0 6px; }
+  h2 { font-size:20px; margin:44px 0 12px; padding-top:8px; border-top:1px solid var(--line); }
+  .lead { color:var(--sub); margin:0 0 8px; }
+  .meta { font-size:13px; color:var(--sub); }
+  .steps { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:20px 0 0; }
+  .steps div { background:var(--soft); border-radius:10px; padding:14px; font-size:14px; }
+  .steps b { display:block; font-size:15px; margin-bottom:2px; }
+  .fields { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:10px; }
+  .field { border:1px solid var(--line); border-radius:10px; padding:12px 14px; cursor:pointer; display:flex; gap:10px; align-items:flex-start; background:#fff; }
+  .field:hover { border-color:#c4cad6; }
+  .field.on { border-color:var(--accent); background:#f3f7fd; }
+  .field input { margin-top:5px; }
+  .dot { width:10px; height:10px; border-radius:50%; display:inline-block; margin-right:6px; }
+  .field .name { font-weight:600; }
+  .field .n { font-size:12px; color:var(--sub); }
+  .all { margin:10px 0 0; font-size:14px; }
+  .warn { font-size:13px; color:#9a5b00; background:#fff7e8; border-radius:8px; padding:8px 12px; margin-top:10px; display:none; }
+  textarea { width:100%; min-height:110px; font:inherit; padding:12px; border:1px solid var(--line); border-radius:10px; resize:vertical; }
+  .row { display:flex; gap:8px; flex-wrap:wrap; margin-top:8px; }
+  button { font:inherit; font-size:14px; border:1px solid var(--line); background:#fff; border-radius:8px; padding:7px 14px; cursor:pointer; }
+  button.primary { background:var(--accent); border-color:var(--accent); color:#fff; }
+  button:hover { filter:brightness(0.97); }
+  pre { white-space:pre-wrap; word-break:break-word; background:var(--soft); border:1px solid var(--line); border-radius:10px; padding:16px; font:14px/1.65 ui-monospace,"D2Coding",Menlo,monospace; margin:0; }
+  table { width:100%; border-collapse:collapse; font-size:14px; }
+  th, td { text-align:left; padding:8px 6px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { color:var(--sub); font-weight:600; }
+  td code { font-size:12px; word-break:break-all; }
+  .cmp { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cmp div { border:1px solid var(--line); border-radius:10px; padding:14px; font-size:14px; }
+  .cmp h3 { margin:0 0 6px; font-size:15px; }
+  .note { font-size:14px; color:var(--sub); }
+  footer { margin-top:56px; font-size:13px; color:var(--sub); border-top:1px solid var(--line); padding-top:16px; }
+  a { color:var(--accent); }
+  @media (max-width:640px) { .steps, .cmp { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<main>
+  <h1>내 아이디어 검증하기</h1>
+  <p class="lead">ahnboat lab에 쌓인 개념 지도(온톨로지)를 근거로, 쓰고 있는 생성 AI에게 내 아이디어를 확인해 달라고 요청하는 지시문을 만듭니다.</p>
+  <p class="meta" id="meta">온톨로지 기준일을 불러오는 중…</p>
+
+  <div class="steps">
+    <div><b>① 분야 고르기</b>아이디어와 가까운 분야를 고릅니다. 뉴스 주제를 고르듯 하나 이상, 또는 모두.</div>
+    <div><b>② 아이디어 쓰기</b>확인하고 싶은 생각을 한두 문단으로 적습니다.</div>
+    <div><b>③ 복사해서 붙이기</b>만들어진 지시문을 ChatGPT·Claude·Gemini 등에 그대로 붙입니다.</div>
+  </div>
+
+  <h2>① 분야 고르기</h2>
+  <div class="fields" id="fields"></div>
+  <label class="all"><input type="checkbox" id="all"> 모두 (전체 분야 요약 피드 — 개념 이름만 담겨 가볍습니다)</label>
+  <div class="warn" id="warn">분야를 3개 이상 고르면 피드가 커져서 AI가 일부만 읽을 수 있습니다. 2개 이하로 고르거나 '모두'를 쓰는 편이 안전합니다.</div>
+
+  <h2>② 아이디어 쓰기</h2>
+  <textarea id="idea" placeholder="예: 네트워크경제학의 네트워크와 신경망의 뉴런 연결이 많이 닮은 것 같다. …"></textarea>
+  <div class="row"><button id="example">예시 불러오기</button></div>
+
+  <h2>③ 지시문 복사하기</h2>
+  <pre id="prompt"></pre>
+  <div class="row"><button class="primary" id="copy">지시문 복사</button><span class="note" id="copied"></span></div>
+  <p class="note">AI가 링크를 읽지 못한다고 하면, 피드 주소를 브라우저로 열어 내용을 복사해 지시문 아래에 붙여 주세요.</p>
+
+  <h2>왜 온톨로지를 함께 주나요?</h2>
+  <div class="cmp">
+    <div>
+      <h3>지시문만 줄 때</h3>
+      AI는 자기 일반 지식으로 답합니다. 그럴듯하지만 어디서 나온 말인지 확인하기 어렵고, 근거 링크가 지어낸 것일 수도 있습니다.
+    </div>
+    <div>
+      <h3>온톨로지 피드를 함께 줄 때</h3>
+      AI는 피드에 있는 개념·정의·관계를 먼저 찾아 근거로 씁니다. 개념마다 출처 페이지 링크가 붙어 있어 바로 확인할 수 있고, 피드에 없는 내용은 일반 지식이라고 구분해 답하게 됩니다.
+    </div>
+  </div>
+  <p class="note">예시: "네트워크경제학의 네트워크와 신경망의 뉴런이 닮았다"는 생각에서 출발해 네트워크 외부성이 있는 수요함수와 힉스·슬러츠키 수요함수를 비교한 대화가 있었습니다. 그 대화는 지시문만으로 진행됐습니다. 위 '예시 불러오기'는 같은 생각을 경제·수학·최적화와 딥러닝·뇌과학 피드에 비춰 다시 확인하는 지시문입니다.</p>
+
+  <h2>피드 주소</h2>
+  <p class="note">RSS 리더로 구독할 수도 있습니다. 피드는 원본 온톨로지가 갱신되면 하루 두 번 다시 만들어지고, 항상 최신판 하나만 담습니다.</p>
+  <table id="feeds"><thead><tr><th>분야</th><th>콘텐츠</th><th>RSS</th><th>JSON-LD</th></tr></thead><tbody></tbody></table>
+  <p class="note">AI 도구용 안내: <a href="llms.txt">llms.txt</a> · 원본 온톨로지 전체: <a href="https://adminmrobo.github.io/ahnboat_lab_cover_status/ontology.html">온톨로지 지도</a></p>
+
+  <footer>글 · 안상선 ((주)M-Robo 대표) · <a href="https://www.ahnboat.xyz">www.ahnboat.xyz</a> · 콘텐츠 라이선스 CC BY-NC 4.0</footer>
+</main>
+<script>
+(function () {
+  var data = null, chosen = {};
+  var EXAMPLE = "네트워크경제학의 네트워크(경제 주체 = 노드, 거래·관계 = 연결)와 신경망의 뉴런 연결은 구조가 많이 닮은 것 같다.\n" +
+    "그렇다면 네트워크 외부성이 있는 수요함수 Q = f(P, I, Ps, N)는 힉스·슬러츠키 방정식으로 분해하는 전통적 수요함수와 무엇이 다르고, " +
+    "신경망처럼 연결의 세기를 학습하는 방식으로 추정할 수 있을까?";
+  var EX_FIELDS = ["경제·수학·최적화", "딥러닝·뇌과학"];
+  var $ = function (id) { return document.getElementById(id); };
+
+  function selected() {
+    if ($("all").checked) return [{ name: "전체 분야(요약)", feed: data.all }];
+    return data.fields.filter(function (f) { return chosen[f.name]; });
+  }
+
+  function render() {
+    var fs = selected();
+    $("warn").style.display = (!$("all").checked && fs.length >= 3) ? "block" : "none";
+    var idea = $("idea").value.trim() || "(여기에 내 아이디어를 적어 주세요)";
+    var feeds = fs.length ? fs.map(function (f) { return "- " + f.feed + "  (" + f.name + ")"; }).join("\n")
+                          : "- (분야를 하나 이상 골라 주세요)";
+    $("prompt").textContent =
+      "너는 아이디어 검증 도우미야. 아래 ahnboat lab 온톨로지 피드(RSS)를 먼저 읽고, 그 안의 개념·정의·관계를 근거로 내 아이디어를 검증해 줘.\n\n" +
+      "[근거 피드]\n" + feeds + "\n\n" +
+      "[내 아이디어]\n" + idea + "\n\n" +
+      "[요청]\n" +
+      "1. 내 아이디어와 관련된 개념을 피드에서 찾아, 개념 이름과 출처 링크를 함께 적어 줘.\n" +
+      "2. 닮은 점과 다른 점을 나눠 정리해 줘.\n" +
+      "3. 아이디어가 성립하지 않을 수 있는 반례나 한계를 들어 줘.\n" +
+      "4. 아이디어를 확인할 방법(데이터·실험·수식)을 제안해 줘.\n" +
+      "5. 더 읽어 볼 ahnboat lab 페이지를 골라 줘.\n\n" +
+      "[규칙]\n" +
+      "- 피드에서 가져온 내용에는 [피드], 너의 일반 지식에는 [일반 지식]이라고 표시해 줘.\n" +
+      "- 피드에서 찾지 못한 것은 찾지 못했다고 말해 줘. 출처 링크를 지어내지 마.\n" +
+      "- 피드를 읽지 못했다면 답하기 전에 그 사실부터 알려 줘.";
+  }
+
+  function drawFields() {
+    var box = $("fields");
+    box.innerHTML = "";
+    data.fields.forEach(function (f) {
+      var el = document.createElement("label");
+      el.className = "field" + (chosen[f.name] ? " on" : "");
+      el.innerHTML = '<input type="checkbox"' + (chosen[f.name] ? " checked" : "") + '><div><div class="name"><span class="dot" style="background:' +
+        f.color + '"></span>' + f.name + '</div><div class="n">콘텐츠 ' + f.contents + '개 · 개념 ' + (f.concepts || 0).toLocaleString() +
+        '개 · 관계 ' + (f.relations || 0).toLocaleString() + '개</div></div>';
+      el.querySelector("input").addEventListener("change", function (e) {
+        chosen[f.name] = e.target.checked;
+        if (e.target.checked) $("all").checked = false;
+        drawFields(); render();
+      });
+      box.appendChild(el);
+    });
+  }
+
+  function drawTable() {
+    var tb = document.querySelector("#feeds tbody");
+    var rows = data.fields.map(function (f) {
+      return "<tr><td><span class=\"dot\" style=\"background:" + f.color + "\"></span>" + f.name + "</td><td>" + f.contents +
+        "</td><td><a href=\"" + f.feed + "\"><code>" + f.feed.replace(data.base, "") + "</code></a></td><td><a href=\"" + f.jsonld +
+        "\"><code>" + f.jsonld.replace(data.base, "") + "</code></a></td></tr>";
+    });
+    rows.push("<tr><td><b>전체 분야(요약)</b></td><td>" + data.fields.reduce(function (s, f) { return s + f.contents; }, 0) +
+      "</td><td><a href=\"" + data.all + "\"><code>feeds/all.xml</code></a></td><td>-</td></tr>");
+    tb.innerHTML = rows.join("");
+  }
+
+  $("all").addEventListener("change", function () {
+    if ($("all").checked) chosen = {};
+    drawFields(); render();
+  });
+  $("idea").addEventListener("input", render);
+  $("example").addEventListener("click", function () {
+    $("idea").value = EXAMPLE; $("all").checked = false; chosen = {};
+    EX_FIELDS.forEach(function (n) { chosen[n] = true; });
+    drawFields(); render();
+  });
+  $("copy").addEventListener("click", function () {
+    var t = $("prompt").textContent;
+    var done = function () { $("copied").textContent = "복사했습니다."; setTimeout(function () { $("copied").textContent = ""; }, 2000); };
+    if (navigator.clipboard) navigator.clipboard.writeText(t).then(done, function () { fallback(t); done(); });
+    else { fallback(t); done(); }
+  });
+  function fallback(t) {
+    var ta = document.createElement("textarea"); ta.value = t; document.body.appendChild(ta); ta.select();
+    try { document.execCommand("copy"); } catch (e) {}
+    document.body.removeChild(ta);
+  }
+
+  fetch("feeds/index.json").then(function (r) { return r.json(); }).then(function (d) {
+    data = d;
+    var s = d.summary || {};
+    $("meta").textContent = "온톨로지 기준일 " + d.updated + " · 분야 " + d.fields.length + "개 · 콘텐츠 " + (s.contents || "-") +
+      "개 · 개념 " + (s.concepts || 0).toLocaleString() + "개 · 관계 " + (s.relations || 0).toLocaleString() + "개";
+    drawFields(); drawTable(); render();
+  }).catch(function () {
+    $("meta").textContent = "분야 목록을 불러오지 못했습니다. 페이지를 웹 주소로 열어 주세요(파일을 바로 열면 읽지 못합니다).";
+  });
+})();
+</script>
+</body>
+</html>
