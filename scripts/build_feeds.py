@@ -331,8 +331,22 @@ def build(src):
     return index
 
 
+def pixel_grid(im, Image):
+    """NEAREST 정수배로 키운 픽셀아트면 (원래 격자 그림, 배수)를, 아니면 (그림, 1)을 돌려준다."""
+    from PIL import ImageChops
+    for f in (8, 6, 5, 4, 3, 2):
+        if im.width % f or im.height % f:
+            continue
+        small = im.resize((im.width // f, im.height // f), Image.NEAREST)
+        if ImageChops.difference(small.resize(im.size, Image.NEAREST), im).getbbox() is None:
+            return small, f
+    return im, 1
+
+
 def prepare_images():
     """assets/에 올린 Genspark 그림(bg_hero·bg_banner·cover, png/jpg)을 WebP로 바꾸고 목록을 돌려준다.
+    픽셀아트(NEAREST 정수배)면 원래 격자 크기로 되돌려 무손실 WebP로 저장한다. 페이지는 image-rendering:pixelated로
+    키워 보여 주므로 또렷하고 파일도 작다. 픽셀아트가 아니면 가로 1920px 이하 WebP(품질 88).
     Pillow가 없으면 이미 있는 WebP만 목록에 넣는다."""
     out = {}
     adir = os.path.join(ROOT, "assets")
@@ -346,19 +360,28 @@ def prepare_images():
                     if os.path.exists(os.path.join(adir, name + e))), None)
         if Image and src and (not os.path.exists(webp) or os.path.getmtime(src) > os.path.getmtime(webp)):
             im = Image.open(src).convert("RGB")
-            if im.width > 1920:
-                im = im.resize((1920, round(im.height * 1920 / im.width)), Image.LANCZOS)
-            im.save(webp, "WEBP", quality=88, method=6)
-            if name == "cover":   # 공유 미리보기 1200×630: 가로에 맞추고 가운데를 자른다
-                w, h = 1200, 630
-                k = max(w / im.width, h / im.height)
-                big = im.resize((round(im.width * k), round(im.height * k)), Image.LANCZOS)
-                l, t = (big.width - w) // 2, (big.height - h) // 2
-                big.crop((l, t, l + w, t + h)).save(os.path.join(adir, "og.png"), optimize=True)
+            grid, f = pixel_grid(im, Image)
+            if f > 1:
+                grid.save(webp, "WEBP", lossless=True, method=6)
+            else:
+                if im.width > 1920:
+                    im = im.resize((1920, round(im.height * 1920 / im.width)), Image.LANCZOS)
+                im.save(webp, "WEBP", quality=88, method=6)
+            if name == "cover":   # 공유 미리보기: 1.905:1(1200×630 비율)로 가운데를 자르고 정수배로 키운다
+                g = grid if f > 1 else im
+                ch = min(g.height, round(g.width * 630 / 1200))
+                cw = round(ch * 1200 / 630)
+                l, t = (g.width - cw) // 2, (g.height - ch) // 2
+                crop = g.crop((l, t, l + cw, t + ch))
+                if f > 1:
+                    k = -(-1200 // cw)
+                    crop = crop.resize((cw * k, ch * k), Image.NEAREST)
+                else:
+                    crop = crop.resize((1200, 630), Image.LANCZOS)
+                crop.save(os.path.join(adir, "og.png"), optimize=True)
         if os.path.exists(webp):
             out[name] = BASE + "assets/%s.webp" % name
     return out
-
 
 def write_llms(index):
     s = index.get("summary", {})
