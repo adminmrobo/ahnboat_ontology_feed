@@ -418,10 +418,16 @@ def write_text_feeds(index):
 
 def write_search_index(onto, fields, index):
     """지시문 생성 페이지가 아이디어 글에서 관련 개념을 미리 찾고, AI 답의 링크를 확인하는 데 쓰는 색인.
-    concepts: [한국어 이름, 영문 이름, 유형, 정의, 출처 주소, 분야 번호들]"""
+    concepts: [한국어 이름, 영문 이름, 유형, 정의, 출처 주소, 분야 번호들, 관계로 이어진 이웃 [번호, 관계]]"""
     pages = {p["id"]: p for p in onto["pages"]}
     fidx = {n: i for i, n in enumerate(fields)}
     rows, anchors = [], collections.defaultdict(set)
+    pos = {n["id"]: i for i, n in enumerate(onto["nodes"])}
+    nb = collections.defaultdict(list)          # 관계로 이어진 이웃: [번호, 관계]
+    for x, y, rel in onto["edges"]:
+        if x in pos and y in pos:
+            nb[pos[x]].append([pos[y], REL_KO.get(rel, rel)])
+            nb[pos[y]].append([pos[x], REL_KO.get(rel, rel)])
     for n in onto["nodes"]:
         url = ""
         for pid, a in n.get("p", []):
@@ -431,7 +437,7 @@ def write_search_index(onto, fields, index):
                 if not url:
                     url = p["url"] + (a or "")
         rows.append([n.get("ko") or n["id"], n.get("en") or "", TYPE_KO.get(n.get("t"), n.get("t") or ""),
-                     n.get("def") or "", url, [fidx[c] for c in n.get("c", []) if c in fidx]])
+                     n.get("def") or "", url, [fidx[c] for c in n.get("c", []) if c in fidx], nb.get(len(rows), [])[:12]])
     for p in onto["pages"]:
         anchors[p["url"]].add("")
     doc = {"updated": index["updated"], "fields": fields, "concepts": rows,

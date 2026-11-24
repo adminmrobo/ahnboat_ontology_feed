@@ -592,8 +592,32 @@
       });
       res.sort(function (a, b) { return b.sc - a.sc || a.c[0].length - b.c[0].length; });
       var anySel = Object.keys(sel).length > 0;
-      found = res.filter(function (r) { return r.mine || !anySel; }).slice(0, 12)
-        .concat(anySel ? res.filter(function (r) { return !r.mine; }).slice(0, 6) : []);
+      var direct = res.filter(function (r) { return r.mine || !anySel; }).slice(0, 12);
+      var otherF = anySel ? res.filter(function (r) { return !r.mine; }).slice(0, 6) : [];
+      // 관계로 이어진 개념: 위쪽 직접 찾은 개념 8개의 이웃 (아이디어에 쓰지 않은 낱말의 개념을 찾는다)
+      var have = {}, nbs = {};
+      direct.concat(otherF).forEach(function (r) { have[r.c[0] + "|" + r.c[4]] = 1; });
+      var PRI = { "관련": 0, "먼저 알아야 함": 1, "상위 개념": 2, "대비": 2 };
+      direct.slice(0, 8).forEach(function (r, rank) {
+        var taken = 0;   // 개념 하나에서 이웃은 둘까지 (이웃이 많은 개념이 자리를 독차지하지 않게)
+        (r.c[6] || []).slice().sort(function (a, b) { return (PRI[a[1]] === undefined ? 3 : PRI[a[1]]) - (PRI[b[1]] === undefined ? 3 : PRI[b[1]]); })
+        .forEach(function (e) {
+          if (taken >= 2) return;
+          var c = SX.concepts[e[0]]; if (!c || !c[3]) return;
+          var k = c[0] + "|" + c[4]; if (have[k]) return;
+          var mine = c[5].some(function (i) { return sel[i]; }) || !anySel;
+          if (!mine) return;
+          if (!nbs[k]) taken++;
+          var x = nbs[k] || (nbs[k] = { c: c, sc: 0, mine: true, rel: true, via: [], pri: 9, rank: rank });
+          var pr = PRI[e[1]] === undefined ? 3 : PRI[e[1]];
+          x.sc += 2; x.pri = Math.min(x.pri, pr); if (x.via.length < 2) x.via.push(r.c[0] + " → " + e[1]);
+        });
+      });
+      var rel = Object.keys(nbs).map(function (k) { return nbs[k]; })
+        .sort(function (a, b) { return b.sc - a.sc || a.pri - b.pri || a.rank - b.rank; }).slice(0, 8);
+      rel.forEach(function (r) { r.on = r.sc >= 4; });
+      direct.concat(otherF).forEach(function (r) { r.on = true; });
+      found = direct.concat(rel, otherF);
       drawFound(); render();
     });
   }
@@ -601,14 +625,18 @@
   function drawFound() {
     var box = $("foundBody");
     if (!found.length) { box.innerHTML = $("idea").value.trim().length < 6 ? "아이디어를 쓰면 여기에 나타납니다." : "관련 개념을 찾지 못했습니다. 다른 낱말로 써 보거나 분야를 바꿔 보세요."; return; }
-    var mine = found.filter(function (r) { return r.mine || !Object.keys(chosen).some(function (k) { return chosen[k]; }); });
-    var other = found.filter(function (r) { return mine.indexOf(r) < 0; });
+    var anyChosen = Object.keys(chosen).some(function (k) { return chosen[k]; }) || $("all").checked;
+    var mine = found.filter(function (r) { return !r.rel && (r.mine || !anyChosen); });
+    var rels = found.filter(function (r) { return r.rel; });
+    var other = found.filter(function (r) { return mine.indexOf(r) < 0 && rels.indexOf(r) < 0; });
     function row(r) {
       var k = r.c[0] + "|" + r.c[4];
-      return '<label><input type="checkbox" data-k="' + encodeURIComponent(k) + '"' + (foundOff[k] ? "" : " checked") + '><span><b>' + esc(r.c[0]) +
-        '</b> <small>(' + esc(r.c[2]) + ' · ' + esc(fname(r.c)) + ')</small> — ' + esc(r.c[3] || "정의 없음") + ' <a href="' + r.c[4] + '" target="_blank" rel="noopener">출처</a></span></label>';
+      return '<label><input type="checkbox" data-k="' + encodeURIComponent(k) + '"' + (isOn(r) ? " checked" : "") + '><span><b>' + esc(r.c[0]) +
+        '</b> <small>(' + esc(r.c[2]) + ' · ' + esc(fname(r.c)) + (r.via ? ' · ' + esc(r.via.join(", ")) : '') + ')</small> — ' + esc(r.c[3] || "정의 없음") +
+        ' <a href="' + r.c[4] + '" target="_blank" rel="noopener">출처</a></span></label>';
     }
     var h = '<div class="list">' + mine.map(row).join("") + '</div>';
+    if (rels.length) h += '<div class="other"><b style="font-size:13px">관계로 이어진 개념</b> <small class="note">아이디어에 쓰지 않은 낱말이라도 위 개념과 온톨로지 관계로 이어진 것들입니다. 두 개념 이상에서 이어진 것만 미리 체크했어요.</small><div class="list">' + rels.map(row).join("") + '</div></div>';
     if (other.length) {
       var fs = [];
       other.forEach(function (r) { r.c[5].forEach(function (i) { var n = SX.fields[i]; if (fs.indexOf(n) < 0) fs.push(n); }); });
@@ -618,18 +646,19 @@
     }
     box.innerHTML = h;
     box.querySelectorAll("input[data-k]").forEach(function (i) {
-      i.addEventListener("change", function () { var k = decodeURIComponent(i.dataset.k); if (i.checked) delete foundOff[k]; else foundOff[k] = 1; render(); });
+      i.addEventListener("change", function () { foundOff[decodeURIComponent(i.dataset.k)] = i.checked ? "on" : "off"; render(); });
     });
     box.querySelectorAll("button.addf").forEach(function (b) {
       b.addEventListener("click", function () { chosen[b.dataset.f] = true; $("all").checked = false; drawFields(); search(); });
     });
   }
   function esc(t) { return String(t).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function isOn(r) { var v = foundOff[r.c[0] + "|" + r.c[4]]; return v ? v === "on" : !!r.on; }
   function foundBlock() {
-    var on = found.filter(function (r) { return !foundOff[r.c[0] + "|" + r.c[4]]; });
+    var on = found.filter(isOn);
     if (!on.length) return "";
     return "[미리 찾은 관련 개념] — 이 페이지가 연구실 개념 지도에서 미리 찾은 것이야. 피드와 같은 출처이니 [피드] 근거로 써도 돼.\n" +
-      on.map(function (r) { return "- " + r.c[0] + " (" + r.c[2] + ", " + fname(r.c) + ") — " + (r.c[3] || "정의 없음") + " · " + r.c[4]; }).join("\n") + "\n\n";
+      on.map(function (r) { return "- " + r.c[0] + " (" + r.c[2] + ", " + fname(r.c) + (r.via ? ", 관계: " + r.via[0] : "") + ") — " + (r.c[3] || "정의 없음") + " · " + r.c[4]; }).join("\n") + "\n\n";
   }
 
   /* ---------- 답 확인 도우미 ---------- */
