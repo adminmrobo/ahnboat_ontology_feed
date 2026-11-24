@@ -20,8 +20,18 @@ ahnboat.xyz 공개 콘텐츠의 **최신 온톨로지(개념·정의·관계)를
 - AI 판단 코너: 지어낸 출처가 섞인 답에서 수상한 줄 찾기(초파리 연구원)
 - 시연: 같은 아이디어를 지시문만으로 / 피드와 함께 물었을 때 비교
 - 피드 주소 표, 마무리 대화
-- 그림은 연구실 캐릭터 팩(lab4, `ahnboat_lab_explainer/packs/character`)의 표정·동작 그림을 `assets/char/`에 복사해 씁니다. 전용 표지 요청문은 [`docs/cover_prompt.md`](docs/cover_prompt.md)
+- 그림은 연구실 캐릭터 팩(lab4, `ahnboat_lab_explainer/packs/character`)의 표정·동작 그림을 `assets/char/`에 복사해 씁니다.
+- 배경·표지 그림 Genspark 요청문: [`docs/GENSPARK_cover.md`](docs/GENSPARK_cover.md) (G1 무대 배경 `bg_hero` · G2 배너 배경 `bg_banner` · G3 표지 `cover`). PNG를 `assets/`에 올리면 자동 갱신 작업이 WebP로 바꾸고 페이지·배너가 배경으로 씁니다.
 - 서비스 페이지라서 해설 페이지의 지식 색인(#kg)·꾸러미(#export)는 넣지 않았습니다. 이 페이지가 공개 카탈로그에 오르면 피드가 자기 자신을 개념으로 다시 담게 되기 때문입니다.
+
+## 홈페이지 바로가기 배너 (`banner.html`)
+
+ahnboat.xyz에 끼워 넣는 배너입니다. 홈페이지의 헤드·배웅 배너와 같은 점무늬 종이·검은 테두리·그림자 모양이고, 누르면 지시문 생성 페이지가 새 탭으로 열립니다.
+
+- 배너 주소: https://adminmrobo.github.io/ahnboat_ontology_feed/banner.html
+- 워드프레스에 붙이기: [`docs/wp_banner_block.html`](docs/wp_banner_block.html)의 내용을 '사용자 정의 HTML' 블록에 그대로 붙여 넣습니다. 높이는 배너가 알려 주는 값(`ahnboat-catalog-height`)으로 저절로 맞춰집니다.
+- 언어: 홈페이지에서 고른 언어(`ahnboat-lang`)를 따라 7개 언어(ko·en·zh·ja·uz·ru·vi)로 바뀝니다. 지시문 생성 페이지는 한국어라 외국어 배너의 버튼에는 "(한국어 페이지)"라고 적었습니다.
+- 숫자(분야·개념 수)는 `feeds/index.json`에서 읽어 늘 최신입니다. `bg_banner` 그림이 있으면 배경으로 깝니다.
 
 ## 만들어지는 파일
 

@@ -543,6 +543,14 @@
     $("robonums").textContent = "보고합니다! 오늘(" + d.updated + ") 기준 분야 " + d.fields.length + "개, 콘텐츠 " + (s.contents || "-") +
       "개, 개념 " + c + "개, 관계 " + r + "개예요. 숫자가 이렇게 크다니, 행복해서 주판알이 저절로 튀어요!";
     $("robooutro").textContent = "분야 " + d.fields.length + "개, 개념 " + c + "개가 하루 두 번 새로 고쳐진다니! 이렇게 큰 숫자가 매일 최신이라니, 오늘은 정말 최고의 날이에요!";
+    if (d.images && d.images.bg_hero) {
+      document.querySelectorAll(".stage").forEach(function (st) {
+        st.style.background = "url(" + d.images.bg_hero + ") center bottom / cover no-repeat, #fff";
+      });
+    }
+    if (d.images && d.images.cover) {
+      var m = document.querySelector('meta[property="og:image"]'); if (m) m.setAttribute("content", d.images.cover);
+    }
     drawFields(); drawTable(); render();
   }).catch(function () {
     $("meta").textContent = "분야 목록을 불러오지 못했습니다. 페이지를 웹 주소로 열어 주세요(파일을 바로 열면 읽지 못합니다).";

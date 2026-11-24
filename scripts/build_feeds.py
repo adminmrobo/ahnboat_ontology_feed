@@ -323,8 +323,41 @@ def build(src):
     with open(os.path.join(ROOT, "feeds", "index.json"), "w", encoding="utf-8") as f:
         json.dump(index, f, ensure_ascii=False, indent=1)
         f.write("\n")
+    index["images"] = prepare_images()
+    with open(os.path.join(ROOT, "feeds", "index.json"), "w", encoding="utf-8") as f:
+        json.dump(index, f, ensure_ascii=False, indent=1)
+        f.write("\n")
     write_llms(index)
     return index
+
+
+def prepare_images():
+    """assets/에 올린 Genspark 그림(bg_hero·bg_banner·cover, png/jpg)을 WebP로 바꾸고 목록을 돌려준다.
+    Pillow가 없으면 이미 있는 WebP만 목록에 넣는다."""
+    out = {}
+    adir = os.path.join(ROOT, "assets")
+    try:
+        from PIL import Image
+    except ImportError:
+        Image = None
+    for name in ("bg_hero", "bg_banner", "cover"):
+        webp = os.path.join(adir, name + ".webp")
+        src = next((os.path.join(adir, name + e) for e in (".png", ".jpg", ".jpeg")
+                    if os.path.exists(os.path.join(adir, name + e))), None)
+        if Image and src and (not os.path.exists(webp) or os.path.getmtime(src) > os.path.getmtime(webp)):
+            im = Image.open(src).convert("RGB")
+            if im.width > 1920:
+                im = im.resize((1920, round(im.height * 1920 / im.width)), Image.LANCZOS)
+            im.save(webp, "WEBP", quality=88, method=6)
+            if name == "cover":   # 공유 미리보기 1200×630: 가로에 맞추고 가운데를 자른다
+                w, h = 1200, 630
+                k = max(w / im.width, h / im.height)
+                big = im.resize((round(im.width * k), round(im.height * k)), Image.LANCZOS)
+                l, t = (big.width - w) // 2, (big.height - h) // 2
+                big.crop((l, t, l + w, t + h)).save(os.path.join(adir, "og.png"), optimize=True)
+        if os.path.exists(webp):
+            out[name] = BASE + "assets/%s.webp" % name
+    return out
 
 
 def write_llms(index):

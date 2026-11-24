@@ -150,5 +150,6 @@
  "all_parts": [
   "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/all-p1.xml",
   "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/all-p2.xml"
- ]
+ ],
+ "images": {}
 }
