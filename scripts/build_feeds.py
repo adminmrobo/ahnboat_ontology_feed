@@ -123,6 +123,10 @@ def build(src):
     onto = load_src(src, "ontology.json")
     repos = load_src(src, "repos.json")
     hub = load_src(src, "hub_meta.json")
+    try:
+        catalog = load_src(src, "catalog.json")
+    except Exception:
+        catalog = {}
     meta = field_meta(hub)
     # 홈페이지(서버실 랙·카탈로그)에 올라간 콘텐츠 수 — 지식 색인이 있는 콘텐츠 수와 나란히 보여 준다
     try:
@@ -256,7 +260,11 @@ def build(src):
     for lst in by_field.values():
         lst.sort(key=lambda c: c["pushed"], reverse=True)
 
-    index = {"updated": updated, "base": BASE, "all": BASE + "feeds/all.xml",
+    # 홈페이지(서버실 랙)와 같은 단위로 센 콘텐츠 수
+    rack_cnt = collections.Counter(i.get("cat") for i in (catalog.get("items") or []) if i.get("cat"))
+    index_site = {"total": sum(rack_cnt.values()),
+                  "other_racks": [{"name": n, "count": c} for n, c in rack_cnt.most_common() if n not in fields]}
+    index = {"updated": updated, "base": BASE, "all": BASE + "feeds/all.xml", "site": index_site,
              "summary": dict(onto.get("summary", {}), listed=onto.get("summary", {}).get("listed") or sum(listed.values())), "fields": []}
     fstats = {f["cat"]: f for f in onto.get("fields", [])}
     all_items = []
@@ -454,22 +462,34 @@ def write_search_index(onto, fields, index):
 
 def write_llms(index):
     s = index.get("summary", {})
+    site = index.get("site") or {}
+    indexed = s.get("listed_indexed") or sum(f["contents"] for f in index["fields"])
+    listed = s.get("listed") or sum(f.get("listed") or f["contents"] for f in index["fields"])
+    other = site.get("other_racks") or []
+    count_note = ("- 콘텐츠 수는 홈페이지(ahnboat.xyz 서버실 랙)와 같은 단위로 센다. '색인 콘텐츠'는 지식 색인(#kg)이 있어 이 피드에 실린 것이고, "
+                  "'홈페이지'는 그 분야 랙에 올라간 전체다. 차이는 논문·특허·외부 사이트처럼 GitHub 밖에 있는 콘텐츠다.")
+    if other:
+        count_note += " 홈페이지에는 이 밖에 온톨로지 분야가 아닌 랙도 있다: " + ", ".join("%s %d개" % (o["name"], o["count"]) for o in other) + \
+                      " (홈페이지 전체 %d개)." % site.get("total", listed)
     out = ["# ahnboat lab 온톨로지 피드", "",
            "> 안상선(Ahn Sangsun)의 해설 사이트 ahnboat.xyz 공개 콘텐츠에서 모은 최신 지식 색인(개념·정의·관계)을 "
            "분야별 RSS로 제공한다. 사용자가 자기 아이디어를 검증해 달라고 요청할 때 근거 자료로 쓴다.", "",
-           "기준일: %s · 분야 %d개 · 콘텐츠 %s개 · 개념 %s개 · 관계 %s개" % (
-               index["updated"], len(index["fields"]), s.get("contents", "-"), s.get("concepts", "-"), s.get("relations", "-")), "",
+           "기준일: %s · 분야 %d개 · 색인 콘텐츠 %s개 (홈페이지 이 분야들의 %s개 중) · 개념 %s개 · 관계 %s개" % (
+               index["updated"], len(index["fields"]), indexed, listed, s.get("concepts", "-"), s.get("relations", "-")), "",
            "## 읽는 법", "",
            "- 피드 항목 하나 = 콘텐츠(해설 시리즈) 하나. 설명(description)에 개념 목록, 관계 목록, 페이지 목록이 들어 있다.",
            "- 항목마다 [페이지] 목록이 먼저 나온다(`p1 = 제목 — 주소`). 개념 줄 `- 이름 (유형) — 정의 [p1#lv3]`의 대괄호는 출처 페이지 기호와 그 안의 위치다. 출처 주소 = 해당 페이지 주소 + #위치.",
            "- 관계 줄: `- A → B : 관계`. 영문 이름과 관계 원어는 분야별 JSON-LD에 있다.",
            "- 근거로 인용할 때는 개념 이름과 출처 URL을 함께 적는다. 피드에 없는 내용은 일반 지식이라고 구분한다.",
-           "- 피드는 하루 두 번 다시 만들어지며 최신판만 담는다. 라이선스 CC BY-NC 4.0.",
+           count_note,
+           "- 원본(홈페이지 표지 현황)이 바뀌면 한 시간 안에 다시 만들어지며 최신판만 담는다. 라이선스 CC BY-NC 4.0.",
            "- XML을 읽기 어려우면 같은 내용의 텍스트판을 쓴다: 피드 주소의 /feeds/ 를 /feeds/txt/ 로, .xml 을 .txt 로 바꾼 주소.", "",
            "## 분야별 피드", ""]
     for f in index["fields"]:
-        out.append("- [%s](%s): 콘텐츠 %d개, 개념 %s개 — %s (JSON-LD: %s)" % (
-            f["name"], f["feed"], f["contents"], f.get("concepts", "-"), f.get("desc", ""), f["jsonld"]))
+        lst = f.get("listed") or f["contents"]
+        cnt = ("색인 콘텐츠 %d개" % f["contents"]) + ("" if lst == f["contents"] else " (홈페이지 %d개 중)" % lst)
+        out.append("- [%s](%s): %s, 개념 %s개 — %s (JSON-LD: %s)" % (
+            f["name"], f["feed"], cnt, f.get("concepts", "-"), f.get("desc", ""), f["jsonld"]))
         if len(f["parts"]) > 1:
             out.append("  - 한 번에 읽기 어려우면 나눔 파일: " + " · ".join(f["parts"]))
     out += ["", "## 전체", "", "- [전체 분야 요약](%s): 개념 이름만 담은 가벼운 피드" % index["all"],

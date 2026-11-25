@@ -12,6 +12,2796 @@
  "dct:creator": "안상선 (Ahn Sangsun)",
  "@graph": [
   {
+   "@id": "lab:method/four-beats",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "네 덩어리로 컷 나누기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Splitting a story into four beats",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "시작·전개·전환·끝에 2컷씩. 전체 길이 = 컷 수 × 한 컷 길이",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_05/01_beats.html#s1"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/three-lines"
+    }
+   ],
+   "lab:explains": [
+    {
+     "@id": "lab:method/conti-book"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/three-lines",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "컷의 세 줄",
+     "@language": "ko"
+    },
+    {
+     "@value": "Three lines per cut",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "목적 · 흐름·동작 · 감정·보충을 짧은 동사로 적는다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_05/01_beats.html#s2"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/emotion-curve"
+    }
+   ],
+   "lab:explains": [
+    {
+     "@id": "lab:method/cut-prompt"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/emotion-curve",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "감정 곡선",
+     "@language": "ko"
+    },
+    {
+     "@value": "Emotion curve",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "변화량 = 이번 컷 − 앞 컷, 절정은 6~7컷, 절정 앞에 한 번 내린다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_05/01_beats.html#s3"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/thumbnail"
+    }
+   ],
+   "lab:explains": [
+    {
+     "@id": "lab:concept/shot-size"
+    },
+    {
+     "@id": "lab:concept/camera-angle"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/thumbnail",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "썸네일 밑그림",
+     "@language": "ko"
+    },
+    {
+     "@value": "Thumbnail sketch",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "동그라미 머리 + 십자선 + 선 몇 개, 한 컷 1분",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_05/01_beats.html#s4"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/shot-size"
+    }
+   ],
+   "lab:explains": [
+    {
+     "@id": "lab:method/sketch-strength"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/shot-size",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "샷 크기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Shot size",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "머리 하나의 화면 높이 = 화면 높이 ÷ 화면에 들어가는 머리 수",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_05/02_camera.html#s1"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/eye-level"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/eye-level",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "눈높이 선과 소실점",
+     "@language": "ko"
+    },
+    {
+     "@value": "Eye level line and vanishing point",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "크기는 거리에 반비례, 눈높이 선은 모두의 같은 높이를 지난다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_05/02_camera.html#s2"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/camera-angle"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/camera-angle",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "앵글(앙각·부감)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Camera angle",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "카메라가 낮으면 지평선이 아래로·인물이 크게, 높으면 위로·작게",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_05/02_camera.html#s3"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/lead-room"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/lead-room",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "시선 여백과 3분할",
+     "@language": "ko"
+    },
+    {
+     "@value": "Lead room and rule of thirds",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "바라보는 쪽 여백 ÷ 반대쪽 여백 ≈ 2",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_05/02_camera.html#s4"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/axis-line"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/axis-line",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "가상선(180도 규칙)",
+     "@language": "ko"
+    },
+    {
+     "@value": "The 180-degree rule",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "카메라는 선의 한쪽에만, 넘을 땐 정면·뒷모습 컷",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_05/03_flow.html#s1"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/motion-arrows"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/motion-arrows",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "움직임 화살표",
+     "@language": "ko"
+    },
+    {
+     "@value": "Motion arrows",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "인물은 속이 찬 화살표, 카메라는 속이 빈 화살표, 줌은 끝 화면 틀",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_05/03_flow.html#s2"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/cut-timing"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/cut-timing",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "컷 길이와 프레임",
+     "@language": "ko"
+    },
+    {
+     "@value": "Cut timing and frames",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "프레임 수 = 컷 길이(초) × 24",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_05/03_flow.html#s3"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/eyeline-match"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/eyeline-match",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "시선 잇기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Eyeline match",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "앞 컷에서 바라본 방향에 다음 컷의 대상을 둔다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_05/03_flow.html#s4"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/line-of-action"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/line-of-action",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "중심축",
+     "@language": "ko"
+    },
+    {
+     "@value": "Line of action",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "휜 정도 = 곧은 선에서 가장 멀리 떨어진 거리 ÷ 중심축 길이",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_05/04_pose.html#s1"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/balance"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/balance",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "무게중심과 받침",
+     "@language": "ko"
+    },
+    {
+     "@value": "Center of gravity and base of support",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "가중 평균. 받침 안이면 안정, 밖이면 움직임",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_05/04_pose.html#s2"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/prop-weight"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/prop-weight",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "소품 무게 보이기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Showing the weight of props",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "몸이 옮겨 갈 거리 = 물건 무게 × 거리 ÷ 몸무게",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_05/04_pose.html#s3"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/silhouette"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/silhouette",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "실루엣 점검",
+     "@language": "ko"
+    },
+    {
+     "@value": "Silhouette check",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "검게 칠해도 팔다리가 몸통에서 떨어져 보이게, 과장은 중심축이 무너지기 전까지",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_05/04_pose.html#s4"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/cut-prompt"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/cut-prompt",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "컷 문장 여덟 조각",
+     "@language": "ko"
+    },
+    {
+     "@value": "Eight-part cut prompt",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "샷·앵글·인물·동작·방향·감정·배경·빛 + 금지",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_05/05_ai_cuts.html#s1"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/reference-sheet"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/reference-sheet",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "일관성 기준 시트",
+     "@language": "ko"
+    },
+    {
+     "@value": "Consistency reference sheet",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "여덟 장 모두 맞을 확률 = (한 장 맞을 확률)⁸",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_05/05_ai_cuts.html#s2"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/sketch-strength"
+    }
+   ],
+   "lab:explains": [
+    {
+     "@id": "lab:method/sheet-prompt"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/sketch-strength",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "밑그림 강도",
+     "@language": "ko"
+    },
+    {
+     "@value": "Image-to-image strength",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "다시 그리는 단계 = 전체 단계 × 강도, 0.35~0.6에서 시작",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_05/05_ai_cuts.html#s3"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/key-cut"
+    }
+   ],
+   "lab:explains": [
+    {
+     "@id": "lab:method/sketch-to-cut"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/key-cut",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "기준 컷 먼저",
+     "@language": "ko"
+    },
+    {
+     "@value": "Key cut first",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "기준 컷을 확정하고 같은 대화에서 이어 만들며 틀린 컷만 부분 수정",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_05/05_ai_cuts.html#s4"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/conti-diagnosis"
+    }
+   ],
+   "lab:explains": [
+    {
+     "@id": "lab:method/sketch-to-cut"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/conti-diagnosis",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "콘티 진단 순서",
+     "@language": "ko"
+    },
+    {
+     "@value": "Storyboard diagnosis order",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "이야기 → 카메라 → 흐름 → 포즈 → 고정값",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_05/06_failure_lab.html#s1"
+   }
+  },
+  {
+   "@id": "lab:method/conti-book",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "콘티 북 만들기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Making a storyboard book",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "한 문장 이야기 → 네 덩어리 × 컷 수 → 표 → 8컷 시트 → 완성 컷",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_05/08_conti_book.html#s1"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/cut-splitting"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/cut-splitting",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "컷 쪼개기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Splitting cuts",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "8 → 16 → 32, 한 컷 길이 = 전체 길이 ÷ 컷 수, 쪼갠 컷은 목적이 달라야",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_05/08_conti_book.html#s2"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/table-prompt"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/table-prompt",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "콘티 표 프롬프트",
+     "@language": "ko"
+    },
+    {
+     "@value": "Storyboard table prompt",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "이야기 + 컷 수 + 표의 열 + 규칙을 대화형 AI에",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_05/08_conti_book.html#s3"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/sheet-prompt"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/sheet-prompt",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "스케치 시트 프롬프트",
+     "@language": "ko"
+    },
+    {
+     "@value": "Storyboard sheet prompt",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "8컷씩 나눠 그리고 둘째 장부터 앞 시트 첨부, 실루엣 규칙",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_05/08_conti_book.html#s4"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/sketch-to-cut"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/sketch-to-cut",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "콘티로 완성 컷 만들기",
+     "@language": "ko"
+    },
+    {
+     "@value": "From storyboard to finished cut",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "그 컷만 잘라 첨부, 구도만 참고, 기준 컷 먼저, 덩어리마다 두 컷",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_05/08_conti_book.html#s5"
+   }
+  },
+  {
+   "@id": "lab:concept/incongruity",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "어긋남",
+     "@language": "ko"
+    },
+    {
+     "@value": "Incongruity",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "기대와 결과의 차이. 너무 작으면 심심하고 너무 크면 놀라움이 웃음을 덮는다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun/01_exaggeration.html#s1"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/head-ratio"
+    },
+    {
+     "@id": "lab:method/squash-stretch"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/head-ratio",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "등신 줄이기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Changing head-to-body ratio",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "머리 높이 = 키 ÷ 등신. 개그 장면은 2~3등신(SD)",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun/01_exaggeration.html#s2"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/single-exaggeration"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/single-exaggeration",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "한 곳 과장",
+     "@language": "ko"
+    },
+    {
+     "@value": "Exaggerating one feature",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "집중도 = 배율 ÷ (배율 + 나머지 부위 수)",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun/01_exaggeration.html#s3"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/manga-symbols"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/manga-symbols",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "만화 기호",
+     "@language": "ko"
+    },
+    {
+     "@value": "Manga emotion symbols",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "땀방울·핏줄 표시·세로줄 그늘 등, 기호 하나에 감정 하나",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun/01_exaggeration.html#s4"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/render-swap"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/fixed-skeleton",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "뼈대 고정 화풍 바꾸기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Style swap on a fixed skeleton",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "기울기·눈선·귀를 고정하고 부위 크기·선만 화풍에 맞춘다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun/02_reaction.html#s1"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/looking-up"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/looking-up",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "앙각 얼굴",
+     "@language": "ko"
+    },
+    {
+     "@value": "Upward-looking face",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "눈선 휨 = 머리 반지름 × sin(고개 든 각도), 귀는 눈 아래로",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun/02_reaction.html#s2"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/simple-face"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/simple-face",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "단순한 얼굴의 각도 강함",
+     "@language": "ko"
+    },
+    {
+     "@value": "Simple faces resist hard angles",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "부위가 적을수록 각도를 바꿀 때 고칠 곳이 적다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun/02_reaction.html#s3"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/deadpan"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/deadpan",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "데드팬",
+     "@language": "ko"
+    },
+    {
+     "@value": "Deadpan",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "갭 = |상황 크기 − 표정 크기|. 큰일 앞 무표정, 사소한 일에 과잉 반응",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun/02_reaction.html#s4"
+   }
+  },
+  {
+   "@id": "lab:method/anticipation",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "예비동작",
+     "@language": "ko"
+    },
+    {
+     "@value": "Anticipation",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "큰 동작 앞에 반대쪽으로 움츠림. 시간 = 프레임 ÷ fps",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun/03_motion.html#s1"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/squash-stretch"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/squash-stretch",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "찌그러짐과 늘어남",
+     "@language": "ko"
+    },
+    {
+     "@value": "Squash and stretch",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "가로 배율 × 세로 배율 = 1로 부피 유지",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun/03_motion.html#s2"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/timing-spacing"
+    },
+    {
+     "@id": "lab:concept/kishotenketsu"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/timing-spacing",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "타이밍과 간격",
+     "@language": "ko"
+    },
+    {
+     "@value": "Timing and spacing",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "프레임 수는 시간, 간격은 속도 곡선. 천천히 출발 = t²",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun/03_motion.html#s3"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/comic-hold"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/comic-hold",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "웃음 직전 정지",
+     "@language": "ko"
+    },
+    {
+     "@value": "Comic hold",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "사고 → 정지 0.5~1.2초 → 반응",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun/03_motion.html#s4"
+   }
+  },
+  {
+   "@id": "lab:concept/kishotenketsu",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "기승전결",
+     "@language": "ko"
+    },
+    {
+     "@value": "Four-panel structure",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "기(평소) → 승(기대) → 전(뒤집기) → 결(반응)",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun/04_comic.html#s1"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/rule-of-three"
+    },
+    {
+     "@id": "lab:method/joke-prompt"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/rule-of-three",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "셋의 법칙",
+     "@language": "ko"
+    },
+    {
+     "@value": "Rule of three",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "두 번 반복해 패턴, 세 번째에 어긋남",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun/04_comic.html#s2"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/zoom-reveal"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/zoom-reveal",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "줌 아웃 반전",
+     "@language": "ko"
+    },
+    {
+     "@value": "Zoom-out reveal",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "보이는 넓이 = (프레임 폭 ÷ 전체 폭)². 숨긴 정보를 마지막에",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun/04_comic.html#s3"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/bubble-order"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/bubble-order",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "말풍선 읽는 순서",
+     "@language": "ko"
+    },
+    {
+     "@value": "Speech bubble reading order",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "가로 읽기는 셋업 왼쪽 위, 펀치라인 오른쪽 아래",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun/04_comic.html#s4"
+   }
+  },
+  {
+   "@id": "lab:method/joke-prompt",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "웃음 문장 여섯 조각",
+     "@language": "ko"
+    },
+    {
+     "@value": "Six-part comedy prompt",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "누가·기대·어긋남·과장할 곳·화풍과 등신·지킬 것",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun/05_ai_fun.html#s1"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/consistency-prob"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/consistency-prob",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "컷 일관성 확률",
+     "@language": "ko"
+    },
+    {
+     "@value": "Panel consistency probability",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "모든 컷이 같을 확률 = (한 컷 확률)^컷 수",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun/05_ai_fun.html#s2"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/seamless-loop"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/seamless-loop",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "이음매 없는 반복 재생",
+     "@language": "ko"
+    },
+    {
+     "@value": "Seamless loop",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "한 걸음 = 360° ÷ 프레임 수, 마지막 = 360° − 한 걸음",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun/05_ai_fun.html#s3"
+   }
+  },
+  {
+   "@id": "lab:method/diagnosis-order",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "웃음 진단 순서",
+     "@language": "ko"
+    },
+    {
+     "@value": "Comedy diagnosis order",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "① 어긋남 → ② 형태 → ③ 움직임 → ④ 박자·순서 → ⑤ 일관성",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun/06_failure_lab.html#s1"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/comedy-failures"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/comedy-failures",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "안 웃긴 그림 8종",
+     "@language": "ko"
+    },
+    {
+     "@value": "Eight comedy drawing failures",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "설명 필요·전부 과장·어중간한 등신·예비 없음·부푼 공·반전 누설·정지 없음·다른 얼굴",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun/06_failure_lab.html#fails"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/benign-humor"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/benign-humor",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "웃음의 방향",
+     "@language": "ko"
+    },
+    {
+     "@value": "Benign humor",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "대상은 상황과 캐릭터 자신의 실수. 실제 사람의 아픈 곳은 빼기",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun/06_failure_lab.html#drift"
+   }
+  },
+  {
+   "@id": "lab:concept/hair-volume",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "머리카락 부피",
+     "@language": "ko"
+    },
+    {
+     "@value": "Hair volume over the skull",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "실루엣 폭 = 머리 폭 + 2 × 머리카락 두께",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_04/04_hair.html#s1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/hair-structure"
+    }
+   ],
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/length-ends"
+    },
+    {
+     "@id": "lab:method/hair-blocks"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/eye-hexagon",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "육각형 밑그림",
+     "@language": "ko"
+    },
+    {
+     "@value": "Hexagon eye construction",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "눈의 기울기 = (눈꼬리 높이 − 눈머리 높이) ÷ 눈 너비, 0~8°면 기본 눈",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_04/01_eye_shape.html#s1"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/cornea-order"
+    }
+   ],
+   "lab:explains": [
+    {
+     "@id": "lab:method/keep-structure"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/cornea-order",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "각막·홍채·동공의 앞뒤",
+     "@language": "ko"
+    },
+    {
+     "@value": "Cornea, iris and pupil depth order",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "바깥부터 각막 → 홍채 → 동공, 동공은 각막 안쪽",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_04/01_eye_shape.html#s2"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/eye-sphere"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/eye-sphere",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "공 위의 눈",
+     "@language": "ko"
+    },
+    {
+     "@value": "Eyes on a sphere",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "안쪽 눈 ÷ 앞쪽 눈 = cos(고개+25°) ÷ cos(고개−25°)",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_04/01_eye_shape.html#s3"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/hatching-density"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/hatching-density",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "부위별 빗금 밀도",
+     "@language": "ko"
+    },
+    {
+     "@value": "Hatching density by part",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "속눈썹은 빽빽하게, 홍채는 0.7배 이하로 성기게",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_04/01_eye_shape.html#s4"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/off-white-sclera"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/off-white-sclera",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "흰자는 순백이 아니다",
+     "@language": "ko"
+    },
+    {
+     "@value": "Off-white sclera",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "흰자 밝기는 피부보다 조금 높고 순백보다 낮게",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_04/02_eye_paint.html#s1"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/blend-layers"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/blend-layers",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "곱하기·더하기 레이어",
+     "@language": "ko"
+    },
+    {
+     "@value": "Multiply and add blend layers",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "곱하기 = 밑색 × 위 색 ÷ 255, 더하기 = 밑색 + 색 × 불투명도",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_04/02_eye_paint.html#s2"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/brow-and-eye-emotion"
+    }
+   ],
+   "lab:explains": [
+    {
+     "@id": "lab:method/paint-prompt"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/brow-and-eye-emotion",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "눈썹은 종류, 눈은 세기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Eyebrow angle and eye openness",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "눈썹 끝 올라감 = 화, 내려감 = 슬픔, 눈 뜬 정도 = 세기(슬픔은 반대)",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_04/02_eye_paint.html#s3"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/mouth-expression"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/mouth-expression",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "입은 감정을 밖으로 내는 정도",
+     "@language": "ko"
+    },
+    {
+     "@value": "Mouth as expression intensity",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "같은 눈에 다문 입은 삼킴, 크게 벌린 입은 터뜨림",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_04/02_eye_paint.html#s4"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/nose-detail"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/nose-detail",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "코 정보량 맞추기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Matching nose detail",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "모서리 선 중 몇 개를 고르는지 = 정보량, 눈과 1 이내로",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_04/03_nose_ear_mouth.html#s1"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/ear-placement"
+    }
+   ],
+   "lab:explains": [
+    {
+     "@id": "lab:method/detail-prompt"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/ear-placement",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "귀 자리와 각도별 너비",
+     "@language": "ko"
+    },
+    {
+     "@value": "Ear placement and apparent width",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "귀는 눈~코끝 사이, 너비 = 10 × |sin 각도| + 두께",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_04/03_nose_ear_mouth.html#s2"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/open-mouth-teeth"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/open-mouth-teeth",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "위 이 一, 아래 이 U",
+     "@language": "ko"
+    },
+    {
+     "@value": "Teeth in an open mouth",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "아래 이줄이 보이는 깊이 = 이줄 깊이 × sin(벌린 각도)",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_04/03_nose_ear_mouth.html#s3"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/hidden-molars"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/hidden-molars",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "보이지 않는 어금니 이어 그리기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Drawing hidden molar rows",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "위·아래 어금니 줄은 안쪽 한 점으로 모인다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_04/03_nose_ear_mouth.html#s4"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/hair-volume"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/hair-blocks",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "머리 덩어리 나누기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Hair clump blocking",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "앞·옆·뒤로 나누고 덩어리 수 ≈ 얼굴 정보량 + 1",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_04/04_hair.html#s2"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/hair-growth"
+    }
+   ],
+   "lab:explains": [
+    {
+     "@id": "lab:method/detail-prompt"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/hair-growth",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "머리가 나는 자리와 흐름",
+     "@language": "ko"
+    },
+    {
+     "@value": "Hair growth and flow",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "두피 전체에서 나고 가르마·정수리에서 흐름. 단순한 그림만 한 점 허용",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_04/04_hair.html#s3"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/strand-variety"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/strand-variety",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "다발 굵기 섞기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Varying strand thickness",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "굵기 차이 30~80%, 가는 한 가닥 몇 개",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_04/04_hair.html#s4"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/detail-prompt"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/detail-prompt",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "디테일 문장",
+     "@language": "ko"
+    },
+    {
+     "@value": "Per-part detail prompt",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "부위별 정보량을 적고 차이를 1 이내로, consistent level of detail",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_04/05_ai_detail.html#s1"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/paint-prompt"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/paint-prompt",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "칠하기 문장",
+     "@language": "ko"
+    },
+    {
+     "@value": "Eye painting prompt",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "흰자 색·위 그림자·아래 빛·하이라이트 둘·갈색 선 다섯 조각",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_04/05_ai_detail.html#s2"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/part-inpaint"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/part-inpaint",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "부위만 가림 영역",
+     "@language": "ko"
+    },
+    {
+     "@value": "Inpainting one facial part",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "다시 그려지는 몫 = 가린 넓이 ÷ 전체 × 100, 여유 10~20%",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_04/05_ai_detail.html#s3"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/keep-structure"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/keep-structure",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "화풍이 바뀌어도 남길 구조",
+     "@language": "ko"
+    },
+    {
+     "@value": "Keeping structure across styles",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "구조(육각형·동공 자리·이줄·머리 실루엣)는 남기고 정보량만 바꾼다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_04/05_ai_detail.html#s4"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/detail-diagnosis"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/detail-diagnosis",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "디테일 진단 순서",
+     "@language": "ko"
+    },
+    {
+     "@value": "Detail diagnosis order",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "자리와 각도 → 구조 → 정보량 → 칠하기 → 표정",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_04/06_failure_lab.html#s1"
+   }
+  },
+  {
+   "@id": "lab:method/shadow-steps",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "그림자 단계",
+     "@language": "ko"
+    },
+    {
+     "@value": "Shadow steps",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "색 수 ≈ 부위 수 × (1 + 그림자 단계 + 하이라이트 단계)",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun_02/01_era.html#s1"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/eye-era"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/eye-era",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "눈으로 연대 고르기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Choosing an era through the eyes",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "눈 크기는 고정, 하이라이트 개수와 속눈썹 무게로 연대를 고른다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun_02/01_era.html#s2"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/information-amount"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/information-amount",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "정보량",
+     "@language": "ko"
+    },
+    {
+     "@value": "Amount of detail",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "1초에 그리는 선 = 1초의 장수 × 장마다 선 개수",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun_02/01_era.html#s3"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/color-grade"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/color-grade",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "색보정",
+     "@language": "ko"
+    },
+    {
+     "@value": "Color grading",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "마지막 손잡이. 30도 넘게 돌리면 고정값이 흔들린다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun_02/01_era.html#s4"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/line-weight-ratio"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/line-weight-ratio",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "굵기 비",
+     "@language": "ko"
+    },
+    {
+     "@value": "Line weight ratio",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "가장 굵은 곳 ÷ 가장 가는 곳. 1 맑은 선, 3 이상 힘 있는 펜선",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun_02/02_line.html#s1"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/paint-style"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/simplification",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "단순화 정도",
+     "@language": "ko"
+    },
+    {
+     "@value": "Degree of simplification",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "0 사실 ↔ 1 카툰, 고정값은 남긴다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun_02/02_line.html#s3"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/background-fx"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/paint-style",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "칠 방식",
+     "@language": "ko"
+    },
+    {
+     "@value": "Coloring method",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "평면 원색 ↔ 번지는 물감, 채도와 함께 정한다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun_02/02_line.html#s2"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/simplification"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/background-fx",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "배경 효과선",
+     "@language": "ko"
+    },
+    {
+     "@value": "Background effect lines",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "집중선·속도선은 긴장, 꽃·반짝임은 설렘. 감정 하나에 효과 하나",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun_02/02_line.html#s4"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/line-of-action"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/tone-methods",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "명암 처리 방법",
+     "@language": "ko"
+    },
+    {
+     "@value": "Tone rendering methods",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "단색·망점·큰 점·해칭·먹칠. 덮는 비율 = π × 반지름² ÷ 한 변²",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun_02/03_mono.html#s2"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/brush-space"
+    }
+   ],
+   "lab:explains": [
+    {
+     "@id": "lab:method/gray-value"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/brush-space",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "붓선과 여백",
+     "@language": "ko"
+    },
+    {
+     "@value": "Brush strokes and empty space",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "선을 끊고 비워 둔 곳으로 형태를 읽게 한다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun_02/03_mono.html#s3"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/gray-value"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/gray-value",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "회색값",
+     "@language": "ko"
+    },
+    {
+     "@value": "Luma (gray value)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "0.299R + 0.587G + 0.114B, 붙은 색의 차이를 본다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun_02/03_mono.html#s4"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/head-count"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/line-of-action",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "움직임 선과 러프",
+     "@language": "ko"
+    },
+    {
+     "@value": "Line of action and rough sketch",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "휜 정도 = 가장 먼 거리 ÷ 양 끝 직선. 러프는 움직임 선부터",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun_02/03_mono.html#s1"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/tone-methods"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/head-count",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "등신",
+     "@language": "ko"
+    },
+    {
+     "@value": "Head-height proportion",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "등신 = 키 ÷ 머리 높이",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun_02/04_proportion.html#s1"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/sd-parts"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/sd-parts",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "부위 함께 줄이기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Adapting features to SD",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "등신이 작아지면 눈은 내리고 손발은 덩어리로",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun_02/04_proportion.html#s2"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/mascot-symbols"
+    }
+   ],
+   "lab:explains": [
+    {
+     "@id": "lab:concept/age-cues"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/mascot-symbols",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "마스코트 상징",
+     "@language": "ko"
+    },
+    {
+     "@value": "Mascot key symbols",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "둥근 덩어리와 상징 세 개",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun_02/04_proportion.html#s3"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/motion-trail"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/motion-trail",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "잔상과 과장",
+     "@language": "ko"
+    },
+    {
+     "@value": "Afterimages and exaggeration",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "잔상 간격 = 이동 거리 ÷ (장수 − 1)",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun_02/04_proportion.html#s4"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/collapse-steps"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/collapse-steps",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "무너짐 단계",
+     "@language": "ko"
+    },
+    {
+     "@value": "Comic face collapse steps",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "눈 → 입 → 그림자 → 윤곽 순서, 고정값은 끝까지",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun_02/05_expression.html#s1"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/one-place"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/one-place",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "한 곳 과장",
+     "@language": "ko"
+    },
+    {
+     "@value": "Exaggerating one feature",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "길이 1.5배면 넓이 2.25배, 주인공 부위 하나만",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun_02/05_expression.html#s2"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/add-lines"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/add-lines",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "감정 자리 선 더하기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Adding lines at emotion spots",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "눈 아래·미간·볼·입, 잔주름은 나이를 바꾼다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun_02/05_expression.html#s3"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/manga-symbols"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/render-swap",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "재료 바꾸기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Swapping rendering media",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "선·명암·질감은 바뀌고 실루엣·색·장식은 남는다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun_02/06_media_outfit.html#s1"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/camera-lens"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/outfit-theme",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "옷 테마 바꾸기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Outfit theme variation",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "옷만 바꾸고 머리·장식·얼굴은 고정, 옷은 소재·핏·나이로 적는다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun_02/06_media_outfit.html#s3"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/model-sheet"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/model-sheet",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "설정 시트",
+     "@language": "ko"
+    },
+    {
+     "@value": "Character model sheet",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "고정값과 바뀌는 값을 한 장에, 요청마다 첨부",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun_02/06_media_outfit.html#s4"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/variation-diagnosis"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/camera-lens",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "카메라 높이와 렌즈",
+     "@language": "ko"
+    },
+    {
+     "@value": "Camera height and lens",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "올려다보기는 당당, 내려다보기는 귀여움, 넓은 렌즈는 현장감",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun_02/06_media_outfit.html#s2"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/outfit-theme"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/age-cues",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "나이 신호",
+     "@language": "ko"
+    },
+    {
+     "@value": "Facial age cues",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "어린이: 낮은 눈 높이·큰 눈·짧은 코. 성인: 가로로 긴 눈·또렷한 코",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun_02/07_failure_lab.html#drift"
+   }
+  },
+  {
+   "@id": "lab:method/variation-diagnosis",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "베리에이션 진단 순서",
+     "@language": "ko"
+    },
+    {
+     "@value": "Variation diagnosis order",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "고정값 → 축 → 등신·나이 → 과장 → 매체·글자·출처",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun_02/07_failure_lab.html#s1"
+   }
+  },
+  {
+   "@id": "lab:concept/variation-axes",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "베리에이션 축과 군집",
+     "@language": "ko"
+    },
+    {
+     "@value": "Variation axes and clusters",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "시대·선·사실·과장·재료·색 여섯 특징으로 그림을 재고 비슷한 것끼리 넓게 묶는다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_fun_02/index.html#map"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/shadow-steps"
+    }
+   ]
+  },
+  {
    "@id": "lab:concept/latent-space",
    "@type": [
     "skos:Concept",
@@ -210,6 +3000,9 @@
     },
     {
      "@id": "lab:topic/pretrained-lm"
+    },
+    {
+     "@id": "lab:topic/transformer"
     }
    ],
    "lab:contrastsWith": [
@@ -3295,40 +6088,6 @@
    "lab:motivates": [
     {
      "@id": "lab:concept/hair-volume"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/hair-volume",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "머리카락 부피",
-     "@language": "ko"
-    },
-    {
-     "@value": "Hair volume over the skull",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "실루엣 폭 = 머리 폭 + 2 × 머리카락 두께",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/drawing_lab_02/01_hair_frame.html#s2"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/hair-structure"
-    }
-   ],
-   "lab:motivates": [
-    {
-     "@id": "lab:concept/length-ends"
     }
    ]
   },
@@ -6658,6 +9417,11 @@
    "rdfs:isDefinedBy": {
     "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r16"
    },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/loss-function"
+    }
+   ],
    "lab:prerequisiteOf": [
     {
      "@id": "lab:method/gradient-descent"

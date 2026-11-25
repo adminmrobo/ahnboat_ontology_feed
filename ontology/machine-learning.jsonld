@@ -12,6 +12,5123 @@
  "dct:creator": "안상선 (Ahn Sangsun)",
  "@graph": [
   {
+   "@id": "lab:concept/support-vector",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "서포트 벡터",
+     "@language": "ko"
+    },
+    {
+     "@value": "support vector",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "경계 가까이 있어 경계 위치를 결정하는 데이터 점.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/knn_svc_svm_lab/part3_svm.html#ch11"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/svm"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/svm"
+    },
+    {
+     "@id": "lab:concept/maximal-margin"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/feature",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "특징",
+     "@language": "ko"
+    },
+    {
+     "@value": "feature",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "사진을 비교하려고 뽑은 숫자들.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/knn_svc_svm_lab/part1_lda.html#ch1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/feature-engineering"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/feature-vector"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/feature-engineering"
+    },
+    {
+     "@id": "lab:concept/euclidean-distance"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/majority-vote",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "과반 다수결",
+     "@language": "ko"
+    },
+    {
+     "@value": "majority vote",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "여러 증인 또는 장부 중 절반을 넘는 쪽의 기록을 사실로 정하는 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/knn_svc_svm_lab/part2_knn.html#ch6"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/blockchain-consensus"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/knn"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/train-test-split",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "학습/시험 나누기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Train-test split",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "20%를 시험지로 봉인하고 80%로만 학습",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/knn_svc_svm_lab/part2_knn.html#ch7"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/data-splitting"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/cross-validation"
+    },
+    {
+     "@id": "lab:concept/choose-k"
+    },
+    {
+     "@id": "lab:concept/data-leakage"
+    },
+    {
+     "@id": "lab:concept/accuracy-trap"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/optimization-layers"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/feature-map",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "무늬 지도(특징 맵)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Feature map",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "돋보기가 자리마다 매긴 점수를 모은 판.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/knn_svc_svm_lab/part4_kernel.html#ch15"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:method/cnn"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/kernel-trick"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/margin",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "여유 (margin)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Margin",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "다른 종류가 같은 종류보다 얼마나 더 멀어야 벌점이 없는지 정하는 값 m.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/knn_svc_svm_lab/part3_svm.html#ch10"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:method/triplet-loss"
+    },
+    {
+     "@id": "lab:method/svm"
+    },
+    {
+     "@id": "lab:concept/maximal-margin"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/dot-product",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "겹침 점수(내적)와 각도",
+     "@language": "ko"
+    },
+    {
+     "@value": "Dot product and angle",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "같은 자리끼리 곱해 더한 값. cos θ로 방향의 닮음을 잰다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/knn_svc_svm_lab/part1_lda.html#ch4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/inner-product-orthogonality"
+    },
+    {
+     "@id": "lab:topic/linear-algebra"
+    },
+    {
+     "@id": "lab:topic/vectors-geometry"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/projection-score"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/hyperplane",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "선·평면·가름판",
+     "@language": "ko"
+    },
+    {
+     "@value": "Lines, planes, hyperplanes",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "n축 방의 가름판는 n − 1축. 꽂힌 화살표와의 점수로 편을 가른다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/knn_svc_svm_lab/part3_svm.html#ch9"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/lines-planes"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/maximal-margin"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/euclidean-distance",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "유클리드 거리",
+     "@language": "ko"
+    },
+    {
+     "@value": "Euclidean distance",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "두 점 사이의 직선 거리. 열별 차이의 제곱합의 제곱근.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/knn_svc_svm_lab/part1_lda.html#ch2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/distance-angle"
+    },
+    {
+     "@id": "lab:topic/knn"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/knn"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:concept/manhattan-distance"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/nearest-centroid"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/knn",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "k-최근접 이웃",
+     "@language": "ko"
+    },
+    {
+     "@value": "k-nearest neighbors",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "가장 가까운 점으로 판단하는 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/knn_svc_svm_lab/part2_knn.html#ch6"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/knn"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:concept/decision-tree"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/sampling-bias"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/svm",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "서포트 벡터 머신",
+     "@language": "ko"
+    },
+    {
+     "@value": "Support vector machine",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "복도 폭을 넓히는 분류 방법의 가족. 커널로 휠 수 있음",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/knn_svc_svm_lab/part3_svm.html#ch13"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/svm"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/norm",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "길이(노름)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Norm",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "‖w‖ = √(w₁² + w₂²)",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/knn_svc_svm_lab/part3_svm.html#ch10"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/normed-spaces"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/margin"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/feature-vector",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "벡터(특징 카드)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Feature vector",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "점 하나를 순서 있는 숫자 묶음으로 적은 것",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/knn_svc_svm_lab/part1_lda.html#ch1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/linear-algebra"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/euclidean-distance"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/class-mean",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "동아리 평균(깃발)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Class mean",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "한 동아리 학생 카드의 평균 위치",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/knn_svc_svm_lab/part1_lda.html#ch3"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/nearest-centroid"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/nearest-centroid",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "가장 가까운 깃발 분류",
+     "@language": "ko"
+    },
+    {
+     "@value": "Nearest centroid classifier",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "새 점을 평균이 더 가까운 동아리로 보내는 방법",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/knn_svc_svm_lab/part1_lda.html#ch3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/supervised-learning"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/projection-score",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "그림자 점수(사영)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Projection score",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "z = w·x로 카드를 숫자 하나로 줄인 값",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/knn_svc_svm_lab/part1_lda.html#ch4"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/lda"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/fisher-criterion",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "Fisher의 기준",
+     "@language": "ko"
+    },
+    {
+     "@value": "Fisher criterion",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "그림자 평균 차이² ÷ 그림자 퍼짐의 합이 큰 방향이 좋다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/knn_svc_svm_lab/part1_lda.html#ch5"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/lda"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/lda",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "선형 판별 분석(LDA)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Linear discriminant analysis",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "떨어짐 ÷ 퍼짐이 가장 큰 방향으로 그림자를 내려 곧은 선으로 가르는 방법",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/knn_svc_svm_lab/part1_lda.html#ch5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/supervised-learning"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/qda",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "이차 판별 분석(QDA)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Quadratic discriminant analysis",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "동아리마다 퍼진 모양이 다를 때 휘어진 경계로 가르는 방법",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/knn_svc_svm_lab/part1_lda.html#ch5"
+   }
+  },
+  {
+   "@id": "lab:concept/knn-regression",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "KNN 회귀",
+     "@language": "ko"
+    },
+    {
+     "@value": "KNN regression",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "가까운 k명의 숫자를 평균 내어 예측",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/knn_svc_svm_lab/part2_knn.html#ch6"
+   },
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/knn"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/choose-k",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "k 고르기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Choosing k",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "처음 보는 데이터 점수로 이웃 수를 정함",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/knn_svc_svm_lab/part2_knn.html#ch7"
+   }
+  },
+  {
+   "@id": "lab:concept/feature-scaling",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "단위 맞추기(최소-최대)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Min-max scaling",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "특징마다 최솟값 0, 최댓값 1이 되게 바꿈",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/knn_svc_svm_lab/part2_knn.html#ch8"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/feature-engineering"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/knn"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/bias-term",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "편향 b",
+     "@language": "ko"
+    },
+    {
+     "@value": "Bias term",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "줄을 앞뒤로 옮기는 숫자",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/knn_svc_svm_lab/part3_svm.html#ch9"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/hyperplane"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/maximal-margin",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "최대 여유 폭 분류기(하드 마진)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Maximal margin classifier",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "두 동아리 사이 복도 폭 2/‖w‖가 가장 넓은 곧은 줄",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/knn_svc_svm_lab/part3_svm.html#ch10"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/svm"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/soft-margin",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "서포트 벡터 분류기(SVC, 소프트 마진)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Support vector classifier",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "몇 명은 벌점 ξ를 받고 봐주는 복도. 벌점 무게는 C",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/knn_svc_svm_lab/part3_svm.html#ch12"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/svm"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/svm"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/c-parameter",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "C(벌점 무게)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Regularization parameter C",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "크면 깐깐(좁은 복도), 작으면 너그러움(넓은 복도)",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/knn_svc_svm_lab/part3_svm.html#ch12"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/soft-margin"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/slack",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "벌점 ξ",
+     "@language": "ko"
+    },
+    {
+     "@value": "Slack variable",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "학생이 자기 편 벽을 넘어온 만큼",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/knn_svc_svm_lab/part3_svm.html#ch12"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/soft-margin"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/svr",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "서포트 벡터 회귀(SVR)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Support vector regression",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "오차 ε 이내는 벌점 없는 튜브로 숫자를 예측",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/knn_svc_svm_lab/part3_svm.html#ch13"
+   },
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/svm"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/nonlinear-separability",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "곧은 줄로 못 가르는 데이터",
+     "@language": "ko"
+    },
+    {
+     "@value": "Non-linearly separable data",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "한 무리가 다른 무리를 둘러싸는 등 곧은 경계로 못 가르는 모양",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/knn_svc_svm_lab/part4_kernel.html#ch14"
+   },
+   "lab:addressedBy": [
+    {
+     "@id": "lab:concept/feature-map"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/kernel-trick",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "커널 트릭",
+     "@language": "ko"
+    },
+    {
+     "@value": "Kernel trick",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "올라간 카드의 내적을 원래 카드로 바로 계산하는 요령",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/knn_svc_svm_lab/part4_kernel.html#ch16"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/svm"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/kernel-function",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "커널(닮음 점수)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Kernel function",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "K(a, b) = φ(a)·φ(b). 두 카드가 얼마나 닮았는지",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/knn_svc_svm_lab/part4_kernel.html#ch16"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/kernel-trick"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/rbf-kernel",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "RBF(가우시안) 커널",
+     "@language": "ko"
+    },
+    {
+     "@value": "RBF kernel",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "exp(−γ 거리²). 가까울수록 1, 멀수록 0",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/knn_svc_svm_lab/part4_kernel.html#ch16"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/kernel-function"
+    },
+    {
+     "@id": "lab:concept/rbf-svm"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/poly-kernel",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "다항 커널",
+     "@language": "ko"
+    },
+    {
+     "@value": "Polynomial kernel",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "(γ a·b + r)^d. d차 특징까지 올린 공간의 내적",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/knn_svc_svm_lab/part4_kernel.html#ch16"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/kernel-function"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/gamma",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "γ(모닥불 폭)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Gamma",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "RBF에서 닮음이 거리에 따라 얼마나 빨리 줄어드는지",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/knn_svc_svm_lab/part4_kernel.html#ch17"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/rbf-kernel"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/rbf-svm",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "RBF 커널 SVM",
+     "@language": "ko"
+    },
+    {
+     "@value": "RBF-kernel SVM",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "서포트 벡터와의 RBF 닮음을 합쳐 휘는 경계로 가르는 SVM",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/knn_svc_svm_lab/part4_kernel.html#ch17"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/svm"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/hyperparameter",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "하이퍼파라미터",
+     "@language": "ko"
+    },
+    {
+     "@value": "hyperparameter",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "학습 전에 사람이 정하는 설정값(차원, 학습률, 반복 횟수 등).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w05_one_function_rule_knn_tree.html#lv4"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/model-comparison"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/classification",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "분류",
+     "@language": "ko"
+    },
+    {
+     "@value": "classification",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "텍스트를 미리 정한 범주 중 하나(또는 여러 개)로 나누는 문제.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w02_classification_and_regression.html#lv1"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/classification-vs-regression"
+    },
+    {
+     "@id": "lab:concept/features-targets"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/regression",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "회귀",
+     "@language": "ko"
+    },
+    {
+     "@value": "regression",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "텍스트로부터 연속적인 수치를 예측하는 문제.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w02_classification_and_regression.html#lv1"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/classification-vs-regression"
+    },
+    {
+     "@id": "lab:concept/features-targets"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/mae",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "MAE",
+     "@language": "ko"
+    },
+    {
+     "@value": "mean absolute error",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "Mean Absolute Error, 평균 절대 오차. 예측과 실제의 차이(절댓값)의 평균.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w03_scores_and_cross_validation.html#lv3"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/classification-vs-regression"
+    },
+    {
+     "@id": "lab:concept/regression-metrics"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/rmse",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "RMSE",
+     "@language": "ko"
+    },
+    {
+     "@value": "root mean squared error",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "Root Mean Squared Error, 평균 제곱근 오차. 큰 오차에 더 민감.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w02_classification_and_regression.html#lv2"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/classification-vs-regression"
+    },
+    {
+     "@id": "lab:concept/linear-regression"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/sigmoid",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "시그모이드",
+     "@language": "ko"
+    },
+    {
+     "@value": "sigmoid function",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "어떤 수든 0과 1 사이 값으로 바꾸는 S자 함수 1 ÷ (1 + e^(−z)).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w06_logistic_perceptron_svm.html#lv3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/activation-function"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/logistic-regression"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/precision",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "정밀도",
+     "@language": "ko"
+    },
+    {
+     "@value": "precision",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "\"그렇다\"고 판정한 것 중 진짜 그런 것의 비율.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w03_scores_and_cross_validation.html#lv2"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/precision-recall"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/recall",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "재현율",
+     "@language": "ko"
+    },
+    {
+     "@value": "recall",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "진짜 그런 것 중 잡아낸 비율.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w03_scores_and_cross_validation.html#lv2"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/precision-recall"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/residual",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "잔차 연결",
+     "@language": "ko"
+    },
+    {
+     "@value": "residual connection",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "층의 입력을 출력에 그대로 더해 기울기가 잘 흐르게 하는 연결(Residual Connection).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w07_improving_models_battery.html#lv2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/residual-connections"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/multiple-regression"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/decision-tree",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "결정 트리",
+     "@language": "ko"
+    },
+    {
+     "@value": "Decision tree",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "예/아니오 질문을 이어 나누기",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w05_one_function_rule_knn_tree.html#lv3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/decision-tree"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/model-comparison"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/regularization",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "규제",
+     "@language": "ko"
+    },
+    {
+     "@value": "regularization",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "계수에 벌점을 줘 0 쪽으로 당기기.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w07_improving_models_battery.html#lv3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/weight-decay"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/logistic-regression"
+    },
+    {
+     "@id": "lab:concept/hyperparameter"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/kernel"
+    },
+    {
+     "@id": "lab:concept/ensemble"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/generalization"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/feature",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "특징",
+     "@language": "ko"
+    },
+    {
+     "@value": "feature",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "데이터를 숫자로 나타낸 값. 여기서는 블록의 긴 변·짧은 변(또는 보이는 가로·세로).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w02_classification_and_regression.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/k-means"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/features-targets"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/confusion-matrix",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "혼동행렬",
+     "@language": "ko"
+    },
+    {
+     "@value": "confusion matrix",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "실제(있음/없음) × 판정(양성/음성) 네 칸 표.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w02_classification_and_regression.html#lv4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/confusion-matrix"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/accuracy-trap"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/false-positive",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "위양성",
+     "@language": "ko"
+    },
+    {
+     "@value": "false positive",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "실제로는 없는데 양성으로 나온 경우. 오경보.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w08_midterm_review.html#lv2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/type-i-ii-errors"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/midterm-guide"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/target",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "목표값",
+     "@language": "ko"
+    },
+    {
+     "@value": "target",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "블록 해시가 이 값보다 작아야 유효하다. 목표값이 작을수록 난이도가 높다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w01_ai_model_overview.html#lv4"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/prompt-code-verify"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/rule-vs-ml",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "규칙 기반과 머신러닝",
+     "@language": "ko"
+    },
+    {
+     "@value": "rule-based vs machine learning",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "사람이 규칙을 적는 방식과 데이터·과거 결과에서 규칙을 배우는 방식의 비교.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w01_ai_model_overview.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/overfitting"
+    },
+    {
+     "@id": "lab:concept/three-learning-types"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/prompt",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "프롬프트",
+     "@language": "ko"
+    },
+    {
+     "@value": "prompt",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "AI에게 주는 작업 지시문. 무엇을, 어떤 데이터로, 어떤 모양으로 원하는지 적는다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w01_ai_model_overview.html#lv4"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/prompt-code-verify"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/scatter-plot",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "산점도",
+     "@language": "ko"
+    },
+    {
+     "@value": "scatter plot",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "두 숫자 변수를 가로·세로 위치로 찍어 함께 변하는지 보는 차트.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w04_fish_market_knn.html#lv1"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/list-scatter"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/correlation-coefficient",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "상관계수",
+     "@language": "ko"
+    },
+    {
+     "@value": "correlation coefficient",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "두 변수가 함께 움직이는 정도(−1~1). 0.56은 “함께 커지는 경향이 있지만 흩어짐도 크다”.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w07_improving_models_battery.html#lv2"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/multiple-regression"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/majority-vote",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "다수결",
+     "@language": "ko"
+    },
+    {
+     "@value": "majority vote",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "이웃 중 더 많은 쪽의 라벨을 답으로 고르는 규칙.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w04_fish_market_knn.html#lv2"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:method/knn"
+    },
+    {
+     "@id": "lab:concept/knn"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/cross-validation",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "교차검증",
+     "@language": "ko"
+    },
+    {
+     "@value": "Cross-validation",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "다섯 조각으로 다섯 번 재기",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w03_scores_and_cross_validation.html#lv1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/cross-validation"
+    }
+   ],
+   "lab:broader": [
+    {
+     "@id": "lab:concept/train-test-split"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/precision-recall"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/ensemble",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "앙상블",
+     "@language": "ko"
+    },
+    {
+     "@value": "ensemble",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "여러 모형의 예측을 모아 최종 답을 만든다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w07_improving_models_battery.html#lv4"
+   }
+  },
+  {
+   "@id": "lab:concept/odds-ratio",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "오즈와 오즈 배수",
+     "@language": "ko"
+    },
+    {
+     "@value": "Odds and odds ratio",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "로지스틱 회귀의 두 얼굴 — 회귀처럼 계산하고 분류처럼 판정한다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w07_improving_models_battery.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/multiple-regression"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/logistic-regression",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "로지스틱 회귀",
+     "@language": "ko"
+    },
+    {
+     "@value": "Logistic regression",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "점수를 시그모이드로 확률로 바꿔 분류",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w06_logistic_perceptron_svm.html#lv3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/glm-logistic"
+    },
+    {
+     "@id": "lab:topic/logistic-regression"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/linear-svm"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/mlp"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/precision-recall",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "정밀도와 재현율",
+     "@language": "ko"
+    },
+    {
+     "@value": "precision and recall",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "적은 쪽지 가운데 쓸모 있는 비율과, 쓸모 있는 말 가운데 적어 둔 비율.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w03_scores_and_cross_validation.html#lv2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/precision-recall"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/regression-metrics"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/z-score",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "표준점수 (z)",
+     "@language": "ko"
+    },
+    {
+     "@value": "z score",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "어떤 값이 평균에서 표준편차 몇 개만큼 떨어졌는지. z = (x − 평균)/표준편차.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w04_fish_market_knn.html#lv4"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/feature-scaling"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/weight",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "가중치",
+     "@language": "ko"
+    },
+    {
+     "@value": "weight",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "입력 신호에 곱하는 숫자. 클수록 그 입력을 더 중요하게 본다. 초파리로 치면 시냅스 전달 세기에 해당한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w06_logistic_perceptron_svm.html#lv1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/survey-weights"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/linear-score"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/three-learning-types",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "학습의 세 종류",
+     "@language": "ko"
+    },
+    {
+     "@value": "supervised unsupervised and reinforcement learning",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "정답이 있나, 없나, 점수만 있나 — 지도 · 비지도 · 강화학습",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w01_ai_model_overview.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/three-capabilities"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/three-capabilities",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "머신러닝 작업의 세 단계",
+     "@language": "ko"
+    },
+    {
+     "@value": "problem definition model choice and validation",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "문제 정의 → 모델 선택 → 결과 검증 — 업무 말을 모델 말로",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w01_ai_model_overview.html#lv3"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/prompt-code-verify"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/prompt-code-verify",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "프롬프트로 코드 받기와 검증",
+     "@language": "ko"
+    },
+    {
+     "@value": "prompt to code workflow with cross checking",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "AI에게 코드를 받는 법 — 프롬프트 다섯 요소와 세 도구 교차 확인",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w01_ai_model_overview.html#lv4"
+   }
+  },
+  {
+   "@id": "lab:term/rule-based",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "규칙 기반",
+     "@language": "ko"
+    },
+    {
+     "@value": "rule based",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "사람이 “만약 ~이면 ~한다”는 규칙을 직접 적어 판단하는 방식.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w01_ai_model_overview.html#lv1"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/rule-vs-ml"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/machine-learning",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "머신러닝",
+     "@language": "ko"
+    },
+    {
+     "@value": "machine learning",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "정답이 붙은 예시 데이터를 보고 판단 규칙(숫자)을 스스로 정하는 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w01_ai_model_overview.html#lv1"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/rule-vs-ml"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/supervised-learning",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "지도학습",
+     "@language": "ko"
+    },
+    {
+     "@value": "supervised learning",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "정답이 함께 있는 데이터로 정답 맞히는 법을 익히는 학습.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w01_ai_model_overview.html#lv2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/supervised-learning"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/three-learning-types"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/unsupervised-learning",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "비지도학습",
+     "@language": "ko"
+    },
+    {
+     "@value": "unsupervised learning",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "정답 없이 데이터 안의 무리나 구조를 찾는 학습.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w01_ai_model_overview.html#lv2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/unsupervised-learning"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/three-learning-types"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/reinforcement-learning",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "강화학습",
+     "@language": "ko"
+    },
+    {
+     "@value": "reinforcement learning",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "행동한 뒤 받는 보상(점수)으로 더 나은 행동을 익히는 학습.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w01_ai_model_overview.html#lv2"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/three-learning-types"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/pyml_w01-fly",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "같은 프롬프트를 세 도구에 넣고 다른 줄을 비교",
+     "@language": "ko"
+    },
+    {
+     "@value": "option A (team fruit fly)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "세 답이 갈리는 줄만 보면 돼. 거기가 실수가 숨어 있는 곳이야.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w01_ai_model_overview.html#duel"
+   },
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/pyml_w01-robo"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/pyml_w01"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/prompt-code-verify"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/pyml_w01-robo",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "가장 빠른 도구의 첫 답을 바로 실행",
+     "@language": "ko"
+    },
+    {
+     "@value": "option B (team abacus bot)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "빨리 돌려 보는 게 최고! 오류가 나면 그때 고치면 되지!",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w01_ai_model_overview.html#duel"
+   },
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/pyml_w01"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/prompt-code-verify"
+    }
+   ]
+  },
+  {
+   "@id": "lab:metric/pyml_w01",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "실행 전에 찾아낸 실수 수 (4개 중)",
+     "@language": "ko"
+    },
+    {
+     "@value": "duel metric",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w01_ai_model_overview.html#duel"
+   }
+  },
+  {
+   "@id": "lab:concept/features-targets",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "특성과 타깃, 회귀와 분류",
+     "@language": "ko"
+    },
+    {
+     "@value": "features targets regression and classification",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "문제지와 정답지 — 특성(X)과 타깃(y), 그리고 숫자냐 종류냐",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w02_classification_and_regression.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/linear-regression"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/linear-regression",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "선형 회귀와 RMSE",
+     "@language": "ko"
+    },
+    {
+     "@value": "linear regression and RMSE",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "회귀 — 점들 사이로 한 줄 긋기, 그리고 RMSE로 빗나간 크기 재기",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w02_classification_and_regression.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/train-test-split"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/accuracy-trap",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "혼동행렬과 정확도의 함정",
+     "@language": "ko"
+    },
+    {
+     "@value": "confusion matrix and the accuracy trap",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "분류와 정확도의 함정 — 0.80인데 이탈 손님을 한 명도 못 잡다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w02_classification_and_regression.html#lv4"
+   }
+  },
+  {
+   "@id": "lab:term/least-squares",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "최소제곱",
+     "@language": "ko"
+    },
+    {
+     "@value": "least squares",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "오차 제곱의 합이 가장 작아지도록 직선을 정하는 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w02_classification_and_regression.html#lv2"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/linear-regression"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/baseline",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "기준선",
+     "@language": "ko"
+    },
+    {
+     "@value": "baseline",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "가장 단순한 답(예: 모두 다수 쪽으로 답하기)의 점수. 모델 점수와 비교하는 잣대.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w02_classification_and_regression.html#lv4"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/accuracy-trap"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/pyml_w02-fly",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "균형 옵션 모델 (정확도 0.604)",
+     "@language": "ko"
+    },
+    {
+     "@value": "option A (team fruit fly)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "정확도는 낮아도, 쿠폰을 받아야 할 사람을 찾는 게 목적이잖아.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w02_classification_and_regression.html#duel"
+   },
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/pyml_w02-robo"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/pyml_w02"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/accuracy-trap"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/pyml_w02-robo",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "기본 모델 (정확도 0.796)",
+     "@language": "ko"
+    },
+    {
+     "@value": "option B (team abacus bot)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "0.796이 0.604보다 크잖아! 큰 숫자가 이기는 거야!",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w02_classification_and_regression.html#duel"
+   },
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/pyml_w02"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/accuracy-trap"
+    }
+   ]
+  },
+  {
+   "@id": "lab:metric/pyml_w02",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "실제 이탈 손님 49명 중 미리 찾아낸 수",
+     "@language": "ko"
+    },
+    {
+     "@value": "duel metric",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w02_classification_and_regression.html#duel"
+   }
+  },
+  {
+   "@id": "lab:concept/regression-metrics",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "회귀 평가 지표",
+     "@language": "ko"
+    },
+    {
+     "@value": "regression metrics MAE RMSE and R2",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "회귀는 “얼마나 빗나갔나” — MAE · RMSE · R²",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w03_scores_and_cross_validation.html#lv3"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/knn-svm-practice"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/knn-svm-practice",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "k-NN·SVM 실습과 딥러닝 체험",
+     "@language": "ko"
+    },
+    {
+     "@value": "kNN and SVM practice and Teachable Machine",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "특별실 — 결제 데이터의 k-NN · SVM, 그리고 코드 없이 딥러닝",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w03_scores_and_cross_validation.html#lv4"
+   }
+  },
+  {
+   "@id": "lab:term/cross-validation",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "교차검증",
+     "@language": "ko"
+    },
+    {
+     "@value": "cross validation",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "데이터를 여러 묶음으로 나눠 돌아가며 시험 보고 점수의 평균과 흔들림을 보는 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w03_scores_and_cross_validation.html#lv1"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/cross-validation"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/overfitting",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "과적합",
+     "@language": "ko"
+    },
+    {
+     "@value": "overfitting",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "학습 데이터를 외워 학습 점수는 높지만 새 데이터에서 성능이 떨어지는 상태.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w03_scores_and_cross_validation.html#lv1"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/cross-validation"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/threshold",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "문턱값",
+     "@language": "ko"
+    },
+    {
+     "@value": "threshold",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "점수가 이 값 이상이면 “예”로 판정하는 기준. 바꾸면 정밀도와 재현율이 반대로 움직인다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w03_scores_and_cross_validation.html#lv2"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/precision-recall"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/one-hot-encoding",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "원-핫",
+     "@language": "ko"
+    },
+    {
+     "@value": "one hot encoding",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "글자 항목을 “그 값이면 1, 아니면 0”인 항목 여러 개로 바꾸는 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w03_scores_and_cross_validation.html#lv4"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/knn-svm-practice"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/standardization",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "표준화",
+     "@language": "ko"
+    },
+    {
+     "@value": "standardization",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "항목마다 평균 0, 표준편차 1이 되도록 눈금을 맞추는 일.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w03_scores_and_cross_validation.html#lv4"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/knn-svm-practice"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/pyml_w03-fly",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "얕은 나무 (질문 3번)",
+     "@language": "ko"
+    },
+    {
+     "@value": "option A (team fruit fly)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "질문을 줄이면 외우지 못해. 대신 새 손님에게도 통하는 질문만 남지.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w03_scores_and_cross_validation.html#duel"
+   },
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/pyml_w03-robo"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/pyml_w03"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/cross-validation"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/pyml_w03-robo",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "깊은 나무 (질문 제한 없음)",
+     "@language": "ko"
+    },
+    {
+     "@value": "option B (team abacus bot)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "학습 점수 1.000! 완벽한 모델이 지는 건 말이 안 돼!",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w03_scores_and_cross_validation.html#duel"
+   },
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/pyml_w03"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/cross-validation"
+    }
+   ]
+  },
+  {
+   "@id": "lab:metric/pyml_w03",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "5겹 교차검증 재현율 평균 (rides.csv 재실행)",
+     "@language": "ko"
+    },
+    {
+     "@value": "duel metric",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w03_scores_and_cross_validation.html#duel"
+   }
+  },
+  {
+   "@id": "lab:concept/list-scatter",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "리스트와 산점도",
+     "@language": "ko"
+    },
+    {
+     "@value": "python lists and scatter plots",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "숫자를 목록으로, 목록을 그림으로 — 리스트와 산점도",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w04_fish_market_knn.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/knn"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/sampling-bias",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "표본 쏠림과 층화 분할",
+     "@language": "ko"
+    },
+    {
+     "@value": "sampling bias and stratified split",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "순서대로 자르면 정확도 0.0 — 표본 쏠림과 비율 맞춰 나누기",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w04_fish_market_knn.html#lv3"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/feature-scaling"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/python-list",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "리스트",
+     "@language": "ko"
+    },
+    {
+     "@value": "python list",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "파이썬에서 여러 값을 순서대로 담는 목록. [10, 11, 12]처럼 쓴다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w04_fish_market_knn.html#lv1"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/list-scatter"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/sampling-bias",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "샘플링 편향",
+     "@language": "ko"
+    },
+    {
+     "@value": "sampling bias",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "표본이 한쪽으로 쏠려 전체를 대표하지 못하는 문제.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w04_fish_market_knn.html#lv3"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/sampling-bias"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/stratified-split",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "층화",
+     "@language": "ko"
+    },
+    {
+     "@value": "stratified split",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "나눌 때 종류 비율을 전체와 같게 맞추는 방법 (stratify).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w04_fish_market_knn.html#lv3"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/sampling-bias"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/kd-tree",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "KD-트리",
+     "@language": "ko"
+    },
+    {
+     "@value": "kd tree",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "이웃을 빨리 찾으려고 공간을 축마다 번갈아 반씩 나눠 둔 구조.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w04_fish_market_knn.html#lv4"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/feature-scaling"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/pyml_w04-fly",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "표준화한 KNN",
+     "@language": "ko"
+    },
+    {
+     "@value": "option A (team fruit fly)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "눈금을 맞춰야 길이도 제 목소리를 내.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w04_fish_market_knn.html#duel"
+   },
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/pyml_w04-robo"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/pyml_w04"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/feature-scaling"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/pyml_w04-robo",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "원래 단위 KNN",
+     "@language": "ko"
+    },
+    {
+     "@value": "option B (team abacus bot)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "시험 1.0이면 충분해! 숫자를 왜 바꿔?",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w04_fish_market_knn.html#duel"
+   },
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/pyml_w04"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/feature-scaling"
+    }
+   ]
+  },
+  {
+   "@id": "lab:metric/pyml_w04",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "수상한 생선을 도미로 맞혔나 (1 = 맞힘, 0 = 틀림)",
+     "@language": "ko"
+    },
+    {
+     "@value": "duel metric",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w04_fish_market_knn.html#duel"
+   }
+  },
+  {
+   "@id": "lab:concept/classifier-function",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "분류 함수와 세 가지 차이",
+     "@language": "ko"
+    },
+    {
+     "@value": "classifier as a function and three differences",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "분류는 하나의 함수 — 모델을 가르는 세 가지",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w05_one_function_rule_knn_tree.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/split-promises"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/split-promises",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "데이터 분할의 세 약속",
+     "@language": "ko"
+    },
+    {
+     "@value": "three rules of data splitting",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "분할의 세 약속 — 섞기 · 비율 맞추기 · 같은 원본은 한쪽에만",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w05_one_function_rule_knn_tree.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/decision-tree"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/model-comparison",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "모델 비교와 특성공학",
+     "@language": "ko"
+    },
+    {
+     "@value": "model comparison and feature engineering",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "같은 데이터, 같은 분할, 다른 점수 — 쉬운 짝과 어려운 짝, 그리고 특성공학",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w05_one_function_rule_knn_tree.html#lv4"
+   }
+  },
+  {
+   "@id": "lab:term/decision-boundary",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "결정 경계",
+     "@language": "ko"
+    },
+    {
+     "@value": "decision boundary",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "모델의 판정이 한 종류에서 다른 종류로 바뀌는 선.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w05_one_function_rule_knn_tree.html#lv1"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/classifier-function"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/feature-engineering",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "특성공학",
+     "@language": "ko"
+    },
+    {
+     "@value": "feature engineering",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "기존 항목을 계산·조합해 모델에 도움이 되는 새 항목을 만드는 일.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w05_one_function_rule_knn_tree.html#lv1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/feature-engineering"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/classifier-function"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/group-split",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "그룹 분할",
+     "@language": "ko"
+    },
+    {
+     "@value": "group split",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "같은 원본(사람·물건)에서 나온 여러 행을 묶음째 학습 또는 시험 한쪽에만 두는 분할.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w05_one_function_rule_knn_tree.html#lv2"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/split-promises"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/duplicate-leakage",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "쌍둥이 누출",
+     "@language": "ko"
+    },
+    {
+     "@value": "duplicate leakage",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "같은 원본의 행이 학습과 시험 양쪽에 들어가 시험 점수가 부풀려지는 문제.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w05_one_function_rule_knn_tree.html#lv2"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/split-promises"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/gini-impurity",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "지니",
+     "@language": "ko"
+    },
+    {
+     "@value": "gini impurity",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "상자 안에서 두 번 뽑아 서로 다른 종류가 나올 확률. 0이면 한 종류만.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w05_one_function_rule_knn_tree.html#lv3"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/decision-tree"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/pyml_w05-fly",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "KNN k=15 (이웃 15마리의 다수결)",
+     "@language": "ko"
+    },
+    {
+     "@value": "option A (team fruit fly)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "이웃을 넉넉히 물으면 경계가 매끄러워져서 잡음에 덜 휘둘려.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w05_one_function_rule_knn_tree.html#duel"
+   },
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/pyml_w05-robo"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/pyml_w05"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/model-comparison"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/pyml_w05-robo",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "의사결정나무 깊이 5",
+     "@language": "ko"
+    },
+    {
+     "@value": "option B (team abacus bot)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "질문을 다섯 번이나 하는데 질 리가 없지!",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w05_one_function_rule_knn_tree.html#duel"
+   },
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/pyml_w05"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/model-comparison"
+    }
+   ]
+  },
+  {
+   "@id": "lab:metric/pyml_w05",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "어려운 짝 시험 정확도 (교안 값)",
+     "@language": "ko"
+    },
+    {
+     "@value": "duel metric",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w05_one_function_rule_knn_tree.html#duel"
+   }
+  },
+  {
+   "@id": "lab:concept/linear-score",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "선형 점수식",
+     "@language": "ko"
+    },
+    {
+     "@value": "linear score function",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "점수 하나로 가르기 — z = w·x + b",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w06_logistic_perceptron_svm.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/perceptron"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/perceptron",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "퍼셉트론",
+     "@language": "ko"
+    },
+    {
+     "@value": "perceptron",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "맞다/틀리다만 보는 퍼셉트론 — 틀린 점이 0개가 되면 멈춘다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w06_logistic_perceptron_svm.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/logistic-regression"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/linear-svm",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "선형 SVM과 마진",
+     "@language": "ko"
+    },
+    {
+     "@value": "linear support vector machine and margin",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "여유 폭을 넓히는 선형 SVM — 그리고 곡선으로 가는 길",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w06_logistic_perceptron_svm.html#lv4"
+   }
+  },
+  {
+   "@id": "lab:term/bias-term",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "편향",
+     "@language": "ko"
+    },
+    {
+     "@value": "bias term",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "점수식에 더하는 상수. 결정 경계를 통째로 밀어 옮긴다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w06_logistic_perceptron_svm.html#lv1"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/linear-score"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/perceptron",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "퍼셉트론",
+     "@language": "ko"
+    },
+    {
+     "@value": "perceptron",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "점수의 부호로 판정하고 틀린 점만 고치며 가중치를 정하는 가장 오래된 선형 분류기.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w06_logistic_perceptron_svm.html#lv2"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/perceptron"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/cross-entropy",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "교차 엔트로피",
+     "@language": "ko"
+    },
+    {
+     "@value": "cross entropy",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "정답에 낮은 확률을 줄수록 크게 벌하는 손실. 로지스틱 회귀가 줄이려는 값.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w06_logistic_perceptron_svm.html#lv3"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/logistic-regression"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/margin",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "마진",
+     "@language": "ko"
+    },
+    {
+     "@value": "margin",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "결정 경계와 가장 가까운 점 사이의 거리.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w06_logistic_perceptron_svm.html#lv4"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/linear-svm"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/support-vector",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "서포트 벡터",
+     "@language": "ko"
+    },
+    {
+     "@value": "support vector",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "경계에 가장 가까워 경계 위치를 정하는 점들.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w06_logistic_perceptron_svm.html#lv4"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/linear-svm"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/hinge-loss",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "힌지 손실",
+     "@language": "ko"
+    },
+    {
+     "@value": "hinge loss",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "max(0, 1 − y·z). 맞혔어도 여유 폭 안쪽이면 벌칙을 주는 SVM의 손실.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w06_logistic_perceptron_svm.html#lv4"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/linear-svm"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/pyml_w06-fly",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "선형 SVM — 여유 폭 최대",
+     "@language": "ko"
+    },
+    {
+     "@value": "option A (team fruit fly)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "경계는 양쪽에서 가장 멀어야 해. 그래야 내일도 맞혀.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w06_logistic_perceptron_svm.html#duel"
+   },
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/pyml_w06-robo"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/pyml_w06"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/linear-svm"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/pyml_w06-robo",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "퍼셉트론 — 틀린 점 0개에서 멈춤",
+     "@language": "ko"
+    },
+    {
+     "@value": "option B (team abacus bot)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "오늘 시험 만점이면 된 거지! 더 고칠 게 없잖아!",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w06_logistic_perceptron_svm.html#duel"
+   },
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/pyml_w06"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/linear-svm"
+    }
+   ]
+  },
+  {
+   "@id": "lab:metric/pyml_w06",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "가장 가까운 점까지의 여유 폭 (클수록 좋음)",
+     "@language": "ko"
+    },
+    {
+     "@value": "duel metric",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w06_logistic_perceptron_svm.html#duel"
+   }
+  },
+  {
+   "@id": "lab:concept/multiple-regression",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "다중 선형 회귀와 잔차",
+     "@language": "ko"
+    },
+    {
+     "@value": "multiple linear regression and residuals",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "배터리 수명을 직선으로 — R² 0.904, 그런데 남은 무늬가 있다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w07_improving_models_battery.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/regularization"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/odds-ratio",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "오즈비",
+     "@language": "ko"
+    },
+    {
+     "@value": "odds ratio",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "요인이 한 단위 늘 때 오즈(확률 ÷ 나머지 확률)가 몇 배가 되는지. e^계수.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w07_improving_models_battery.html#lv1"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/odds-ratio"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/auc",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "AUC",
+     "@language": "ko"
+    },
+    {
+     "@value": "auc",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "문턱값을 끝까지 움직이며 본, 확률 순서로 두 종류를 가르는 능력. 0.5는 동전, 1은 완벽.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w07_improving_models_battery.html#lv1"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/odds-ratio"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/polynomial-regression",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "다항 회귀",
+     "@language": "ko"
+    },
+    {
+     "@value": "polynomial regression",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "특성의 제곱·곱을 새 특성으로 더해 곡선 관계를 잡는 회귀.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w07_improving_models_battery.html#lv3"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/regularization"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/regularization",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "규제",
+     "@language": "ko"
+    },
+    {
+     "@value": "regularization",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "오차에 계수 크기 벌칙을 더해 계수를 작게 눌러 과적합을 줄이는 방법 (Ridge·Lasso).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w07_improving_models_battery.html#lv3"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/regularization"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/ensemble",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "앙상블",
+     "@language": "ko"
+    },
+    {
+     "@value": "ensemble",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "여러 모델의 예측을 모아 하나로 쓰는 방법 (랜덤포레스트·부스팅).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w07_improving_models_battery.html#lv4"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/ensemble"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/epoch",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "에포크",
+     "@language": "ko"
+    },
+    {
+     "@value": "epoch",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "학습 데이터를 한 바퀴 다 보는 학습 단위. 너무 많으면 과적합.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w07_improving_models_battery.html#lv4"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/ensemble"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/pyml_w07-fly",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "다항 회귀(2차) + Ridge",
+     "@language": "ko"
+    },
+    {
+     "@value": "option A (team fruit fly)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "세 점수가 0.97대로 나란해. 외운 게 아니라 구조를 잡은 거야.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w07_improving_models_battery.html#duel"
+   },
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/pyml_w07-robo"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/pyml_w07"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/ensemble"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/pyml_w07-robo",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "랜덤포레스트 300그루",
+     "@language": "ko"
+    },
+    {
+     "@value": "option B (team abacus bot)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "학습 0.992에 나무 300그루! 큰 게 이긴다!",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w07_improving_models_battery.html#duel"
+   },
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/pyml_w07"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/ensemble"
+    }
+   ]
+  },
+  {
+   "@id": "lab:metric/pyml_w07",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "시험 R² (교안 값)",
+     "@language": "ko"
+    },
+    {
+     "@value": "duel metric",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w07_improving_models_battery.html#duel"
+   }
+  },
+  {
+   "@id": "lab:concept/midterm-map",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "중간 범위 개념 지도",
+     "@language": "ko"
+    },
+    {
+     "@value": "midterm concept map",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "1~7층 한 장 지도 — 낱말 카드로 뒤집어 보기",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w08_midterm_review.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/midterm-guide"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/midterm-guide",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "중간 과제 작성 길잡이",
+     "@language": "ko"
+    },
+    {
+     "@value": "midterm assignment guide",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "중간 과제 다섯 문항 길잡이 — 무엇을 담을지",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w08_midterm_review.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/hand-calc"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/hand-calc",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "손계산 연습",
+     "@language": "ko"
+    },
+    {
+     "@value": "hand calculation practice",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "손계산 쪽지시험 — 작은 숫자로 한 번씩",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w08_midterm_review.html#lv3"
+   }
+  },
+  {
+   "@id": "lab:term/underfitting",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "과소적합",
+     "@language": "ko"
+    },
+    {
+     "@value": "underfitting",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "모델이 너무 단순하거나 규제가 너무 세서 학습·시험 점수가 모두 낮은 상태.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w08_midterm_review.html#lv1"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/midterm-map"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/false-negative",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "거짓 음성",
+     "@language": "ko"
+    },
+    {
+     "@value": "false negative",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "실제 양성인데 음성으로 판정한 경우. 놓침.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w08_midterm_review.html#lv2"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/midterm-guide"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/pyml_w08-fly",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "모델 A — 놓침 10건 · 헛경보 120건 (정확도 87.0%)",
+     "@language": "ko"
+    },
+    {
+     "@value": "option A (team fruit fly)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "불량 하나 놓치는 게 헛경보 스무 건보다 비싸. 놓침을 줄여야 해.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w08_midterm_review.html#duel"
+   },
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/pyml_w08-robo"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/pyml_w08"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/midterm-guide"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/pyml_w08-robo",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "모델 B — 놓침 30건 · 헛경보 20건 (정확도 95.0%)",
+     "@language": "ko"
+    },
+    {
+     "@value": "option B (team abacus bot)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "정확도 95%! 87%보다 8%나 높잖아!",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w08_midterm_review.html#duel"
+   },
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/pyml_w08"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/midterm-guide"
+    }
+   ]
+  },
+  {
+   "@id": "lab:metric/pyml_w08",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "총 손실 (만 원, 작을수록 좋음)",
+     "@language": "ko"
+    },
+    {
+     "@value": "duel metric",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w08_midterm_review.html#duel"
+   }
+  },
+  {
+   "@id": "lab:concept/error-metrics",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "회귀 오차 지표",
+     "@language": "ko"
+    },
+    {
+     "@value": "MSE MAE RMSE from residuals",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "잔차에서 출발하는 세 개의 자 — MSE · MAE · RMSE",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w09_reading_regression_models.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/r-squared"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/r-squared",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "결정계수와 조정 결정계수",
+     "@language": "ko"
+    },
+    {
+     "@value": "coefficient of determination and adjusted R2",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "R²를 나눠 보기 — 전체 흩어짐 중 모델이 설명한 몫",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w09_reading_regression_models.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/coefficient-interpretation"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/coefficient-interpretation",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "회귀 계수 해석",
+     "@language": "ko"
+    },
+    {
+     "@value": "interpreting regression coefficients",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "계수를 문장으로 — p값, 원 단위 · 표준화 · 로그 계수",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w09_reading_regression_models.html#lv3"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/shap"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/shap",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "SHAP 기여도",
+     "@language": "ko"
+    },
+    {
+     "@value": "SHAP values for individual predictions",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "예측 하나를 나눠 보기 — SHAP 기여도와 해석 도구 비교",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w09_reading_regression_models.html#lv4"
+   }
+  },
+  {
+   "@id": "lab:term/mse",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "MSE",
+     "@language": "ko"
+    },
+    {
+     "@value": "mse",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "잔차 제곱의 평균. 단위가 제곱이라 주로 학습의 손실 함수로 쓴다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w09_reading_regression_models.html#lv1"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/error-metrics"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/sst",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "SST",
+     "@language": "ko"
+    },
+    {
+     "@value": "sst",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "모두 평균으로 답했을 때의 오차 제곱합. 전체 흩어짐.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w09_reading_regression_models.html#lv2"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/r-squared"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/sse",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "SSE",
+     "@language": "ko"
+    },
+    {
+     "@value": "sse",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "모델의 잔차 제곱합. 모델이 설명하지 못한 흩어짐.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w09_reading_regression_models.html#lv2"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/r-squared"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/adjusted-r2",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "조정 R²",
+     "@language": "ko"
+    },
+    {
+     "@value": "adjusted r2",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "특성 수만큼 벌점을 준 R². 쓸데없는 특성을 늘리면 떨어진다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w09_reading_regression_models.html#lv2"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/r-squared"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/p-value",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "p값",
+     "@language": "ko"
+    },
+    {
+     "@value": "p value",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "계수가 사실은 0이라면 이 정도 값이 나올 확률. 크기나 인과를 뜻하지 않는다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w09_reading_regression_models.html#lv3"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/coefficient-interpretation"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/elasticity",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "탄력성",
+     "@language": "ko"
+    },
+    {
+     "@value": "elasticity",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "X가 1% 변할 때 Y가 몇 % 변하는지. 로그-로그 모형의 계수.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w09_reading_regression_models.html#lv3"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/coefficient-interpretation"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/shap",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "SHAP",
+     "@language": "ko"
+    },
+    {
+     "@value": "shap",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "예측 하나를 평균에서 출발한 특성별 기여도의 합으로 나누는 해석 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w09_reading_regression_models.html#lv4"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/shap"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/permutation-importance",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "순열 중요도",
+     "@language": "ko"
+    },
+    {
+     "@value": "permutation importance",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "특성 하나를 무작위로 섞었을 때 점수가 얼마나 떨어지는지로 잰 중요도.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w09_reading_regression_models.html#lv4"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/shap"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/pyml_w09-fly",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "선형 회귀 OLS — 계수·p값으로 바로 설명",
+     "@language": "ko"
+    },
+    {
+     "@value": "option A (team fruit fly)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "1°C당 39 사이클 — 공장장님이 한 번에 알아듣는 모델이야.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w09_reading_regression_models.html#duel"
+   },
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/pyml_w09-robo"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/pyml_w09"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/shap"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/pyml_w09-robo",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "그래디언트부스팅 + SHAP",
+     "@language": "ko"
+    },
+    {
+     "@value": "option B (team abacus bot)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "오차가 가장 작아! 이유는 SHAP으로 나눠 보면 돼!",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w09_reading_regression_models.html#duel"
+   },
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/pyml_w09"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/shap"
+    }
+   ]
+  },
+  {
+   "@id": "lab:metric/pyml_w09",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "시험 RMSE (사이클, 작을수록 좋음)",
+     "@language": "ko"
+    },
+    {
+     "@value": "duel metric",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w09_reading_regression_models.html#duel"
+   }
+  },
+  {
+   "@id": "lab:concept/extreme-imbalance",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "극단적 불균형과 기준선",
+     "@language": "ko"
+    },
+    {
+     "@value": "extreme class imbalance and baseline",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "여행자보험 청구 1.46% — 정확도 98.54%라는 출발점",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w10_real_cases_insurance.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/rare-event-models"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/rare-event-models",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "드문 사건 모델 비교와 문턱값",
+     "@language": "ko"
+    },
+    {
+     "@value": "rare event model comparison and thresholds",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "다섯 모델과 문턱값 — 정확도 1위가 청구는 0건",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w10_real_cases_insurance.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/heavy-tail-regression"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/heavy-tail-regression",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "꼬리가 긴 타깃의 회귀",
+     "@language": "ko"
+    },
+    {
+     "@value": "regression on a heavy tailed target",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "건강보험 1,337명의 1년 의료비 — 꼬리가 긴 숫자 맞히기",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w10_real_cases_insurance.html#lv3"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/group-error"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/group-error",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "그룹별 오차와 공정성",
+     "@language": "ko"
+    },
+    {
+     "@value": "per group error and fairness",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "평균 뒤에 숨은 사람들 — 흡연자 · 비흡연자 · 고액 그룹별 오차와 공정성",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w10_real_cases_insurance.html#lv4"
+   }
+  },
+  {
+   "@id": "lab:term/extreme-imbalance",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "극단적 불균형",
+     "@language": "ko"
+    },
+    {
+     "@value": "extreme imbalance",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "한 종류가 전체의 수 % 이하로 드문 데이터. 정확도가 거의 쓸모없어진다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w10_real_cases_insurance.html#lv1"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/extreme-imbalance"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/clipping",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "클립",
+     "@language": "ko"
+    },
+    {
+     "@value": "clipping",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "너무 크거나 작은 값을 지우지 않고 정해 둔 경계값으로 눌러 두는 처리.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w10_real_cases_insurance.html#lv1"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/extreme-imbalance"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/class-weight-balanced",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "균형 가중치",
+     "@language": "ko"
+    },
+    {
+     "@value": "class weight balanced",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "드문 종류의 틀림에 더 큰 벌을 주어 모델이 드문 쪽을 무겁게 배우게 하는 설정.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w10_real_cases_insurance.html#lv2"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/rare-event-models"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/heavy-tail",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "꼬리",
+     "@language": "ko"
+    },
+    {
+     "@value": "heavy tail",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "대부분 작은 값이고 소수가 아주 큰 값인 분포의 큰 값 쪽.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w10_real_cases_insurance.html#lv3"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/heavy-tail-regression"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/fairness",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "공정성",
+     "@language": "ko"
+    },
+    {
+     "@value": "fairness",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "모델이 특정 그룹에 체계적으로 더 크게 틀리거나 불리하지 않은지에 대한 점검.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w10_real_cases_insurance.html#lv4"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/group-error"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/pyml_w10-fly",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "로지스틱 (균형 가중치) — 정확도 0.797",
+     "@language": "ko"
+    },
+    {
+     "@value": "option A (team fruit fly)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "정확도는 낮아도 청구 고객을 찾는 게 목적이야.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w10_real_cases_insurance.html#duel"
+   },
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/pyml_w10-robo"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/pyml_w10"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/rare-event-models"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/pyml_w10-robo",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "그래디언트부스팅 — 정확도 0.985",
+     "@language": "ko"
+    },
+    {
+     "@value": "option B (team abacus bot)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "정확도 0.985에 AUC 0.838! 숫자가 다 크잖아!",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w10_real_cases_insurance.html#duel"
+   },
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/pyml_w10"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/rare-event-models"
+    }
+   ]
+  },
+  {
+   "@id": "lab:metric/pyml_w10",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "실제 청구 185건 중 찾은 건수 (교안 재현율 × 185)",
+     "@language": "ko"
+    },
+    {
+     "@value": "duel metric",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w10_real_cases_insurance.html#duel"
+   }
+  },
+  {
    "@id": "lab:method/pca",
    "@type": [
     "skos:Concept",
@@ -152,35 +5269,6 @@
    ]
   },
   {
-   "@id": "lab:concept/decision-tree",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "결정 트리",
-     "@language": "ko"
-    },
-    {
-     "@value": "Decision tree",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "예/아니오 질문을 이어 나누기",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/machine_learning_model_atlas/criteria.html#p-bars"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/decision-tree"
-    }
-   ]
-  },
-  {
    "@id": "lab:method/logistic-regression",
    "@type": [
     "skos:Concept",
@@ -269,6 +5357,14 @@
      "@id": "lab:topic/knn"
     }
    ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/rule-vs-ml"
+    },
+    {
+     "@id": "lab:method/voting"
+    }
+   ],
    "lab:evaluatedOn": [
     {
      "@id": "lab:dataset/fish-market"
@@ -285,11 +5381,6 @@
    "lab:contrastsWith": [
     {
      "@id": "lab:method/logistic-regression"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/voting"
     }
    ],
    "lab:evaluatedBy": [
@@ -383,53 +5474,6 @@
    "lab:topic": [
     {
      "@id": "lab:topic/accuracy-metrics"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/regularization",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "규제",
-     "@language": "ko"
-    },
-    {
-     "@value": "regularization",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "계수에 벌점을 줘 0 쪽으로 당기기.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/machine_learning_in_3d/guide.html#kg"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/weight-decay"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/logistic-regression"
-    },
-    {
-     "@id": "lab:concept/hyperparameter"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/kernel"
-    }
-   ],
-   "lab:relatedTo": [
-    {
-     "@id": "lab:concept/generalization"
     }
    ]
   },
@@ -682,35 +5726,6 @@
    }
   },
   {
-   "@id": "lab:term/mae",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "MAE",
-     "@language": "ko"
-    },
-    {
-     "@value": "mean absolute error",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "Mean Absolute Error, 평균 절대 오차. 예측과 실제의 차이(절댓값)의 평균.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ML_model_hiring_committee/5-6_decision_tree.html#m2"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/classification-vs-regression"
-    }
-   ]
-  },
-  {
    "@id": "lab:concept/regression",
    "@type": [
     "skos:Concept",
@@ -930,40 +5945,6 @@
    ]
   },
   {
-   "@id": "lab:concept/support-vector",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "서포트 벡터",
-     "@language": "ko"
-    },
-    {
-     "@value": "support vector",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "경계 가까이 있어 경계 위치를 결정하는 데이터 점.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ML_model_hiring_committee/5-8_svm.html#series"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/svm"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/svm"
-    }
-   ]
-  },
-  {
    "@id": "lab:concept/loss",
    "@type": [
     "skos:Concept",
@@ -1074,6 +6055,11 @@
     },
     {
      "@id": "lab:method/logistic-regression"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/logistic-regression"
     }
    ]
   },
@@ -1359,6 +6345,11 @@
     {
      "@id": "lab:topic/distance-angle"
     }
+   ],
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/dot-product"
+    }
    ]
   },
   {
@@ -1544,43 +6535,6 @@
    "lab:partOf": [
     {
      "@id": "lab:method/pca"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/feature",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "특징",
-     "@language": "ko"
-    },
-    {
-     "@value": "feature",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "사진을 비교하려고 뽑은 숫자들.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ML_model_hiring_committee/5-7_random_forest.html#overview"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/feature-engineering"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/feature-engineering"
-    },
-    {
-     "@id": "lab:concept/euclidean-distance"
     }
    ]
   },
@@ -2074,38 +7028,6 @@
    ]
   },
   {
-   "@id": "lab:concept/margin",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "여유 (margin)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Margin",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "다른 종류가 같은 종류보다 얼마나 더 멀어야 벌점이 없는지 정하는 값 m.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ML_model_hiring_committee/5-8_svm.html#overview"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:method/triplet-loss"
-    },
-    {
-     "@id": "lab:method/svm"
-    }
-   ]
-  },
-  {
    "@id": "lab:concept/curse-of-dimensionality",
    "@type": [
     "skos:Concept",
@@ -2131,48 +7053,6 @@
    "lab:topic": [
     {
      "@id": "lab:topic/high-dim-geometry"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/euclidean-distance",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "유클리드 거리",
-     "@language": "ko"
-    },
-    {
-     "@value": "Euclidean distance",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "두 점 사이의 직선 거리. 칸별 차이의 제곱합의 제곱근.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ML_model_hiring_committee/5-11_hierarchical.html#pxInfo"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/distance-angle"
-    },
-    {
-     "@id": "lab:topic/knn"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/knn"
-    }
-   ],
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:concept/manhattan-distance"
     }
    ]
   },
@@ -2273,74 +7153,6 @@
    "lab:contrastsWith": [
     {
      "@id": "lab:method/logistic-regression"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/cross-validation",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "교차검증",
-     "@language": "ko"
-    },
-    {
-     "@value": "Cross-validation",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "다섯 조각으로 다섯 번 재기",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ML_model_hiring_committee/5-3_polynomial_regularization.html#overview"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/cross-validation"
-    }
-   ],
-   "lab:broader": [
-    {
-     "@id": "lab:concept/train-test-split"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/knn",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "k-최근접 이웃",
-     "@language": "ko"
-    },
-    {
-     "@value": "k-nearest neighbors",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "가장 가까운 점으로 판단하는 방법.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ML_model_hiring_committee/5-1_knn.html#utStd"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/knn"
-    }
-   ],
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:concept/decision-tree"
     }
    ]
   },
@@ -3131,35 +7943,6 @@
    "lab:topic": [
     {
      "@id": "lab:topic/deployment"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/precision-recall",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "정밀도와 재현율",
-     "@language": "ko"
-    },
-    {
-     "@value": "precision and recall",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "적은 쪽지 가운데 쓸모 있는 비율과, 쓸모 있는 말 가운데 적어 둔 비율.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ML_00_Algorithm-family-build_03/4-12_supervised_metrics.html#m2"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/precision-recall"
     }
    ]
   },
@@ -4580,31 +9363,6 @@
    ]
   },
   {
-   "@id": "lab:concept/svm",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "서포트 벡터 머신",
-     "@language": "ko"
-    },
-    {
-     "@value": "Support vector machine",
-     "@language": "en"
-    }
-   ],
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Fish_Market_Data_Machine_Learning/answers.html#a1"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/svm"
-    }
-   ]
-  },
-  {
    "@id": "lab:method/machine-learning",
    "@type": [
     "skos:Concept",
@@ -5414,6 +10172,11 @@
    "lab:partOf": [
     {
      "@id": "lab:method/residual-block"
+    }
+   ],
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/hyperplane"
     }
    ],
    "lab:prerequisiteOf": [
@@ -7014,35 +11777,6 @@
    "lab:evaluatedOn": [
     {
      "@id": "lab:dataset/digits"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/feature-map",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "무늬 지도(특징 맵)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Feature map",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "돋보기가 자리마다 매긴 점수를 모은 판.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/DL_model_hiring_committee/6-4_cnn.html#m1"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:method/cnn"
     }
    ]
   },
@@ -11459,48 +16193,6 @@
    ]
   },
   {
-   "@id": "lab:concept/train-test-split",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "학습/시험 나누기",
-     "@language": "ko"
-    },
-    {
-     "@value": "Train-test split",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "20%를 시험지로 봉인하고 80%로만 학습",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Regression_ridge_lasso/RG_ridge_lasso.html#lv1"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/data-splitting"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/cross-validation"
-    },
-    {
-     "@id": "lab:concept/data-leakage"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/optimization-layers"
-    }
-   ]
-  },
-  {
    "@id": "lab:concept/generalization",
    "@type": [
     "skos:Concept",
@@ -11906,6 +16598,11 @@
    "rdfs:isDefinedBy": {
     "@id": "https://adminmrobo.github.io/fish_market_learning_epoch_etc/02_loss_and_gradient.html#lv3"
    },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/loss-function"
+    }
+   ],
    "lab:prerequisiteOf": [
     {
      "@id": "lab:method/gradient-descent"
@@ -12701,30 +17398,6 @@
    },
    "rdfs:isDefinedBy": {
     "@id": "https://adminmrobo.github.io/fish_market_learning_epoch_etc/04_turning_the_knobs.html#lv4"
-   }
-  },
-  {
-   "@id": "lab:concept/ensemble",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "앙상블",
-     "@language": "ko"
-    },
-    {
-     "@value": "ensemble",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "여러 모형의 예측을 모아 최종 답을 만든다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/fish_market_learning_epoch_etc/05_many_shooters.html#why"
    }
   },
   {

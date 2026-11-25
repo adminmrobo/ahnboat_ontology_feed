@@ -2285,11 +2285,19 @@
     },
     {
      "@id": "lab:topic/pretrained-lm"
+    },
+    {
+     "@id": "lab:topic/transformer"
     }
    ],
    "lab:contrastsWith": [
     {
      "@id": "lab:method/bert"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/validation-loss"
     }
    ]
   },
@@ -3556,9 +3564,21 @@
      "@language": "en"
     }
    ],
+   "skos:definition": {
+    "@value": "학습에 쓰지 않은 글로 잰 손실. 학습 손실과 함께 내려가면 외우지 않고 배우는 중.",
+    "@language": "ko"
+   },
    "rdfs:isDefinedBy": {
     "@id": "https://adminmrobo.github.io/AI_Model_Review/answers.html#a3-2"
-   }
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/data-splitting"
+    },
+    {
+     "@id": "lab:topic/generalization"
+    }
+   ]
   },
   {
    "@id": "lab:concept/train-validation-split",
@@ -7024,6 +7044,11 @@
    "rdfs:isDefinedBy": {
     "@id": "https://adminmrobo.github.io/one_day_deep_learning/index.html#r3"
    },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/loss-function"
+    }
+   ],
    "lab:prerequisiteOf": [
     {
      "@id": "lab:method/gradient-descent"
@@ -12255,6 +12280,9 @@
    "lab:topic": [
     {
      "@id": "lab:topic/inner-product-orthogonality"
+    },
+    {
+     "@id": "lab:topic/linear-algebra"
     },
     {
      "@id": "lab:topic/vectors-geometry"

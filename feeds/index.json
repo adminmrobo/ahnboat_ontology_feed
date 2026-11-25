@@ -2,17 +2,30 @@
  "updated": "2026-11-26",
  "base": "https://adminmrobo.github.io/ahnboat_ontology_feed/",
  "all": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/all.xml",
+ "site": {
+  "total": 178,
+  "other_racks": [
+   {
+    "name": "연구실 운영",
+    "count": 7
+   },
+   {
+    "name": "공공·사회 프로젝트",
+    "count": 4
+   }
+  ]
+ },
  "summary": {
   "fields": 8,
-  "contents": 116,
-  "pages": 734,
-  "listed_indexed": 146,
-  "listed": 153,
-  "concepts": 5122,
-  "relations": 6254,
-  "shared": 534,
+  "contents": 130,
+  "pages": 883,
+  "listed_indexed": 160,
+  "listed": 167,
+  "concepts": 5742,
+  "relations": 6915,
+  "shared": 563,
   "domains": 18,
-  "topic_linked": 1691
+  "topic_linked": 1721
  },
  "fields": [
   {
@@ -22,10 +35,10 @@
    "rack": 1,
    "color": "#2f7d5b",
    "desc": "데이터에서 규칙을 배우는 머신러닝을 물고기 시장 데이터, 알고리즘 가계도, 모델 채용 위원회로 처음부터 익힙니다.",
-   "contents": 13,
-   "listed": 13,
-   "concepts": 397,
-   "relations": 583,
+   "contents": 15,
+   "listed": 15,
+   "concepts": 551,
+   "relations": 767,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/machine-learning.xml",
    "parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/machine-learning.xml"
@@ -46,7 +59,7 @@
    "contents": 10,
    "listed": 10,
    "concepts": 457,
-   "relations": 654,
+   "relations": 655,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/deep-learning-neuroscience.xml",
    "parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/deep-learning-neuroscience.xml"
@@ -64,10 +77,10 @@
    "rack": 3,
    "color": "#c0613a",
    "desc": "AI가 이미지를 구분하고, 동작을 알아보고, 장면을 그려 내고, 글을 읽는 방식을 긴급 미션으로 풀어 봅니다.",
-   "contents": 11,
-   "listed": 11,
-   "concepts": 471,
-   "relations": 602,
+   "contents": 15,
+   "listed": 15,
+   "concepts": 565,
+   "relations": 704,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/ai-senses-generation.xml",
    "parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/ai-senses-generation.xml"
@@ -85,10 +98,10 @@
    "rack": 4,
    "color": "#2f5f9e",
    "desc": "대형 언어모델이 답을 만들어 내는 과정과, 그것을 빠르고 싸게 서빙하는 추론 엔지니어링을 스터디로 읽습니다.",
-   "contents": 26,
-   "listed": 26,
-   "concepts": 917,
-   "relations": 1061,
+   "contents": 28,
+   "listed": 28,
+   "concepts": 953,
+   "relations": 1110,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/llm-inference-engineering.xml",
    "parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/llm-inference-engineering-p1.xml",
@@ -108,10 +121,10 @@
    "rack": 5,
    "color": "#8b5a2b",
    "desc": "경제학 이론과 경제 연구, 그리고 그 밑바탕인 최적화 모델·좌표 공간·선형대수를 함께 읽습니다. MR = MC에서 라그랑지안·해밀토니안, 벡터와 ∇까지 이어집니다.",
-   "contents": 22,
-   "listed": 23,
-   "concepts": 1007,
-   "relations": 1090,
+   "contents": 26,
+   "listed": 27,
+   "concepts": 1215,
+   "relations": 1262,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/economics-math-optimization.xml",
    "parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/economics-math-optimization-p1.xml",
@@ -133,8 +146,8 @@
    "desc": "주식시장 변동성과 가상자산 연구, 블록체인 장부, 인슈어테크 사례, 회계와 기업가치까지 금융 속의 데이터와 AI를 살펴봅니다.",
    "contents": 14,
    "listed": 19,
-   "concepts": 777,
-   "relations": 932,
+   "concepts": 799,
+   "relations": 961,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/finance-fintech-blockchain.xml",
    "parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/finance-fintech-blockchain-p1.xml",
@@ -154,10 +167,10 @@
    "rack": 7,
    "color": "#1f8a8a",
    "desc": "확률분포, 추정, 시계열, 베이지안 통계와 파이썬·판다스·데이터베이스·데이터 시각화로 데이터 분석의 기초 체력을 기릅니다.",
-   "contents": 14,
-   "listed": 14,
-   "concepts": 966,
-   "relations": 1042,
+   "contents": 16,
+   "listed": 16,
+   "concepts": 1113,
+   "relations": 1196,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/statistics-data-basics.xml",
    "parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/statistics-data-basics-p1.xml",
@@ -180,7 +193,7 @@
    "contents": 36,
    "listed": 37,
    "concepts": 1055,
-   "relations": 1207,
+   "relations": 1210,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/applied-ai.xml",
    "parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/applied-ai-p1.xml",

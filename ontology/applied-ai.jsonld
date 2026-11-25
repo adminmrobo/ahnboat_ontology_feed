@@ -9305,6 +9305,11 @@
      "@id": "lab:dataset/uci-website-phishing"
     }
    ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/data-leakage"
+    }
+   ],
    "lab:relatedTo": [
     {
      "@id": "lab:metric/f1"
@@ -21003,6 +21008,77 @@
    ]
   },
   {
+   "@id": "lab:concept/accuracy",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "정확도",
+     "@language": "ko"
+    },
+    {
+     "@value": "accuracy",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "전체 중 맞힌 비율. 불균형 데이터에서는 높게 나와도 속을 수 있음.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/industrial-accident-prediction/ch4_score.html#s1"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/class-imbalance"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/recall",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "재현율",
+     "@language": "ko"
+    },
+    {
+     "@value": "recall",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "실제 부도 기업 중 모델이 찾아낸 비율.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/industrial-accident-prediction/ch1_why.html#p12"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/precision-recall"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/class-imbalance"
+    },
+    {
+     "@id": "lab:concept/train-validation-split"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/balanced-accuracy"
+    }
+   ]
+  },
+  {
    "@id": "lab:concept/cross-validation",
    "@type": [
     "skos:Concept",
@@ -21156,45 +21232,6 @@
    "rdfs:isDefinedBy": {
     "@id": "https://adminmrobo.github.io/industrial-accident-prediction/ch1_why.html#s2"
    }
-  },
-  {
-   "@id": "lab:concept/recall",
-   "@type": [
-    "skos:Concept",
-    "lab:Metric"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "재현율",
-     "@language": "ko"
-    },
-    {
-     "@value": "Recall",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "실제 이용자 중 찾아낸 비율",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/industrial-accident-prediction/ch1_why.html#p12"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/precision-recall"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/balanced-accuracy"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/train-validation-split"
-    }
-   ]
   },
   {
    "@id": "lab:concept/classification-process",
@@ -21383,30 +21420,6 @@
      "@id": "lab:concept/correlation"
     }
    ]
-  },
-  {
-   "@id": "lab:concept/accuracy",
-   "@type": [
-    "skos:Concept",
-    "lab:Metric"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "정확도",
-     "@language": "ko"
-    },
-    {
-     "@value": "Accuracy",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "전체 중 맞힌 비율",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/industrial-accident-prediction/ch4_score.html#s1"
-   }
   },
   {
    "@id": "lab:concept/precision",
@@ -26716,9 +26729,21 @@
      "@language": "en"
     }
    ],
+   "skos:definition": {
+    "@value": "학습에 쓰지 않은 글로 잰 손실. 학습 손실과 함께 내려가면 외우지 않고 배우는 중.",
+    "@language": "ko"
+   },
    "rdfs:isDefinedBy": {
     "@id": "https://adminmrobo.github.io/how_to_make_ai_model_factory_version/classifier.html#w8"
-   }
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/data-splitting"
+    },
+    {
+     "@id": "lab:topic/generalization"
+    }
+   ]
   },
   {
    "@id": "lab:concept/weight",
@@ -26997,6 +27022,11 @@
    "rdfs:isDefinedBy": {
     "@id": "https://adminmrobo.github.io/how_to_make_ai_model_factory_version/classifier.html#w5"
    },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/loss-function"
+    }
+   ],
    "lab:prerequisiteOf": [
     {
      "@id": "lab:method/gradient-descent"
@@ -27326,6 +27356,10 @@
      "@language": "en"
     }
    ],
+   "skos:definition": {
+    "@value": "로지스틱 회귀의 두 얼굴 — 회귀처럼 계산하고 분류처럼 판정한다",
+    "@language": "ko"
+   },
    "rdfs:isDefinedBy": {
     "@id": "https://adminmrobo.github.io/how_to_make_ai_model_factory_version/blast.html#logit"
    }
@@ -27727,6 +27761,11 @@
    "rdfs:isDefinedBy": {
     "@id": "https://adminmrobo.github.io/how_to_make_ai_model_factory_version/classifier.html#w9"
    },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/pretrained-lm"
+    }
+   ],
    "lab:prerequisiteOf": [
     {
      "@id": "lab:method/full-fine-tuning"
@@ -29651,6 +29690,35 @@
    "lab:partOf": [
     {
      "@id": "lab:method/svm"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/normalization",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "정규화(첫날=100)",
+     "@language": "ko"
+    },
+    {
+     "@value": "normalization to base 100",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "출발점이 다른 숫자를 비교할 때는 \"첫날 = 100\"으로 맞춘 뒤 그린다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/generative-ai-prompt-strategy/07_character_prompt.html#lv1"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:method/six-element-prompt"
     }
    ]
   },
@@ -31668,35 +31736,6 @@
    ],
    "skos:definition": {
     "@value": "글과 기준 그림을 함께 넣어 지시하는 방식.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/generative-ai-prompt-strategy/07_character_prompt.html#lv1"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:method/six-element-prompt"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/normalization",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "정규화 출력",
-     "@language": "ko"
-    },
-    {
-     "@value": "normalized output",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "느슨한 요청을 정해진 형식의 정밀한 지시문으로 바꾸는 것.",
     "@language": "ko"
    },
    "rdfs:isDefinedBy": {

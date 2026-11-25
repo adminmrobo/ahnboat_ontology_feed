@@ -12,6 +12,1462 @@
  "dct:creator": "안상선 (Ahn Sangsun)",
  "@graph": [
   {
+   "@id": "lab:concept/sparse-vs-dense",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "희소 표현과 밀집 표현",
+     "@language": "ko"
+    },
+    {
+     "@value": "sparse vs dense word representations",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "어휘 크기만큼 차원이 늘고 대부분이 0인 원핫(희소) 표현과, 낮은 고정 차원에 의미 정보를 압축한 워드 임베딩(밀집) 표현의 비교.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/graph_theory_lab/02_representations.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/embedding-pipeline"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/degree-handshake",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "차수와 악수 정리",
+     "@language": "ko"
+    },
+    {
+     "@value": "degree and handshake lemma",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "점에 붙은 선의 수를 차수라 하고, 모든 차수의 합은 선 수의 두 배와 같다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/graph_theory_lab/01_graph_fundamentals.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/graph-kinds"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/graph-kinds",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "방향·무게 있는 그래프",
+     "@language": "ko"
+    },
+    {
+     "@value": "directed and weighted graphs",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "선에 방향(화살표)이나 무게(숫자)를 붙인 그래프. 차수도 들어오는/나가는 차수, 가중 차수로 나눠 센다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/graph_theory_lab/01_graph_fundamentals.html#lv2"
+   }
+  },
+  {
+   "@id": "lab:concept/adjacency-representations",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "인접 리스트·인접 행렬·선 목록",
+     "@language": "ko"
+    },
+    {
+     "@value": "adjacency list, adjacency matrix, edge list",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "같은 그래프를 점별 이웃 목록, n×n의 0/1 표, 선 한 줄씩의 목록으로 적는 세 가지 저장 방식.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/graph_theory_lab/02_representations.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/sparse-vs-dense"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/walk-trail-path",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "걷기·트레일·경로·사이클",
+     "@language": "ko"
+    },
+    {
+     "@value": "walk, trail, path, cycle",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "그래프 위의 길을 겹침 조건으로 나눈 이름. 트레일은 선이, 경로는 점이 겹치지 않고, 사이클은 출발점으로 돌아오는 경로.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/graph_theory_lab/03_paths_connectivity.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/connected-components"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/connected-components",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "연결 그래프와 연결 요소",
+     "@language": "ko"
+    },
+    {
+     "@value": "connectivity and connected components",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "모든 두 점 사이에 경로가 있으면 연결 그래프, 서로 경로가 있는 점들의 최대 덩어리를 연결 요소라 한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/graph_theory_lab/03_paths_connectivity.html#lv2"
+   }
+  },
+  {
+   "@id": "lab:concept/tree",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "트리",
+     "@language": "ko"
+    },
+    {
+     "@value": "tree",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "사이클이 없는 연결 그래프. 점 n개면 선 n − 1개, 두 점 사이 경로는 하나뿐이다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/graph_theory_lab/04_trees.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/spanning-tree-mst"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/spanning-tree-mst",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "신장 트리와 최소 신장 트리",
+     "@language": "ko"
+    },
+    {
+     "@value": "spanning tree and minimum spanning tree",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "그래프의 모든 점을 잇는 트리 모양 부분 그래프. 무게 합이 가장 작은 것이 최소 신장 트리이며 크루스칼 방법으로 찾는다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/graph_theory_lab/04_trees.html#lv2"
+   }
+  },
+  {
+   "@id": "lab:concept/eulerian",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "오일러 회로와 트레일",
+     "@language": "ko"
+    },
+    {
+     "@value": "Eulerian circuit and trail",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "모든 선을 정확히 한 번씩 지나는 닫힌 길(회로)·열린 길(트레일). 연결 그래프에서 홀수 차수 점이 0개면 회로, 2개면 트레일이 있다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/graph_theory_lab/05_euler_hamilton.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/hamiltonian"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/hamiltonian",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "해밀턴 사이클",
+     "@language": "ko"
+    },
+    {
+     "@value": "Hamiltonian cycle",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "모든 점을 정확히 한 번씩 지나 출발점으로 돌아오는 사이클. 존재 판정에 알려진 빠른 방법이 없다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/graph_theory_lab/05_euler_hamilton.html#lv2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/hamiltonian"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/planar-graph",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "평면 그래프와 오일러 공식",
+     "@language": "ko"
+    },
+    {
+     "@value": "planar graph and Euler formula",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "선이 엇갈리지 않게 평면에 그릴 수 있는 그래프. 연결된 평면 그래프는 V − E + F = 2를 만족하고 E ≤ 3V − 6이다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/graph_theory_lab/06_planarity_coloring.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/graph-coloring"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/graph-coloring",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "그래프 색칠과 채색수",
+     "@language": "ko"
+    },
+    {
+     "@value": "graph coloring and chromatic number",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "이어진 점끼리 다른 색을 칠하는 것. 필요한 가장 적은 색 수를 채색수 χ(G)라 한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/graph_theory_lab/06_planarity_coloring.html#lv2"
+   }
+  },
+  {
+   "@id": "lab:concept/matching",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "매칭과 최대 매칭",
+     "@language": "ko"
+    },
+    {
+     "@value": "matching and maximum matching",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "끝점을 공유하지 않는 선들의 모음. 늘리는 길을 찾아 짝을 뒤집으며 최대 매칭을 찾는다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/graph_theory_lab/07_matching_flow.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/max-flow-min-cut"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/max-flow-min-cut",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "최대 흐름 최소 절단",
+     "@language": "ko"
+    },
+    {
+     "@value": "max-flow min-cut",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "용량 제한과 흐름 보존을 지키는 s–t 흐름의 최댓값은 s와 t를 가르는 자르는 선의 용량 합의 최솟값과 같다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/graph_theory_lab/07_matching_flow.html#lv2"
+   }
+  },
+  {
+   "@id": "lab:concept/dijkstra",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "다익스트라 최단 경로",
+     "@language": "ko"
+    },
+    {
+     "@value": "Dijkstra shortest path",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "무게가 0 이상인 그래프에서 대기 줄의 가장 가까운 점부터 확정하고 이웃 거리를 고쳐 출발점에서 모든 점까지 최단 거리를 구하는 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/graph_theory_lab/08_shortest_paths.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/bfs"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/bfs",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "너비 우선 탐색(BFS)",
+     "@language": "ko"
+    },
+    {
+     "@value": "breadth-first search",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "출발점에서 가까운 점부터 한 겹씩 방문하는 탐색. 무게가 같은 그래프에서 최단 걸음 수를 구한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/graph_theory_lab/08_shortest_paths.html#lv2"
+   }
+  },
+  {
+   "@id": "lab:concept/adjacency-spectrum",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "인접 행렬 스펙트럼",
+     "@language": "ko"
+    },
+    {
+     "@value": "adjacency spectrum",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "인접 행렬의 고윳값 모음. 합은 0, 제곱의 합은 선 수의 두 배이며, 좌우 대칭이면 이분 그래프이다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/graph_theory_lab/09_spectral_graph_theory.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/laplacian-fiedler"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/laplacian-fiedler",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "라플라시안과 둘째 고윳값",
+     "@language": "ko"
+    },
+    {
+     "@value": "graph Laplacian and Fiedler value",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "L = D − A의 고윳값 0의 개수는 연결 요소 수와 같고, 둘째로 작은 고윳값과 그 고유벡터로 그래프를 두 무리로 나눈다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/graph_theory_lab/09_spectral_graph_theory.html#lv2"
+   }
+  },
+  {
+   "@id": "lab:method/gpt",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "GPT",
+     "@language": "ko"
+    },
+    {
+     "@value": "generative pre-trained transformer",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "생성형 사전훈련 트랜스포머. 디코더로 다음 단어를 차례로 예측.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/karpathy_method_korean/index.html#c4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/autoregressive-generation"
+    },
+    {
+     "@id": "lab:topic/pretrained-lm"
+    },
+    {
+     "@id": "lab:topic/transformer"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/gpt-bert"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/bert"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/rebuild-from-scratch"
+    },
+    {
+     "@id": "lab:method/semantic-search"
+    }
+   ],
+   "lab:evaluatedOn": [
+    {
+     "@id": "lab:dataset/tiny-shakespeare"
+    },
+    {
+     "@id": "lab:dataset/nsmc"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/validation-loss"
+    }
+   ],
+   "lab:broader": [
+    {
+     "@id": "lab:concept/llm"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/learning-rate",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "학습률",
+     "@language": "ko"
+    },
+    {
+     "@value": "Learning rate",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "새 나무의 예측을 반영하는 배수.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/karpathy_method_korean/index.html#c1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/gradient-descent"
+    },
+    {
+     "@id": "lab:topic/learning-rate-schedule"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/gradient-descent"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/backpropagation",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "역전파",
+     "@language": "ko"
+    },
+    {
+     "@value": "Backpropagation",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "출력의 오차를 누구 책임인가에 따라 거꾸로 나눠 주는 계산.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/karpathy_method_korean/index.html#c1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/backpropagation"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/mlp"
+    }
+   ],
+   "lab:solves": [
+    {
+     "@id": "lab:concept/gradient"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/gradient-descent"
+    },
+    {
+     "@id": "lab:concept/next-token-prediction"
+    }
+   ]
+  },
+  {
+   "@id": "lab:metric/validation-loss",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "검증 손실",
+     "@language": "ko"
+    },
+    {
+     "@value": "Validation loss",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "학습에 쓰지 않은 글로 잰 손실. 학습 손실과 함께 내려가면 외우지 않고 배우는 중.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/karpathy_method_korean/index.html#c4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/data-splitting"
+    },
+    {
+     "@id": "lab:topic/generalization"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/gradient-descent",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "경사하강법",
+     "@language": "ko"
+    },
+    {
+     "@value": "Gradient descent",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "예측 → 오차 → 책임 나누기 → 반대 방향으로 조금 옮기기를 반복한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/karpathy_method_korean/index.html#c1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/gradient-descent"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/perceptron"
+    },
+    {
+     "@id": "lab:method/logistic-regression"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/backpropagation"
+    }
+   ],
+   "lab:hasPart": [
+    {
+     "@id": "lab:concept/learning-rate"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/gradient"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/cross-entropy-loss",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "손실(교차 엔트로피)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Cross-entropy loss",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "정답에 준 확률이 낮을수록 커지는 벌점. L = −Σ y log ŷ.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/karpathy_method_korean/index.html#c2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/loss-function"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/gradient-descent"
+    },
+    {
+     "@id": "lab:concept/loss-as-candidates"
+    }
+   ],
+   "lab:broader": [
+    {
+     "@id": "lab:concept/loss-function"
+    },
+    {
+     "@id": "lab:concept/loss"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/pretraining",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "사전학습",
+     "@language": "ko"
+    },
+    {
+     "@value": "Pretraining",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "큰 데이터로 먼저 배워 두는 단계. 미세조정의 출발점.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/karpathy_method_korean/index.html#c7"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/pretrained-lm"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/sft"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/chatbot-pipeline"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/next-token-prediction",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "다음 단어 맞히기",
+     "@language": "ko"
+    },
+    {
+     "@value": "next-token prediction",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "앞 글을 보고 다음 토큰을 맞히며 배우는 언어모델의 기본 학습.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/karpathy_method_korean/index.html#c2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/autoregressive-generation"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/property-induction"
+    },
+    {
+     "@id": "lab:method/bpe"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/attention",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "어텐션",
+     "@language": "ko"
+    },
+    {
+     "@value": "attention",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "질의와 키의 맞음 정도로 가중치를 정해 값들을 가중 평균하는 계산.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/karpathy_method_korean/index.html#c4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/attention-mechanism"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/scaled-dot-product-attention"
+    },
+    {
+     "@id": "lab:method/gpt"
+    },
+    {
+     "@id": "lab:concept/quadratic-cost"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/bpe",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "바이트 쌍 인코딩",
+     "@language": "ko"
+    },
+    {
+     "@value": "byte-pair encoding",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "자주 붙어 나오는 글자 조각을 묶어 토큰을 만드는 방법. 영-독 공용 어휘 약 37000.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/karpathy_method_korean/index.html#c3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/tokenization"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/transformer"
+    },
+    {
+     "@id": "lab:concept/token"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/rustbpe"
+    }
+   ],
+   "lab:evaluatedOn": [
+    {
+     "@id": "lab:dataset/nsmc"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/gpt"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/autograd-engine",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "자동 미분 엔진(micrograd)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Autograd engine (micrograd)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "약 150줄 파이썬으로 만든, 계산 과정을 기억해 두었다가 역전파를 자동으로 해 주는 엔진.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/karpathy_method_korean/index.html#c1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/backpropagation"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/backpropagation"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/sentiment-classification",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "감성 분류",
+     "@language": "ko"
+    },
+    {
+     "@value": "Sentiment classification",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "리뷰가 긍정인지 부정인지 맞히는 분류.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/karpathy_method_korean/index.html#c1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/supervised-learning"
+    }
+   ],
+   "lab:evaluatedOn": [
+    {
+     "@id": "lab:dataset/nsmc"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:method/autograd-engine"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/bigram-model",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "바이그램 모델",
+     "@language": "ko"
+    },
+    {
+     "@value": "Bigram model",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "바로 앞 글자 하나만 보고 다음 글자를 세어서 고르는 가장 단순한 언어모델.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/karpathy_method_korean/index.html#c2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/autoregressive-generation"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/next-token-prediction"
+    }
+   ],
+   "lab:evaluatedOn": [
+    {
+     "@id": "lab:dataset/names"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:concept/cross-entropy-loss"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/loss-as-candidates",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "후보 수로 읽는 손실",
+     "@language": "ko"
+    },
+    {
+     "@value": "Loss read as number of candidates",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "e를 손실만큼 거듭제곱하면 몇 개 중 하나를 고르는 셈인지가 나온다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/karpathy_method_korean/index.html#c2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/information-theory"
+    },
+    {
+     "@id": "lab:topic/loss-function"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/vocab-size",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "사전 크기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Vocabulary size",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "토크나이저가 가진 토큰 종류의 수. 한국어는 크게 잡아야 글자가 쪼개지지 않는다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/karpathy_method_korean/index.html#c3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/tokenization"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/bpe"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/token-cost",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "토큰 비용",
+     "@language": "ko"
+    },
+    {
+     "@value": "Token cost",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "AI 서비스 요금과 길이 제한은 토큰 수로 센다. 같은 문장도 토크나이저에 따라 토큰 수가 달라진다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/karpathy_method_korean/index.html#c3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/monitoring"
+    },
+    {
+     "@id": "lab:topic/tokenization"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:metric/chars-per-token"
+    }
+   ]
+  },
+  {
+   "@id": "lab:metric/chars-per-token",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "토큰당 글자 수(압축비)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Characters per token",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "원래 글자(바이트) 수를 토큰 수로 나눈 값.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/karpathy_method_korean/index.html#c3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/tokenization"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/rebuild-from-scratch",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "빈 파일부터 다시 짜기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Rebuilding from scratch",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "완성품을 한 단계씩 다시 만들어, 같은 결과에 도착하는지로 이해를 확인하는 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/karpathy_method_korean/index.html#c5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/reproducibility"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/pure-c-training"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/validation-loss"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/pure-c-training",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "순수 C로 학습하기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Training in pure C",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "도구 없이 앞으로 계산과 거꾸로 계산을 모두 C로 직접 적어 GPT를 학습하는 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/karpathy_method_korean/index.html#c6"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/deployment"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/chatbot-pipeline"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/chatbot-pipeline",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "챗봇 전 공정(speedrun)",
+     "@language": "ko"
+    },
+    {
+     "@value": "End-to-end chatbot pipeline",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "토크나이저 학습 → 사전학습 → 미세조정 → 평가 → 채팅 화면을 한 번에 돌리는 공정.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/karpathy_method_korean/index.html#c7"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/pretrained-lm"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:concept/gpu-rental-cost"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/sft",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "미세조정(SFT)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Supervised fine-tuning",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "질문-답 예시로 대화 말투를 가르치는 단계.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/karpathy_method_korean/index.html#c7"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/transfer-learning"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/chatbot-pipeline"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/gpu-rental-cost",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "GPU 대여 비용",
+     "@language": "ko"
+    },
+    {
+     "@value": "GPU rental cost",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "GPU 수 × 시간당 대여료 × 시간.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/karpathy_method_korean/index.html#c7"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/deployment"
+    }
+   ]
+  },
+  {
+   "@id": "lab:dataset/nsmc",
+   "@type": [
+    "skos:Concept",
+    "lab:Dataset"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "네이버 영화 리뷰(NSMC)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Naver Sentiment Movie Corpus",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "네이버 영화 리뷰 20만 개와 긍정·부정 표시를 모은 공개 데이터(CC0).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/karpathy_method_korean/index.html#kosum"
+   }
+  },
+  {
+   "@id": "lab:dataset/tiny-shakespeare",
+   "@type": [
+    "skos:Concept",
+    "lab:Dataset"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "셰익스피어 글 111만 자",
+     "@language": "ko"
+    },
+    {
+     "@value": "Tiny Shakespeare",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/karpathy_method_korean/index.html#c4"
+   }
+  },
+  {
+   "@id": "lab:dataset/names",
+   "@type": [
+    "skos:Concept",
+    "lab:Dataset"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "영어 이름 32,033개",
+     "@language": "ko"
+    },
+    {
+     "@value": "names.txt",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/karpathy_method_korean/index.html#c2"
+   }
+  },
+  {
+   "@id": "lab:method/rustbpe",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "rustbpe(빠른 BPE)",
+     "@language": "ko"
+    },
+    {
+     "@value": "rustbpe",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "nanochat이 쓰는, 같은 BPE 방식을 Rust로 빠르게 구현한 토크나이저 학습기.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/karpathy_method_korean/index.html#duel"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/tokenization"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/chars-per-token"
+    }
+   ]
+  },
+  {
    "@id": "lab:concept/prompt",
    "@type": [
     "skos:Concept",
@@ -2094,58 +3550,6 @@
    ]
   },
   {
-   "@id": "lab:method/gpt",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "GPT",
-     "@language": "ko"
-    },
-    {
-     "@value": "generative pre-trained transformer",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "생성형 사전훈련 트랜스포머. 디코더로 다음 단어를 차례로 예측.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/LLM_summary_note/index.html#r11"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/autoregressive-generation"
-    },
-    {
-     "@id": "lab:topic/pretrained-lm"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/gpt-bert"
-    }
-   ],
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:method/bert"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/semantic-search"
-    }
-   ],
-   "lab:broader": [
-    {
-     "@id": "lab:concept/llm"
-    }
-   ]
-  },
-  {
    "@id": "lab:method/bert",
    "@type": [
     "skos:Concept",
@@ -2363,6 +3767,9 @@
    "lab:evaluatedBy": [
     {
      "@id": "lab:metric/accuracy"
+    },
+    {
+     "@id": "lab:concept/cross-entropy-loss"
     },
     {
      "@id": "lab:metric/f1"
@@ -4578,14 +5985,17 @@
      "@id": "lab:concept/train-test-split"
     }
    ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/validation-loss"
+    },
+    {
+     "@id": "lab:metric/mae"
+    }
+   ],
    "lab:relatedTo": [
     {
      "@id": "lab:concept/benchmark-contamination"
-    }
-   ],
-   "lab:evaluatedBy": [
-    {
-     "@id": "lab:metric/mae"
     }
    ]
   },
@@ -4628,6 +6038,9 @@
     }
    ],
    "lab:contrastsWith": [
+    {
+     "@id": "lab:concept/cross-entropy-loss"
+    },
     {
      "@id": "lab:metric/f1-score"
     }
@@ -4826,50 +6239,6 @@
    ]
   },
   {
-   "@id": "lab:method/backpropagation",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "역전파",
-     "@language": "ko"
-    },
-    {
-     "@value": "Backpropagation",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "출력의 오차를 누구 책임인가에 따라 거꾸로 나눠 주는 계산.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-3_deep_learning.html#s4"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/backpropagation"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/mlp"
-    }
-   ],
-   "lab:solves": [
-    {
-     "@id": "lab:concept/gradient"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/gradient-descent"
-    }
-   ]
-  },
-  {
    "@id": "lab:concept/sigmoid",
    "@type": [
     "skos:Concept",
@@ -4940,6 +6309,11 @@
     },
     {
      "@id": "lab:method/gradient-descent"
+    }
+   ],
+   "lab:broader": [
+    {
+     "@id": "lab:concept/cross-entropy-loss"
     }
    ]
   },
@@ -5015,53 +6389,6 @@
    "lab:partOf": [
     {
      "@id": "lab:concept/rule-journey"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/gradient-descent",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "경사하강법",
-     "@language": "ko"
-    },
-    {
-     "@value": "Gradient descent",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "예측 → 오차 → 책임 나누기 → 반대 방향으로 조금 옮기기를 반복한다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-2_machine_learning.html#s4"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/gradient-descent"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/perceptron"
-    },
-    {
-     "@id": "lab:method/logistic-regression"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/backpropagation"
-    }
-   ],
-   "lab:relatedTo": [
-    {
-     "@id": "lab:concept/gradient"
     }
    ]
   },
@@ -5562,43 +6889,6 @@
    "lab:partOf": [
     {
      "@id": "lab:concept/reinforcement-learning"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/bpe",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "바이트 쌍 인코딩",
-     "@language": "ko"
-    },
-    {
-     "@value": "byte-pair encoding",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "자주 붙어 나오는 글자 조각을 묶어 토큰을 만드는 방법. 영-독 공용 어휘 약 37000.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-5_word_vectors.html#s7"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/tokenization"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/transformer"
-    },
-    {
-     "@id": "lab:concept/token"
     }
    ]
   },
@@ -7549,31 +8839,6 @@
    ]
   },
   {
-   "@id": "lab:concept/token-cost",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "토큰 비용",
-     "@language": "ko"
-    },
-    {
-     "@value": "Token cost",
-     "@language": "en"
-    }
-   ],
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/rulebase_to_agent/2-4_orchestration.html#s3"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/monitoring"
-    }
-   ]
-  },
-  {
    "@id": "lab:concept/coupling",
    "@type": [
     "skos:Concept",
@@ -8490,35 +9755,6 @@
    ],
    "skos:definition": {
     "@value": "데이터에 직접 적혀 있지 않지만 함께 나오는 성질로 드러나는 무리·하위 무리의 계층 구조.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/iclr2027_top3_lab_review/index.html#lv3"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/property-induction"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/next-token-prediction",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "다음 단어 맞히기",
-     "@language": "ko"
-    },
-    {
-     "@value": "next-token prediction",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "앞 글을 보고 다음 토큰을 맞히며 배우는 언어모델의 기본 학습.",
     "@language": "ko"
    },
    "rdfs:isDefinedBy": {
@@ -11154,38 +12390,6 @@
    "rdfs:isDefinedBy": {
     "@id": "https://adminmrobo.github.io/inference_engineering_study/week_02_article_01/01_transformer.html#q"
    }
-  },
-  {
-   "@id": "lab:concept/attention",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "어텐션",
-     "@language": "ko"
-    },
-    {
-     "@value": "attention",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "질의와 키의 맞음 정도로 가중치를 정해 값들을 가중 평균하는 계산.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/inference_engineering_study/week_02_article_01/01_transformer.html#r1"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/scaled-dot-product-attention"
-    },
-    {
-     "@id": "lab:concept/quadratic-cost"
-    }
-   ]
   },
   {
    "@id": "lab:method/scaled-dot-product-attention",
@@ -20062,35 +21266,6 @@
    ]
   },
   {
-   "@id": "lab:concept/sparse-vs-dense",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "희소 표현과 밀집 표현",
-     "@language": "ko"
-    },
-    {
-     "@value": "sparse vs dense word representations",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "어휘 크기만큼 차원이 늘고 대부분이 0인 원핫(희소) 표현과, 낮은 고정 차원에 의미 정보를 압축한 워드 임베딩(밀집) 표현의 비교.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai-nlp-data-analysis/04-1_embedding_overview.html#lv2"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/embedding-pipeline"
-    }
-   ]
-  },
-  {
    "@id": "lab:method/embedding-pipeline",
    "@type": [
     "skos:Concept",
@@ -22256,6 +23431,9 @@
    "lab:partOf": [
     {
      "@id": "lab:concept/classification-metrics"
+    },
+    {
+     "@id": "lab:concept/precision-recall"
     }
    ]
   },
@@ -22285,6 +23463,9 @@
    "lab:partOf": [
     {
      "@id": "lab:concept/classification-metrics"
+    },
+    {
+     "@id": "lab:concept/precision-recall"
     }
    ]
   },
@@ -27027,6 +28208,11 @@
    "rdfs:isDefinedBy": {
     "@id": "https://adminmrobo.github.io/LLM_evaluation/llm_evaluation.html#lv1"
    },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/data-leakage"
+    }
+   ],
    "lab:relatedTo": [
     {
      "@id": "lab:metric/f1"
@@ -27069,6 +28255,11 @@
    "lab:contrastsWith": [
     {
      "@id": "lab:concept/test-set-protection"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/precision-recall"
     }
    ]
   },
