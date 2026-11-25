@@ -1,0 +1,7 @@
+/* ahnboat lab 도구함 공통 메뉴 */
+.labnav{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin:0 0 18px;padding:8px 10px;border:2px solid #1f2224;border-radius:14px;background:#fbfaf7;box-shadow:3px 3px 0 #1f2224;font-size:14px}
+.labnav a{color:#1f2224;text-decoration:none;padding:4px 12px;border-radius:99px;border:1.5px solid transparent;white-space:nowrap}
+.labnav a:first-child{font-weight:700;margin-right:auto}
+.labnav a:hover{border-color:#1f2224}
+.labnav a.on{background:#1f2224;color:#fff}
+@media (max-width:640px){.labnav a:first-child{flex-basis:100%;margin-right:0}}

@@ -473,7 +473,10 @@ def write_llms(index):
             out.append("  - 한 번에 읽기 어려우면 나눔 파일: " + " · ".join(f["parts"]))
     out += ["", "## 전체", "", "- [전체 분야 요약](%s): 개념 이름만 담은 가벼운 피드" % index["all"],
             "- [분야 목록 JSON](%sfeeds/index.json)" % index["base"],
-            "- [지시문 생성 페이지](%s)" % index["base"], ""]
+            "", "## 도구 (사람이 쓰는 페이지)", "",
+            "- [연구실 도구함](%s): 도구 목록" % index["base"],
+            "- [아이디어 검증하기](%scheck/): 분야를 고르고 아이디어를 쓰면 이 피드를 근거로 AI에게 검증을 맡기는 지시문을 만든다" % index["base"],
+            "- [결과물 평가하기](%sreview/): 아이디어·논문·제안서·사내 개선안·강의안·도안을 기준표(%srubrics/)로 채점하는 지시문을 만들고 AI 점수를 다시 확인한다" % (index["base"], index["base"]), ""]
     with open(os.path.join(ROOT, "llms.txt"), "w", encoding="utf-8") as f:
         f.write("\n".join(out))
 

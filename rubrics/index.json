@@ -1,0 +1,52 @@
+{
+ "types": [
+  {
+   "id": "idea",
+   "name": "아이디어",
+   "icon": "asst_spark",
+   "what": "아직 문서로 다듬기 전의 아이디어·구상 메모",
+   "file": "idea.json",
+   "n": 6
+  },
+  {
+   "id": "paper",
+   "name": "논문",
+   "icon": "sia_explain",
+   "what": "학술 논문·학위논문 원고(초고 포함)",
+   "file": "paper.json",
+   "n": 6
+  },
+  {
+   "id": "proposal",
+   "name": "제안서",
+   "icon": "moa_report",
+   "what": "연구과제·사업·공모전 제안서, 계획서",
+   "file": "proposal.json",
+   "n": 6
+  },
+  {
+   "id": "improvement",
+   "name": "사내 개선안",
+   "icon": "moa_guide",
+   "what": "업무·공정·제도 개선 제안, 사내 혁신 공모안",
+   "file": "improvement.json",
+   "n": 6
+  },
+  {
+   "id": "lecture",
+   "name": "강의안",
+   "icon": "sia_proud",
+   "what": "강의 교안·슬라이드·실습 자료·해설 페이지",
+   "file": "lecture.json",
+   "n": 9
+  },
+  {
+   "id": "design",
+   "name": "도안",
+   "icon": "moa_sparkle",
+   "what": "화면·포스터·도면 시안 등 디자인 결과물",
+   "file": "design.json",
+   "n": 7
+  }
+ ]
+}

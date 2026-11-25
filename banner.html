@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>내 아이디어 검증하기 — ahnboat.xyz 바로가기 배너</title>
-<meta name="description" content="ahnboat.xyz 홈페이지에 끼워 넣는 '내 아이디어 검증하기' 바로가기 배너 — 하루·시아·모아가 안내하고, 박사는 자는 중">
+<title>연구실 도구함 — ahnboat.xyz 바로가기 배너</title>
+<meta name="description" content="ahnboat.xyz 홈페이지에 끼워 넣는 '연구실 도구함' 바로가기 배너 — 하루·시아·모아가 안내하고, 박사는 자는 중">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;700&family=IBM+Plex+Mono:wght@500;700&display=swap">
@@ -65,11 +65,11 @@ h2{margin:0;font-size:clamp(1.6rem,3.4vw,2.5rem);line-height:1.15;letter-spacing
 <div class="wrap">
   <a class="ban" id="ban" href="https://adminmrobo.github.io/ahnboat_ontology_feed/" target="_blank" rel="noopener">
     <div class="btext">
-      <p class="kicker">IDEA CHECK · ONTOLOGY FEED</p>
-      <h2 id="tTitle">내 아이디어 검증하기</h2>
-      <p class="tag" id="tTag">연구실 개념 지도를 근거로, 생성 AI에게 출처 있는 검증을 받아 보세요.</p>
+      <p class="kicker">LAB TOOLBOX · IDEA CHECK · REVIEW</p>
+      <h2 id="tTitle">연구실 도구함</h2>
+      <p class="tag" id="tTag">아이디어 검증하기 · 결과물 평가하기 — 연구실 개념 지도를 근거로 생성 AI를 믿을 만하게 쓰는 도구들.</p>
       <p class="stat" id="tStat"></p>
-      <p class="who" id="tWho">하루·시아·모아가 안내합니다. 박사는 이걸 만드느라 밤을 새워 자는 중이에요.</p>
+      <p class="who" id="tWho">하루·시아·모아가 튜토리얼로 안내합니다. 박사는 도구함까지 만드느라 또 밤을 새워 자는 중이에요.</p>
       <span class="go"><span id="tGo">바로 가기</span> →</span>
     </div>
     <div class="crew" id="crew">
@@ -101,24 +101,24 @@ h2{margin:0;font-size:clamp(1.6rem,3.4vw,2.5rem);line-height:1.15;letter-spacing
   var q = new URLSearchParams(location.search).get("lang");
   var lang = ok(q) ? q : (ok(stored()) ? stored() : "ko");
   var S = {
-    title: {ko:"내 아이디어 검증하기", en:"Check Your Idea", zh:"验证我的想法", ja:"アイデアを検証する", uz:"G‘oyangizni tekshiring", ru:"Проверьте свою идею", vi:"Kiểm chứng ý tưởng của bạn"},
-    tag: {ko:"연구실 개념 지도를 근거로, 생성 AI에게 출처 있는 검증을 받아 보세요.",
-          en:"Let generative AI check your idea against the lab’s concept map — with sources.",
-          zh:"以研究室的概念地图为依据，让生成式 AI 带着出处验证你的想法。",
-          ja:"研究室の概念マップを根拠に、生成AIに出典つきで検証してもらいましょう。",
-          uz:"Laboratoriya tushunchalar xaritasi asosida generativ AI g‘oyangizni manbalar bilan tekshirsin.",
-          ru:"Пусть генеративный ИИ проверит вашу идею по карте понятий лаборатории — со ссылками на источники.",
-          vi:"Để AI tạo sinh kiểm chứng ý tưởng của bạn dựa trên bản đồ khái niệm của phòng lab — có dẫn nguồn."},
+    title: {ko:"연구실 도구함", en:"Lab Toolbox", zh:"研究室工具箱", ja:"研究室ツールボックス", uz:"Laboratoriya asboblar to‘plami", ru:"Набор инструментов лаборатории", vi:"Hộp công cụ phòng lab"},
+    tag: {ko:"아이디어 검증하기 · 결과물 평가하기 — 연구실 개념 지도를 근거로 생성 AI를 믿을 만하게 쓰는 도구들.",
+          en:"Check your idea · Review your work — tools for using generative AI reliably, grounded in the lab’s concept map.",
+          zh:"验证想法 · 评估成果 — 以研究室概念地图为依据，可靠地使用生成式 AI 的工具。",
+          ja:"アイデア検証 · 成果物の評価 — 研究室の概念マップを根拠に、生成AIを確かに使うためのツール。",
+          uz:"G‘oyani tekshirish · Natijani baholash — laboratoriya tushunchalar xaritasiga tayangan holda generativ AI dan ishonchli foydalanish vositalari.",
+          ru:"Проверка идеи · Оценка результата — инструменты для надёжной работы с генеративным ИИ на основе карты понятий лаборатории.",
+          vi:"Kiểm chứng ý tưởng · Đánh giá kết quả — công cụ dùng AI tạo sinh đáng tin cậy, dựa trên bản đồ khái niệm của phòng lab."},
     stat: {ko:"분야 {0} · 개념 {1}개 · 하루 두 번 최신", en:"{0} fields · {1} concepts · refreshed twice a day", zh:"{0} 个领域 · {1} 个概念 · 每天更新两次",
            ja:"{0}分野 · 概念{1}個 · 1日2回更新", uz:"{0} soha · {1} tushuncha · kuniga ikki marta yangilanadi",
            ru:"{0} областей · {1} понятий · обновляется дважды в день", vi:"{0} lĩnh vực · {1} khái niệm · cập nhật hai lần mỗi ngày"},
-    who: {ko:"하루·시아·모아가 안내합니다. 박사는 이걸 만드느라 밤을 새워 자는 중이에요.",
-          en:"Haru, Sia and Moa will guide you. The Doctor is asleep after building it all night.",
-          zh:"由 Haru、西娅和茉雅为你引导。博士为了做这个熬了一整夜，正在睡觉。",
-          ja:"ハル・シア・モアがご案内します。博士はこれを作るために徹夜して、いまお休み中です。",
-          uz:"Haru, Sia va Moa yo‘l ko‘rsatadi. Doktor buni tun bo‘yi yasab, hozir uxlayapti.",
-          ru:"Хару, Сия и Моа всё покажут. Доктор не спал всю ночь, создавая это, и теперь отдыхает.",
-          vi:"Haru, Sia và Moa sẽ hướng dẫn bạn. Tiến sĩ thức trắng đêm để làm ra nó và giờ đang ngủ."},
+    who: {ko:"하루·시아·모아가 튜토리얼로 안내합니다. 박사는 도구함까지 만드느라 또 밤을 새워 자는 중이에요.",
+          en:"Haru, Sia and Moa guide you with tutorials. The Doctor is asleep again after building the toolbox all night.",
+          zh:"Haru、西娅和茉雅用教程为你引导。博士为了做工具箱又熬了一夜，正在睡觉。",
+          ja:"ハル・シア・モアがチュートリアルでご案内します。博士はツールボックスまで作って、また徹夜でお休み中です。",
+          uz:"Haru, Sia va Moa qo‘llanma bilan yo‘l ko‘rsatadi. Doktor asboblar to‘plamini yasab, yana tun bo‘yi uxlamadi va hozir uxlayapti.",
+          ru:"Хару, Сия и Моа всё покажут в обучении. Доктор снова не спал всю ночь, создавая набор инструментов, и теперь отдыхает.",
+          vi:"Haru, Sia và Moa hướng dẫn bằng bài hướng dẫn. Tiến sĩ lại thức trắng đêm làm hộp công cụ và giờ đang ngủ."},
     go: {ko:"바로 가기", en:"Open (page in Korean)", zh:"前往（韩文页面）", ja:"ひらく（韓国語ページ）", uz:"Ochish (koreyscha sahifa)", ru:"Открыть (страница на корейском)", vi:"Mở (trang tiếng Hàn)"},
     clap: {ko:["짝짝!","짝짝짝!","짝!"], en:["Clap!","Clap clap!","Clap!"], zh:["啪啪!","啪啪啪!","啪!"], ja:["パチパチ!","パチパチ!","パチ!"],
            uz:["Qars!","Qars-qars!","Qars!"], ru:["Хлоп!","Хлоп-хлоп!","Хлоп!"], vi:["Bốp!","Bốp bốp!","Bốp!"]}
