@@ -165,6 +165,13 @@
   .toolcard b { font-size:18px; white-space:nowrap; word-break:keep-all; }
   .toolcard p { margin:0; font-size:14px; color:var(--sub); line-height:1.6; }
   .toolcard .go { margin-top:auto; font-size:14px; font-weight:700; color:var(--accent); }
+  .ba { display:none; margin-top:28px; }
+  .ba .pair { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .ba figure { margin:0; }
+  .ba img { display:block; width:100%; height:auto; border-radius:14px; border:1px solid var(--line); image-rendering:pixelated; }
+  .ba figcaption { font-size:13px; color:var(--sub); margin-top:6px; text-align:center; }
+  .ba .tag2 { display:inline-block; font-weight:700; font-size:12px; border:1.5px solid #1f2224; border-radius:99px; padding:0 9px; margin-right:6px; color:var(--ink); }
+  @media (max-width:640px) { .ba .pair { grid-template-columns:1fr; } }
   .toolcard.soon { border-style:dashed; box-shadow:none; color:var(--sub); cursor:default; }
   .toolcard.soon:hover { transform:none; }
 </style>
@@ -181,6 +188,15 @@
     <img src="assets/cover.webp" width="480" height="270" alt="밤새 도구를 만든 박사는 책상에 엎드려 자고, 하루·시아·모아가 개념 지도 화면 앞에서 안내하고, 주판봇과 초파리 연구원이 만족해하며, 미공개 X1·X2·X3이 박수를 치는 연구실 픽셀 그림">
     <figcaption>오늘의 연구실 — 만든 사람은 자고, 식구들이 안내합니다.</figcaption>
   </figure>
+
+  <section class="ba" id="ba" aria-label="도구함이 하는 일: 가이드 매뉴얼이 없을 때와 있을 때">
+    <h2 style="margin-top:20px">도구함이 하는 일</h2>
+    <div class="pair">
+      <figure><img id="baBefore" alt="가이드 매뉴얼이 없을 때: AI 손님 일곱이 밤늦게 서류 더미에 파묻혀, 출처를 지어내거나 끝없이 긴 답을 쓰며 허둥대는 픽셀 그림"><figcaption><span class="tag2">BEFORE</span>근거도 기준도 없이 시킨 일을 급하게 하는 AI</figcaption></figure>
+      <figure><img id="baAfter" alt="가이드 매뉴얼이 있을 때: 하루·시아·모아가 나눠 준 매뉴얼을 보고 AI 손님 일곱이 정리된 결과물을 여유 있게 내는 픽셀 그림"><figcaption><span class="tag2">AFTER</span>연구실 도구함이라는 가이드 매뉴얼을 받은 AI</figcaption></figure>
+    </div>
+    <p class="note" style="text-align:center">그림 속 AI 손님들은 특정 서비스가 아닌 오리지널 캐릭터입니다. 도구함이 만든 지시문은 ChatGPT·Claude·Gemini·Grok·Qwen·DeepSeek·뤼튼 등 어떤 생성 AI에도 붙일 수 있습니다.</p>
+  </section>
 
   <div class="say c-asst" style="margin-top:22px"><img class="px" src="assets/char/asst_spark.webp" alt="하루"><div class="bub"><b>하루</b>어서 오세요, 연구실 도구함이에요! 아래에서 쓰고 싶은 도구를 고르세요. 도구마다 처음 오신 분을 위한 튜토리얼이 있어서, 저랑 시아, 모아가 한 단계씩 안내해 드려요.</div></div>
 
@@ -208,6 +224,11 @@
   }).join("") + '<div class="toolcard soon"><div class="top"><img class="px" src="assets/char/robo_wow.webp" alt=""><b>다음 도구 준비 중</b></div><p>박사님이 깨어나면 또 하나 생깁니다. 주판봇이 벌써 숫자를 세며 기다리고 있어요.</p></div>';
   fetch("feeds/index.json").then(function (r) { return r.json(); }).then(function (d) {
     var s = d.summary || {};
+    var im = d.images || {};
+    if (im.idea_before && im.idea_after) {
+      document.getElementById("baBefore").src = im.idea_before; document.getElementById("baAfter").src = im.idea_after;
+      document.getElementById("ba").style.display = "block";
+    }
     document.getElementById("meta").textContent = "온톨로지 기준일 " + d.updated + " · 분야 " + d.fields.length + "개 · 개념 " + (s.concepts || 0).toLocaleString() + "개 · 관계 " + (s.relations || 0).toLocaleString() + "개";
   }).catch(function () { document.getElementById("meta").textContent = ""; });
 })();

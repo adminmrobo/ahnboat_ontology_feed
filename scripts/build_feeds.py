@@ -351,7 +351,7 @@ def pixel_grid(im, Image):
 
 
 def prepare_images():
-    """assets/에 올린 Genspark 그림(bg_hero·bg_banner·cover, png/jpg)을 WebP로 바꾸고 목록을 돌려준다.
+    """assets/에 올린 Genspark 그림(bg_hero·bg_banner·cover·idea_before·idea_after·idea_beforeafter, png/jpg)을 WebP로 바꾸고 목록을 돌려준다.
     픽셀아트(NEAREST 정수배)면 원래 격자 크기로 되돌려 무손실 WebP로 저장한다. 페이지는 image-rendering:pixelated로
     키워 보여 주므로 또렷하고 파일도 작다. 픽셀아트가 아니면 가로 1920px 이하 WebP(품질 88).
     Pillow가 없으면 이미 있는 WebP만 목록에 넣는다."""
@@ -361,7 +361,7 @@ def prepare_images():
         from PIL import Image
     except ImportError:
         Image = None
-    for name in ("bg_hero", "bg_banner", "cover"):
+    for name in ("bg_hero", "bg_banner", "cover", "idea_before", "idea_after", "idea_beforeafter"):
         webp = os.path.join(adir, name + ".webp")
         src = next((os.path.join(adir, name + e) for e in (".png", ".jpg", ".jpeg")
                     if os.path.exists(os.path.join(adir, name + e))), None)
