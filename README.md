@@ -19,7 +19,7 @@ ahnboat.xyz 공개 콘텐츠의 **최신 온톨로지(개념·정의·관계)를
 | `assets/labkit.js` · `labkit.css` | 모든 도구가 함께 쓰는 코드: 위쪽 메뉴, 캐릭터 움직임, 관련 개념 찾기, 링크 대조 |
 | `rubrics/` | 결과물 평가 기준표(JSON) |
 
-**버전 표시**: 도구마다 버전과 바뀐 점을 `assets/labkit.js`의 `TOOLS[].log`에 적습니다. 도구를 고칠 때마다 `log` 맨 앞에 `["v1.5", "날짜", "바뀐 점"]` 한 줄을 더하면, 위쪽 메뉴 오른쪽 끝·첫 화면 도구 카드·바닥글의 '바뀐 점' 접기 상자·만든 지시문 끝 줄(`— 만든 도구: … v1.4 (날짜)`)이 함께 바뀝니다. 지시문 끝 줄이 있어서 AI 답이 어느 판의 지시문으로 나왔는지 나중에도 알 수 있습니다. 지금: 도구함 v1.1 · 아이디어 검증 v1.4 · 결과물 평가 v1.0.
+**버전 표시**: 도구마다 버전과 바뀐 점을 `assets/labkit.js`의 `TOOLS[].log`에 적습니다. 도구를 고칠 때마다 `log` 맨 앞에 `["v1.5", "날짜", "바뀐 점"]` 한 줄을 더하면, 위쪽 메뉴 오른쪽 끝·첫 화면 도구 카드·바닥글의 '바뀐 점' 접기 상자·만든 지시문 끝 줄(`— 만든 도구: … v1.4 (날짜)`)이 함께 바뀝니다. 지시문 끝 줄이 있어서 AI 답이 어느 판의 지시문으로 나왔는지 나중에도 알 수 있습니다. 지금: 도구함 v1.2 · 아이디어 검증 v1.4 · 결과물 평가 v1.0.
 
 **새 도구 붙이기**: ① `<도구>/index.html`을 만들고 `../assets/labkit.css`·`../assets/labkit.js`를 불러 `LabKit.nav(…, "<도구 id>", "../")`를 부릅니다. ② `assets/labkit.js`의 `TOOLS`에 한 줄을 더하면 모든 페이지 메뉴와 첫 화면 목록에 나타납니다.
 
@@ -49,7 +49,7 @@ ahnboat.xyz 공개 콘텐츠의 **최신 온톨로지(개념·정의·관계)를
 - 시연: 같은 아이디어를 지시문만으로 / 피드와 함께 물었을 때 비교
 - 피드 주소 표, 마무리 대화
 - 그림은 연구실 캐릭터 팩(lab4, `ahnboat_lab_explainer/packs/character`)의 표정·동작 그림을 `assets/char/`에 복사해 씁니다.
-- 배경·표지 그림 Genspark 요청문: [`docs/GENSPARK_cover.md`](docs/GENSPARK_cover.md) (G1 무대 배경 `bg_hero` · G2 배너 배경 `bg_banner` · G3 표지 `cover`). 도구함 소개 비포·애프터(`idea_before`·`idea_after`·`idea_beforeafter`)는 오리지널 'AI 손님 일곱' 캐릭터로 그리며, 둘 다 올리면 첫 화면에 '도구함이 하는 일'로 나타납니다. PNG를 `assets/`에 올리면 자동 갱신 작업이 WebP로 바꾸고 페이지·배너가 배경으로 씁니다.
+- 배경·표지 그림 Genspark 요청문: [`docs/GENSPARK_cover.md`](docs/GENSPARK_cover.md) (G1 무대 배경 `bg_hero` · G2 배너 배경 `bg_banner` · G3 표지 `cover`). 도구함 소개 비포·애프터(`idea_before`·`idea_after`·`idea_beforeafter`)는 오리지널 'AI 손님 일곱' 캐릭터로 그리며, 둘 다 올리면 첫 화면에 '도구함이 하는 일'로 나타납니다(가로 1440px WebP). AI 손님 설정화 원본은 `docs/art/ai_guests_lineup.png`. PNG를 `assets/`에 올리면 자동 갱신 작업이 WebP로 바꾸고 페이지·배너가 배경으로 씁니다.
 - 서비스 페이지라서 해설 페이지의 지식 색인(#kg)·꾸러미(#export)는 넣지 않았습니다. 이 페이지가 공개 카탈로그에 오르면 피드가 자기 자신을 개념으로 다시 담게 되기 때문입니다.
 
 ## 홈페이지 바로가기 배너 (`banner.html`)

@@ -1,16 +1,16 @@
 {
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "base": "https://adminmrobo.github.io/ahnboat_ontology_feed/",
  "all": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/all.xml",
  "summary": {
   "fields": 8,
   "contents": 116,
-  "pages": 728,
+  "pages": 734,
   "listed_indexed": 146,
   "listed": 153,
-  "concepts": 5119,
-  "relations": 6251,
-  "shared": 533,
+  "concepts": 5122,
+  "relations": 6254,
+  "shared": 534,
   "domains": 18,
   "topic_linked": 1691
  },
@@ -156,8 +156,8 @@
    "desc": "확률분포, 추정, 시계열, 베이지안 통계와 파이썬·판다스·데이터베이스·데이터 시각화로 데이터 분석의 기초 체력을 기릅니다.",
    "contents": 14,
    "listed": 14,
-   "concepts": 961,
-   "relations": 1036,
+   "concepts": 966,
+   "relations": 1042,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/statistics-data-basics.xml",
    "parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/statistics-data-basics-p1.xml",
@@ -201,7 +201,10 @@
  "images": {
   "bg_hero": "https://adminmrobo.github.io/ahnboat_ontology_feed/assets/bg_hero.webp",
   "bg_banner": "https://adminmrobo.github.io/ahnboat_ontology_feed/assets/bg_banner.webp",
-  "cover": "https://adminmrobo.github.io/ahnboat_ontology_feed/assets/cover.webp"
+  "cover": "https://adminmrobo.github.io/ahnboat_ontology_feed/assets/cover.webp",
+  "idea_before": "https://adminmrobo.github.io/ahnboat_ontology_feed/assets/idea_before.webp",
+  "idea_after": "https://adminmrobo.github.io/ahnboat_ontology_feed/assets/idea_after.webp",
+  "idea_beforeafter": "https://adminmrobo.github.io/ahnboat_ontology_feed/assets/idea_beforeafter.webp"
  },
  "all_txt": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/txt/all.txt",
  "all_txt_parts": [

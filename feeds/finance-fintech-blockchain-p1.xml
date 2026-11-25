@@ -3,9 +3,9 @@
   <channel>
     <title>ahnboat lab 온톨로지 — 금융·핀테크·블록체인 (1/2)</title>
     <link>https://adminmrobo.github.io/ahnboat_ontology_feed/</link>
-    <description>생성 AI가 한 번에 읽도록 나눈 1/2. 전체는 https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/finance-fintech-blockchain.xml. 금융·핀테크·블록체인 분야 공개 콘텐츠의 최신 지식 색인(개념·정의·관계). 기준일 2026-11-25. 주식시장 변동성과 가상자산 연구, 블록체인 장부, 인슈어테크 사례, 회계와 기업가치까지 금융 속의 데이터와 AI를 살펴봅니다.</description>
+    <description>생성 AI가 한 번에 읽도록 나눈 1/2. 전체는 https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/finance-fintech-blockchain.xml. 금융·핀테크·블록체인 분야 공개 콘텐츠의 최신 지식 색인(개념·정의·관계). 기준일 2026-11-26. 주식시장 변동성과 가상자산 연구, 블록체인 장부, 인슈어테크 사례, 회계와 기업가치까지 금융 속의 데이터와 AI를 살펴봅니다.</description>
     <language>ko</language>
-    <lastBuildDate>Wed, 25 Nov 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 00:00:00 +0900</lastBuildDate>
     <ttl>720</ttl>
     <copyright>CC BY-NC 4.0 · 안상선 ((주)M-Robo)</copyright>
     <atom:link href="https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/finance-fintech-blockchain-p1.xml" rel="self" type="application/rss+xml"/>

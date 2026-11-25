@@ -371,8 +371,9 @@ def prepare_images():
             if f > 1:
                 grid.save(webp, "WEBP", lossless=True, method=6)
             else:
-                if im.width > 1920:
-                    im = im.resize((1920, round(im.height * 1920 / im.width)), Image.LANCZOS)
+                cap = 1440 if name.startswith("idea_") else 1920   # 소개 그림은 페이지에서 반쪽 너비로 보이니 더 작게
+                if im.width > cap:
+                    im = im.resize((cap, round(im.height * cap / im.width)), Image.LANCZOS)
                 im.save(webp, "WEBP", quality=88, method=6)
             if name == "cover":   # 공유 미리보기: 1.905:1(1200×630 비율)로 가운데를 자르고 정수배로 키운다
                 g = grid if f > 1 else im

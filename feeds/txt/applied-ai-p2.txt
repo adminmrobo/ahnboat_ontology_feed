@@ -1,6 +1,6 @@
 # ahnboat lab 온톨로지 — 인공지능 응용 (2/2)
-생성 AI가 한 번에 읽도록 나눈 2/2. 전체는 https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/applied-ai.xml. 인공지능 응용 분야 공개 콘텐츠의 최신 지식 색인(개념·정의·관계). 기준일 2026-11-25. 제조 공정, 경영·회계, 생성형 AI 업무 활용, 이상탐지처럼 AI를 실제 현장 문제에 적용한 강의와 연구입니다.
-기준: Wed, 25 Nov 2026 00:00:00 +0900 · 라이선스 CC BY-NC 4.0 · 원본 RSS: https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/applied-ai-p2.xml
+생성 AI가 한 번에 읽도록 나눈 2/2. 전체는 https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/applied-ai.xml. 인공지능 응용 분야 공개 콘텐츠의 최신 지식 색인(개념·정의·관계). 기준일 2026-11-26. 제조 공정, 경영·회계, 생성형 AI 업무 활용, 이상탐지처럼 AI를 실제 현장 문제에 적용한 강의와 연구입니다.
+기준: Thu, 26 Nov 2026 00:00:00 +0900 · 라이선스 CC BY-NC 4.0 · 원본 RSS: https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/applied-ai-p2.xml
 
 
 ## 산업재해 패널 데이터를 활용한 머신러닝 모델 (목차) — 재활 서비스 예측 연구실

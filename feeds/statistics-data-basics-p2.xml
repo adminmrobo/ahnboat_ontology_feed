@@ -3,9 +3,9 @@
   <channel>
     <title>ahnboat lab 온톨로지 — 통계·데이터 기초 (2/2)</title>
     <link>https://adminmrobo.github.io/ahnboat_ontology_feed/</link>
-    <description>생성 AI가 한 번에 읽도록 나눈 2/2. 전체는 https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/statistics-data-basics.xml. 통계·데이터 기초 분야 공개 콘텐츠의 최신 지식 색인(개념·정의·관계). 기준일 2026-11-25. 확률분포, 추정, 시계열, 베이지안 통계와 파이썬·판다스·데이터베이스·데이터 시각화로 데이터 분석의 기초 체력을 기릅니다.</description>
+    <description>생성 AI가 한 번에 읽도록 나눈 2/2. 전체는 https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/statistics-data-basics.xml. 통계·데이터 기초 분야 공개 콘텐츠의 최신 지식 색인(개념·정의·관계). 기준일 2026-11-26. 확률분포, 추정, 시계열, 베이지안 통계와 파이썬·판다스·데이터베이스·데이터 시각화로 데이터 분석의 기초 체력을 기릅니다.</description>
     <language>ko</language>
-    <lastBuildDate>Wed, 25 Nov 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 00:00:00 +0900</lastBuildDate>
     <ttl>720</ttl>
     <copyright>CC BY-NC 4.0 · 안상선 ((주)M-Robo)</copyright>
     <atom:link href="https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/statistics-data-basics-p2.xml" rel="self" type="application/rss+xml"/>
@@ -74,9 +74,9 @@ p21 = 분산분석 (ANOVA) — https://adminmrobo.github.io/statistics_note/ch05
 - 확률질량함수 (개념) — 정의 없음 [p5#lv1]
 - 누적분포함수 (개념) — 정의 없음 [p6#lv3]
 - 확률밀도함수 (개념) — 정의 없음 [p5#lv1]
+- F분포 (분포) — 두 카이제곱을 각자의 자유도로 나눈 비율. 분산분석에 쓴다. [p10#lv6]
+- t분포 (분포) — σ를 모를 때 쓰는 분포. 자유도가 커지면 표준정규분포로 수렴하고, 표의 t값이 z값에 다가간다. [p10#lv3]
 - 대립가설 (개념) — 정의 없음 [p17#lv3]
-- 이항분포 (분포) — 정의 없음 [p5#lv3]
-- 포아송분포 (분포) — 정의 없음 [p5#lv6]
 - 통계학 (개념) — 정의 없음 [p1#lv1]
 - 모수와 통계량 (개념) — 정의 없음 [p1#lv2]
 - 자료의 종류 (개념) — 정의 없음 [p1#lv3]
@@ -93,8 +93,10 @@ p21 = 분산분석 (ANOVA) — https://adminmrobo.github.io/statistics_note/ch05
 - 결합·주변확률분포 (개념) — 정의 없음 [p4#lv4]
 - 피어슨 상관계수 (개념) — 정의 없음 [p4#lv6]
 - 베르누이 (분포) — 정의 없음 [p5#lv2]
+- 이항분포 (분포) — 정의 없음 [p5#lv3]
 - 기하분포 (분포) — 정의 없음 [p5#lv5]
 - 음이항분포 (분포) — 정의 없음 [p5#lv5]
+- 포아송분포 (분포) — 정의 없음 [p5#lv6]
 - 초기하분포 (분포) — 정의 없음 [p5#lv7]
 - 다항분포 (분포) — 정의 없음 [p5#lv8]
 - 이산균등분포 (분포) — 정의 없음 [p6#lv3]
@@ -112,9 +114,7 @@ p21 = 분산분석 (ANOVA) — https://adminmrobo.github.io/statistics_note/ch05
 - 통계적 동률 (개념) — 구간이 겹쳐 순위를 단정할 수 없음. [p9#lv6]
 - z표 (개념) — −∞부터 z까지의 누적확률 표. [p9#lv7]
 - 통계적 추론 (개념) — 표본 → 모수. [p10#lv2]
-- t분포 (분포) — (X̄ − μ)/(S/√n) ~ t(n−1). [p10#lv3]
 - 카이제곱분포 (분포) — 표준정규 제곱합. [p10#lv5]
-- F분포 (분포) — 카이제곱 비. [p10#lv6]
 - 자유도 (개념) — n − 1. [p10#lv3]
 - 유한모집단 수정 (방법) — √((N−n)/(N−1)). [p11#lv4]
 - 표본비율의 분포 (개념) — p, √(p(1−p)/n). [p11#lv7]
@@ -164,13 +164,14 @@ p21 = 분산분석 (ANOVA) — https://adminmrobo.github.io/statistics_note/ch05
 - 확률질량함수 → 확률밀도함수, 베르누이 : 먼저 알아야 함
 - 누적분포함수 → 이산균등분포 : ~의 일부
 - 확률밀도함수 → 연속균등분포 : 먼저 알아야 함
-- 이항분포 → 포아송분포, 초기하분포, 다항분포 : 먼저 알아야 함
+- t분포 → t 분포 신뢰구간 : 먼저 알아야 함
 - 모수와 통계량 → 집중화 경향(평균·중앙값·최빈값) : 먼저 알아야 함
 - 하우스 엣지 → 대수의 법칙 : dependsOn
 - 분할과 전체확률 → 조건부 확률·베이즈 정리 : ~의 일부
 - 확률변수 → 기댓값과 분산, 표본평균의 분포 : 먼저 알아야 함
 - 결합·주변확률분포 → 공분산 : 먼저 알아야 함
 - 베르누이 → 이항분포 : 먼저 알아야 함
+- 이항분포 → 포아송분포, 초기하분포, 다항분포 : 먼저 알아야 함
 - 기하분포 → 음이항분포 : 먼저 알아야 함
 - 점추정 → 구간추정 : 먼저 알아야 함
 - 표본평균의 분포 → 신뢰구간, 표준오차 : 먼저 알아야 함
@@ -178,7 +179,6 @@ p21 = 분산분석 (ANOVA) — https://adminmrobo.github.io/statistics_note/ch05
 - 유명인 사망 나이 → t 분포 신뢰구간 : supports
 - z 신뢰구간 → t 분포 신뢰구간 : 먼저 알아야 함
 - 비율의 신뢰구간 → 오차범위 : 먼저 알아야 함
-- t분포 → t 분포 신뢰구간 : 먼저 알아야 함
 - 카이제곱분포 → F분포 : 먼저 알아야 함
 - 자유도 → t분포, 표본분산 : 먼저 알아야 함
 - n − 1 보정 → 표본분산 : supports

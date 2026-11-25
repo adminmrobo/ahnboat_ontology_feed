@@ -1,6 +1,6 @@
 # ahnboat lab 온톨로지 — 딥러닝·뇌과학
-딥러닝·뇌과학 분야 공개 콘텐츠의 최신 지식 색인(개념·정의·관계). 기준일 2026-11-25. 신경망이 어떻게 배우는지, 그리고 초파리 뇌 연구가 딥러닝에 주는 힌트를 함께 따라갑니다.
-기준: Wed, 25 Nov 2026 00:00:00 +0900 · 라이선스 CC BY-NC 4.0 · 원본 RSS: https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/deep-learning-neuroscience.xml
+딥러닝·뇌과학 분야 공개 콘텐츠의 최신 지식 색인(개념·정의·관계). 기준일 2026-11-26. 신경망이 어떻게 배우는지, 그리고 초파리 뇌 연구가 딥러닝에 주는 힌트를 함께 따라갑니다.
+기준: Thu, 26 Nov 2026 00:00:00 +0900 · 라이선스 CC BY-NC 4.0 · 원본 RSS: https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/deep-learning-neuroscience.xml
 
 
 ## 신경망은 틀리면서 배운다

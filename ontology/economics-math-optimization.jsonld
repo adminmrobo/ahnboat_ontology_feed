@@ -7,10 +7,1604 @@
  },
  "@id": "https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/economics-math-optimization.jsonld",
  "dct:title": "ahnboat lab 온톨로지 — 경제·수학·최적화",
- "dct:modified": "2026-11-25",
+ "dct:modified": "2026-11-26",
  "dct:license": "https://creativecommons.org/licenses/by-nc/4.0/",
  "dct:creator": "안상선 (Ahn Sangsun)",
  "@graph": [
+  {
+   "@id": "lab:concept/covariant-derivative",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "공변미분",
+     "@language": "ko"
+    },
+    {
+     "@value": "Covariant derivative",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "숫자(성분) 변화에서 눈금이 돈 몫을 빼고 남은 진짜 변화. ∇ = ∂ + Γ.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/index.html#lv2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/calculus-optimization-math"
+    },
+    {
+     "@id": "lab:topic/covariant-derivative"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/geodesic"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/partial-derivative",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "편미분",
+     "@language": "ko"
+    },
+    {
+     "@value": "Partial derivative",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "한 방향으로만 조금 움직였을 때 성분 숫자가 바뀐 양.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/index.html#lv1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/calculus-optimization-math"
+    },
+    {
+     "@id": "lab:topic/partial-derivatives"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/covariant-derivative"
+    },
+    {
+     "@id": "lab:concept/gradient"
+    },
+    {
+     "@id": "lab:concept/total-differential"
+    },
+    {
+     "@id": "lab:concept/marginal-product"
+    },
+    {
+     "@id": "lab:concept/nonlinearity"
+    },
+    {
+     "@id": "lab:concept/interaction"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/curvilinear-coordinates",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "곡선좌표",
+     "@language": "ko"
+    },
+    {
+     "@value": "Curvilinear coordinates",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "눈금선이 곧지 않아 축 방향이 자리마다 달라지는 좌표. 극좌표가 대표 예.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/index.html#lv1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/calculus-optimization-math"
+    },
+    {
+     "@id": "lab:topic/coordinates"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/polar-coordinates",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "극좌표",
+     "@language": "ko"
+    },
+    {
+     "@value": "Polar coordinates",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "자리를 기준점에서의 거리 r과 각도 θ로 부르는 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/index.html#lv1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/coordinates"
+    }
+   ],
+   "lab:broader": [
+    {
+     "@id": "lab:concept/curvilinear-coordinates"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/arc-length"
+    },
+    {
+     "@id": "lab:concept/cyclical-feature"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/christoffel-symbol",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "크리스토펠 기호",
+     "@language": "ko"
+    },
+    {
+     "@value": "Christoffel symbols",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "자리마다 눈금(기저)이 얼마나 도는지 적은 보정표. 계량을 미분해 구한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/index.html#lv2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/calculus-optimization-math"
+    },
+    {
+     "@id": "lab:topic/covariant-derivative"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/covariant-derivative"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:concept/curvature"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/metric-tensor",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "계량",
+     "@language": "ko"
+    },
+    {
+     "@value": "Metric tensor",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "그 자리에서 길이와 각도를 재는 자 눈금 규칙.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/index.html#lv2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/calculus-optimization-math"
+    },
+    {
+     "@id": "lab:topic/riemannian-metric"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/christoffel-symbol"
+    },
+    {
+     "@id": "lab:concept/covariant-derivative"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/parallel-transport",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "평행이동",
+     "@language": "ko"
+    },
+    {
+     "@value": "Parallel transport",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "화살표를 꺾지 않고 길을 따라 옮기는 것.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/index.html#lv3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/calculus-optimization-math"
+    },
+    {
+     "@id": "lab:topic/parallel-transport"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/curvature"
+    },
+    {
+     "@id": "lab:concept/geodesic"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/curvature",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "곡률",
+     "@language": "ko"
+    },
+    {
+     "@value": "Curvature",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "닫힌 길로 평행이동하고 돌아왔을 때 화살표가 돌아간 정도. 좌표로 지울 수 없다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/index.html#lv4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/calculus-optimization-math"
+    },
+    {
+     "@id": "lab:topic/curvature"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/geodesic",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "측지선",
+     "@language": "ko"
+    },
+    {
+     "@value": "Geodesic",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "진행 방향 화살표의 공변미분이 0인 길. 휘어진 면 위에서 가장 곧은 길.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/index.html#lv5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/calculus-optimization-math"
+    },
+    {
+     "@id": "lab:topic/geodesics"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/tropical-cyclone-track-forecast"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/great-circle-route",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "대권항로",
+     "@language": "ko"
+    },
+    {
+     "@value": "Great-circle route",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "지구본 위의 측지선.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/index.html#lv5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/geodesics"
+    }
+   ],
+   "lab:broader": [
+    {
+     "@id": "lab:concept/geodesic"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/tropical-cyclone-track-forecast"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/gimbal-lock",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "짐벌락",
+     "@language": "ko"
+    },
+    {
+     "@value": "Gimbal lock",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "피치 ±90°에서 요 축과 롤 축이 겹쳐 자유도 하나를 잃는 현상.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/index.html#next"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/calculus-optimization-math"
+    }
+   ],
+   "lab:analogyOf": [
+    {
+     "@id": "lab:concept/fake-change"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/natural-gradient",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "자연경사",
+     "@language": "ko"
+    },
+    {
+     "@value": "Natural gradient",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/index.html#sum"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/gradient-descent"
+    },
+    {
+     "@id": "lab:topic/information-geometry"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/geometric-control",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "기하학적 제어",
+     "@language": "ko"
+    },
+    {
+     "@value": "Geometric control on SE(3)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "자세 오차를 회전들의 공간에서 직접 재고 고치는 제어.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/index.html#sum"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/calculus-optimization-math"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/euler-pd-control"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/fake-change",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "가짜 변화 (눈금이 돈 몫)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Coordinate-induced change",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "화살표가 그대로인데 좌표축이 돌아서 성분 숫자만 바뀌는 것.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/index.html#lv1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/calculus-optimization-math"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/weather-forecasting",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "기상 예측",
+     "@language": "ko"
+    },
+    {
+     "@value": "Weather forecasting",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "대기의 지금 상태에서 앞으로의 날씨를 계산해 내는 일. 부록 · 태풍 편에서 자세히 다룬다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/index.html#sum"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/time-series"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/tropical-cyclone-track-forecast",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "태풍 진로 예보",
+     "@language": "ko"
+    },
+    {
+     "@value": "Tropical cyclone track forecasting",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "태풍 중심이 앞으로 어디로 갈지 예보하는 일. 둥근 지구 위의 길(측지선)과 코리올리 효과가 함께 작용한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/index.html#sum"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/probability-statistics"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/weather-forecasting"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/ai-weather-prediction",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "기상 인공지능",
+     "@language": "ko"
+    },
+    {
+     "@value": "Machine-learning weather prediction",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "재분석 자료로 학습해 날씨를 예보하는 AI 모델. 구면 위 데이터를 다뤄야 한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/index.html#sum"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/time-series"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/weather-forecasting"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:concept/numerical-weather-prediction"
+    }
+   ],
+   "lab:evaluatedOn": [
+    {
+     "@id": "lab:dataset/era5"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/coriolis-effect",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "코리올리 효과",
+     "@language": "ko"
+    },
+    {
+     "@value": "Coriolis effect",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "돌고 있는 지구 위에서 보면 움직이는 공기가 옆으로 휘어 보이는 겉보기 효과.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/index.html#sum"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/calculus-optimization-math"
+    }
+   ],
+   "lab:analogyOf": [
+    {
+     "@id": "lab:concept/fake-change"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/beta-drift"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/attitude",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "자세",
+     "@language": "ko"
+    },
+    {
+     "@value": "Attitude (orientation)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "물체가 어느 쪽을 보고 얼마나 기울었는지.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/part2/index.html#why"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/calculus-optimization-math"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/euler-angles",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "오일러각 (요·피치·롤)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Euler angles",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "자세를 세 번의 회전 각도로 적는 방법. 순서 약속이 함께 필요하다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/part2/index.html#lv1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/calculus-optimization-math"
+    },
+    {
+     "@id": "lab:topic/coordinates"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/attitude"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/rotation-noncommutativity",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "회전 순서의 비가환성",
+     "@language": "ko"
+    },
+    {
+     "@value": "Non-commutativity of rotations",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "3차원 회전은 순서를 바꾸면 결과가 달라진다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/part2/index.html#lv1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/calculus-optimization-math"
+    },
+    {
+     "@id": "lab:topic/groups"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/euler-angles"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/angular-velocity",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "각속도",
+     "@language": "ko"
+    },
+    {
+     "@value": "Angular velocity",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "물체가 진짜로 도는 빠르기와 축.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/part2/index.html#lv2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/calculus-optimization-math"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/euler-rate-kinematics"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/euler-rate-kinematics",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "각도 변화율 보정표 (1/cos θ)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Euler-angle rate kinematics",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "각속도와 오일러각 변화율을 잇는 관계. 1/cos θ 때문에 피치 90°에서 폭주한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/part2/index.html#lv2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/calculus-optimization-math"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/gimbal-lock"
+    }
+   ],
+   "lab:analogyOf": [
+    {
+     "@id": "lab:concept/christoffel-symbol"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/rotation-group",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "회전들의 공간 SO(3)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Rotation group SO(3)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "3차원 회전을 모두 모은 휘어진 공간.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/part2/index.html#lv3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/calculus-optimization-math"
+    },
+    {
+     "@id": "lab:topic/symmetry-group-action"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/rotation-geodesic"
+    },
+    {
+     "@id": "lab:method/geometric-control"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/rotation-geodesic",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "회전 공간의 측지선",
+     "@language": "ko"
+    },
+    {
+     "@value": "Geodesic on SO(3)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "두 자세 사이 가장 짧은 회전. 한 축으로 고르게 돌기.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/part2/index.html#lv3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/calculus-optimization-math"
+    },
+    {
+     "@id": "lab:topic/geodesics"
+    }
+   ],
+   "lab:analogyOf": [
+    {
+     "@id": "lab:concept/geodesic"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/slerp",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "구면 선형 보간 (slerp)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Spherical linear interpolation",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "회전 공간의 측지선을 따라 두 자세를 잇는 보간.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/part2/index.html#lv3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/calculus-optimization-math"
+    },
+    {
+     "@id": "lab:topic/geodesics"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/rotation-geodesic"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/unit-quaternion",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "단위 쿼터니언",
+     "@language": "ko"
+    },
+    {
+     "@value": "Unit quaternion",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "회전축과 반각으로 회전을 적는 숫자 네 개, 길이 1.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/part2/index.html#lv4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/calculus-optimization-math"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/slerp"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/double-cover",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "이중 덮개 (q와 −q)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Double cover",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "단위 쿼터니언 q와 −q가 같은 자세를 나타내는 성질.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/part2/index.html#lv4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/calculus-optimization-math"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/unit-quaternion"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/attitude-error",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "자세 오차 e_R",
+     "@language": "ko"
+    },
+    {
+     "@value": "Attitude error on SO(3)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "회전 공간에서 잰 목표와 지금 자세의 어긋남.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/part2/index.html#lv5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/calculus-optimization-math"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/geometric-control"
+    }
+   ],
+   "lab:analogyOf": [
+    {
+     "@id": "lab:concept/covariant-derivative"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/euler-pd-control",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "세 각도 제어",
+     "@language": "ko"
+    },
+    {
+     "@value": "Euler-angle PD control",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "세 각도의 차이로 오차를 재고 고치는 제어. 짐벌락 근처에서 튄다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/part2/index.html#lv5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/calculus-optimization-math"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/pose-estimation-ai",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "자세를 예측하는 AI",
+     "@language": "ko"
+    },
+    {
+     "@value": "Learning rotations / pose estimation",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/part2/index.html#sum"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/transformer"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/steering-flow",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "지향류",
+     "@language": "ko"
+    },
+    {
+     "@value": "Steering flow",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "태풍을 실어 나르는 주변의 큰 바람.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/practice/typhoon.html#why"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/probability-statistics"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/tropical-cyclone-track-forecast"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/recurvature",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "전향",
+     "@language": "ko"
+    },
+    {
+     "@value": "Recurvature",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "서쪽으로 가던 태풍이 편서풍을 만나 북동쪽으로 꺾이는 것.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/practice/typhoon.html#why"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/probability-statistics"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/steering-flow"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/beta-drift",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "베타 표류",
+     "@language": "ko"
+    },
+    {
+     "@value": "Beta drift",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "코리올리 효과의 세기가 위도마다 달라 태풍이 스스로 극·서쪽으로 흐르는 현상. 보통 초속 1~2 m.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/practice/typhoon.html#why"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/calculus-optimization-math"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/tropical-cyclone-track-forecast"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/parallel-transport"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/sensitive-dependence",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "처음 값에 민감한 성질 (나비 효과)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Sensitive dependence on initial conditions",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "처음의 작은 차이가 시간이 지나며 크게 벌어지는 성질.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/practice/typhoon.html#why"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/calculus-optimization-math"
+    },
+    {
+     "@id": "lab:topic/dynamical-systems-stability"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/ensemble-forecast"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/ensemble-forecast",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "앙상블 예보",
+     "@language": "ko"
+    },
+    {
+     "@value": "Ensemble forecast",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "처음 값과 조건을 조금씩 바꾼 여러 예보를 함께 돌려 퍼짐까지 보는 예보.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/practice/typhoon.html#earth"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/probability-statistics"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/probability-circle"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/probability-circle",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "확률 원",
+     "@language": "ko"
+    },
+    {
+     "@value": "Probability circle",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "태풍이 정해진 확률(일본기상청은 70%)로 들어갈 원.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/practice/typhoon.html#ai"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/probability-statistics"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/forecast-error-growth",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "예보 오차 증가",
+     "@language": "ko"
+    },
+    {
+     "@value": "Forecast error growth",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "예보 시간이 길수록 평균 오차가 커지는 것.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/practice/typhoon.html#why"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/probability-statistics"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/tropical-cyclone-track-forecast"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/zonal-jets",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "행성 띠 바람 (제트 기류)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Zonal jets",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "행성의 위도를 따라 띠 모양으로 부는 강한 동서 바람.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/practice/typhoon.html#hell"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/calculus-optimization-math"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/numerical-weather-prediction",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "수치예보",
+     "@language": "ko"
+    },
+    {
+     "@value": "Numerical weather prediction",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "물리 방정식을 컴퓨터 알고리즘으로 바꿔 슈퍼컴퓨터로 푸는 예보.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/practice/typhoon.html#wai"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/numerical-integration"
+    },
+    {
+     "@id": "lab:topic/time-series"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/graphcast",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "GraphCast",
+     "@language": "ko"
+    },
+    {
+     "@value": "GraphCast",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/practice/typhoon.html#wai"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/gnn"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/ai-weather-prediction"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/pangu-weather",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "Pangu-Weather",
+     "@language": "ko"
+    },
+    {
+     "@value": "Pangu-Weather",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/practice/typhoon.html#wai"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/transformer"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/ai-weather-prediction"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/gencast",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "GenCast",
+     "@language": "ko"
+    },
+    {
+     "@value": "GenCast",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/practice/typhoon.html#wai"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/diffusion"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/ai-weather-prediction"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/aifs",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "AIFS (ECMWF)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Artificial Intelligence Forecasting System",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/practice/typhoon.html#wai"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/time-series"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/ai-weather-prediction"
+    }
+   ]
+  },
+  {
+   "@id": "lab:dataset/era5",
+   "@type": [
+    "skos:Concept",
+    "lab:Dataset"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "ERA5 재분석 자료",
+     "@language": "ko"
+    },
+    {
+     "@value": "ERA5 reanalysis",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/practice/typhoon.html#wai"
+   }
+  },
+  {
+   "@id": "lab:concept/spherical-data",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "구면 위의 데이터",
+     "@language": "ko"
+    },
+    {
+     "@value": "Data on the sphere",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "날씨 자료는 둥근 지구 위에 있어, 펼친 격자로 다루면 극 쪽이 왜곡된다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/covariant_chase_lab/practice/typhoon.html#wai"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/calculus-optimization-math"
+    },
+    {
+     "@id": "lab:topic/manifold"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/ai-weather-prediction"
+    }
+   ]
+  },
   {
    "@id": "lab:concept/expected-utility",
    "@type": [
@@ -11358,35 +12952,6 @@
    ]
   },
   {
-   "@id": "lab:concept/attitude",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "자세",
-     "@language": "ko"
-    },
-    {
-     "@value": "Attitude (orientation)",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "물체가 어느 쪽을 보고 얼마나 기울었는지.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/nabla_field_lab/index.html#cast"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/calculus-optimization-math"
-    }
-   ]
-  },
-  {
    "@id": "lab:concept/cylindrical",
    "@type": [
     "skos:Concept",
@@ -15623,58 +17188,6 @@
    ]
   },
   {
-   "@id": "lab:concept/partial-derivative",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "편미분",
-     "@language": "ko"
-    },
-    {
-     "@value": "Partial derivative",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "한 방향으로만 조금 움직였을 때 성분 숫자가 바뀐 양.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/optimization_3d_map/3_arrow_field.html#s1"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/calculus-optimization-math"
-    },
-    {
-     "@id": "lab:topic/partial-derivatives"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/covariant-derivative"
-    },
-    {
-     "@id": "lab:concept/gradient"
-    },
-    {
-     "@id": "lab:concept/total-differential"
-    },
-    {
-     "@id": "lab:concept/marginal-product"
-    },
-    {
-     "@id": "lab:concept/nonlinearity"
-    },
-    {
-     "@id": "lab:concept/interaction"
-    }
-   ]
-  },
-  {
    "@id": "lab:concept/feature-engineering",
    "@type": [
     "skos:Concept",
@@ -18678,48 +20191,6 @@
    "lab:prerequisiteOf": [
     {
      "@id": "lab:method/pca"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/polar-coordinates",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "극좌표",
-     "@language": "ko"
-    },
-    {
-     "@value": "Polar coordinates",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "자리를 기준점에서의 거리 r과 각도 θ로 부르는 방법.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/hello_space_lab/03_polar.html#s31"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/coordinates"
-    }
-   ],
-   "lab:broader": [
-    {
-     "@id": "lab:concept/curvilinear-coordinates"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/arc-length"
-    },
-    {
-     "@id": "lab:concept/cyclical-feature"
     }
    ]
   },
@@ -21792,1477 +23263,6 @@
    "rdfs:isDefinedBy": {
     "@id": "https://adminmrobo.github.io/lagrangian_hamiltonian_lab/06_quantum.html#r20"
    }
-  },
-  {
-   "@id": "lab:concept/covariant-derivative",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "공변미분",
-     "@language": "ko"
-    },
-    {
-     "@value": "Covariant derivative",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "숫자(성분) 변화에서 눈금이 돈 몫을 빼고 남은 진짜 변화. ∇ = ∂ + Γ.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/covariant_chase_lab/index.html#lv2"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/calculus-optimization-math"
-    },
-    {
-     "@id": "lab:topic/covariant-derivative"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/geodesic"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/curvilinear-coordinates",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "곡선좌표",
-     "@language": "ko"
-    },
-    {
-     "@value": "Curvilinear coordinates",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "눈금선이 곧지 않아 축 방향이 자리마다 달라지는 좌표. 극좌표가 대표 예.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/covariant_chase_lab/index.html#lv1"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/calculus-optimization-math"
-    },
-    {
-     "@id": "lab:topic/coordinates"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/christoffel-symbol",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "크리스토펠 기호",
-     "@language": "ko"
-    },
-    {
-     "@value": "Christoffel symbols",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "자리마다 눈금(기저)이 얼마나 도는지 적은 보정표. 계량을 미분해 구한다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/covariant_chase_lab/index.html#lv2"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/calculus-optimization-math"
-    },
-    {
-     "@id": "lab:topic/covariant-derivative"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/covariant-derivative"
-    }
-   ],
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:concept/curvature"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/metric-tensor",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "계량",
-     "@language": "ko"
-    },
-    {
-     "@value": "Metric tensor",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "그 자리에서 길이와 각도를 재는 자 눈금 규칙.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/covariant_chase_lab/index.html#lv2"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/calculus-optimization-math"
-    },
-    {
-     "@id": "lab:topic/riemannian-metric"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/christoffel-symbol"
-    },
-    {
-     "@id": "lab:concept/covariant-derivative"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/parallel-transport",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "평행이동",
-     "@language": "ko"
-    },
-    {
-     "@value": "Parallel transport",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "화살표를 꺾지 않고 길을 따라 옮기는 것.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/covariant_chase_lab/index.html#lv3"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/calculus-optimization-math"
-    },
-    {
-     "@id": "lab:topic/parallel-transport"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/curvature"
-    },
-    {
-     "@id": "lab:concept/geodesic"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/curvature",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "곡률",
-     "@language": "ko"
-    },
-    {
-     "@value": "Curvature",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "닫힌 길로 평행이동하고 돌아왔을 때 화살표가 돌아간 정도. 좌표로 지울 수 없다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/covariant_chase_lab/index.html#lv4"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/calculus-optimization-math"
-    },
-    {
-     "@id": "lab:topic/curvature"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/geodesic",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "측지선",
-     "@language": "ko"
-    },
-    {
-     "@value": "Geodesic",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "진행 방향 화살표의 공변미분이 0인 길. 휘어진 면 위에서 가장 곧은 길.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/covariant_chase_lab/index.html#lv5"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/calculus-optimization-math"
-    },
-    {
-     "@id": "lab:topic/geodesics"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/tropical-cyclone-track-forecast"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/great-circle-route",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "대권항로",
-     "@language": "ko"
-    },
-    {
-     "@value": "Great-circle route",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "지구본 위의 측지선.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/covariant_chase_lab/index.html#lv5"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/geodesics"
-    }
-   ],
-   "lab:broader": [
-    {
-     "@id": "lab:concept/geodesic"
-    }
-   ],
-   "lab:relatedTo": [
-    {
-     "@id": "lab:concept/tropical-cyclone-track-forecast"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/gimbal-lock",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "짐벌락",
-     "@language": "ko"
-    },
-    {
-     "@value": "Gimbal lock",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "피치 ±90°에서 요 축과 롤 축이 겹쳐 자유도 하나를 잃는 현상.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/covariant_chase_lab/index.html#next"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/calculus-optimization-math"
-    }
-   ],
-   "lab:analogyOf": [
-    {
-     "@id": "lab:concept/fake-change"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/natural-gradient",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "자연경사",
-     "@language": "ko"
-    },
-    {
-     "@value": "Natural gradient",
-     "@language": "en"
-    }
-   ],
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/covariant_chase_lab/index.html#sum"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/gradient-descent"
-    },
-    {
-     "@id": "lab:topic/information-geometry"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/geometric-control",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "기하학적 제어",
-     "@language": "ko"
-    },
-    {
-     "@value": "Geometric control on SE(3)",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "자세 오차를 회전들의 공간에서 직접 재고 고치는 제어.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/covariant_chase_lab/index.html#sum"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/calculus-optimization-math"
-    }
-   ],
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:method/euler-pd-control"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/fake-change",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "가짜 변화 (눈금이 돈 몫)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Coordinate-induced change",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "화살표가 그대로인데 좌표축이 돌아서 성분 숫자만 바뀌는 것.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/covariant_chase_lab/index.html#lv1"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/calculus-optimization-math"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/weather-forecasting",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "기상 예측",
-     "@language": "ko"
-    },
-    {
-     "@value": "Weather forecasting",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "대기의 지금 상태에서 앞으로의 날씨를 계산해 내는 일. 부록 · 태풍 편에서 자세히 다룬다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/covariant_chase_lab/index.html#sum"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/time-series"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/tropical-cyclone-track-forecast",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "태풍 진로 예보",
-     "@language": "ko"
-    },
-    {
-     "@value": "Tropical cyclone track forecasting",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "태풍 중심이 앞으로 어디로 갈지 예보하는 일. 둥근 지구 위의 길(측지선)과 코리올리 효과가 함께 작용한다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/covariant_chase_lab/index.html#sum"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/probability-statistics"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/weather-forecasting"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/ai-weather-prediction",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "기상 인공지능",
-     "@language": "ko"
-    },
-    {
-     "@value": "Machine-learning weather prediction",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "재분석 자료로 학습해 날씨를 예보하는 AI 모델. 구면 위 데이터를 다뤄야 한다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/covariant_chase_lab/index.html#sum"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/time-series"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/weather-forecasting"
-    }
-   ],
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:concept/numerical-weather-prediction"
-    }
-   ],
-   "lab:evaluatedOn": [
-    {
-     "@id": "lab:dataset/era5"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/coriolis-effect",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "코리올리 효과",
-     "@language": "ko"
-    },
-    {
-     "@value": "Coriolis effect",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "돌고 있는 지구 위에서 보면 움직이는 공기가 옆으로 휘어 보이는 겉보기 효과.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/covariant_chase_lab/index.html#sum"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/calculus-optimization-math"
-    }
-   ],
-   "lab:analogyOf": [
-    {
-     "@id": "lab:concept/fake-change"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/beta-drift"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/euler-angles",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "오일러각 (요·피치·롤)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Euler angles",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "자세를 세 번의 회전 각도로 적는 방법. 순서 약속이 함께 필요하다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/covariant_chase_lab/part2/index.html#lv1"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/calculus-optimization-math"
-    },
-    {
-     "@id": "lab:topic/coordinates"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/attitude"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/rotation-noncommutativity",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "회전 순서의 비가환성",
-     "@language": "ko"
-    },
-    {
-     "@value": "Non-commutativity of rotations",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "3차원 회전은 순서를 바꾸면 결과가 달라진다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/covariant_chase_lab/part2/index.html#lv1"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/calculus-optimization-math"
-    },
-    {
-     "@id": "lab:topic/groups"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/euler-angles"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/angular-velocity",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "각속도",
-     "@language": "ko"
-    },
-    {
-     "@value": "Angular velocity",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "물체가 진짜로 도는 빠르기와 축.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/covariant_chase_lab/part2/index.html#lv2"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/calculus-optimization-math"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/euler-rate-kinematics"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/euler-rate-kinematics",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "각도 변화율 보정표 (1/cos θ)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Euler-angle rate kinematics",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "각속도와 오일러각 변화율을 잇는 관계. 1/cos θ 때문에 피치 90°에서 폭주한다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/covariant_chase_lab/part2/index.html#lv2"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/calculus-optimization-math"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/gimbal-lock"
-    }
-   ],
-   "lab:analogyOf": [
-    {
-     "@id": "lab:concept/christoffel-symbol"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/rotation-group",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "회전들의 공간 SO(3)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Rotation group SO(3)",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "3차원 회전을 모두 모은 휘어진 공간.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/covariant_chase_lab/part2/index.html#lv3"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/calculus-optimization-math"
-    },
-    {
-     "@id": "lab:topic/symmetry-group-action"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/rotation-geodesic"
-    },
-    {
-     "@id": "lab:method/geometric-control"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/rotation-geodesic",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "회전 공간의 측지선",
-     "@language": "ko"
-    },
-    {
-     "@value": "Geodesic on SO(3)",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "두 자세 사이 가장 짧은 회전. 한 축으로 고르게 돌기.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/covariant_chase_lab/part2/index.html#lv3"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/calculus-optimization-math"
-    },
-    {
-     "@id": "lab:topic/geodesics"
-    }
-   ],
-   "lab:analogyOf": [
-    {
-     "@id": "lab:concept/geodesic"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/slerp",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "구면 선형 보간 (slerp)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Spherical linear interpolation",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "회전 공간의 측지선을 따라 두 자세를 잇는 보간.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/covariant_chase_lab/part2/index.html#lv3"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/calculus-optimization-math"
-    },
-    {
-     "@id": "lab:topic/geodesics"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/rotation-geodesic"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/unit-quaternion",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "단위 쿼터니언",
-     "@language": "ko"
-    },
-    {
-     "@value": "Unit quaternion",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "회전축과 반각으로 회전을 적는 숫자 네 개, 길이 1.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/covariant_chase_lab/part2/index.html#lv4"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/calculus-optimization-math"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/slerp"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/double-cover",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "이중 덮개 (q와 −q)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Double cover",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "단위 쿼터니언 q와 −q가 같은 자세를 나타내는 성질.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/covariant_chase_lab/part2/index.html#lv4"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/calculus-optimization-math"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/unit-quaternion"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/attitude-error",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "자세 오차 e_R",
-     "@language": "ko"
-    },
-    {
-     "@value": "Attitude error on SO(3)",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "회전 공간에서 잰 목표와 지금 자세의 어긋남.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/covariant_chase_lab/part2/index.html#lv5"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/calculus-optimization-math"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/geometric-control"
-    }
-   ],
-   "lab:analogyOf": [
-    {
-     "@id": "lab:concept/covariant-derivative"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/euler-pd-control",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "세 각도 제어",
-     "@language": "ko"
-    },
-    {
-     "@value": "Euler-angle PD control",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "세 각도의 차이로 오차를 재고 고치는 제어. 짐벌락 근처에서 튄다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/covariant_chase_lab/part2/index.html#lv5"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/calculus-optimization-math"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/pose-estimation-ai",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "자세를 예측하는 AI",
-     "@language": "ko"
-    },
-    {
-     "@value": "Learning rotations / pose estimation",
-     "@language": "en"
-    }
-   ],
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/covariant_chase_lab/part2/index.html#sum"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/transformer"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/steering-flow",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "지향류",
-     "@language": "ko"
-    },
-    {
-     "@value": "Steering flow",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "태풍을 실어 나르는 주변의 큰 바람.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/covariant_chase_lab/practice/typhoon.html#why"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/probability-statistics"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/tropical-cyclone-track-forecast"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/recurvature",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "전향",
-     "@language": "ko"
-    },
-    {
-     "@value": "Recurvature",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "서쪽으로 가던 태풍이 편서풍을 만나 북동쪽으로 꺾이는 것.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/covariant_chase_lab/practice/typhoon.html#why"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/probability-statistics"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/steering-flow"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/beta-drift",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "베타 표류",
-     "@language": "ko"
-    },
-    {
-     "@value": "Beta drift",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "코리올리 효과의 세기가 위도마다 달라 태풍이 스스로 극·서쪽으로 흐르는 현상. 보통 초속 1~2 m.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/covariant_chase_lab/practice/typhoon.html#why"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/calculus-optimization-math"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/tropical-cyclone-track-forecast"
-    }
-   ],
-   "lab:relatedTo": [
-    {
-     "@id": "lab:concept/parallel-transport"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/sensitive-dependence",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "처음 값에 민감한 성질 (나비 효과)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Sensitive dependence on initial conditions",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "처음의 작은 차이가 시간이 지나며 크게 벌어지는 성질.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/covariant_chase_lab/practice/typhoon.html#why"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/calculus-optimization-math"
-    },
-    {
-     "@id": "lab:topic/dynamical-systems-stability"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/ensemble-forecast"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/ensemble-forecast",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "앙상블 예보",
-     "@language": "ko"
-    },
-    {
-     "@value": "Ensemble forecast",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "처음 값과 조건을 조금씩 바꾼 여러 예보를 함께 돌려 퍼짐까지 보는 예보.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/covariant_chase_lab/practice/typhoon.html#earth"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/probability-statistics"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/probability-circle"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/probability-circle",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "확률 원",
-     "@language": "ko"
-    },
-    {
-     "@value": "Probability circle",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "태풍이 정해진 확률(일본기상청은 70%)로 들어갈 원.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/covariant_chase_lab/practice/typhoon.html#ai"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/probability-statistics"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/forecast-error-growth",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "예보 오차 증가",
-     "@language": "ko"
-    },
-    {
-     "@value": "Forecast error growth",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "예보 시간이 길수록 평균 오차가 커지는 것.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/covariant_chase_lab/practice/typhoon.html#why"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/probability-statistics"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/tropical-cyclone-track-forecast"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/zonal-jets",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "행성 띠 바람 (제트 기류)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Zonal jets",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "행성의 위도를 따라 띠 모양으로 부는 강한 동서 바람.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/covariant_chase_lab/practice/typhoon.html#hell"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/calculus-optimization-math"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/numerical-weather-prediction",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "수치예보",
-     "@language": "ko"
-    },
-    {
-     "@value": "Numerical weather prediction",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "물리 방정식을 컴퓨터 알고리즘으로 바꿔 슈퍼컴퓨터로 푸는 예보.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/covariant_chase_lab/practice/typhoon.html#wai"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/numerical-integration"
-    },
-    {
-     "@id": "lab:topic/time-series"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/graphcast",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "GraphCast",
-     "@language": "ko"
-    },
-    {
-     "@value": "GraphCast",
-     "@language": "en"
-    }
-   ],
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/covariant_chase_lab/practice/typhoon.html#wai"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/gnn"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/ai-weather-prediction"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/pangu-weather",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "Pangu-Weather",
-     "@language": "ko"
-    },
-    {
-     "@value": "Pangu-Weather",
-     "@language": "en"
-    }
-   ],
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/covariant_chase_lab/practice/typhoon.html#wai"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/transformer"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/ai-weather-prediction"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/gencast",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "GenCast",
-     "@language": "ko"
-    },
-    {
-     "@value": "GenCast",
-     "@language": "en"
-    }
-   ],
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/covariant_chase_lab/practice/typhoon.html#wai"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/diffusion"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/ai-weather-prediction"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/aifs",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "AIFS (ECMWF)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Artificial Intelligence Forecasting System",
-     "@language": "en"
-    }
-   ],
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/covariant_chase_lab/practice/typhoon.html#wai"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/time-series"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/ai-weather-prediction"
-    }
-   ]
-  },
-  {
-   "@id": "lab:dataset/era5",
-   "@type": [
-    "skos:Concept",
-    "lab:Dataset"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "ERA5 재분석 자료",
-     "@language": "ko"
-    },
-    {
-     "@value": "ERA5 reanalysis",
-     "@language": "en"
-    }
-   ],
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/covariant_chase_lab/practice/typhoon.html#wai"
-   }
-  },
-  {
-   "@id": "lab:concept/spherical-data",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "구면 위의 데이터",
-     "@language": "ko"
-    },
-    {
-     "@value": "Data on the sphere",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "날씨 자료는 둥근 지구 위에 있어, 펼친 격자로 다루면 극 쪽이 왜곡된다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/covariant_chase_lab/practice/typhoon.html#wai"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/calculus-optimization-math"
-    },
-    {
-     "@id": "lab:topic/manifold"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/ai-weather-prediction"
-    }
-   ]
   },
   {
    "@id": "lab:term/logistic-regression",

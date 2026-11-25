@@ -1,6 +1,6 @@
 # ahnboat lab 온톨로지 — AI 감각·생성
-AI 감각·생성 분야 공개 콘텐츠의 최신 지식 색인(개념·정의·관계). 기준일 2026-11-25. AI가 이미지를 구분하고, 동작을 알아보고, 장면을 그려 내고, 글을 읽는 방식을 긴급 미션으로 풀어 봅니다.
-기준: Wed, 25 Nov 2026 00:00:00 +0900 · 라이선스 CC BY-NC 4.0 · 원본 RSS: https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/ai-senses-generation.xml
+AI 감각·생성 분야 공개 콘텐츠의 최신 지식 색인(개념·정의·관계). 기준일 2026-11-26. AI가 이미지를 구분하고, 동작을 알아보고, 장면을 그려 내고, 글을 읽는 방식을 긴급 미션으로 풀어 봅니다.
+기준: Thu, 26 Nov 2026 00:00:00 +0900 · 라이선스 CC BY-NC 4.0 · 원본 RSS: https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/ai-senses-generation.xml
 
 
 ## AI는 동작을 어떻게 알아보고 만들까?

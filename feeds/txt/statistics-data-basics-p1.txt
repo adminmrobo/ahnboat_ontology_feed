@@ -1,45 +1,58 @@
 # ahnboat lab 온톨로지 — 통계·데이터 기초 (1/2)
-생성 AI가 한 번에 읽도록 나눈 1/2. 전체는 https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/statistics-data-basics.xml. 통계·데이터 기초 분야 공개 콘텐츠의 최신 지식 색인(개념·정의·관계). 기준일 2026-11-25. 확률분포, 추정, 시계열, 베이지안 통계와 파이썬·판다스·데이터베이스·데이터 시각화로 데이터 분석의 기초 체력을 기릅니다.
-기준: Wed, 25 Nov 2026 00:00:00 +0900 · 라이선스 CC BY-NC 4.0 · 원본 RSS: https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/statistics-data-basics-p1.xml
+생성 AI가 한 번에 읽도록 나눈 1/2. 전체는 https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/statistics-data-basics.xml. 통계·데이터 기초 분야 공개 콘텐츠의 최신 지식 색인(개념·정의·관계). 기준일 2026-11-26. 확률분포, 추정, 시계열, 베이지안 통계와 파이썬·판다스·데이터베이스·데이터 시각화로 데이터 분석의 기초 체력을 기릅니다.
+기준: Thu, 26 Nov 2026 00:00:00 +0900 · 라이선스 CC BY-NC 4.0 · 원본 RSS: https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/statistics-data-basics-p1.xml
 
 
 ## 확률분포 딕셔너리와 분포표 연구실
 주소: https://adminmrobo.github.io/probability_distribution_dictionary/
-분야: 통계·데이터 기초 · 학문 분야: 통계학 · 페이지 2쪽 · 개념 21개 · 관계 4개
+분야: 통계·데이터 기초 · 학문 분야: 통계학 · 페이지 8쪽 · 개념 26개 · 관계 6개
 사이트: https://adminmrobo.github.io/probability_distribution_dictionary/
 
 [페이지] 기호 = 제목 — 주소
-p1 = 확률분포 딕셔너리 — https://adminmrobo.github.io/probability_distribution_dictionary/dictionary.html
-p2 = 분포표 읽기 연구실 — https://adminmrobo.github.io/probability_distribution_dictionary/tables.html
+p1 = 부록 자유도란 무엇인가? 왜 표본 수 − 1인가? — 분포표 읽기 연구실 — https://adminmrobo.github.io/probability_distribution_dictionary/appendix_df.html
+p2 = 확률분포 딕셔너리 — https://adminmrobo.github.io/probability_distribution_dictionary/dictionary.html
+p3 = 3장 카이제곱분포 — 어긋남을 모은 점수 — 분포표 읽기 연구실 — https://adminmrobo.github.io/probability_distribution_dictionary/table_chi2.html
+p4 = 4장 F분포 — 두 흩어짐의 비율 — 분포표 읽기 연구실 — https://adminmrobo.github.io/probability_distribution_dictionary/table_f.html
+p5 = 2장 t분포 — 자유도가 커지면 Z가 된다 — 분포표 읽기 연구실 — https://adminmrobo.github.io/probability_distribution_dictionary/table_t.html
+p6 = 1장 Z분포 — 표준정규분포표 — 분포표 읽기 연구실 — https://adminmrobo.github.io/probability_distribution_dictionary/table_z.html
+p7 = 분포표 읽기 연구실 — https://adminmrobo.github.io/probability_distribution_dictionary/tables.html
+p8 = 해석의 함정 해석의 함정 — 1종 오류와 2종 오류 — 분포표 읽기 연구실 — https://adminmrobo.github.io/probability_distribution_dictionary/trap_errors.html
 
 [개념] 이름 (유형) — 정의 [출처 페이지 기호#위치]
-- 표준편차 (개념) — 데이터가 평균에서 보통 얼마나 떨어져 있는지 나타내는 폭. 표준화의 한 눈금. [p2#h-words]
-- 분산 (개념) — 값이 평균에서 흩어진 정도. 주성분이 담은 분산의 몫으로 정보량을 가늠한다. [p1#h-prompt]
-- 평균 (개념) — 모든 값을 더해 개수로 나눈 값. 데이터의 가운데를 나타냄. [p1#h-prompt]
-- 독립 사건 (개념) — 한 사건이 일어났다는 사실이 다른 사건의 확률을 바꾸지 않는 관계. P(A∩B) = P(A) × P(B). [p1#reltable]
-- A/B 테스트 (방법) — 사용자를 무작위로 두 무리로 나눠 한쪽에만 바꾼 버전을 보여 주고 지표를 비교하는 실험. [p2#sim-ins]
-- 신뢰구간 (개념) — 같은 방법으로 반복하면 그중 약 95%가 참값을 포함하는 구간(빈도주의). "이 구간에 참값이 있을 확률 95%"로 읽지 않음. [p2#h-map]
-- 검정력 (개념) — 진짜 효과가 있을 때 그것을 잡아낼 확률(보통 80%). [p2#h-map]
-- p값 (개념) — 차이가 없다고 가정할 때 이만큼 또는 더 극단적인 결과가 나올 확률. 가설이 참일 확률이 아님. [p1#h-py]
-- 표본 크기 (개념) — 전체(모집단) 가운데 실제로 관측한 일부. 표본이 작으면 우연한 차이가 크게 보인다. [p2#h-duel]
-- QQ 플롯 (방법) — 내 데이터가 정규분포(또는 기준 분포)를 따르나? 점이 대각선 위에 있으면 기준 분포와 닮았습니다. [p1#h-prompt]
-- 1종 오류 (개념) — 차이가 없는데 있다고 판정하는 실수(헛경보), 확률 α [p2#h-s4]
-- 2종 오류 (개념) — 차이가 있는데 놓치는 실수, 확률 β [p2#h-s4]
-- 확률분포(정규·포아송·지수·균등·이항) (개념) — 데이터 모양의 이름표. 확률 = 넓이 [p1#kg]
-- 화살표(벡터) (개념) — 자리가 아닌 이동. 같은 자리끼리 더한다. [p1#h-notes]
-- 길이(노름) (개념) — 피타고라스로 잰 화살표 길이 [p1#h-py]
-- 확률질량함수 (개념) — 정의 없음 [p1#h-py]
-- 누적분포함수 (개념) — 정의 없음 [p1#h-py]
-- 확률밀도함수 (개념) — 정의 없음 [p1#h-py]
-- 대립가설 (개념) — 정의 없음 [p2#h-words]
-- 이항분포 (분포) — 정의 없음 [p2#pane-b]
-- 포아송분포 (분포) — 정의 없음 [p2#tw-b]
+- 표준편차 (개념) — 데이터가 평균에서 보통 얼마나 떨어져 있는지 나타내는 폭. 표준화의 한 눈금. [p7#h-words]
+- 혼동 행렬 (개념) — 정답 클래스와 모델이 고른 클래스를 표로 세어 어떤 실수를 했는지 보여 준다. [p8#cmgrid]
+- 분산 (개념) — 값이 평균에서 흩어진 정도. 주성분이 담은 분산의 몫으로 정보량을 가늠한다. [p2#h-prompt]
+- 평균 (개념) — 모든 값을 더해 개수로 나눈 값. 데이터의 가운데를 나타냄. [p2#h-prompt]
+- 독립 사건 (개념) — 한 사건이 일어났다는 사실이 다른 사건의 확률을 바꾸지 않는 관계. P(A∩B) = P(A) × P(B). [p2#reltable]
+- A/B 테스트 (방법) — 사용자를 무작위로 두 무리로 나눠 한쪽에만 바꾼 버전을 보여 주고 지표를 비교하는 실험. [p8#sim-ins]
+- 검정력 (개념) — 진짜 효과가 있을 때 그것을 잡아낼 확률(보통 80%). [p8#h-trap]
+- p값 (개념) — 차이가 없다고 가정할 때 이만큼 또는 더 극단적인 결과가 나올 확률. 가설이 참일 확률이 아님. [p2#h-py]
+- 표본 크기 (개념) — 전체(모집단) 가운데 실제로 관측한 일부. 표본이 작으면 우연한 차이가 크게 보인다. [p8#duel]
+- QQ 플롯 (방법) — 내 데이터가 정규분포(또는 기준 분포)를 따르나? 점이 대각선 위에 있으면 기준 분포와 닮았습니다. [p2#h-prompt]
+- 1종 오류 (개념) — 차이가 없는데 있다고 판정하는 실수(헛경보), 확률 α [p8#h-trap]
+- 2종 오류 (개념) — 차이가 있는데 놓치는 실수, 확률 β [p8#h-trap]
+- 확률분포(정규·포아송·지수·균등·이항) (개념) — 데이터 모양의 이름표. 확률 = 넓이 [p2#kg]
+- 자유도 (개념) — 표본표준편차를 계산할 때 평균을 이미 썼으므로 자유롭게 움직이는 값이 하나 줄어 n−1이 된다. [p1#h-df]
+- 화살표(벡터) (개념) — 자리가 아닌 이동. 같은 자리끼리 더한다. [p2#h-notes]
+- 길이(노름) (개념) — 피타고라스로 잰 화살표 길이 [p2#h-py]
+- 다중검정 (개념) — 여러 번 검정하면 우연히 '유의'가 나올 기회도 늘어나는 문제. [p8#h-trap]
+- 확률질량함수 (개념) — 정의 없음 [p2#h-py]
+- 누적분포함수 (개념) — 정의 없음 [p2#h-py]
+- 확률밀도함수 (개념) — 정의 없음 [p2#h-py]
+- 카이제곱분포 (분포) — 독립인 표준정규 k개의 제곱합. 적합도·독립성 검정, 분산의 신뢰구간에 쓴다. [p3#h-c]
+- F분포 (분포) — 두 카이제곱을 각자의 자유도로 나눈 비율. 분산분석에 쓴다. [p4#h-f]
+- t분포 (분포) — σ를 모를 때 쓰는 분포. 자유도가 커지면 표준정규분포로 수렴하고, 표의 t값이 z값에 다가간다. [p5#h-t]
+- 표준정규분포 (분포) — 평균 0, 표준편차 1인 정규분포. Z표는 z 왼쪽 넓이를 담는다. [p6#h-z]
+- 대립가설 (개념) — 정의 없음 [p7#h-words]
+- 거짓 발견 비율 (개념) — 양성 판정 가운데 실제로는 효과가 없는 비율 P(Y=0 | Ŷ=1). α와 다르다. [p8#h-trap]
 
 [관계] A → B, C : 관계
 - 표본 크기 → A/B 테스트 : ~의 일부
 - 1종 오류 → 2종 오류 : 대비
+- 1종 오류 → 혼동 행렬 : ~의 일부
+- 2종 오류 → 혼동 행렬 : ~의 일부
+- 다중검정 → 1종 오류 : 관련
 - 확률질량함수 → 확률밀도함수 : 먼저 알아야 함
-- 이항분포 → 포아송분포 : 먼저 알아야 함
 
 ## 해보며 배우는 파이썬
 주소: https://adminmrobo.github.io/learn-python-by-doing_Korean/
@@ -1223,7 +1236,6 @@ p21 = 3-7 대결 · 3부작 정리 · 시계열 3부작 — https://adminmrobo.g
 - 최소제곱 (개념) — 잔차 제곱합이 최소가 되도록 계수를 찾는 방법. [p3#lv1]
 - 특성공학 (방법) — 기존 칸을 변환·조합(제곱, 곱, 비율, 구간)하거나 도메인 지식으로 새 특성을 만들어 모델 성능을 높이는 작업. [p13#f1]
 - AR·ARIMA 모델 (방법) — 과거 값들의 가중합(AR), 과거 오차의 가중합(MA), 차분(I)을 조합한 시계열 예측 모델. [p3#lv1]
-- 자유도 (개념) — 표본표준편차를 계산할 때 평균을 이미 썼으므로 자유롭게 움직이는 값이 하나 줄어 n−1이 된다. [p6#lv2]
 - L2 규제 (방법) — 가중치가 커질수록 손실에 벌점을 더해 곡선을 매끄럽게 만드는 방법. [p19#lv3]
 - 검증 데이터 (개념) — 학습에 쓰지 않고 설정과 멈출 때를 고르는 데 쓰는 데이터. [p1#lv1]
 - 발화 문턱 (생물 대응) — 뉴런은 입력이 문턱을 넘어야 발화한다. ReLU의 꺾임과 닮았다(실제 뉴런은 스파이크를 낸다). [p20#lv1]
@@ -1307,7 +1319,7 @@ p21 = 3-7 대결 · 3부작 정리 · 시계열 3부작 — https://adminmrobo.g
 - 에너지 효율 (개념) — 같은 일을 하는 데 드는 에너지. 사람 뇌는 약 20 W로 작동한다. [p20#lv3]
 - AIC (아카이케 정보 기준) (지표) — 잘 맞힐수록 낮아지고, 계수가 많을수록 벌점이 붙는 점수. 훈련 데이터만으로 차수를 고를 때 쓴다. [p21#vs]
 - 봉인 시험 비교 (개념) — 설정을 검증으로 고르고 훈련+검증으로 다시 학습한 뒤 시험 데이터를 한 번만 열어 비교하는 절차. [p21#seal]
-- (이 피드 위쪽에 이미 정의된 개념) 과적합, 조기 종료
+- (이 피드 위쪽에 이미 정의된 개념) 과적합, 조기 종료, 자유도
 
 [관계] A → B, C : 관계
 - 시그모이드 → 게이트 : ~의 일부

@@ -7,7 +7,7 @@
  },
  "@id": "https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/statistics-data-basics.jsonld",
  "dct:title": "ahnboat lab 온톨로지 — 통계·데이터 기초",
- "dct:modified": "2026-11-25",
+ "dct:modified": "2026-11-26",
  "dct:license": "https://creativecommons.org/licenses/by-nc/4.0/",
  "dct:creator": "안상선 (Ahn Sangsun)",
  "@graph": [
@@ -42,6 +42,40 @@
    "lab:partOf": [
     {
      "@id": "lab:concept/dispersion"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/confusion-matrix",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "혼동 행렬",
+     "@language": "ko"
+    },
+    {
+     "@value": "Confusion matrix",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "정답 클래스와 모델이 고른 클래스를 표로 세어 어떤 실수를 했는지 보여 준다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/trap_errors.html#cmgrid"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/confusion-matrix"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/specificity"
     }
    ]
   },
@@ -178,7 +212,7 @@
     "@language": "ko"
    },
    "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/tables.html#sim-ins"
+    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/trap_errors.html#sim-ins"
    },
    "lab:topic": [
     {
@@ -188,40 +222,6 @@
    "lab:prerequisiteOf": [
     {
      "@id": "lab:concept/bayesian-average"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/confidence-interval",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "신뢰구간",
-     "@language": "ko"
-    },
-    {
-     "@value": "confidence interval",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "같은 방법으로 반복하면 그중 약 95%가 참값을 포함하는 구간(빈도주의). \"이 구간에 참값이 있을 확률 95%\"로 읽지 않음.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/tables.html#h-map"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/confidence-interval"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/diagnostic-uncertainty"
     }
    ]
   },
@@ -246,7 +246,7 @@
     "@language": "ko"
    },
    "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/tables.html#h-map"
+    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/trap_errors.html#h-trap"
    },
    "lab:topic": [
     {
@@ -314,7 +314,7 @@
     "@language": "ko"
    },
    "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/tables.html#h-duel"
+    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/trap_errors.html#duel"
    },
    "lab:topic": [
     {
@@ -400,7 +400,7 @@
     "@language": "ko"
    },
    "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/tables.html#h-s4"
+    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/trap_errors.html#h-trap"
    },
    "lab:topic": [
     {
@@ -410,6 +410,11 @@
    "lab:contrastsWith": [
     {
      "@id": "lab:concept/type-ii-error"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/confusion-matrix"
     }
    ]
   },
@@ -434,11 +439,16 @@
     "@language": "ko"
    },
    "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/tables.html#h-s4"
+    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/trap_errors.html#h-trap"
    },
    "lab:topic": [
     {
      "@id": "lab:topic/probability-statistics"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/confusion-matrix"
     }
    ]
   },
@@ -468,6 +478,35 @@
    "lab:topic": [
     {
      "@id": "lab:topic/distribution-family-map"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/degrees-of-freedom",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "자유도",
+     "@language": "ko"
+    },
+    {
+     "@value": "degrees of freedom",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "표본표준편차를 계산할 때 평균을 이미 썼으므로 자유롭게 움직이는 값이 하나 줄어 n−1이 된다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/appendix_df.html#h-df"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:distribution/t"
     }
    ]
   },
@@ -526,6 +565,35 @@
    "lab:topic": [
     {
      "@id": "lab:topic/normed-spaces"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/multiple-testing",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "다중검정",
+     "@language": "ko"
+    },
+    {
+     "@value": "multiple testing",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "여러 번 검정하면 우연히 '유의'가 나올 기회도 늘어나는 문제.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/trap_errors.html#h-trap"
+   },
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/type-i-error"
     }
    ]
   },
@@ -623,6 +691,107 @@
    ]
   },
   {
+   "@id": "lab:dist/chi-square",
+   "@type": [
+    "skos:Concept",
+    "lab:Distribution"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "카이제곱분포",
+     "@language": "ko"
+    },
+    {
+     "@value": "chi-square distribution",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "독립인 표준정규 k개의 제곱합. 적합도·독립성 검정, 분산의 신뢰구간에 쓴다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/table_chi2.html#h-c"
+   }
+  },
+  {
+   "@id": "lab:dist/f",
+   "@type": [
+    "skos:Concept",
+    "lab:Distribution"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "F분포",
+     "@language": "ko"
+    },
+    {
+     "@value": "F distribution",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "두 카이제곱을 각자의 자유도로 나눈 비율. 분산분석에 쓴다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/table_f.html#h-f"
+   }
+  },
+  {
+   "@id": "lab:dist/t",
+   "@type": [
+    "skos:Concept",
+    "lab:Distribution"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "t분포",
+     "@language": "ko"
+    },
+    {
+     "@value": "Student t distribution",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "σ를 모를 때 쓰는 분포. 자유도가 커지면 표준정규분포로 수렴하고, 표의 t값이 z값에 다가간다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/table_t.html#h-t"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/t-interval"
+    }
+   ]
+  },
+  {
+   "@id": "lab:dist/standard-normal",
+   "@type": [
+    "skos:Concept",
+    "lab:Distribution"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "표준정규분포",
+     "@language": "ko"
+    },
+    {
+     "@value": "standard normal distribution",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "평균 0, 표준편차 1인 정규분포. Z표는 z 왼쪽 넓이를 담는다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/table_z.html#h-z"
+   }
+  },
+  {
    "@id": "lab:concept/alternative",
    "@type": [
     "skos:Concept",
@@ -648,54 +817,27 @@
    ]
   },
   {
-   "@id": "lab:dist/binomial",
+   "@id": "lab:concept/false-discovery-rate",
    "@type": [
     "skos:Concept",
-    "lab:Distribution"
+    "lab:Concept"
    ],
    "skos:prefLabel": [
     {
-     "@value": "이항분포",
+     "@value": "거짓 발견 비율",
      "@language": "ko"
     },
     {
-     "@value": "binomial",
+     "@value": "false discovery rate",
      "@language": "en"
     }
    ],
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/tables.html#pane-b"
+   "skos:definition": {
+    "@value": "양성 판정 가운데 실제로는 효과가 없는 비율 P(Y=0 | Ŷ=1). α와 다르다.",
+    "@language": "ko"
    },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:dist/poisson"
-    },
-    {
-     "@id": "lab:dist/hypergeometric"
-    },
-    {
-     "@id": "lab:dist/multinomial"
-    }
-   ]
-  },
-  {
-   "@id": "lab:dist/poisson",
-   "@type": [
-    "skos:Concept",
-    "lab:Distribution"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "포아송분포",
-     "@language": "ko"
-    },
-    {
-     "@value": "Poisson",
-     "@language": "en"
-    }
-   ],
    "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/tables.html#tw-b"
+    "@id": "https://adminmrobo.github.io/probability_distribution_dictionary/trap_errors.html#h-trap"
    }
   },
   {
@@ -1072,6 +1214,11 @@
     {
      "@id": "lab:metric/precision"
     }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/confusion-matrix"
+    }
    ]
   },
   {
@@ -1100,6 +1247,11 @@
    "lab:topic": [
     {
      "@id": "lab:topic/precision-recall"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/confusion-matrix"
     }
    ],
    "lab:contrastsWith": [
@@ -18387,35 +18539,6 @@
    ]
   },
   {
-   "@id": "lab:concept/degrees-of-freedom",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "자유도",
-     "@language": "ko"
-    },
-    {
-     "@value": "degrees of freedom",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "표본표준편차를 계산할 때 평균을 이미 썼으므로 자유롭게 움직이는 값이 하나 줄어 n−1이 된다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/timeseries-trilogy/1_6_samples.html#lv2"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:distribution/t"
-    }
-   ]
-  },
-  {
    "@id": "lab:method/l2-regularization",
    "@type": [
     "skos:Concept",
@@ -22354,6 +22477,40 @@
    ]
   },
   {
+   "@id": "lab:concept/confidence-interval",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "신뢰구간",
+     "@language": "ko"
+    },
+    {
+     "@value": "confidence interval",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "같은 방법으로 반복하면 그중 약 95%가 참값을 포함하는 구간(빈도주의). \"이 구간에 참값이 있을 확률 95%\"로 읽지 않음.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/statistics_note/ch04/2-1a_point_interval.html#lv4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/confidence-interval"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/diagnostic-uncertainty"
+    }
+   ]
+  },
+  {
    "@id": "lab:concept/central-tendency",
    "@type": [
     "skos:Concept",
@@ -22984,6 +23141,37 @@
    ]
   },
   {
+   "@id": "lab:dist/binomial",
+   "@type": [
+    "skos:Concept",
+    "lab:Distribution"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "이항분포",
+     "@language": "ko"
+    },
+    {
+     "@value": "binomial",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/statistics_note/ch03/1-1_discrete_distributions.html#lv3"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:dist/poisson"
+    },
+    {
+     "@id": "lab:dist/hypergeometric"
+    },
+    {
+     "@id": "lab:dist/multinomial"
+    }
+   ]
+  },
+  {
    "@id": "lab:dist/geometric",
    "@type": [
     "skos:Concept",
@@ -23026,6 +23214,26 @@
    ],
    "rdfs:isDefinedBy": {
     "@id": "https://adminmrobo.github.io/statistics_note/ch03/1-1_discrete_distributions.html#lv5"
+   }
+  },
+  {
+   "@id": "lab:dist/poisson",
+   "@type": [
+    "skos:Concept",
+    "lab:Distribution"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "포아송분포",
+     "@language": "ko"
+    },
+    {
+     "@value": "Poisson",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/statistics_note/ch03/1-1_discrete_distributions.html#lv6"
    }
   },
   {
@@ -23408,35 +23616,6 @@
    }
   },
   {
-   "@id": "lab:dist/t",
-   "@type": [
-    "skos:Concept",
-    "lab:Distribution"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "t분포",
-     "@language": "ko"
-    },
-    {
-     "@value": "Student's t",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "(X̄ − μ)/(S/√n) ~ t(n−1).",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/statistics_note/ch04/2-3_t_chi_f.html#lv3"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/t-interval"
-    }
-   ]
-  },
-  {
    "@id": "lab:dist/chi2",
    "@type": [
     "skos:Concept",
@@ -23464,30 +23643,6 @@
      "@id": "lab:dist/f"
     }
    ]
-  },
-  {
-   "@id": "lab:dist/f",
-   "@type": [
-    "skos:Concept",
-    "lab:Distribution"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "F분포",
-     "@language": "ko"
-    },
-    {
-     "@value": "F distribution",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "카이제곱 비.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/statistics_note/ch04/2-3_t_chi_f.html#lv6"
-   }
   },
   {
    "@id": "lab:concept/dof",
