@@ -5,3 +5,10 @@
 .labnav a:hover{border-color:#1f2224}
 .labnav a.on{background:#1f2224;color:#fff}
 @media (max-width:640px){.labnav a:first-child{flex-basis:100%;margin-right:0}}
+.labnav .ver{font-family:ui-monospace,Menlo,monospace;font-size:12px;font-weight:700;border:1.5px solid #1f2224;border-radius:99px;padding:1px 9px;background:#fff;margin-left:4px}
+.labver{margin:0 0 10px;font-size:13px}
+.labver summary{cursor:pointer}
+.labver ul{margin:6px 0 0;padding-left:20px}
+.labver li{margin:2px 0}
+.labver li span{font-family:ui-monospace,Menlo,monospace;font-size:12px}
+.toolcard .vtag{font-family:ui-monospace,Menlo,monospace;font-size:12px;font-weight:700;border:1.5px solid #1f2224;border-radius:99px;padding:0 8px;margin-left:auto}

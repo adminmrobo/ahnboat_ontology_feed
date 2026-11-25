@@ -404,6 +404,7 @@
 (function () {
   var $ = function (id) { return document.getElementById(id); }, esc = LabKit.esc;
   LabKit.nav($("labnav"), "review", "../");
+  LabKit.versionBox(document.querySelector("footer"), "review");
   LabKit.sprites("../");
 
   /* ---------- 튜토리얼 ---------- */
@@ -546,7 +547,7 @@
       "4. 고칠 것 우선순위 표: | 순위 | 무엇을 | 어떻게 | 기대 효과 |\n" +
       "5. 가중 총점(100점 만점) = Σ(점수 ÷ 5 × 가중치)" + (s === 100 ? "" : " ÷ " + s + " × 100") + ". 계산식도 보여 줘. '판단 불가' 항목이 있으면 그 항목은 빼고, 남은 가중치 합으로 나눈 뒤 100을 곱해 비율을 맞춰.\n" +
       ($("optFix").checked ? "6. 점수가 가장 낮은 항목 하나에 대해, 문서의 실제 문장을 고친 예시(고치기 전 → 고친 뒤)\n" : "") +
-      ($("optPlain").checked ? "- 수식은 LaTeX 대신 일반 글자로 써 줘.\n" : "");
+      ($("optPlain").checked ? "- 수식은 LaTeX 대신 일반 글자로 써 줘.\n" : "") + "\n" + LabKit.stamp("review");
   }
 
   /* ---------- 점수 확인 도우미 ---------- */

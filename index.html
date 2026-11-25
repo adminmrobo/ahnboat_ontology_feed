@@ -162,7 +162,7 @@
   .toolcard:hover { transform:translate(-2px,-2px); box-shadow:6px 6px 0 #1f2224; }
   .toolcard .top { display:flex; gap:12px; align-items:center; }
   .toolcard img { width:56px; height:56px; border-radius:12px; background:var(--soft); flex:none; }
-  .toolcard b { font-size:18px; }
+  .toolcard b { font-size:18px; white-space:nowrap; word-break:keep-all; }
   .toolcard p { margin:0; font-size:14px; color:var(--sub); line-height:1.6; }
   .toolcard .go { margin-top:auto; font-size:14px; font-weight:700; color:var(--accent); }
   .toolcard.soon { border-style:dashed; box-shadow:none; color:var(--sub); cursor:default; }
@@ -201,8 +201,9 @@
 (function () {
   var esc = LabKit.esc;
   LabKit.nav(document.getElementById("labnav"), "home", "");
+  LabKit.versionBox(document.querySelector("footer"), "home");
   document.getElementById("tools").innerHTML = LabKit.TOOLS.filter(function (t) { return t.id !== "home"; }).map(function (t) {
-    return '<a class="toolcard" href="' + t.href + '"><div class="top"><img class="px" src="assets/char/' + t.icon + '.webp" alt=""><b>' + esc(t.name) + '</b></div><p>' +
+    return '<a class="toolcard" href="' + t.href + '"><div class="top"><img class="px" src="assets/char/' + t.icon + '.webp" alt=""><b>' + esc(t.name) + '</b><span class="vtag" title="' + esc(t.date) + '">' + esc(t.version) + '</span></div><p>' +
       esc(t.desc) + '</p><span class="go">튜토리얼과 함께 시작하기 →</span></a>';
   }).join("") + '<div class="toolcard soon"><div class="top"><img class="px" src="assets/char/robo_wow.webp" alt=""><b>다음 도구 준비 중</b></div><p>박사님이 깨어나면 또 하나 생깁니다. 주판봇이 벌써 숫자를 세며 기다리고 있어요.</p></div>';
   fetch("feeds/index.json").then(function (r) { return r.json(); }).then(function (d) {

@@ -1,6 +1,8 @@
 /* ahnboat lab 도구함 공통 코드 — 모든 도구 페이지가 함께 쓴다.
    LabKit.TOOLS        도구 목록 (새 도구는 여기 한 줄 추가 → 모든 페이지 위쪽 메뉴에 나타남)
-   LabKit.nav(el, cur, base)       위쪽 메뉴 그리기
+   LabKit.nav(el, cur, base)       위쪽 메뉴 그리기 (오른쪽 끝에 지금 도구의 버전)
+   LabKit.versionBox(footer, id)   바닥글에 버전·바뀐 점 접기 상자
+   LabKit.stamp(id)                지시문 끝에 붙이는 '어떤 판으로 만들었는지' 한 줄
    LabKit.sprites(base)            .spr 요소를 캐릭터 팩 동작 그림으로 움직이기
    LabKit.loadSX(base)             개념 지도 색인(feeds/search.json) 읽기 (Promise)
    LabKit.findConcepts(SX, text, sel)  글에서 관련 개념 찾기 (+ 관계로 이어진 개념)
@@ -9,20 +11,45 @@
 */
 (function () {
   "use strict";
+  /* 버전 표시: 도구를 고칠 때마다 log 맨 앞에 [버전, 날짜, 바뀐 점] 한 줄을 더한다. 맨 앞 줄이 지금 버전이다. */
   var TOOLS = [
-    { id: "home",   href: "",        name: "연구실 도구함",   short: "도구함" },
-    { id: "check",  href: "check/",  name: "아이디어 검증하기", short: "아이디어 검증", desc: "머릿속 아이디어를 연구실 개념 지도에 비춰, AI가 근거 있는 것과 없는 것을 나눠 답하게 합니다.", icon: "asst_spark" },
-    { id: "review", href: "review/", name: "결과물 평가하기", short: "결과물 평가", desc: "아이디어·논문·제안서·사내 개선안·강의안·도안을 기준표로 채점하고, AI 점수가 부풀려졌는지 확인합니다.", icon: "sia_explain" }
+    { id: "home",   href: "",        name: "연구실 도구함",   short: "도구함",
+      log: [["v1.0", "2026-11-26", "첫 판: 도구 목록, 공통 메뉴, 모든 도구가 함께 쓰는 코드(labkit)"]] },
+    { id: "check",  href: "check/",  name: "아이디어 검증하기", short: "아이디어 검증", icon: "asst_spark",
+      desc: "머릿속 아이디어를 연구실 개념 지도에 비춰, AI가 근거 있는 것과 없는 것을 나눠 답하게 합니다.",
+      log: [["v1.4", "2026-11-26", "연구실 도구함으로 옮김(check/), 공통 메뉴·버전 표시, 개념 찾기에서 숫자 낱말·예시 값 걸러 내기"],
+            ["v1.3", "2026-11-24", "관계로 이어진 개념까지 찾기, 분야 카드에 색인 콘텐츠 수와 홈페이지 수를 함께 표시"],
+            ["v1.2", "2026-11-24", "ChatGPT 시험 반영: 텍스트판 피드, 관련 개념 미리 찾기, 답 형식 선택, 답 확인 도우미"],
+            ["v1.1", "2026-11-24", "Genspark 표지·무대 배경 그림, 공유 미리보기"],
+            ["v1.0", "2026-11-24", "첫 판: 분야별 온톨로지 피드, 지시문 만들기, 하루·시아·모아 튜토리얼, AI 판단 코너"]] },
+    { id: "review", href: "review/", name: "결과물 평가하기", short: "결과물 평가", icon: "sia_explain",
+      desc: "아이디어·논문·제안서·사내 개선안·강의안·도안을 기준표로 채점하고, AI 점수가 부풀려졌는지 확인합니다.",
+      log: [["v1.0", "2026-11-26", "첫 판: 기준표 6종(항목 40개), 심사위원·반대 심사위원, 튜토리얼, 점수 확인 도우미"]] }
   ];
+  TOOLS.forEach(function (t) { t.version = t.log[0][0]; t.date = t.log[0][1]; });
+  function tool(id) { return TOOLS.filter(function (t) { return t.id === id; })[0]; }
+  function ver(id) { var t = tool(id); return t ? t.version : ""; }
+  /* 지시문 끝에 붙이는 한 줄: 어떤 판으로 만든 지시문인지 남긴다 */
+  function stamp(id) { var t = tool(id); return t ? "— 만든 도구: ahnboat lab " + t.name + " " + t.version + " (" + t.date + ")" : ""; }
+  /* 바닥글 맨 앞에 '도구 이름 버전 · 날짜 · 바뀐 점' 접기 상자를 넣는다 */
+  function versionBox(el, id) {
+    var t = tool(id); if (!el || !t) return;
+    var d = document.createElement("details");
+    d.className = "labver";
+    d.innerHTML = "<summary><b>" + esc(t.name) + " " + esc(t.version) + "</b> · " + esc(t.date) + " · 바뀐 점</summary><ul>" +
+      t.log.map(function (l) { return "<li><b>" + esc(l[0]) + "</b> <span>" + esc(l[1]) + "</span> — " + esc(l[2]) + "</li>"; }).join("") + "</ul>";
+    el.insertBefore(d, el.firstChild);
+  }
 
   function esc(t) { return String(t == null ? "" : t).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
 
   function nav(el, cur, base) {
     if (!el) return;
     el.className = "labnav";
+    var c = tool(cur);
     el.innerHTML = TOOLS.map(function (t) {
       return '<a href="' + base + t.href + '"' + (t.id === cur ? ' aria-current="page" class="on"' : "") + ">" + esc(t.id === "home" ? "🧪 " + t.name : t.short) + "</a>";
-    }).join("");
+    }).join("") + (c ? '<span class="ver" title="' + esc(c.name + " " + c.version + " · " + c.date) + '">' + esc(c.version) + "</span>" : "");
   }
 
   /* ---------- 픽셀 캐릭터 (캐릭터 팩 lab4 동작 그림 가로 스트립) ---------- */
@@ -168,5 +195,5 @@
     return { html: h, ok: ok, mid: mid, bad: bad, urls: urls, nFeed: nFeed, nGen: nGen, noLink: noLink };
   }
 
-  window.LabKit = { TOOLS: TOOLS, nav: nav, sprites: sprites, loadSX: loadSX, findConcepts: findConcepts, checkLinks: checkLinks, toks: toks, esc: esc };
+  window.LabKit = { TOOLS: TOOLS, tool: tool, ver: ver, stamp: stamp, versionBox: versionBox, nav: nav, sprites: sprites, loadSX: loadSX, findConcepts: findConcepts, checkLinks: checkLinks, toks: toks, esc: esc };
 })();
