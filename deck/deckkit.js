@@ -2,6 +2,7 @@
    DeckKit.build(S)      입력(S)으로 강의 PPT 제작 지시서(md)를 만든다 → {md, slides, count, lo, hi}
    DeckKit.slides(S)     장 구성만 계산 → [{h, rows:[{n,type,title,content}]}]
    DeckKit.check(md)     다 쓴 지시서(md)를 점검 → {items:[{cls,text}], n, fill, todo}
+   DeckKit.quick(t)      3~4줄만 쓴 글로 입력 전체를 자동으로 채운다 (빠른 만들기)
    DeckKit.fromIdea(t)   아이디어 글에서 장 수·도구·언어·대시보드 여부 읽기
    두 예시(EX1·EX2)는 deck/examples/ 의 원본 지침서를 입력으로 옮긴 것이다.
 */
@@ -536,6 +537,90 @@
     return r;
   }
 
+
+  /* ---------- 빠른 만들기: 3~4줄만 쓰면 나머지는 기본값과 추천으로 채운다 ---------- */
+  function suggestCharts(q, B, used) {
+    q = q || ""; used = used || {};
+    var K = [
+      [/언제|시간|요일|월별|추이|변화|변했|흐름|계절/, ["시간대별 선 그래프", "요일×시간 히트맵"], ["일별 추세선", "요일×시간 히트맵", "항목별 막대"]],
+      [/왜|원인|이유|늦|실패|불량/, ["원인별 막대 차트", "파레토 차트"], ["원인별 막대", "파레토 차트", "일별 추세선"]],
+      [/어디|지역|거점|위치|장소|노선/, ["지역별 막대 차트", "지역×시간 히트맵"], ["지역별 막대", "지역×시간 히트맵", "일별 추세선"]],
+      [/관계|영향|상관|따라|이상/, ["산점도", "강조점을 더한 산점도"], ["산점도(이상값 강조)", "일별 추세선", "항목별 막대"]],
+      [/얼마|비교|차이|많|순위|어느/, ["항목별 막대 차트", "항목×기간 히트맵"], ["항목별 막대", "일별 추세선", "항목×기간 히트맵"]]
+    ];
+    var hit = K.filter(function (k) { return k[0].test(q); });
+    var pick = hit.filter(function (k) { return !used[k[0].source]; })[0] || hit[0];
+    if (!pick) return "";
+    used[pick[0].source] = 1;
+    return (B ? pick[2] : pick[1]).join(", ");
+  }
+
+  /* 목표 장 수에 맞춰 넣고 빼도 되는 장(차트 고르기·흔한 실수·비교)을 켜고 끈다 */
+  function fit(S) {
+    var tg = +S.target || 40, lo = tg - 2, hi = tg + 2, B = S.chain === "B";
+    function n() { return slides(S).reduce(function (a, s) { return a + s.rows.length; }, 0); }
+    var drop = ["chartPick", "mistakes", "compare"], add = B ? ["compare", "mistakes"] : ["mistakes", "chartPick", "compare"];
+    drop.forEach(function (k) { if (n() > hi && S.opts[k]) S.opts[k] = false; });
+    add.forEach(function (k) { if (n() < lo && !S.opts[k] && !(k === "compare" && S.practices.length < 2)) { S.opts[k] = true; if (n() > hi) S.opts[k] = false; } });
+    return n();
+  }
+  function quick(text) {
+    var S = blank(), L = String(text || "").split(/\n+/).map(function (l) { return l.replace(/^\s*(?:[-*•]|\d+[.)])\s*/, "").trim(); }).filter(Boolean);
+    S.idea = L.join("\n");
+    if (!L.length) return S;
+    var r = fromIdea(S.idea);
+    ["target", "main", "sub", "chain", "zhScript", "dataPolicy", "deckTool"].forEach(function (k) { if (r[k]) S[k] = r[k]; });
+    // 도구 역할: 제목 줄은 빼고, 도구 이름 앞뒤 말로 주 도구·보조 도구를 가린다
+    var TL = [["Qwen", "Qwen (Qwen Chat)"], ["AI Studio", "Google AI Studio"], ["ChatGPT", "ChatGPT"], ["Gemini", "Gemini"], ["Claude", "Claude"], ["DeepSeek", "DeepSeek"], ["Copilot", "Copilot"], ["뤼튼", "뤼튼"]];
+    var rest = L.slice(1).join("\n"), low = rest.toLowerCase(), tools = [];
+    TL.forEach(function (x) {
+      var at = low.indexOf(x[0].toLowerCase()); if (at < 0) return;
+      var near = rest.slice(Math.max(0, at - 14), at + x[0].length + 14), role = 0;
+      if (/쉬운|주력|주 도구|메인|위주/.test(near)) role = 1;
+      if (/어려운|대시보드는|보조|맛보기|지도는|지도처럼/.test(near)) role = role === 1 && /주력|쉬운/.test(rest.slice(at, at + x[0].length + 10)) ? 1 : 2;
+      tools.push({ at: at, v: x[1], role: role });
+    });
+    if (tools.length) {
+      tools.sort(function (a, b) { return a.at - b.at; });
+      var m1 = tools.filter(function (t) { return t.role === 1; })[0] || tools.filter(function (t) { return t.role !== 2; })[0] || tools[0];
+      var m2 = tools.filter(function (t) { return t !== m1 && t.role === 2; })[0] || tools.filter(function (t) { return t !== m1; })[0];
+      S.main = m1.v; S.sub = m2 ? m2.v : "";
+    } else if (r.main) { S.main = r.main; S.sub = r.sub || ""; }
+    if (r.langs) Object.keys(r.langs).forEach(function (k) { S.langs[k] = true; });
+    var B = S.chain === "B";
+    S.title = L[0].replace(/^(주제|제목|강의|덱)\s*[:：]\s*/, "").replace(/\s*(강의를?\s*)?(만들고 싶다|하고 싶다|만든다|한다)\.?$/, "").trim();
+    if (/처음|초보|입문|비전공|코딩.{0,4}(몰|없)/.test(S.idea)) S.audience = "beginner";
+    else if (/실무|현업|직장인|담당자/.test(S.idea)) S.audience = "pro";
+    else if (/기초|어느 정도|해 본/.test(S.idea)) S.audience = "basic";
+    // 실습 줄: '실습/산업/사례'가 있는 줄, 없으면 구분자가 가장 많은 줄(첫 줄 제외)
+    var pl = L.slice(1).filter(function (l) { return /^(실습|산업|사례|주제들?)\s*[:：]|실습|산업/.test(l); })[0];
+    var NOTP = /\d+\s*장|대상|학생|실무자|초보|처음|입문|qwen|studio|chatgpt|gemini|claude|deepseek|genspark|한국어판|중국어|영어판|일본어|가상 데이터|공공/i;
+    if (!pl) pl = L.slice(1).filter(function (l) { return !NOTP.test(l); }).sort(function (a, b) { return (b.match(/[,·、]/g) || []).length - (a.match(/[,·、]/g) || []).length; }).filter(function (l) { return /[,·、]/.test(l); })[0];
+    var items = [];
+    if (pl) {
+      var body = pl.replace(/^[^:：]*(실습|산업|사례|주제들?)[^:：]*[:：]\s*/, "").replace(/\s*(두|세|네|2|3|4)\s*(개|가지)\.?\s*$/, "");
+      var depth = 0, cur = "";   // 괄호 안의 쉼표는 나누지 않는다
+      for (var i = 0; i < body.length; i++) {
+        var c = body[i];
+        if (c === "(" || c === "（") depth++; if (c === ")" || c === "）") depth--;
+        if (depth === 0 && /[,·、\/]/.test(c)) { items.push(cur); cur = ""; } else cur += c;
+      }
+      items.push(cur);
+      items = items.map(function (x) { return x.trim(); }).filter(function (x) { return x && x.length < 60; }).slice(0, 4);
+    }
+    if (!items.length) items = [S.title];
+    var used = {};
+    S.practices = items.map(function (it) {
+      var m = it.match(/^(.+?)\s*[(（:：]\s*(.+?)\s*[)）]?$/), name = (m ? m[1] : it).trim(), q = m ? m[2].trim() : "";
+      var w = name.split(/\s+/)[0].replace(/(과|와|의|및|별)$/, "") || name.split(/\s+/)[0];
+      return { name: name, pfx: w.length <= 5 ? w : w.slice(0, 2), intro: "", who: "", q: q, charts: suggestCharts(q || name, B, used), cols: "", filter: "", data: "" };
+    });
+    S.opts = { chartPick: !B, privacy: !!r.privacy, mistakes: !B, compare: B && S.practices.length > 1, next: false };
+    fit(S);
+    if (/다음 시간|다음 차시/.test(S.idea)) { var mm = S.idea.match(/다음\s*(?:시간|차시)[^\n]*?(?:에는|은|:)\s*([^\n.]+?)(?:을|를)?\s*(?:배운다|만든다|한다)?\.?$/m); S.opts.next = true; S.nextText = mm ? mm[1].trim() : ""; }
+    return S;
+  }
+
   /* ---------- 예시 두 개 (deck/examples/ 원본 지침서를 입력으로 옮긴 것) ---------- */
   var EX1 = {
     idea: "스마트시티와 물류 데이터로 차트 만드는 법을 처음 배우는 학생에게 가르치고 싶다. 코딩은 몰라도 된다. Qwen에 프롬프트를 여러 번 이어 물어서 차트를 완성하게 하고, 지도처럼 어려운 것은 Google AI Studio로 한 번만 맛보기로 보여 준다. 실습은 요일·시간대별 교통량(언제 붐비는가)과 배송 지연 원인(왜 늦어지는가) 두 개. 40장 안팎, Genspark로 한국어판과 중국어판을 따로 만든다.",
@@ -565,6 +650,6 @@
     langs: { ko: true, zh: true, en: false, ja: false }, zhScript: "undecided", deckTool: "Genspark", design: ""
   };
 
-  root.DeckKit = { build: build, slides: slides, check: check, fromIdea: fromIdea, blank: blank, EX: [EX1, EX2], TERMS: TERMS, josa: { eul: eul, eun: eun, ga: ga, ro: ro } };
+  root.DeckKit = { build: build, slides: slides, check: check, fromIdea: fromIdea, quick: quick, fit: fit, suggestCharts: suggestCharts, blank: blank, EX: [EX1, EX2], TERMS: TERMS, josa: { eul: eul, eun: eun, ga: ga, ro: ro } };
   if (typeof module !== "undefined" && module.exports) module.exports = root.DeckKit;
 })(typeof window !== "undefined" ? window : this);
