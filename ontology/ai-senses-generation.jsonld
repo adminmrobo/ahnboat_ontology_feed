@@ -7,7 +7,7 @@
  },
  "@id": "https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/ai-senses-generation.jsonld",
  "dct:title": "ahnboat lab 온톨로지 — AI 감각·생성",
- "dct:modified": "2026-11-26",
+ "dct:modified": "2026-11-27",
  "dct:license": "https://creativecommons.org/licenses/by-nc/4.0/",
  "dct:creator": "안상선 (Ahn Sangsun)",
  "@graph": [
@@ -3041,6 +3041,11 @@
     {
      "@id": "lab:topic/gan"
     }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:method/autoencoder"
+    }
    ]
   },
   {
@@ -3465,6 +3470,9 @@
    "lab:topic": [
     {
      "@id": "lab:topic/autoencoder"
+    },
+    {
+     "@id": "lab:topic/unsupervised-learning"
     }
    ],
    "lab:prerequisiteOf": [
@@ -8966,6 +8974,11 @@
     },
     {
      "@id": "lab:method/transfer-learning"
+    }
+   ],
+   "lab:uses": [
+    {
+     "@id": "lab:concept/weight-sharing"
     }
    ],
    "lab:contrastsWith": [

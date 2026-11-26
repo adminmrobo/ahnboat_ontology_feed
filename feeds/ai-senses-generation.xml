@@ -3,9 +3,9 @@
   <channel>
     <title>ahnboat lab 온톨로지 — AI 감각·생성</title>
     <link>https://adminmrobo.github.io/ahnboat_ontology_feed/</link>
-    <description>AI 감각·생성 분야 공개 콘텐츠의 최신 지식 색인(개념·정의·관계). 기준일 2026-11-26. AI가 이미지를 구분하고, 동작을 알아보고, 장면을 그려 내고, 글을 읽는 방식을 긴급 미션으로 풀어 봅니다.</description>
+    <description>AI 감각·생성 분야 공개 콘텐츠의 최신 지식 색인(개념·정의·관계). 기준일 2026-11-27. AI가 이미지를 구분하고, 동작을 알아보고, 장면을 그려 내고, 글을 읽는 방식을 긴급 미션으로 풀어 봅니다.</description>
     <language>ko</language>
-    <lastBuildDate>Thu, 26 Nov 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 27 Nov 2026 00:00:00 +0900</lastBuildDate>
     <ttl>720</ttl>
     <copyright>CC BY-NC 4.0 · 안상선 ((주)M-Robo)</copyright>
     <atom:link href="https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/ai-senses-generation.xml" rel="self" type="application/rss+xml"/>
@@ -305,7 +305,7 @@ p9 = 구조 먼저 그리기 연구실 · 웃음 편 2 · 베리에이션 8부 �
       <category>AI 감각·생성</category>
       <category domain="lab:domain">딥러닝</category>
       <category domain="lab:domain">생성형 AI</category>
-      <description><![CDATA[분야: AI 감각·생성 · 학문 분야: 딥러닝, 생성형 AI · 페이지 6쪽 · 개념 32개 · 관계 17개
+      <description><![CDATA[분야: AI 감각·생성 · 학문 분야: 딥러닝, 생성형 AI · 페이지 6쪽 · 개념 32개 · 관계 18개
 사이트: https://adminmrobo.github.io/motion_ai_series_01/
 
 [페이지] 기호 = 제목 — 주소
@@ -355,6 +355,7 @@ p6 = AI는 동작을 어떻게 알아보고 만들까? — 긴급 미션 다섯 
 - 잠재공간 → 오토인코더 : ~의 일부
 - PCA → 오토인코더 : 관련
 - PCA → 복원 : ~로 평가
+- GAN → 오토인코더 : 관련
 - 소프트맥스 → 로지스틱 회귀 (다항) : 먼저 알아야 함
 - 편향 → 분산 : 대비
 - 오토인코더 → 복원 오차 : ~로 평가
@@ -838,7 +839,7 @@ p6 = 구조 먼저 그리기 연구실 02 · 실천편 5부 — 실전 연습장
       <pubDate>Mon, 23 Nov 2026 07:30:49 +0000</pubDate>
       <category>AI 감각·생성</category>
       <category domain="lab:domain">딥러닝</category>
-      <description><![CDATA[분야: AI 감각·생성 · 학문 분야: 딥러닝 · 페이지 2쪽 · 개념 45개 · 관계 60개
+      <description><![CDATA[분야: AI 감각·생성 · 학문 분야: 딥러닝 · 페이지 2쪽 · 개념 45개 · 관계 61개
 사이트: https://adminmrobo.github.io/cnn_face_game_lab/
 
 [페이지] 기호 = 제목 — 주소
@@ -904,6 +905,7 @@ p2 = 얼굴 찾기 게임 — 맞히기 다음의 여섯 챕터 (CNN 특집 2편
 - 합성곱 신경망 → 한 칸 밀린 얼굴 정확도 : ~로 평가
 - 합성곱 신경망 → 8×8 도트 얼굴 장난감 데이터 : ~에서 평가
 - 합성곱 신경망 → 창 밀기, 특징 추출, 전이학습 : 먼저 알아야 함
+- 합성곱 신경망 → 가중치 공유 : 사용
 - 겹친 비율 → 겹친 상자 정리(NMS) : 먼저 알아야 함
 - 통째 비교(자리 그대로 비교) → 합성곱 신경망 : 대비
 - 통째 비교(자리 그대로 비교) → 한 칸 밀린 얼굴 정확도 : ~로 평가

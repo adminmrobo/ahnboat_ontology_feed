@@ -1,6 +1,6 @@
 # ahnboat lab 온톨로지 — 금융·핀테크·블록체인 (2/2)
-생성 AI가 한 번에 읽도록 나눈 2/2. 전체는 https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/finance-fintech-blockchain.xml. 금융·핀테크·블록체인 분야 공개 콘텐츠의 최신 지식 색인(개념·정의·관계). 기준일 2026-11-26. 주식시장 변동성과 가상자산 연구, 블록체인 장부, 인슈어테크 사례, 회계와 기업가치까지 금융 속의 데이터와 AI를 살펴봅니다.
-기준: Thu, 26 Nov 2026 00:00:00 +0900 · 라이선스 CC BY-NC 4.0 · 원본 RSS: https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/finance-fintech-blockchain-p2.xml
+생성 AI가 한 번에 읽도록 나눈 2/2. 전체는 https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/finance-fintech-blockchain.xml. 금융·핀테크·블록체인 분야 공개 콘텐츠의 최신 지식 색인(개념·정의·관계). 기준일 2026-11-27. 주식시장 변동성과 가상자산 연구, 블록체인 장부, 인슈어테크 사례, 회계와 기업가치까지 금융 속의 데이터와 AI를 살펴봅니다.
+기준: Fri, 27 Nov 2026 00:00:00 +0900 · 라이선스 CC BY-NC 4.0 · 원본 RSS: https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/finance-fintech-blockchain-p2.xml
 
 
 ## 우리나라 주식시장의 변동성 분해 분석 (박사논문)
@@ -463,7 +463,7 @@ p1 = 가상자산 시계열 데이터의 분석과 예측 - 시계열 모델 및
 
 [관계] A → B, C : 관계
 - RNN → LSTM : 먼저 알아야 함
-- LSTM → RNN : 상위 개념
+- LSTM → RNN : specialCaseOf
 - LSTM → Accuracy Ratio (괴리율) : ~로 평가
 - 마르코프 체인 → 은닉 마르코프 모델(HMM) : 대비
 - RMSE 오차 한계 → Accuracy Ratio (괴리율) : addressedBy

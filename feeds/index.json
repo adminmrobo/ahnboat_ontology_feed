@@ -1,9 +1,9 @@
 {
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "base": "https://adminmrobo.github.io/ahnboat_ontology_feed/",
  "all": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/all.xml",
  "site": {
-  "total": 178,
+  "total": 184,
   "other_racks": [
    {
     "name": "연구실 운영",
@@ -17,15 +17,15 @@
  },
  "summary": {
   "fields": 8,
-  "contents": 130,
-  "pages": 883,
-  "listed_indexed": 160,
-  "listed": 167,
-  "concepts": 5742,
-  "relations": 6915,
-  "shared": 563,
+  "contents": 132,
+  "pages": 911,
+  "listed_indexed": 162,
+  "listed": 173,
+  "concepts": 5881,
+  "relations": 7060,
+  "shared": 569,
   "domains": 18,
-  "topic_linked": 1721
+  "topic_linked": 1730
  },
  "fields": [
   {
@@ -38,7 +38,7 @@
    "contents": 15,
    "listed": 15,
    "concepts": 551,
-   "relations": 767,
+   "relations": 779,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/machine-learning.xml",
    "parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/machine-learning.xml"
@@ -56,10 +56,10 @@
    "rack": 2,
    "color": "#6a4fb3",
    "desc": "신경망이 어떻게 배우는지, 그리고 초파리 뇌 연구가 딥러닝에 주는 힌트를 함께 따라갑니다.",
-   "contents": 10,
-   "listed": 10,
-   "concepts": 457,
-   "relations": 655,
+   "contents": 11,
+   "listed": 14,
+   "concepts": 478,
+   "relations": 700,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/deep-learning-neuroscience.xml",
    "parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/deep-learning-neuroscience.xml"
@@ -80,7 +80,7 @@
    "contents": 15,
    "listed": 15,
    "concepts": 565,
-   "relations": 704,
+   "relations": 706,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/ai-senses-generation.xml",
    "parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/ai-senses-generation.xml"
@@ -101,7 +101,7 @@
    "contents": 28,
    "listed": 28,
    "concepts": 953,
-   "relations": 1110,
+   "relations": 1113,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/llm-inference-engineering.xml",
    "parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/llm-inference-engineering-p1.xml",
@@ -121,20 +121,22 @@
    "rack": 5,
    "color": "#8b5a2b",
    "desc": "경제학 이론과 경제 연구, 그리고 그 밑바탕인 최적화 모델·좌표 공간·선형대수를 함께 읽습니다. MR = MC에서 라그랑지안·해밀토니안, 벡터와 ∇까지 이어집니다.",
-   "contents": 26,
-   "listed": 27,
-   "concepts": 1215,
-   "relations": 1262,
+   "contents": 27,
+   "listed": 29,
+   "concepts": 1345,
+   "relations": 1376,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/economics-math-optimization.xml",
    "parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/economics-math-optimization-p1.xml",
-    "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/economics-math-optimization-p2.xml"
+    "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/economics-math-optimization-p2.xml",
+    "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/economics-math-optimization-p3.xml"
    ],
    "jsonld": "https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/economics-math-optimization.jsonld",
    "txt": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/txt/economics-math-optimization.txt",
    "txt_parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/txt/economics-math-optimization-p1.txt",
-    "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/txt/economics-math-optimization-p2.txt"
+    "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/txt/economics-math-optimization-p2.txt",
+    "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/txt/economics-math-optimization-p3.txt"
    ]
   },
   {
@@ -193,7 +195,7 @@
    "contents": 36,
    "listed": 37,
    "concepts": 1055,
-   "relations": 1210,
+   "relations": 1211,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/applied-ai.xml",
    "parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/applied-ai-p1.xml",

@@ -1,6 +1,6 @@
 # ahnboat lab 온톨로지 — LLM·추론 엔지니어링 (2/2)
-생성 AI가 한 번에 읽도록 나눈 2/2. 전체는 https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/llm-inference-engineering.xml. LLM·추론 엔지니어링 분야 공개 콘텐츠의 최신 지식 색인(개념·정의·관계). 기준일 2026-11-26. 대형 언어모델이 답을 만들어 내는 과정과, 그것을 빠르고 싸게 서빙하는 추론 엔지니어링을 스터디로 읽습니다.
-기준: Thu, 26 Nov 2026 00:00:00 +0900 · 라이선스 CC BY-NC 4.0 · 원본 RSS: https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/llm-inference-engineering-p2.xml
+생성 AI가 한 번에 읽도록 나눈 2/2. 전체는 https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/llm-inference-engineering.xml. LLM·추론 엔지니어링 분야 공개 콘텐츠의 최신 지식 색인(개념·정의·관계). 기준일 2026-11-27. 대형 언어모델이 답을 만들어 내는 과정과, 그것을 빠르고 싸게 서빙하는 추론 엔지니어링을 스터디로 읽습니다.
+기준: Fri, 27 Nov 2026 00:00:00 +0900 · 라이선스 CC BY-NC 4.0 · 원본 RSS: https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/llm-inference-engineering-p2.xml
 
 
 ## 자연어 분석 연구실
@@ -515,12 +515,11 @@ p26 = 기말 요약정리 및 퀴즈 — https://adminmrobo.github.io/ai-nlp-dat
 - 활성화 함수 → 인공 뉴런과 활성화 함수 : ~의 일부
 - ReLU → 인공 뉴런과 활성화 함수 : ~의 일부
 - RNN → RNN과 LSTM, 인공 뉴런과 활성화 함수 : ~의 일부
-- RNN → LSTM : 먼저 알아야 함
-- RNN → 트랜스포머와 셀프 어텐션 : 대비
+- RNN → LSTM, 트랜스포머와 셀프 어텐션 : 먼저 알아야 함
 - 은닉 상태 → RNN과 LSTM, LSTM : ~의 일부
 - 기울기 소실 → RNN과 LSTM : ~의 일부
 - LSTM → RNN과 LSTM, 인공 뉴런과 활성화 함수 : ~의 일부
-- LSTM → RNN : 상위 개념
+- LSTM → RNN : specialCaseOf
 - Seq2Seq 인코더-디코더 구조 → Seq2Seq(인코더-디코더) : 먼저 알아야 함
 - Seq2Seq(인코더-디코더) → 티처 포싱과 BLEU : 먼저 알아야 함
 - 티처 포싱과 BLEU → Seq2Seq에서 트랜스포머로의 진화 : 먼저 알아야 함
@@ -605,7 +604,7 @@ p26 = 기말 요약정리 및 퀴즈 — https://adminmrobo.github.io/ai-nlp-dat
 
 ## 기억 3부작 · LLM은 어디까지 기억할 수 있을까
 주소: https://adminmrobo.github.io/llm_memory_trilogy/
-분야: LLM·추론 엔지니어링 · 학문 분야: 딥러닝, LLM·추론 엔지니어링 · 페이지 18쪽 · 개념 95개 · 관계 86개
+분야: LLM·추론 엔지니어링 · 학문 분야: 딥러닝, LLM·추론 엔지니어링 · 페이지 18쪽 · 개념 95개 · 관계 88개
 사이트: https://adminmrobo.github.io/llm_memory_trilogy/
 
 [페이지] 기호 = 제목 — 주소
@@ -637,9 +636,9 @@ p18 = 3-6 대결·총정리 · 기억 3부작 — https://adminmrobo.github.io/l
 - 임베딩 (개념) — 그림·글을 의미가 담긴 짧은 숫자 묶음으로 바꾼 것. [p11#lv2]
 - 자기상관(ACF·PACF) (개념) — 현재 값이 자기 자신의 과거 값과 얼마나 닮았는지. [p2#lv1]
 - 상태 (개념) — 지금까지 읽은 것을 요약한 64칸짜리 숫자 묶음 h. 걸음마다 새로 계산되어 덮어써진다. [p4#lv1]
+- 셀 상태 (개념) — 시점을 따라 흐르는 긴 기억. 곱하기(망각)와 더하기(새 내용)로만 바뀐다. [p5#lv1]
+- 망각 게이트 (개념) — 옛 기억을 얼마나 남길지 정하는 문. 1에 가까우면 유지. [p5#lv1]
 - 기울기 폭발 (용어) — 반대로 층을 지날수록 기울기가 커져 학습이 튕겨 나가는 현상. [p4#lv2]
-- 셀 상태 (개념) — LSTM 안쪽에 따로 보관하는 기억 띠 c. 걸음마다 망각 문을 곱하고 새 후보를 더한다. [p5#lv1]
-- 망각 문 (개념) — 옛 셀 상태를 얼마나 남길지 정하는 0~1 값 f. 1에 가까우면 기억이 거의 그대로 넘어간다. [p5#lv1]
 - 입력 문 (개념) — 새 후보를 셀 상태에 얼마나 적을지 정하는 0~1 값 i. [p5#lv1]
 - 기울기 소실 (개념) — 펼친 망에서 기울기가 거슬러 오는 동안 거듭 곱해져 작아지는 현상. 앞쪽 입력이 학습에 거의 반영되지 않는다. [p4#lv2]
 - AR·ARIMA 모델 (방법) — 과거 값들의 가중합(AR), 과거 오차의 가중합(MA), 차분(I)을 조합한 시계열 예측 모델. [p1#lv1]
@@ -725,8 +724,10 @@ p18 = 3-6 대결·총정리 · 기억 3부작 — https://adminmrobo.github.io/l
 
 [관계] A → B, C : 관계
 - RNN → LSTM, 어텐션 : 먼저 알아야 함
+- RNN → 상태 : 사용
 - RNN → 기울기 소실 : 한계
-- LSTM → RNN : 상위 개념
+- LSTM → RNN : specialCaseOf
+- LSTM → 셀 상태 : 사용
 - LSTM → 평균 절대 오차(MAE) : ~로 평가
 - 과적합 → 평균 절대 오차(MAE) : ~로 평가
 - 시계열 → 창 길이 (lookback), 창 (window), 자기상관(ACF·PACF) : 먼저 알아야 함
@@ -739,9 +740,9 @@ p18 = 3-6 대결·총정리 · 기억 3부작 — https://adminmrobo.github.io/l
 - 자기상관(ACF·PACF) → 단기기억 (빨리 꺼지는 메아리) : 먼저 알아야 함
 - 상태 → RNN : ~의 일부
 - 셀 상태 → LSTM : ~의 일부
-- 셀 상태 → 망각 문 : 먼저 알아야 함
-- 망각 문 → LSTM : ~의 일부
-- 망각 문 → 줄지 않는 길 : 먼저 알아야 함
+- 셀 상태 → 망각 게이트 : 먼저 알아야 함
+- 망각 게이트 → LSTM : ~의 일부
+- 망각 게이트 → 줄지 않는 길 : 먼저 알아야 함
 - 입력 문 → LSTM : ~의 일부
 - 기울기 소실 → 기울기 폭발 : 대비
 - 메모장(문맥) → 창 (window) : 상위 개념
