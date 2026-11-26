@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>강의 PPT 지시서 만들기 — ahnboat lab 연구실 도구함</title>
+<meta name="description" content="강의 아이디어를 쓰면 Genspark 같은 AI 슬라이드 도구에 맡길 강의 PPT 제작 지시서(md 파일)를 만들어 줍니다. 장 구성표, 프롬프트 사슬, 언어판 요청문, 점검표까지. 하루·시아·모아가 안내합니다.">
+<meta property="og:title" content="강의 PPT 지시서 만들기 — ahnboat lab 연구실 도구함">
+<meta property="og:description" content="아이디어 → 강의 틀 → 지시서 md 내려받기 → AI로 빈자리 채우기 → 점검. 예시 지시서 2개 포함.">
+<meta property="og:image" content="https://adminmrobo.github.io/ahnboat_ontology_feed/assets/og.png">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="../assets/labkit.css">
+<style>
+  :root { --ink:#1d2330; --sub:#5b6474; --line:#e3e6ec; --soft:#f6f7f9; --accent:#2f5f9e;
+          --asst:#d9577f; --sia:#3f4654; --moa:#b07a3c; --robo:#3a8f6b; --fly:#b53a3a; --doc:#2f6f78; }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { margin:0; background:#fff; color:var(--ink); font:16px/1.8 "Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif; }
+  main { max-width:960px; margin:0 auto; padding:28px 20px 80px; }
+  h1 { font-size:30px; line-height:1.35; margin:0 0 6px; }
+  h2 { font-size:21px; margin:88px 0 14px; padding-top:10px; border-top:1px solid var(--line); }
+  h3 { font-size:16px; margin:0 0 6px; }
+  .kicker { font-size:13px; letter-spacing:.08em; color:var(--accent); font-weight:700; }
+  .lead { color:var(--sub); margin:0 0 6px; }
+  .meta { font-size:13px; color:var(--sub); }
+  .note { font-size:14px; color:var(--sub); }
+  a { color:var(--accent); }
+  .px { image-rendering:pixelated; image-rendering:crisp-edges; }
+
+  .stage { position:relative; height:350px; margin:22px 0 6px; border-radius:14px; background:linear-gradient(#fff 0 72%, #f3f1ec 72% 100%); border:1px solid var(--line); overflow:hidden; }
+  .stage .row { position:absolute; left:0; right:0; display:flex; align-items:flex-end; justify-content:center; gap:6px; }
+  .stage .back { bottom:104px; }
+  .stage .front { bottom:4px; gap:26px; }
+  .spr { background-repeat:no-repeat; flex:none; }
+  .fig { position:relative; display:flex; flex-direction:column; align-items:center; }
+  .tag { font-size:11px; color:var(--sub); background:#fff; border:1px solid var(--line); border-radius:99px; padding:0 8px; margin-top:2px; white-space:nowrap; }
+  .zzz { position:absolute; left:62%; bottom:58px; font-weight:800; color:#6a4fb3; pointer-events:none; }
+  .zzz span { position:absolute; opacity:0; animation:zz 3s infinite; }
+  .zzz span:nth-child(2) { animation-delay:1s; } .zzz span:nth-child(3) { animation-delay:2s; }
+  @keyframes zz { 0% { opacity:0; transform:translate(0,10px) scale(.7); } 30% { opacity:1; } 100% { opacity:0; transform:translate(18px,-34px) scale(1.25); } }
+  .clap { position:absolute; bottom:42%; right:-34px; font-size:12px; font-weight:700; color:#c0613a; animation:pop 1.2s infinite; }
+  @keyframes pop { 0%,100% { transform:translateY(0); opacity:.4; } 50% { transform:translateY(-6px); opacity:1; } }
+  .sign { position:absolute; left:14px; top:12px; font-size:12px; background:#fff7e8; color:#9a5b00; border:1px solid #f0d9a8; border-radius:8px; padding:4px 10px; }
+
+  .three { border:2px solid var(--accent); border-radius:14px; padding:18px 22px; margin-top:26px; }
+  .three ol { margin:6px 0 4px; padding-left:20px; }
+  .three li { margin:4px 0; }
+  .three .free { font-size:14px; color:#2f7d5b; font-weight:600; }
+  details.abbr { margin-top:8px; font-size:14px; }
+  details.abbr summary { cursor:pointer; color:var(--accent); }
+  details.abbr dl { display:grid; grid-template-columns:120px 1fr; gap:4px 12px; margin:8px 0 0; }
+  details.abbr dt { font-weight:700; }
+  details.abbr dd { margin:0; color:var(--sub); }
+
+  .cast { display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:10px; }
+  .who { display:flex; gap:10px; align-items:center; border:1px solid var(--line); border-radius:12px; padding:10px 12px; }
+  .who img { width:64px; height:64px; border-radius:10px; background:var(--soft); flex:none; }
+  .who b { display:block; }
+  .who span { font-size:13px; color:var(--sub); line-height:1.55; display:block; }
+
+  .say { display:flex; gap:12px; align-items:flex-start; margin:12px 0; }
+  .say img { width:72px; height:72px; border-radius:12px; background:var(--soft); flex:none; }
+  .say .bub { position:relative; background:var(--soft); border-radius:14px; padding:12px 16px; flex:1; }
+  .say .bub b { display:block; font-size:13px; margin-bottom:2px; }
+  .say.r { flex-direction:row-reverse; }
+  .c-asst b { color:var(--asst); } .c-sia b { color:var(--sia); } .c-moa b { color:var(--moa); }
+  .c-robo b { color:var(--robo); } .c-fly b { color:var(--fly); } .c-doc b { color:var(--doc); }
+
+  .tut { border:1px solid var(--line); border-radius:16px; padding:18px 20px 20px; }
+  .tabs { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:6px; }
+  .tabs button { border-radius:99px; padding:4px 12px; font-size:13px; }
+  .tabs button.on { background:var(--ink); color:#fff; border-color:var(--ink); }
+  .tstep { display:none; }
+  .tstep.on { display:block; }
+  .tnav { display:flex; justify-content:space-between; margin-top:12px; gap:8px; flex-wrap:wrap; }
+  .memo { background:#f2f7f7; border-left:4px solid var(--doc); border-radius:8px; padding:10px 14px; font-size:14px; margin-top:10px; display:flex; gap:10px; align-items:center; }
+  .memo img { width:48px; height:48px; flex:none; }
+
+  .tool { scroll-margin-top:16px; border-radius:14px; transition:box-shadow .3s, background .3s; padding:2px 0; }
+  .tool.flash { box-shadow:0 0 0 4px #ffd36b; background:#fffbea; }
+  textarea { width:100%; min-height:120px; font:inherit; padding:12px; border:1px solid var(--line); border-radius:10px; resize:vertical; }
+  input[type=text], input[type=number], select { font:inherit; font-size:15px; padding:7px 10px; border:1px solid var(--line); border-radius:8px; width:100%; background:#fff; color:var(--ink); }
+  .row2 { display:flex; gap:8px; flex-wrap:wrap; margin-top:8px; align-items:center; }
+  button { font:inherit; font-size:14px; border:1px solid var(--line); background:#fff; border-radius:8px; padding:7px 14px; cursor:pointer; color:var(--ink); }
+  button.primary { background:var(--accent); border-color:var(--accent); color:#fff; }
+  button:hover { filter:brightness(0.97); }
+  button:disabled { opacity:.45; cursor:default; }
+  pre { white-space:pre-wrap; word-break:break-word; background:var(--soft); border:1px solid var(--line); border-radius:10px; padding:16px; font:13px/1.7 ui-monospace,"D2Coding",Menlo,monospace; margin:0; max-height:560px; overflow:auto; }
+  .hint { font-size:13px; color:var(--sub); display:flex; gap:8px; align-items:center; margin:4px 0 10px; }
+  .hint img { width:36px; height:36px; border-radius:8px; background:var(--soft); }
+  .ok { color:#2f7d5b; } .mid { color:#9a5b00; } .bad { color:#b53a3a; }
+
+  .judge { border:2px dashed #d7b4b4; border-radius:14px; padding:16px 20px; }
+  .ans { background:var(--soft); border-radius:10px; padding:12px 16px; font-size:14px; }
+  .opts { display:flex; gap:8px; flex-wrap:wrap; margin-top:10px; }
+  .fb { display:none; margin-top:10px; }
+  table { width:100%; border-collapse:collapse; font-size:14px; }
+  th, td { text-align:left; padding:7px 6px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { color:var(--sub); font-weight:600; }
+  .why { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .why > div { background:var(--soft); border-radius:12px; padding:14px 16px; font-size:14px; }
+
+  .outro { border-radius:16px; border:1px solid var(--line); padding:18px 20px; }
+  .outro .stage { height:250px; margin-top:12px; }
+  .outro .stage .back { bottom:84px; }
+  footer { margin-top:64px; font-size:13px; color:var(--sub); border-top:1px solid var(--line); padding-top:16px; }
+
+  /* ---- 강의 지시서 전용 ---- */
+  .exs { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:12px; }
+  .ex { border:2px solid #1f2224; border-radius:14px; padding:12px 14px; background:#fff; box-shadow:3px 3px 0 #1f2224; font-size:14px; }
+  .ex b { display:block; font-size:15px; }
+  .ex p { margin:4px 0 8px; color:var(--sub); line-height:1.55; }
+  .ex .row2 { margin-top:0; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:10px 14px; }
+  .grid label, .pr label { display:flex; flex-direction:column; gap:3px; font-size:13px; color:var(--sub); }
+  .grid label.wide { grid-column:1 / -1; }
+  .chains { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:6px; }
+  .chain { border:1px solid var(--line); border-radius:12px; padding:12px 14px; cursor:pointer; text-align:left; font:inherit; background:#fff; }
+  .chain.on { border-color:var(--accent); background:#f3f7fd; box-shadow:0 0 0 2px var(--accent) inset; }
+  .chain b { display:block; font-size:15px; }
+  .chain span { display:block; font-size:13px; color:var(--sub); line-height:1.55; }
+  .chain code { font-size:12px; }
+  .pr { border:1px solid var(--line); border-radius:12px; padding:12px 14px; margin-top:10px; background:#fcfcfd; }
+  .pr .top { display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; }
+  .pr .top b { font-size:15px; }
+  .pr .f { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:8px 12px; }
+  .pr .f .w2 { grid-column:span 2; }
+  .chainA .onlyB { display:none !important; }
+  .chainB .onlyA { display:none !important; }
+  .checks { display:flex; flex-wrap:wrap; gap:6px 18px; font-size:14px; margin-top:8px; }
+  .checks label { display:flex; gap:6px; align-items:center; }
+  .counter { display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-top:14px; padding:10px 14px; border-radius:12px; background:var(--soft); font-size:14px; }
+  .counter .big { font-size:26px; font-weight:800; line-height:1.1; }
+  .bars { display:flex; gap:2px; flex-wrap:wrap; margin-top:8px; }
+  .bars i { display:block; width:14px; height:18px; border-radius:3px; background:#d5dbe6; }
+  .bars i[data-t="프롬프트"] { background:var(--accent); } .bars i[data-t="결과"], .bars i[data-t="전/후"] { background:#7fb3a0; }
+  .bars i[data-t="확인"] { background:#e2a23b; } .bars i[data-t="따라하기"] { background:#b58fd6; } .bars i[data-t="주의"] { background:#d77; }
+  .legend2 { font-size:12px; color:var(--sub); display:flex; gap:10px; flex-wrap:wrap; margin-top:4px; }
+  .legend2 span::before { content:""; display:inline-block; width:10px; height:10px; border-radius:2px; margin-right:4px; background:var(--c); vertical-align:-1px; }
+  .found { margin-top:14px; border:1px solid var(--line); border-radius:12px; padding:12px 16px; }
+  .found h3 { font-size:15px; margin:0 0 4px; }
+  .found .list { display:grid; gap:4px; margin-top:6px; font-size:14px; }
+  .found label { display:flex; gap:8px; align-items:flex-start; line-height:1.5; }
+  .found small { color:var(--sub); }
+  .applied { font-size:13px; margin-top:8px; }
+  .res li { margin:4px 0; }
+  .res { padding-left:20px; font-size:14px; }
+  @media (max-width:860px) { .why, .exs, .chains { grid-template-columns:1fr; } }
+  @media (max-width:640px) {
+    h1 { font-size:24px; } h2 { margin-top:64px; }
+    .stage { height:220px; } .outro .stage { height:190px; }
+    .stage .back { bottom:62px; } .outro .stage .back { bottom:52px; }
+    .stage .tag { display:none; } .stage .front { gap:30px; } .zzz { bottom:20px; font-size:11px; } .clap { font-size:10px; right:-26px; }
+    .legend { display:block !important; }
+    .say img { width:56px; height:56px; }
+    .pr .f .w2 { grid-column:auto; }
+  }
+  @media (prefers-reduced-motion: reduce) { .zzz span, .clap { animation:none; opacity:1; } html { scroll-behavior:auto; } }
+</style>
+</head>
+<body>
+<main>
+  <nav id="labnav"></nav>
+  <div class="kicker">AHNBOAT LAB · 연구실 도구함 · 강의 PPT 지시서</div>
+  <h1>강의 PPT 지시서 만들기</h1>
+  <p class="lead">강의 아이디어를 쓰면, Genspark 같은 AI 슬라이드 도구에게 강의 덱 제작을 맡길 <b>제작 지시서(md 파일)</b>를 만들어 줍니다. 장 구성표·프롬프트 사슬·언어판 요청문·점검표가 한 파일에 들어 있습니다.</p>
+  <p class="meta" id="meta">예시 지시서 2개 · 한국어판과 중국어·영어·일본어판 요청문</p>
+
+  <div class="stage" id="hero" aria-label="강의 준비실 무대: 하루·시아·모아가 지시서를 만들고, 주판봇은 장 수를 세고, 초파리 연구원은 빠진 장을 찾으며, 미공개 X1·X2·X3이 박수를 칩니다. 박사는 도구를 또 하나 만드느라 자고 있습니다.">
+    <div class="sign">쉿! 박사님은 세 번째 도구를 만드느라 또 밤을 새우셨어요</div>
+    <div class="row back">
+      <div class="fig" style="margin-right:18px"><div class="spr px" data-s="doc" data-f="8" data-r="1.00"></div><div class="zzz"><span>Z</span><span>z</span><span>Z</span></div><div class="tag">박사 · 수면 중</div></div>
+      <div class="fig"><div class="spr px" data-s="asst" data-f="3,4" data-fps="1.5" data-r="0.90"></div><div class="tag">하루 · 안내</div></div>
+      <div class="fig"><div class="spr px" data-s="sia" data-f="1,2,3,4" data-fps="2" data-r="0.88"></div><div class="tag">시아 · 강의 틀</div></div>
+      <div class="fig"><div class="spr px" data-s="moa" data-f="1,2,3,4" data-fps="2" data-r="0.84"></div><div class="tag">모아 · 아이디어 기록</div></div>
+      <div class="fig" style="margin-left:14px"><div class="spr px" data-s="robo" data-f="1,2,3,4" data-fps="4" data-r="0.72"></div><div class="tag">주판봇 · 장 수 세기</div></div>
+      <div class="fig"><div class="spr px" data-s="fly" data-f="1,2" data-fps="1.5" data-r="0.41"></div><div class="tag">초파리 · 빠진 장 찾기</div></div>
+    </div>
+    <div class="row front">
+      <div class="fig"><span class="clap">짝짝!</span><div class="spr px" data-s="x1" data-f="5,6,7,8" data-fps="5" data-r="0.62"></div></div>
+      <div class="fig"><span class="clap" style="animation-delay:.3s">짝짝짝!</span><div class="spr px" data-s="x2" data-f="5,6,7,8" data-fps="5" data-r="0.68"></div></div>
+      <div class="fig"><span class="clap" style="animation-delay:.6s">짝!</span><div class="spr px" data-s="x3" data-f="5,6,7,8" data-fps="5" data-r="0.46"></div></div>
+    </div>
+  </div>
+  <p class="note" style="text-align:center;margin:0"><span class="legend" style="display:none">왼쪽부터 박사(수면 중) · 하루 · 시아 · 모아 · 주판봇 · 초파리 연구원. </span>앞줄은 방청객으로 온 미공개 X1·X2·X3입니다.</p>
+
+  <section class="three">
+    <h3>처음 오신 분께 — 이 페이지를 3줄로</h3>
+    <ol>
+      <li><b>무엇을:</b> 강의 아이디어와 몇 가지 선택으로, AI 슬라이드 도구에 줄 강의 PPT 제작 지시서(md 파일)를 만듭니다.</li>
+      <li><b>왜 다른가:</b> 아이디어 검증·결과물 평가는 AI의 <i>판단</i>을 받는 도구지만, 이 도구는 AI에게 <i>제작</i>을 맡기는 작업 지시서를 냅니다. 지시서가 꼼꼼할수록 덱이 한 번에 맞게 나옵니다.</li>
+      <li><b>업무에서는:</b> 장 구성·프롬프트·언어판 규칙을 미리 정해 두면, 한국어판과 외국어판을 같은 배치로 만들고 수업 전에 빠진 장을 점검할 수 있습니다.</li>
+    </ol>
+    <div class="free">코드를 몰라도 됩니다. 쓰고, 고르고, 내려받으면 끝입니다.</div>
+    <details class="abbr">
+      <summary>처음 보는 말 풀이 (펼치기)</summary>
+      <dl>
+        <dt>지시서(지침서)</dt><dd>슬라이드를 만드는 사람이나 AI가 이것 하나만 보고 덱을 만들 수 있게 쓴 작업 문서.</dd>
+        <dt>md 파일</dt><dd>마크다운(Markdown) 파일. #·|·- 같은 기호로 제목과 표를 표시한 글 파일로, 어떤 AI에도 그대로 첨부할 수 있습니다.</dd>
+        <dt>덱</dt><dd>슬라이드 한 벌. 강의 한 차시에 쓰는 PPT 파일 하나.</dd>
+        <dt>프롬프트 사슬</dt><dd>한 번에 끝내지 않고 여러 번 이어 묻는 순서. 예: 데이터 알아보기 → 질문 정하기 → 첫 차트 → 다듬기 → 해석.</dd>
+        <dt>[확정 필요]</dt><dd>저자(강의자)가 직접 정해야 하는 값. 과목·주차, 데이터셋, 디자인 등.</dd>
+        <dt>[AI가 채움]</dt><dd>AI가 초안을 써도 되는 자리. ⑤의 지시문으로 한꺼번에 채웁니다.</dd>
+      </dl>
+    </details>
+  </section>
+
+  <h2>오늘의 강의 준비실</h2>
+  <div class="cast">
+    <div class="who"><img class="px" src="../assets/char/asst_spark.webp" alt="조수 하루"><div><b>조수 하루</b><span>안내 대표. 지시서를 내려받고 AI에게 넘기는 순서를 알려 줍니다.</span></div></div>
+    <div class="who"><img class="px" src="../assets/char/sia_explain.webp" alt="인턴 시아"><div><b>인턴 시아</b><span>강의 틀 담당. 실습·도구·장 구성과 언어판을 맡습니다.</span></div></div>
+    <div class="who"><img class="px" src="../assets/char/moa_report.webp" alt="인턴 모아"><div><b>인턴 모아</b><span>아이디어 기록 담당. 아이디어를 쓰는 법과 빈자리 채우기를 맡습니다.</span></div></div>
+    <div class="who"><img class="px" src="../assets/char/robo_happy.webp" alt="주판봇"><div><b>주판봇</b><span>장 수 세기 담당. 목표 장 수에 맞는지 바로 알려 줍니다.</span></div></div>
+    <div class="who"><img class="px" src="../assets/char/fly_arms.webp" alt="초파리 연구원"><div><b>초파리 연구원</b><span>점검 담당. 결과 없는 프롬프트 장, 빠진 확인 장을 찾아냅니다.</span></div></div>
+    <div class="who"><img class="px" src="../assets/char/doc_sleepy.webp" alt="박사"><div><b>박사</b><span>세 번째 도구를 만드느라 또 자는 중. 메모만 남겼습니다.</span></div></div>
+  </div>
+
+  <!-- 튜토리얼 -->
+  <h2 id="tutorial">튜토리얼 — 하루·시아·모아가 알려 드려요</h2>
+  <div class="tut">
+    <div class="tabs" id="tabs"></div>
+
+    <div class="tstep" data-label="시작">
+      <div class="say c-asst"><img class="px" src="../assets/char/asst_spark.webp" alt="하루"><div class="bub"><b>하루</b>어서 오세요, 강의 준비실이에요! 이 도구는 다른 두 도구와 결과물이 달라요. AI에게 "판단"을 받는 게 아니라, AI 슬라이드 도구에게 "강의 덱을 만들어 줘" 하고 맡길 작업 지시서를 만들어요.</div></div>
+      <div class="say c-asst"><img class="px" src="../assets/char/asst_report.webp" alt="하루"><div class="bub"><b>하루</b>여섯 단계예요. 아이디어 쓰기 → 강의 틀 정하기 → 언어판·제작 도구 → 지시서 내려받기 → AI로 빈자리 채우기 → 점검. 처음이면 아래 예시 두 개 중 하나를 불러와서 둘러보세요.</div></div>
+      <div class="memo"><img class="px" src="../assets/char/doc_sleepy.webp" alt="박사"><div><b>박사의 메모</b> · "슬라이드 AI는 지시가 모호하면 예쁜 빈 덱을 만든다. 장 번호·유형·제목을 먼저 정해 주면 내용이 찬 덱을 만든다. 그리고 프롬프트는 반드시 직접 돌려 보고 캡처할 것."</div></div>
+    </div>
+
+    <div class="tstep" data-label="① 아이디어">
+      <div class="say c-moa"><img class="px" src="../assets/char/moa_report.webp" alt="모아"><div class="bub"><b>모아</b>먼저 강의 아이디어를 편하게 적어 주세요. 누구에게, 무엇을, 어떤 도구로, 몇 장쯤, 어떤 언어로 — 이 다섯 가지가 들어가면 좋아요.</div></div>
+      <div class="say c-moa"><img class="px" src="../assets/char/moa_guide.webp" alt="모아"><div class="bub"><b>모아</b>'아이디어에서 읽어 오기'를 누르면 글에서 장 수·도구 이름·언어·대시보드 여부를 찾아 아래 입력란에 채워 줘요. 아이디어 속 용어는 연구실 개념 지도에서 찾아 용어 풀이 근거로 붙일 수 있어요.</div></div>
+      <div class="tnav"><button data-go="step1">① 아이디어 쓰기로 가서 해 보기</button><button data-ex="0">예시 ① 불러오기</button></div>
+    </div>
+
+    <div class="tstep" data-label="② 강의 틀">
+      <div class="say c-sia"><img class="px" src="../assets/char/sia_explain.webp" alt="시아"><div class="bub"><b>시아</b>강의 틀은 두 가지 중에서 골라요. <b style="display:inline;color:inherit">차트 이어 묻기형</b>은 한 도구로 P1~P5를 이어 물어 차트 하나를 완성하고, <b style="display:inline;color:inherit">대시보드형</b>은 쉬운 일(Q1·Q2)과 어려운 일(S1~S3)을 두 도구로 나눠요.</div></div>
+      <div class="say c-sia"><img class="px" src="../assets/char/sia_guide.webp" alt="시아"><div class="bub"><b>시아</b>실습은 1~4개까지 넣을 수 있어요. 실습마다 이름, 번호에 붙일 짧은 이름(예: 도시), 질문, 차트를 적어 주세요. 비워 둔 곳은 [AI가 채움]으로 남겨 뒀다가 ⑤에서 AI가 채워요.</div></div>
+      <div class="say c-robo"><img class="px" src="../assets/char/robo_wow.webp" alt="주판봇"><div class="bub"><b>주판봇</b>입력할 때마다 제가 장 수를 바로 세요! 목표에서 2장 넘게 벗어나면 노란 글씨로 알려 드려요.</div></div>
+      <div class="tnav"><button data-go="step2">② 강의 틀로 가서 해 보기</button></div>
+    </div>
+
+    <div class="tstep" data-label="③ 언어판">
+      <div class="say c-sia"><img class="px" src="../assets/char/sia_signal.webp" alt="시아"><div class="bub"><b>시아</b>한국어판은 늘 먼저 만들어요. 중국어·영어·일본어판을 고르면 판마다 폴더 구조, 요청문, 용어표가 지시서에 들어가요. 외국어판은 번역만 하지 말고 그 언어로 프롬프트를 실제로 돌려 봐야 해요.</div></div>
+      <div class="tnav"><button data-go="step3">③ 언어판으로 가기</button></div>
+    </div>
+
+    <div class="tstep" data-label="④ 내려받기">
+      <div class="say c-asst"><img class="px" src="../assets/char/asst_smile.webp" alt="하루"><div class="bub"><b>하루</b>지시서가 바로 아래에 만들어져요. 'md 파일 내려받기'를 누르면 파일로 저장돼요. 이미 [AI가 채움]이 없으면 그대로 Genspark에 첨부하고, 지시서 안의 '한국어판 요청문'을 붙여 넣으면 돼요.</div></div>
+      <div class="tnav"><button data-go="step4">④ 지시서로 가기</button></div>
+    </div>
+
+    <div class="tstep" data-label="⑤ 빈자리 채우기">
+      <div class="say c-moa"><img class="px" src="../assets/char/moa_sparkle.webp" alt="모아"><div class="bub"><b>모아</b>[AI가 채움] 자리가 남아 있으면, ⑤의 지시문을 복사해 쓰시는 생성 AI(ChatGPT·Claude·Gemini·Qwen 등)에 붙여 넣으세요. 지시서 초안이 지시문 안에 함께 들어 있어서 따로 첨부하지 않아도 돼요.</div></div>
+      <div class="say c-moa"><img class="px" src="../assets/char/moa_tea.webp" alt="모아"><div class="bub"><b>모아</b>AI가 돌려준 md를 파일로 저장한 다음, 슬라이드 도구로 넘기기 전에 ⑥ 점검 도우미에 한 번 붙여 넣어 보세요.</div></div>
+      <div class="tnav"><button data-go="step5">⑤ 빈자리 채우기로 가기</button></div>
+    </div>
+
+    <div class="tstep" data-label="⑥ 점검">
+      <div class="say c-fly"><img class="px" src="../assets/char/fly_magnify.webp" alt="초파리 연구원"><div class="bub"><b>초파리 연구원</b>지시서를 통째로 붙여 넣어. 장 번호가 끊긴 곳, 결과 화면 없이 프롬프트만 이어지는 곳, 확인 장이 빠진 실습, 남은 빈자리를 내가 다 찾아 주지. 다른 사람이 쓴 지시서도 돼.</div></div>
+      <div class="say c-robo"><img class="px" src="../assets/char/robo_happy.webp" alt="주판봇"><div class="bub"><b>주판봇</b>저는 장 수가 목표 범위 안인지 셀게요! 예시 지시서 ①도 한번 넣어 보세요. 사람이 쓴 지시서에도 고칠 곳이 두 군데 있어요.</div></div>
+      <div class="tnav"><button data-go="step6">⑥ 점검 도우미로 가기</button><button data-go="judge">AI 판단 코너로 연습하기</button></div>
+    </div>
+
+    <div class="tnav"><button id="tprev">← 이전</button><button id="tnext" class="primary">다음 →</button></div>
+  </div>
+
+  <!-- ① 아이디어 -->
+  <h2 id="step1">① 아이디어 쓰기</h2>
+  <div class="tool" id="tool1">
+    <div class="hint"><img class="px" src="../assets/char/moa_guide.webp" alt="">모아: 누구에게 · 무엇을 · 어떤 도구로 · 몇 장쯤 · 어떤 언어로.</div>
+    <textarea id="idea" placeholder="예: 물류 데이터로 차트 만드는 법을 처음 배우는 학생에게 가르치고 싶다. Qwen에 프롬프트를 이어 물어서 차트를 완성하게 하고, 40장 안팎, Genspark로 한국어판과 중국어판을 만든다."></textarea>
+    <div class="row2"><button class="primary" id="readIdea">아이디어에서 읽어 오기</button><span class="note">글은 이 브라우저 안에서만 쓰입니다.</span></div>
+    <div class="applied note" id="applied"></div>
+    <div class="exs">
+      <div class="ex"><b>예시 ① 스마트시티 · 물류 데이터 시각화</b><p>차트 이어 묻기형 · Qwen 주력 · 실습 2개 · 지도 맛보기는 Google AI Studio · 한·중 2벌</p>
+        <div class="row2"><button data-ex="0">입력으로 불러오기</button><a href="examples/ex1_smartcity_logistics.md" target="_blank" rel="noopener">원본 지시서 보기</a></div></div>
+      <div class="ex"><b>예시 ② Google AI Studio 산업별 데이터 시각화</b><p>대시보드형 · 쉬운 일 Qwen, 어려운 일 AI Studio · 헬스케어·의료데이터·핀테크 · 개인정보 장 · 한·중 2벌</p>
+        <div class="row2"><button data-ex="1">입력으로 불러오기</button><a href="examples/ex2_ai_studio_industry.md" target="_blank" rel="noopener">원본 지시서 보기</a></div></div>
+    </div>
+    <div class="found">
+      <h3>관련 개념 미리 찾기 (용어 풀이 근거)</h3>
+      <div class="note">아이디어 속 낱말로 연구실 개념 지도를 찾아, 체크한 개념의 정의를 지시서의 '참고' 절에 넣습니다. 슬라이드의 괄호 풀이가 연구실 정의와 어긋나지 않게 해 줍니다.</div>
+      <div id="foundBody" class="note" style="margin-top:6px">아이디어를 쓰면 여기에 나타납니다.</div>
+    </div>
+  </div>
+
+  <!-- ② 강의 틀 -->
+  <h2 id="step2">② 강의 틀 정하기</h2>
+  <div class="tool chainA" id="tool2">
+    <div class="hint"><img class="px" src="../assets/char/sia_guide.webp" alt="">시아: 모르는 값은 비워 두세요. 지시서에 [확정 필요]나 [AI가 채움]으로 남습니다.</div>
+    <div class="grid">
+      <label class="wide">덱 제목<input type="text" id="title" placeholder="예: 스마트시티 · 물류 데이터 시각화"></label>
+      <label>과목·주차<input type="text" id="course" placeholder="예: 데이터 시각화 7주차 (비우면 [확정 필요])"></label>
+      <label>대상<select id="audience"><option value="beginner">처음 배우는 사람 (코딩 경험 없음)</option><option value="basic">기초를 아는 학습자</option><option value="pro">현업 실무자</option></select></label>
+      <label>목표 장 수<input type="number" id="target" min="10" max="80" value="40"></label>
+      <label class="wide">핵심 메시지 (한 문장)<input type="text" id="message" placeholder="예: 좋은 차트는 한 번의 프롬프트가 아니라, 이어 묻는 프롬프트에서 나온다."></label>
+      <label>학습 목표 1<input type="text" id="g0" placeholder="~한다 (비우면 AI가 채움)"></label>
+      <label>학습 목표 2<input type="text" id="g1" placeholder="~한다"></label>
+      <label>학습 목표 3<input type="text" id="g2" placeholder="~한다"></label>
+      <label>주 도구<input type="text" id="main" placeholder="예: Qwen (Qwen Chat)"></label>
+      <label>보조 도구 (선택)<input type="text" id="sub" placeholder="예: Google AI Studio"></label>
+      <label class="onlyA">보조 도구로 맛보기 할 것 (선택)<input type="text" id="taste" placeholder="예: 거점별 물동량 버블 지도"></label>
+    </div>
+
+    <h3 style="margin-top:18px">프롬프트 사슬</h3>
+    <div class="chains">
+      <button class="chain on" data-chain="A"><b>차트 이어 묻기형</b><span>한 도구로 P1 데이터 알아보기 → P2 질문 → P3 첫 차트 → P4 다듬기(2회) → P5 해석. 실습 하나에 11장.</span><code>예: 도시-P3, 물류-P4-2</code></button>
+      <button class="chain" data-chain="B"><b>대시보드형 (도구 나누기)</b><span>쉬운 일 Q1·Q2는 주 도구, 차트 3개가 필터로 함께 움직이는 S1~S3은 보조 도구. 실습 하나에 9장.</span><code>예: 헬스-Q1, 의료-S2</code></button>
+    </div>
+
+    <h3 style="margin-top:18px">실습</h3>
+    <div id="practices"></div>
+    <div class="row2"><button id="addP">+ 실습 더하기</button><span class="note">실습은 1~4개. 같은 배치로 되풀이됩니다.</span></div>
+
+    <h3 style="margin-top:18px">넣을 장과 데이터</h3>
+    <div class="checks">
+      <label class="onlyA"><input type="checkbox" id="o_chartPick" checked> 차트 고르기 묶음 (4장)</label>
+      <label><input type="checkbox" id="o_privacy"> 개인정보 주의 장</label>
+      <label><input type="checkbox" id="o_mistakes" checked> 흔한 실수 장</label>
+      <label><input type="checkbox" id="o_compare"> 실습 비교 장</label>
+      <label><input type="checkbox" id="o_next"> 다음 시간 예고 장</label>
+      <label style="flex:1;min-width:220px"><input type="text" id="nextText" placeholder="다음 시간 주제 (예: 산업별 대시보드)"></label>
+    </div>
+    <div class="checks">
+      <b style="font-size:13px;color:var(--sub)">데이터</b>
+      <label><input type="radio" name="data" value="undecided" checked> 아직 정하지 않음</label>
+      <label><input type="radio" name="data" value="virtual"> 수업용 가상 데이터</label>
+      <label><input type="radio" name="data" value="public"> 공공 개방 데이터</label>
+    </div>
+
+    <div class="counter" id="counter"></div>
+  </div>
+
+  <!-- ③ 언어판 -->
+  <h2 id="step3">③ 언어판과 제작 도구</h2>
+  <div class="tool" id="tool3">
+    <div class="hint"><img class="px" src="../assets/char/sia_signal.webp" alt="">시아: 한국어판을 먼저 만들고, 외국어판은 새 작업으로 따로 만들어요.</div>
+    <div class="checks">
+      <b style="font-size:13px;color:var(--sub)">언어판</b>
+      <label><input type="checkbox" checked disabled> 한국어 (늘 먼저)</label>
+      <label><input type="checkbox" id="l_zh"> 중국어</label>
+      <label><input type="checkbox" id="l_en"> 영어</label>
+      <label><input type="checkbox" id="l_ja"> 일본어</label>
+      <label id="zhBox" style="display:none">중국어 글자 <select id="zhScript" style="width:auto"><option value="undecided">간체 기본 (확정 필요)</option><option value="simp">간체</option><option value="trad">번체</option></select></label>
+    </div>
+    <div class="grid" style="margin-top:10px">
+      <label>슬라이드 제작 도구<input type="text" id="deckTool" value="Genspark"></label>
+      <label class="wide" style="grid-column:span 2">디자인 (선택)<input type="text" id="design" placeholder="예: 딥 틸 강의 스타일, 기존 학과 템플릿 (비우면 [확정 필요])"></label>
+    </div>
+  </div>
+
+  <!-- ④ 지시서 -->
+  <h2 id="step4">④ 지시서 미리 보기 · 내려받기</h2>
+  <div class="tool" id="tool4">
+    <div class="hint"><img class="px" src="../assets/char/asst_smile.webp" alt="">하루: [AI가 채움]이 남아 있으면 ⑤로, 없으면 바로 슬라이드 도구로.</div>
+    <div class="row2" style="margin:0 0 10px"><button class="primary" id="dl">md 파일 내려받기</button><button id="copyMd">지시서 복사</button><span class="note" id="mdStat"></span></div>
+    <pre id="md"></pre>
+  </div>
+
+  <!-- ⑤ AI로 빈자리 채우기 -->
+  <h2 id="step5">⑤ AI에게 빈자리 채우기 맡기기</h2>
+  <div class="tool" id="tool5">
+    <div class="hint"><img class="px" src="../assets/char/moa_sparkle.webp" alt="">모아: 이 지시문을 생성 AI에 붙여 넣으면 [AI가 채움] 자리를 채운 완성본 md가 돌아와요.</div>
+    <div class="checks" style="margin-top:0">
+      <label><input type="checkbox" id="f_inline" checked> 지시서 초안을 지시문 안에 함께 넣기 (끄면 md 파일을 따로 첨부)</label>
+      <label><input type="checkbox" id="f_examples" checked> 예시 지시서 2개 주소를 참고로 넣기</label>
+    </div>
+    <pre id="fillPrompt" style="margin-top:8px;max-height:320px"></pre>
+    <div class="row2"><button class="primary" id="copyFill">지시문 복사</button><span class="note" id="copiedFill"></span></div>
+    <p class="note">AI가 돌려준 md는 파일로 저장한 뒤 ⑥에서 점검하세요. 슬라이드 도구에는 완성본 md를 첨부하고 지시서 안의 '한국어판 요청문'을 붙여 넣습니다.</p>
+  </div>
+
+  <!-- ⑥ 점검 -->
+  <h2 id="step6">⑥ 지시서 점검 도우미</h2>
+  <div class="tool" id="tool6">
+    <div class="hint"><img class="px" src="../assets/char/fly_magnify.webp" alt="">초파리 연구원: 지시서 md를 통째로 붙여 넣어. 누가 썼든 상관없어.</div>
+    <textarea id="chkIn" placeholder="점검할 지시서(md) 전체를 붙여 넣으세요."></textarea>
+    <div class="row2"><button class="primary" id="chkBtn">점검하기</button><button id="chkMine">④의 지시서 넣기</button><button id="chkEx1">예시 ① 원본 넣기</button><span class="note">붙여 넣은 글은 이 브라우저 안에서만 확인합니다.</span></div>
+    <div id="chkOut"></div>
+  </div>
+
+  <!-- AI 판단 코너 -->
+  <h2 id="judge">AI 판단 코너 — 이 장 구성, 그대로 맡겨도 될까?</h2>
+  <div class="judge tool" id="tooljudge">
+    <div class="say c-fly"><img class="px" src="../assets/char/fly_magnify.webp" alt="초파리 연구원"><div class="bub"><b>초파리 연구원</b>어떤 AI가 실습 부분을 이렇게 짜 왔어. 학생이 가장 먼저 막힐 곳은 어디일까?</div></div>
+    <div class="ans">
+      <table>
+        <thead><tr><th>번호</th><th>유형</th><th>제목</th><th>내용</th></tr></thead>
+        <tbody>
+          <tr><td>15</td><td>데이터</td><td>실습 A 데이터는 시간대별 교통량이다</td><td>출처, 기간, 열 풀이 표</td></tr>
+          <tr><td>16</td><td>프롬프트</td><td>도시-P1: 이 표에 무엇이 있는지 묻는다</td><td>프롬프트 원문</td></tr>
+          <tr><td>17</td><td>프롬프트</td><td>도시-P2: 보여줄 질문 하나를 고른다</td><td>프롬프트 원문</td></tr>
+          <tr><td>18</td><td>프롬프트</td><td>도시-P3: 선 그래프와 히트맵을 함께 만들고 제목도 고친다</td><td>프롬프트 원문</td></tr>
+          <tr><td>19</td><td>확인</td><td>여기까지 됐나요?</td><td>완성 화면</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="opts"><button data-a="1">데이터 장에 단위가 없다</button><button data-a="2">결과 화면 없이 프롬프트만 세 장 이어진다</button><button data-a="3">확인 장이 하나뿐이다</button></div>
+    <div class="fb" id="fbok">
+      <div class="say c-fly"><img class="px" src="../assets/char/fly_point.webp" alt="초파리 연구원"><div class="bub"><b>초파리 연구원</b>맞아. 16·17·18번이 모두 '프롬프트 원문'뿐이야. 학생은 P1을 입력하고 나서 "이게 맞게 나온 건가?"를 확인할 화면이 없어. 게다가 18번은 차트 두 개와 제목 고치기를 한 장에 몰아넣어서 '한 장에 한 동작' 원칙도 어겼지. 프롬프트 장 뒤에는 결과 장을 두거나, 내용에 결과를 함께 실어야 해.</div></div>
+      <div class="say c-robo r"><img class="px" src="../assets/char/robo_wow.webp" alt="주판봇"><div class="bub"><b>주판봇</b>장 수를 줄이려고 그런 것 같은데… 장 수보다 따라오는 게 먼저예요. 모자라면 차트 고르기 묶음을 빼는 게 나아요!</div></div>
+    </div>
+    <div class="fb" id="fbno">
+      <div class="say c-fly"><img class="px" src="../assets/char/fly_arms.webp" alt="초파리 연구원"><div class="bub"><b>초파리 연구원</b>그것도 볼 점이긴 해. 그런데 학생 입장에서 따라 해 봐. 16번에서 입력하고 나면, 무엇이 나와야 맞는지 보여 주는 장이 어디 있지?</div></div>
+    </div>
+  </div>
+
+  <h2>이 도구가 만드는 지시서에 대해</h2>
+  <div class="why">
+    <div><b>어디서 온 형식인가요?</b><br>박사가 실제 강의에 쓰려고 만든 지시서 두 벌(예시 ①·②)의 구조를 그대로 따릅니다. 한눈에 보기 → 작성 원칙 → 도구 나누기 → 프롬프트 사슬 → 실습 설계 → 장 구성표 → 유형별 필수 요소 → 좋은 차트 기준 → 언어판·제작 도구 → 점검표 → 확정 필요 항목.</div>
+    <div><b>슬라이드 AI가 다 해 주나요?</b><br>아닙니다. 슬라이드 AI는 구성과 문장을 만들고, 화면 캡처 자리는 비워 둡니다. 프롬프트는 강의자가 수업 1주일 안에 직접 돌려 보고 결과를 캡처해 넣어야 합니다. 도구 화면과 요금은 자주 바뀌므로 "수업일 기준"으로 적습니다.</div>
+  </div>
+
+  <h2>마무리</h2>
+  <div class="outro">
+    <div class="say c-robo"><img class="px" src="../assets/char/robo_happy.webp" alt="주판봇"><div class="bub"><b>주판봇</b>지시서 하나에 장 <span id="nSlides">40</span>장! 장 번호가 1번부터 빠짐없이 이어지는 걸 세는 게 제일 즐거워요.</div></div>
+    <div class="say c-fly r"><img class="px" src="../assets/char/fly_arms.webp" alt="초파리 연구원"><div class="bub"><b>초파리 연구원</b>프롬프트 장마다 결과가 붙어 있고, 실습마다 확인 장이 있으면 나도 할 말이 없지. 오늘은 그렇네.</div></div>
+    <div class="say c-moa"><img class="px" src="../assets/char/moa_sparkle.webp" alt="모아"><div class="bub"><b>모아</b>아이디어 몇 줄이 40장짜리 지시서가 되다니, 기록 담당으로서 뿌듯해요! 방청석 박수에 저도 같이 칠게요.</div></div>
+    <div class="say c-asst r"><img class="px" src="../assets/char/asst_proud.webp" alt="하루"><div class="bub"><b>하루</b>쉿, 박수는 작게요. 박사님 깨시면 이 지시서로 바로 강의 덱을 만드신다고 또 밤새우실 거예요.</div></div>
+    <div class="say c-doc"><img class="px" src="../assets/char/doc_sleepy.webp" alt="박사"><div class="bub"><b>박사 (잠꼬대)</b>음냐… 프롬프트 다음엔… 결과 장… 캡처는… 직접… 쿨.</div></div>
+    <div class="stage" aria-label="시아와 모아, 미공개 X1·X2·X3이 박수를 치고 박사는 자고 있습니다.">
+      <div class="row back">
+        <div class="fig" style="margin-right:20px"><div class="spr px" data-s="doc" data-f="8" data-r="0.80"></div><div class="zzz"><span>Z</span><span>z</span><span>Z</span></div></div>
+        <div class="fig"><div class="spr px" data-s="siaclap" data-f="5,6,7,8" data-fps="5" data-r="0.70"></div></div>
+        <div class="fig"><div class="spr px" data-s="moaclap" data-f="5,6,7,8" data-fps="5" data-r="0.67"></div></div>
+        <div class="fig" style="margin-left:10px"><div class="spr px" data-s="robo" data-f="1,2,3,4" data-fps="4" data-r="0.58"></div></div>
+        <div class="fig"><div class="spr px" data-s="fly" data-f="1,2" data-fps="1.5" data-r="0.33"></div></div>
+      </div>
+      <div class="row front">
+        <div class="fig"><span class="clap">짝짝!</span><div class="spr px" data-s="x1" data-f="5,6,7,8" data-fps="5" data-r="0.48"></div></div>
+        <div class="fig"><span class="clap" style="animation-delay:.3s">짝짝짝!</span><div class="spr px" data-s="x2" data-f="5,6,7,8" data-fps="5" data-r="0.52"></div></div>
+        <div class="fig"><span class="clap" style="animation-delay:.6s">짝!</span><div class="spr px" data-s="x3" data-f="5,6,7,8" data-fps="5" data-r="0.36"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>글 · 안상선 (<a href="https://www.ahnboat.xyz">www.ahnboat.xyz</a>) · (주)M-Robo 대표 · 콘텐츠 라이선스 CC BY-NC 4.0 · 캐릭터 그림은 연구실 캐릭터 팩(lab4)을 썼습니다.</footer>
+</main>
+<script src="../assets/labkit.js"></script>
+<script src="deckkit.js"></script>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); }, esc = LabKit.esc;
+  var BASE = "https://adminmrobo.github.io/ahnboat_ontology_feed/";
+  LabKit.nav($("labnav"), "deck", "../");
+  LabKit.versionBox(document.querySelector("footer"), "deck");
+  LabKit.sprites("../");
+
+  /* ---------- 튜토리얼 ---------- */
+  var steps = [].slice.call(document.querySelectorAll(".tstep")), cur = 0, tabs = $("tabs");
+  steps.forEach(function (s, i) { var b = document.createElement("button"); b.textContent = s.dataset.label; b.addEventListener("click", function () { show(i); }); tabs.appendChild(b); });
+  function show(i) {
+    cur = Math.max(0, Math.min(steps.length - 1, i));
+    steps.forEach(function (s, k) { s.classList.toggle("on", k === cur); });
+    [].forEach.call(tabs.children, function (b, k) { b.classList.toggle("on", k === cur); });
+    $("tprev").disabled = cur === 0;
+    $("tnext").textContent = cur === steps.length - 1 ? "처음으로 ↺" : "다음 →";
+  }
+  $("tprev").addEventListener("click", function () { show(cur - 1); });
+  $("tnext").addEventListener("click", function () { show(cur === steps.length - 1 ? 0 : cur + 1); });
+  show(0);
+  var TOOL = { step1: "tool1", step2: "tool2", step3: "tool3", step4: "tool4", step5: "tool5", step6: "tool6", judge: "tooljudge" };
+  function go(id) { var t = $(TOOL[id]); $(id).scrollIntoView({ block: "start" }); t.classList.add("flash"); setTimeout(function () { t.classList.remove("flash"); }, 1600); }
+  document.querySelectorAll("[data-go]").forEach(function (b) { b.addEventListener("click", function () { go(b.dataset.go); }); });
+  document.querySelectorAll("[data-a]").forEach(function (b) {
+    b.addEventListener("click", function () { var ok = b.dataset.a === "2"; $("fbok").style.display = ok ? "block" : "none"; $("fbno").style.display = ok ? "none" : "block"; });
+  });
+
+  /* ---------- 상태 ---------- */
+  var S = DeckKit.blank(), SX = null, found = [], off = {}, timer = null, last = null;
+  var PF = [["name", "실습 이름", "예: 스마트시티 교통량", ""], ["pfx", "번호에 붙일 짧은 이름", "예: 도시 → 도시-P3", ""],
+            ["intro", "소개 한 문장", "예: 스마트시티는 도시가 남기는 숫자를 쓰는 도시다", "w2"], ["who", "누가 보는가", "예: 병원 운영 담당자", "onlyB"],
+            ["q", "질문", "예: 언제 가장 붐비는가", ""], ["data", "데이터는 ○○이다", "예: 시간대별 교통량", ""],
+            ["charts", "차트 (쉼표로)", "", "w2"], ["cols", "데이터 열 (쉼표로)", "예: 요일, 시간, 통행량", "w2"], ["filter", "필터", "예: 진료과", "onlyB"]];
+  function chartHint() { return S.chain === "B" ? "대시보드 차트 3개. 첫 차트는 Q2에서 주 도구로 먼저 만듦" : "첫 차트, 다듬어 바꿀 차트 (예: 선 그래프, 히트맵)"; }
+  function drawPractices() {
+    $("practices").innerHTML = S.practices.map(function (p, i) {
+      return '<div class="pr"><div class="top"><b>' + (S.chain === "B" ? "실습 " + (i + 1) : "실습 " + String.fromCharCode(65 + i)) + '</b>' +
+        (S.practices.length > 1 ? '<button data-del="' + i + '" style="padding:2px 10px;font-size:13px">빼기</button>' : "") + '</div><div class="f">' +
+        PF.map(function (f) {
+          return '<label class="' + f[3] + '">' + f[1] + '<input type="text" data-i="' + i + '" data-k="' + f[0] + '" value="' + esc(p[f[0]] || "") + '" placeholder="' + esc(f[0] === "charts" ? chartHint() : f[2]) + '"></label>';
+        }).join("") + "</div></div>";
+    }).join("");
+    $("practices").querySelectorAll("input[data-k]").forEach(function (el) {
+      el.addEventListener("input", function () { S.practices[+el.dataset.i][el.dataset.k] = el.value; render(); });
+    });
+    $("practices").querySelectorAll("[data-del]").forEach(function (b) {
+      b.addEventListener("click", function () { S.practices.splice(+b.dataset.del, 1); drawPractices(); render(); });
+    });
+    $("addP").disabled = S.practices.length >= 4;
+  }
+  $("addP").addEventListener("click", function () { if (S.practices.length < 4) { S.practices.push({ name: "", pfx: "", intro: "", who: "", q: "", charts: "", cols: "", filter: "", data: "" }); drawPractices(); render(); } });
+  function setChain(c) {
+    S.chain = c;
+    document.querySelectorAll(".chain").forEach(function (b) { b.classList.toggle("on", b.dataset.chain === c); });
+    $("tool2").className = "tool chain" + c;
+    drawPractices();
+  }
+  document.querySelectorAll(".chain").forEach(function (b) { b.addEventListener("click", function () { setChain(b.dataset.chain); render(); }); });
+
+  var SIMPLE = ["title", "course", "audience", "target", "message", "main", "sub", "taste", "nextText", "deckTool", "design", "zhScript"];
+  function readForm() {
+    SIMPLE.forEach(function (k) { S[k] = $(k).value; });
+    S.idea = $("idea").value;
+    S.goals = [$("g0").value, $("g1").value, $("g2").value];
+    ["chartPick", "privacy", "mistakes", "compare", "next"].forEach(function (k) { S.opts[k] = $("o_" + k).checked; });
+    if (S.chain === "B") S.opts.chartPick = false;
+    S.dataPolicy = document.querySelector('input[name="data"]:checked').value;
+    ["zh", "en", "ja"].forEach(function (k) { S.langs[k] = $("l_" + k).checked; });
+    $("zhBox").style.display = S.langs.zh ? "flex" : "none";
+    S.concepts = found.filter(isOn).map(function (r) { return { name: r.c[0], type: r.c[2], def: r.c[3], url: r.c[4] }; });
+  }
+  function writeForm() {
+    SIMPLE.forEach(function (k) { $(k).value = S[k] == null ? "" : S[k]; });
+    $("idea").value = S.idea || "";
+    for (var i = 0; i < 3; i++) $("g" + i).value = S.goals[i] || "";
+    ["chartPick", "privacy", "mistakes", "compare", "next"].forEach(function (k) { $("o_" + k).checked = !!S.opts[k]; });
+    document.querySelector('input[name="data"][value="' + S.dataPolicy + '"]').checked = true;
+    ["zh", "en", "ja"].forEach(function (k) { $("l_" + k).checked = !!S.langs[k]; });
+    setChain(S.chain);
+  }
+
+  /* ---------- 지시서 그리기 ---------- */
+  function render() {
+    readForm();
+    var r = DeckKit.build(S, LabKit.stamp("deck"));
+    last = r;
+    $("md").textContent = r.md;
+    $("nSlides").textContent = r.count;
+    var okN = r.count >= r.lo && r.count <= r.hi;
+    var bars = [];
+    r.slides.forEach(function (s) { s.rows.forEach(function (x) { bars.push('<i data-t="' + esc(x.type) + '" title="' + x.n + ". " + esc(x.type + " · " + x.title) + '"></i>'); }); });
+    $("counter").innerHTML = '<img class="px" src="../assets/char/' + (okN ? "robo_happy" : "robo_wow") + '.webp" alt="주판봇" style="width:48px;height:48px;border-radius:10px;background:#fff">' +
+      '<div><div class="big ' + (okN ? "ok" : "mid") + '">' + r.count + '장</div><div class="note">목표 ' + r.lo + "~" + r.hi + "장</div></div>" +
+      '<div style="flex:1;min-width:240px"><b>주판봇</b> · ' + (okN ? "목표 범위 안이에요!" : r.count < r.lo ? (r.lo - r.count) + "장 모자라요. 실습을 하나 더하거나 '차트 고르기'·'흔한 실수' 장을 넣어 보세요." : (r.count - r.hi) + "장 넘쳐요. 실습을 하나 빼거나 두 차시로 나누세요.") +
+      ' [AI가 채움] ' + r.fill + "곳 · [확정 필요] " + r.todo + '곳<div class="bars">' + bars.join("") + '</div>' +
+      '<div class="legend2"><span style="--c:var(--accent)">프롬프트</span><span style="--c:#7fb3a0">결과·전/후</span><span style="--c:#e2a23b">확인</span><span style="--c:#b58fd6">따라하기</span><span style="--c:#d77">주의</span><span style="--c:#d5dbe6">그 밖</span></div></div>';
+    $("mdStat").textContent = r.count + "장 · [AI가 채움] " + r.fill + "곳 · [확정 필요] " + r.todo + "곳";
+    renderFill();
+  }
+  function fname() { return "강의지시서_" + ((S.title || "초안").replace(/[\\/:*?"<>|·]+/g, " ").trim().replace(/\s+/g, "_").slice(0, 40) || "초안") + ".md"; }
+  function renderFill() {
+    var md = last ? last.md : "";
+    var t = "너는 대학 강의 설계를 돕는 교수 설계자야. " + ($("f_inline").checked ? "아래" : "첨부한 md 파일") + "의 '강의 PPT 제작 지침서' 초안을 완성해 줘. " +
+      ($("f_inline").checked ? "" : "첨부가 없으면 시작하지 말고 첨부해 달라고 말해 줘. ") + "\n\n" +
+      "[할 일]\n" +
+      "- `[AI가 채움: …]` 자리를 모두 채워. 괄호 안 설명대로 쓰고, 채운 뒤에는 표시를 지워.\n" +
+      "- `[확정 필요: …]` 자리는 저자가 정할 값이니 그대로 둬. 대신 맨 끝 '확정 필요 항목' 아래에 저자에게 물을 질문을 항목마다 한 줄씩 붙여.\n" +
+      "- 장 번호·장 수·유형·순서와 절 제목은 바꾸지 마. 고쳐야 할 곳이 보이면 고치지 말고 맨 끝에 '검토 메모' 절을 만들어 적어.\n" +
+      "- 슬라이드 제목은 '~다'로 끝나는 문장, 한 줄 30자 이내. 새 용어는 괄호 한 줄로 풀어.\n" +
+      "- 데이터 열을 채울 때는 열 6~8개, 열 이름은 한국어, 단위가 있으면 적어. 이름·주민번호·계좌번호·전화번호 같은 개인정보 열은 넣지 마.\n" +
+      "- 용어표의 외국어 자리는 그 언어권 초보자가 쓰는 말로 채워.\n" +
+      (S.concepts && S.concepts.length ? "- 용어 풀이는 '참고: 연구실 개념 지도' 절의 정의와 어긋나지 않게 써.\n" : "") +
+      ($("f_examples").checked ? "- 형식과 문장 길이는 완성 예시 지시서 두 개를 따라 해: " + BASE + "deck/examples/ex1_smartcity_logistics.md , " + BASE + "deck/examples/ex2_ai_studio_industry.md (읽을 수 없으면 이 줄은 무시해)\n" : "") +
+      "\n[돌려줄 것]\n완성한 md 파일 전체를 코드 블록 하나에 담아. 설명은 코드 블록 밖에 세 줄 이내로.\n" +
+      ($("f_inline").checked ? "\n[지침서 초안]\n" + md : "\n") + "\n" + LabKit.stamp("deck");
+    $("fillPrompt").textContent = t;
+  }
+
+  /* ---------- 관련 개념 ---------- */
+  function isOn(r) { var v = off[r.c[0] + "|" + r.c[4]]; return v ? v === "on" : r.on !== false; }
+  function search() {
+    var t = $("idea").value.trim();
+    if (t.length < 8) { found = []; drawFound(); render(); return; }
+    $("foundBody").textContent = "개념 지도를 불러오는 중…";
+    LabKit.loadSX("../").then(function (d) {
+      SX = d;
+      var all = LabKit.findConcepts(SX, t, {}).filter(function (r) { return r.c[3] && ["데이터", "기준", "항등식"].indexOf(r.c[2]) < 0 && (r.c[0].length > 2 || r.sc >= 9); });
+      found = all.filter(function (r) { return !r.rel && r.sc >= 6; }).slice(0, 8).concat(all.filter(function (r) { return r.rel && r.on; }).slice(0, 2));
+      found.forEach(function (r, i) { r.on = i < 5; });
+      drawFound(); render();
+    }).catch(function () { $("foundBody").textContent = "개념 지도를 불러오지 못했습니다. 지시서는 그대로 만들 수 있어요."; });
+  }
+  function drawFound() {
+    var box = $("foundBody");
+    if (!found.length) { box.textContent = $("idea").value.trim().length < 8 ? "아이디어를 쓰면 여기에 나타납니다." : "관련 개념을 찾지 못했습니다. 지시서는 그대로 만들 수 있어요."; return; }
+    box.innerHTML = '<div class="list">' + found.map(function (r) {
+      var k = r.c[0] + "|" + r.c[4];
+      return '<label><input type="checkbox" data-k="' + encodeURIComponent(k) + '"' + (isOn(r) ? " checked" : "") + '><span><b>' + esc(r.c[0]) + '</b> <small>(' + esc(r.c[2]) + (r.via ? " · " + esc(r.via.join(", ")) : "") + ')</small> — ' +
+        esc(r.c[3]) + ' <a href="' + esc(r.c[4]) + '" target="_blank" rel="noopener">출처</a></span></label>';
+    }).join("") + '</div><div class="note" style="margin-top:4px">앞의 다섯 개만 미리 체크했어요. 슬라이드에 나올 용어만 남기세요.</div>';
+    box.querySelectorAll("input[data-k]").forEach(function (i) { i.addEventListener("change", function () { off[decodeURIComponent(i.dataset.k)] = i.checked ? "on" : "off"; render(); }); });
+  }
+
+  /* ---------- 아이디어에서 읽어 오기 ---------- */
+  $("readIdea").addEventListener("click", function () {
+    var t = $("idea").value.trim();
+    if (!t) { $("applied").innerHTML = '<span class="mid">먼저 아이디어를 써 주세요.</span>'; return; }
+    readForm();
+    var r = DeckKit.fromIdea(t), got = [];
+    if (r.target) { S.target = r.target; got.push("목표 " + r.target + "장"); }
+    if (r.main) { S.main = r.main; got.push("주 도구 " + r.main); }
+    if (r.sub) { S.sub = r.sub; got.push("보조 도구 " + r.sub); }
+    if (r.chain) { S.chain = r.chain; got.push("대시보드형"); }
+    if (r.langs) { Object.keys(r.langs).forEach(function (k) { S.langs[k] = true; }); got.push("언어판 " + Object.keys(r.langs).map(function (k) { return { zh: "중국어", en: "영어", ja: "일본어" }[k]; }).join("·")); }
+    if (r.zhScript) { S.zhScript = r.zhScript; got.push(r.zhScript === "trad" ? "번체" : "간체"); }
+    if (r.privacy) { S.opts.privacy = true; got.push("개인정보 주의 장"); }
+    if (r.dataPolicy) { S.dataPolicy = r.dataPolicy; got.push(r.dataPolicy === "virtual" ? "가상 데이터" : "공공 데이터"); }
+    if (r.deckTool) { S.deckTool = r.deckTool; got.push("제작 도구 " + r.deckTool); }
+    writeForm(); render();
+    $("applied").innerHTML = got.length ? '<span class="ok">반영했어요:</span> ' + esc(got.join(" · ")) + ". 실습 이름·질문·차트는 ② 강의 틀에서 적어 주세요."
+      : '<span class="mid">글에서 장 수·도구·언어를 찾지 못했어요.</span> ② 강의 틀에서 직접 고르세요.';
+  });
+
+  /* ---------- 예시 ---------- */
+  function loadEx(i) {
+    S = JSON.parse(JSON.stringify(DeckKit.EX[i])); S.concepts = [];
+    off = {}; writeForm(); drawPractices(); search(); render();
+    $("applied").innerHTML = '<span class="ok">예시 ' + (i ? "②" : "①") + "를 불러왔어요.</span> 원본 지시서와 비교해 보세요.";
+    go("step1");
+  }
+  document.querySelectorAll("[data-ex]").forEach(function (b) { b.addEventListener("click", function () { loadEx(+b.dataset.ex); }); });
+
+  /* ---------- 내려받기·복사 ---------- */
+  function copy(t, el, msg) {
+    var done = function () { el.textContent = msg; setTimeout(function () { el.textContent = ""; }, 3000); };
+    if (navigator.clipboard) navigator.clipboard.writeText(t).then(done, function () { fallback(t); done(); }); else { fallback(t); done(); }
+  }
+  function fallback(t) { var ta = document.createElement("textarea"); ta.value = t; document.body.appendChild(ta); ta.select(); try { document.execCommand("copy"); } catch (e) {} document.body.removeChild(ta); }
+  $("dl").addEventListener("click", function () {
+    var blob = new Blob([last.md], { type: "text/markdown;charset=utf-8" }), a = document.createElement("a");
+    a.href = URL.createObjectURL(blob); a.download = fname(); document.body.appendChild(a); a.click();
+    setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 500);
+    $("mdStat").textContent = fname() + " 저장 · " + last.count + "장";
+  });
+  $("copyMd").addEventListener("click", function () { copy(last.md, $("mdStat"), "지시서를 복사했습니다."); });
+  $("copyFill").addEventListener("click", function () { copy($("fillPrompt").textContent, $("copiedFill"), "복사했습니다. 생성 AI 대화창에 붙여 넣으세요."); });
+  ["f_inline", "f_examples"].forEach(function (id) { $(id).addEventListener("change", renderFill); });
+
+  /* ---------- 점검 ---------- */
+  function runCheck() {
+    var t = $("chkIn").value;
+    if (!t.trim()) { $("chkOut").innerHTML = '<p class="note">먼저 지시서를 붙여 넣어 주세요.</p>'; return; }
+    var c = DeckKit.check(t), bad = c.items.filter(function (x) { return x.cls === "bad"; }).length, mid = c.items.filter(function (x) { return x.cls === "mid"; }).length;
+    var mark = { ok: "✓", mid: "△", bad: "✕" };
+    var h = '<ul class="res">' + c.items.map(function (x) { return '<li class="' + x.cls + '"><b>' + mark[x.cls] + "</b> " + esc(x.text) + "</li>"; }).join("") + "</ul>";
+    var fly = bad ? "고칠 곳이 " + bad + "개 있어. 슬라이드 도구에 넘기기 전에 ✕부터 고쳐." : mid ? "큰 문제는 없어. △ " + mid + "개는 일부러 그런 게 아니면 손봐." : "내가 찾을 게 없네. 이제 프롬프트를 직접 돌려 보고 캡처만 하면 돼.";
+    h += '<div class="say c-robo"><img class="px" src="../assets/char/robo_happy.webp" alt="주판봇"><div class="bub"><b>주판봇</b>장 ' + c.n + "장을 셌어요!" + (c.blocks ? " 실습 묶음은 " + c.blocks + "개예요." : "") + "</div></div>" +
+      '<div class="say c-fly r"><img class="px" src="../assets/char/' + (bad ? "fly_point" : "fly_arms") + '.webp" alt="초파리 연구원"><div class="bub"><b>초파리 연구원</b>' + esc(fly) + "</div></div>";
+    $("chkOut").innerHTML = h;
+  }
+  $("chkBtn").addEventListener("click", runCheck);
+  $("chkMine").addEventListener("click", function () { $("chkIn").value = last.md; runCheck(); });
+  $("chkEx1").addEventListener("click", function () {
+    fetch("examples/ex1_smartcity_logistics.md").then(function (r) { return r.text(); }).then(function (t) { $("chkIn").value = t; runCheck(); })
+      .catch(function () { $("chkOut").innerHTML = '<p class="note">예시를 불러오지 못했습니다. 페이지를 웹 주소로 열어 주세요.</p>'; });
+  });
+
+  /* ---------- 입력 연결 ---------- */
+  SIMPLE.concat(["g0", "g1", "g2"]).forEach(function (id) { $(id).addEventListener("input", render); $(id).addEventListener("change", render); });
+  document.querySelectorAll("#tool2 input[type=checkbox], #tool2 input[type=radio], #tool3 input[type=checkbox]").forEach(function (el) { el.addEventListener("change", render); });
+  $("idea").addEventListener("input", function () { render(); clearTimeout(timer); timer = setTimeout(search, 700); });
+
+  writeForm(); drawPractices(); render();
+  fetch("../feeds/index.json").then(function (r) { return r.json(); }).then(function (d) {
+    if (d.images && d.images.bg_hero) document.querySelectorAll(".stage").forEach(function (st) { st.style.background = "url(" + d.images.bg_hero + ") center bottom / cover no-repeat, #fff"; st.style.imageRendering = "pixelated"; });
+  }).catch(function () {});
+})();
+</script>
+</body>
+</html>

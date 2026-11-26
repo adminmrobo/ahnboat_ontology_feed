@@ -67,7 +67,7 @@ h2{margin:0;font-size:clamp(1.6rem,3.4vw,2.5rem);line-height:1.15;letter-spacing
     <div class="btext">
       <p class="kicker">LAB TOOLBOX · IDEA CHECK · REVIEW</p>
       <h2 id="tTitle">연구실 도구함</h2>
-      <p class="tag" id="tTag">아이디어 검증하기 · 결과물 평가하기 — 연구실 개념 지도를 근거로 생성 AI를 믿을 만하게 쓰는 도구들.</p>
+      <p class="tag" id="tTag">아이디어 검증 · 결과물 평가 · 강의 PPT 지시서 — 연구실 개념 지도를 근거로 생성 AI를 믿을 만하게 쓰는 도구들.</p>
       <p class="stat" id="tStat"></p>
       <p class="who" id="tWho">하루·시아·모아가 튜토리얼로 안내합니다. 박사는 도구함까지 만드느라 또 밤을 새워 자는 중이에요.</p>
       <span class="go"><span id="tGo">바로 가기</span> →</span>
@@ -102,13 +102,13 @@ h2{margin:0;font-size:clamp(1.6rem,3.4vw,2.5rem);line-height:1.15;letter-spacing
   var lang = ok(q) ? q : (ok(stored()) ? stored() : "ko");
   var S = {
     title: {ko:"연구실 도구함", en:"Lab Toolbox", zh:"研究室工具箱", ja:"研究室ツールボックス", uz:"Laboratoriya asboblar to‘plami", ru:"Набор инструментов лаборатории", vi:"Hộp công cụ phòng lab"},
-    tag: {ko:"아이디어 검증하기 · 결과물 평가하기 — 연구실 개념 지도를 근거로 생성 AI를 믿을 만하게 쓰는 도구들.",
-          en:"Check your idea · Review your work — tools for using generative AI reliably, grounded in the lab’s concept map.",
-          zh:"验证想法 · 评估成果 — 以研究室概念地图为依据，可靠地使用生成式 AI 的工具。",
-          ja:"アイデア検証 · 成果物の評価 — 研究室の概念マップを根拠に、生成AIを確かに使うためのツール。",
-          uz:"G‘oyani tekshirish · Natijani baholash — laboratoriya tushunchalar xaritasiga tayangan holda generativ AI dan ishonchli foydalanish vositalari.",
-          ru:"Проверка идеи · Оценка результата — инструменты для надёжной работы с генеративным ИИ на основе карты понятий лаборатории.",
-          vi:"Kiểm chứng ý tưởng · Đánh giá kết quả — công cụ dùng AI tạo sinh đáng tin cậy, dựa trên bản đồ khái niệm của phòng lab."},
+    tag: {ko:"아이디어 검증 · 결과물 평가 · 강의 PPT 지시서 — 연구실 개념 지도를 근거로 생성 AI를 믿을 만하게 쓰는 도구들.",
+          en:"Check your idea · Review your work · Lecture deck brief — tools for using generative AI reliably, grounded in the lab’s concept map.",
+          zh:"验证想法 · 评估成果 · 课件制作说明 — 以研究室概念地图为依据，可靠地使用生成式 AI 的工具。",
+          ja:"アイデア検証 · 成果物の評価 · 講義スライド指示書 — 研究室の概念マップを根拠に、生成AIを確かに使うためのツール。",
+          uz:"G‘oyani tekshirish · Natijani baholash · Ma’ruza slaydlari topshirig‘i — laboratoriya tushunchalar xaritasiga tayangan holda generativ AI dan ishonchli foydalanish vositalari.",
+          ru:"Проверка идеи · Оценка результата · Задание на слайды лекции — инструменты для надёжной работы с генеративным ИИ на основе карты понятий лаборатории.",
+          vi:"Kiểm chứng ý tưởng · Đánh giá kết quả · Bản hướng dẫn làm slide bài giảng — công cụ dùng AI tạo sinh đáng tin cậy, dựa trên bản đồ khái niệm của phòng lab."},
     stat: {ko:"분야 {0} · 개념 {1}개 · 하루 두 번 최신", en:"{0} fields · {1} concepts · refreshed twice a day", zh:"{0} 个领域 · {1} 个概念 · 每天更新两次",
            ja:"{0}分野 · 概念{1}個 · 1日2回更新", uz:"{0} soha · {1} tushuncha · kuniga ikki marta yangilanadi",
            ru:"{0} областей · {1} понятий · обновляется дважды в день", vi:"{0} lĩnh vực · {1} khái niệm · cập nhật hai lần mỗi ngày"},

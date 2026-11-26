@@ -497,7 +497,8 @@ def write_llms(index):
             "", "## 도구 (사람이 쓰는 페이지)", "",
             "- [연구실 도구함](%s): 도구 목록" % index["base"],
             "- [아이디어 검증하기](%scheck/): 분야를 고르고 아이디어를 쓰면 이 피드를 근거로 AI에게 검증을 맡기는 지시문을 만든다" % index["base"],
-            "- [결과물 평가하기](%sreview/): 아이디어·논문·제안서·사내 개선안·강의안·도안을 기준표(%srubrics/)로 채점하는 지시문을 만들고 AI 점수를 다시 확인한다" % (index["base"], index["base"]), ""]
+            "- [결과물 평가하기](%sreview/): 아이디어·논문·제안서·사내 개선안·강의안·도안을 기준표(%srubrics/)로 채점하는 지시문을 만들고 AI 점수를 다시 확인한다" % (index["base"], index["base"]),
+            "- [강의 PPT 지시서 만들기](%sdeck/): 강의 아이디어로 AI 슬라이드 도구(Genspark 등)에 줄 강의 제작 지시서(md)를 만든다. 예시 지시서: %sdeck/examples/" % (index["base"], index["base"]), ""]
     with open(os.path.join(ROOT, "llms.txt"), "w", encoding="utf-8") as f:
         f.write("\n".join(out))
 
