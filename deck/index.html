@@ -106,17 +106,13 @@
   footer { margin-top:64px; font-size:13px; color:var(--sub); border-top:1px solid var(--line); padding-top:16px; }
 
   /* ---- 강의 지시서 전용 ---- */
-  .quick { border:2px solid #1f2224; border-radius:16px; padding:16px 20px 18px; margin-top:26px; box-shadow:4px 4px 0 #1f2224; background:#fffdf7; }
+  .quick { border:2px solid #1f2224; border-radius:16px; padding:16px 20px 18px; margin-top:18px; box-shadow:4px 4px 0 #1f2224; background:#fffdf7; }
   .quick h3 { font-size:18px; margin:0 0 4px; }
-  .quick .lines { display:grid; grid-template-columns:repeat(4,1fr); gap:6px; font-size:12px; color:var(--sub); margin:8px 0; }
-  .quick .lines span { background:#fff; border:1px solid var(--line); border-radius:8px; padding:4px 8px; }
-  .quick .lines b { color:var(--ink); }
   .quick textarea { min-height:112px; background:#fff; }
   .qout { margin-top:12px; display:none; }
   .qout .sum { background:#fff; border:1px solid var(--line); border-radius:12px; padding:12px 14px; font-size:14px; }
   .qout .sum ul { margin:6px 0 0; padding-left:20px; }
   .qout small { color:var(--sub); }
-  @media (max-width:640px) { .quick .lines { grid-template-columns:1fr 1fr; } }
   .exs { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:12px; }
   .ex { border:2px solid #1f2224; border-radius:14px; padding:12px 14px; background:#fff; box-shadow:3px 3px 0 #1f2224; font-size:14px; }
   .ex b { display:block; font-size:15px; }
@@ -175,7 +171,20 @@
   <div class="kicker">AHNBOAT LAB · 연구실 도구함 · 강의 PPT 지시서</div>
   <h1>강의 PPT 지시서 만들기</h1>
   <p class="lead">강의 아이디어를 쓰면, Genspark 같은 AI 슬라이드 도구에게 강의 덱 제작을 맡길 <b>제작 지시서(md 파일)</b>를 만들어 줍니다. 장 구성표·프롬프트 사슬·언어판 요청문·점검표가 한 파일에 들어 있습니다.</p>
-  <p class="meta" id="meta">빠른 만들기(3~4줄) · 자세히 만들기(6단계) · 예시 지시서 2개 · 한국어판과 중국어·영어·일본어판 요청문</p>
+  <p class="meta" id="meta">3~4줄로 바로 만들기 · 자세히 만들기(6단계) · 예시 지시서 2개 · 한국어판과 중국어·영어·일본어판 요청문</p>
+
+  <!-- 빠른 만들기: 3~4줄 → 바로 md -->
+  <section class="quick tool" id="quick">
+    <h3>⚡ 3~4줄만 쓰세요. md 지시서가 바로 만들어집니다</h3>
+    <p class="note" style="margin:0 0 8px">형식은 자유예요. 주제, 대상과 장 수, 실습(질문), 도구와 언어를 섞어 쓰면 됩니다. 쓰는 동안 아래에 지시서가 저절로 만들어져요.</p>
+    <textarea id="qIn" placeholder="카페 매출 데이터 시각화
+처음 배우는 대학생, 40장
+실습: 시간대별 손님 수(언제 가장 붐비는가), 메뉴별 매출(무엇이 잘 팔리나)
+Qwen 주력, Genspark로 한국어판과 중국어판"></textarea>
+    <div class="row2"><button class="primary" id="qDl" disabled>md 파일 내려받기</button><button id="qCopy" disabled>지시서 복사</button><button data-q="0">예시 ①</button><button data-q="1">예시 ②</button><span class="note" id="qMsg"></span></div>
+    <pre id="qMd" style="display:none;margin-top:12px;max-height:420px"></pre>
+    <p class="note" id="qNext" style="display:none;margin:8px 0 0">내려받은 md를 Genspark에 첨부하고, 지시서 안의 '한국어판 요청문'을 붙여 넣으면 됩니다. <code>[확정 필요]</code>는 과목·디자인처럼 직접 정할 값이에요. 더 고치고 싶으면 <a href="#step2" id="qMore">아래 자세히 만들기</a>로.</p>
+  </section>
 
   <div class="stage" id="hero" aria-label="강의 준비실 무대: 하루·시아·모아가 지시서를 만들고, 주판봇은 장 수를 세고, 초파리 연구원은 빠진 장을 찾으며, 미공개 X1·X2·X3이 박수를 칩니다. 박사는 도구를 또 하나 만드느라 자고 있습니다.">
     <div class="sign">쉿! 박사님은 세 번째 도구를 만드느라 또 밤을 새우셨어요</div>
@@ -216,18 +225,6 @@
     </details>
   </section>
 
-  <!-- 빠른 만들기 -->
-  <section class="quick tool" id="quick">
-    <h3>⚡ 빠른 만들기 — 3~4줄만 쓰면 지시서가 바로 나와요</h3>
-    <div class="say c-asst" style="margin:6px 0"><img class="px" src="../assets/char/asst_spark.webp" alt="하루"><div class="bub"><b>하루</b>급하시면 여기 네 줄만 써 주세요. 나머지는 연구실 기본값과 추천으로 제가 채울게요. 차트는 질문에 맞춰 추천하고, 장 수는 목표에 맞춰 넣고 빼요. 고치고 싶으면 아래 ②에서 자세히 고치면 돼요.</div></div>
-    <div class="lines"><span><b>1줄</b> 주제(덱 제목)</span><span><b>2줄</b> 대상 · 장 수</span><span><b>3줄</b> 실습: 이름(질문), …</span><span><b>4줄</b> 도구 · 언어판 (선택)</span></div>
-    <textarea id="qIn" placeholder="스마트시티 · 물류 데이터 시각화
-처음 배우는 학생, 코딩 몰라도 됨, 40장
-실습: 스마트시티 교통량(언제 가장 붐비는가), 물류 배송 지연(왜 늦어지는가)
-Qwen 주력, 지도 맛보기는 Google AI Studio, Genspark로 한국어판과 중국어판"></textarea>
-    <div class="row2"><button class="primary" id="qGo">바로 만들기</button><button data-q="0">예시 ①을 4줄로</button><button data-q="1">예시 ②를 4줄로</button><span class="note">대시보드·필터라는 말이 있으면 대시보드형으로 만듭니다.</span></div>
-    <div class="qout" id="qOut"></div>
-  </section>
 
   <h2>오늘의 강의 준비실</h2>
   <div class="cast">
@@ -240,20 +237,20 @@ Qwen 주력, 지도 맛보기는 Google AI Studio, Genspark로 한국어판과 �
   </div>
 
   <!-- 튜토리얼 -->
-  <h2 id="tutorial">튜토리얼 — 하루·시아·모아가 알려 드려요</h2>
+  <h2 id="tutorial">자세히 만들기 — 하루·시아·모아가 알려 드려요</h2>
   <div class="tut">
     <div class="tabs" id="tabs"></div>
 
     <div class="tstep" data-label="시작">
       <div class="say c-asst"><img class="px" src="../assets/char/asst_spark.webp" alt="하루"><div class="bub"><b>하루</b>어서 오세요, 강의 준비실이에요! 이 도구는 다른 두 도구와 결과물이 달라요. AI에게 "판단"을 받는 게 아니라, AI 슬라이드 도구에게 "강의 덱을 만들어 줘" 하고 맡길 작업 지시서를 만들어요.</div></div>
-      <div class="say c-asst"><img class="px" src="../assets/char/asst_report.webp" alt="하루"><div class="bub"><b>하루</b>급하면 맨 위 '빠른 만들기'에 3~4줄만 써도 돼요. 자세히 만들 때는 여섯 단계예요. 아이디어 쓰기 → 강의 틀 정하기 → 언어판·제작 도구 → 지시서 내려받기 → AI로 빈자리 채우기 → 점검. 처음이면 아래 예시 두 개 중 하나를 불러와서 둘러보세요.</div></div>
+      <div class="say c-asst"><img class="px" src="../assets/char/asst_report.webp" alt="하루"><div class="bub"><b>하루</b>급하면 맨 위 상자에 3~4줄만 써도 지시서가 바로 나와요. 자세히 만들 때는 여섯 단계예요. 아이디어 쓰기 → 강의 틀 정하기 → 언어판·제작 도구 → 지시서 내려받기 → AI로 빈자리 채우기 → 점검. 처음이면 아래 예시 두 개 중 하나를 불러와서 둘러보세요.</div></div>
       <div class="memo"><img class="px" src="../assets/char/doc_sleepy.webp" alt="박사"><div><b>박사의 메모</b> · "슬라이드 AI는 지시가 모호하면 예쁜 빈 덱을 만든다. 장 번호·유형·제목을 먼저 정해 주면 내용이 찬 덱을 만든다. 그리고 프롬프트는 반드시 직접 돌려 보고 캡처할 것."</div></div>
     </div>
 
     <div class="tstep" data-label="⚡ 빠른 길">
-      <div class="say c-asst"><img class="px" src="../assets/char/asst_report.webp" alt="하루"><div class="bub"><b>하루</b>시간이 없으면 맨 위 '빠른 만들기'에 네 줄만 쓰세요. 주제, 대상·장 수, 실습과 질문, 도구·언어. '바로 만들기'를 누르면 지시서 md를 바로 내려받을 수 있어요.</div></div>
+      <div class="say c-asst"><img class="px" src="../assets/char/asst_report.webp" alt="하루"><div class="bub"><b>하루</b>시간이 없으면 맨 위 상자에 서너 줄만 쓰세요. 형식은 자유예요. 쓰는 동안 지시서가 저절로 만들어지고, 'md 파일 내려받기'를 누르면 끝이에요.</div></div>
       <div class="say c-robo"><img class="px" src="../assets/char/robo_wow.webp" alt="주판봇"><div class="bub"><b>주판봇</b>장 수는 제가 맞춰요! 넘치면 '차트 고르기'·'흔한 실수' 장부터 빼고, 모자라면 넣어요. 실습이 많아서 그래도 넘치면 알려 드릴게요.</div></div>
-      <div class="say c-fly"><img class="px" src="../assets/char/fly_point.webp" alt="초파리 연구원"><div class="bub"><b>초파리 연구원</b>빠른 길로 만든 지시서는 추천 차트와 [AI가 채움] 자리가 많아. 슬라이드 도구에 넘기기 전에 ⑤로 빈자리를 채우고 ⑥으로 점검하는 건 똑같아.</div></div>
+      <div class="say c-fly"><img class="px" src="../assets/char/fly_point.webp" alt="초파리 연구원"><div class="bub"><b>초파리 연구원</b>빠른 길은 빈자리를 연구실 기본값으로 채워서 바로 쓸 수 있어. 다만 추천 차트와 데이터 열은 기본값이니, 수업 전에 프롬프트를 직접 돌려 보고 ⑥으로 한 번 점검해.</div></div>
       <div class="tnav"><button data-go="quick">빠른 만들기로 가기</button></div>
     </div>
 
@@ -683,28 +680,32 @@ Qwen 주력, 지도 맛보기는 Google AI Studio, Genspark로 한국어판과 �
     "스마트시티 · 물류 데이터 시각화\n처음 배우는 학생, 코딩 몰라도 됨, 40장\n실습: 스마트시티 교통량(언제 가장 붐비는가), 물류 배송 지연(왜 늦어지는가)\nQwen 주력, 지도 맛보기는 Google AI Studio, Genspark로 한국어판과 중국어판",
     "Google AI Studio로 만드는 산업별 데이터 시각화\n처음 배우는 사람, 40장, 수업용 가상 데이터\n산업: 헬스케어(내 생활 습관은 어떻게 변했나), 의료데이터(환자가 어디에, 언제 몰리나), 핀테크(돈은 언제, 어디에 쓰이나)\n쉬운 일은 Qwen, 대시보드는 Google AI Studio, 한국어판과 중국어판"
   ];
+  var qT = null, qLast = null;
   function runQuick() {
-    var t = $("qIn").value.trim();
-    if (!t) { $("qOut").style.display = "block"; $("qOut").innerHTML = '<p class="note">먼저 3~4줄을 써 주세요. 비어 있으면 회색 예시 글을 참고하세요.</p>'; return; }
-    S = DeckKit.quick(t); off = {}; found = [];
-    writeForm(); drawPractices(); render(); search();
-    var r = last, A = S.chain !== "B", okN = r.count >= r.lo && r.count <= r.hi;
-    var pr = S.practices.map(function (p) {
-      return "<li><b>" + esc(p.name) + "</b> <small>(" + esc(p.pfx) + "-" + (A ? "P1~P5" : "Q1~S3") + ")</small>" + (p.q ? " — " + esc(p.q) : "") +
-        (p.charts ? '<br><small>추천 차트: ' + esc(p.charts) + "</small>" : '<br><small>차트는 AI가 채움</small>') + "</li>";
-    }).join("");
-    $("qOut").style.display = "block";
-    $("qOut").innerHTML = '<div class="sum"><b>' + esc(S.title || "(제목 없음)") + "</b> · " + (A ? "차트 이어 묻기형" : "대시보드형") + " · 주 도구 " + esc(S.main) + (S.sub ? " · 보조 " + esc(S.sub) : "") +
-      " · " + (function (l) { return l.length > 1 ? l.map(function (k) { return { ko: "한", zh: "중", en: "영", ja: "일" }[k]; }).join("·") + "판" : "한국어판"; })(["ko", "zh", "en", "ja"].filter(function (k) { return S.langs[k]; })) +
-      '<ul>' + pr + '</ul><div style="margin-top:8px" class="' + (okN ? "ok" : "mid") + '"><b>' + r.count + "장</b> (목표 " + r.lo + "~" + r.hi + "장)" +
-      (okN ? "" : " — 실습 수가 목표에 비해 " + (r.count > r.hi ? "많아요. 실습을 줄이거나 목표 장 수를 늘리세요." : "적어요. 실습을 하나 더 써 주세요.")) +
-      '</div><div class="note">[AI가 채움] ' + r.fill + "곳 · [확정 필요] " + r.todo + "곳</div></div>" +
-      '<div class="row2"><button class="primary" id="qDl">md 파일 내려받기</button><button id="qFill">빈자리 채우기 지시문 복사</button><button data-go="step2" id="qMore">② 에서 자세히 고치기 →</button><span class="note" id="qMsg"></span></div>';
-    $("qDl").addEventListener("click", function () { $("dl").click(); $("qMsg").textContent = fname() + " 저장"; });
-    $("qFill").addEventListener("click", function () { copy($("fillPrompt").textContent, $("qMsg"), "복사했습니다. 생성 AI에 붙여 넣으세요."); });
-    $("qMore").addEventListener("click", function () { go("step2"); });
+    var t = $("qIn").value.trim(), on = t.length >= 6;
+    $("qDl").disabled = $("qCopy").disabled = !on;
+    $("qMd").style.display = $("qNext").style.display = on ? "block" : "none";
+    if (!on) { $("qMsg").textContent = ""; return; }
+    var Q = DeckKit.quick(t);
+    qLast = DeckKit.build(JSON.parse(JSON.stringify(Q)), LabKit.stamp("deck"));
+    qLast.title = Q.title;
+    $("qMd").textContent = qLast.md;
+    var okN = qLast.count >= qLast.lo && qLast.count <= qLast.hi;
+    $("qMsg").innerHTML = '<b class="' + (okN ? "ok" : "mid") + '">' + qLast.count + "장</b> · 실습 " + Q.practices.length + "개 · " + (Q.chain === "B" ? "대시보드형" : "차트 이어 묻기형") +
+      (okN ? "" : ' · <span class="mid">목표 ' + qLast.lo + "~" + qLast.hi + "장보다 " + (qLast.count > qLast.hi ? "많아요(실습을 줄이거나 장 수를 늘리세요)" : "적어요(실습을 더 쓰세요)") + "</span>");
+    S = Q; off = {}; found = []; writeForm(); drawPractices(); render();   // 아래 자세히 만들기에도 같은 내용을 넣어 둔다
   }
-  $("qGo").addEventListener("click", runQuick);
+  function qName() { return "강의지시서_" + ((qLast && qLast.title) || "초안").replace(/[\\/:*?"<>|·]+/g, " ").trim().replace(/\s+/g, "_").slice(0, 40) + ".md"; }
+  $("qIn").addEventListener("input", function () { clearTimeout(qT); qT = setTimeout(runQuick, 500); });
+  $("qDl").addEventListener("click", function () {
+    runQuick();
+    var blob = new Blob([qLast.md], { type: "text/markdown;charset=utf-8" }), a = document.createElement("a");
+    a.href = URL.createObjectURL(blob); a.download = qName(); document.body.appendChild(a); a.click();
+    setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 500);
+    $("qMsg").textContent = qName() + " 저장했어요.";
+  });
+  $("qCopy").addEventListener("click", function () { runQuick(); copy(qLast.md, $("qMsg"), "지시서를 복사했어요."); });
+  $("qMore").addEventListener("click", function (e) { e.preventDefault(); go("step2"); });
   document.querySelectorAll("[data-q]").forEach(function (b) { b.addEventListener("click", function () { $("qIn").value = QEX[+b.dataset.q]; runQuick(); }); });
 
   /* ---------- 입력 연결 ---------- */

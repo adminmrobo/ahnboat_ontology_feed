@@ -290,7 +290,7 @@
       var rows = P.map(function (p, i) {
         return ["실습 " + String.fromCharCode(65 + i) + " (" + (p.name || "[확정 필요]") + ")", p.q || "[AI가 채움]", (cut(p.charts).join(" → ") || "[AI가 채움]"), short(S.main) || "[확정 필요]", p.cols || "[AI가 채움]"];
       });
-      if (sub && S.taste) rows.push(["맛보기", "[AI가 채움]", short(S.taste), sub, "[AI가 채움]"]);
+      if (sub && S.taste) rows.push(["맛보기", S.quickMode ? "어디에 몰리는가" : "[AI가 채움]", short(S.taste), sub, S.quickMode ? "장소, 위도, 경도, 값" : "[AI가 채움]"]);
       o.push(table(["실습", "질문", "차트", "도구", "데이터 열(예시)"], rows));
     } else {
       o.push(table(["실습", "누가 보는가", "질문", "데이터 열(예시)", "대시보드 차트 3개", "필터"], P.map(function (p, i) {
@@ -407,13 +407,13 @@
       o.push("- **프롬프트는 번역만 하지 말고 그 언어로 " + (sub ? j(main, "과", "와") + " " + sub : main) + "에 실제로 입력해 결과를 다시 확인한다.** 결과 화면 캡처도 그 언어 결과로 새로 찍는다.",
         "- 실습 CSV의 열 이름을 그 언어로 바꾼 파일을 따로 만든다.",
         "- 프롬프트 번호의 실습 이름(" + pfxs.map(function (x) { return "`" + x + "`"; }).join("·") + ")도 그 언어로 바꾼다.",
-        "- 용어는 아래 표로 통일한다. 표에 없는 용어는 추가한 뒤 쓴다.", "");
+        "- 용어는 아래 표로 통일한다. 표에 없는 용어는 추가한 뒤 쓴다." + (S.quickMode ? " 실습 이름(" + P.map(function (p) { return p.name; }).join("·") + ")은 외국어판을 만들 때 그 언어로 옮겨 이 표에 더한다." : ""), "");
       var others = langs.slice(1), body = null;
       var mdSoFar = o.join("\n") + secs.map(function (s) { return s.rows.map(function (r) { return r.title + r.content; }).join(""); }).join("");
       var tr = TERMS.filter(function (t) { return mdSoFar.indexOf(t[0]) >= 0 || P.some(function (p) { return (p.name + p.charts).indexOf(t[0]) >= 0; }); });
       body = tr.map(function (t) { return [t[0]].concat(others.map(function (k) { return t[LANG[k].col]; })); });
       P.forEach(function (p) {
-        if (p.name && !TERMS.some(function (t) { return p.name === t[0]; })) body.push([p.name].concat(others.map(function () { return "[AI가 채움]"; })));
+        if (p.name && !S.quickMode && !TERMS.some(function (t) { return p.name === t[0]; })) body.push([p.name].concat(others.map(function () { return "[AI가 채움]"; })));
       });
       o.push(table(["한국어"].concat(others.map(function (k) { return LANG[k].name; })), body), "",
         "- 글꼴: 판마다 그 언어를 지원하는 글꼴을 쓴다. 외국어판에 한국어 글꼴을 쓰면 글자가 깨진다.",
@@ -456,8 +456,11 @@
     todo.forEach(function (t, i) { o.push((i + 1) + ". " + t); });
     o.push("", "---", "", "> " + (stamp || "만든 도구: ahnboat lab 강의 PPT 지시서 만들기"));
     var md = o.join("\n") + "\n";
-    return { md: md, slides: secs, count: count, lo: lo, hi: hi, fill: (md.match(/\[AI가 채움/g) || []).length, todo: (md.match(/\[확정 필요/g) || []).length };
+    return { md: md, slides: secs, count: count, lo: lo, hi: hi, fill: left(md, "AI가 채움"), todo: left(md, "확정 필요") };
   }
+
+  /* 실제로 남은 자리만 센다 (설명 문장 속 `[AI가 채움]`은·과 같은 언급은 빼고) */
+  function left(md, w) { return (md.match(new RegExp("\\[" + w + "[^\\]]*\\](?!`[은는과가이])", "g")) || []).length; }
 
   /* ---------- 지시서 점검 ---------- */
   function check(md) {
@@ -502,7 +505,7 @@
         add(same ? "ok" : "mid", same ? "실습 묶음의 장 배치가 서로 같아요. 학생이 두 번째부터 순서를 예상할 수 있어요." : "실습 묶음의 장 배치가 서로 달라요. 일부러 다르게 한 것이 아니라면 맞춰 보세요.");
       }
     } else add("mid", "프롬프트 번호(예: 도시-P1, 헬스-Q1)를 찾지 못해 실습 묶음을 나누지 못했어요.");
-    var fill = (md.match(/\[AI가 채움/g) || []).length, todo = (md.match(/\[확정 필요/g) || []).length;
+    var fill = left(md, "AI가 채움"), todo = left(md, "확정 필요");
     add(fill ? "bad" : "ok", fill ? "아직 비어 있는 [AI가 채움] 자리 " + fill + "곳 — 'AI에게 빈자리 채우기' 지시문으로 채우세요." : "[AI가 채움] 자리가 남아 있지 않아요.");
     add(todo ? "mid" : "ok", todo ? "저자가 정할 [확정 필요] 자리 " + todo + "곳 — 덱을 만들기 전에 값을 채우세요." : "[확정 필요] 자리가 남아 있지 않아요.");
     add(/요청문/.test(md) ? "ok" : "mid", /요청문/.test(md) ? "슬라이드 AI에게 줄 요청문이 들어 있어요." : "슬라이드 AI(Genspark 등)에게 줄 요청문이 없어요.");
@@ -531,7 +534,7 @@
     if (found[0]) r.main = found[0].v;
     if (found[1]) r.sub = found[1].v;
     if (/대시보드|필터/.test(t)) r.chain = "B";
-    if (/개인정보|의료|환자|금융|결제|카드|건강/.test(t)) r.privacy = true;
+    if (/개인정보|의료|환자|병원|진료|응급|금융|결제|카드|건강/.test(t)) r.privacy = true;
     if (/가상 데이터|가상데이터/.test(t)) r.dataPolicy = "virtual"; else if (/공공 데이터|공공데이터|공공 통계|공공 개방/.test(t)) r.dataPolicy = "public";
     if (/genspark|젠스파크/i.test(t)) r.deckTool = "Genspark"; else if (/gamma|감마/i.test(t)) r.deckTool = "Gamma";
     return r;
@@ -564,8 +567,42 @@
     add.forEach(function (k) { if (n() < lo && !S.opts[k] && !(k === "compare" && S.practices.length < 2)) { S.opts[k] = true; if (n() > hi) S.opts[k] = false; } });
     return n();
   }
+
+  /* 빠른 만들기용: [AI가 채움]으로 남길 자리를 연구실 기본값으로 채워 바로 쓸 수 있는 지시서를 만든다 */
+  function autofill(S) {
+    var B = S.chain === "B", main = short(S.main) || "생성 AI", kind = B ? "대시보드" : "차트";
+    var topic = (S.title || "").replace(/\s*(데이터\s*)?(시각화|대시보드|분석하기|분석)\s*$/, "").trim() || "실습";
+    if (!S.goals.some(function (g) { return g && g.trim(); })) S.goals = [
+      topic + " 데이터에서 \"언제, 어디서, 얼마나\"를 찾는다.",
+      ro(main) + " 프롬프트를 이어 입력해 " + eul(kind) + " 만든다.",
+      "완성한 " + eul(kind) + " 세 문장으로 해석한다."];
+    var COLS = [
+      [/원인|파레토/, "날짜, 구분, 원인, 소요시간(분), 건수"],
+      [/지역|지도/, "날짜, 지역, 구분, 건수, 금액(원)"],
+      [/산점도/, "날짜, 구분, 금액(원), 비율(%), 이상값 여부"],
+      [/막대/, "날짜, 구분, 항목, 건수, 금액(원)"],
+      [/선 그래프|추세선|히트맵|시간/, "날짜, 요일, 시간대, 구분, 건수"]];
+    S.practices.forEach(function (p) {
+      if (!p.charts) p.charts = B ? "일별 추세선, 항목별 막대, 요일×시간 히트맵" : "항목별 막대 차트, 항목×기간 히트맵";
+      if (!p.data) p.data = p.name + " 기록";
+      if (!p.q) p.q = B ? "언제, 무엇이 늘고 줄었나" : "무엇이 가장 많은가";
+      if (!p.cols) { var c = COLS.filter(function (x) { return x[0].test(cut(p.charts)[0] || ""); })[0]; p.cols = c ? c[1] : "날짜, 구분, 값"; }
+      if (!B && !p.intro) p.intro = j(p.name, "은", "는") + " 기록에서 질문의 답을 찾는 일이다";
+      if (B) {
+        if (!p.intro) p.intro = j(p.name, "은", "는") + " 쌓인 기록을 한 화면에서 보는 일이다";
+        if (!p.who) p.who = p.name + " 담당자";
+        if (!p.filter) p.filter = "기간(주·월)";
+      }
+    });
+    if (!S.message) S.message = B ? "쉬운 일은 " + ro(main) + ", 어려운 일은 " + ro(short(S.sub) || main) + ". 실습이 달라도 묻는 순서는 같다."
+                                  : "좋은 차트는 한 번의 프롬프트가 아니라, 이어 묻는 프롬프트에서 나온다.";
+    if (!B && S.sub && !S.taste && /지도/.test(S.idea)) S.taste = "거점별 버블 지도";
+    S.quickMode = true;
+  }
   function quick(text) {
-    var S = blank(), L = String(text || "").split(/\n+/).map(function (l) { return l.replace(/^\s*(?:[-*•]|\d+[.)])\s*/, "").trim(); }).filter(Boolean);
+    var raw = String(text || "").trim();
+    if (raw.split(/\n+/).length < 3) raw = raw.replace(/([.。!?])\s+/g, "$1\n");   // 줄을 안 나눠 쓴 글은 문장으로 나눈다
+    var S = blank(), L = raw.split(/\n+/).map(function (l) { return l.replace(/^\s*(?:[-*•]|\d+[.)])\s*/, "").trim(); }).filter(Boolean);
     S.idea = L.join("\n");
     if (!L.length) return S;
     var r = fromIdea(S.idea);
@@ -588,17 +625,19 @@
     } else if (r.main) { S.main = r.main; S.sub = r.sub || ""; }
     if (r.langs) Object.keys(r.langs).forEach(function (k) { S.langs[k] = true; });
     var B = S.chain === "B";
-    S.title = L[0].replace(/^(주제|제목|강의|덱)\s*[:：]\s*/, "").replace(/\s*(강의를?\s*)?(만들고 싶다|하고 싶다|만든다|한다)\.?$/, "").trim();
+    S.title = L[0].replace(/^(주제|제목|강의|덱)\s*[:：]\s*/, "").replace(/[.。]$/, "").replace(/\s*(강의를?\s*)?(을|를)?\s*(만들고 싶다|하고 싶다|가르치고 싶다|만든다|한다)$/, "").replace(/\s*(강의|수업)$/, "").trim();
     if (/처음|초보|입문|비전공|코딩.{0,4}(몰|없)/.test(S.idea)) S.audience = "beginner";
     else if (/실무|현업|직장인|담당자/.test(S.idea)) S.audience = "pro";
     else if (/기초|어느 정도|해 본/.test(S.idea)) S.audience = "basic";
     // 실습 줄: '실습/산업/사례'가 있는 줄, 없으면 구분자가 가장 많은 줄(첫 줄 제외)
-    var pl = L.slice(1).filter(function (l) { return /^(실습|산업|사례|주제들?)\s*[:：]|실습|산업/.test(l); })[0];
+    var pl = L.slice(1).filter(function (l) { return /^(실습|산업|사례|주제들?)\s*[:：]|실습|산업|사례/.test(l); })[0];
     var NOTP = /\d+\s*장|대상|학생|실무자|초보|처음|입문|qwen|studio|chatgpt|gemini|claude|deepseek|genspark|한국어판|중국어|영어판|일본어|가상 데이터|공공/i;
     if (!pl) pl = L.slice(1).filter(function (l) { return !NOTP.test(l); }).sort(function (a, b) { return (b.match(/[,·、]/g) || []).length - (a.match(/[,·、]/g) || []).length; }).filter(function (l) { return /[,·、]/.test(l); })[0];
     var items = [];
     if (pl) {
       var body = pl.replace(/^[^:：]*(실습|산업|사례|주제들?)[^:：]*[:：]\s*/, "").replace(/\s*(두|세|네|2|3|4)\s*(개|가지)\.?\s*$/, "");
+      body = body.replace(/^.*?(실습|산업|사례)\s*(은|는|으로|로)\s*/, "").replace(/\s*(을|를)?\s*(다룬다|한다|본다|만든다|쓴다)\.?$/, "").replace(/[.。]$/, "");
+      if (!/[,·、\/]/.test(body)) body = body.replace(/([가-힣)）])(와|과)\s+/g, "$1, ").replace(/\s*(그리고|및)\s*/g, ", ");
       var depth = 0, cur = "";   // 괄호 안의 쉼표는 나누지 않는다
       for (var i = 0; i < body.length; i++) {
         var c = body[i];
@@ -606,7 +645,7 @@
         if (depth === 0 && /[,·、\/]/.test(c)) { items.push(cur); cur = ""; } else cur += c;
       }
       items.push(cur);
-      items = items.map(function (x) { return x.trim(); }).filter(function (x) { return x && x.length < 60; }).slice(0, 4);
+      items = items.map(function (x) { return x.trim().replace(/(이다|입니다)\.?$/, "").trim(); }).filter(function (x) { return x && x.length < 60; }).slice(0, 4);
     }
     if (!items.length) items = [S.title];
     var used = {};
@@ -616,6 +655,7 @@
       return { name: name, pfx: w.length <= 5 ? w : w.slice(0, 2), intro: "", who: "", q: q, charts: suggestCharts(q || name, B, used), cols: "", filter: "", data: "" };
     });
     S.opts = { chartPick: !B, privacy: !!r.privacy, mistakes: !B, compare: B && S.practices.length > 1, next: false };
+    autofill(S);
     fit(S);
     if (/다음 시간|다음 차시/.test(S.idea)) { var mm = S.idea.match(/다음\s*(?:시간|차시)[^\n]*?(?:에는|은|:)\s*([^\n.]+?)(?:을|를)?\s*(?:배운다|만든다|한다)?\.?$/m); S.opts.next = true; S.nextText = mm ? mm[1].trim() : ""; }
     return S;
