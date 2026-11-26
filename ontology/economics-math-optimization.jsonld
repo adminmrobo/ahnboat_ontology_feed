@@ -12,1033 +12,6 @@
  "dct:creator": "안상선 (Ahn Sangsun)",
  "@graph": [
   {
-   "@id": "lab:concept/cube-pieces",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "큐브의 조각 세 종류",
-     "@language": "ko"
-    },
-    {
-     "@value": "cubie types",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "3×3×3 큐브는 고정된 가운데 조각 6개, 모서리 조각 12개, 꼭짓점 조각 8개로 이루어진다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_cube_lab/01_cube_anatomy.html#lv1"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/cube-state-count"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/cube-state-count",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "큐브 상태 수",
-     "@language": "ko"
-    },
-    {
-     "@value": "number of cube states",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "돌려서 만들 수 있는 3×3×3 큐브의 상태 수는 8!·3⁷·12!·2¹¹/2 = 43,252,003,274,489,856,000이다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_cube_lab/01_cube_anatomy.html#lv2"
-   }
-  },
-  {
-   "@id": "lab:concept/move-notation",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "돌리기 기호와 되돌리기",
-     "@language": "ko"
-    },
-    {
-     "@value": "Singmaster move notation and inverses",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "면 이름 한 글자(R, L, U, D, F, B)에 방향 표시(없음, ′, 2)를 붙여 18가지 동작을 적고, 식의 되돌리기는 순서를 거꾸로·방향을 반대로 한다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_cube_lab/02_notation_lbl.html#lv1"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/layer-by-layer"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/layer-by-layer",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "층마다 쌓기 (LBL)",
-     "@language": "ko"
-    },
-    {
-     "@value": "layer-by-layer method",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "아래층부터 한 층씩 맞추며, 맞춘 층은 짧은 트리거 식으로 잠깐 들었다 되돌려 놓는 초보자 풀이법.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_cube_lab/02_notation_lbl.html#lv2"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/move-order"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/move-order",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "식의 차수 (반복 횟수)",
-     "@language": "ko"
-    },
-    {
-     "@value": "order of a move sequence",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "같은 식을 처음 상태에서 반복할 때 처음 상태로 돌아오는 최소 횟수. R은 4, R U R′ U′는 6, R U는 105.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_cube_lab/02_notation_lbl.html#lv3"
-   }
-  },
-  {
-   "@id": "lab:concept/f2l",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "Cross와 F2L",
-     "@language": "ko"
-    },
-    {
-     "@value": "Cross and First Two Layers",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "아랫면 십자를 맞춘 뒤 꼭짓점-모서리 쌍 네 개를 한 번씩 넣어 아래 두 층을 완성하는 CFOP의 앞 두 단계. 쌍의 놓임새는 41가지.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_cube_lab/03_cfop.html#lv1"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/oll-pll"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/oll-pll",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "OLL과 PLL",
-     "@language": "ko"
-    },
-    {
-     "@value": "Orientation and Permutation of the Last Layer",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "마지막 층을 방향(OLL, 57가지)과 자리(PLL, 21가지) 두 단계로 나눠, 무늬를 알아보고 외운 식을 실행하는 방법.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_cube_lab/03_cfop.html#lv2"
-   }
-  },
-  {
-   "@id": "lab:concept/roux",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "Roux 풀이법",
-     "@language": "ko"
-    },
-    {
-     "@value": "Roux method",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "양쪽 1×2×3 블록을 먼저 쌓고, 윗면 꼭짓점(CMLL)을 맞춘 뒤, 가운데 줄과 윗면만으로 마지막 모서리 6개를 정리하는 풀이법.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_cube_lab/04_roux_zz.html#lv1"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/zz-eo"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/zz-eo",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "ZZ와 모서리 방향 보존",
-     "@language": "ko"
-    },
-    {
-     "@value": "ZZ method and edge orientation",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "처음에 모든 모서리 방향을 맞추고(EOLine) 이후 L·R·U·D만 쓰면 모서리 방향이 보존된다는 성질을 이용한 풀이법.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_cube_lab/04_roux_zz.html#lv2"
-   }
-  },
-  {
-   "@id": "lab:concept/algorithm-sets",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "식 묶음의 크기",
-     "@language": "ko"
-    },
-    {
-     "@value": "algorithm set sizes",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "스피드큐빙의 식 묶음은 PLL 21, OLL 57, ZBLL 493, 1LLL 약 3,915처럼 단계를 합칠수록 커지며, 외울 양과 풀이 속도 사이의 거래를 만든다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_cube_lab/05_algorithm_ecosystem.html#lv1"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/alt-methods"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/alt-methods",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "목표별 풀이법",
-     "@language": "ko"
-    },
-    {
-     "@value": "alternative solving methods",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "Petrus·Heise·Waterman·기둥 먼저·Snyder 계열처럼, 외울 양 대신 최소 수·조각 순서·손동작 시간을 목표로 설계한 풀이법들.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_cube_lab/05_algorithm_ecosystem.html#lv2"
-   }
-  },
-  {
-   "@id": "lab:concept/group-axioms",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "군의 네 약속",
-     "@language": "ko"
-    },
-    {
-     "@value": "group axioms",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "닫혀 있음, 항등원, 역원, 결합법칙을 만족하는 원소들의 모음을 군이라 한다. 큐브 움직임의 모음 G₀ = ⟨L, R, F, B, U, D⟩는 군이다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_cube_lab/06_cube_group.html#lv1"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/non-commutative"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/non-commutative",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "비가환 (RU ≠ UR)",
-     "@language": "ko"
-    },
-    {
-     "@value": "non-commutativity of the cube group",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "두 움직임의 순서를 바꾸면 결과가 달라지는 경우가 있으면 비가환이다. R과 U는 비가환, R과 L은 가환이다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_cube_lab/06_cube_group.html#lv2"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/facelet-permutation"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/facelet-permutation",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "스티커 순열과 순환 표기",
-     "@language": "ko"
-    },
-    {
-     "@value": "facelet permutations and cycle notation",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "가운데를 뺀 스티커 48장에 번호를 붙이면 큐브의 움직임은 1~48의 순열이 되고, 순환 표기로 적을 수 있다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_cube_lab/06_cube_group.html#lv3"
-   }
-  },
-  {
-   "@id": "lab:concept/conjugate",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "켤레 A B A⁻¹",
-     "@language": "ko"
-    },
-    {
-     "@value": "conjugation",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "준비 A, 작업 B, 되돌리기 A⁻¹를 이은 식. B와 같은 모양의 일을 A만큼 옮겨진 자리에서 한다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_cube_lab/07_conjugates_commutators.html#lv1"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/commutator"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/commutator",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "교환자와 3-순환",
-     "@language": "ko"
-    },
-    {
-     "@value": "commutator and 3-cycle",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "교환자 [A, B] = A B A⁻¹ B⁻¹는 A와 B가 함께 건드리는 곳만 바꾸며, [R U R′, D]처럼 조각 3개만 순환시키는 짧은 식을 만든다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_cube_lab/07_conjugates_commutators.html#lv2"
-   }
-  },
-  {
-   "@id": "lab:concept/orientation-invariants",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "방향 불변량 (비틀림·뒤집힘)",
-     "@language": "ko"
-    },
-    {
-     "@value": "orientation invariants",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "돌려서 만든 큐브에서 꼭짓점 비틀림의 합은 3의 배수이고, 뒤집힌 모서리의 수는 짝수다. 움직임은 이 두 값을 바꾸지 않는다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_cube_lab/08_solvability.html#lv1"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/permutation-parity"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/permutation-parity",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "자리 바꿈 홀짝 조건",
-     "@language": "ko"
-    },
-    {
-     "@value": "permutation parity condition",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "돌려서 만든 큐브에서 꼭짓점 순열과 모서리 순열의 홀짝은 같다. 면 하나의 회전은 둘을 동시에 홀순열만큼 바꾸기 때문이다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_cube_lab/08_solvability.html#lv2"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/cube-fundamental-theorem"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/cube-fundamental-theorem",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "큐브 기본정리 (풀 수 있는 세 조건)",
-     "@language": "ko"
-    },
-    {
-     "@value": "fundamental theorem of cubology",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "조각 배치가 돌려서 풀 수 있는 상태일 필요충분조건은 비틀림 합 ≡ 0 (mod 3), 뒤집힘 합 ≡ 0 (mod 2), 꼭짓점·모서리 순열의 홀짝 일치이며, 무작위 조립의 1/12이 이를 만족한…",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_cube_lab/08_solvability.html#lv3"
-   }
-  },
-  {
-   "@id": "lab:concept/cosets",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "부분군과 잉여류",
-     "@language": "ko"
-    },
-    {
-     "@value": "subgroups and cosets",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "부분군 H를 통째로 옮긴 무리 Hg들은 크기가 같고 서로 겹치지 않으며 G를 나누고, 그 개수는 |G| ÷ |H|이다(라그랑주 정리).",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_cube_lab/09_subgroups_cosets.html#lv1"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/two-step-search"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/two-step-search",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "잉여류로 나눈 두 단계 찾기",
-     "@language": "ko"
-    },
-    {
-     "@value": "two-phase search via cosets",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "상태를 먼저 부분군 H로 보내고(|G|/|H|개 잉여류 중) 그다음 H 안에서 완성하면, 한 번에 찾는 크기 |G|가 |G|/|H|와 |H| 두 크기로 나뉜다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_cube_lab/09_subgroups_cosets.html#lv2"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/kociemba-subgroup"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/kociemba-subgroup",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "큐브 부분군 H = ⟨U, D, R², L², F², B²⟩",
-     "@language": "ko"
-    },
-    {
-     "@value": "Kociemba subgroup H",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "U, D와 나머지 면의 180° 회전으로 만든 부분군. 꼭짓점·모서리 방향과 가운데 층 모서리를 보존하며 크기는 8!·8!·4!/2 = 19,508,428,800이다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_cube_lab/09_subgroups_cosets.html#lv3"
-   }
-  },
-  {
-   "@id": "lab:concept/thistlethwaite",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "티슬스웨이트 알고리즘",
-     "@language": "ko"
-    },
-    {
-     "@value": "Thistlethwaite's algorithm",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "부분군 사슬 ⟨L,R,F,B,U²,D²⟩ ⊃ ⟨L,R,F²,B²,U²,D²⟩ ⊃ ⟨L²,R²,F²,B²,U²,D²⟩ ⊃ {I}를 따라 단계별 최단 식을 이어 1981년 52수 보장을 얻은 알고리즘…",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_cube_lab/10_thistlethwaite_kociemba.html#lv1"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/kociemba-two-phase"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/kociemba-two-phase",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "코시엠바 2단계 알고리즘",
-     "@language": "ko"
-    },
-    {
-     "@value": "Kociemba's two-phase algorithm",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "부분군 H = ⟨U,D,R²,L²,F²,B²⟩로 들어가는 1단계(최대 12수)와 H 안에서 완성하는 2단계(최대 18수)를 붙이고, 합이 짧아지는 조합을 계속 찾아 대개 20~22수 해답을 빠르게…",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_cube_lab/10_thistlethwaite_kociemba.html#lv2"
-   }
-  },
-  {
-   "@id": "lab:concept/cayley-graph",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "케일리 그래프",
-     "@language": "ko"
-    },
-    {
-     "@value": "Cayley graph",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "군의 원소를 점으로, 생성 원소(한 수)에 의한 이동을 선으로 그린 그래프. 다 맞춘 상태로부터의 최단 거리가 최소 풀이 수다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_cube_lab/11_cayley_graph.html#lv1"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/graph-diameter"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/graph-diameter",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "그래프의 지름",
-     "@language": "ko"
-    },
-    {
-     "@value": "graph diameter",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "그래프에서 가장 먼 두 점 사이의 최단 거리. 큐브 케일리 그래프의 지름은 신의 수와 같다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_cube_lab/11_cayley_graph.html#lv2"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/cube-graph-growth"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/cube-graph-growth",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "큐브 그래프의 층 크기",
-     "@language": "ko"
-    },
-    {
-     "@value": "distance distribution growth",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "다 맞춘 상태로부터 거리 d인 큐브 상태 수는 1, 18, 243, 3,240, 43,239 …로 층마다 약 13배씩 지수적으로 늘며, 대칭 48로 계산을 줄일 수 있다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_cube_lab/11_cayley_graph.html#lv3"
-   }
-  },
-  {
-   "@id": "lab:concept/ida-star",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "IDA* 탐색",
-     "@language": "ko"
-    },
-    {
-     "@value": "Iterative Deepening A*",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "한도를 늘려 가며 깊이 우선으로 찾되, 쓴 수 g와 허용 가능한 하한 h의 합이 한도를 넘는 가지를 버려, 적은 메모리로 최단 해답을 찾는 탐색.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_cube_lab/12_ida_star_pdb.html#lv1"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/pattern-database"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/pattern-database",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "패턴 데이터베이스",
-     "@language": "ko"
-    },
-    {
-     "@value": "pattern database",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "일부 조각만 맞추는 작은 문제의 모든 배치에 대해 최소 수를 미리 계산한 표. 그 값은 전체 문제의 허용 가능한 하한이며, 여러 표의 최댓값을 IDA*의 h로 쓴다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_cube_lab/12_ida_star_pdb.html#lv2"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/korf-1997"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/korf-1997",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "코르프의 최적 해답 (1997)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Korf 1997 optimal solver",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "꼭짓점 8개 표와 모서리 6개짜리 두 표로 만든 하한을 쓴 IDA*로, 1997년 무작위 큐브 10개의 최단 해답(16~18수)을 처음 찾은 연구.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_cube_lab/12_ida_star_pdb.html#lv3"
-   }
-  },
-  {
-   "@id": "lab:concept/gods-number-bounds",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "신의 수의 위·아래 경계",
-     "@language": "ko"
-    },
-    {
-     "@value": "upper and lower bounds on God's number",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "신의 수(큐브 그래프의 지름)는 위 경계(충분한 수)와 아래 경계(필요한 수)로 좁혀졌다. 1981년 18~52에서 2010년 20~20으로 확정되었다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_cube_lab/13_gods_number.html#lv1"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/superflip"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/superflip",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "슈퍼플립",
-     "@language": "ko"
-    },
-    {
-     "@value": "superflip",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "모든 조각이 제자리이고 모서리 12개만 전부 뒤집힌 상태. 1995년 20수가 꼭 필요함이 증명되어 신의 수의 아래 경계를 20으로 올렸다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_cube_lab/13_gods_number.html#lv2"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/gods-number-2010"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/gods-number-2010",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "신의 수 20의 증명 (2010)",
-     "@language": "ko"
-    },
-    {
-     "@value": "proof that God's number is 20",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "코시엠바 부분군 H의 잉여류를 대칭으로 묶은 55,882,296개를 각각 통째로 확인해, 모든 큐브 상태가 20수(반 바퀴도 한 수) 이하로 풀림을 보인 2010년 계산 증명.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_cube_lab/13_gods_number.html#lv3"
-   }
-  },
-  {
-   "@id": "lab:concept/subgoal-search",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "부분 목표 탐색 (kSubS)",
-     "@language": "ko"
-    },
-    {
-     "@value": "k-subgoal search",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "신경망 생성기가 몇 수 앞의 중간 상태(부분 목표)를 제안하고 그 사이를 짧게 탐색해 이어 붙이는 방법. 제안이 닿을 수 없으면 실패하므로 검증이 필요하다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_cube_lab/14_modern_ai.html#lv1"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/mcts"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/mcts",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "몬테카를로 트리 탐색",
-     "@language": "ko"
-    },
-    {
-     "@value": "Monte Carlo tree search",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "각 가지에서 무작위로 끝까지 굴려 본 결과를 모아 유망한 가지에 탐색을 더 몰아주는 방법. 표본 수가 적으면 추정이 흔들린다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_cube_lab/14_modern_ai.html#lv2"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/learned-heuristic"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/learned-heuristic",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "학습한 거리 추정과 주장의 범위",
-     "@language": "ko"
-    },
-    {
-     "@value": "learned heuristics and claim scope",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "신경망이 남은 수를 추정해 탐색을 이끄는 방법(DeepCubeA)은 최단 보장이 없으며, 트랜스포머의 오토마타 지름길 연구는 큐브를 군론으로 푼 실험이 아니다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_cube_lab/14_modern_ai.html#lv3"
-   }
-  },
-  {
-   "@id": "lab:concept/three-strands",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "손 · 대수 · 기계의 연결",
-     "@language": "ko"
-    },
-    {
-     "@value": "hands, algebra and hardware",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "사람의 풀이법(외운 식), 군론(불변량·잉여류), 컴퓨터 탐색(하한·표)은 교환자, 움직임 제한, 기억-계산 거래로 서로 이어진다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_cube_lab/15_final_review.html#lv1"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/number-standards"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/number-standards",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "숫자와 기준 (HTM·QTM, 보장·보통·최악)",
-     "@language": "ko"
-    },
-    {
-     "@value": "metrics and bounds summary",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "신의 수는 반 바퀴도 한 수로 세면 20, 4분의 1 바퀴만 세면 26이며, 보장(52·45·30)·보통(31·20~22·18)·최악(20)을 구별해야 숫자를 바르게 비교할 수 있다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_cube_lab/15_final_review.html#lv2"
-   }
-  },
-  {
    "@id": "lab:concept/open-set-line",
    "@type": [
     "skos:Concept",
@@ -2607,6 +1580,1033 @@
    },
    "rdfs:isDefinedBy": {
     "@id": "https://adminmrobo.github.io/discrete_topology_lab/29_tda_python.html#lv2"
+   }
+  },
+  {
+   "@id": "lab:concept/cube-pieces",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "큐브의 조각 세 종류",
+     "@language": "ko"
+    },
+    {
+     "@value": "cubie types",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "3×3×3 큐브는 고정된 가운데 조각 6개, 모서리 조각 12개, 꼭짓점 조각 8개로 이루어진다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_cube_lab/01_cube_anatomy.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/cube-state-count"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/cube-state-count",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "큐브 상태 수",
+     "@language": "ko"
+    },
+    {
+     "@value": "number of cube states",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "돌려서 만들 수 있는 3×3×3 큐브의 상태 수는 8!·3⁷·12!·2¹¹/2 = 43,252,003,274,489,856,000이다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_cube_lab/01_cube_anatomy.html#lv2"
+   }
+  },
+  {
+   "@id": "lab:concept/move-notation",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "돌리기 기호와 되돌리기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Singmaster move notation and inverses",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "면 이름 한 글자(R, L, U, D, F, B)에 방향 표시(없음, ′, 2)를 붙여 18가지 동작을 적고, 식의 되돌리기는 순서를 거꾸로·방향을 반대로 한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_cube_lab/02_notation_lbl.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/layer-by-layer"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/layer-by-layer",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "층마다 쌓기 (LBL)",
+     "@language": "ko"
+    },
+    {
+     "@value": "layer-by-layer method",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "아래층부터 한 층씩 맞추며, 맞춘 층은 짧은 트리거 식으로 잠깐 들었다 되돌려 놓는 초보자 풀이법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_cube_lab/02_notation_lbl.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/move-order"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/move-order",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "식의 차수 (반복 횟수)",
+     "@language": "ko"
+    },
+    {
+     "@value": "order of a move sequence",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "같은 식을 처음 상태에서 반복할 때 처음 상태로 돌아오는 최소 횟수. R은 4, R U R′ U′는 6, R U는 105.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_cube_lab/02_notation_lbl.html#lv3"
+   }
+  },
+  {
+   "@id": "lab:concept/f2l",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "Cross와 F2L",
+     "@language": "ko"
+    },
+    {
+     "@value": "Cross and First Two Layers",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "아랫면 십자를 맞춘 뒤 꼭짓점-모서리 쌍 네 개를 한 번씩 넣어 아래 두 층을 완성하는 CFOP의 앞 두 단계. 쌍의 놓임새는 41가지.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_cube_lab/03_cfop.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/oll-pll"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/oll-pll",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "OLL과 PLL",
+     "@language": "ko"
+    },
+    {
+     "@value": "Orientation and Permutation of the Last Layer",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "마지막 층을 방향(OLL, 57가지)과 자리(PLL, 21가지) 두 단계로 나눠, 무늬를 알아보고 외운 식을 실행하는 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_cube_lab/03_cfop.html#lv2"
+   }
+  },
+  {
+   "@id": "lab:concept/roux",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "Roux 풀이법",
+     "@language": "ko"
+    },
+    {
+     "@value": "Roux method",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "양쪽 1×2×3 블록을 먼저 쌓고, 윗면 꼭짓점(CMLL)을 맞춘 뒤, 가운데 줄과 윗면만으로 마지막 모서리 6개를 정리하는 풀이법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_cube_lab/04_roux_zz.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/zz-eo"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/zz-eo",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "ZZ와 모서리 방향 보존",
+     "@language": "ko"
+    },
+    {
+     "@value": "ZZ method and edge orientation",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "처음에 모든 모서리 방향을 맞추고(EOLine) 이후 L·R·U·D만 쓰면 모서리 방향이 보존된다는 성질을 이용한 풀이법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_cube_lab/04_roux_zz.html#lv2"
+   }
+  },
+  {
+   "@id": "lab:concept/algorithm-sets",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "식 묶음의 크기",
+     "@language": "ko"
+    },
+    {
+     "@value": "algorithm set sizes",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "스피드큐빙의 식 묶음은 PLL 21, OLL 57, ZBLL 493, 1LLL 약 3,915처럼 단계를 합칠수록 커지며, 외울 양과 풀이 속도 사이의 거래를 만든다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_cube_lab/05_algorithm_ecosystem.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/alt-methods"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/alt-methods",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "목표별 풀이법",
+     "@language": "ko"
+    },
+    {
+     "@value": "alternative solving methods",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "Petrus·Heise·Waterman·기둥 먼저·Snyder 계열처럼, 외울 양 대신 최소 수·조각 순서·손동작 시간을 목표로 설계한 풀이법들.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_cube_lab/05_algorithm_ecosystem.html#lv2"
+   }
+  },
+  {
+   "@id": "lab:concept/group-axioms",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "군의 네 약속",
+     "@language": "ko"
+    },
+    {
+     "@value": "group axioms",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "닫혀 있음, 항등원, 역원, 결합법칙을 만족하는 원소들의 모음을 군이라 한다. 큐브 움직임의 모음 G₀ = ⟨L, R, F, B, U, D⟩는 군이다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_cube_lab/06_cube_group.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/non-commutative"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/non-commutative",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "비가환 (RU ≠ UR)",
+     "@language": "ko"
+    },
+    {
+     "@value": "non-commutativity of the cube group",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "두 움직임의 순서를 바꾸면 결과가 달라지는 경우가 있으면 비가환이다. R과 U는 비가환, R과 L은 가환이다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_cube_lab/06_cube_group.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/facelet-permutation"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/facelet-permutation",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "스티커 순열과 순환 표기",
+     "@language": "ko"
+    },
+    {
+     "@value": "facelet permutations and cycle notation",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "가운데를 뺀 스티커 48장에 번호를 붙이면 큐브의 움직임은 1~48의 순열이 되고, 순환 표기로 적을 수 있다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_cube_lab/06_cube_group.html#lv3"
+   }
+  },
+  {
+   "@id": "lab:concept/conjugate",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "켤레 A B A⁻¹",
+     "@language": "ko"
+    },
+    {
+     "@value": "conjugation",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "준비 A, 작업 B, 되돌리기 A⁻¹를 이은 식. B와 같은 모양의 일을 A만큼 옮겨진 자리에서 한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_cube_lab/07_conjugates_commutators.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/commutator"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/commutator",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "교환자와 3-순환",
+     "@language": "ko"
+    },
+    {
+     "@value": "commutator and 3-cycle",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "교환자 [A, B] = A B A⁻¹ B⁻¹는 A와 B가 함께 건드리는 곳만 바꾸며, [R U R′, D]처럼 조각 3개만 순환시키는 짧은 식을 만든다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_cube_lab/07_conjugates_commutators.html#lv2"
+   }
+  },
+  {
+   "@id": "lab:concept/orientation-invariants",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "방향 불변량 (비틀림·뒤집힘)",
+     "@language": "ko"
+    },
+    {
+     "@value": "orientation invariants",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "돌려서 만든 큐브에서 꼭짓점 비틀림의 합은 3의 배수이고, 뒤집힌 모서리의 수는 짝수다. 움직임은 이 두 값을 바꾸지 않는다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_cube_lab/08_solvability.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/permutation-parity"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/permutation-parity",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "자리 바꿈 홀짝 조건",
+     "@language": "ko"
+    },
+    {
+     "@value": "permutation parity condition",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "돌려서 만든 큐브에서 꼭짓점 순열과 모서리 순열의 홀짝은 같다. 면 하나의 회전은 둘을 동시에 홀순열만큼 바꾸기 때문이다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_cube_lab/08_solvability.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/cube-fundamental-theorem"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/cube-fundamental-theorem",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "큐브 기본정리 (풀 수 있는 세 조건)",
+     "@language": "ko"
+    },
+    {
+     "@value": "fundamental theorem of cubology",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "조각 배치가 돌려서 풀 수 있는 상태일 필요충분조건은 비틀림 합 ≡ 0 (mod 3), 뒤집힘 합 ≡ 0 (mod 2), 꼭짓점·모서리 순열의 홀짝 일치이며, 무작위 조립의 1/12이 이를 만족한…",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_cube_lab/08_solvability.html#lv3"
+   }
+  },
+  {
+   "@id": "lab:concept/cosets",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "부분군과 잉여류",
+     "@language": "ko"
+    },
+    {
+     "@value": "subgroups and cosets",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "부분군 H를 통째로 옮긴 무리 Hg들은 크기가 같고 서로 겹치지 않으며 G를 나누고, 그 개수는 |G| ÷ |H|이다(라그랑주 정리).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_cube_lab/09_subgroups_cosets.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/two-step-search"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/two-step-search",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "잉여류로 나눈 두 단계 찾기",
+     "@language": "ko"
+    },
+    {
+     "@value": "two-phase search via cosets",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "상태를 먼저 부분군 H로 보내고(|G|/|H|개 잉여류 중) 그다음 H 안에서 완성하면, 한 번에 찾는 크기 |G|가 |G|/|H|와 |H| 두 크기로 나뉜다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_cube_lab/09_subgroups_cosets.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/kociemba-subgroup"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/kociemba-subgroup",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "큐브 부분군 H = ⟨U, D, R², L², F², B²⟩",
+     "@language": "ko"
+    },
+    {
+     "@value": "Kociemba subgroup H",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "U, D와 나머지 면의 180° 회전으로 만든 부분군. 꼭짓점·모서리 방향과 가운데 층 모서리를 보존하며 크기는 8!·8!·4!/2 = 19,508,428,800이다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_cube_lab/09_subgroups_cosets.html#lv3"
+   }
+  },
+  {
+   "@id": "lab:concept/thistlethwaite",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "티슬스웨이트 알고리즘",
+     "@language": "ko"
+    },
+    {
+     "@value": "Thistlethwaite's algorithm",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "부분군 사슬 ⟨L,R,F,B,U²,D²⟩ ⊃ ⟨L,R,F²,B²,U²,D²⟩ ⊃ ⟨L²,R²,F²,B²,U²,D²⟩ ⊃ {I}를 따라 단계별 최단 식을 이어 1981년 52수 보장을 얻은 알고리즘…",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_cube_lab/10_thistlethwaite_kociemba.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/kociemba-two-phase"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/kociemba-two-phase",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "코시엠바 2단계 알고리즘",
+     "@language": "ko"
+    },
+    {
+     "@value": "Kociemba's two-phase algorithm",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "부분군 H = ⟨U,D,R²,L²,F²,B²⟩로 들어가는 1단계(최대 12수)와 H 안에서 완성하는 2단계(최대 18수)를 붙이고, 합이 짧아지는 조합을 계속 찾아 대개 20~22수 해답을 빠르게…",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_cube_lab/10_thistlethwaite_kociemba.html#lv2"
+   }
+  },
+  {
+   "@id": "lab:concept/cayley-graph",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "케일리 그래프",
+     "@language": "ko"
+    },
+    {
+     "@value": "Cayley graph",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "군의 원소를 점으로, 생성 원소(한 수)에 의한 이동을 선으로 그린 그래프. 다 맞춘 상태로부터의 최단 거리가 최소 풀이 수다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_cube_lab/11_cayley_graph.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/graph-diameter"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/graph-diameter",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "그래프의 지름",
+     "@language": "ko"
+    },
+    {
+     "@value": "graph diameter",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "그래프에서 가장 먼 두 점 사이의 최단 거리. 큐브 케일리 그래프의 지름은 신의 수와 같다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_cube_lab/11_cayley_graph.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/cube-graph-growth"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/cube-graph-growth",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "큐브 그래프의 층 크기",
+     "@language": "ko"
+    },
+    {
+     "@value": "distance distribution growth",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "다 맞춘 상태로부터 거리 d인 큐브 상태 수는 1, 18, 243, 3,240, 43,239 …로 층마다 약 13배씩 지수적으로 늘며, 대칭 48로 계산을 줄일 수 있다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_cube_lab/11_cayley_graph.html#lv3"
+   }
+  },
+  {
+   "@id": "lab:concept/ida-star",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "IDA* 탐색",
+     "@language": "ko"
+    },
+    {
+     "@value": "Iterative Deepening A*",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "한도를 늘려 가며 깊이 우선으로 찾되, 쓴 수 g와 허용 가능한 하한 h의 합이 한도를 넘는 가지를 버려, 적은 메모리로 최단 해답을 찾는 탐색.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_cube_lab/12_ida_star_pdb.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/pattern-database"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/pattern-database",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "패턴 데이터베이스",
+     "@language": "ko"
+    },
+    {
+     "@value": "pattern database",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "일부 조각만 맞추는 작은 문제의 모든 배치에 대해 최소 수를 미리 계산한 표. 그 값은 전체 문제의 허용 가능한 하한이며, 여러 표의 최댓값을 IDA*의 h로 쓴다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_cube_lab/12_ida_star_pdb.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/korf-1997"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/korf-1997",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "코르프의 최적 해답 (1997)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Korf 1997 optimal solver",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "꼭짓점 8개 표와 모서리 6개짜리 두 표로 만든 하한을 쓴 IDA*로, 1997년 무작위 큐브 10개의 최단 해답(16~18수)을 처음 찾은 연구.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_cube_lab/12_ida_star_pdb.html#lv3"
+   }
+  },
+  {
+   "@id": "lab:concept/gods-number-bounds",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "신의 수의 위·아래 경계",
+     "@language": "ko"
+    },
+    {
+     "@value": "upper and lower bounds on God's number",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "신의 수(큐브 그래프의 지름)는 위 경계(충분한 수)와 아래 경계(필요한 수)로 좁혀졌다. 1981년 18~52에서 2010년 20~20으로 확정되었다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_cube_lab/13_gods_number.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/superflip"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/superflip",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "슈퍼플립",
+     "@language": "ko"
+    },
+    {
+     "@value": "superflip",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "모든 조각이 제자리이고 모서리 12개만 전부 뒤집힌 상태. 1995년 20수가 꼭 필요함이 증명되어 신의 수의 아래 경계를 20으로 올렸다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_cube_lab/13_gods_number.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/gods-number-2010"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/gods-number-2010",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "신의 수 20의 증명 (2010)",
+     "@language": "ko"
+    },
+    {
+     "@value": "proof that God's number is 20",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "코시엠바 부분군 H의 잉여류를 대칭으로 묶은 55,882,296개를 각각 통째로 확인해, 모든 큐브 상태가 20수(반 바퀴도 한 수) 이하로 풀림을 보인 2010년 계산 증명.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_cube_lab/13_gods_number.html#lv3"
+   }
+  },
+  {
+   "@id": "lab:concept/subgoal-search",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "부분 목표 탐색 (kSubS)",
+     "@language": "ko"
+    },
+    {
+     "@value": "k-subgoal search",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "신경망 생성기가 몇 수 앞의 중간 상태(부분 목표)를 제안하고 그 사이를 짧게 탐색해 이어 붙이는 방법. 제안이 닿을 수 없으면 실패하므로 검증이 필요하다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_cube_lab/14_modern_ai.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/mcts"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/mcts",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "몬테카를로 트리 탐색",
+     "@language": "ko"
+    },
+    {
+     "@value": "Monte Carlo tree search",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "각 가지에서 무작위로 끝까지 굴려 본 결과를 모아 유망한 가지에 탐색을 더 몰아주는 방법. 표본 수가 적으면 추정이 흔들린다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_cube_lab/14_modern_ai.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/learned-heuristic"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/learned-heuristic",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "학습한 거리 추정과 주장의 범위",
+     "@language": "ko"
+    },
+    {
+     "@value": "learned heuristics and claim scope",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "신경망이 남은 수를 추정해 탐색을 이끄는 방법(DeepCubeA)은 최단 보장이 없으며, 트랜스포머의 오토마타 지름길 연구는 큐브를 군론으로 푼 실험이 아니다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_cube_lab/14_modern_ai.html#lv3"
+   }
+  },
+  {
+   "@id": "lab:concept/three-strands",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "손 · 대수 · 기계의 연결",
+     "@language": "ko"
+    },
+    {
+     "@value": "hands, algebra and hardware",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "사람의 풀이법(외운 식), 군론(불변량·잉여류), 컴퓨터 탐색(하한·표)은 교환자, 움직임 제한, 기억-계산 거래로 서로 이어진다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_cube_lab/15_final_review.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/number-standards"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/number-standards",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "숫자와 기준 (HTM·QTM, 보장·보통·최악)",
+     "@language": "ko"
+    },
+    {
+     "@value": "metrics and bounds summary",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "신의 수는 반 바퀴도 한 수로 세면 20, 4분의 1 바퀴만 세면 26이며, 보장(52·45·30)·보통(31·20~22·18)·최악(20)을 구별해야 숫자를 바르게 비교할 수 있다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_cube_lab/15_final_review.html#lv2"
    }
   },
   {
