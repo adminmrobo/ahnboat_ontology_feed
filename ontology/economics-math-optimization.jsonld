@@ -12,6 +12,364 @@
  "dct:creator": "안상선 (Ahn Sangsun)",
  "@graph": [
   {
+   "@id": "lab:concept/regular-polygon",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "정다각형",
+     "@language": "ko"
+    },
+    {
+     "@value": "Regular polygon",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "변의 길이와 각의 크기가 모두 같은 다각형.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/polygon_series_lab/index.html#c1"
+   }
+  },
+  {
+   "@id": "lab:concept/midpoint-polygon",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "중점 다각형",
+     "@language": "ko"
+    },
+    {
+     "@value": "Midpoint polygon",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "각 변의 중점을 이어 만든 안쪽 다각형. 정다각형이면 같은 모양이 된다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/polygon_series_lab/index.html#c1"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/regular-polygon"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/similarity-area-ratio",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "닮음의 넓이비",
+     "@language": "ko"
+    },
+    {
+     "@value": "Area ratio of similar figures",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "닮은 도형의 넓이비는 길이비의 제곱.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/polygon_series_lab/index.html#c1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/common-ratio"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/geometric-sequence",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "등비수열",
+     "@language": "ko"
+    },
+    {
+     "@value": "Geometric sequence",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "앞의 수에 늘 같은 공비를 곱해 만든 수의 줄.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/polygon_series_lab/index.html#c2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/sequences-limits"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/geometric-series"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/common-ratio",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "공비 r = cos²(π/n)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Common ratio",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "한 단계마다 넓이에 곱해지는 비율.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/polygon_series_lab/index.html#c2"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/geometric-sequence"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/log-scale",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "로그 눈금",
+     "@language": "ko"
+    },
+    {
+     "@value": "Logarithmic scale",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "10배마다 같은 간격인 축. 같은 비율의 변화가 직선으로 보인다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/polygon_series_lab/index.html#c2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/chart-selection"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/geometric-sequence"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/partial-sum",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "부분합",
+     "@language": "ko"
+    },
+    {
+     "@value": "Partial sum",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "처음부터 k번째까지 더한 값.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/polygon_series_lab/index.html#c3"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/geometric-series"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/geometric-series",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "등비급수",
+     "@language": "ko"
+    },
+    {
+     "@value": "Geometric series",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "등비수열을 끝없이 더한 것. |r| < 1이면 1/(1 − r)로 수렴한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/polygon_series_lab/index.html#c3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/series-convergence"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/convergence",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "수렴과 점근선",
+     "@language": "ko"
+    },
+    {
+     "@value": "Convergence and asymptote",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "부분합이 끝값에 한없이 다가가는 것. 차트에서는 끝값 점선.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/polygon_series_lab/index.html#c3"
+   },
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/geometric-series"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/unit-of-measure",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "단위 (무엇을 1로 두었나)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Unit of measure",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "같은 양도 기준을 무엇으로 두느냐에 따라 숫자가 달라진다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/polygon_series_lab/index.html#c4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:area/data-visualization"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/dual-axis"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/dual-axis",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "이중 축",
+     "@language": "ko"
+    },
+    {
+     "@value": "Dual axis chart",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "한 차트에 서로 다른 단위의 축 두 개를 두는 방식. 오해를 부르기 쉽다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/polygon_series_lab/index.html#c4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/chart-selection"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/ai-output-check",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "AI 결과 확인 질문 (단위·가정·상식)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Checking AI output",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "AI가 낸 결과를 받으면 단위, 가정, 상식에 맞는지를 묻는다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/polygon_series_lab/index.html#aic"
+   },
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/unit-of-measure"
+    }
+   ]
+  },
+  {
    "@id": "lab:concept/learning-rate",
    "@type": [
     "skos:Concept",

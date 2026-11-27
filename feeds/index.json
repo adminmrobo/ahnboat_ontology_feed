@@ -3,7 +3,7 @@
  "base": "https://adminmrobo.github.io/ahnboat_ontology_feed/",
  "all": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/all.xml",
  "site": {
-  "total": 191,
+  "total": 192,
   "other_racks": [
    {
     "name": "연구실 운영",
@@ -17,15 +17,15 @@
  },
  "summary": {
   "fields": 8,
-  "contents": 138,
-  "pages": 939,
-  "listed_indexed": 168,
-  "listed": 180,
-  "concepts": 6112,
-  "relations": 7391,
+  "contents": 139,
+  "pages": 940,
+  "listed_indexed": 169,
+  "listed": 181,
+  "concepts": 6125,
+  "relations": 7402,
   "shared": 591,
   "domains": 18,
-  "topic_linked": 1809
+  "topic_linked": 1814
  },
  "fields": [
   {
@@ -37,8 +37,8 @@
    "desc": "데이터에서 규칙을 배우는 머신러닝을 물고기 시장 데이터, 알고리즘 가계도, 모델 채용 위원회로 처음부터 익힙니다.",
    "contents": 17,
    "listed": 17,
-   "concepts": 717,
-   "relations": 980,
+   "concepts": 718,
+   "relations": 982,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/machine-learning.xml",
    "parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/machine-learning-p1.xml",
@@ -123,10 +123,10 @@
    "rack": 5,
    "color": "#8b5a2b",
    "desc": "경제학 이론과 경제 연구, 그리고 그 밑바탕인 최적화 모델·좌표 공간·선형대수를 함께 읽습니다. MR = MC에서 라그랑지안·해밀토니안, 벡터와 ∇까지 이어집니다.",
-   "contents": 28,
-   "listed": 30,
-   "concepts": 1362,
-   "relations": 1386,
+   "contents": 29,
+   "listed": 31,
+   "concepts": 1374,
+   "relations": 1395,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/economics-math-optimization.xml",
    "parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/economics-math-optimization-p1.xml",

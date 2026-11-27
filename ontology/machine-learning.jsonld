@@ -1862,6 +1862,9 @@
    "lab:partOf": [
     {
      "@id": "lab:concept/knn-svm-practice"
+    },
+    {
+     "@id": "lab:concept/gradient-descent"
     }
    ]
   },
@@ -4582,6 +4585,35 @@
    ],
    "skos:definition": {
     "@value": "한 걸음마다 보는 데이터 일부. 배치 32 = 한 번에 32개를 보고 한 걸음.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w11_fish_trees_forest_gradient.html#lv5"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/batch-epoch"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/neural-network",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "신경망",
+     "@language": "ko"
+    },
+    {
+     "@value": "neural network",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "숫자(가중치) 수만 개를 경사하강법으로 한꺼번에 고치며 배우는 모델. 딥러닝의 기본 구조.",
     "@language": "ko"
    },
    "rdfs:isDefinedBy": {
