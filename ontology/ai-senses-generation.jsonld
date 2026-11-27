@@ -9274,9 +9274,6 @@
    "lab:partOf": [
     {
      "@id": "lab:method/cnn"
-    },
-    {
-     "@id": "lab:concept/cnn-vision-pipeline"
     }
    ]
   },
@@ -9314,17 +9311,11 @@
     },
     {
      "@id": "lab:concept/invariance"
-    },
-    {
-     "@id": "lab:concept/receptive-field"
     }
    ],
    "lab:partOf": [
     {
      "@id": "lab:method/cnn"
-    },
-    {
-     "@id": "lab:concept/cnn-vision-pipeline"
     }
    ]
   },
@@ -9582,318 +9573,6 @@
     },
     {
      "@id": "lab:method/gradient-descent"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/receptive-field",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "수용 영역",
-     "@language": "ko"
-    },
-    {
-     "@value": "Receptive field",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "한 뉴런이 보는 입력 범위. 층이 올라갈수록 넓어진다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/neural_see_lab/index.html#s4"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/receptive-field"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/cnn"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/feature-hierarchy"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/pixel-grid",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "숫자판(픽셀 격자)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Pixel grid",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "사진을 칸으로 나누고 칸마다 밝기를 숫자로 적은 판. (H, W, C)로 크기를 적는다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/neural_see_lab/index.html#s1"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/linear-algebra"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/template-matching"
-    },
-    {
-     "@id": "lab:method/cross-correlation"
-    },
-    {
-     "@id": "lab:method/convolution-filter"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/cnn-vision-pipeline",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "신경망이 그림을 보는 네 단계",
-     "@language": "ko"
-    },
-    {
-     "@value": "How a CNN sees: four steps",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "숫자 격자 → 필터 → ReLU·풀링 → 깊은 층의 부품·전체",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/neural_see_lab/index.html#map"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/convolution"
-    }
-   ]
-  },
-  {
-   "@id": "lab:bio/photoreceptor-ommatidium",
-   "@type": [
-    "skos:Concept",
-    "lab:BioAnalogue"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "시각 세포·초파리 낱눈",
-     "@language": "ko"
-    },
-    {
-     "@value": "Photoreceptors and ommatidia",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "한 점의 밝기를 맡는 생물의 감각 단위",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/neural_see_lab/index.html#s1"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/sensory-processing"
-    }
-   ],
-   "lab:bioAnalogueOf": [
-    {
-     "@id": "lab:concept/pixel-grid"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/convolution-filter",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "3×3 필터 합성곱 (소벨 경계 필터)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Convolution with 3×3 edge filters",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "필터 숫자 × 진하기를 아홉 번 더해 점수, 196곳",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/neural_see_lab/index.html#s2"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/convolution"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/max-pooling"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/cnn-vision-pipeline"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/edge-map",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "경계 지도 (특징 지도)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Edge map (feature map)",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "필터 점수를 자리마다 적은 14×14 표",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/neural_see_lab/index.html#s2"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/convolution"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/convolution-filter"
-    }
-   ]
-  },
-  {
-   "@id": "lab:bio/orientation-cell",
-   "@type": [
-    "skos:Concept",
-    "lab:BioAnalogue"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "방향 선택 세포 (고양이 시각 피질), T4·T5 (초파리)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Orientation-selective cells; Drosophila T4/T5",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "특정 방향의 경계에 크게 반응",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/neural_see_lab/index.html#s2"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/sensory-processing"
-    }
-   ],
-   "lab:bioAnalogueOf": [
-    {
-     "@id": "lab:method/convolution-filter"
-    }
-   ]
-  },
-  {
-   "@id": "lab:bio/complex-cell",
-   "@type": [
-    "skos:Concept",
-    "lab:BioAnalogue"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "복합 세포",
-     "@language": "ko"
-    },
-    {
-     "@value": "Complex cells",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "조금 넓은 범위 어디든 선이 있으면 반응",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/neural_see_lab/index.html#s3"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/sensory-processing"
-    }
-   ],
-   "lab:bioAnalogueOf": [
-    {
-     "@id": "lab:method/max-pooling"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/feature-hierarchy",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "선 → 부품 → 전체 (특징의 위계)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Feature hierarchy",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "깊은 층일수록 큰 모양에 반응",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/neural_see_lab/index.html#s4"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/convolution"
     }
    ]
   },
@@ -10332,6 +10011,43 @@
    "lab:partOf": [
     {
      "@id": "lab:method/cnn"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/pixel-grid",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "숫자판(픽셀 격자)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Pixel grid",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "사진을 칸으로 나누고 칸마다 밝기를 숫자로 적은 판. (H, W, C)로 크기를 적는다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/linear-algebra"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/template-matching"
+    },
+    {
+     "@id": "lab:method/cross-correlation"
     }
    ]
   },

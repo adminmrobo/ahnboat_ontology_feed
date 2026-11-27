@@ -58,10 +58,10 @@
    "rack": 2,
    "color": "#6a4fb3",
    "desc": "신경망이 어떻게 배우는지, 그리고 초파리 뇌 연구가 딥러닝에 주는 힌트를 함께 따라갑니다.",
-   "contents": 11,
-   "listed": 14,
-   "concepts": 478,
-   "relations": 704,
+   "contents": 12,
+   "listed": 15,
+   "concepts": 486,
+   "relations": 714,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/deep-learning-neuroscience.xml",
    "parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/deep-learning-neuroscience.xml"
@@ -79,10 +79,10 @@
    "rack": 3,
    "color": "#c0613a",
    "desc": "AI가 이미지를 구분하고, 동작을 알아보고, 장면을 그려 내고, 글을 읽는 방식을 긴급 미션으로 풀어 봅니다.",
-   "contents": 17,
-   "listed": 17,
-   "concepts": 600,
-   "relations": 751,
+   "contents": 16,
+   "listed": 16,
+   "concepts": 592,
+   "relations": 739,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/ai-senses-generation.xml",
    "parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/ai-senses-generation.xml"

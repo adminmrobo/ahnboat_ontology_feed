@@ -1000,12 +1000,12 @@
 개념: 감성 사전 기반 감성 분석, 텍스트 검증과 전처리, 토큰화, 어간 추출, 표제어 추출, TF-IDF, 토픽 모델링, RNN, 트랜스포머와 셀프 어텐션, 셀프 어텐션, GPT, BERT, 파인튜닝, LLM과 RAG, LLM, 재현율, 정밀도, 로지스틱 회귀 (다항), F1 점수, 경보 k건 중 진짜 이상 수, 코사인 유사도, 자연어 처리, 자연어 처리 파이프라인, 불용어, 서브워드 토큰화 (BPE·WordPiece), 단어 주머니, n-그램, 단어 임베딩, 문맥형 임베딩, Seq2Seq + 어텐션, 프롬프트·퓨샷, 의미 검색, BM25 키워드 검색, BLEU·ROUGE, 기준 모델, 저녁반 예시 글 묶음]]></description>
     </item>
     <item>
-      <title>신경망은 고양이를 어떻게 &quot;볼까&quot; — 쪽지시험 대비반 | 신경망이 보는 법 연구실</title>
+      <title>신경망은 고양이를 어떻게  볼까? — 쪽지시험 대비반 | 신경망이 보는 법</title>
       <link>https://adminmrobo.github.io/neural_see_lab/</link>
-      <guid isPermaLink="false">ahnboat:neural_see_lab:da4dfcc86d</guid>
+      <guid isPermaLink="false">ahnboat:neural_see_lab:918565b011</guid>
       <pubDate>Mon, 23 Nov 2026 08:35:10 +0000</pubDate>
-      <category>AI 감각·생성</category>
-      <description><![CDATA[AI 감각·생성 · 개념 11개
+      <category>딥러닝·뇌과학</category>
+      <description><![CDATA[딥러닝·뇌과학 · 개념 11개
 개념: ReLU, 최대 풀링, 수용 영역, 숫자판(픽셀 격자), 신경망이 그림을 보는 네 단계, 시각 세포·초파리 낱눈, 3×3 필터 합성곱 (소벨 경계 필터), 경계 지도 (특징 지도), 방향 선택 세포 (고양이 시각 피질), T4·T5 (초파리), 복합 세포, 선 → 부품 → 전체 (특징의 위계)]]></description>
     </item>
     <item>
