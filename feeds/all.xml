@@ -10,6 +10,24 @@
     <copyright>CC BY-NC 4.0 · 안상선 ((주)M-Robo)</copyright>
     <atom:link href="https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/all.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>말을 숫자로 바꾸는 20가지 방법 — NLP 치트시트를 5층 지도로 다시 읽기</title>
+      <link>https://adminmrobo.github.io/nlp20_five_floor_map/</link>
+      <guid isPermaLink="false">ahnboat:nlp20_five_floor_map:672122e8f2</guid>
+      <pubDate>Fri, 27 Nov 2026 04:24:05 +0000</pubDate>
+      <category>LLM·추론 엔지니어링</category>
+      <description><![CDATA[LLM·추론 엔지니어링 · 개념 30개
+개념: 조건부확률, TF-IDF, LDA 토픽 모델, GPT, BERT, 부스팅, 소프트맥스, 시험 정확도, 시그모이드, 번짐 폭 τ, 층별 사전학습, 유클리드 거리, 읽는 탑·쓰는 탑, 검색 증강 생성 (RAG), 임베딩, 환각, 나이브 베이즈, 로지스틱 회귀, 결정 트리, 랜덤 포레스트, 서포트 벡터 머신, k-최근접 이웃, LSTM·GRU, 어텐션 메커니즘, 트랜스포머, 두 낱말 묶음 특징, 낱말 주머니, 라벨, NLP 5층 지도, 장난감 리뷰 20개]]></description>
+    </item>
+    <item>
+      <title>신경망은 고양이를 어떻게  볼까? — 쪽지시험 대비반 | 신경망이 보는 법</title>
+      <link>https://adminmrobo.github.io/neural_see_lab/</link>
+      <guid isPermaLink="false">ahnboat:neural_see_lab:918565b011</guid>
+      <pubDate>Fri, 27 Nov 2026 04:17:08 +0000</pubDate>
+      <category>딥러닝·뇌과학</category>
+      <description><![CDATA[딥러닝·뇌과학 · 개념 11개
+개념: ReLU, 최대 풀링, 수용 영역, 숫자판(픽셀 격자), 신경망이 그림을 보는 네 단계, 시각 세포·초파리 낱눈, 3×3 필터 합성곱 (소벨 경계 필터), 경계 지도 (특징 지도), 방향 선택 세포 (고양이 시각 피질), T4·T5 (초파리), 복합 세포, 선 → 부품 → 전체 (특징의 위계)]]></description>
+    </item>
+    <item>
       <title>구조 먼저 그리기 연구실 02 · 실천편 — 주름과 그림자를 직접 넣어 보기</title>
       <link>https://adminmrobo.github.io/structure_first_drawing_lab_02/</link>
       <guid isPermaLink="false">ahnboat:structure_first_drawing_lab_02:361628170b</guid>
@@ -197,15 +215,6 @@
       <category>LLM·추론 엔지니어링</category>
       <description><![CDATA[LLM·추론 엔지니어링 · 개념 32개
 개념: 몫공간, 추론, 인스턴스 (여섯 구성 요소), 지식 그래프, 정의역과 치역, 온톨로지, 클래스, 하위 클래스, 술어, 트리플, 데이터 통합, LOD, 그래프 시각화, 헤어볼, VFX 3D 그래프, 원근 투영, 부분 그래프, 에이전트, RAG, 양의 준정부호 행렬, 기하학적 온톨로지, RDF, RDFS, OWL, SPARQL, SHACL, 힘 배치(Fruchterman–Reingold), 3D 층 배치, 규칙 추론, 크기 읽기 오차, 층 섞임, 읽히는 이름표]]></description>
-    </item>
-    <item>
-      <title>말을 숫자로 바꾸는 20가지 방법 — NLP 치트시트를 5층 지도로 다시 읽기</title>
-      <link>https://adminmrobo.github.io/nlp20_five_floor_map/</link>
-      <guid isPermaLink="false">ahnboat:nlp20_five_floor_map:672122e8f2</guid>
-      <pubDate>Thu, 26 Nov 2026 15:09:52 +0000</pubDate>
-      <category>LLM·추론 엔지니어링</category>
-      <description><![CDATA[LLM·추론 엔지니어링 · 개념 30개
-개념: 조건부확률, TF-IDF, LDA 토픽 모델, GPT, BERT, 부스팅, 소프트맥스, 시험 정확도, 시그모이드, 번짐 폭 τ, 층별 사전학습, 유클리드 거리, 읽는 탑·쓰는 탑, 검색 증강 생성 (RAG), 임베딩, 환각, 나이브 베이즈, 로지스틱 회귀, 결정 트리, 랜덤 포레스트, 서포트 벡터 머신, k-최근접 이웃, LSTM·GRU, 어텐션 메커니즘, 트랜스포머, 두 낱말 묶음 특징, 낱말 주머니, 라벨, NLP 5층 지도, 장난감 리뷰 20개]]></description>
     </item>
     <item>
       <title>뉴런 반응 연구실 · 신경망 칸은 어떻게 반응하고 배울까</title>
@@ -998,15 +1007,6 @@
       <category>LLM·추론 엔지니어링</category>
       <description><![CDATA[LLM·추론 엔지니어링 · 개념 36개
 개념: 감성 사전 기반 감성 분석, 텍스트 검증과 전처리, 토큰화, 어간 추출, 표제어 추출, TF-IDF, 토픽 모델링, RNN, 트랜스포머와 셀프 어텐션, 셀프 어텐션, GPT, BERT, 파인튜닝, LLM과 RAG, LLM, 재현율, 정밀도, 로지스틱 회귀 (다항), F1 점수, 경보 k건 중 진짜 이상 수, 코사인 유사도, 자연어 처리, 자연어 처리 파이프라인, 불용어, 서브워드 토큰화 (BPE·WordPiece), 단어 주머니, n-그램, 단어 임베딩, 문맥형 임베딩, Seq2Seq + 어텐션, 프롬프트·퓨샷, 의미 검색, BM25 키워드 검색, BLEU·ROUGE, 기준 모델, 저녁반 예시 글 묶음]]></description>
-    </item>
-    <item>
-      <title>신경망은 고양이를 어떻게  볼까? — 쪽지시험 대비반 | 신경망이 보는 법</title>
-      <link>https://adminmrobo.github.io/neural_see_lab/</link>
-      <guid isPermaLink="false">ahnboat:neural_see_lab:918565b011</guid>
-      <pubDate>Mon, 23 Nov 2026 08:35:10 +0000</pubDate>
-      <category>딥러닝·뇌과학</category>
-      <description><![CDATA[딥러닝·뇌과학 · 개념 11개
-개념: ReLU, 최대 풀링, 수용 영역, 숫자판(픽셀 격자), 신경망이 그림을 보는 네 단계, 시각 세포·초파리 낱눈, 3×3 필터 합성곱 (소벨 경계 필터), 경계 지도 (특징 지도), 방향 선택 세포 (고양이 시각 피질), T4·T5 (초파리), 복합 세포, 선 → 부품 → 전체 (특징의 위계)]]></description>
     </item>
     <item>
       <title>확률로 읽는 보안 사건 · 승인 기록 유출</title>
