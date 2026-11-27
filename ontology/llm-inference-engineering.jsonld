@@ -48,6 +48,11 @@
     {
      "@id": "lab:method/graphrag"
     }
+   ],
+   "lab:derivedFrom": [
+    {
+     "@id": "lab:concept/vector-database"
+    }
    ]
   },
   {
@@ -99,6 +104,46 @@
    ]
   },
   {
+   "@id": "lab:concept/hallucination",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "환각",
+     "@language": "ko"
+    },
+    {
+     "@value": "Hallucination",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "근거 없이 그럴듯한 내용을 지어내는 일.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_trend_report/index.html#sec-4-3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/ai-safety"
+    },
+    {
+     "@id": "lab:topic/hallucination"
+    }
+   ],
+   "lab:addressedBy": [
+    {
+     "@id": "lab:topic/rag"
+    },
+    {
+     "@id": "lab:concept/context-layer"
+    }
+   ]
+  },
+  {
    "@id": "lab:concept/knowledge-graph",
    "@type": [
     "skos:Concept",
@@ -133,7 +178,15 @@
    ],
    "lab:prerequisiteOf": [
     {
+     "@id": "lab:concept/graph-visualization"
+    },
+    {
      "@id": "lab:method/graphrag"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/rag"
     }
    ],
    "lab:governedBy": [
@@ -159,12 +212,12 @@
      "@language": "ko"
     },
     {
-     "@value": "ontology",
+     "@value": "Ontology",
      "@language": "en"
     }
    ],
    "skos:definition": {
-    "@value": "한 분야에 무엇이 있고 서로 어떤 관계인지를 사람과 기계가 같은 뜻으로 읽도록 적어 둔 명세.",
+    "@value": "개념·관계·속성·규칙을 명시적으로 정한 공유 가능한 지식 모델.",
     "@language": "ko"
    },
    "rdfs:isDefinedBy": {
@@ -179,6 +232,9 @@
     }
    ],
    "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/triple"
+    },
     {
      "@id": "lab:concept/knowledge-graph"
     },
@@ -310,39 +366,6 @@
    "lab:prerequisiteOf": [
     {
      "@id": "lab:method/llm-ontology-drafting"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/hallucination",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "환각",
-     "@language": "ko"
-    },
-    {
-     "@value": "hallucination",
-     "@language": "en"
-    }
-   ],
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ontology_trend_report/index.html#sec-4-3"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/ai-safety"
-    },
-    {
-     "@id": "lab:topic/hallucination"
-    }
-   ],
-   "lab:addressedBy": [
-    {
-     "@id": "lab:concept/context-layer"
     }
    ]
   },
@@ -704,6 +727,2052 @@
      "@id": "lab:topic/knowledge-graph"
     }
    ]
+  },
+  {
+   "@id": "lab:concept/quotient-space",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "몫공간",
+     "@language": "ko"
+    },
+    {
+     "@value": "quotient space X/G",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "군 작용의 궤도마다 한 점으로 접고 몫위상을 준 공간. ℝ/ℤ는 원이다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_kg_vfx/index.html#sum"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/embedding-space"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/geometric-ontology"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/inference",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "추론",
+     "@language": "ko"
+    },
+    {
+     "@value": "inference",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "생성 AI 모델을 서비스에서 돌리는 과정.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_kg_vfx/index.html#lv3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/knowledge-graph"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/inference-engineering"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/instance",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "인스턴스 (여섯 구성 요소)",
+     "@language": "ko"
+    },
+    {
+     "@value": "instance",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "클라우드 GPU 할당의 최소 단위. GPU · CPU · 호스트 메모리 · 저장소 · 네트워크 · 인터커넥트.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_kg_vfx/index.html#lv1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/knowledge-graph"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/ontology"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/domain-range",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "정의역과 치역",
+     "@language": "ko"
+    },
+    {
+     "@value": "Domain and range",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "넣을 수 있는 입력과 나올 수 있는 출력의 범위",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_kg_vfx/index.html#lv2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/functions-maps"
+    },
+    {
+     "@id": "lab:topic/knowledge-graph"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/predicate"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/class",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "클래스",
+     "@language": "ko"
+    },
+    {
+     "@value": "Class",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "사물이나 개념의 종류.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_kg_vfx/index.html#lv1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/knowledge-graph"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/ontology"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/subclass"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/subclass",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "하위 클래스",
+     "@language": "ko"
+    },
+    {
+     "@value": "Subclass",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "더 구체적인 하위 종류. is-a 관계가 자연스러워야 한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_kg_vfx/index.html#lv1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/knowledge-graph"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/ontology"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/instance"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/predicate",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "술어",
+     "@language": "ko"
+    },
+    {
+     "@value": "Predicate",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "주어에 대해 성질이나 관계를 서술하는, 뜻이 정해진 속성.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_kg_vfx/index.html#lv2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/knowledge-graph"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/ontology"
+    },
+    {
+     "@id": "lab:concept/triple"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/triple",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "트리플",
+     "@language": "ko"
+    },
+    {
+     "@value": "Triple",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "주어–술어–목적어 세 칸으로 적은 사실 한 줄.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_kg_vfx/index.html#lv2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/knowledge-graph"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/knowledge-graph"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/data-integration",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "데이터 통합",
+     "@language": "ko"
+    },
+    {
+     "@value": "Data integration",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "다른 시스템의 항목명을 같은 개념에 맞춰 함께 쓰게 하는 일.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_kg_vfx/index.html#lv3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/knowledge-graph"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/knowledge-graph"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/linked-open-data",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "LOD",
+     "@language": "ko"
+    },
+    {
+     "@value": "Linked Open Data",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "URI로 이름 붙이고 RDF로 적어 다른 데이터와 이어 공개한 데이터.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_kg_vfx/index.html#lv3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/knowledge-graph"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/knowledge-graph"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/graph-visualization",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "그래프 시각화",
+     "@language": "ko"
+    },
+    {
+     "@value": "Graph visualization",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "점과 선으로 관계를 그려 보는 일.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_kg_vfx/index.html#lv4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:area/graph"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/vfx-3d-graph"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/layer-mixing"
+    },
+    {
+     "@id": "lab:metric/readable-labels"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/hairball",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "헤어볼",
+     "@language": "ko"
+    },
+    {
+     "@value": "Hairball",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "점이 많아 평면 그래프가 실타래처럼 엉킨 상태.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_kg_vfx/index.html#lv4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:area/graph"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/vfx-3d-graph",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "VFX 3D 그래프",
+     "@language": "ko"
+    },
+    {
+     "@value": "VFX-style 3D graph",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "깊이·시간·빛을 더해 층과 경로를 보여 주는 3D 지식 그래프 그림.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_kg_vfx/index.html#lv5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:area/graph"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:concept/graph-visualization"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/size-reading-error"
+    },
+    {
+     "@id": "lab:metric/layer-mixing"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/perspective-projection",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "원근 투영",
+     "@language": "ko"
+    },
+    {
+     "@value": "Perspective projection",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "3D 점을 닮음비로 화면에 옮기는 방법. x′ = x·f/(f+z).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_kg_vfx/index.html#lv5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:area/graph"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/vfx-3d-graph"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/subgraph",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "부분 그래프",
+     "@language": "ko"
+    },
+    {
+     "@value": "Subgraph",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "질문에 답하는 데 필요한 점과 선만 떼어 낸 그래프.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_kg_vfx/index.html#lv5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/knowledge-graph"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/vfx-3d-graph"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/ai-agent",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "에이전트",
+     "@language": "ko"
+    },
+    {
+     "@value": "AI agent",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "목표를 받아 여러 도구를 차례로 부르며 일을 이어 가는 AI 사용 방식.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_kg_vfx/index.html#lv3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:area/systems"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/knowledge-graph"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/rag",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "RAG",
+     "@language": "ko"
+    },
+    {
+     "@value": "Retrieval-augmented generation",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "찾아온 자료를 붙여 LLM이 답하게 하는 방식.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_kg_vfx/index.html#lv3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/rag"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/positive-semidefinite",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "양의 준정부호 행렬",
+     "@language": "ko"
+    },
+    {
+     "@value": "Positive semidefinite matrix",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "모든 벡터 v에 대해 v*Av ≥ 0인 행렬.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_kg_vfx/index.html#sum"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/embedding-space"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/quotient-space"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/geometric-ontology",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "기하학적 온톨로지",
+     "@language": "ko"
+    },
+    {
+     "@value": "Geometric ontology",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "유사도의 기하로 같은 뜻을 묶는 규칙을 적는다는 저자 메모의 아이디어.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_kg_vfx/index.html#sum"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/embedding-space"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/ontology"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/rdf",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "RDF",
+     "@language": "ko"
+    },
+    {
+     "@value": "RDF",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_kg_vfx/index.html#lv2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/knowledge-graph"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/triple"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/rdfs",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "RDFS",
+     "@language": "ko"
+    },
+    {
+     "@value": "RDF Schema",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_kg_vfx/index.html#lv3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/knowledge-graph"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/owl"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/inference"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/owl",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "OWL",
+     "@language": "ko"
+    },
+    {
+     "@value": "OWL 2",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_kg_vfx/index.html#lv3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/knowledge-graph"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/sparql",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "SPARQL",
+     "@language": "ko"
+    },
+    {
+     "@value": "SPARQL",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_kg_vfx/index.html#lv3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/knowledge-graph"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/knowledge-graph"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/shacl",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "SHACL",
+     "@language": "ko"
+    },
+    {
+     "@value": "SHACL",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_kg_vfx/index.html#start"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/knowledge-graph"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/knowledge-graph"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/force-directed-layout",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "힘 배치(Fruchterman–Reingold)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Force-directed layout",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_kg_vfx/index.html#lv4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:area/graph"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/graph-visualization"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/layered-3d-layout",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "3D 층 배치",
+     "@language": "ko"
+    },
+    {
+     "@value": "Layered 3D layout",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_kg_vfx/index.html#lv5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:area/graph"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/vfx-3d-graph"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/rule-inference",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "규칙 추론",
+     "@language": "ko"
+    },
+    {
+     "@value": "Rule-based inference",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_kg_vfx/index.html#lv3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/knowledge-graph"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/inference"
+    }
+   ]
+  },
+  {
+   "@id": "lab:metric/size-reading-error",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "크기 읽기 오차",
+     "@language": "ko"
+    },
+    {
+     "@value": "Size reading error",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_kg_vfx/index.html#duel"
+   }
+  },
+  {
+   "@id": "lab:metric/layer-mixing",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "층 섞임",
+     "@language": "ko"
+    },
+    {
+     "@value": "Layer mixing",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_kg_vfx/index.html#p4"
+   }
+  },
+  {
+   "@id": "lab:metric/readable-labels",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "읽히는 이름표",
+     "@language": "ko"
+    },
+    {
+     "@value": "Readable labels",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ontology_kg_vfx/index.html#p4"
+   }
+  },
+  {
+   "@id": "lab:concept/conditional-probability",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "조건부확률",
+     "@language": "ko"
+    },
+    {
+     "@value": "conditional probability",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "B가 일어났다는 조건 아래에서 A가 일어날 확률. P(A|B) = P(A∩B)/P(B).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/nlp20_five_floor_map/index.html#lv2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/conditional-probability"
+    },
+    {
+     "@id": "lab:topic/probability-statistics"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/bayes-theorem"
+    },
+    {
+     "@id": "lab:concept/fact-vs-value"
+    }
+   ],
+   "lab:broader": [
+    {
+     "@id": "lab:topic/probability-statistics"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:topic/naive-bayes"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/tf-idf",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "TF-IDF",
+     "@language": "ko"
+    },
+    {
+     "@value": "term frequency-inverse document frequency",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "문서 안 단어 빈도(TF)에 전체 문서에서의 희귀도(IDF = log(N ÷ df))를 곱해 문서별 단어 중요도를 매기는 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/nlp20_five_floor_map/index.html#lv1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/feature-engineering"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/tfidf-weighting-variants"
+    },
+    {
+     "@id": "lab:method/word-embedding"
+    },
+    {
+     "@id": "lab:topic/naive-bayes"
+    },
+    {
+     "@id": "lab:topic/rag"
+    }
+   ],
+   "lab:evaluatedOn": [
+    {
+     "@id": "lab:dataset/nlp-pm-examples"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/lda",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "LDA 토픽 모델",
+     "@language": "ko"
+    },
+    {
+     "@value": "latent Dirichlet allocation",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "문서를 토픽의 혼합, 토픽을 단어 분포로 보고, 관찰한 단어로부터 문서-주제 분포 θ와 주제-단어 분포 φ를 추정하는 확률적 토픽 모델.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/nlp20_five_floor_map/index.html#lv3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/unsupervised-learning"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/lda-interpretation"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/gpt",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "GPT",
+     "@language": "ko"
+    },
+    {
+     "@value": "generative pre-trained transformer",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "생성형 사전훈련 트랜스포머. 디코더로 다음 단어를 차례로 예측.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/nlp20_five_floor_map/index.html#lv5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/autoregressive-generation"
+    },
+    {
+     "@id": "lab:topic/pretrained-lm"
+    },
+    {
+     "@id": "lab:topic/transformer"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/gpt-bert"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/bert"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/rebuild-from-scratch"
+    },
+    {
+     "@id": "lab:method/semantic-search"
+    }
+   ],
+   "lab:evaluatedOn": [
+    {
+     "@id": "lab:dataset/tiny-shakespeare"
+    },
+    {
+     "@id": "lab:dataset/nsmc"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/validation-loss"
+    }
+   ],
+   "lab:broader": [
+    {
+     "@id": "lab:concept/llm"
+    },
+    {
+     "@id": "lab:topic/transformer"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/bert",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "BERT",
+     "@language": "ko"
+    },
+    {
+     "@value": "BERT",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "양방향 인코더 모델. 가린 단어를 앞뒤 문맥으로 맞히며 사전훈련.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/nlp20_five_floor_map/index.html#lv5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/pretrained-lm"
+    },
+    {
+     "@id": "lab:topic/transformer"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/gpt-bert"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/gpt"
+    }
+   ],
+   "lab:broader": [
+    {
+     "@id": "lab:topic/transformer"
+    }
+   ]
+  },
+  {
+   "@id": "lab:topic/boosting",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "부스팅",
+     "@language": "ko"
+    },
+    {
+     "@value": "Boosting",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "시리즈 등록부의 상위 주제.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/nlp20_five_floor_map/index.html#lv2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/boosting"
+    },
+    {
+     "@id": "lab:topic/decision-tree"
+    }
+   ],
+   "lab:broader": [
+    {
+     "@id": "lab:topic/decision-tree"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/softmax",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "소프트맥스",
+     "@language": "ko"
+    },
+    {
+     "@value": "Softmax",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "점수 여러 개를 합이 1인 확률로",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/nlp20_five_floor_map/index.html#lv4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/activation-function"
+    },
+    {
+     "@id": "lab:topic/attention-mechanism"
+    },
+    {
+     "@id": "lab:topic/logistic-regression"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/logistic-regression"
+    },
+    {
+     "@id": "lab:method/scaled-dot-product-attention"
+    },
+    {
+     "@id": "lab:method/online-softmax"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:topic/attention-mechanism"
+    }
+   ]
+  },
+  {
+   "@id": "lab:metric/test-accuracy",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "시험 정확도",
+     "@language": "ko"
+    },
+    {
+     "@value": "test accuracy",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "학습에 쓰지 않은 데이터를 맞힌 비율.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/nlp20_five_floor_map/index.html#duel"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/accuracy-metrics"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/sigmoid",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "시그모이드",
+     "@language": "ko"
+    },
+    {
+     "@value": "Sigmoid",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "점수를 0~1 사이 확률로 바꾸는 함수.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/nlp20_five_floor_map/index.html#lv2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/activation-function"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/logistic-regression"
+    },
+    {
+     "@id": "lab:topic/logistic-regression"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/temperature",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "번짐 폭 τ",
+     "@language": "ko"
+    },
+    {
+     "@value": "blur width (temperature)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "경계를 얼마나 번지게 할지 정하는 숫자.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/nlp20_five_floor_map/index.html#lv5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/activation-function"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/gpt"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/pretraining",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "층별 사전학습",
+     "@language": "ko"
+    },
+    {
+     "@value": "Greedy layer-wise pretraining",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "아래층부터 하나씩 따로 학습해 좋은 출발점을 만드는 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/nlp20_five_floor_map/index.html#lv5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/pretrained-lm"
+    },
+    {
+     "@id": "lab:topic/self-supervised"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/sft"
+    },
+    {
+     "@id": "lab:method/bert"
+    },
+    {
+     "@id": "lab:method/gpt"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/chatbot-pipeline"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/euclidean-distance",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "유클리드 거리",
+     "@language": "ko"
+    },
+    {
+     "@value": "Euclidean distance",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "두 점 사이의 직선 거리. 열별 차이의 제곱합의 제곱근.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/nlp20_five_floor_map/index.html#lv3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/distance-angle"
+    },
+    {
+     "@id": "lab:topic/knn"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:topic/word-embedding"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/encoder-decoder",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "읽는 탑·쓰는 탑",
+     "@language": "ko"
+    },
+    {
+     "@value": "encoder-decoder",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "입력을 연속 표현으로 바꾸는 인코더와 그 표현으로 출력을 한 기호씩 만드는 디코더 구조.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/nlp20_five_floor_map/index.html#lv4"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:method/transformer"
+    },
+    {
+     "@id": "lab:topic/transformer"
+    }
+   ]
+  },
+  {
+   "@id": "lab:topic/rag",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "검색 증강 생성 (RAG)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Retrieval-augmented generation",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "답하기 전에 관련 문장을 찾아 질문과 함께 LLM에 건네는 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/nlp20_five_floor_map/index.html#lv5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:area/language"
+    },
+    {
+     "@id": "lab:topic/rag"
+    }
+   ]
+  },
+  {
+   "@id": "lab:topic/word-embedding",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "임베딩",
+     "@language": "ko"
+    },
+    {
+     "@value": "Embedding",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "문장의 뜻을 숫자 줄(벡터)로 바꾸는 일. 뜻이 비슷하면 방향이 비슷하다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/nlp20_five_floor_map/index.html#lv3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/embedding-space"
+    },
+    {
+     "@id": "lab:topic/word-embedding"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/embedding-search"
+    },
+    {
+     "@id": "lab:concept/indexing-phase"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:topic/attention-mechanism"
+    }
+   ]
+  },
+  {
+   "@id": "lab:topic/naive-bayes",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "나이브 베이즈",
+     "@language": "ko"
+    },
+    {
+     "@value": "naive Bayes",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "낱말이 서로 상관없다고 가정하고 조건부확률을 곱해 분류하는 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/nlp20_five_floor_map/index.html#lv2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/naive-bayes"
+    },
+    {
+     "@id": "lab:topic/supervised-learning"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:topic/word-embedding"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/bigram-features"
+    }
+   ]
+  },
+  {
+   "@id": "lab:topic/logistic-regression",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "로지스틱 회귀",
+     "@language": "ko"
+    },
+    {
+     "@value": "logistic regression",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "무게를 더한 점수를 시그모이드로 0~1 확률로 접어 분류하는 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/nlp20_five_floor_map/index.html#lv2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/logistic-regression"
+    },
+    {
+     "@id": "lab:topic/supervised-learning"
+    }
+   ]
+  },
+  {
+   "@id": "lab:topic/decision-tree",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "결정 트리",
+     "@language": "ko"
+    },
+    {
+     "@value": "decision tree",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "질문을 차례로 던져 갈래를 나누는 분류 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/nlp20_five_floor_map/index.html#lv2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/decision-tree"
+    }
+   ]
+  },
+  {
+   "@id": "lab:topic/random-forest",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "랜덤 포레스트",
+     "@language": "ko"
+    },
+    {
+     "@value": "random forest",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "여러 결정 트리의 투표로 고르는 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/nlp20_five_floor_map/index.html#lv2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/decision-tree"
+    },
+    {
+     "@id": "lab:topic/random-forest"
+    }
+   ],
+   "lab:broader": [
+    {
+     "@id": "lab:topic/decision-tree"
+    }
+   ]
+  },
+  {
+   "@id": "lab:topic/svm",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "서포트 벡터 머신",
+     "@language": "ko"
+    },
+    {
+     "@value": "support vector machine",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "두 무리 사이에 가장 넓은 경계를 긋는 분류 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/nlp20_five_floor_map/index.html#lv2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/svm"
+    }
+   ]
+  },
+  {
+   "@id": "lab:topic/knn",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "k-최근접 이웃",
+     "@language": "ko"
+    },
+    {
+     "@value": "k-nearest neighbors",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "가장 비슷한 예 k개의 다수결로 고르는 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/nlp20_five_floor_map/index.html#lv2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/knn"
+    }
+   ]
+  },
+  {
+   "@id": "lab:topic/lstm-gru",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "LSTM·GRU",
+     "@language": "ko"
+    },
+    {
+     "@value": "long short-term memory",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "메모를 오래 지키며 낱말을 한 줄로 읽는 순환 신경망.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/nlp20_five_floor_map/index.html#lv4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/lstm-gru"
+    },
+    {
+     "@id": "lab:topic/rnn"
+    }
+   ]
+  },
+  {
+   "@id": "lab:topic/attention-mechanism",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "어텐션 메커니즘",
+     "@language": "ko"
+    },
+    {
+     "@value": "attention mechanism",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "낱말마다 다른 낱말을 참고할 비율을 소프트맥스로 정해 뜻을 섞는 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/nlp20_five_floor_map/index.html#lv4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/attention-mechanism"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/bert"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:topic/transformer"
+    }
+   ]
+  },
+  {
+   "@id": "lab:topic/transformer",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "트랜스포머",
+     "@language": "ko"
+    },
+    {
+     "@value": "Transformer",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "어텐션을 층층이 쌓아 모든 낱말을 한꺼번에 계산하는 구조.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/nlp20_five_floor_map/index.html#lv4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/transformer"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/bigram-features",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "두 낱말 묶음 특징",
+     "@language": "ko"
+    },
+    {
+     "@value": "bigram features",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "붙은 두 낱말을 하나의 특징으로 세는 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/nlp20_five_floor_map/index.html#duel"
+   },
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/test-accuracy"
+    }
+   ],
+   "lab:evaluatedOn": [
+    {
+     "@id": "lab:dataset/toy-reviews"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/bag-of-words"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/bag-of-words",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "낱말 주머니",
+     "@language": "ko"
+    },
+    {
+     "@value": "bag of words",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "순서를 버리고 낱말 개수만 세는 표현.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/nlp20_five_floor_map/index.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:topic/naive-bayes"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/labeled-data",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "라벨",
+     "@language": "ko"
+    },
+    {
+     "@value": "labeled data",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "데이터에 붙인 정답 표시.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/nlp20_five_floor_map/index.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:topic/naive-bayes"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/nlp-five-floors",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "NLP 5층 지도",
+     "@language": "ko"
+    },
+    {
+     "@value": "five-floor map of NLP",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "NLP 방법을 숫자로·고르기·뜻 좌표·문맥·언어 모델 다섯 층과 과업으로 나눈 이 페이지의 정리 틀.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/nlp20_five_floor_map/index.html#bigpic"
+   }
+  },
+  {
+   "@id": "lab:dataset/toy-reviews",
+   "@type": [
+    "skos:Concept",
+    "lab:Dataset"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "장난감 리뷰 20개",
+     "@language": "ko"
+    },
+    {
+     "@value": "toy review set",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "설명용으로 만든 학습 12개·시험 8개 리뷰.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/nlp20_five_floor_map/index.html#duel"
+   }
   },
   {
    "@id": "lab:concept/bayes-theorem",
@@ -2074,77 +4143,6 @@
    }
   },
   {
-   "@id": "lab:method/gpt",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "GPT",
-     "@language": "ko"
-    },
-    {
-     "@value": "generative pre-trained transformer",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "생성형 사전훈련 트랜스포머. 디코더로 다음 단어를 차례로 예측.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/karpathy_method_korean/index.html#c4"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/autoregressive-generation"
-    },
-    {
-     "@id": "lab:topic/pretrained-lm"
-    },
-    {
-     "@id": "lab:topic/transformer"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/gpt-bert"
-    }
-   ],
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:method/bert"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/rebuild-from-scratch"
-    },
-    {
-     "@id": "lab:method/semantic-search"
-    }
-   ],
-   "lab:evaluatedOn": [
-    {
-     "@id": "lab:dataset/tiny-shakespeare"
-    },
-    {
-     "@id": "lab:dataset/nsmc"
-    }
-   ],
-   "lab:evaluatedBy": [
-    {
-     "@id": "lab:metric/validation-loss"
-    }
-   ],
-   "lab:broader": [
-    {
-     "@id": "lab:concept/llm"
-    }
-   ]
-  },
-  {
    "@id": "lab:concept/learning-rate",
    "@type": [
     "skos:Concept",
@@ -2343,45 +4341,6 @@
    "lab:broader": [
     {
      "@id": "lab:concept/loss"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/pretraining",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "층별 사전학습",
-     "@language": "ko"
-    },
-    {
-     "@value": "Greedy layer-wise pretraining",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "아래층부터 하나씩 따로 학습해 좋은 출발점을 만드는 방법.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/karpathy_method_korean/index.html#c7"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/pretrained-lm"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/sft"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/chatbot-pipeline"
     }
    ]
   },
@@ -3105,35 +5064,6 @@
    "lab:partOf": [
     {
      "@id": "lab:concept/runtime-layer"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/inference",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "추론",
-     "@language": "ko"
-    },
-    {
-     "@value": "inference",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "생성 AI 모델을 서비스에서 돌리는 과정.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/inference_korea_study_page/guide.html#faq-h"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/inference-engineering"
     }
    ]
   },
@@ -4135,43 +6065,6 @@
    ]
   },
   {
-   "@id": "lab:method/tf-idf",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "TF-IDF",
-     "@language": "ko"
-    },
-    {
-     "@value": "term frequency-inverse document frequency",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "문서 안 단어 빈도(TF)에 전체 문서에서의 희귀도(IDF = log(N ÷ df))를 곱해 문서별 단어 중요도를 매기는 방법.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/LLM_summary_note/index.html#r6"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/tfidf-weighting-variants"
-    },
-    {
-     "@id": "lab:method/word-embedding"
-    }
-   ],
-   "lab:evaluatedOn": [
-    {
-     "@id": "lab:dataset/nlp-pm-examples"
-    }
-   ]
-  },
-  {
    "@id": "lab:method/topic-modeling",
    "@type": [
     "skos:Concept",
@@ -4255,6 +6148,11 @@
    "lab:uses": [
     {
      "@id": "lab:concept/hidden-state"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/test-accuracy"
     }
    ],
    "lab:hasLimitation": [
@@ -4389,45 +6287,6 @@
    "lab:prerequisiteOf": [
     {
      "@id": "lab:method/standard-attention"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/bert",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "BERT",
-     "@language": "ko"
-    },
-    {
-     "@value": "BERT",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "양방향 인코더 모델. 가린 단어를 앞뒤 문맥으로 맞히며 사전훈련.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/LLM_summary_note/index.html#r11"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/pretrained-lm"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/gpt-bert"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/gpt"
     }
    ]
   },
@@ -5174,51 +7033,6 @@
    "rdfs:isDefinedBy": {
     "@id": "https://adminmrobo.github.io/LLM_summary_note/index.html#ref"
    }
-  },
-  {
-   "@id": "lab:concept/conditional-probability",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "조건부확률",
-     "@language": "ko"
-    },
-    {
-     "@value": "conditional probability",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "B가 일어났다는 조건 아래에서 A가 일어날 확률. P(A|B) = P(A∩B)/P(B).",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/agent_secret_leak_lab/01_settings_leak_probability.html#lv1"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/conditional-probability"
-    },
-    {
-     "@id": "lab:topic/probability-statistics"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/bayes-theorem"
-    },
-    {
-     "@id": "lab:concept/fact-vs-value"
-    }
-   ],
-   "lab:broader": [
-    {
-     "@id": "lab:topic/probability-statistics"
-    }
-   ]
   },
   {
    "@id": "lab:concept/base-rate",
@@ -7338,6 +9152,9 @@
    ],
    "lab:evaluatedBy": [
     {
+     "@id": "lab:metric/test-accuracy"
+    },
+    {
      "@id": "lab:metric/mae"
     }
    ]
@@ -7562,49 +9379,6 @@
    ]
   },
   {
-   "@id": "lab:concept/softmax",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "소프트맥스",
-     "@language": "ko"
-    },
-    {
-     "@value": "Softmax",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "점수 여러 개를 합이 1인 확률로",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/inference_engineering_study/week_02_article_01/01_transformer.html#r1"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/activation-function"
-    },
-    {
-     "@id": "lab:topic/logistic-regression"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/logistic-regression"
-    },
-    {
-     "@id": "lab:method/scaled-dot-product-attention"
-    },
-    {
-     "@id": "lab:method/online-softmax"
-    }
-   ]
-  },
-  {
    "@id": "lab:concept/activation-function",
    "@type": [
     "skos:Concept",
@@ -7720,6 +9494,9 @@
     },
     {
      "@id": "lab:method/memorilla"
+    },
+    {
+     "@id": "lab:concept/vector-database"
     }
    ],
    "lab:contrastsWith": [
@@ -9505,35 +11282,6 @@
    "lab:contrastsWith": [
     {
      "@id": "lab:method/positional-encoding"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/encoder-decoder",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "읽는 탑·쓰는 탑",
-     "@language": "ko"
-    },
-    {
-     "@value": "encoder-decoder",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "입력을 연속 표현으로 바꾸는 인코더와 그 표현으로 출력을 한 기호씩 만드는 디코더 구조.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/inference_engineering_study/week_02_article_01/01_transformer.html#method"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:method/transformer"
     }
    ]
   },
@@ -13327,30 +15075,6 @@
      "@id": "lab:concept/hopper"
     }
    ]
-  },
-  {
-   "@id": "lab:concept/instance",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "인스턴스 (여섯 구성 요소)",
-     "@language": "ko"
-    },
-    {
-     "@value": "instance",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "클라우드 GPU 할당의 최소 단위. GPU · CPU · 호스트 메모리 · 저장소 · 네트워크 · 인터커넥트.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/inference_engineering_study/week_04_textbook_ch03/index.html#lv7"
-   }
   },
   {
    "@id": "lab:concept/node",
@@ -18133,35 +19857,6 @@
    ]
   },
   {
-   "@id": "lab:method/lda",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "LDA 토픽 모델",
-     "@language": "ko"
-    },
-    {
-     "@value": "latent Dirichlet allocation",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "문서를 토픽의 혼합, 토픽을 단어 분포로 보고, 관찰한 단어로부터 문서-주제 분포 θ와 주제-단어 분포 φ를 추정하는 확률적 토픽 모델.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai-nlp-data-analysis/04-3_topic_lda.html#lv2"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/lda-interpretation"
-    }
-   ]
-  },
-  {
    "@id": "lab:method/lda-interpretation",
    "@type": [
     "skos:Concept",
@@ -19041,6 +20736,11 @@
     {
      "@id": "lab:concept/other-similarity-measures"
     }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/embedding-search"
+    }
    ]
   },
   {
@@ -19855,6 +21555,11 @@
    "lab:prerequisiteOf": [
     {
      "@id": "lab:concept/rnn-vanishing-gradient"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/sigmoid"
     }
    ]
   },
@@ -21926,6 +23631,641 @@
    "lab:partOf": [
     {
      "@id": "lab:method/rag"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/dot-product",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "겹침 점수(내적)와 각도",
+     "@language": "ko"
+    },
+    {
+     "@value": "Dot product and angle",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "같은 자리끼리 곱해 더한 값. cos θ로 방향의 닮음을 잰다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/llm_applied_lab/A1_rag_lab.html#lv3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/inner-product-orthogonality"
+    },
+    {
+     "@id": "lab:topic/linear-algebra"
+    },
+    {
+     "@id": "lab:topic/vectors-geometry"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/cosine-similarity"
+    }
+   ],
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/matmul"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/closed-book-llm",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "LLM 혼자 답하기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Closed-book LLM answering",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "질문만 건네고 LLM이 학습 때 배운 것만으로 답하게 하는 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/llm_applied_lab/A1_rag_lab.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/keyword-search"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/hallucination"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/keyword-search",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "키워드 검색",
+     "@language": "ko"
+    },
+    {
+     "@value": "Keyword search",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "질문과 같은 글자의 단어가 많은 문장을 고르는 검색.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/llm_applied_lab/A1_rag_lab.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/embedding-search"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/top1-hit"
+    }
+   ],
+   "lab:evaluatedOn": [
+    {
+     "@id": "lab:dataset/pebble-lamp-toy"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/embedding-search",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "뜻으로 찾기 (임베딩 검색)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Dense embedding retrieval",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "문장을 뜻 벡터로 바꾸고 코사인 유사도가 높은 문장을 고르는 검색.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/llm_applied_lab/A1_rag_lab.html#lv3"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/chunk-topk-retrieval"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:topic/rag"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/top1-hit"
+    }
+   ],
+   "lab:evaluatedOn": [
+    {
+     "@id": "lab:dataset/pebble-lamp-toy"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/chunk-topk-retrieval",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "조각 + 상위 k개 검색",
+     "@language": "ko"
+    },
+    {
+     "@value": "Chunked top-k retrieval",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "문서를 조각으로 자르고 점수 상위 k개 조각을 가져오는 검색.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/llm_applied_lab/A1_rag_lab.html#lv4"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:topic/rag"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/context-size"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/l2-norm",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "벡터의 길이 (L2 노름)",
+     "@language": "ko"
+    },
+    {
+     "@value": "L2 norm",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "숫자를 제곱해 더한 뒤 제곱근을 씌운 값. 피타고라스 정리와 같다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/llm_applied_lab/A1_rag_lab.html#lv3"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/cosine-similarity"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/vector-database",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "벡터 DB",
+     "@language": "ko"
+    },
+    {
+     "@value": "Vector database",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "조각과 그 숫자 줄을 모아 두고 비슷한 것을 빨리 찾는 저장소.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/llm_applied_lab/A1_rag_lab.html#big"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/embedding-space"
+    },
+    {
+     "@id": "lab:topic/vector-database"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/indexing-phase"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/chunk",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "청크 (조각)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Chunk",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "긴 문서를 검색하기 좋게 자른 한 조각.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/llm_applied_lab/A1_rag_lab.html#lv4"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/indexing-phase"
+    },
+    {
+     "@id": "lab:method/chunk-topk-retrieval"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/chunk-overlap",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "조각 겹침",
+     "@language": "ko"
+    },
+    {
+     "@value": "Chunk overlap",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "앞 조각과 겹치게 자르는 문장(글자) 수.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/llm_applied_lab/A1_rag_lab.html#lv4"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/chunk"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/top-k",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "상위 k개 (top-k)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Top-k",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "점수가 높은 순서로 k개만 가져오기.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/llm_applied_lab/A1_rag_lab.html#lv4"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/query-phase"
+    },
+    {
+     "@id": "lab:method/chunk-topk-retrieval"
+    }
+   ]
+  },
+  {
+   "@id": "lab:topic/prompting",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "프롬프트",
+     "@language": "ko"
+    },
+    {
+     "@value": "Prompt",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "LLM에 건네는 지시문. 여기서는 지시 + 조각 + 질문.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/llm_applied_lab/A1_rag_lab.html#lv5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/prompting"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/query-phase"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/citation-check",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "출처 확인",
+     "@language": "ko"
+    },
+    {
+     "@value": "Citation check",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "답에 붙은 조각 번호가 프롬프트 안의 조각과 맞는지 대조하는 일.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/llm_applied_lab/A1_rag_lab.html#lv5"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:topic/rag"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/indexing-phase",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "준비 단계 (색인)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Indexing phase",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "문서 읽기·자르기·임베딩·서가에 꽂기를 미리 한 번 하는 단계.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/llm_applied_lab/A1_rag_lab.html#big"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:topic/rag"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/query-phase",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "질문 단계",
+     "@language": "ko"
+    },
+    {
+     "@value": "Query phase",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "질문을 숫자로 바꾸고 찾은 조각과 함께 LLM에 건네는 단계.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/llm_applied_lab/A1_rag_lab.html#big"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:topic/rag"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/next-token-probability",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "다음 말 확률",
+     "@language": "ko"
+    },
+    {
+     "@value": "Next-token probability",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "앞 문장이 주어졌을 때 다음에 올 말의 조건부 확률.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/llm_applied_lab/A1_rag_lab.html#lv1"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:method/closed-book-llm"
+    }
+   ]
+  },
+  {
+   "@id": "lab:metric/top1-hit",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "1등 적중 수",
+     "@language": "ko"
+    },
+    {
+     "@value": "Top-1 hit count",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "근거 문장을 점수 1등으로 찾은 질문 수.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/llm_applied_lab/A1_rag_lab.html#duel"
+   }
+  },
+  {
+   "@id": "lab:metric/context-size",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "보낸 문장 수",
+     "@language": "ko"
+    },
+    {
+     "@value": "Context size (sentences)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "질문 하나에 LLM으로 보내는 문장 수.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/llm_applied_lab/A1_rag_lab.html#lv4"
+   }
+  },
+  {
+   "@id": "lab:dataset/pebble-lamp-toy",
+   "@type": [
+    "skos:Concept",
+    "lab:Dataset"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "가상 회사 안내문 18문장",
+     "@language": "ko"
+    },
+    {
+     "@value": "Pebble Lamp toy corpus",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "설명용으로 만든 가상 회사의 영어 안내문 18문장과 질문 8개.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/llm_applied_lab/A1_rag_lab.html#lv2"
+   }
+  },
+  {
+   "@id": "lab:tool/faiss",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "FAISS",
+     "@language": "ko"
+    },
+    {
+     "@value": "FAISS",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "비슷한 벡터를 빠르게 찾는 공개 도구.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/llm_applied_lab/A1_rag_lab.html#lv3"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/vector-database"
+    }
+   ]
+  },
+  {
+   "@id": "lab:tool/langchain-retrieval-chain",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "LangChain 검색 묶음",
+     "@language": "ko"
+    },
+    {
+     "@value": "LangChain retrieval chain",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "검색기와 LLM을 한 흐름으로 잇는 LangChain의 묶음.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/llm_applied_lab/A1_rag_lab.html#lv5"
+   },
+   "lab:relatedTo": [
+    {
+     "@id": "lab:topic/rag"
     }
    ]
   },

@@ -8824,6 +8824,9 @@
    },
    "lab:topic": [
     {
+     "@id": "lab:topic/generalization"
+    },
+    {
      "@id": "lab:topic/weight-decay"
     }
    ],
@@ -11462,6 +11465,11 @@
    "rdfs:isDefinedBy": {
     "@id": "https://adminmrobo.github.io/my_article_07_media_blockchain/03_efficient_market_news.html#r4"
    },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/unsupervised-learning"
+    }
+   ],
    "lab:partOf": [
     {
      "@id": "lab:method/text-mining"

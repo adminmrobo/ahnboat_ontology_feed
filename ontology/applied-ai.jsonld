@@ -3776,6 +3776,9 @@
    "lab:prerequisiteOf": [
     {
      "@id": "lab:method/chart-selection"
+    },
+    {
+     "@id": "lab:concept/regression"
     }
    ],
    "lab:hasLimitation": [
@@ -6522,6 +6525,9 @@
    "lab:topic": [
     {
      "@id": "lab:topic/pretrained-lm"
+    },
+    {
+     "@id": "lab:topic/self-supervised"
     }
    ],
    "lab:prerequisiteOf": [
@@ -9033,6 +9039,9 @@
    "lab:topic": [
     {
      "@id": "lab:topic/activation-function"
+    },
+    {
+     "@id": "lab:topic/attention-mechanism"
     },
     {
      "@id": "lab:topic/logistic-regression"
@@ -13573,6 +13582,9 @@
     },
     {
      "@id": "lab:method/polynomial-regression"
+    },
+    {
+     "@id": "lab:concept/regression"
     }
    ]
   },
@@ -14020,6 +14032,9 @@
    "lab:topic": [
     {
      "@id": "lab:topic/boosting"
+    },
+    {
+     "@id": "lab:topic/decision-tree"
     }
    ]
   },

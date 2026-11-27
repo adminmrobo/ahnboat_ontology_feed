@@ -3,7 +3,7 @@
  "base": "https://adminmrobo.github.io/ahnboat_ontology_feed/",
  "all": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/all.xml",
  "site": {
-  "total": 185,
+  "total": 190,
   "other_racks": [
    {
     "name": "연구실 운영",
@@ -17,15 +17,15 @@
  },
  "summary": {
   "fields": 8,
-  "contents": 133,
-  "pages": 921,
-  "listed_indexed": 163,
-  "listed": 174,
-  "concepts": 5908,
-  "relations": 7092,
-  "shared": 573,
+  "contents": 138,
+  "pages": 931,
+  "listed_indexed": 168,
+  "listed": 179,
+  "concepts": 6018,
+  "relations": 7242,
+  "shared": 583,
   "domains": 18,
-  "topic_linked": 1730
+  "topic_linked": 1784
  },
  "fields": [
   {
@@ -35,10 +35,10 @@
    "rack": 1,
    "color": "#2f7d5b",
    "desc": "데이터에서 규칙을 배우는 머신러닝을 물고기 시장 데이터, 알고리즘 가계도, 모델 채용 위원회로 처음부터 익힙니다.",
-   "contents": 16,
-   "listed": 16,
-   "concepts": 648,
-   "relations": 891,
+   "contents": 17,
+   "listed": 17,
+   "concepts": 702,
+   "relations": 951,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/machine-learning.xml",
    "parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/machine-learning-p1.xml",
@@ -61,7 +61,7 @@
    "contents": 11,
    "listed": 14,
    "concepts": 478,
-   "relations": 700,
+   "relations": 704,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/deep-learning-neuroscience.xml",
    "parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/deep-learning-neuroscience.xml"
@@ -79,10 +79,10 @@
    "rack": 3,
    "color": "#c0613a",
    "desc": "AI가 이미지를 구분하고, 동작을 알아보고, 장면을 그려 내고, 글을 읽는 방식을 긴급 미션으로 풀어 봅니다.",
-   "contents": 16,
-   "listed": 16,
-   "concepts": 592,
-   "relations": 738,
+   "contents": 17,
+   "listed": 17,
+   "concepts": 600,
+   "relations": 751,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/ai-senses-generation.xml",
    "parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/ai-senses-generation.xml"
@@ -100,10 +100,10 @@
    "rack": 4,
    "color": "#2f5f9e",
    "desc": "대형 언어모델이 답을 만들어 내는 과정과, 그것을 빠르고 싸게 서빙하는 추론 엔지니어링을 스터디로 읽습니다.",
-   "contents": 26,
-   "listed": 26,
-   "concepts": 842,
-   "relations": 981,
+   "contents": 29,
+   "listed": 29,
+   "concepts": 911,
+   "relations": 1076,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/llm-inference-engineering.xml",
    "parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/llm-inference-engineering-p1.xml",
@@ -197,7 +197,7 @@
    "contents": 36,
    "listed": 37,
    "concepts": 1055,
-   "relations": 1211,
+   "relations": 1213,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/applied-ai.xml",
    "parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/applied-ai-p1.xml",

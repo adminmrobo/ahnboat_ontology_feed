@@ -100,6 +100,15 @@
 개념: 몸을 도형으로 단순화, 원기둥의 고리선, 돌려 보기(턴어라운드), 원기둥 위 간격의 원근, 도형→스케치→선화→색 레이어, 면의 방향과 밝기(cos), 입체 그림자와 떨어지는 그림자, 섬 그림자, 그림자 흐림과 반사광, VFX 렌더 층, 주름 세 종류, 주름이 생기는 자리, 흐름과 꺾임(소재감), 굽힘과 남는 천, 천 시뮬레이션, 비슷한 그림끼리 묶기, 잠재공간, 확산 모델, 안내 강도, 캐릭터 고정 문장, 화풍 바꾸기, 원본 반영 정도(강도), 포즈·선화·깊이 가이드, 프롬프트 조립, 실패 진단 순서]]></description>
     </item>
     <item>
+      <title>회귀 예측·분석 대회 — 직선 하나에서 회귀의 가족까지 · 회귀 예측·분석 대회</title>
+      <link>https://adminmrobo.github.io/Regression_model_lab_01/</link>
+      <guid isPermaLink="false">ahnboat:Regression_model_lab_01:3c19329d11</guid>
+      <pubDate>Fri, 27 Nov 2026 01:43:19 +0000</pubDate>
+      <category>머신러닝</category>
+      <description><![CDATA[머신러닝 · 개념 73개
+개념: 회귀, 잔차, 학습률, 상호작용, 교란변수, 소프트맥스, 기울기, 시그모이드, 손실 함수, 교차 엔트로피, 규제, 투영, 선형, 독립 사건, 상관계수, p값, 표준오차, 문제 유형별 모델 선택, 미니배치, 로그오즈, 랜덤 포레스트, 앙상블, 레버리지, 오즈와 오즈 배수, KNN 회귀, 서포트 벡터 회귀(SVR), 분산팽창계수 (VIF), 다중 선형 회귀와 잔차, 결정계수와 조정 결정계수, SHAP 기여도, 스피어만 순위 상관 ρ, 최소제곱법(OLS), 잔차 제곱합(SSE), 평균 빗나감(RMSE), 다른 단서를 그대로 두면, 숫자 표 X(설계 행렬), 정규방정식 β = (XᵀX)⁻¹Xᵀy, t값, 95% 신뢰구간, 회귀분석 결과표, 수정 R², AIC, 선형 독립, 주성분 분석(PCA), 잔차-예측값 그림, 회귀의 가정(LINE + 다중공선성 없음), 등분산, 정규성, 더빈-왓슨 값, 로그 변환, 다항 회귀, 쿡의 거리, 경사 하강, 확률적 경사 하강(SGD), 편향-분산 균형, 릿지 회귀(L2), 라쏘 회귀(L1), 엘라스틱넷, 회귀 나무, 부스팅(XGBoost), 신경망 회귀, 곡선(비선형) 모델, 샤플리 값, 한계 기여, 로지스틱 회귀, 포아송 회귀, 일반화 선형 모델(GLM), 분위수 회귀, 핀볼 손실, 다층(혼합) 회귀, 패널 회귀, 시계열 회귀, 브라이어 점수]]></description>
+    </item>
+    <item>
       <title>구조 먼저 그리기 연구실 06 표정 편 — 감정 낱말보다 부품 먼저</title>
       <link>https://adminmrobo.github.io/drawing_lab_06/</link>
       <guid isPermaLink="false">ahnboat:drawing_lab_06:a2f070b10c</guid>
@@ -178,7 +187,25 @@
       <pubDate>Thu, 26 Nov 2026 15:09:55 +0000</pubDate>
       <category>LLM·추론 엔지니어링</category>
       <description><![CDATA[LLM·추론 엔지니어링 · 개념 20개
-개념: LLM과 RAG, 에이전트, 지식 그래프, 온톨로지, 시맨틱 계층, 맥락 계층, 온톨로지 학습, 환각, GraphRAG, Fabric IQ 온톨로지, Palantir 온톨로지(AIP), LLM으로 온톨로지 초안 쓰기, 한 사용 사례로 좁혀 시작하기, OWL 2, SHACL, ISO 23726-3 산업 데이터 온톨로지(IDO), Open Semantic Interchange (OSI), Palantir 분기 매출, 에이전트형 AI 정확도, 지식 그래프 사실 수]]></description>
+개념: LLM과 RAG, 에이전트, 환각, 지식 그래프, 온톨로지, 시맨틱 계층, 맥락 계층, 온톨로지 학습, GraphRAG, Fabric IQ 온톨로지, Palantir 온톨로지(AIP), LLM으로 온톨로지 초안 쓰기, 한 사용 사례로 좁혀 시작하기, OWL 2, SHACL, ISO 23726-3 산업 데이터 온톨로지(IDO), Open Semantic Interchange (OSI), Palantir 분기 매출, 에이전트형 AI 정확도, 지식 그래프 사실 수]]></description>
+    </item>
+    <item>
+      <title>온톨로지를 VFX로 그리면 — 지식 그래프와 시각화 · 자연어 분석과 LLM 연구실</title>
+      <link>https://adminmrobo.github.io/ontology_kg_vfx/</link>
+      <guid isPermaLink="false">ahnboat:ontology_kg_vfx:77b0c1d95a</guid>
+      <pubDate>Thu, 26 Nov 2026 15:09:54 +0000</pubDate>
+      <category>LLM·추론 엔지니어링</category>
+      <description><![CDATA[LLM·추론 엔지니어링 · 개념 32개
+개념: 몫공간, 추론, 인스턴스 (여섯 구성 요소), 지식 그래프, 정의역과 치역, 온톨로지, 클래스, 하위 클래스, 술어, 트리플, 데이터 통합, LOD, 그래프 시각화, 헤어볼, VFX 3D 그래프, 원근 투영, 부분 그래프, 에이전트, RAG, 양의 준정부호 행렬, 기하학적 온톨로지, RDF, RDFS, OWL, SPARQL, SHACL, 힘 배치(Fruchterman–Reingold), 3D 층 배치, 규칙 추론, 크기 읽기 오차, 층 섞임, 읽히는 이름표]]></description>
+    </item>
+    <item>
+      <title>말을 숫자로 바꾸는 20가지 방법 — NLP 치트시트를 5층 지도로 다시 읽기</title>
+      <link>https://adminmrobo.github.io/nlp20_five_floor_map/</link>
+      <guid isPermaLink="false">ahnboat:nlp20_five_floor_map:672122e8f2</guid>
+      <pubDate>Thu, 26 Nov 2026 15:09:52 +0000</pubDate>
+      <category>LLM·추론 엔지니어링</category>
+      <description><![CDATA[LLM·추론 엔지니어링 · 개념 30개
+개념: 조건부확률, TF-IDF, LDA 토픽 모델, GPT, BERT, 부스팅, 소프트맥스, 시험 정확도, 시그모이드, 번짐 폭 τ, 층별 사전학습, 유클리드 거리, 읽는 탑·쓰는 탑, 검색 증강 생성 (RAG), 임베딩, 환각, 나이브 베이즈, 로지스틱 회귀, 결정 트리, 랜덤 포레스트, 서포트 벡터 머신, k-최근접 이웃, LSTM·GRU, 어텐션 메커니즘, 트랜스포머, 두 낱말 묶음 특징, 낱말 주머니, 라벨, NLP 5층 지도, 장난감 리뷰 20개]]></description>
     </item>
     <item>
       <title>뉴런 반응 연구실 · 신경망 칸은 어떻게 반응하고 배울까</title>
@@ -602,15 +629,6 @@
       <category>딥러닝·뇌과학</category>
       <description><![CDATA[딥러닝·뇌과학 · 개념 50개
 개념: 정규화, 트랜스포머, 기울기 소실, 학습률, 데이터 누수, 정확도, 퍼셉트론, SVM, 표준화, 가중합, 프롬프트, 표준편차, 로지스틱 회귀 (다항), 서포트 벡터, CNN (후배, 6-4), ReLU, MLP, 소프트맥스, 은닉층, 다층 퍼셉트론, 손실, 시험 정확도, 활성화 함수, 편향, 기울기, 시그모이드, 은닉 뉴런, 경사하강, 규제, 정규화, tanh, 시험 데이터, 경사하강법, 계단 함수, 평균, 확률, 비용함수(로그 손실), 에포크, SPLIT, 활성화 함수(시그모이드·ReLU), GELU, Leaky ReLU, 미니배치, 평균제곱오차, MSE, 배치 크기, 등고선, 상태, 확률분포(정규·포아송·지수·균등·이항), 정규분포]]></description>
-    </item>
-    <item>
-      <title>역전파 연구실 · 손잡이 33개를 한 번에 돌리는 법</title>
-      <link>https://adminmrobo.github.io/backprop_lab/</link>
-      <guid isPermaLink="false">ahnboat:backprop_lab:df5741b25a</guid>
-      <pubDate>Tue, 24 Nov 2026 14:16:37 +0000</pubDate>
-      <category>딥러닝·뇌과학</category>
-      <description><![CDATA[딥러닝·뇌과학 · 개념 4개
-개념: ReLU, 은닉층, 역전파, 기울기]]></description>
     </item>
   </channel>
 </rss>

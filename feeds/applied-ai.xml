@@ -1068,7 +1068,7 @@ p10 = 잘 못들었습니다... 불완전한 텍스트 명령을 극복하는 �
       <category>인공지능 응용</category>
       <category domain="lab:domain">경영학</category>
       <category domain="lab:domain">머신러닝</category>
-      <description><![CDATA[분야: 인공지능 응용 · 학문 분야: 경영학, 머신러닝 · 페이지 5쪽 · 개념 111개 · 관계 116개
+      <description><![CDATA[분야: 인공지능 응용 · 학문 분야: 경영학, 머신러닝 · 페이지 5쪽 · 개념 111개 · 관계 117개
 사이트: https://adminmrobo.github.io/AI_for_cement_produce/
 
 [페이지] 기호 = 제목 — 주소
@@ -1184,7 +1184,7 @@ p5 = AI를 활용한 시멘트 공정 최적화 — https://adminmrobo.github.io
 - 부스팅 트리 회귀 → cement_process.csv : ~에서 평가
 - 부스팅 트리 회귀 → 학습·검증·시험 분할 : 먼저 알아야 함
 - 부스팅 트리 분류 → 부스팅 : 상위 개념
-- 잔차 → 부스팅 트리 회귀 : ~의 일부
+- 잔차 → 부스팅 트리 회귀, 회귀 : ~의 일부
 - 학습률 → 부스팅 트리 회귀 : ~의 일부
 - RMSE → 안전 여유 : 먼저 알아야 함
 - 학습·검증·시험 분할 → 과적합 : 먼저 알아야 함

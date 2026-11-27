@@ -2666,6 +2666,9 @@
      "@id": "lab:topic/activation-function"
     },
     {
+     "@id": "lab:topic/attention-mechanism"
+    },
+    {
      "@id": "lab:topic/logistic-regression"
     }
    ]
@@ -27082,6 +27085,11 @@
    "rdfs:isDefinedBy": {
     "@id": "https://adminmrobo.github.io/statistics_note/ch05/3-1_hypothesis_testing.html#lv1"
    },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/knowledge-graph"
+    }
+   ],
    "lab:prerequisiteOf": [
     {
      "@id": "lab:method/hypothesis-test"
@@ -28802,6 +28810,11 @@
    "rdfs:isDefinedBy": {
     "@id": "https://adminmrobo.github.io/bayesian-statistics-for-data-scientists/10_nlp_bayes.html#lv1"
    },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/feature-engineering"
+    }
+   ],
    "lab:partOf": [
     {
      "@id": "lab:method/naive-bayes-sentiment"
@@ -28831,6 +28844,11 @@
    "rdfs:isDefinedBy": {
     "@id": "https://adminmrobo.github.io/bayesian-statistics-for-data-scientists/10_nlp_bayes.html#lv3"
    },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/unsupervised-learning"
+    }
+   ],
    "lab:partOf": [
     {
      "@id": "lab:method/topic-model-lda"

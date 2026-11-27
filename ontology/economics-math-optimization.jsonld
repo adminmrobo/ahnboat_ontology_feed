@@ -757,6 +757,9 @@
    },
    "lab:topic": [
     {
+     "@id": "lab:topic/generalization"
+    },
+    {
      "@id": "lab:topic/weight-decay"
     }
    ],
@@ -13245,7 +13248,12 @@
    },
    "rdfs:isDefinedBy": {
     "@id": "https://adminmrobo.github.io/discrete_topology_lab/15_orbits_quotients.html#lv2"
-   }
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/embedding-space"
+    }
+   ]
   },
   {
    "@id": "lab:concept/transporter",
@@ -31582,6 +31590,48 @@
    ]
   },
   {
+   "@id": "lab:concept/vector-database",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "벡터 DB",
+     "@language": "ko"
+    },
+    {
+     "@value": "Vector database",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "조각과 그 숫자 줄을 모아 두고 비슷한 것을 빨리 찾는 저장소.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/vector_db_lab/03_vector_store.html#s1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/embedding-space"
+    },
+    {
+     "@id": "lab:topic/vector-database"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:concept/relational-database"
+    }
+   ],
+   "lab:evaluatedOn": [
+    {
+     "@id": "lab:dataset/vdb-virtual"
+    }
+   ]
+  },
+  {
    "@id": "lab:concept/knowledge-graph",
    "@type": [
     "skos:Concept",
@@ -31743,12 +31793,12 @@
      "@language": "ko"
     },
     {
-     "@value": "ontology",
+     "@value": "Ontology",
      "@language": "en"
     }
    ],
    "skos:definition": {
-    "@value": "한 분야에 무엇이 있고 서로 어떤 관계인지를 사람과 기계가 같은 뜻으로 읽도록 적어 둔 명세.",
+    "@value": "개념·관계·속성·규칙을 명시적으로 정한 공유 가능한 지식 모델.",
     "@language": "ko"
    },
    "rdfs:isDefinedBy": {
@@ -32047,48 +32097,6 @@
    "lab:contrastsWith": [
     {
      "@id": "lab:metric/cosine"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/vector-database",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "벡터 데이터베이스",
-     "@language": "ko"
-    },
-    {
-     "@value": "Vector database",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "좌표·메타데이터·원문 레코드와 ANN 색인",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/vector_db_lab/03_vector_store.html#s1"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/embedding-space"
-    },
-    {
-     "@id": "lab:topic/vector-database"
-    }
-   ],
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:concept/relational-database"
-    }
-   ],
-   "lab:evaluatedOn": [
-    {
-     "@id": "lab:dataset/vdb-virtual"
     }
    ]
   },
@@ -34292,7 +34300,7 @@
      "@id": "lab:concept/matmul"
     }
    ],
-   "lab:prerequisiteOf": [
+   "lab:partOf": [
     {
      "@id": "lab:concept/cosine-similarity"
     }
@@ -34463,6 +34471,9 @@
    "lab:topic": [
     {
      "@id": "lab:topic/functions-maps"
+    },
+    {
+     "@id": "lab:topic/knowledge-graph"
     }
    ]
   },

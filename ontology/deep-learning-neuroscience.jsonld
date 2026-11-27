@@ -376,6 +376,9 @@
      "@id": "lab:topic/activation-function"
     },
     {
+     "@id": "lab:topic/attention-mechanism"
+    },
+    {
      "@id": "lab:topic/logistic-regression"
     }
    ],
@@ -1246,6 +1249,17 @@
    "lab:topic": [
     {
      "@id": "lab:topic/pretrained-lm"
+    },
+    {
+     "@id": "lab:topic/self-supervised"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/bert"
+    },
+    {
+     "@id": "lab:method/gpt"
     }
    ]
   },
@@ -7110,6 +7124,9 @@
    },
    "lab:topic": [
     {
+     "@id": "lab:topic/generalization"
+    },
+    {
      "@id": "lab:topic/weight-decay"
     }
    ],
@@ -7954,6 +7971,9 @@
    "lab:topic": [
     {
      "@id": "lab:topic/pretrained-lm"
+    },
+    {
+     "@id": "lab:topic/transformer"
     }
    ],
    "lab:prerequisiteOf": [
@@ -8069,6 +8089,9 @@
    "lab:prerequisiteOf": [
     {
      "@id": "lab:concept/channel"
+    },
+    {
+     "@id": "lab:concept/receptive-field"
     }
    ],
    "lab:partOf": [
@@ -8284,6 +8307,9 @@
    "lab:partOf": [
     {
      "@id": "lab:concept/loss-function"
+    },
+    {
+     "@id": "lab:concept/softmax"
     }
    ]
   },
@@ -13041,7 +13067,7 @@
      "@id": "lab:topic/vectors-geometry"
     }
    ],
-   "lab:prerequisiteOf": [
+   "lab:partOf": [
     {
      "@id": "lab:concept/cosine-similarity"
     }
