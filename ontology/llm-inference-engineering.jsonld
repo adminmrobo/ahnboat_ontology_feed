@@ -7,7 +7,7 @@
  },
  "@id": "https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/llm-inference-engineering.jsonld",
  "dct:title": "ahnboat lab 온톨로지 — LLM·추론 엔지니어링",
- "dct:modified": "2026-11-27",
+ "dct:modified": "2026-11-28",
  "dct:license": "https://creativecommons.org/licenses/by-nc/4.0/",
  "dct:creator": "안상선 (Ahn Sangsun)",
  "@graph": [
@@ -859,6 +859,388 @@
      "@id": "lab:concept/golden-outputs"
     }
    ]
+  },
+  {
+   "@id": "lab:method/bpe",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "바이트 쌍 인코딩",
+     "@language": "ko"
+    },
+    {
+     "@value": "byte-pair encoding",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "자주 붙어 나오는 글자 조각을 묶어 토큰을 만드는 방법. 영-독 공용 어휘 약 37000.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Tokenization-BPE-tutorial/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/tokenization"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/transformer"
+    },
+    {
+     "@id": "lab:concept/token"
+    },
+    {
+     "@id": "lab:concept/tokenization"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/rustbpe"
+    },
+    {
+     "@id": "lab:concept/word-level-tokenization"
+    }
+   ],
+   "lab:evaluatedOn": [
+    {
+     "@id": "lab:dataset/nsmc"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/gpt"
+    },
+    {
+     "@id": "lab:concept/subword"
+    },
+    {
+     "@id": "lab:concept/vocabulary"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/compression-ratio"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/tokenization",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "토큰 나누기 (토큰화)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Tokenization",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "글을 모델이 읽을 조각(토큰)으로 자르는 일.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Tokenization-BPE-tutorial/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/tokenization"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/merge-rule",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "합치기 규칙",
+     "@language": "ko"
+    },
+    {
+     "@value": "Merge rule",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "가장 많이 붙어 있는 짝을 고르고, 횟수가 같으면 글에서 먼저 나온 짝을 고른다. 첫 합치기는 i+n(9번).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Tokenization-BPE-tutorial/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/tokenization"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/bpe"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/subword",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "낱말 조각 (서브워드)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Subword unit",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "글자와 낱말 사이 크기의 조각. 처음 보는 morning도 m·o·r·n·ing으로 자를 수 있다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Tokenization-BPE-tutorial/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/tokenization"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/vocabulary",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "사전과 번호",
+     "@language": "ko"
+    },
+    {
+     "@value": "Vocabulary and token ids",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "글자 21 + 합친 조각 30 = 51개. 번호는 만든 순서(in 21번, haru 43번).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Tokenization-BPE-tutorial/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/tokenization"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/token-embedding"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/word-level-tokenization",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "낱말 단위로 자르기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Word-level tokenization",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "낱말 사전으로 자르면 19가지. 철자가 틀린 figurnes는 사전에 없다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Tokenization-BPE-tutorial/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/tokenization"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/char-level-tokenization",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "한 글자씩 자르기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Character-level tokenization",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "글자 수 그대로 177토큰. 줄이 길어진다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Tokenization-BPE-tutorial/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/tokenization"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/bpe"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/utf8-bytes",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "UTF-8 바이트 (한글)",
+     "@language": "ko"
+    },
+    {
+     "@value": "UTF-8 bytes for Hangul",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "한글 13글자 '하루가 피규어를 정리해요'는 UTF-8로 35바이트(한 글자 3바이트).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Tokenization-BPE-tutorial/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/tokenization"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/bpe"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/token-embedding",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "조각 → 숫자 → 벡터",
+     "@language": "ko"
+    },
+    {
+     "@value": "Token to id to vector",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "토큰 번호를 벡터로 바꾼다. 페이지는 함께 나온 횟수(PPMI)를 SVD로 3차원으로 줄인 좌표를 보여 준다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Tokenization-BPE-tutorial/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/word-embedding"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/ppmi-svd",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "PPMI + SVD로 줄인 좌표",
+     "@language": "ko"
+    },
+    {
+     "@value": "PPMI with SVD",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "앞뒤 두 토큰 안에 함께 나온 횟수로 만든 행렬을 SVD로 3차원으로 줄였다(첫 축은 건너뜀).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Tokenization-BPE-tutorial/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/matrix-decompositions"
+    },
+    {
+     "@id": "lab:topic/word-embedding"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/token-embedding"
+    }
+   ]
+  },
+  {
+   "@id": "lab:metric/compression-ratio",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "짧아진 길이",
+     "@language": "ko"
+    },
+    {
+     "@value": "Compression ratio",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "177 ÷ 66 = 2.68, 약 2.7배.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Tokenization-BPE-tutorial/index.html#stage"
+   }
   },
   {
    "@id": "lab:concept/cosine-similarity",
@@ -7614,58 +7996,6 @@
     },
     {
      "@id": "lab:concept/quadratic-cost"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/bpe",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "바이트 쌍 인코딩",
-     "@language": "ko"
-    },
-    {
-     "@value": "byte-pair encoding",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "자주 붙어 나오는 글자 조각을 묶어 토큰을 만드는 방법. 영-독 공용 어휘 약 37000.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/karpathy_method_korean/index.html#c3"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/tokenization"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/transformer"
-    },
-    {
-     "@id": "lab:concept/token"
-    }
-   ],
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:method/rustbpe"
-    }
-   ],
-   "lab:evaluatedOn": [
-    {
-     "@id": "lab:dataset/nsmc"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/gpt"
     }
    ]
   },

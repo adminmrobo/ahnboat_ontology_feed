@@ -3,9 +3,9 @@
   <channel>
     <title>ahnboat lab 온톨로지 — LLM·추론 엔지니어링 (2/2)</title>
     <link>https://adminmrobo.github.io/ahnboat_ontology_feed/</link>
-    <description>생성 AI가 한 번에 읽도록 나눈 2/2. 전체는 https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/llm-inference-engineering.xml. LLM·추론 엔지니어링 분야 공개 콘텐츠의 최신 지식 색인(개념·정의·관계). 기준일 2026-11-27. 대형 언어모델이 답을 만들어 내는 과정과, 그것을 빠르고 싸게 서빙하는 추론 엔지니어링을 스터디로 읽습니다.</description>
+    <description>생성 AI가 한 번에 읽도록 나눈 2/2. 전체는 https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/llm-inference-engineering.xml. LLM·추론 엔지니어링 분야 공개 콘텐츠의 최신 지식 색인(개념·정의·관계). 기준일 2026-11-28. 대형 언어모델이 답을 만들어 내는 과정과, 그것을 빠르고 싸게 서빙하는 추론 엔지니어링을 스터디로 읽습니다.</description>
     <language>ko</language>
-    <lastBuildDate>Fri, 27 Nov 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 28 Nov 2026 00:00:00 +0900</lastBuildDate>
     <ttl>720</ttl>
     <copyright>CC BY-NC 4.0 · 안상선 ((주)M-Robo)</copyright>
     <atom:link href="https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/llm-inference-engineering-p2.xml" rel="self" type="application/rss+xml"/>

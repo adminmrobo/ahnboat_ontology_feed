@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27",
+ "updated": "2026-11-28",
  "base": "https://adminmrobo.github.io/ahnboat_ontology_feed/",
  "all": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/all.xml",
  "site": {
@@ -17,15 +17,15 @@
  },
  "summary": {
   "fields": 8,
-  "contents": 141,
-  "pages": 951,
-  "listed_indexed": 171,
+  "contents": 142,
+  "pages": 952,
+  "listed_indexed": 172,
   "listed": 185,
-  "concepts": 6163,
-  "relations": 7448,
-  "shared": 593,
+  "concepts": 6172,
+  "relations": 7458,
+  "shared": 594,
   "domains": 18,
-  "topic_linked": 1823
+  "topic_linked": 1832
  },
  "fields": [
   {
@@ -100,10 +100,10 @@
    "rack": 4,
    "color": "#2f5f9e",
    "desc": "대형 언어모델이 답을 만들어 내는 과정과, 그것을 빠르고 싸게 서빙하는 추론 엔지니어링을 스터디로 읽습니다.",
-   "contents": 29,
+   "contents": 30,
    "listed": 30,
-   "concepts": 980,
-   "relations": 1175,
+   "concepts": 990,
+   "relations": 1185,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/llm-inference-engineering.xml",
    "parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/llm-inference-engineering-p1.xml",

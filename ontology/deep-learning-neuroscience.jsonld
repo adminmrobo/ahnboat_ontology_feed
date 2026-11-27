@@ -7,7 +7,7 @@
  },
  "@id": "https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/deep-learning-neuroscience.jsonld",
  "dct:title": "ahnboat lab 온톨로지 — 딥러닝·뇌과학",
- "dct:modified": "2026-11-27",
+ "dct:modified": "2026-11-28",
  "dct:license": "https://creativecommons.org/licenses/by-nc/4.0/",
  "dct:creator": "안상선 (Ahn Sangsun)",
  "@graph": [
@@ -13435,6 +13435,40 @@
    ]
   },
   {
+   "@id": "lab:concept/vocabulary",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "사전과 번호",
+     "@language": "ko"
+    },
+    {
+     "@value": "Vocabulary and token ids",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "글자 21 + 합친 조각 30 = 51개. 번호는 만든 순서(in 21번, haru 43번).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/what_is_tensor/W01_word_embedding.html#lv2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/tokenization"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/one-hot-encoding"
+    }
+   ]
+  },
+  {
    "@id": "lab:topic/linear-algebra",
    "@type": [
     "skos:Concept",
@@ -15623,35 +15657,6 @@
    "lab:partOf": [
     {
      "@id": "lab:method/ppmi-svd"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/vocabulary",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "어휘 (V)",
-     "@language": "ko"
-    },
-    {
-     "@value": "vocabulary",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "모델이 아는 단어 목록. 그 개수를 V로 쓴다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/what_is_tensor/W01_word_embedding.html#lv2"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/one-hot-encoding"
     }
    ]
   },

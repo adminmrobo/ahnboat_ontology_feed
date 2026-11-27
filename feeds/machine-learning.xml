@@ -3,9 +3,9 @@
   <channel>
     <title>ahnboat lab 온톨로지 — 머신러닝</title>
     <link>https://adminmrobo.github.io/ahnboat_ontology_feed/</link>
-    <description>머신러닝 분야 공개 콘텐츠의 최신 지식 색인(개념·정의·관계). 기준일 2026-11-27. 데이터에서 규칙을 배우는 머신러닝을 물고기 시장 데이터, 알고리즘 가계도, 모델 채용 위원회로 처음부터 익힙니다.</description>
+    <description>머신러닝 분야 공개 콘텐츠의 최신 지식 색인(개념·정의·관계). 기준일 2026-11-28. 데이터에서 규칙을 배우는 머신러닝을 물고기 시장 데이터, 알고리즘 가계도, 모델 채용 위원회로 처음부터 익힙니다.</description>
     <language>ko</language>
-    <lastBuildDate>Fri, 27 Nov 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 28 Nov 2026 00:00:00 +0900</lastBuildDate>
     <ttl>720</ttl>
     <copyright>CC BY-NC 4.0 · 안상선 ((주)M-Robo)</copyright>
     <atom:link href="https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/machine-learning.xml" rel="self" type="application/rss+xml"/>

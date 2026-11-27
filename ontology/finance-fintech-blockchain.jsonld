@@ -7,7 +7,7 @@
  },
  "@id": "https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/finance-fintech-blockchain.jsonld",
  "dct:title": "ahnboat lab 온톨로지 — 금융·핀테크·블록체인",
- "dct:modified": "2026-11-27",
+ "dct:modified": "2026-11-28",
  "dct:license": "https://creativecommons.org/licenses/by-nc/4.0/",
  "dct:creator": "안상선 (Ahn Sangsun)",
  "@graph": [

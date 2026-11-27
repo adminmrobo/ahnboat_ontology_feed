@@ -3,9 +3,9 @@
   <channel>
     <title>ahnboat lab 온톨로지 — LLM·추론 엔지니어링</title>
     <link>https://adminmrobo.github.io/ahnboat_ontology_feed/</link>
-    <description>LLM·추론 엔지니어링 분야 공개 콘텐츠의 최신 지식 색인(개념·정의·관계). 기준일 2026-11-27. 대형 언어모델이 답을 만들어 내는 과정과, 그것을 빠르고 싸게 서빙하는 추론 엔지니어링을 스터디로 읽습니다.</description>
+    <description>LLM·추론 엔지니어링 분야 공개 콘텐츠의 최신 지식 색인(개념·정의·관계). 기준일 2026-11-28. 대형 언어모델이 답을 만들어 내는 과정과, 그것을 빠르고 싸게 서빙하는 추론 엔지니어링을 스터디로 읽습니다.</description>
     <language>ko</language>
-    <lastBuildDate>Fri, 27 Nov 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 28 Nov 2026 00:00:00 +0900</lastBuildDate>
     <ttl>720</ttl>
     <copyright>CC BY-NC 4.0 · 안상선 ((주)M-Robo)</copyright>
     <atom:link href="https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/llm-inference-engineering.xml" rel="self" type="application/rss+xml"/>
@@ -82,6 +82,42 @@ p2 = 주판봇의 야망과 도장 하나 — 어제의 지적을 오늘 기억�
 - 반씩 나눠 되돌리기 → 한 번에 수정 하나 : 관련
 - 정답 예시 묶음 (골든 아웃풋) → 에이전트 개선 순환 : ~의 일부
 - 통과율의 흔들림 √(p(1−p)/n) → 정답 예시 묶음 (골든 아웃풋) : ~의 일부]]></description>
+    </item>
+    <item>
+      <title>하루의 실험실 EP.05 : 글을 조각으로 — 토큰 나누기(BPE)</title>
+      <link>https://adminmrobo.github.io/Tokenization-BPE-tutorial/</link>
+      <guid isPermaLink="false">ahnboat:Tokenization-BPE-tutorial:68aec4776e</guid>
+      <pubDate>Fri, 27 Nov 2026 13:01:31 +0000</pubDate>
+      <category>LLM·추론 엔지니어링</category>
+      <description><![CDATA[분야: LLM·추론 엔지니어링 · 학문 분야: - · 페이지 1쪽 · 개념 11개 · 관계 10개
+사이트: https://adminmrobo.github.io/Tokenization-BPE-tutorial/
+
+[페이지] 기호 = 제목 — 주소
+p1 = 하루의 실험실 EP.05 : 글을 조각으로 — 토큰 나누기(BPE) — https://adminmrobo.github.io/Tokenization-BPE-tutorial/index.html
+
+[개념] 이름 (유형) — 정의 [출처 페이지 기호#위치]
+- 바이트 쌍 인코딩 (방법) — 자주 붙어 나오는 글자 조각을 묶어 토큰을 만드는 방법. 영-독 공용 어휘 약 37000. [p1#stage]
+- 토큰 나누기 (토큰화) (개념) — 글을 모델이 읽을 조각(토큰)으로 자르는 일. [p1#stage]
+- 합치기 규칙 (개념) — 가장 많이 붙어 있는 짝을 고르고, 횟수가 같으면 글에서 먼저 나온 짝을 고른다. 첫 합치기는 i+n(9번). [p1#stage]
+- 낱말 조각 (서브워드) (개념) — 글자와 낱말 사이 크기의 조각. 처음 보는 morning도 m·o·r·n·ing으로 자를 수 있다. [p1#stage]
+- 사전과 번호 (개념) — 글자 21 + 합친 조각 30 = 51개. 번호는 만든 순서(in 21번, haru 43번). [p1#stage]
+- 낱말 단위로 자르기 (방법) — 낱말 사전으로 자르면 19가지. 철자가 틀린 figurnes는 사전에 없다. [p1#stage]
+- 한 글자씩 자르기 (방법) — 글자 수 그대로 177토큰. 줄이 길어진다. [p1#stage]
+- UTF-8 바이트 (한글) (개념) — 한글 13글자 '하루가 피규어를 정리해요'는 UTF-8로 35바이트(한 글자 3바이트). [p1#stage]
+- 조각 → 숫자 → 벡터 (개념) — 토큰 번호를 벡터로 바꾼다. 페이지는 함께 나온 횟수(PPMI)를 SVD로 3차원으로 줄인 좌표를 보여 준다. [p1#stage]
+- PPMI + SVD로 줄인 좌표 (방법) — 앞뒤 두 토큰 안에 함께 나온 횟수로 만든 행렬을 SVD로 3차원으로 줄였다(첫 축은 건너뜀). [p1#stage]
+- 짧아진 길이 (지표) — 177 ÷ 66 = 2.68, 약 2.7배. [p1#stage]
+
+[관계] A → B, C : 관계
+- 바이트 쌍 인코딩 → 토큰 나누기 (토큰화) : ~의 일부
+- 바이트 쌍 인코딩 → 낱말 단위로 자르기 : 대비
+- 바이트 쌍 인코딩 → 낱말 조각 (서브워드), 사전과 번호 : 먼저 알아야 함
+- 바이트 쌍 인코딩 → 짧아진 길이 : ~로 평가
+- 합치기 규칙 → 바이트 쌍 인코딩 : ~의 일부
+- 사전과 번호 → 조각 → 숫자 → 벡터 : 먼저 알아야 함
+- 한 글자씩 자르기 → 바이트 쌍 인코딩 : 먼저 알아야 함
+- UTF-8 바이트 (한글) → 바이트 쌍 인코딩 : 먼저 알아야 함
+- PPMI + SVD로 줄인 좌표 → 조각 → 숫자 → 벡터 : ~의 일부]]></description>
     </item>
     <item>
       <title>LLM 공식에서 GPT-6까지 · 응용편</title>
@@ -597,7 +633,6 @@ p1 = 카파시의 방법론 — 한국어 데이터로 검증하다 — https://
 - 경사하강법 (방법) — 예측 → 오차 → 책임 나누기 → 반대 방향으로 조금 옮기기를 반복한다. [p1#c1]
 - 다음 단어 맞히기 (개념) — 앞 글을 보고 다음 토큰을 맞히며 배우는 언어모델의 기본 학습. [p1#c2]
 - 어텐션 (개념) — 질의와 키의 맞음 정도로 가중치를 정해 값들을 가중 평균하는 계산. [p1#c4]
-- 바이트 쌍 인코딩 (방법) — 자주 붙어 나오는 글자 조각을 묶어 토큰을 만드는 방법. 영-독 공용 어휘 약 37000. [p1#c3]
 - 자동 미분 엔진(micrograd) (방법) — 약 150줄 파이썬으로 만든, 계산 과정을 기억해 두었다가 역전파를 자동으로 해 주는 엔진. [p1#c1]
 - 감성 분류 (방법) — 리뷰가 긍정인지 부정인지 맞히는 분류. [p1#c1]
 - 바이그램 모델 (방법) — 바로 앞 글자 하나만 보고 다음 글자를 세어서 고르는 가장 단순한 언어모델. [p1#c2]
@@ -614,7 +649,7 @@ p1 = 카파시의 방법론 — 한국어 데이터로 검증하다 — https://
 - 셰익스피어 글 111만 자 (데이터) — 정의 없음 [p1#c4]
 - 영어 이름 32,033개 (데이터) — 정의 없음 [p1#c2]
 - rustbpe(빠른 BPE) (방법) — nanochat이 쓰는, 같은 BPE 방식을 Rust로 빠르게 구현한 토크나이저 학습기. [p1#duel]
-- (이 피드 위쪽에 이미 정의된 개념) GPT, 학습률, 손실(교차 엔트로피), 층별 사전학습
+- (이 피드 위쪽에 이미 정의된 개념) GPT, 학습률, 손실(교차 엔트로피), 층별 사전학습, 바이트 쌍 인코딩
 
 [관계] A → B, C : 관계
 - GPT → 빈 파일부터 다시 짜기 : 먼저 알아야 함

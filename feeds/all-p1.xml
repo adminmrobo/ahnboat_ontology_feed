@@ -5,10 +5,19 @@
     <link>https://adminmrobo.github.io/ahnboat_ontology_feed/</link>
     <description>생성 AI가 한 번에 읽도록 나눈 1/2. 전체는 https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/all.xml.</description>
     <language>ko</language>
-    <lastBuildDate>Fri, 27 Nov 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 28 Nov 2026 00:00:00 +0900</lastBuildDate>
     <ttl>720</ttl>
     <copyright>CC BY-NC 4.0 · 안상선 ((주)M-Robo)</copyright>
     <atom:link href="https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/all-p1.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>로피탈 교실 — 0/0의 정체를 밝히는 수업 · 오리엔테이션</title>
+      <link>https://adminmrobo.github.io/adminmrobo-lhopital_lab/</link>
+      <guid isPermaLink="false">ahnboat:adminmrobo-lhopital_lab:cd6464fb41</guid>
+      <pubDate>Fri, 27 Nov 2026 16:52:24 +0000</pubDate>
+      <category>경제·수학·최적화</category>
+      <description><![CDATA[경제·수학·최적화 · 개념 36개
+개념: 극한 (다가가기), 다가가기 표, 왼쪽 극한과 오른쪽 극한, 대입 판정, 0/0 부정형, 약분으로 극한 구하기, 평균 기울기와 순간 기울기, 국소 선형성 (확대하면 직선), 미분 공식, 접선 근사 (일차 근사), 값의 비 ≈ 기울기의 비, 출발 속도의 비, 로피탈의 정리, 로피탈 계산 절차, 로피탈 ≠ 몫의 미분, 로피탈 반복 적용, 멈춤 규칙, 표로 검산하기, ∞/∞ 부정형, 자라는 빠르기 순서, 로피탈 무한 루프, 0 × ∞ 부정형, 1^∞ 부정형과 e, ∞ − ∞ 부정형, 오용: 부정형이 아닌데 적용, 오용: 멈출 곳을 지나침, 오용: 변신 없이 적용, 오용: 미분한 비의 극한이 없음, 슈톨츠 반례 (g′ = 0 함정), 순환 논리와 미분 불가능 점, 로피탈 정리의 역사, 컴퓨터의 자릿수 잃기, AI의 0 · log 0 = 0 약속, 극한 판정 순서, 기말 쪽지시험, 로피탈 오용 일곱 가지]]></description>
+    </item>
     <item>
       <title>스스로 고치는 AI는 어디까지 왔나 — 재귀적 자기개선(RSI) 기초 정리 · 연구실 해설</title>
       <link>https://adminmrobo.github.io/Recursive-Self-Improvement/</link>
@@ -17,6 +26,15 @@
       <category>LLM·추론 엔지니어링</category>
       <description><![CDATA[LLM·추론 엔지니어링 · 개념 27개
 개념: 사람 승인, 재귀적 자기개선 (RSI), 지능 폭발, 개선 순환 (제안→실행→측정→갱신), 확인 신호의 위계, 모델 붕괴, 하네스, 개선 대상 × 순환이 닫힌 정도, 괴델 머신, 다윈 괴델 머신 (DGM), 보관소 탐색, STaR, Self-Rewarding LM, GUARD · Soft-HURT 관문, 사전학습의 작은 순환들 (801), RSI 버튼 게임, 에이전트 개선 순환, 규칙 파일 (skill.md), 규칙끼리 부딪힐 수 있는 짝 n(n−1)/2, 원칙 + 이유로 규칙 쓰기, 피드백 경로, 피드백 깔때기 p^k, 개선 담당 에이전트, 한 번에 수정 하나, 반씩 나눠 되돌리기, 정답 예시 묶음 (골든 아웃풋), 통과율의 흔들림 √(p(1−p)/n)]]></description>
+    </item>
+    <item>
+      <title>하루의 실험실 EP.05 : 글을 조각으로 — 토큰 나누기(BPE)</title>
+      <link>https://adminmrobo.github.io/Tokenization-BPE-tutorial/</link>
+      <guid isPermaLink="false">ahnboat:Tokenization-BPE-tutorial:68aec4776e</guid>
+      <pubDate>Fri, 27 Nov 2026 13:01:31 +0000</pubDate>
+      <category>LLM·추론 엔지니어링</category>
+      <description><![CDATA[LLM·추론 엔지니어링 · 개념 11개
+개념: 바이트 쌍 인코딩, 토큰 나누기 (토큰화), 합치기 규칙, 낱말 조각 (서브워드), 사전과 번호, 낱말 단위로 자르기, 한 글자씩 자르기, UTF-8 바이트 (한글), 조각 → 숫자 → 벡터, PPMI + SVD로 줄인 좌표, 짧아진 길이]]></description>
     </item>
     <item>
       <title>비용 이론 연구실</title>
@@ -541,15 +559,6 @@
 개념: 분산, 정상분포, 임의보행, 연쇄 법칙, 기댓값과 분산, 표본 경로 (ω 고정), 한 시각의 분포 (t 고정), 확률과정 X(t, ω), 필트레이션 (쌓이는 정보), 적합 과정 (미래 엿보기 금지), 브라운 운동 (잘게 쪼갠 동전 걸음), 독립 정규 증분, 연속이지만 미분 불가능한 경로, √t 법칙, 이차변동 [W]ₜ = t, 조건부 기댓값, 마팅게일 (공정한 게임), W² − t 마팅게일, 리만 합 (보통 적분), 이토 적분 (왼쪽 끝 합), 이토 등거리, 이토 공식 (확률적 연쇄법칙), 이토 덤과 평균 (E[e^W] = e^(t/2)), 확률미분방정식 (표류 + 확산), 오일러-마루야마 (한 걸음씩 풀기), 주가 모형과 평균 회귀 모형, 확률밀도 p(x, t), 포커-플랑크 방정식, 첫 도달 시간, 정지시간, 반사 원리, 도박사의 파산, 선택적 정지 정리와 조건, 경로 → SDE → 밀도 (전체 그림), 아홉 주제의 흐름]]></description>
     </item>
     <item>
-      <title>로피탈 교실 — 0/0의 정체를 밝히는 수업 · 오리엔테이션</title>
-      <link>https://adminmrobo.github.io/adminmrobo-lhopital_lab/</link>
-      <guid isPermaLink="false">ahnboat:adminmrobo-lhopital_lab:cd6464fb41</guid>
-      <pubDate>Tue, 24 Nov 2026 22:23:04 +0000</pubDate>
-      <category>경제·수학·최적화</category>
-      <description><![CDATA[경제·수학·최적화 · 개념 36개
-개념: 극한 (다가가기), 다가가기 표, 왼쪽 극한과 오른쪽 극한, 대입 판정, 0/0 부정형, 약분으로 극한 구하기, 평균 기울기와 순간 기울기, 국소 선형성 (확대하면 직선), 미분 공식, 접선 근사 (일차 근사), 값의 비 ≈ 기울기의 비, 출발 속도의 비, 로피탈의 정리, 로피탈 계산 절차, 로피탈 ≠ 몫의 미분, 로피탈 반복 적용, 멈춤 규칙, 표로 검산하기, ∞/∞ 부정형, 자라는 빠르기 순서, 로피탈 무한 루프, 0 × ∞ 부정형, 1^∞ 부정형과 e, ∞ − ∞ 부정형, 오용: 부정형이 아닌데 적용, 오용: 멈출 곳을 지나침, 오용: 변신 없이 적용, 오용: 미분한 비의 극한이 없음, 슈톨츠 반례 (g′ = 0 함정), 순환 논리와 미분 불가능 점, 로피탈 정리의 역사, 컴퓨터의 자릿수 잃기, AI의 0 · log 0 = 0 약속, 극한 판정 순서, 기말 쪽지시험, 로피탈 오용 일곱 가지]]></description>
-    </item>
-    <item>
       <title>미시경제학 연구실 — 미시경제학 연구실 블로그</title>
       <link>https://adminmrobo.github.io/micro_economics/</link>
       <guid isPermaLink="false">ahnboat:micro_economics:ac1f3ab5c4</guid>
@@ -638,15 +647,6 @@
       <category>머신러닝</category>
       <description><![CDATA[머신러닝 · 개념 29개
 개념: PCA, t-SNE, 정밀도·재현율, 회귀, 분류, 데이터 누수, 정확도, 재현율, 정밀도, 시계열, 탐험, 프롬프트, 로지스틱 회귀 (다항), 혼동 행렬, k-평균, 중심, 표준화, 에이전트, 학습 곡선, 실루엣 점수, 강화학습, 교차검증, 검증 데이터, 점수 규칙(보상), 배포, 정밀도와 재현율, Q-러닝, 시험 데이터, 보상 설계]]></description>
-    </item>
-    <item>
-      <title>알고리즘 패밀리 2부 · 조직원 명부</title>
-      <link>https://adminmrobo.github.io/ML_00_Algorithm-family-build_02/</link>
-      <guid isPermaLink="false">ahnboat:ML_00_Algorithm-family-build_02:3160e2b69e</guid>
-      <pubDate>Tue, 24 Nov 2026 14:16:52 +0000</pubDate>
-      <category>머신러닝</category>
-      <description><![CDATA[머신러닝 · 개념 28개
-개념: 할인율 γ, PPO, PCA, t-SNE, 회귀, 분류, 학습률, SVM, 결정 트리, 프롬프트, 로지스틱 회귀 (다항), 편향, 규제, 오토인코더, 분산, 복원, 자세, KNN, 상태, 랜덤 포레스트, 점수 규칙(보상), 차원 축소 (접기), t-SNE·UMAP, XGBoost, Q-러닝, 배깅, 나이브 베이즈, DQN]]></description>
     </item>
   </channel>
 </rss>

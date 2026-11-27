@@ -1,6 +1,6 @@
 # ahnboat lab 온톨로지 — 경제·수학·최적화 (3/3)
-생성 AI가 한 번에 읽도록 나눈 3/3. 전체는 https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/economics-math-optimization.xml. 경제·수학·최적화 분야 공개 콘텐츠의 최신 지식 색인(개념·정의·관계). 기준일 2026-11-27. 경제학 이론과 경제 연구, 그리고 그 밑바탕인 최적화 모델·좌표 공간·선형대수를 함께 읽습니다. MR = MC에서 라그랑지안·해밀토니안, 벡터와 ∇까지 이어집니다.
-기준: Fri, 27 Nov 2026 00:00:00 +0900 · 라이선스 CC BY-NC 4.0 · 원본 RSS: https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/economics-math-optimization-p3.xml
+생성 AI가 한 번에 읽도록 나눈 3/3. 전체는 https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/economics-math-optimization.xml. 경제·수학·최적화 분야 공개 콘텐츠의 최신 지식 색인(개념·정의·관계). 기준일 2026-11-28. 경제학 이론과 경제 연구, 그리고 그 밑바탕인 최적화 모델·좌표 공간·선형대수를 함께 읽습니다. MR = MC에서 라그랑지안·해밀토니안, 벡터와 ∇까지 이어집니다.
+기준: Sat, 28 Nov 2026 00:00:00 +0900 · 라이선스 CC BY-NC 4.0 · 원본 RSS: https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/economics-math-optimization-p3.xml
 
 
 ## 경제학의 이해

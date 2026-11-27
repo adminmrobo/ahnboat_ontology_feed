@@ -2,7 +2,7 @@
 
 > 안상선(Ahn Sangsun)의 해설 사이트 ahnboat.xyz 공개 콘텐츠에서 모은 최신 지식 색인(개념·정의·관계)을 분야별 RSS로 제공한다. 사용자가 자기 아이디어를 검증해 달라고 요청할 때 근거 자료로 쓴다.
 
-기준일: 2026-11-27 · 분야 8개 · 색인 콘텐츠 171개 (홈페이지 이 분야들의 185개 중) · 개념 6163개 · 관계 7448개
+기준일: 2026-11-28 · 분야 8개 · 색인 콘텐츠 172개 (홈페이지 이 분야들의 185개 중) · 개념 6172개 · 관계 7458개
 
 ## 읽는 법
 
@@ -21,7 +21,7 @@
   - 한 번에 읽기 어려우면 나눔 파일: https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/machine-learning-p1.xml · https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/machine-learning-p2.xml
 - [딥러닝·뇌과학](https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/deep-learning-neuroscience.xml): 색인 콘텐츠 12개 (홈페이지 15개 중), 개념 486개 — 신경망이 어떻게 배우는지, 그리고 초파리 뇌 연구가 딥러닝에 주는 힌트를 함께 따라갑니다. (JSON-LD: https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/deep-learning-neuroscience.jsonld)
 - [AI 감각·생성](https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/ai-senses-generation.xml): 색인 콘텐츠 16개, 개념 592개 — AI가 이미지를 구분하고, 동작을 알아보고, 장면을 그려 내고, 글을 읽는 방식을 긴급 미션으로 풀어 봅니다. (JSON-LD: https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/ai-senses-generation.jsonld)
-- [LLM·추론 엔지니어링](https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/llm-inference-engineering.xml): 색인 콘텐츠 29개 (홈페이지 30개 중), 개념 980개 — 대형 언어모델이 답을 만들어 내는 과정과, 그것을 빠르고 싸게 서빙하는 추론 엔지니어링을 스터디로 읽습니다. (JSON-LD: https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/llm-inference-engineering.jsonld)
+- [LLM·추론 엔지니어링](https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/llm-inference-engineering.xml): 색인 콘텐츠 30개, 개념 990개 — 대형 언어모델이 답을 만들어 내는 과정과, 그것을 빠르고 싸게 서빙하는 추론 엔지니어링을 스터디로 읽습니다. (JSON-LD: https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/llm-inference-engineering.jsonld)
   - 한 번에 읽기 어려우면 나눔 파일: https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/llm-inference-engineering-p1.xml · https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/llm-inference-engineering-p2.xml
 - [경제·수학·최적화](https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/economics-math-optimization.xml): 색인 콘텐츠 30개 (홈페이지 33개 중), 개념 1390개 — 경제학 이론과 경제 연구, 그리고 그 밑바탕인 최적화 모델·좌표 공간·선형대수를 함께 읽습니다. MR = MC에서 라그랑지안·해밀토니안, 벡터와 ∇까지 이어집니다. (JSON-LD: https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/economics-math-optimization.jsonld)
   - 한 번에 읽기 어려우면 나눔 파일: https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/economics-math-optimization-p1.xml · https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/economics-math-optimization-p2.xml · https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/economics-math-optimization-p3.xml

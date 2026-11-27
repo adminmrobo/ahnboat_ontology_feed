@@ -3,9 +3,9 @@
   <channel>
     <title>ahnboat lab 온톨로지 — AI 감각·생성</title>
     <link>https://adminmrobo.github.io/ahnboat_ontology_feed/</link>
-    <description>AI 감각·생성 분야 공개 콘텐츠의 최신 지식 색인(개념·정의·관계). 기준일 2026-11-27. AI가 이미지를 구분하고, 동작을 알아보고, 장면을 그려 내고, 글을 읽는 방식을 긴급 미션으로 풀어 봅니다.</description>
+    <description>AI 감각·생성 분야 공개 콘텐츠의 최신 지식 색인(개념·정의·관계). 기준일 2026-11-28. AI가 이미지를 구분하고, 동작을 알아보고, 장면을 그려 내고, 글을 읽는 방식을 긴급 미션으로 풀어 봅니다.</description>
     <language>ko</language>
-    <lastBuildDate>Fri, 27 Nov 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 28 Nov 2026 00:00:00 +0900</lastBuildDate>
     <ttl>720</ttl>
     <copyright>CC BY-NC 4.0 · 안상선 ((주)M-Robo)</copyright>
     <atom:link href="https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/ai-senses-generation.xml" rel="self" type="application/rss+xml"/>
