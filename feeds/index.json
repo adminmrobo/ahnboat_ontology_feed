@@ -18,14 +18,14 @@
  "summary": {
   "fields": 8,
   "contents": 138,
-  "pages": 936,
+  "pages": 939,
   "listed_indexed": 168,
   "listed": 180,
-  "concepts": 6067,
-  "relations": 7312,
-  "shared": 586,
+  "concepts": 6112,
+  "relations": 7391,
+  "shared": 591,
   "domains": 18,
-  "topic_linked": 1799
+  "topic_linked": 1809
  },
  "fields": [
   {
@@ -38,7 +38,7 @@
    "contents": 17,
    "listed": 17,
    "concepts": 717,
-   "relations": 975,
+   "relations": 980,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/machine-learning.xml",
    "parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/machine-learning-p1.xml",
@@ -61,7 +61,7 @@
    "contents": 12,
    "listed": 15,
    "concepts": 486,
-   "relations": 714,
+   "relations": 717,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/deep-learning-neuroscience.xml",
    "parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/deep-learning-neuroscience.xml"
@@ -82,7 +82,7 @@
    "contents": 16,
    "listed": 16,
    "concepts": 592,
-   "relations": 739,
+   "relations": 740,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/ai-senses-generation.xml",
    "parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/ai-senses-generation.xml"
@@ -102,8 +102,8 @@
    "desc": "대형 언어모델이 답을 만들어 내는 과정과, 그것을 빠르고 싸게 서빙하는 추론 엔지니어링을 스터디로 읽습니다.",
    "contents": 29,
    "listed": 29,
-   "concepts": 911,
-   "relations": 1076,
+   "concepts": 969,
+   "relations": 1160,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/llm-inference-engineering.xml",
    "parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/llm-inference-engineering-p1.xml",
@@ -126,7 +126,7 @@
    "contents": 28,
    "listed": 30,
    "concepts": 1362,
-   "relations": 1385,
+   "relations": 1386,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/economics-math-optimization.xml",
    "parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/economics-math-optimization-p1.xml",
@@ -151,7 +151,7 @@
    "contents": 14,
    "listed": 19,
    "concepts": 799,
-   "relations": 961,
+   "relations": 962,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/finance-fintech-blockchain.xml",
    "parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/finance-fintech-blockchain-p1.xml",
@@ -174,7 +174,7 @@
    "contents": 16,
    "listed": 17,
    "concepts": 1123,
-   "relations": 1210,
+   "relations": 1212,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/statistics-data-basics.xml",
    "parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/statistics-data-basics-p1.xml",
@@ -197,7 +197,7 @@
    "contents": 36,
    "listed": 37,
    "concepts": 1083,
-   "relations": 1247,
+   "relations": 1250,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/applied-ai.xml",
    "parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/applied-ai-p1.xml",

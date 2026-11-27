@@ -688,7 +688,7 @@ p7 = AI(인공지능) x 비즈니스 #1 인슈어테크_02_분류모델_실전 �
       <category>금융·핀테크·블록체인</category>
       <category domain="lab:domain">경영학</category>
       <category domain="lab:domain">머신러닝</category>
-      <description><![CDATA[분야: 금융·핀테크·블록체인 · 학문 분야: 경영학, 머신러닝 · 페이지 8쪽 · 개념 33개 · 관계 16개
+      <description><![CDATA[분야: 금융·핀테크·블록체인 · 학문 분야: 경영학, 머신러닝 · 페이지 8쪽 · 개념 33개 · 관계 17개
 사이트: https://adminmrobo.github.io/insurtech__case_classification_model_01/
 
 [페이지] 기호 = 제목 — 주소
@@ -721,6 +721,7 @@ p8 = AI(인공지능) x 비즈니스 #1 인슈어테크_01_분류모델 — http
 - 정밀도 → 재현율 : 대비
 - SVM → 표준화 : 먼저 알아야 함
 - 표준화 → 혼동 행렬 : 먼저 알아야 함
+- 학습/시험 나누기 → 과적합 : 먼저 알아야 함
 - KNN → SVM : 먼저 알아야 함
 - 임계값 → 혼동 행렬 : ~의 일부
 - 사분위수 → 결측값과 이상치 : ~의 일부

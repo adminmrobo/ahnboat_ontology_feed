@@ -8203,6 +8203,9 @@
    "lab:prerequisiteOf": [
     {
      "@id": "lab:method/logistic-regression"
+    },
+    {
+     "@id": "lab:concept/cross-entropy-loss"
     }
    ]
   },

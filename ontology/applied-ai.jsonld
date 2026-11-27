@@ -5683,6 +5683,9 @@
      "@id": "lab:method/cross-validation"
     },
     {
+     "@id": "lab:concept/overfitting"
+    },
+    {
      "@id": "lab:concept/data-leakage"
     }
    ],
@@ -6596,6 +6599,9 @@
     }
    ],
    "lab:relatedTo": [
+    {
+     "@id": "lab:concept/epoch"
+    },
     {
      "@id": "lab:concept/train-validation-split"
     }
@@ -7769,6 +7775,9 @@
     "@id": "https://adminmrobo.github.io/how_to_make_ai_model_factory_version/classifier.html#w9"
    },
    "lab:topic": [
+    {
+     "@id": "lab:area/llm-training"
+    },
     {
      "@id": "lab:topic/lora"
     }
@@ -10835,6 +10844,9 @@
    "lab:prerequisiteOf": [
     {
      "@id": "lab:method/logistic-regression"
+    },
+    {
+     "@id": "lab:concept/cross-entropy-loss"
     }
    ]
   },
@@ -22683,16 +22695,14 @@
    "lab:partOf": [
     {
      "@id": "lab:method/ab-test"
+    },
+    {
+     "@id": "lab:concept/standard-error"
     }
    ],
    "lab:derivedFrom": [
     {
      "@id": "lab:metric/power"
-    }
-   ],
-   "lab:relatedTo": [
-    {
-     "@id": "lab:concept/standard-error"
     }
    ]
   },
@@ -27152,6 +27162,9 @@
     "@id": "https://adminmrobo.github.io/defense_for_ai_lab/index.html#ch3"
    },
    "lab:topic": [
+    {
+     "@id": "lab:topic/jailbreak-defense"
+    },
     {
      "@id": "lab:topic/prompting"
     }

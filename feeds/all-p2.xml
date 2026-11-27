@@ -10,6 +10,15 @@
     <copyright>CC BY-NC 4.0 · 안상선 ((주)M-Robo)</copyright>
     <atom:link href="https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/all-p2.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Fish Market Data로 쉽게 따라하는 머신러닝</title>
+      <link>https://adminmrobo.github.io/Fish_Market_Data_Machine_Learning/</link>
+      <guid isPermaLink="false">ahnboat:Fish_Market_Data_Machine_Learning:5566b9803f</guid>
+      <pubDate>Tue, 24 Nov 2026 14:16:44 +0000</pubDate>
+      <category>머신러닝</category>
+      <description><![CDATA[머신러닝 · 개념 37개
+개념: 학습률, 과적합, 정확도, 시계열, 퍼셉트론, SVM, Fish Market(도미 35·빙어 14), 결정 트리, 프롬프트, 로지스틱 회귀 (다항), 서포트 벡터, ReLU, MLP, 소프트맥스, 다층 퍼셉트론, 손실, 역전파, 시험 정확도, 규제, 데이터 과학(귀납), 파라미터, 규칙 기반, 가중치, 경사하강법, 평균, 로짓, KNN, 에포크, 시험 세트, SVC, 교차검증, 랜덤 포레스트, 계수 (가중치), 보팅, 체형 비율 (높이÷길이1), k-최근접 이웃, 서포트 벡터 머신]]></description>
+    </item>
+    <item>
       <title>신경망은 틀리면서 배운다</title>
       <link>https://adminmrobo.github.io/deep_learning_00_neural_net_learns/</link>
       <guid isPermaLink="false">ahnboat:deep_learning_00_neural_net_learns:cf6ad2c127</guid>
@@ -496,15 +505,6 @@
 개념: R² (결정계수), 과적합, 격자 탐색, 일차함수 예측식(단순 선형 회귀), 규제, 과소적합, 표준화, 특징, 민감도, 학습/시험 나누기, 5겹 교차검증, 특성공학(PolynomialFeatures), 하이퍼파라미터, 일반화와 과대적합, 계수 (가중치), 라쏘 회귀, 릿지 회귀, 특성 늘리기, 제곱합 묶기, 절댓값 합 묶기, 특성 고르기, 학습 목표, alpha, 훈련-테스트 차이, 농어 56마리]]></description>
     </item>
     <item>
-      <title>LLM 공식에서 GPT-6까지 · 응용편</title>
-      <link>https://adminmrobo.github.io/llm_applied_lab/</link>
-      <guid isPermaLink="false">ahnboat:llm_applied_lab:5281a9c9c0</guid>
-      <pubDate>Sat, 21 Nov 2026 02:21:16 +0000</pubDate>
-      <category>LLM·추론 엔지니어링</category>
-      <description><![CDATA[LLM·추론 엔지니어링 · 개념 24개
-개념: 코사인 유사도, 겹침 점수(내적)와 각도, LLM 혼자 답하기, 키워드 검색, 뜻으로 찾기 (임베딩 검색), 조각 + 상위 k개 검색, 검색 증강 생성 (RAG), 임베딩, 벡터의 길이 (L2 노름), 벡터 DB, 청크 (조각), 조각 겹침, 상위 k개 (top-k), 프롬프트, 환각, 출처 확인, 준비 단계 (색인), 질문 단계, 다음 말 확률, 1등 적중 수, 보낸 문장 수, 가상 회사 안내문 18문장, FAISS, LangChain 검색 묶음]]></description>
-    </item>
-    <item>
       <title>신경망 구조 도감 · 초파리 로봇 대전</title>
       <link>https://adminmrobo.github.io/neural_network_atlas/</link>
       <guid isPermaLink="false">ahnboat:neural_network_atlas:d06a3872c6</guid>
@@ -583,7 +583,7 @@
       <pubDate>Fri, 06 Nov 2026 18:33:31 +0000</pubDate>
       <category>LLM·추론 엔지니어링</category>
       <description><![CDATA[LLM·추론 엔지니어링 · 개념 52개
-개념: 로지스틱 회귀, 시그모이드, RMSE, 과적합, 데이터 누수, 정확도, 재현율, 정밀도, 평균 절대 오차(MAE), 혼동 행렬, 신뢰구간, 불균형 데이터, 학습/시험 나누기, 교차검증, 층화 추출, 분류 모델 채점, 회귀 모델 채점, 실행 기반 채점, 쌍대 선호 평가, 시험지 지키기, 벤치마크, few-shot, LLM 심판, 길이 편향, 위치 편향, 오염, 여러 버전 중 최고만 남기기, 군집 표준오차, F1, pass@k, 정답 대조, Bradley-Terry 점수, Bradley-Terry 모델, MMLU, GPQA, SWE-bench Verified, HumanEval, Chatbot Arena, MT-Bench, LiveBench, GSM8k, GSM1k, 문턱, 개발용·시험용 분리, Wilson 구간, McNemar 검정, 공격 성공률, 과제 해결률, SimpleQA F-score, SimpleQA, HarmBench, Terminal-Bench 2.0]]></description>
+개념: 로지스틱 회귀, 시그모이드, RMSE, 과적합, 데이터 누수, 정확도, 재현율, 정밀도, 평균 절대 오차(MAE), 혼동 행렬, 신뢰구간, 불균형 데이터, 학습/시험 나누기, 교차검증, 층화 추출, 정확히 일치 (EM), 위치 편향, 길이 편향, 분류 모델 채점, 회귀 모델 채점, 실행 기반 채점, 쌍대 선호 평가, 시험지 지키기, 벤치마크, few-shot, LLM 심판, 오염, 여러 버전 중 최고만 남기기, 군집 표준오차, F1, pass@k, Bradley-Terry 점수, Bradley-Terry 모델, MMLU, GPQA, SWE-bench Verified, HumanEval, Chatbot Arena, MT-Bench, LiveBench, GSM8k, GSM1k, 문턱, 개발용·시험용 분리, Wilson 구간, McNemar 검정, 공격 성공률, 과제 해결률, SimpleQA F-score, SimpleQA, HarmBench, Terminal-Bench 2.0]]></description>
     </item>
     <item>
       <title>AI 렌더링 연구실 3부작</title>

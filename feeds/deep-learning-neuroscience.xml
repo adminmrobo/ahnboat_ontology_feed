@@ -253,7 +253,7 @@ p3 = 뉴런 반응 연구실 3부 · 역전파 — https://adminmrobo.github.io/
       <category>딥러닝·뇌과학</category>
       <category domain="lab:domain">딥러닝</category>
       <category domain="lab:domain">뇌과학</category>
-      <description><![CDATA[분야: 딥러닝·뇌과학 · 학문 분야: 딥러닝, 뇌과학 · 페이지 3쪽 · 개념 103개 · 관계 152개
+      <description><![CDATA[분야: 딥러닝·뇌과학 · 학문 분야: 딥러닝, 뇌과학 · 페이지 3쪽 · 개념 103개 · 관계 153개
 사이트: https://adminmrobo.github.io/AI_Model_Review_Fruit_fly_special/
 
 [페이지] 기호 = 제목 — 주소
@@ -459,7 +459,7 @@ p3 = 초파리 특별편 3 마인크래프트 속 초파리 뇌 — 배선도만
 - 기억 + 본능 합류 모형 → 타고난 경로와 배운 경로의 합류 : ~의 일부
 - 기억 + 본능 합류 모형 → 잔차 연결, LoRA, 고정 모델 + 학습된 보정 (어댑터) : analogyOf
 - 기억 + 본능 합류 모형 → 다층 퍼셉트론, LSTM·GRU : 대비
-- 동결된 사전학습 가중치 → 기억 + 본능 합류 모형 : ~의 일부
+- 동결된 사전학습 가중치 → 기억 + 본능 합류 모형, LoRA : ~의 일부
 - 동결된 사전학습 가중치 → 고정 모델 + 학습된 보정 (어댑터) : 먼저 알아야 함
 - 동결된 사전학습 가중치 → 시냅스 수 = 연결 강도 : 관련
 - LoRA → 고정 모델 + 학습된 보정 (어댑터) : 관련

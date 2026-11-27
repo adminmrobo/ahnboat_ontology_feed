@@ -507,6 +507,9 @@
    ],
    "lab:relatedTo": [
     {
+     "@id": "lab:concept/epoch"
+    },
+    {
      "@id": "lab:concept/train-validation-split"
     }
    ]

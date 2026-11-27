@@ -803,6 +803,9 @@
    "lab:prerequisiteOf": [
     {
      "@id": "lab:method/logistic-regression"
+    },
+    {
+     "@id": "lab:concept/cross-entropy-loss"
     }
    ]
   },
@@ -3442,14 +3445,17 @@
      "@id": "lab:concept/underfitting"
     }
    ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/epoch"
+    },
+    {
+     "@id": "lab:concept/train-validation-split"
+    }
+   ],
    "lab:raises": [
     {
      "@id": "lab:concept/double-descent"
-    }
-   ],
-   "lab:relatedTo": [
-    {
-     "@id": "lab:concept/train-validation-split"
     }
    ]
   },
@@ -5774,6 +5780,9 @@
    "lab:partOf": [
     {
      "@id": "lab:method/memory-innate-merge"
+    },
+    {
+     "@id": "lab:method/lora"
     }
    ],
    "lab:prerequisiteOf": [
@@ -5840,6 +5849,9 @@
     "@id": "https://adminmrobo.github.io/AI_Model_Review_Fruit_fly_special/2_fruitfly_memory_retrieval_paper.html#p7"
    },
    "lab:topic": [
+    {
+     "@id": "lab:area/llm-training"
+    },
     {
      "@id": "lab:topic/lora"
     }

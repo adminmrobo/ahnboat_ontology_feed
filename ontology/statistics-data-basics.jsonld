@@ -7965,6 +7965,11 @@
     {
      "@id": "lab:method/knn-vote"
     }
+   ],
+   "lab:raises": [
+    {
+     "@id": "lab:concept/overfitting"
+    }
    ]
   },
   {
@@ -8182,6 +8187,9 @@
     "@id": "https://adminmrobo.github.io/data_to_numbers_lab/04_noise_and_attacks.html#s7"
    },
    "lab:topic": [
+    {
+     "@id": "lab:topic/jailbreak-defense"
+    },
     {
      "@id": "lab:topic/prompting"
     }
@@ -16495,16 +16503,14 @@
    "lab:partOf": [
     {
      "@id": "lab:method/ab-test"
+    },
+    {
+     "@id": "lab:concept/standard-error"
     }
    ],
    "lab:derivedFrom": [
     {
      "@id": "lab:metric/power"
-    }
-   ],
-   "lab:relatedTo": [
-    {
-     "@id": "lab:concept/standard-error"
     }
    ]
   },
@@ -25872,6 +25878,9 @@
     }
    ],
    "lab:partOf": [
+    {
+     "@id": "lab:concept/confidence-interval"
+    },
     {
      "@id": "lab:concept/sampling-distribution"
     }
