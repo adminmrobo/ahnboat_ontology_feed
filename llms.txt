@@ -2,7 +2,7 @@
 
 > 안상선(Ahn Sangsun)의 해설 사이트 ahnboat.xyz 공개 콘텐츠에서 모은 최신 지식 색인(개념·정의·관계)을 분야별 RSS로 제공한다. 사용자가 자기 아이디어를 검증해 달라고 요청할 때 근거 자료로 쓴다.
 
-기준일: 2026-11-27 · 분야 8개 · 색인 콘텐츠 168개 (홈페이지 이 분야들의 180개 중) · 개념 6044개 · 관계 7276개
+기준일: 2026-11-27 · 분야 8개 · 색인 콘텐츠 168개 (홈페이지 이 분야들의 180개 중) · 개념 6067개 · 관계 7312개
 
 ## 읽는 법
 
@@ -17,7 +17,7 @@
 
 ## 분야별 피드
 
-- [머신러닝](https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/machine-learning.xml): 색인 콘텐츠 17개, 개념 702개 — 데이터에서 규칙을 배우는 머신러닝을 물고기 시장 데이터, 알고리즘 가계도, 모델 채용 위원회로 처음부터 익힙니다. (JSON-LD: https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/machine-learning.jsonld)
+- [머신러닝](https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/machine-learning.xml): 색인 콘텐츠 17개, 개념 717개 — 데이터에서 규칙을 배우는 머신러닝을 물고기 시장 데이터, 알고리즘 가계도, 모델 채용 위원회로 처음부터 익힙니다. (JSON-LD: https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/machine-learning.jsonld)
   - 한 번에 읽기 어려우면 나눔 파일: https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/machine-learning-p1.xml · https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/machine-learning-p2.xml
 - [딥러닝·뇌과학](https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/deep-learning-neuroscience.xml): 색인 콘텐츠 12개 (홈페이지 15개 중), 개념 486개 — 신경망이 어떻게 배우는지, 그리고 초파리 뇌 연구가 딥러닝에 주는 힌트를 함께 따라갑니다. (JSON-LD: https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/deep-learning-neuroscience.jsonld)
 - [AI 감각·생성](https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/ai-senses-generation.xml): 색인 콘텐츠 16개, 개념 592개 — AI가 이미지를 구분하고, 동작을 알아보고, 장면을 그려 내고, 글을 읽는 방식을 긴급 미션으로 풀어 봅니다. (JSON-LD: https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/ai-senses-generation.jsonld)
@@ -27,7 +27,7 @@
   - 한 번에 읽기 어려우면 나눔 파일: https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/economics-math-optimization-p1.xml · https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/economics-math-optimization-p2.xml · https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/economics-math-optimization-p3.xml
 - [금융·핀테크·블록체인](https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/finance-fintech-blockchain.xml): 색인 콘텐츠 14개 (홈페이지 19개 중), 개념 799개 — 주식시장 변동성과 가상자산 연구, 블록체인 장부, 인슈어테크 사례, 회계와 기업가치까지 금융 속의 데이터와 AI를 살펴봅니다. (JSON-LD: https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/finance-fintech-blockchain.jsonld)
   - 한 번에 읽기 어려우면 나눔 파일: https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/finance-fintech-blockchain-p1.xml · https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/finance-fintech-blockchain-p2.xml
-- [통계·데이터 기초](https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/statistics-data-basics.xml): 색인 콘텐츠 16개 (홈페이지 17개 중), 개념 1113개 — 확률분포, 추정, 시계열, 베이지안 통계와 파이썬·판다스·데이터베이스·데이터 시각화로 데이터 분석의 기초 체력을 기릅니다. (JSON-LD: https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/statistics-data-basics.jsonld)
+- [통계·데이터 기초](https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/statistics-data-basics.xml): 색인 콘텐츠 16개 (홈페이지 17개 중), 개념 1123개 — 확률분포, 추정, 시계열, 베이지안 통계와 파이썬·판다스·데이터베이스·데이터 시각화로 데이터 분석의 기초 체력을 기릅니다. (JSON-LD: https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/statistics-data-basics.jsonld)
   - 한 번에 읽기 어려우면 나눔 파일: https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/statistics-data-basics-p1.xml · https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/statistics-data-basics-p2.xml
 - [인공지능 응용](https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/applied-ai.xml): 색인 콘텐츠 36개 (홈페이지 37개 중), 개념 1083개 — 제조 공정, 경영·회계, 생성형 AI 업무 활용, 이상탐지처럼 AI를 실제 현장 문제에 적용한 강의와 연구입니다. (JSON-LD: https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/applied-ai.jsonld)
   - 한 번에 읽기 어려우면 나눔 파일: https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/applied-ai-p1.xml · https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/applied-ai-p2.xml

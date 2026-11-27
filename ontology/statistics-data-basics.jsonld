@@ -12,6 +12,3726 @@
  "dct:creator": "안상선 (Ahn Sangsun)",
  "@graph": [
   {
+   "@id": "lab:term/funnel",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "퍼널",
+     "@language": "ko"
+    },
+    {
+     "@value": "funnel",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "노출 → 클릭 → 구매처럼 단계마다 줄어드는 흐름.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w09_midterm-review.html#lv2"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/chain-rule-of-probability"
+    },
+    {
+     "@id": "lab:concept/marketing-charts"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/data-visualization-basics",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "데이터 시각화",
+     "@language": "ko"
+    },
+    {
+     "@value": "data visualization as translation",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "숫자를 눈으로 읽히는 모양으로 옮겨 결론에 빨리 닿게 하는 일.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w01_orientation.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/prompt-to-code-workflow"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/prompt-to-code-workflow",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "프롬프트 기반 시각화 흐름",
+     "@language": "ko"
+    },
+    {
+     "@value": "prompt to code workflow",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "질문·명세·코드·실행·수정·검증 5단계로 생성 AI에게 시각화 코드를 받는 흐름.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w01_orientation.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/data-use-principles"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/data-use-principles",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "데이터 사용 원칙",
+     "@language": "ko"
+    },
+    {
+     "@value": "data use principles",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "공개 데이터로 실습하고, 출처를 적고, 내부 수치를 추정하지 않는다는 원칙.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w01_orientation.html#lv3"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/grading-and-ai-ethics"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/grading-and-ai-ethics",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "평가 비율과 AI 사용 윤리",
+     "@language": "ko"
+    },
+    {
+     "@value": "grading and AI ethics",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "중간 40·기말 40·출석 10·기타 10의 가중평균 평가와 AI 사용 표시 의무.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w01_orientation.html#lv4"
+   }
+  },
+  {
+   "@id": "lab:term/visualization",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "시각화",
+     "@language": "ko"
+    },
+    {
+     "@value": "visualization",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "숫자·범주·관계를 눈으로 읽히는 모양(막대·선·점 등)으로 옮기는 일.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w01_orientation.html#lv1"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/data-visualization-basics"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/prompt",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "프롬프트",
+     "@language": "ko"
+    },
+    {
+     "@value": "prompt",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "AI에게 주는 작업 지시문. 무엇을, 어떤 데이터로, 어떤 모양으로 원하는지 적는다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w01_orientation.html#lv2"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/prompt-to-code-workflow"
+    },
+    {
+     "@id": "lab:concept/good-chart-five"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/google-colab",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "Colab",
+     "@language": "ko"
+    },
+    {
+     "@value": "google colab",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "설치 없이 브라우저에서 파이썬을 실행하는 무료 노트북 도구.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w01_orientation.html#lv2"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/prompt-to-code-workflow"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/readme",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "README",
+     "@language": "ko"
+    },
+    {
+     "@value": "readme",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "결과물과 함께 내는 설명 파일. 데이터 출처, 도구, 프롬프트를 적는다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w01_orientation.html#lv4"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/grading-and-ai-ethics"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/weighted-average",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "가중평균",
+     "@language": "ko"
+    },
+    {
+     "@value": "weighted average",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "항목마다 다른 무게(비율)를 곱해 더한 평균.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w01_orientation.html#lv4"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/grading-and-ai-ethics"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/open-data",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "공개 데이터",
+     "@language": "ko"
+    },
+    {
+     "@value": "open data",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "누구나 출처를 확인하고 내려받을 수 있게 공개된 데이터.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w01_orientation.html#lv3"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/data-use-principles"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/dv_w01-fly",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "질문 → 명세(열·차트·조건) → 코드",
+     "@language": "ko"
+    },
+    {
+     "@value": "option A (fly team)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "city별 amount 합계를 큰 값부터 막대로. 질문이 정해지면 다시 물을 일이 줄어.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w01_orientation.html#duel"
+   },
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/dv_w01-robo"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/dv_w01"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/prompt-to-code-workflow"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/dv_w01-robo",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "도구 세 개 동시에 · “그래프 그려줘”",
+     "@language": "ko"
+    },
+    {
+     "@value": "option B (jupanbot team)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "세 군데서 코드가 오면 하나는 맞겠지! 많을수록 빨라!",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w01_orientation.html#duel"
+   },
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/dv_w01"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/prompt-to-code-workflow"
+    }
+   ]
+  },
+  {
+   "@id": "lab:metric/dv_w01",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "차트 완성까지 다시 물은 횟수 (적을수록 좋음)",
+     "@language": "ko"
+    },
+    {
+     "@value": "duel metric",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w01_orientation.html#duel"
+   }
+  },
+  {
+   "@id": "lab:concept/chart-junk",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "차트 정크와 데이터-잉크 비율",
+     "@language": "ko"
+    },
+    {
+     "@value": "chart junk and data-ink ratio",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "데이터와 상관없는 장식을 지워 데이터를 나타내는 잉크의 몫을 높이는 원칙.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w02_chart-theory.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/zero-baseline"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/zero-baseline",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "축의 정직성",
+     "@language": "ko"
+    },
+    {
+     "@value": "honest axis and zero baseline",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "막대·파이·도넛은 0 또는 합계 100%를 기준으로 그려 비율을 정직하게 보이는 원칙.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w02_chart-theory.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/chart-choice"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/chart-choice",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "목적별 차트 선택",
+     "@language": "ko"
+    },
+    {
+     "@value": "choosing chart by question type",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "질문 낱말로 비교·추세·구성·관계·분포 다섯 갈래를 정하고 차트를 고르는 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w02_chart-theory.html#lv3"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/prompt-elements"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/prompt-elements",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "프롬프트 4요소와 실습 사이클",
+     "@language": "ko"
+    },
+    {
+     "@value": "prompt elements and PRCO cycle",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "역할·데이터·목표·출력 형식 4요소로 프롬프트를 쓰고 P·R·C·O로 확인하는 실습 사이클.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w02_chart-theory.html#lv4"
+   }
+  },
+  {
+   "@id": "lab:term/chart-junk",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "차트 정크",
+     "@language": "ko"
+    },
+    {
+     "@value": "chart junk",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "데이터와 상관없는 시각 요소. 입체 효과, 그림자, 장식 사진, 촘촘한 격자 등.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w02_chart-theory.html#lv1"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/chart-junk"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/data-ink-ratio",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "데이터-잉크 비율",
+     "@language": "ko"
+    },
+    {
+     "@value": "data ink ratio",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "차트 전체 잉크 중 데이터를 나타내는 잉크의 몫. 높을수록 깔끔하다(Tufte).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w02_chart-theory.html#lv1"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/chart-junk"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/histogram",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "히스토그램",
+     "@language": "ko"
+    },
+    {
+     "@value": "histogram",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "값을 구간으로 나눠 구간마다 개수를 막대로 세운 분포 차트.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w02_chart-theory.html#lv3"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/chart-choice"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/scatter-plot",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "산점도",
+     "@language": "ko"
+    },
+    {
+     "@value": "scatter plot",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "두 숫자 변수를 가로·세로 위치로 찍어 함께 변하는지 보는 차트.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w02_chart-theory.html#lv3"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/chart-choice"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/correlation-coefficient",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "상관계수",
+     "@language": "ko"
+    },
+    {
+     "@value": "correlation coefficient",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "두 변수가 함께 움직이는 정도(−1~1). 0.56은 “함께 커지는 경향이 있지만 흩어짐도 크다”.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w02_chart-theory.html#lv4"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/prompt-elements"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/missing-value",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "결측",
+     "@language": "ko"
+    },
+    {
+     "@value": "missing value",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "값이 비어 있는 것. 이 데이터의 amount는 32건(4%)이 비어 있다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w02_chart-theory.html#lv2"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/zero-baseline"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/box-plot",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "상자그림",
+     "@language": "ko"
+    },
+    {
+     "@value": "box plot",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "중앙값, 1·3사분위, 이상치를 한 상자로 요약하는 분포 차트.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w02_chart-theory.html#lv3"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/chart-choice"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/dv_w02-fly",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "정렬 막대",
+     "@language": "ko"
+    },
+    {
+     "@value": "option A (fly team)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "길이는 공통 기준선에서 재니까 작은 차이도 보여. 큰 값부터 줄 세우면 순서가 바로 읽혀.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w02_chart-theory.html#duel"
+   },
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/dv_w02-robo"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/dv_w02"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/chart-choice"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/dv_w02-robo",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "다섯 조각 파이",
+     "@language": "ko"
+    },
+    {
+     "@value": "option B (jupanbot team)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "전체 중 몇 %인지 묻는 거잖아. 파이가 제일 잘 어울려!",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w02_chart-theory.html#duel"
+   },
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/dv_w02"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/chart-choice"
+    }
+   ]
+  },
+  {
+   "@id": "lab:metric/dv_w02",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "차트만 보고 바르게 맞힌 청중 수 (100명 중)",
+     "@language": "ko"
+    },
+    {
+     "@value": "duel metric",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w02_chart-theory.html#duel"
+   }
+  },
+  {
+   "@id": "lab:concept/data-preprocessing",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "데이터 전처리",
+     "@language": "ko"
+    },
+    {
+     "@value": "data preprocessing",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "그리기 전에 표기·형식·빈 값·중복·이상치를 찾고 고치고 확인하는 일.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w03_data-cleaning.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/missing-values"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/missing-values",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "결측치 처리",
+     "@language": "ko"
+    },
+    {
+     "@value": "missing value handling",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "빈 값을 지우기·채우기·두기 중에서 근거에 맞게 고르는 일. 0 채우기는 평균을 낮춘다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w03_data-cleaning.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/ai-preprocessing-check"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/ai-preprocessing-check",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "AI 전처리 검증",
+     "@language": "ko"
+    },
+    {
+     "@value": "verifying AI preprocessing",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "AI의 전처리를 코드로 받고, 행 수를 비교하고, 이상치를 지우기 전에 표시하는 세 규칙.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w03_data-cleaning.html#lv3"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/matplotlib-seaborn"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/matplotlib-seaborn",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "Matplotlib과 Seaborn",
+     "@language": "ko"
+    },
+    {
+     "@value": "matplotlib and seaborn roles",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "Seaborn으로 빠르게 그리고 Matplotlib으로 다듬는 역할 나누기와 상자그림·상관 히트맵·요일×시간 히트맵.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w03_data-cleaning.html#lv4"
+   }
+  },
+  {
+   "@id": "lab:term/preprocessing",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "전처리",
+     "@language": "ko"
+    },
+    {
+     "@value": "preprocessing",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "분석·시각화 전에 데이터의 표기·형식·빈 값·중복·이상치를 손보는 일.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w03_data-cleaning.html#lv1"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/data-preprocessing"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/unique-values",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "고유값",
+     "@language": "ko"
+    },
+    {
+     "@value": "unique values",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "한 열에 나오는 서로 다른 값의 목록. value_counts()로 센다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w03_data-cleaning.html#lv1"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/data-preprocessing"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/median",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "중앙값",
+     "@language": "ko"
+    },
+    {
+     "@value": "median",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "크기순으로 줄 세웠을 때 한가운데 값. 이상치에 덜 흔들린다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w03_data-cleaning.html#lv2"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/missing-values"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/outlier",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "이상치",
+     "@language": "ko"
+    },
+    {
+     "@value": "outlier",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "다른 값들에서 멀리 떨어진 값. 오타일 수도, 실제 사건일 수도 있다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w03_data-cleaning.html#lv3"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/ai-preprocessing-check"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/duplicate",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "중복",
+     "@language": "ko"
+    },
+    {
+     "@value": "duplicate",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "같은 기록(예: 같은 주문번호)이 두 번 이상 적힌 것.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w03_data-cleaning.html#lv3"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/ai-preprocessing-check"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/violin-plot",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "바이올린",
+     "@language": "ko"
+    },
+    {
+     "@value": "violin plot",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "분포의 모양을 좌우 대칭 곡선으로 그려, 상자그림이 놓치는 꼬리까지 보여 주는 차트.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w03_data-cleaning.html#lv4"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/matplotlib-seaborn"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/heatmap",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "히트맵",
+     "@language": "ko"
+    },
+    {
+     "@value": "heatmap",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "행과 열로 된 표의 셀을 값의 크기에 따라 진하기로 칠한 차트.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w03_data-cleaning.html#lv4"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/matplotlib-seaborn"
+    },
+    {
+     "@id": "lab:concept/when-where-howmuch"
+    },
+    {
+     "@id": "lab:concept/question-decides-chart"
+    },
+    {
+     "@id": "lab:concept/correlation"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/dv_w03-fly",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "비워 두기 (통계에서 제외)",
+     "@language": "ko"
+    },
+    {
+     "@value": "option A (fly team)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "모르는 값은 모르는 채로 둬. 아는 768건으로만 평균을 내.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w03_data-cleaning.html#duel"
+   },
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/dv_w03-robo"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/dv_w03"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/missing-values"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/dv_w03-robo",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "0으로 채우기",
+     "@language": "ko"
+    },
+    {
+     "@value": "option B (jupanbot team)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "빈 값이 하나도 없어야 깔끔하지! 800건 전부 쓰자!",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w03_data-cleaning.html#duel"
+   },
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/dv_w03"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/missing-values"
+    }
+   ]
+  },
+  {
+   "@id": "lab:metric/dv_w03",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "진짜 평균과의 평균 오차 (작을수록 좋음)",
+     "@language": "ko"
+    },
+    {
+     "@value": "duel metric",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w03_data-cleaning.html#duel"
+   }
+  },
+  {
+   "@id": "lab:concept/industry-classification",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "산업 분류",
+     "@language": "ko"
+    },
+    {
+     "@value": "industry classification GICS and X-Tech",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "무엇으로 돈을 버는지(GICS)와 어떻게 일하는지(X-Tech) 두 기준으로 산업을 나누는 일.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w04_industry-fintech.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/visual-encoding"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/visual-encoding",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "시각 부호화와 정확도 순위",
+     "@language": "ko"
+    },
+    {
+     "@value": "visual encoding and perceptual accuracy",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "숫자를 위치·길이·각도·면적·색 중 무엇으로 보여 줄지 정하는 일. 위치와 길이가 가장 정확하다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w04_industry-fintech.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/average-trap"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/average-trap",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "차트 선택과 평균의 함정",
+     "@language": "ko"
+    },
+    {
+     "@value": "chart selection and the trap of averages",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "질문에 맞는 차트를 고르고, 파이의 비교 한계와 평균이 분포를 가리는 함정을 피하는 일.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w04_industry-fintech.html#lv3"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/dashboard-ethics"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/dashboard-ethics",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "산업별 대시보드 원칙",
+     "@language": "ko"
+    },
+    {
+     "@value": "industry dashboards and ethics",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "한 화면 한 결론 등 대시보드 5원칙과 발표 전 윤리 8문항 점검.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w04_industry-fintech.html#lv4"
+   }
+  },
+  {
+   "@id": "lab:term/gics",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "GICS",
+     "@language": "ko"
+    },
+    {
+     "@value": "gics",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "MSCI와 S&P가 만든 세계 산업 분류. 섹터 11, 산업그룹 25, 산업 74, 하위산업 163.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w04_industry-fintech.html#lv1"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/industry-classification"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/x-tech",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "X-Tech",
+     "@language": "ko"
+    },
+    {
+     "@value": "x tech",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "기존 산업 X에 기술을 더한 분야의 비공식 이름. 핀테크·에듀테크 등.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w04_industry-fintech.html#lv1"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/industry-classification"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/visual-variable",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "시각 변수",
+     "@language": "ko"
+    },
+    {
+     "@value": "visual variable",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "데이터를 나르는 시각 요소. 위치·크기·모양·밝기·색·방향·질감(베르탱).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w04_industry-fintech.html#lv2"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/visual-encoding"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/diverging-palette",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "발산형",
+     "@language": "ko"
+    },
+    {
+     "@value": "diverging palette",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "가운데 0을 두고 양쪽으로 다른 색이 진해지는 색 배열. 손익·평균 대비에 쓴다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w04_industry-fintech.html#lv2"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/visual-encoding"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/treemap",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "트리맵",
+     "@language": "ko"
+    },
+    {
+     "@value": "treemap",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "전체를 사각형으로 나눠 면적으로 비중과 계층을 함께 보여 주는 차트.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w04_industry-fintech.html#lv3"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/average-trap"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/sankey",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "샌키",
+     "@language": "ko"
+    },
+    {
+     "@value": "sankey",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "흐름의 굵기로 양을 보여 주는 차트. 고객 이동, 예산 흐름 등.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w04_industry-fintech.html#lv3"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/average-trap"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/dashboard",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "대시보드",
+     "@language": "ko"
+    },
+    {
+     "@value": "dashboard",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "여러 차트를 한 화면에 모아 한눈에 보는 판.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w04_industry-fintech.html#lv4"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/dashboard-ethics"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/dv_w04-fly",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "상자그림 + 30분 기준선",
+     "@language": "ko"
+    },
+    {
+     "@value": "option A (fly team)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "평균 말고 모양을 봐. 꼬리에 오래 기다린 사람이 있어.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w04_industry-fintech.html#duel"
+   },
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/dv_w04-robo"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/dv_w04"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/average-trap"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/dv_w04-robo",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "평균 막대 두 개",
+     "@language": "ko"
+    },
+    {
+     "@value": "option B (jupanbot team)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "12분이랑 12분. 숫자가 같으면 같은 거지!",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w04_industry-fintech.html#duel"
+   },
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/dv_w04"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/average-trap"
+    }
+   ]
+  },
+  {
+   "@id": "lab:metric/dv_w04",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "30분 이상 기다린 고객을 찾아낸 수",
+     "@language": "ko"
+    },
+    {
+     "@value": "duel metric",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w04_industry-fintech.html#duel"
+   }
+  },
+  {
+   "@id": "lab:concept/chart-traps",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "좋은 차트 5원칙과 나쁜 차트 5함정",
+     "@language": "ko"
+    },
+    {
+     "@value": "good chart principles and bad chart traps",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "좋은 차트 5원칙과 나쁜 차트 5함정(T1~T5)을 기준으로 사례를 판별하는 일.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w08_midterm-assignment.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/python-viz-libraries"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/python-viz-libraries",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "파이썬 시각화 라이브러리",
+     "@language": "ko"
+    },
+    {
+     "@value": "python visualization libraries",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "Matplotlib·Seaborn·Plotly·pandas/Altair를 결과물이 실릴 곳에 따라 고르는 일.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w08_midterm-assignment.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/run-and-check"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/run-and-check",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "코드 실행과 검수",
+     "@language": "ko"
+    },
+    {
+     "@value": "running and checking chart code",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "프롬프트 4요소로 받은 코드를 직접 실행·캡처하고 줄마다 주석과 세 문장으로 해석하는 일.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w08_midterm-assignment.html#lv3"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/diagnose-flawed-charts"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/diagnose-flawed-charts",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "상황별 차트 선택과 오류 차트 진단",
+     "@language": "ko"
+    },
+    {
+     "@value": "chart choice and diagnosing flawed charts",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "질문 형태로 차트를 고르고, 오류 차트를 잘못된 점·오해·고치는 법 3단계로 진단하는 일.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w08_midterm-assignment.html#lv4"
+   }
+  },
+  {
+   "@id": "lab:term/trap-truncated-axis",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "T1",
+     "@language": "ko"
+    },
+    {
+     "@value": "trap truncated axis",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "축을 0이 아닌 값에서 시작해 작은 차이를 크게 보이게 하는 것.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w08_midterm-assignment.html#lv1"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/chart-traps"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/dual-axis",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "이중축",
+     "@language": "ko"
+    },
+    {
+     "@value": "dual axis",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "왼쪽과 오른쪽에 서로 다른 Y축을 둔 차트. 범위를 조작하면 없는 관계가 보인다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w08_midterm-assignment.html#lv4"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/diagnose-flawed-charts"
+    },
+    {
+     "@id": "lab:concept/reverse-learning"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/confounder",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "숨은 변수",
+     "@language": "ko"
+    },
+    {
+     "@value": "confounder",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "두 변수를 함께 움직이게 하는 제3의 원인. 예: 여름 더위.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w08_midterm-assignment.html#lv4"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/diagnose-flawed-charts"
+    },
+    {
+     "@id": "lab:concept/confounding"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/growth-rate",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "증가율",
+     "@language": "ko"
+    },
+    {
+     "@value": "growth rate",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "(나중 값 − 처음 값) ÷ 처음 값 × 100.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w08_midterm-assignment.html#lv3"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/run-and-check"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/multiple-response",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "복수 응답",
+     "@language": "ko"
+    },
+    {
+     "@value": "multiple response",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "한 사람이 여러 개를 고를 수 있는 설문. 비율의 합이 100%를 넘는다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w08_midterm-assignment.html#lv4"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/diagnose-flawed-charts"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/dv_w08-fly",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "축을 0부터 다시 그리고 읽기",
+     "@language": "ko"
+    },
+    {
+     "@value": "option A (fly team)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "막대가 잘려 있으면 길이는 믿을 수 없어. 0부터 다시 그려.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w08_midterm-assignment.html#duel"
+   },
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/dv_w08-robo"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/dv_w08"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/diagnose-flawed-charts"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/dv_w08-robo",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "보이는 막대 높이 그대로 읽기",
+     "@language": "ko"
+    },
+    {
+     "@value": "option B (jupanbot team)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "C사 막대가 A사의 여섯 배야! 눈은 거짓말 안 해!",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w08_midterm-assignment.html#duel"
+   },
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/dv_w08"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/diagnose-flawed-charts"
+    }
+   ]
+  },
+  {
+   "@id": "lab:metric/dv_w08",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "실제 배율 1.05배와의 차이 (작을수록 좋음)",
+     "@language": "ko"
+    },
+    {
+     "@value": "duel metric",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w08_midterm-assignment.html#duel"
+   }
+  },
+  {
+   "@id": "lab:concept/three-sentences",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "세 문장 해석",
+     "@language": "ko"
+    },
+    {
+     "@value": "what so-what now-what",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "차트마다 관찰(What)·비교(So What)·행동(Now What) 세 문장을 붙여 결정으로 닫는 해석 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w09_midterm-review.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/marketing-charts"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/marketing-charts",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "마케팅 분석 차트",
+     "@language": "ko"
+    },
+    {
+     "@value": "funnel RFM cohort and basket analysis",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "깔때기·RFM·코호트·장바구니 향상도로 마케팅·리테일 데이터를 단계와 고객별로 보는 차트들.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w09_midterm-review.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/retail-vs-finance"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/retail-vs-finance",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "분야별 대시보드 비교",
+     "@language": "ko"
+    },
+    {
+     "@value": "retail vs finance dashboards",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "같은 다섯 원리 위에서 갱신 주기·규제·결정 주체·실패의 대가를 맞추는 분야별 대시보드 비교.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w09_midterm-review.html#lv3"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/kpi-dashboard"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/kpi-dashboard",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "KPI 대시보드 설계와 모형 점검",
+     "@language": "ko"
+    },
+    {
+     "@value": "KPI dashboard design and model checking",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "질문→KPI→차트→프롬프트→검수 5단계로 가게 화면을 설계하고 AI가 만든 계산식을 손계산으로 점검하는 일.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w09_midterm-review.html#lv4"
+   }
+  },
+  {
+   "@id": "lab:term/cohort",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "코호트",
+     "@language": "ko"
+    },
+    {
+     "@value": "cohort",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "같은 시기(예: 같은 달)에 가입한 고객 묶음. 잔존율을 묶음별로 비교한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w09_midterm-review.html#lv2"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/marketing-charts"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/lift",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "향상도",
+     "@language": "ko"
+    },
+    {
+     "@value": "lift",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "두 상품이 우연(독립)보다 몇 배 더 함께 담기는지. 1보다 크면 함께 팔린다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w09_midterm-review.html#lv2"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/marketing-charts"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/conversion-rate",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "전환율",
+     "@language": "ko"
+    },
+    {
+     "@value": "conversion rate",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "앞 단계 인원 중 다음 단계로 넘어간 비율.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w09_midterm-review.html#lv2"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/marketing-charts"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/average-order-value",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "객단가",
+     "@language": "ko"
+    },
+    {
+     "@value": "average order value",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "손님 한 명이 한 번에 쓰는 평균 금액.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w09_midterm-review.html#lv4"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/kpi-dashboard"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/moving-average",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "이동평균",
+     "@language": "ko"
+    },
+    {
+     "@value": "moving average",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "최근 몇 개 값(예: 3개월)의 평균을 차례로 구해 들쭉날쭉함을 줄인 선.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w09_midterm-review.html#lv1"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/three-sentences"
+    },
+    {
+     "@id": "lab:method/feature-engineering"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/dv_w09-fly",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "주말 하루 평균 +56%",
+     "@language": "ko"
+    },
+    {
+     "@value": "option A (fly team)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "토·일 두 날을 평균 내서 비교해. 주말 전체의 성격이 보여.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w09_midterm-review.html#duel"
+   },
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/dv_w09-robo"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/dv_w09"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/retail-vs-finance"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/dv_w09-robo",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "토요일 +62%",
+     "@language": "ko"
+    },
+    {
+     "@value": "option B (jupanbot team)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "가장 높은 날을 보여 줘야 임팩트가 있지! 토요일 820!",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w09_midterm-review.html#duel"
+   },
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/dv_w09"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/retail-vs-finance"
+    }
+   ]
+  },
+  {
+   "@id": "lab:metric/dv_w09",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "계산이 맞고 비교 기준을 밝혔는가",
+     "@language": "ko"
+    },
+    {
+     "@value": "duel metric",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w09_midterm-review.html#duel"
+   }
+  },
+  {
+   "@id": "lab:concept/health-data-check",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "의료 데이터 점검",
+     "@language": "ko"
+    },
+    {
+     "@value": "health data checking and BMI",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "그리기 전에 해상도·이상치·기준선·해석의 한계를 의심하고 BMI 같은 파생 변수를 만드는 일.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w10_healthcare.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/clinical-thresholds"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/clinical-thresholds",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "기준선이 있는 분포 읽기",
+     "@language": "ko"
+    },
+    {
+     "@value": "comparison and distribution with clinical thresholds",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "정렬·0축·평균선으로 비교하고, 히스토그램에 임상 기준선을 그어 평균이 숨기는 꼬리를 보는 일.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w10_healthcare.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/confounding"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/confounding",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "상관과 숨은 변수",
+     "@language": "ko"
+    },
+    {
+     "@value": "correlation and confounding by age",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "두 변수의 관계를 숨은 변수(연령)로 나눠 다시 보고, 인과 대신 관계만 말하는 일.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w10_healthcare.html#lv3"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/reverse-learning"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/reverse-learning",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "구성·시계열과 함정 재현",
+     "@language": "ko"
+    },
+    {
+     "@value": "composition time series and reproducing traps",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "조건부 파이와 100% 누적 막대, 이중축 대신 두 패널, 나쁜 차트를 일부러 만들어 진단하는 역방향 학습.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w10_healthcare.html#lv4"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/app-prompt-rules"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/app-prompt-rules",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "앱 만들기 프롬프트 규칙",
+     "@language": "ko"
+    },
+    {
+     "@value": "prompt rules for a beginner-readable Colab app",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "데이터 일부 기억시키기·업로드 구조·영어 차트와 중한 주석·들여쓰기/함수/for문 금지로 처음 배우는 사람이 읽는 Colab 코드를 받는 프롬프트 규칙.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w10_healthcare.html#lv5"
+   }
+  },
+  {
+   "@id": "lab:term/bmi",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "BMI",
+     "@language": "ko"
+    },
+    {
+     "@value": "bmi",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "체중(kg) ÷ 키(m)². 이 수업에서는 25 이상을 비만으로 분류.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w10_healthcare.html#lv1"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/health-data-check"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/fasting-glucose",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "공복혈당",
+     "@language": "ko"
+    },
+    {
+     "@value": "fasting glucose",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "식사 전 혈당(mg/dL). 100부터 공복혈당장애, 126 이상 당뇨 의심(이 수업의 기준선).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w10_healthcare.html#lv2"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/clinical-thresholds"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/reference-line",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "기준선",
+     "@language": "ko"
+    },
+    {
+     "@value": "reference line",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "차트에 그어 비교 기준을 보여 주는 선. 임상 기준값, 평균 등.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w10_healthcare.html#lv2"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/clinical-thresholds"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/small-multiples",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "small multiples",
+     "@language": "ko"
+    },
+    {
+     "@value": "small multiples",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "같은 축의 작은 차트를 그룹별로 나란히 놓아 비교하는 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w10_healthcare.html#lv3"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/confounding"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/codebook",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "코드표",
+     "@language": "ko"
+    },
+    {
+     "@value": "codebook",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "숫자 코드(예: 시도 11)를 이름(서울)으로 바꾸는 표.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w10_healthcare.html#lv1"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/health-data-check"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/dv_w10-fly",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "히스토그램 + 기준선 126",
+     "@language": "ko"
+    },
+    {
+     "@value": "option A (fly team)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "평균 말고 꼬리를 세. 126 오른쪽이 몇 명이야?",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w10_healthcare.html#duel"
+   },
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/dv_w10-robo"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/dv_w10"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/clinical-thresholds"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/dv_w10-robo",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "평균 한 줄",
+     "@language": "ko"
+    },
+    {
+     "@value": "option B (jupanbot team)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "평균 93.9! 기준 아래니까 다들 괜찮아!",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w10_healthcare.html#duel"
+   },
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/dv_w10"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/clinical-thresholds"
+    }
+   ]
+  },
+  {
+   "@id": "lab:metric/dv_w10",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "찾아낸 재검 대상 인원",
+     "@language": "ko"
+    },
+    {
+     "@value": "duel metric",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w10_healthcare.html#duel"
+   }
+  },
+  {
+   "@id": "lab:concept/when-where-howmuch",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "시간·장소·크기로 읽기",
+     "@language": "ko"
+    },
+    {
+     "@value": "when where how much",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "시간·장소·크기(언제·어디서·얼마나)로 데이터를 읽고 질문의 핵심 동사로 차트를 고르는 일.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w11_smartcity-logistics.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/prompt-chain"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/prompt-chain",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "프롬프트 사슬",
+     "@language": "ko"
+    },
+    {
+     "@value": "prompt chaining",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "역할·데이터·요청·조건 네 요소로 한 번에 하나씩, 같은 대화창에서 다섯 번 이어 묻는 프롬프트 사슬.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w11_smartcity-logistics.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/weekday-hour-heatmap"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/weekday-hour-heatmap",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "시간 교차 히트맵",
+     "@language": "ko"
+    },
+    {
+     "@value": "weekday by hour heatmap",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "두 가지가 겹치는 시간 패턴을 요일×시간 히트맵으로 보고, 답하는 제목·단위·주석 하나로 다듬는 일.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w11_smartcity-logistics.html#lv3"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/pareto-chart"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/pareto-chart",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "파레토 차트",
+     "@language": "ko"
+    },
+    {
+     "@value": "pareto chart for delay causes",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "지연된 건만 골라 원인을 큰 것부터 세우고 누적 비율 선을 겹쳐 개선 우선순위를 정하는 차트.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w11_smartcity-logistics.html#lv4"
+   }
+  },
+  {
+   "@id": "lab:term/pareto-chart",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "파레토",
+     "@language": "ko"
+    },
+    {
+     "@value": "pareto chart",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "원인을 큰 것부터 왼쪽에 세운 막대에 누적 비율 선을 겹친 차트.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w11_smartcity-logistics.html#lv4"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/pareto-chart"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/cumulative-share",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "누적 비율",
+     "@language": "ko"
+    },
+    {
+     "@value": "cumulative share",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "앞에서부터 더해 간 몫이 전체의 몇 %인지.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w11_smartcity-logistics.html#lv4"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/pareto-chart"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/prompt-chaining",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "프롬프트 사슬",
+     "@language": "ko"
+    },
+    {
+     "@value": "prompt chaining",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "한 대화창에서 한 번에 하나씩, 앞 결과를 보고 이어 묻는 방식.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w11_smartcity-logistics.html#lv2"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/prompt-chain"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/bubble-map",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "버블 지도",
+     "@language": "ko"
+    },
+    {
+     "@value": "bubble map",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "장소마다 원을 놓고 값이 클수록 원을 크게 그린 지도.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w11_smartcity-logistics.html#lv4"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/pareto-chart"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/annotation",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "주석",
+     "@language": "ko"
+    },
+    {
+     "@value": "annotation",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "차트 위에 붙이는 짧은 설명 글. 가장 중요한 값 한 곳에만 단다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w11_smartcity-logistics.html#lv3"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/weekday-hour-heatmap"
+    },
+    {
+     "@id": "lab:concept/good-chart-five"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/dv_w11-fly",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "다섯 번 이어 묻기",
+     "@language": "ko"
+    },
+    {
+     "@value": "option A (fly team)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "한 번에 하나. 결과를 보고 다음을 물어.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w11_smartcity-logistics.html#duel"
+   },
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/dv_w11-robo"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/dv_w11"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/prompt-chain"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/dv_w11-robo",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "한 번에 일곱 개",
+     "@language": "ko"
+    },
+    {
+     "@value": "option B (jupanbot team)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "한 방에 끝내야 빠르지! 일곱 개 다 넣었어!",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w11_smartcity-logistics.html#duel"
+   },
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/dv_w11"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/prompt-chain"
+    }
+   ]
+  },
+  {
+   "@id": "lab:metric/dv_w11",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "일곱 요청 중 반영된 개수",
+     "@language": "ko"
+    },
+    {
+     "@value": "duel metric",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w11_smartcity-logistics.html#duel"
+   }
+  },
+  {
+   "@id": "lab:concept/dashboard-filter",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "대시보드와 필터",
+     "@language": "ko"
+    },
+    {
+     "@value": "dashboard and linked filters",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "차트 셋을 필터 하나로 묶어 함께 움직이게 하고 질문에 답하는 제목을 단 화면.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w12_ai-studio-dashboard.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/tool-split"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/tool-split",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "도구 나누기와 대시보드 사슬",
+     "@language": "ko"
+    },
+    {
+     "@value": "tool split and dashboard prompt chain",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "묻고 답하기와 차트 하나는 Qwen, 여러 부품이 함께 움직이는 화면은 Google AI Studio로 나눠 다섯 번 이어 묻는 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w12_ai-studio-dashboard.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/industry-dashboards"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/industry-dashboards",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "산업별 대시보드",
+     "@language": "ko"
+    },
+    {
+     "@value": "industry dashboards healthcare medical fintech",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "헬스케어·의료 데이터·핀테크에서 보는 사람에 따라 차트와 필터를 고르는 산업별 대시보드.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w12_ai-studio-dashboard.html#lv3"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/answering-title"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/answering-title",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "답하는 제목",
+     "@language": "ko"
+    },
+    {
+     "@value": "titles that answer the question",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "“무엇에 대한 화면” 대신 “무엇이 일어났나”를 말하는 제목으로 판을 결정으로 끝내는 일.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w12_ai-studio-dashboard.html#lv4"
+   }
+  },
+  {
+   "@id": "lab:term/filter",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "필터",
+     "@language": "ko"
+    },
+    {
+     "@value": "filter",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "보고 싶은 것만 골라 보는 단추. 누르면 화면 전체가 다시 그려진다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w12_ai-studio-dashboard.html#lv1"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/dashboard-filter"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/google-ai-studio",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "Google AI Studio",
+     "@language": "ko"
+    },
+    {
+     "@value": "google ai studio",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "구글의 생성 AI 작업 화면. 여러 부품이 함께 움직이는 화면을 만들 때 쓴다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w12_ai-studio-dashboard.html#lv2"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/tool-split"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/gauge",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "게이지",
+     "@language": "ko"
+    },
+    {
+     "@value": "gauge",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "목표 대비 달성률을 바늘이나 막대 하나로 보여 주는 차트.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w12_ai-studio-dashboard.html#lv3"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/industry-dashboards"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/anomalous-transaction",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "이상 거래",
+     "@language": "ko"
+    },
+    {
+     "@value": "anomalous transaction",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "평소 패턴과 확실히 다른 거래. 사기라는 판정이 아니라 확인할 후보.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w12_ai-studio-dashboard.html#lv3"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/industry-dashboards"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/achievement-rate",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "달성률",
+     "@language": "ko"
+    },
+    {
+     "@value": "achievement rate",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "실제 값 ÷ 목표 값 × 100.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w12_ai-studio-dashboard.html#lv3"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/industry-dashboards"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/dv_w12-fly",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "차트 셋 + 필터 하나",
+     "@language": "ko"
+    },
+    {
+     "@value": "option A (fly team)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "“내과만”이면 필터를 한 번 누르면 돼. 세 차트가 다 내과로 바뀌어.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w12_ai-studio-dashboard.html#duel"
+   },
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/dv_w12-robo"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/dv_w12"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/dashboard-filter"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/dv_w12-robo",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "필터 없는 차트 스무 장",
+     "@language": "ko"
+    },
+    {
+     "@value": "option B (jupanbot team)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "스무 장이면 없는 게 없지! 다 들어 있어!",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w12_ai-studio-dashboard.html#duel"
+   },
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/dv_w12"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/dashboard-filter"
+    }
+   ]
+  },
+  {
+   "@id": "lab:metric/dv_w12",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "3분 안에 답한 질문 수 (5개 중)",
+     "@language": "ko"
+    },
+    {
+     "@value": "duel metric",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w12_ai-studio-dashboard.html#duel"
+   }
+  },
+  {
+   "@id": "lab:concept/question-decides-chart",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "질문으로 차트 고르기",
+     "@language": "ko"
+    },
+    {
+     "@value": "question decides the chart",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "차트를 먼저 고르지 않고, 질문 문장 속 낱말(변했어·가장·비율·겹치는 곳)로 선·막대·도넛·히트맵을 고르는 일.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w13_qwen-prompt-chain-lab.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/good-chart-five"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/good-chart-five",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "좋은 차트 다섯 조건",
+     "@language": "ko"
+    },
+    {
+     "@value": "five marks of a good chart",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "제목이 답한다·축 이름과 단위·색 세 가지 이내·주석 한 곳·출처와 기간 — 프롬프트의 [조건]으로 그대로 쓰는 좋은 차트의 다섯 조건.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w13_qwen-prompt-chain-lab.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/prompt-chain-p1-p5"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/prompt-chain-p1-p5",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "프롬프트 사슬 P1~P5",
+     "@language": "ko"
+    },
+    {
+     "@value": "prompt chain P1 to P5",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "데이터 알아보기·질문 정하기·첫 차트·다듬기·해석하기를 같은 대화창에서 한 번에 하나씩 이어 묻는 다섯 단계.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w13_qwen-prompt-chain-lab.html#lv3"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/count-vs-revenue"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/count-vs-revenue",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "측정 기준과 순위",
+     "@language": "ko"
+    },
+    {
+     "@value": "count versus revenue ranking",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "같은 데이터라도 건수로 세느냐 금액으로 세느냐에 따라 순위가 바뀌므로, 질문이 측정 기준을 정한다는 것.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w13_qwen-prompt-chain-lab.html#lv4"
+   }
+  },
+  {
+   "@id": "lab:term/follow-up-prompting",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "이어 묻기",
+     "@language": "ko"
+    },
+    {
+     "@value": "follow up prompting",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "앞 답변 위에 다음 질문을 얹는 것. 같은 대화창에서 한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w13_qwen-prompt-chain-lab.html#lv3"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/prompt-chain-p1-p5"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/reproducibility",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "재현성",
+     "@language": "ko"
+    },
+    {
+     "@value": "reproducibility",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "같은 요청을 다시 했을 때 같은 결과가 나오는 성질. 조건을 적어야 생긴다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w13_qwen-prompt-chain-lab.html#lv2"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/good-chart-five"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/unit-10k-won",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "만 원",
+     "@language": "ko"
+    },
+    {
+     "@value": "unit 10k won",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "원 단위 금액을 10,000으로 나눠 읽기 쉽게 줄인 단위.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w13_qwen-prompt-chain-lab.html#lv4"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/count-vs-revenue"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/dv_w13-fly",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "네 요소와 조건 다섯",
+     "@language": "ko"
+    },
+    {
+     "@value": "option A (fly team)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "빈자리를 남기지 마. 남기면 AI가 짐작으로 채워.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w13_qwen-prompt-chain-lab.html#duel"
+   },
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/dv_w13-robo"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/dv_w13"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/good-chart-five"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/dv_w13-robo",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "“예쁘게” 한 줄",
+     "@language": "ko"
+    },
+    {
+     "@value": "option B (jupanbot team)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "예쁘게라고 했으니 알아서 예쁘게 해 주겠지!",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w13_qwen-prompt-chain-lab.html#duel"
+   },
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/dv_w13"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/good-chart-five"
+    }
+   ]
+  },
+  {
+   "@id": "lab:metric/dv_w13",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "좋은 차트 다섯 조건 중 갖춘 개수",
+     "@language": "ko"
+    },
+    {
+     "@value": "duel metric",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w13_qwen-prompt-chain-lab.html#duel"
+   }
+  },
+  {
    "@id": "lab:concept/database",
    "@type": [
     "skos:Concept",
@@ -12458,3426 +16178,6 @@
    }
   },
   {
-   "@id": "lab:term/funnel",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "퍼널",
-     "@language": "ko"
-    },
-    {
-     "@value": "funnel",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "노출 → 클릭 → 구매처럼 단계마다 줄어드는 흐름.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w09_midterm-review.html#lv2"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/chain-rule-of-probability"
-    },
-    {
-     "@id": "lab:concept/marketing-charts"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/data-visualization-basics",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "데이터 시각화",
-     "@language": "ko"
-    },
-    {
-     "@value": "data visualization as translation",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "숫자를 눈으로 읽히는 모양으로 옮겨 결론에 빨리 닿게 하는 일.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w01_orientation.html#lv1"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/prompt-to-code-workflow"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/prompt-to-code-workflow",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "프롬프트 기반 시각화 흐름",
-     "@language": "ko"
-    },
-    {
-     "@value": "prompt to code workflow",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "질문·명세·코드·실행·수정·검증 5단계로 생성 AI에게 시각화 코드를 받는 흐름.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w01_orientation.html#lv2"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/data-use-principles"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/data-use-principles",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "데이터 사용 원칙",
-     "@language": "ko"
-    },
-    {
-     "@value": "data use principles",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "공개 데이터로 실습하고, 출처를 적고, 내부 수치를 추정하지 않는다는 원칙.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w01_orientation.html#lv3"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/grading-and-ai-ethics"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/grading-and-ai-ethics",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "평가 비율과 AI 사용 윤리",
-     "@language": "ko"
-    },
-    {
-     "@value": "grading and AI ethics",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "중간 40·기말 40·출석 10·기타 10의 가중평균 평가와 AI 사용 표시 의무.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w01_orientation.html#lv4"
-   }
-  },
-  {
-   "@id": "lab:term/visualization",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "시각화",
-     "@language": "ko"
-    },
-    {
-     "@value": "visualization",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "숫자·범주·관계를 눈으로 읽히는 모양(막대·선·점 등)으로 옮기는 일.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w01_orientation.html#lv1"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/data-visualization-basics"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/prompt",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "프롬프트",
-     "@language": "ko"
-    },
-    {
-     "@value": "prompt",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "AI에게 주는 작업 지시문. 무엇을, 어떤 데이터로, 어떤 모양으로 원하는지 적는다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w01_orientation.html#lv2"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/prompt-to-code-workflow"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/google-colab",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "Colab",
-     "@language": "ko"
-    },
-    {
-     "@value": "google colab",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "설치 없이 브라우저에서 파이썬을 실행하는 무료 노트북 도구.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w01_orientation.html#lv2"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/prompt-to-code-workflow"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/readme",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "README",
-     "@language": "ko"
-    },
-    {
-     "@value": "readme",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "결과물과 함께 내는 설명 파일. 데이터 출처, 도구, 프롬프트를 적는다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w01_orientation.html#lv4"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/grading-and-ai-ethics"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/weighted-average",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "가중평균",
-     "@language": "ko"
-    },
-    {
-     "@value": "weighted average",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "항목마다 다른 무게(비율)를 곱해 더한 평균.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w01_orientation.html#lv4"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/grading-and-ai-ethics"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/open-data",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "공개 데이터",
-     "@language": "ko"
-    },
-    {
-     "@value": "open data",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "누구나 출처를 확인하고 내려받을 수 있게 공개된 데이터.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w01_orientation.html#lv3"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/data-use-principles"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/dv_w01-fly",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "질문 → 명세(열·차트·조건) → 코드",
-     "@language": "ko"
-    },
-    {
-     "@value": "option A (fly team)",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "city별 amount 합계를 큰 값부터 막대로. 질문이 정해지면 다시 물을 일이 줄어.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w01_orientation.html#duel"
-   },
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:method/dv_w01-robo"
-    }
-   ],
-   "lab:evaluatedBy": [
-    {
-     "@id": "lab:metric/dv_w01"
-    }
-   ],
-   "lab:relatedTo": [
-    {
-     "@id": "lab:concept/prompt-to-code-workflow"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/dv_w01-robo",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "도구 세 개 동시에 · “그래프 그려줘”",
-     "@language": "ko"
-    },
-    {
-     "@value": "option B (jupanbot team)",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "세 군데서 코드가 오면 하나는 맞겠지! 많을수록 빨라!",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w01_orientation.html#duel"
-   },
-   "lab:evaluatedBy": [
-    {
-     "@id": "lab:metric/dv_w01"
-    }
-   ],
-   "lab:relatedTo": [
-    {
-     "@id": "lab:concept/prompt-to-code-workflow"
-    }
-   ]
-  },
-  {
-   "@id": "lab:metric/dv_w01",
-   "@type": [
-    "skos:Concept",
-    "lab:Metric"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "차트 완성까지 다시 물은 횟수 (적을수록 좋음)",
-     "@language": "ko"
-    },
-    {
-     "@value": "duel metric",
-     "@language": "en"
-    }
-   ],
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w01_orientation.html#duel"
-   }
-  },
-  {
-   "@id": "lab:concept/chart-junk",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "차트 정크와 데이터-잉크 비율",
-     "@language": "ko"
-    },
-    {
-     "@value": "chart junk and data-ink ratio",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "데이터와 상관없는 장식을 지워 데이터를 나타내는 잉크의 몫을 높이는 원칙.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w02_chart-theory.html#lv1"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/zero-baseline"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/zero-baseline",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "축의 정직성",
-     "@language": "ko"
-    },
-    {
-     "@value": "honest axis and zero baseline",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "막대·파이·도넛은 0 또는 합계 100%를 기준으로 그려 비율을 정직하게 보이는 원칙.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w02_chart-theory.html#lv2"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/chart-choice"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/chart-choice",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "목적별 차트 선택",
-     "@language": "ko"
-    },
-    {
-     "@value": "choosing chart by question type",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "질문 낱말로 비교·추세·구성·관계·분포 다섯 갈래를 정하고 차트를 고르는 방법.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w02_chart-theory.html#lv3"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/prompt-elements"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/prompt-elements",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "프롬프트 4요소와 실습 사이클",
-     "@language": "ko"
-    },
-    {
-     "@value": "prompt elements and PRCO cycle",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "역할·데이터·목표·출력 형식 4요소로 프롬프트를 쓰고 P·R·C·O로 확인하는 실습 사이클.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w02_chart-theory.html#lv4"
-   }
-  },
-  {
-   "@id": "lab:term/chart-junk",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "차트 정크",
-     "@language": "ko"
-    },
-    {
-     "@value": "chart junk",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "데이터와 상관없는 시각 요소. 입체 효과, 그림자, 장식 사진, 촘촘한 격자 등.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w02_chart-theory.html#lv1"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/chart-junk"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/data-ink-ratio",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "데이터-잉크 비율",
-     "@language": "ko"
-    },
-    {
-     "@value": "data ink ratio",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "차트 전체 잉크 중 데이터를 나타내는 잉크의 몫. 높을수록 깔끔하다(Tufte).",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w02_chart-theory.html#lv1"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/chart-junk"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/histogram",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "히스토그램",
-     "@language": "ko"
-    },
-    {
-     "@value": "histogram",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "값을 구간으로 나눠 구간마다 개수를 막대로 세운 분포 차트.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w02_chart-theory.html#lv3"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/chart-choice"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/scatter-plot",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "산점도",
-     "@language": "ko"
-    },
-    {
-     "@value": "scatter plot",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "두 숫자 변수를 가로·세로 위치로 찍어 함께 변하는지 보는 차트.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w02_chart-theory.html#lv3"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/chart-choice"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/correlation-coefficient",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "상관계수",
-     "@language": "ko"
-    },
-    {
-     "@value": "correlation coefficient",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "두 변수가 함께 움직이는 정도(−1~1). 0.56은 “함께 커지는 경향이 있지만 흩어짐도 크다”.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w02_chart-theory.html#lv4"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/prompt-elements"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/missing-value",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "결측",
-     "@language": "ko"
-    },
-    {
-     "@value": "missing value",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "값이 비어 있는 것. 이 데이터의 amount는 32건(4%)이 비어 있다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w02_chart-theory.html#lv2"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/zero-baseline"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/box-plot",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "상자그림",
-     "@language": "ko"
-    },
-    {
-     "@value": "box plot",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "중앙값, 1·3사분위, 이상치를 한 상자로 요약하는 분포 차트.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w02_chart-theory.html#lv3"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/chart-choice"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/dv_w02-fly",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "정렬 막대",
-     "@language": "ko"
-    },
-    {
-     "@value": "option A (fly team)",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "길이는 공통 기준선에서 재니까 작은 차이도 보여. 큰 값부터 줄 세우면 순서가 바로 읽혀.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w02_chart-theory.html#duel"
-   },
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:method/dv_w02-robo"
-    }
-   ],
-   "lab:evaluatedBy": [
-    {
-     "@id": "lab:metric/dv_w02"
-    }
-   ],
-   "lab:relatedTo": [
-    {
-     "@id": "lab:concept/chart-choice"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/dv_w02-robo",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "다섯 조각 파이",
-     "@language": "ko"
-    },
-    {
-     "@value": "option B (jupanbot team)",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "전체 중 몇 %인지 묻는 거잖아. 파이가 제일 잘 어울려!",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w02_chart-theory.html#duel"
-   },
-   "lab:evaluatedBy": [
-    {
-     "@id": "lab:metric/dv_w02"
-    }
-   ],
-   "lab:relatedTo": [
-    {
-     "@id": "lab:concept/chart-choice"
-    }
-   ]
-  },
-  {
-   "@id": "lab:metric/dv_w02",
-   "@type": [
-    "skos:Concept",
-    "lab:Metric"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "차트만 보고 바르게 맞힌 청중 수 (100명 중)",
-     "@language": "ko"
-    },
-    {
-     "@value": "duel metric",
-     "@language": "en"
-    }
-   ],
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w02_chart-theory.html#duel"
-   }
-  },
-  {
-   "@id": "lab:concept/data-preprocessing",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "데이터 전처리",
-     "@language": "ko"
-    },
-    {
-     "@value": "data preprocessing",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "그리기 전에 표기·형식·빈 값·중복·이상치를 찾고 고치고 확인하는 일.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w03_data-cleaning.html#lv1"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/missing-values"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/missing-values",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "결측치 처리",
-     "@language": "ko"
-    },
-    {
-     "@value": "missing value handling",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "빈 값을 지우기·채우기·두기 중에서 근거에 맞게 고르는 일. 0 채우기는 평균을 낮춘다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w03_data-cleaning.html#lv2"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/ai-preprocessing-check"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/ai-preprocessing-check",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "AI 전처리 검증",
-     "@language": "ko"
-    },
-    {
-     "@value": "verifying AI preprocessing",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "AI의 전처리를 코드로 받고, 행 수를 비교하고, 이상치를 지우기 전에 표시하는 세 규칙.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w03_data-cleaning.html#lv3"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/matplotlib-seaborn"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/matplotlib-seaborn",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "Matplotlib과 Seaborn",
-     "@language": "ko"
-    },
-    {
-     "@value": "matplotlib and seaborn roles",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "Seaborn으로 빠르게 그리고 Matplotlib으로 다듬는 역할 나누기와 상자그림·상관 히트맵·요일×시간 히트맵.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w03_data-cleaning.html#lv4"
-   }
-  },
-  {
-   "@id": "lab:term/preprocessing",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "전처리",
-     "@language": "ko"
-    },
-    {
-     "@value": "preprocessing",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "분석·시각화 전에 데이터의 표기·형식·빈 값·중복·이상치를 손보는 일.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w03_data-cleaning.html#lv1"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/data-preprocessing"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/unique-values",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "고유값",
-     "@language": "ko"
-    },
-    {
-     "@value": "unique values",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "한 열에 나오는 서로 다른 값의 목록. value_counts()로 센다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w03_data-cleaning.html#lv1"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/data-preprocessing"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/median",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "중앙값",
-     "@language": "ko"
-    },
-    {
-     "@value": "median",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "크기순으로 줄 세웠을 때 한가운데 값. 이상치에 덜 흔들린다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w03_data-cleaning.html#lv2"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/missing-values"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/outlier",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "이상치",
-     "@language": "ko"
-    },
-    {
-     "@value": "outlier",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "다른 값들에서 멀리 떨어진 값. 오타일 수도, 실제 사건일 수도 있다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w03_data-cleaning.html#lv3"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/ai-preprocessing-check"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/duplicate",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "중복",
-     "@language": "ko"
-    },
-    {
-     "@value": "duplicate",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "같은 기록(예: 같은 주문번호)이 두 번 이상 적힌 것.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w03_data-cleaning.html#lv3"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/ai-preprocessing-check"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/violin-plot",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "바이올린",
-     "@language": "ko"
-    },
-    {
-     "@value": "violin plot",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "분포의 모양을 좌우 대칭 곡선으로 그려, 상자그림이 놓치는 꼬리까지 보여 주는 차트.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w03_data-cleaning.html#lv4"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/matplotlib-seaborn"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/heatmap",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "히트맵",
-     "@language": "ko"
-    },
-    {
-     "@value": "heatmap",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "행과 열로 된 표의 셀을 값의 크기에 따라 진하기로 칠한 차트.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w03_data-cleaning.html#lv4"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/matplotlib-seaborn"
-    },
-    {
-     "@id": "lab:concept/when-where-howmuch"
-    },
-    {
-     "@id": "lab:concept/correlation"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/dv_w03-fly",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "비워 두기 (통계에서 제외)",
-     "@language": "ko"
-    },
-    {
-     "@value": "option A (fly team)",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "모르는 값은 모르는 채로 둬. 아는 768건으로만 평균을 내.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w03_data-cleaning.html#duel"
-   },
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:method/dv_w03-robo"
-    }
-   ],
-   "lab:evaluatedBy": [
-    {
-     "@id": "lab:metric/dv_w03"
-    }
-   ],
-   "lab:relatedTo": [
-    {
-     "@id": "lab:concept/missing-values"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/dv_w03-robo",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "0으로 채우기",
-     "@language": "ko"
-    },
-    {
-     "@value": "option B (jupanbot team)",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "빈 값이 하나도 없어야 깔끔하지! 800건 전부 쓰자!",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w03_data-cleaning.html#duel"
-   },
-   "lab:evaluatedBy": [
-    {
-     "@id": "lab:metric/dv_w03"
-    }
-   ],
-   "lab:relatedTo": [
-    {
-     "@id": "lab:concept/missing-values"
-    }
-   ]
-  },
-  {
-   "@id": "lab:metric/dv_w03",
-   "@type": [
-    "skos:Concept",
-    "lab:Metric"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "진짜 평균과의 평균 오차 (작을수록 좋음)",
-     "@language": "ko"
-    },
-    {
-     "@value": "duel metric",
-     "@language": "en"
-    }
-   ],
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w03_data-cleaning.html#duel"
-   }
-  },
-  {
-   "@id": "lab:concept/industry-classification",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "산업 분류",
-     "@language": "ko"
-    },
-    {
-     "@value": "industry classification GICS and X-Tech",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "무엇으로 돈을 버는지(GICS)와 어떻게 일하는지(X-Tech) 두 기준으로 산업을 나누는 일.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w04_industry-fintech.html#lv1"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/visual-encoding"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/visual-encoding",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "시각 부호화와 정확도 순위",
-     "@language": "ko"
-    },
-    {
-     "@value": "visual encoding and perceptual accuracy",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "숫자를 위치·길이·각도·면적·색 중 무엇으로 보여 줄지 정하는 일. 위치와 길이가 가장 정확하다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w04_industry-fintech.html#lv2"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/average-trap"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/average-trap",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "차트 선택과 평균의 함정",
-     "@language": "ko"
-    },
-    {
-     "@value": "chart selection and the trap of averages",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "질문에 맞는 차트를 고르고, 파이의 비교 한계와 평균이 분포를 가리는 함정을 피하는 일.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w04_industry-fintech.html#lv3"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/dashboard-ethics"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/dashboard-ethics",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "산업별 대시보드 원칙",
-     "@language": "ko"
-    },
-    {
-     "@value": "industry dashboards and ethics",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "한 화면 한 결론 등 대시보드 5원칙과 발표 전 윤리 8문항 점검.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w04_industry-fintech.html#lv4"
-   }
-  },
-  {
-   "@id": "lab:term/gics",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "GICS",
-     "@language": "ko"
-    },
-    {
-     "@value": "gics",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "MSCI와 S&P가 만든 세계 산업 분류. 섹터 11, 산업그룹 25, 산업 74, 하위산업 163.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w04_industry-fintech.html#lv1"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/industry-classification"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/x-tech",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "X-Tech",
-     "@language": "ko"
-    },
-    {
-     "@value": "x tech",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "기존 산업 X에 기술을 더한 분야의 비공식 이름. 핀테크·에듀테크 등.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w04_industry-fintech.html#lv1"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/industry-classification"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/visual-variable",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "시각 변수",
-     "@language": "ko"
-    },
-    {
-     "@value": "visual variable",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "데이터를 나르는 시각 요소. 위치·크기·모양·밝기·색·방향·질감(베르탱).",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w04_industry-fintech.html#lv2"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/visual-encoding"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/diverging-palette",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "발산형",
-     "@language": "ko"
-    },
-    {
-     "@value": "diverging palette",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "가운데 0을 두고 양쪽으로 다른 색이 진해지는 색 배열. 손익·평균 대비에 쓴다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w04_industry-fintech.html#lv2"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/visual-encoding"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/treemap",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "트리맵",
-     "@language": "ko"
-    },
-    {
-     "@value": "treemap",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "전체를 사각형으로 나눠 면적으로 비중과 계층을 함께 보여 주는 차트.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w04_industry-fintech.html#lv3"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/average-trap"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/sankey",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "샌키",
-     "@language": "ko"
-    },
-    {
-     "@value": "sankey",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "흐름의 굵기로 양을 보여 주는 차트. 고객 이동, 예산 흐름 등.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w04_industry-fintech.html#lv3"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/average-trap"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/dashboard",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "대시보드",
-     "@language": "ko"
-    },
-    {
-     "@value": "dashboard",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "여러 차트를 한 화면에 모아 한눈에 보는 판.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w04_industry-fintech.html#lv4"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/dashboard-ethics"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/dv_w04-fly",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "상자그림 + 30분 기준선",
-     "@language": "ko"
-    },
-    {
-     "@value": "option A (fly team)",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "평균 말고 모양을 봐. 꼬리에 오래 기다린 사람이 있어.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w04_industry-fintech.html#duel"
-   },
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:method/dv_w04-robo"
-    }
-   ],
-   "lab:evaluatedBy": [
-    {
-     "@id": "lab:metric/dv_w04"
-    }
-   ],
-   "lab:relatedTo": [
-    {
-     "@id": "lab:concept/average-trap"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/dv_w04-robo",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "평균 막대 두 개",
-     "@language": "ko"
-    },
-    {
-     "@value": "option B (jupanbot team)",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "12분이랑 12분. 숫자가 같으면 같은 거지!",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w04_industry-fintech.html#duel"
-   },
-   "lab:evaluatedBy": [
-    {
-     "@id": "lab:metric/dv_w04"
-    }
-   ],
-   "lab:relatedTo": [
-    {
-     "@id": "lab:concept/average-trap"
-    }
-   ]
-  },
-  {
-   "@id": "lab:metric/dv_w04",
-   "@type": [
-    "skos:Concept",
-    "lab:Metric"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "30분 이상 기다린 고객을 찾아낸 수",
-     "@language": "ko"
-    },
-    {
-     "@value": "duel metric",
-     "@language": "en"
-    }
-   ],
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w04_industry-fintech.html#duel"
-   }
-  },
-  {
-   "@id": "lab:concept/chart-traps",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "좋은 차트 5원칙과 나쁜 차트 5함정",
-     "@language": "ko"
-    },
-    {
-     "@value": "good chart principles and bad chart traps",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "좋은 차트 5원칙과 나쁜 차트 5함정(T1~T5)을 기준으로 사례를 판별하는 일.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w08_midterm-assignment.html#lv1"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/python-viz-libraries"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/python-viz-libraries",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "파이썬 시각화 라이브러리",
-     "@language": "ko"
-    },
-    {
-     "@value": "python visualization libraries",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "Matplotlib·Seaborn·Plotly·pandas/Altair를 결과물이 실릴 곳에 따라 고르는 일.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w08_midterm-assignment.html#lv2"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/run-and-check"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/run-and-check",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "코드 실행과 검수",
-     "@language": "ko"
-    },
-    {
-     "@value": "running and checking chart code",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "프롬프트 4요소로 받은 코드를 직접 실행·캡처하고 줄마다 주석과 세 문장으로 해석하는 일.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w08_midterm-assignment.html#lv3"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/diagnose-flawed-charts"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/diagnose-flawed-charts",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "상황별 차트 선택과 오류 차트 진단",
-     "@language": "ko"
-    },
-    {
-     "@value": "chart choice and diagnosing flawed charts",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "질문 형태로 차트를 고르고, 오류 차트를 잘못된 점·오해·고치는 법 3단계로 진단하는 일.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w08_midterm-assignment.html#lv4"
-   }
-  },
-  {
-   "@id": "lab:term/trap-truncated-axis",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "T1",
-     "@language": "ko"
-    },
-    {
-     "@value": "trap truncated axis",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "축을 0이 아닌 값에서 시작해 작은 차이를 크게 보이게 하는 것.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w08_midterm-assignment.html#lv1"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/chart-traps"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/dual-axis",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "이중축",
-     "@language": "ko"
-    },
-    {
-     "@value": "dual axis",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "왼쪽과 오른쪽에 서로 다른 Y축을 둔 차트. 범위를 조작하면 없는 관계가 보인다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w08_midterm-assignment.html#lv4"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/diagnose-flawed-charts"
-    },
-    {
-     "@id": "lab:concept/reverse-learning"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/confounder",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "숨은 변수",
-     "@language": "ko"
-    },
-    {
-     "@value": "confounder",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "두 변수를 함께 움직이게 하는 제3의 원인. 예: 여름 더위.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w08_midterm-assignment.html#lv4"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/diagnose-flawed-charts"
-    },
-    {
-     "@id": "lab:concept/confounding"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/growth-rate",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "증가율",
-     "@language": "ko"
-    },
-    {
-     "@value": "growth rate",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "(나중 값 − 처음 값) ÷ 처음 값 × 100.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w08_midterm-assignment.html#lv3"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/run-and-check"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/multiple-response",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "복수 응답",
-     "@language": "ko"
-    },
-    {
-     "@value": "multiple response",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "한 사람이 여러 개를 고를 수 있는 설문. 비율의 합이 100%를 넘는다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w08_midterm-assignment.html#lv4"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/diagnose-flawed-charts"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/dv_w08-fly",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "축을 0부터 다시 그리고 읽기",
-     "@language": "ko"
-    },
-    {
-     "@value": "option A (fly team)",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "막대가 잘려 있으면 길이는 믿을 수 없어. 0부터 다시 그려.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w08_midterm-assignment.html#duel"
-   },
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:method/dv_w08-robo"
-    }
-   ],
-   "lab:evaluatedBy": [
-    {
-     "@id": "lab:metric/dv_w08"
-    }
-   ],
-   "lab:relatedTo": [
-    {
-     "@id": "lab:concept/diagnose-flawed-charts"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/dv_w08-robo",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "보이는 막대 높이 그대로 읽기",
-     "@language": "ko"
-    },
-    {
-     "@value": "option B (jupanbot team)",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "C사 막대가 A사의 여섯 배야! 눈은 거짓말 안 해!",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w08_midterm-assignment.html#duel"
-   },
-   "lab:evaluatedBy": [
-    {
-     "@id": "lab:metric/dv_w08"
-    }
-   ],
-   "lab:relatedTo": [
-    {
-     "@id": "lab:concept/diagnose-flawed-charts"
-    }
-   ]
-  },
-  {
-   "@id": "lab:metric/dv_w08",
-   "@type": [
-    "skos:Concept",
-    "lab:Metric"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "실제 배율 1.05배와의 차이 (작을수록 좋음)",
-     "@language": "ko"
-    },
-    {
-     "@value": "duel metric",
-     "@language": "en"
-    }
-   ],
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w08_midterm-assignment.html#duel"
-   }
-  },
-  {
-   "@id": "lab:concept/three-sentences",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "세 문장 해석",
-     "@language": "ko"
-    },
-    {
-     "@value": "what so-what now-what",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "차트마다 관찰(What)·비교(So What)·행동(Now What) 세 문장을 붙여 결정으로 닫는 해석 방법.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w09_midterm-review.html#lv1"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/marketing-charts"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/marketing-charts",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "마케팅 분석 차트",
-     "@language": "ko"
-    },
-    {
-     "@value": "funnel RFM cohort and basket analysis",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "깔때기·RFM·코호트·장바구니 향상도로 마케팅·리테일 데이터를 단계와 고객별로 보는 차트들.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w09_midterm-review.html#lv2"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/retail-vs-finance"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/retail-vs-finance",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "분야별 대시보드 비교",
-     "@language": "ko"
-    },
-    {
-     "@value": "retail vs finance dashboards",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "같은 다섯 원리 위에서 갱신 주기·규제·결정 주체·실패의 대가를 맞추는 분야별 대시보드 비교.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w09_midterm-review.html#lv3"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/kpi-dashboard"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/kpi-dashboard",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "KPI 대시보드 설계와 모형 점검",
-     "@language": "ko"
-    },
-    {
-     "@value": "KPI dashboard design and model checking",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "질문→KPI→차트→프롬프트→검수 5단계로 가게 화면을 설계하고 AI가 만든 계산식을 손계산으로 점검하는 일.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w09_midterm-review.html#lv4"
-   }
-  },
-  {
-   "@id": "lab:term/cohort",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "코호트",
-     "@language": "ko"
-    },
-    {
-     "@value": "cohort",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "같은 시기(예: 같은 달)에 가입한 고객 묶음. 잔존율을 묶음별로 비교한다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w09_midterm-review.html#lv2"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/marketing-charts"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/lift",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "향상도",
-     "@language": "ko"
-    },
-    {
-     "@value": "lift",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "두 상품이 우연(독립)보다 몇 배 더 함께 담기는지. 1보다 크면 함께 팔린다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w09_midterm-review.html#lv2"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/marketing-charts"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/conversion-rate",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "전환율",
-     "@language": "ko"
-    },
-    {
-     "@value": "conversion rate",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "앞 단계 인원 중 다음 단계로 넘어간 비율.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w09_midterm-review.html#lv2"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/marketing-charts"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/average-order-value",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "객단가",
-     "@language": "ko"
-    },
-    {
-     "@value": "average order value",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "손님 한 명이 한 번에 쓰는 평균 금액.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w09_midterm-review.html#lv4"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/kpi-dashboard"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/moving-average",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "이동평균",
-     "@language": "ko"
-    },
-    {
-     "@value": "moving average",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "최근 몇 개 값(예: 3개월)의 평균을 차례로 구해 들쭉날쭉함을 줄인 선.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w09_midterm-review.html#lv1"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/three-sentences"
-    },
-    {
-     "@id": "lab:method/feature-engineering"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/dv_w09-fly",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "주말 하루 평균 +56%",
-     "@language": "ko"
-    },
-    {
-     "@value": "option A (fly team)",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "토·일 두 날을 평균 내서 비교해. 주말 전체의 성격이 보여.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w09_midterm-review.html#duel"
-   },
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:method/dv_w09-robo"
-    }
-   ],
-   "lab:evaluatedBy": [
-    {
-     "@id": "lab:metric/dv_w09"
-    }
-   ],
-   "lab:relatedTo": [
-    {
-     "@id": "lab:concept/retail-vs-finance"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/dv_w09-robo",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "토요일 +62%",
-     "@language": "ko"
-    },
-    {
-     "@value": "option B (jupanbot team)",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "가장 높은 날을 보여 줘야 임팩트가 있지! 토요일 820!",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w09_midterm-review.html#duel"
-   },
-   "lab:evaluatedBy": [
-    {
-     "@id": "lab:metric/dv_w09"
-    }
-   ],
-   "lab:relatedTo": [
-    {
-     "@id": "lab:concept/retail-vs-finance"
-    }
-   ]
-  },
-  {
-   "@id": "lab:metric/dv_w09",
-   "@type": [
-    "skos:Concept",
-    "lab:Metric"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "계산이 맞고 비교 기준을 밝혔는가",
-     "@language": "ko"
-    },
-    {
-     "@value": "duel metric",
-     "@language": "en"
-    }
-   ],
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w09_midterm-review.html#duel"
-   }
-  },
-  {
-   "@id": "lab:concept/health-data-check",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "의료 데이터 점검",
-     "@language": "ko"
-    },
-    {
-     "@value": "health data checking and BMI",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "그리기 전에 해상도·이상치·기준선·해석의 한계를 의심하고 BMI 같은 파생 변수를 만드는 일.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w10_healthcare.html#lv1"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/clinical-thresholds"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/clinical-thresholds",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "기준선이 있는 분포 읽기",
-     "@language": "ko"
-    },
-    {
-     "@value": "comparison and distribution with clinical thresholds",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "정렬·0축·평균선으로 비교하고, 히스토그램에 임상 기준선을 그어 평균이 숨기는 꼬리를 보는 일.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w10_healthcare.html#lv2"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/confounding"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/confounding",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "상관과 숨은 변수",
-     "@language": "ko"
-    },
-    {
-     "@value": "correlation and confounding by age",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "두 변수의 관계를 숨은 변수(연령)로 나눠 다시 보고, 인과 대신 관계만 말하는 일.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w10_healthcare.html#lv3"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/reverse-learning"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/reverse-learning",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "구성·시계열과 함정 재현",
-     "@language": "ko"
-    },
-    {
-     "@value": "composition time series and reproducing traps",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "조건부 파이와 100% 누적 막대, 이중축 대신 두 패널, 나쁜 차트를 일부러 만들어 진단하는 역방향 학습.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w10_healthcare.html#lv4"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/app-prompt-rules"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/app-prompt-rules",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "앱 만들기 프롬프트 규칙",
-     "@language": "ko"
-    },
-    {
-     "@value": "prompt rules for a beginner-readable Colab app",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "데이터 일부 기억시키기·업로드 구조·영어 차트와 중한 주석·들여쓰기/함수/for문 금지로 처음 배우는 사람이 읽는 Colab 코드를 받는 프롬프트 규칙.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w10_healthcare.html#lv5"
-   }
-  },
-  {
-   "@id": "lab:term/bmi",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "BMI",
-     "@language": "ko"
-    },
-    {
-     "@value": "bmi",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "체중(kg) ÷ 키(m)². 이 수업에서는 25 이상을 비만으로 분류.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w10_healthcare.html#lv1"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/health-data-check"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/fasting-glucose",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "공복혈당",
-     "@language": "ko"
-    },
-    {
-     "@value": "fasting glucose",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "식사 전 혈당(mg/dL). 100부터 공복혈당장애, 126 이상 당뇨 의심(이 수업의 기준선).",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w10_healthcare.html#lv2"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/clinical-thresholds"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/reference-line",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "기준선",
-     "@language": "ko"
-    },
-    {
-     "@value": "reference line",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "차트에 그어 비교 기준을 보여 주는 선. 임상 기준값, 평균 등.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w10_healthcare.html#lv2"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/clinical-thresholds"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/small-multiples",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "small multiples",
-     "@language": "ko"
-    },
-    {
-     "@value": "small multiples",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "같은 축의 작은 차트를 그룹별로 나란히 놓아 비교하는 방법.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w10_healthcare.html#lv3"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/confounding"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/codebook",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "코드표",
-     "@language": "ko"
-    },
-    {
-     "@value": "codebook",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "숫자 코드(예: 시도 11)를 이름(서울)으로 바꾸는 표.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w10_healthcare.html#lv1"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/health-data-check"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/dv_w10-fly",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "히스토그램 + 기준선 126",
-     "@language": "ko"
-    },
-    {
-     "@value": "option A (fly team)",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "평균 말고 꼬리를 세. 126 오른쪽이 몇 명이야?",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w10_healthcare.html#duel"
-   },
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:method/dv_w10-robo"
-    }
-   ],
-   "lab:evaluatedBy": [
-    {
-     "@id": "lab:metric/dv_w10"
-    }
-   ],
-   "lab:relatedTo": [
-    {
-     "@id": "lab:concept/clinical-thresholds"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/dv_w10-robo",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "평균 한 줄",
-     "@language": "ko"
-    },
-    {
-     "@value": "option B (jupanbot team)",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "평균 93.9! 기준 아래니까 다들 괜찮아!",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w10_healthcare.html#duel"
-   },
-   "lab:evaluatedBy": [
-    {
-     "@id": "lab:metric/dv_w10"
-    }
-   ],
-   "lab:relatedTo": [
-    {
-     "@id": "lab:concept/clinical-thresholds"
-    }
-   ]
-  },
-  {
-   "@id": "lab:metric/dv_w10",
-   "@type": [
-    "skos:Concept",
-    "lab:Metric"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "찾아낸 재검 대상 인원",
-     "@language": "ko"
-    },
-    {
-     "@value": "duel metric",
-     "@language": "en"
-    }
-   ],
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w10_healthcare.html#duel"
-   }
-  },
-  {
-   "@id": "lab:concept/when-where-howmuch",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "시간·장소·크기로 읽기",
-     "@language": "ko"
-    },
-    {
-     "@value": "when where how much",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "시간·장소·크기(언제·어디서·얼마나)로 데이터를 읽고 질문의 핵심 동사로 차트를 고르는 일.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w11_smartcity-logistics.html#lv1"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/prompt-chain"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/prompt-chain",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "프롬프트 사슬",
-     "@language": "ko"
-    },
-    {
-     "@value": "prompt chaining",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "역할·데이터·요청·조건 네 요소로 한 번에 하나씩, 같은 대화창에서 다섯 번 이어 묻는 프롬프트 사슬.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w11_smartcity-logistics.html#lv2"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/weekday-hour-heatmap"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/weekday-hour-heatmap",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "시간 교차 히트맵",
-     "@language": "ko"
-    },
-    {
-     "@value": "weekday by hour heatmap",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "두 가지가 겹치는 시간 패턴을 요일×시간 히트맵으로 보고, 답하는 제목·단위·주석 하나로 다듬는 일.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w11_smartcity-logistics.html#lv3"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/pareto-chart"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/pareto-chart",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "파레토 차트",
-     "@language": "ko"
-    },
-    {
-     "@value": "pareto chart for delay causes",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "지연된 건만 골라 원인을 큰 것부터 세우고 누적 비율 선을 겹쳐 개선 우선순위를 정하는 차트.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w11_smartcity-logistics.html#lv4"
-   }
-  },
-  {
-   "@id": "lab:term/pareto-chart",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "파레토",
-     "@language": "ko"
-    },
-    {
-     "@value": "pareto chart",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "원인을 큰 것부터 왼쪽에 세운 막대에 누적 비율 선을 겹친 차트.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w11_smartcity-logistics.html#lv4"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/pareto-chart"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/cumulative-share",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "누적 비율",
-     "@language": "ko"
-    },
-    {
-     "@value": "cumulative share",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "앞에서부터 더해 간 몫이 전체의 몇 %인지.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w11_smartcity-logistics.html#lv4"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/pareto-chart"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/prompt-chaining",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "프롬프트 사슬",
-     "@language": "ko"
-    },
-    {
-     "@value": "prompt chaining",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "한 대화창에서 한 번에 하나씩, 앞 결과를 보고 이어 묻는 방식.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w11_smartcity-logistics.html#lv2"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/prompt-chain"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/bubble-map",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "버블 지도",
-     "@language": "ko"
-    },
-    {
-     "@value": "bubble map",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "장소마다 원을 놓고 값이 클수록 원을 크게 그린 지도.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w11_smartcity-logistics.html#lv4"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/pareto-chart"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/annotation",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "주석",
-     "@language": "ko"
-    },
-    {
-     "@value": "annotation",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "차트 위에 붙이는 짧은 설명 글. 가장 중요한 값 한 곳에만 단다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w11_smartcity-logistics.html#lv3"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/weekday-hour-heatmap"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/dv_w11-fly",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "다섯 번 이어 묻기",
-     "@language": "ko"
-    },
-    {
-     "@value": "option A (fly team)",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "한 번에 하나. 결과를 보고 다음을 물어.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w11_smartcity-logistics.html#duel"
-   },
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:method/dv_w11-robo"
-    }
-   ],
-   "lab:evaluatedBy": [
-    {
-     "@id": "lab:metric/dv_w11"
-    }
-   ],
-   "lab:relatedTo": [
-    {
-     "@id": "lab:concept/prompt-chain"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/dv_w11-robo",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "한 번에 일곱 개",
-     "@language": "ko"
-    },
-    {
-     "@value": "option B (jupanbot team)",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "한 방에 끝내야 빠르지! 일곱 개 다 넣었어!",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w11_smartcity-logistics.html#duel"
-   },
-   "lab:evaluatedBy": [
-    {
-     "@id": "lab:metric/dv_w11"
-    }
-   ],
-   "lab:relatedTo": [
-    {
-     "@id": "lab:concept/prompt-chain"
-    }
-   ]
-  },
-  {
-   "@id": "lab:metric/dv_w11",
-   "@type": [
-    "skos:Concept",
-    "lab:Metric"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "일곱 요청 중 반영된 개수",
-     "@language": "ko"
-    },
-    {
-     "@value": "duel metric",
-     "@language": "en"
-    }
-   ],
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w11_smartcity-logistics.html#duel"
-   }
-  },
-  {
-   "@id": "lab:concept/dashboard-filter",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "대시보드와 필터",
-     "@language": "ko"
-    },
-    {
-     "@value": "dashboard and linked filters",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "차트 셋을 필터 하나로 묶어 함께 움직이게 하고 질문에 답하는 제목을 단 화면.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w12_ai-studio-dashboard.html#lv1"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/tool-split"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/tool-split",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "도구 나누기와 대시보드 사슬",
-     "@language": "ko"
-    },
-    {
-     "@value": "tool split and dashboard prompt chain",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "묻고 답하기와 차트 하나는 Qwen, 여러 부품이 함께 움직이는 화면은 Google AI Studio로 나눠 다섯 번 이어 묻는 방법.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w12_ai-studio-dashboard.html#lv2"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/industry-dashboards"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/industry-dashboards",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "산업별 대시보드",
-     "@language": "ko"
-    },
-    {
-     "@value": "industry dashboards healthcare medical fintech",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "헬스케어·의료 데이터·핀테크에서 보는 사람에 따라 차트와 필터를 고르는 산업별 대시보드.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w12_ai-studio-dashboard.html#lv3"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/answering-title"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/answering-title",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "답하는 제목",
-     "@language": "ko"
-    },
-    {
-     "@value": "titles that answer the question",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "“무엇에 대한 화면” 대신 “무엇이 일어났나”를 말하는 제목으로 판을 결정으로 끝내는 일.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w12_ai-studio-dashboard.html#lv4"
-   }
-  },
-  {
-   "@id": "lab:term/filter",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "필터",
-     "@language": "ko"
-    },
-    {
-     "@value": "filter",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "보고 싶은 것만 골라 보는 단추. 누르면 화면 전체가 다시 그려진다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w12_ai-studio-dashboard.html#lv1"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/dashboard-filter"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/google-ai-studio",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "Google AI Studio",
-     "@language": "ko"
-    },
-    {
-     "@value": "google ai studio",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "구글의 생성 AI 작업 화면. 여러 부품이 함께 움직이는 화면을 만들 때 쓴다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w12_ai-studio-dashboard.html#lv2"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/tool-split"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/gauge",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "게이지",
-     "@language": "ko"
-    },
-    {
-     "@value": "gauge",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "목표 대비 달성률을 바늘이나 막대 하나로 보여 주는 차트.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w12_ai-studio-dashboard.html#lv3"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/industry-dashboards"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/anomalous-transaction",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "이상 거래",
-     "@language": "ko"
-    },
-    {
-     "@value": "anomalous transaction",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "평소 패턴과 확실히 다른 거래. 사기라는 판정이 아니라 확인할 후보.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w12_ai-studio-dashboard.html#lv3"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/industry-dashboards"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/achievement-rate",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "달성률",
-     "@language": "ko"
-    },
-    {
-     "@value": "achievement rate",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "실제 값 ÷ 목표 값 × 100.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w12_ai-studio-dashboard.html#lv3"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/industry-dashboards"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/dv_w12-fly",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "차트 셋 + 필터 하나",
-     "@language": "ko"
-    },
-    {
-     "@value": "option A (fly team)",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "“내과만”이면 필터를 한 번 누르면 돼. 세 차트가 다 내과로 바뀌어.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w12_ai-studio-dashboard.html#duel"
-   },
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:method/dv_w12-robo"
-    }
-   ],
-   "lab:evaluatedBy": [
-    {
-     "@id": "lab:metric/dv_w12"
-    }
-   ],
-   "lab:relatedTo": [
-    {
-     "@id": "lab:concept/dashboard-filter"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/dv_w12-robo",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "필터 없는 차트 스무 장",
-     "@language": "ko"
-    },
-    {
-     "@value": "option B (jupanbot team)",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "스무 장이면 없는 게 없지! 다 들어 있어!",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w12_ai-studio-dashboard.html#duel"
-   },
-   "lab:evaluatedBy": [
-    {
-     "@id": "lab:metric/dv_w12"
-    }
-   ],
-   "lab:relatedTo": [
-    {
-     "@id": "lab:concept/dashboard-filter"
-    }
-   ]
-  },
-  {
-   "@id": "lab:metric/dv_w12",
-   "@type": [
-    "skos:Concept",
-    "lab:Metric"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "3분 안에 답한 질문 수 (5개 중)",
-     "@language": "ko"
-    },
-    {
-     "@value": "duel metric",
-     "@language": "en"
-    }
-   ],
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Data_visuialization_lecture_lab/weeks/w12_ai-studio-dashboard.html#duel"
-   }
-  },
-  {
    "@id": "lab:concept/standard-deviation",
    "@type": [
     "skos:Concept",
@@ -23435,6 +23735,43 @@
    ]
   },
   {
+   "@id": "lab:term/learning-rate",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "학습률",
+     "@language": "ko"
+    },
+    {
+     "@value": "learning rate",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "경사하강법의 한 걸음 크기. 너무 크면 튕기고 너무 작으면 느리다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/timeseries-trilogy/3_4_capacity_and_search.html#lv2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/gradient-descent"
+    },
+    {
+     "@id": "lab:topic/learning-rate-schedule"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/gradient-descent"
+    }
+   ]
+  },
+  {
    "@id": "lab:concept/ar-order",
    "@type": [
     "skos:Concept",
@@ -25133,43 +25470,6 @@
    "rdfs:isDefinedBy": {
     "@id": "https://adminmrobo.github.io/timeseries-trilogy/3_4_capacity_and_search.html#lv3"
    }
-  },
-  {
-   "@id": "lab:term/learning-rate",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "학습률",
-     "@language": "ko"
-    },
-    {
-     "@value": "learning rate",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "기울기 방향으로 한 번에 얼마나 크게 움직일지. 크면 튕기고 작으면 느리다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/timeseries-trilogy/3_4_capacity_and_search.html#lv2"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/gradient-descent"
-    },
-    {
-     "@id": "lab:topic/learning-rate-schedule"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/gradient-descent"
-    }
-   ]
   },
   {
    "@id": "lab:term/eta",

@@ -35854,6 +35854,30 @@
    ]
   },
   {
+   "@id": "lab:term/loss",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "손실",
+     "@language": "ko"
+    },
+    {
+     "@value": "loss",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "틀린 정도를 숫자 하나로 만든 값. 오늘은 오차 제곱의 평균(MSE).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/vector_calculus_lab/00_orientation.html"
+   }
+  },
+  {
    "@id": "lab:term/learning-rate",
    "@type": [
     "skos:Concept",
@@ -35870,7 +35894,7 @@
     }
    ],
    "skos:definition": {
-    "@value": "기울기 방향으로 한 번에 얼마나 크게 움직일지. 크면 튕기고 작으면 느리다.",
+    "@value": "경사하강법의 한 걸음 크기. 너무 크면 튕기고 너무 작으면 느리다.",
     "@language": "ko"
    },
    "rdfs:isDefinedBy": {
@@ -36054,30 +36078,6 @@
      "@id": "lab:concept/scalar-and-vector-fields"
     }
    ]
-  },
-  {
-   "@id": "lab:term/loss",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "손실",
-     "@language": "ko"
-    },
-    {
-     "@value": "loss",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "모델이 틀린 정도.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/vector_calculus_lab/00_orientation.html"
-   }
   },
   {
    "@id": "lab:concept/coordinate-systems",

@@ -18,14 +18,14 @@
  "summary": {
   "fields": 8,
   "contents": 138,
-  "pages": 934,
+  "pages": 936,
   "listed_indexed": 168,
   "listed": 180,
-  "concepts": 6044,
-  "relations": 7276,
-  "shared": 585,
+  "concepts": 6067,
+  "relations": 7312,
+  "shared": 586,
   "domains": 18,
-  "topic_linked": 1798
+  "topic_linked": 1799
  },
  "fields": [
   {
@@ -37,8 +37,8 @@
    "desc": "데이터에서 규칙을 배우는 머신러닝을 물고기 시장 데이터, 알고리즘 가계도, 모델 채용 위원회로 처음부터 익힙니다.",
    "contents": 17,
    "listed": 17,
-   "concepts": 702,
-   "relations": 952,
+   "concepts": 717,
+   "relations": 975,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/machine-learning.xml",
    "parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/machine-learning-p1.xml",
@@ -173,8 +173,8 @@
    "desc": "확률분포, 추정, 시계열, 베이지안 통계와 파이썬·판다스·데이터베이스·데이터 시각화로 데이터 분석의 기초 체력을 기릅니다.",
    "contents": 16,
    "listed": 17,
-   "concepts": 1113,
-   "relations": 1196,
+   "concepts": 1123,
+   "relations": 1210,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/statistics-data-basics.xml",
    "parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/statistics-data-basics-p1.xml",

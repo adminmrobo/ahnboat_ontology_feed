@@ -831,6 +831,11 @@
      "@id": "lab:concept/feature-importance"
     }
    ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/gradient-descent"
+    }
+   ],
    "lab:partOf": [
     {
      "@id": "lab:concept/ensemble"
@@ -1110,6 +1115,35 @@
    "lab:topic": [
     {
      "@id": "lab:topic/interpretability"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/gradient-descent",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "손실과 경사하강법",
+     "@language": "ko"
+    },
+    {
+     "@value": "loss and gradient descent with learning rate",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "처음엔 전부 틀린다 — 손실과 경사하강법, 걸음 크기(학습률)",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Regression_model_lab_01/part4_learn.html#ch15"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/batch-epoch"
     }
    ]
   },
@@ -1720,35 +1754,6 @@
    "rdfs:isDefinedBy": {
     "@id": "https://adminmrobo.github.io/Regression_model_lab_01/part3_resid.html#ch13"
    }
-  },
-  {
-   "@id": "lab:concept/gradient-descent",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "경사 하강",
-     "@language": "ko"
-    },
-    {
-     "@value": "Gradient descent",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "손실의 기울기 반대 방향으로 계수를 조금씩 옮김",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Regression_model_lab_01/part4_learn.html#ch15"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/gradient-descent"
-    }
-   ]
   },
   {
    "@id": "lab:concept/sgd",
@@ -7940,6 +7945,40 @@
    ]
   },
   {
+   "@id": "lab:term/gradient-descent",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "경사하강",
+     "@language": "ko"
+    },
+    {
+     "@value": "gradient descent",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "손실이 줄어드는 방향으로 가중치를 조금씩 옮기는 최적화 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w11_fish_trees_forest_gradient.html#lv4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/gradient-descent"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/gradient-descent"
+    }
+   ]
+  },
+  {
    "@id": "lab:term/feature",
    "@type": [
     "skos:Concept",
@@ -9143,6 +9182,9 @@
    "lab:partOf": [
     {
      "@id": "lab:concept/cross-validation"
+    },
+    {
+     "@id": "lab:concept/decision-tree-regression"
     }
    ]
   },
@@ -10409,6 +10451,9 @@
    "lab:partOf": [
     {
      "@id": "lab:concept/ensemble"
+    },
+    {
+     "@id": "lab:concept/random-forest"
     }
    ]
   },
@@ -10438,6 +10483,9 @@
    "lab:partOf": [
     {
      "@id": "lab:concept/ensemble"
+    },
+    {
+     "@id": "lab:concept/batch-epoch"
     }
    ]
   },
@@ -11497,6 +11545,463 @@
    ],
    "rdfs:isDefinedBy": {
     "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w10_real_cases_insurance.html#duel"
+   }
+  },
+  {
+   "@id": "lab:concept/question-first",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "표 읽기와 질문 먼저",
+     "@language": "ko"
+    },
+    {
+     "@value": "reading a table and asking the question first",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "모든 데이터는 세 질문으로 읽는다 — 얼마나? 어떤 종류? 무엇이 궁금한가?",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w11_fish_trees_forest_gradient.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/decision-tree-regression"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/decision-tree-regression",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "의사결정나무 회귀와 과적합",
+     "@language": "ko"
+    },
+    {
+     "@value": "decision tree regression and overfitting",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "질문으로 나누는 나무 — 데이터가 고른 첫 질문은 “두께”였다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w11_fish_trees_forest_gradient.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/random-forest"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/batch-epoch",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "배치와 에포크, 조기 종료",
+     "@language": "ko"
+    },
+    {
+     "@value": "mini-batch, epoch and early stopping",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "한 입씩, 한 바퀴씩 — 배치 · 에포크, 그리고 멈출 곳",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w11_fish_trees_forest_gradient.html#lv5"
+   }
+  },
+  {
+   "@id": "lab:term/decision-tree",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "의사결정나무",
+     "@language": "ko"
+    },
+    {
+     "@value": "decision tree",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "“만약 ~라면” 질문을 이어 붙여 데이터를 나누고, 잎마다 답(평균 무게나 다수 종류)을 적는 모델.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w11_fish_trees_forest_gradient.html#lv2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/decision-tree"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/decision-tree-regression"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/leaf",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "잎",
+     "@language": "ko"
+    },
+    {
+     "@value": "leaf",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "나무에서 더 나누지 않는 끝. 그 묶음의 평균 값이 예측이 된다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w11_fish_trees_forest_gradient.html#lv2"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/decision-tree-regression"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/pruning",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "가지치기",
+     "@language": "ko"
+    },
+    {
+     "@value": "pruning",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "나무의 깊이를 미리 제한하거나 도움 안 되는 가지를 잘라 외우기를 줄이는 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w11_fish_trees_forest_gradient.html#lv2"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/decision-tree-regression"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/random-forest",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "랜덤포레스트",
+     "@language": "ko"
+    },
+    {
+     "@value": "random forest",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "기록을 다시 뽑고 질문 후보를 제한해 서로 다르게 키운 나무 여러 그루의 평균(또는 투표)으로 답하는 모델.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w11_fish_trees_forest_gradient.html#lv3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/random-forest"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/random-forest"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/bootstrap",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "부트스트랩",
+     "@language": "ko"
+    },
+    {
+     "@value": "bootstrap",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "뽑은 기록을 다시 넣고 또 뽑는 방식. 같은 기록이 여러 번 뽑히기도 한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w11_fish_trees_forest_gradient.html#lv3"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/random-forest"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/loss",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "손실",
+     "@language": "ko"
+    },
+    {
+     "@value": "loss",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "틀린 정도를 숫자 하나로 만든 값. 오늘은 오차 제곱의 평균(MSE).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w11_fish_trees_forest_gradient.html#lv4"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/gradient-descent"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/learning-rate",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "학습률",
+     "@language": "ko"
+    },
+    {
+     "@value": "learning rate",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "경사하강법의 한 걸음 크기. 너무 크면 튕기고 너무 작으면 느리다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w11_fish_trees_forest_gradient.html#lv4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/gradient-descent"
+    },
+    {
+     "@id": "lab:topic/learning-rate-schedule"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/gradient-descent"
+    },
+    {
+     "@id": "lab:method/gradient-descent"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/batch",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "배치",
+     "@language": "ko"
+    },
+    {
+     "@value": "batch",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "한 걸음마다 보는 데이터 일부. 배치 32 = 한 번에 32개를 보고 한 걸음.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w11_fish_trees_forest_gradient.html#lv5"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/batch-epoch"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/early-stopping",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "조기 종료",
+     "@language": "ko"
+    },
+    {
+     "@value": "early stopping",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "검증 오차가 더 나아지지 않으면 학습을 멈추는 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w11_fish_trees_forest_gradient.html#lv5"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/batch-epoch"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/pyml_w11-fly",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "깊이 3 나무 (질문 7개, 잎 8개)",
+     "@language": "ko"
+    },
+    {
+     "@value": "option A (team fruit fly)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "사람이 읽을 수 있는 규칙이야. 외운 것도 적고, 가격표로 바로 쓸 수 있어.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w11_fish_trees_forest_gradient.html#duel"
+   },
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/pyml_w11-robo"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/pyml_w11"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/gradient-descent"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/pyml_w11-robo",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "랜덤포레스트 300그루",
+     "@language": "ko"
+    },
+    {
+     "@value": "option B (team abacus bot)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "300그루가 투표한다고! 많을수록 좋은 거야!",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w11_fish_trees_forest_gradient.html#duel"
+   },
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/pyml_w11"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/gradient-descent"
+    }
+   ]
+  },
+  {
+   "@id": "lab:metric/pyml_w11",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "시험 R² (이 페이지에서 직접 실행한 값)",
+     "@language": "ko"
+    },
+    {
+     "@value": "duel metric",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w11_fish_trees_forest_gradient.html#duel"
    }
   },
   {
@@ -18229,35 +18734,6 @@
     },
     {
      "@id": "lab:concept/gradient"
-    }
-   ]
-  },
-  {
-   "@id": "lab:term/gradient-descent",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "경사하강",
-     "@language": "ko"
-    },
-    {
-     "@value": "gradient descent",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "손실이 줄어드는 방향으로 가중치를 조금씩 옮기는 최적화 방법.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ML_model_hiring_committee/5-2_linear_regression.html#series"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/gradient-descent"
     }
    ]
   },
