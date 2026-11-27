@@ -12,1237 +12,6 @@
  "dct:creator": "안상선 (Ahn Sangsun)",
  "@graph": [
   {
-   "@id": "lab:concept/human-approval",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "사람 승인",
-     "@language": "ko"
-    },
-    {
-     "@value": "Human-in-the-loop approval",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "되돌릴 수 없는 행동 직전에 사람이 확인·승인하는 단계.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/part2/index.html#s4"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:method/layered-guards"
-    },
-    {
-     "@id": "lab:concept/agent-improvement-loop"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/golden-outputs"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/recursive-self-improvement",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "재귀적 자기개선 (RSI)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Recursive self-improvement",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "AI가 자기 결과를 보고 자기를 고치고, 고친 방식이 다음 고침에 다시 쓰이는 제안→실행→측정→갱신의 순환",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/index.html#s1"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/ai-safety"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/intelligence-explosion",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "지능 폭발",
-     "@language": "ko"
-    },
-    {
-     "@value": "Intelligence explosion",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "더 나은 기계를 설계하는 기계가 연쇄적으로 지능을 끌어올린다는 생각 실험",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/index.html#s1"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/recursive-self-improvement"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/improvement-loop",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "개선 순환 (제안→실행→측정→갱신)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Propose-run-measure-update loop",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "RSI의 조작적 정의. 갱신이 남아 다음 바퀴에 쓰일 때 재귀적이다",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/index.html#s1"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/recursive-self-improvement"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/verification-hierarchy",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "확인 신호의 위계",
-     "@language": "ko"
-    },
-    {
-     "@value": "Verification hierarchy",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "형식 검증기(가장 강함)부터 모델 자신의 내부 신호(가장 약함)까지 확인 신호를 줄 세운 것",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/index.html#s4"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/ablation"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/model-collapse",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "모델 붕괴",
-     "@language": "ko"
-    },
-    {
-     "@value": "Model collapse",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "모델이 만든 데이터를 가리지 않고 다시 학습에 쓰면 원래 분포의 꼬리가 사라지는 결함",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/index.html#s4"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/density-estimation"
-    }
-   ],
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:concept/verification-hierarchy"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/harness",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "하네스",
-     "@language": "ko"
-    },
-    {
-     "@value": "Agent harness",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "고정된 모델을 둘러싼 프롬프트·스킬·도구 규칙·메모리 묶음",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/index.html#s3"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/deployment"
-    },
-    {
-     "@id": "lab:topic/prompting"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/improvement-target",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "개선 대상 × 순환이 닫힌 정도",
-     "@language": "ko"
-    },
-    {
-     "@value": "Improvement target × loop closure",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "무엇을 고치나(행동·가중치·평가자·연구 과정)와 사람이 순환 어디에 있나로 RSI 연구를 나누는 틀",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/index.html#s3"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/recursive-self-improvement"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/godel-machine",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "괴델 머신",
-     "@language": "ko"
-    },
-    {
-     "@value": "Gödel machine",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "수정이 유용하다는 증명을 찾으면 자기 코드를 고쳐 쓰는 이론 모델",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/index.html#s2"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/recursive-self-improvement"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/darwin-godel-machine",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "다윈 괴델 머신 (DGM)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Darwin Gödel Machine",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "증명 대신 벤치마크 실험 증거로 수정을 받아들이고, 만든 에이전트를 보관소에 모두 남기는 자기개선 코딩 에이전트",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/index.html#s2"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/exploration"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/recursive-self-improvement"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/archive-search",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "보관소 탐색",
-     "@language": "ko"
-    },
-    {
-     "@value": "Archive-based open-ended search",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "점수가 낮아도 새로운 시도를 남겨 다음 탐색의 출발점으로 쓰는 방법",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/index.html#s2"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/exploration"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/darwin-godel-machine"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/star",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "STaR",
-     "@language": "ko"
-    },
-    {
-     "@value": "Self-Taught Reasoner",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "정답에 닿은 자기 풀이만 골라 다시 학습하기를 반복",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/index.html#s3"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/pretrained-lm"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/recursive-self-improvement"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/self-rewarding-lm",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "Self-Rewarding LM",
-     "@language": "ko"
-    },
-    {
-     "@value": "Self-Rewarding Language Models",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "모델이 스스로 채점하며 반복 학습해 지시 수행과 채점 능력을 함께 키움",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/index.html#s4"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/pretrained-lm"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/recursive-self-improvement"
-    }
-   ],
-   "lab:relatedTo": [
-    {
-     "@id": "lab:concept/verification-hierarchy"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/guard-soft-hurt-gate",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "GUARD · Soft-HURT 관문",
-     "@language": "ko"
-    },
-    {
-     "@value": "GUARD Soft-HURT gate",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "가중치를 고정하고 하네스만 고치며, 얻는 것이 잃는 것보다 여유만큼 클 때만 수정을 받아들이는 관문",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/index.html#s5"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/monitoring"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/recursive-self-improvement"
-    }
-   ],
-   "lab:relatedTo": [
-    {
-     "@id": "lab:concept/harness"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/pretraining-rsi-loops",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "사전학습의 작은 순환들 (801)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Decomposed pre-training RSI loops",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "다시 돌릴 수 없는 사전학습을 디버깅·헤드룸·경험을 지표로 바꾸는 작은 순환들로 나눠 개선",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/index.html#s3"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/pretrained-lm"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/recursive-self-improvement"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/rsi-button-game",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "RSI 버튼 게임",
-     "@language": "ko"
-    },
-    {
-     "@value": "RSI two-player game",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "두 플레이어가 RSI를 시작할지 고르는 위험 r의 2인 게임",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/index.html#game"
-   }
-  },
-  {
-   "@id": "lab:concept/agent-improvement-loop",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "에이전트 개선 순환",
-     "@language": "ko"
-    },
-    {
-     "@value": "Agent self-improvement loop",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "모델은 그대로 두고 규칙 파일을 피드백 → 작은 수정 → 사람 승인 → 정답 예시 확인 순서로 고쳐 다음 실행을 낫게 만드는 다섯 단계 순환",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/part2/index.html#map"
-   }
-  },
-  {
-   "@id": "lab:concept/skill-file",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "규칙 파일 (skill.md)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Skill file",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "에이전트가 일할 때마다 먼저 읽는 짧은 지시문. 원칙과 이유를 적고 긴 자료는 가리키기만 한다",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/part2/index.html#s1"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/reproducibility"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/agent-improvement-loop"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/feedback-path"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/rule-conflict-pairs",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "규칙끼리 부딪힐 수 있는 짝 n(n−1)/2",
-     "@language": "ko"
-    },
-    {
-     "@value": "Pairwise rule conflicts",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "규칙 n개에서 두 개를 고르는 조합의 수. 규칙 수의 제곱에 가깝게 늘어난다",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/part2/index.html#s1"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/skill-file"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/principle-with-reason",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "원칙 + 이유로 규칙 쓰기",
-     "@language": "ko"
-    },
-    {
-     "@value": "Principle-with-reason rules",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "규칙마다 그 이유를 적어 충돌 해소와 새 상황 적용을 돕는 작성법",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/part2/index.html#s1"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/skill-file"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/feedback-path",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "피드백 경로",
-     "@language": "ko"
-    },
-    {
-     "@value": "Feedback path",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "사람들이 이미 일하는 자리에서 지적이 저절로 모이게 하는 경로. 확인법은 클릭 수 세기",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/part2/index.html#s2"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/agent-improvement-loop"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/improver-agent"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/feedback-funnel",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "피드백 깔때기 p^k",
-     "@language": "ko"
-    },
-    {
-     "@value": "Feedback funnel",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "단계마다 남는 비율 p를 클릭 수 k번 곱한 만큼만 피드백이 남는다",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/part2/index.html#s2"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/feedback-path"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/improver-agent",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "개선 담당 에이전트",
-     "@language": "ko"
-    },
-    {
-     "@value": "Improver agent",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "정해진 때마다 제안한 것과 실제 응답을 견주어 규칙 파일의 작고 초점 있는 수정 하나를 초안으로 내는 두 번째 에이전트",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/part2/index.html#s3"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/agent-improvement-loop"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/human-approval"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/one-small-edit",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "한 번에 수정 하나",
-     "@language": "ko"
-    },
-    {
-     "@value": "One small focused edit",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "여러 규칙을 함께 바꾸지 않고 한 번에 하나만 바꿔 원인 추적과 되돌리기를 쉽게 하는 방법",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/part2/index.html#s3"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/improver-agent"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/bisect-revert",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "반씩 나눠 되돌리기",
-     "@language": "ko"
-    },
-    {
-     "@value": "Bisection revert",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "여러 수정 중 원인을 찾을 때 절반씩 되돌려 보는 방법. 최악 log₂(수정 수)번 확인",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/part2/index.html#s3"
-   },
-   "lab:relatedTo": [
-    {
-     "@id": "lab:method/one-small-edit"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/golden-outputs",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "정답 예시 묶음 (골든 아웃풋)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Golden outputs",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "\"이렇게 나오면 맞다\"를 수정보다 먼저 정해 둔 예시 모음. 수정 전후 통과율을 재는 자",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/part2/index.html#s5"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/agent-improvement-loop"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/pass-rate-noise",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "통과율의 흔들림 √(p(1−p)/n)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Pass-rate standard error",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "실력이 그대로여도 예시 수가 적으면 통과율이 운에 따라 흔들리는 폭",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/part2/index.html#s5"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/golden-outputs"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/bpe",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "바이트 쌍 인코딩",
-     "@language": "ko"
-    },
-    {
-     "@value": "byte-pair encoding",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "자주 붙어 나오는 글자 조각을 묶어 토큰을 만드는 방법. 영-독 공용 어휘 약 37000.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Tokenization-BPE-tutorial/index.html#stage"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/tokenization"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/transformer"
-    },
-    {
-     "@id": "lab:concept/token"
-    },
-    {
-     "@id": "lab:concept/tokenization"
-    }
-   ],
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:method/rustbpe"
-    },
-    {
-     "@id": "lab:concept/word-level-tokenization"
-    }
-   ],
-   "lab:evaluatedOn": [
-    {
-     "@id": "lab:dataset/nsmc"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/gpt"
-    },
-    {
-     "@id": "lab:concept/subword"
-    },
-    {
-     "@id": "lab:concept/vocabulary"
-    }
-   ],
-   "lab:evaluatedBy": [
-    {
-     "@id": "lab:metric/compression-ratio"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/tokenization",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "토큰 나누기 (토큰화)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Tokenization",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "글을 모델이 읽을 조각(토큰)으로 자르는 일.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Tokenization-BPE-tutorial/index.html#stage"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/tokenization"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/merge-rule",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "합치기 규칙",
-     "@language": "ko"
-    },
-    {
-     "@value": "Merge rule",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "가장 많이 붙어 있는 짝을 고르고, 횟수가 같으면 글에서 먼저 나온 짝을 고른다. 첫 합치기는 i+n(9번).",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Tokenization-BPE-tutorial/index.html#stage"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/tokenization"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/bpe"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/subword",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "낱말 조각 (서브워드)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Subword unit",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "글자와 낱말 사이 크기의 조각. 처음 보는 morning도 m·o·r·n·ing으로 자를 수 있다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Tokenization-BPE-tutorial/index.html#stage"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/tokenization"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/vocabulary",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "사전과 번호",
-     "@language": "ko"
-    },
-    {
-     "@value": "Vocabulary and token ids",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "글자 21 + 합친 조각 30 = 51개. 번호는 만든 순서(in 21번, haru 43번).",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Tokenization-BPE-tutorial/index.html#stage"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/tokenization"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/token-embedding"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/word-level-tokenization",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "낱말 단위로 자르기",
-     "@language": "ko"
-    },
-    {
-     "@value": "Word-level tokenization",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "낱말 사전으로 자르면 19가지. 철자가 틀린 figurnes는 사전에 없다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Tokenization-BPE-tutorial/index.html#stage"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/tokenization"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/char-level-tokenization",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "한 글자씩 자르기",
-     "@language": "ko"
-    },
-    {
-     "@value": "Character-level tokenization",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "글자 수 그대로 177토큰. 줄이 길어진다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Tokenization-BPE-tutorial/index.html#stage"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/tokenization"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/bpe"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/utf8-bytes",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "UTF-8 바이트 (한글)",
-     "@language": "ko"
-    },
-    {
-     "@value": "UTF-8 bytes for Hangul",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "한글 13글자 '하루가 피규어를 정리해요'는 UTF-8로 35바이트(한 글자 3바이트).",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Tokenization-BPE-tutorial/index.html#stage"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/tokenization"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/bpe"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/token-embedding",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "조각 → 숫자 → 벡터",
-     "@language": "ko"
-    },
-    {
-     "@value": "Token to id to vector",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "토큰 번호를 벡터로 바꾼다. 페이지는 함께 나온 횟수(PPMI)를 SVD로 3차원으로 줄인 좌표를 보여 준다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Tokenization-BPE-tutorial/index.html#stage"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/word-embedding"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/ppmi-svd",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "PPMI + SVD로 줄인 좌표",
-     "@language": "ko"
-    },
-    {
-     "@value": "PPMI with SVD",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "앞뒤 두 토큰 안에 함께 나온 횟수로 만든 행렬을 SVD로 3차원으로 줄였다(첫 축은 건너뜀).",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Tokenization-BPE-tutorial/index.html#stage"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/matrix-decompositions"
-    },
-    {
-     "@id": "lab:topic/word-embedding"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/token-embedding"
-    }
-   ]
-  },
-  {
-   "@id": "lab:metric/compression-ratio",
-   "@type": [
-    "skos:Concept",
-    "lab:Metric"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "짧아진 길이",
-     "@language": "ko"
-    },
-    {
-     "@value": "Compression ratio",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "177 ÷ 66 = 2.68, 약 2.7배.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Tokenization-BPE-tutorial/index.html#stage"
-   }
-  },
-  {
    "@id": "lab:concept/cosine-similarity",
    "@type": [
     "skos:Concept",
@@ -1271,6 +40,9 @@
     },
     {
      "@id": "lab:topic/inner-product-orthogonality"
+    },
+    {
+     "@id": "lab:topic/vectors-geometry"
     }
    ],
    "lab:prerequisiteOf": [
@@ -1490,6 +262,9 @@
     "@id": "https://adminmrobo.github.io/llm_applied_lab/A2_finetune_lab.html#lv4"
    },
    "lab:topic": [
+    {
+     "@id": "lab:topic/lora"
+    },
     {
      "@id": "lab:topic/transfer-learning"
     }
@@ -4165,6 +2940,43 @@
    ]
   },
   {
+   "@id": "lab:concept/human-approval",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "사람 승인",
+     "@language": "ko"
+    },
+    {
+     "@value": "Human-in-the-loop approval",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "되돌릴 수 없는 행동 직전에 사람이 확인·승인하는 단계.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/llm_applied_lab/A4_agent_lab.html#lv4"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:method/layered-guards"
+    },
+    {
+     "@id": "lab:concept/agent-improvement-loop"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/golden-outputs"
+    }
+   ]
+  },
+  {
    "@id": "lab:concept/irreversible-action",
    "@type": [
     "skos:Concept",
@@ -4342,6 +3154,1200 @@
    "rdfs:isDefinedBy": {
     "@id": "https://adminmrobo.github.io/llm_applied_lab/A4_agent_lab.html#big"
    }
+  },
+  {
+   "@id": "lab:method/bpe",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "바이트 쌍 인코딩",
+     "@language": "ko"
+    },
+    {
+     "@value": "byte-pair encoding",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "자주 붙어 나오는 글자 조각을 묶어 토큰을 만드는 방법. 영-독 공용 어휘 약 37000.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Tokenization-BPE-tutorial/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/tokenization"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/transformer"
+    },
+    {
+     "@id": "lab:concept/token"
+    },
+    {
+     "@id": "lab:concept/tokenization"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/rustbpe"
+    },
+    {
+     "@id": "lab:concept/word-level-tokenization"
+    }
+   ],
+   "lab:evaluatedOn": [
+    {
+     "@id": "lab:dataset/nsmc"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/gpt"
+    },
+    {
+     "@id": "lab:concept/subword"
+    },
+    {
+     "@id": "lab:concept/vocabulary"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/compression-ratio"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/tokenization",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "토큰 나누기 (토큰화)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Tokenization",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "글을 모델이 읽을 조각(토큰)으로 자르는 일.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Tokenization-BPE-tutorial/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/tokenization"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/merge-rule",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "합치기 규칙",
+     "@language": "ko"
+    },
+    {
+     "@value": "Merge rule",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "가장 많이 붙어 있는 짝을 고르고, 횟수가 같으면 글에서 먼저 나온 짝을 고른다. 첫 합치기는 i+n(9번).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Tokenization-BPE-tutorial/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/tokenization"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/bpe"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/subword",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "낱말 조각 (서브워드)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Subword unit",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "글자와 낱말 사이 크기의 조각. 처음 보는 morning도 m·o·r·n·ing으로 자를 수 있다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Tokenization-BPE-tutorial/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/tokenization"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/vocabulary",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "사전과 번호",
+     "@language": "ko"
+    },
+    {
+     "@value": "Vocabulary and token ids",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "글자 21 + 합친 조각 30 = 51개. 번호는 만든 순서(in 21번, haru 43번).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Tokenization-BPE-tutorial/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/tokenization"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/token-embedding"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/word-level-tokenization",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "낱말 단위로 자르기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Word-level tokenization",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "낱말 사전으로 자르면 19가지. 철자가 틀린 figurnes는 사전에 없다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Tokenization-BPE-tutorial/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/tokenization"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/char-level-tokenization",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "한 글자씩 자르기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Character-level tokenization",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "글자 수 그대로 177토큰. 줄이 길어진다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Tokenization-BPE-tutorial/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/tokenization"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/bpe"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/utf8-bytes",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "UTF-8 바이트 (한글)",
+     "@language": "ko"
+    },
+    {
+     "@value": "UTF-8 bytes for Hangul",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "한글 13글자 '하루가 피규어를 정리해요'는 UTF-8로 35바이트(한 글자 3바이트).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Tokenization-BPE-tutorial/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/tokenization"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/bpe"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/token-embedding",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "조각 → 숫자 → 벡터",
+     "@language": "ko"
+    },
+    {
+     "@value": "Token to id to vector",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "토큰 번호를 벡터로 바꾼다. 페이지는 함께 나온 횟수(PPMI)를 SVD로 3차원으로 줄인 좌표를 보여 준다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Tokenization-BPE-tutorial/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/word-embedding"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/ppmi-svd",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "PPMI + SVD로 줄인 좌표",
+     "@language": "ko"
+    },
+    {
+     "@value": "PPMI with SVD",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "앞뒤 두 토큰 안에 함께 나온 횟수로 만든 행렬을 SVD로 3차원으로 줄였다(첫 축은 건너뜀).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Tokenization-BPE-tutorial/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/matrix-decompositions"
+    },
+    {
+     "@id": "lab:topic/word-embedding"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/token-embedding"
+    }
+   ]
+  },
+  {
+   "@id": "lab:metric/compression-ratio",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "짧아진 길이",
+     "@language": "ko"
+    },
+    {
+     "@value": "Compression ratio",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "177 ÷ 66 = 2.68, 약 2.7배.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Tokenization-BPE-tutorial/index.html#stage"
+   }
+  },
+  {
+   "@id": "lab:concept/recursive-self-improvement",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "재귀적 자기개선 (RSI)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Recursive self-improvement",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "AI가 자기 결과를 보고 자기를 고치고, 고친 방식이 다음 고침에 다시 쓰이는 제안→실행→측정→갱신의 순환",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/index.html#s1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/ai-safety"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/intelligence-explosion",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "지능 폭발",
+     "@language": "ko"
+    },
+    {
+     "@value": "Intelligence explosion",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "더 나은 기계를 설계하는 기계가 연쇄적으로 지능을 끌어올린다는 생각 실험",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/index.html#s1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/recursive-self-improvement"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/improvement-loop",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "개선 순환 (제안→실행→측정→갱신)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Propose-run-measure-update loop",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "RSI의 조작적 정의. 갱신이 남아 다음 바퀴에 쓰일 때 재귀적이다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/index.html#s1"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/recursive-self-improvement"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/verification-hierarchy",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "확인 신호의 위계",
+     "@language": "ko"
+    },
+    {
+     "@value": "Verification hierarchy",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "형식 검증기(가장 강함)부터 모델 자신의 내부 신호(가장 약함)까지 확인 신호를 줄 세운 것",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/index.html#s4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/ablation"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/model-collapse",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "모델 붕괴",
+     "@language": "ko"
+    },
+    {
+     "@value": "Model collapse",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "모델이 만든 데이터를 가리지 않고 다시 학습에 쓰면 원래 분포의 꼬리가 사라지는 결함",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/index.html#s4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/density-estimation"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:concept/verification-hierarchy"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/harness",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "하네스",
+     "@language": "ko"
+    },
+    {
+     "@value": "Agent harness",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "고정된 모델을 둘러싼 프롬프트·스킬·도구 규칙·메모리 묶음",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/index.html#s3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/deployment"
+    },
+    {
+     "@id": "lab:topic/prompting"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/improvement-target",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "개선 대상 × 순환이 닫힌 정도",
+     "@language": "ko"
+    },
+    {
+     "@value": "Improvement target × loop closure",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "무엇을 고치나(행동·가중치·평가자·연구 과정)와 사람이 순환 어디에 있나로 RSI 연구를 나누는 틀",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/index.html#s3"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/recursive-self-improvement"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/godel-machine",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "괴델 머신",
+     "@language": "ko"
+    },
+    {
+     "@value": "Gödel machine",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "수정이 유용하다는 증명을 찾으면 자기 코드를 고쳐 쓰는 이론 모델",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/index.html#s2"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/recursive-self-improvement"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/darwin-godel-machine",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "다윈 괴델 머신 (DGM)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Darwin Gödel Machine",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "증명 대신 벤치마크 실험 증거로 수정을 받아들이고, 만든 에이전트를 보관소에 모두 남기는 자기개선 코딩 에이전트",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/index.html#s2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/exploration"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/recursive-self-improvement"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/archive-search",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "보관소 탐색",
+     "@language": "ko"
+    },
+    {
+     "@value": "Archive-based open-ended search",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "점수가 낮아도 새로운 시도를 남겨 다음 탐색의 출발점으로 쓰는 방법",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/index.html#s2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/exploration"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/darwin-godel-machine"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/star",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "STaR",
+     "@language": "ko"
+    },
+    {
+     "@value": "Self-Taught Reasoner",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "정답에 닿은 자기 풀이만 골라 다시 학습하기를 반복",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/index.html#s3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/pretrained-lm"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/recursive-self-improvement"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/self-rewarding-lm",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "Self-Rewarding LM",
+     "@language": "ko"
+    },
+    {
+     "@value": "Self-Rewarding Language Models",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "모델이 스스로 채점하며 반복 학습해 지시 수행과 채점 능력을 함께 키움",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/index.html#s4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/pretrained-lm"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/recursive-self-improvement"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/verification-hierarchy"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/guard-soft-hurt-gate",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "GUARD · Soft-HURT 관문",
+     "@language": "ko"
+    },
+    {
+     "@value": "GUARD Soft-HURT gate",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "가중치를 고정하고 하네스만 고치며, 얻는 것이 잃는 것보다 여유만큼 클 때만 수정을 받아들이는 관문",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/index.html#s5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/monitoring"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/recursive-self-improvement"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/harness"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/pretraining-rsi-loops",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "사전학습의 작은 순환들 (801)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Decomposed pre-training RSI loops",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "다시 돌릴 수 없는 사전학습을 디버깅·헤드룸·경험을 지표로 바꾸는 작은 순환들로 나눠 개선",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/index.html#s3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/pretrained-lm"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/recursive-self-improvement"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/rsi-button-game",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "RSI 버튼 게임",
+     "@language": "ko"
+    },
+    {
+     "@value": "RSI two-player game",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "두 플레이어가 RSI를 시작할지 고르는 위험 r의 2인 게임",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/index.html#game"
+   }
+  },
+  {
+   "@id": "lab:concept/agent-improvement-loop",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "에이전트 개선 순환",
+     "@language": "ko"
+    },
+    {
+     "@value": "Agent self-improvement loop",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "모델은 그대로 두고 규칙 파일을 피드백 → 작은 수정 → 사람 승인 → 정답 예시 확인 순서로 고쳐 다음 실행을 낫게 만드는 다섯 단계 순환",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/part2/index.html#map"
+   }
+  },
+  {
+   "@id": "lab:concept/skill-file",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "규칙 파일 (skill.md)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Skill file",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "에이전트가 일할 때마다 먼저 읽는 짧은 지시문. 원칙과 이유를 적고 긴 자료는 가리키기만 한다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/part2/index.html#s1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/reproducibility"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/agent-improvement-loop"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/feedback-path"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/rule-conflict-pairs",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "규칙끼리 부딪힐 수 있는 짝 n(n−1)/2",
+     "@language": "ko"
+    },
+    {
+     "@value": "Pairwise rule conflicts",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "규칙 n개에서 두 개를 고르는 조합의 수. 규칙 수의 제곱에 가깝게 늘어난다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/part2/index.html#s1"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/skill-file"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/principle-with-reason",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "원칙 + 이유로 규칙 쓰기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Principle-with-reason rules",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "규칙마다 그 이유를 적어 충돌 해소와 새 상황 적용을 돕는 작성법",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/part2/index.html#s1"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/skill-file"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/feedback-path",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "피드백 경로",
+     "@language": "ko"
+    },
+    {
+     "@value": "Feedback path",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "사람들이 이미 일하는 자리에서 지적이 저절로 모이게 하는 경로. 확인법은 클릭 수 세기",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/part2/index.html#s2"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/agent-improvement-loop"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/improver-agent"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/feedback-funnel",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "피드백 깔때기 p^k",
+     "@language": "ko"
+    },
+    {
+     "@value": "Feedback funnel",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "단계마다 남는 비율 p를 클릭 수 k번 곱한 만큼만 피드백이 남는다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/part2/index.html#s2"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/feedback-path"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/improver-agent",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "개선 담당 에이전트",
+     "@language": "ko"
+    },
+    {
+     "@value": "Improver agent",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "정해진 때마다 제안한 것과 실제 응답을 견주어 규칙 파일의 작고 초점 있는 수정 하나를 초안으로 내는 두 번째 에이전트",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/part2/index.html#s3"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/agent-improvement-loop"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/human-approval"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/one-small-edit",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "한 번에 수정 하나",
+     "@language": "ko"
+    },
+    {
+     "@value": "One small focused edit",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "여러 규칙을 함께 바꾸지 않고 한 번에 하나만 바꿔 원인 추적과 되돌리기를 쉽게 하는 방법",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/part2/index.html#s3"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/improver-agent"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/bisect-revert",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "반씩 나눠 되돌리기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Bisection revert",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "여러 수정 중 원인을 찾을 때 절반씩 되돌려 보는 방법. 최악 log₂(수정 수)번 확인",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/part2/index.html#s3"
+   },
+   "lab:relatedTo": [
+    {
+     "@id": "lab:method/one-small-edit"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/golden-outputs",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "정답 예시 묶음 (골든 아웃풋)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Golden outputs",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "\"이렇게 나오면 맞다\"를 수정보다 먼저 정해 둔 예시 모음. 수정 전후 통과율을 재는 자",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/part2/index.html#s5"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/agent-improvement-loop"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/pass-rate-noise",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "통과율의 흔들림 √(p(1−p)/n)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Pass-rate standard error",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "실력이 그대로여도 예시 수가 적으면 통과율이 운에 따라 흔들리는 폭",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Recursive-Self-Improvement/part2/index.html#s5"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/golden-outputs"
+    }
+   ]
   },
   {
    "@id": "lab:concept/conditional-probability",
@@ -4769,7 +4775,7 @@
     }
    ],
    "skos:definition": {
-    "@value": "두 점 사이의 직선 거리. 열별 차이의 제곱합의 제곱근.",
+    "@value": "곧게 잰 거리. 시아 (4, 0, 10)와 모아 (12, 5, 7)는 √98 = 9.899.",
     "@language": "ko"
    },
    "rdfs:isDefinedBy": {
@@ -4780,7 +4786,15 @@
      "@id": "lab:topic/distance-angle"
     },
     {
+     "@id": "lab:topic/euclidean-space"
+    },
+    {
      "@id": "lab:topic/knn"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:concept/cosine-similarity"
     }
    ],
    "lab:partOf": [

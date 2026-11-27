@@ -7456,6 +7456,94 @@
    ]
   },
   {
+   "@id": "lab:concept/euclidean-distance",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "유클리드 거리",
+     "@language": "ko"
+    },
+    {
+     "@value": "Euclidean distance",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "곧게 잰 거리. 시아 (4, 0, 10)와 모아 (12, 5, 7)는 √98 = 9.899.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/unsupervised_fish_lab/01_no_answer_key.html#s2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/distance-angle"
+    },
+    {
+     "@id": "lab:topic/euclidean-space"
+    },
+    {
+     "@id": "lab:topic/knn"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/manhattan-distance"
+    },
+    {
+     "@id": "lab:concept/nearest-centroid"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/knn"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/manhattan-distance",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "맨해튼 거리",
+     "@language": "ko"
+    },
+    {
+     "@value": "Manhattan distance",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "축을 따라 꺾어 걷는 거리. 8 + 5 + 3 = 16.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/unsupervised_fish_lab/01_no_answer_key.html#s2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/knn"
+    },
+    {
+     "@id": "lab:topic/metric-space"
+    },
+    {
+     "@id": "lab:topic/normed-spaces"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:concept/euclidean-distance"
+    }
+   ]
+  },
+  {
    "@id": "lab:metric/ari",
    "@type": [
     "skos:Concept",
@@ -7481,53 +7569,6 @@
    "lab:topic": [
     {
      "@id": "lab:topic/clustering"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/euclidean-distance",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "유클리드 거리",
-     "@language": "ko"
-    },
-    {
-     "@value": "Euclidean distance",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "두 점 사이의 직선 거리. 열별 차이의 제곱합의 제곱근.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/unsupervised_fish_lab/01_no_answer_key.html#s2"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/distance-angle"
-    },
-    {
-     "@id": "lab:topic/knn"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/knn"
-    }
-   ],
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:concept/manhattan-distance"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/nearest-centroid"
     }
    ]
   },
@@ -7560,43 +7601,6 @@
     }
    ],
    "lab:relatedTo": [
-    {
-     "@id": "lab:concept/euclidean-distance"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/manhattan-distance",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "골목 거리(맨해튼 거리)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Manhattan distance",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "|Δx| + |Δy|.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/unsupervised_fish_lab/01_no_answer_key.html#s2"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/knn"
-    },
-    {
-     "@id": "lab:topic/metric-space"
-    }
-   ],
-   "lab:contrastsWith": [
     {
      "@id": "lab:concept/euclidean-distance"
     }
@@ -13147,7 +13151,7 @@
    ],
    "skos:prefLabel": [
     {
-     "@value": "무늬 지도(특징 맵)",
+     "@value": "특징 지도",
      "@language": "ko"
     },
     {
@@ -13156,12 +13160,17 @@
     }
    ],
    "skos:definition": {
-    "@value": "돋보기가 자리마다 매긴 점수를 모은 판.",
+    "@value": "필터 하나가 그림 전체를 훑은 결과. 필터 4개면 지도 4장.",
     "@language": "ko"
    },
    "rdfs:isDefinedBy": {
     "@id": "https://adminmrobo.github.io/DL_model_hiring_committee/6-4_cnn.html#m1"
    },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/convolution"
+    }
+   ],
    "lab:partOf": [
     {
      "@id": "lab:method/cnn"

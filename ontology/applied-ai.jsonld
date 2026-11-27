@@ -9006,6 +9006,11 @@
    "rdfs:isDefinedBy": {
     "@id": "https://adminmrobo.github.io/how_to_make_ai_model_factory_version/classifier.html#w9"
    },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/transfer-learning"
+    }
+   ],
    "lab:prerequisiteOf": [
     {
      "@id": "lab:concept/model-capacity"
@@ -11697,6 +11702,9 @@
     },
     {
      "@id": "lab:topic/inner-product-orthogonality"
+    },
+    {
+     "@id": "lab:topic/vectors-geometry"
     }
    ],
    "lab:partOf": [
@@ -11849,6 +11857,48 @@
    "lab:partOf": [
     {
      "@id": "lab:concept/bayesian-inference"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/learning-curve",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "학습 곡선",
+     "@language": "ko"
+    },
+    {
+     "@value": "Learning curve",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "학습 장 수 2·4·8·16·600에서 정확도 0.695·0.820·0.850·1.000·1.000.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Reinforcement-Learning-lab_project_01/ch9_general.html#s3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/generalization"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/logistic-regression"
+    },
+    {
+     "@id": "lab:concept/trial-and-error-learning"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/reward-design"
     }
    ]
   },
@@ -14133,40 +14183,6 @@
    "lab:prerequisiteOf": [
     {
      "@id": "lab:concept/learning-curve"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/learning-curve",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "학습 곡선",
-     "@language": "ko"
-    },
-    {
-     "@value": "Learning curve",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "학습시키기",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Reinforcement-Learning-lab_project_01/ch9_general.html#s3"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/trial-and-error-learning"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/reward-design"
     }
    ]
   },

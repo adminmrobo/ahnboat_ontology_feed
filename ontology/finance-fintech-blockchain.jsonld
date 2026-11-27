@@ -3910,6 +3910,46 @@
    ]
   },
   {
+   "@id": "lab:concept/euclidean-distance",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "유클리드 거리",
+     "@language": "ko"
+    },
+    {
+     "@value": "Euclidean distance",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "곧게 잰 거리. 시아 (4, 0, 10)와 모아 (12, 5, 7)는 √98 = 9.899.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/fintech_data_analysis/06_knn_svm.html#lv1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/distance-angle"
+    },
+    {
+     "@id": "lab:topic/euclidean-space"
+    },
+    {
+     "@id": "lab:topic/knn"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/knn"
+    }
+   ]
+  },
+  {
    "@id": "lab:concept/relu",
    "@type": [
     "skos:Concept",
@@ -5475,43 +5515,6 @@
    "lab:partOf": [
     {
      "@id": "lab:concept/labeling"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/euclidean-distance",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "유클리드 거리",
-     "@language": "ko"
-    },
-    {
-     "@value": "Euclidean distance",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "두 점 사이의 직선 거리. 열별 차이의 제곱합의 제곱근.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/fintech_data_analysis/06_knn_svm.html#lv1"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/distance-angle"
-    },
-    {
-     "@id": "lab:topic/knn"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/knn"
     }
    ]
   },

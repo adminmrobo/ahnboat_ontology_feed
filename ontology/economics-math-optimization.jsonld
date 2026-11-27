@@ -12,6 +12,726 @@
  "dct:creator": "안상선 (Ahn Sangsun)",
  "@graph": [
   {
+   "@id": "lab:concept/cosine-similarity",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "코사인 유사도",
+     "@language": "ko"
+    },
+    {
+     "@value": "cosine similarity",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "두 벡터가 이루는 각도의 코사인. −1(반대)~1(같은 방향) 값을 가지며 벡터의 길이는 무시한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/embedding-space"
+    },
+    {
+     "@id": "lab:topic/inner-product-orthogonality"
+    },
+    {
+     "@id": "lab:topic/vectors-geometry"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/review-clustering"
+    }
+   ]
+  },
+  {
+   "@id": "lab:metric/accuracy",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "정확도",
+     "@language": "ko"
+    },
+    {
+     "@value": "Accuracy",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "맞힌 비율. 불균형 데이터에서 속기 쉽다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/part2/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/accuracy-metrics"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/logistic-regression",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "로지스틱 회귀 (다항)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Multinomial logistic regression",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "정답별 점수 → 소프트맥스 → 확률",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/part2/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/glm-logistic"
+    },
+    {
+     "@id": "lab:topic/logistic-regression"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/accuracy"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:concept/hamming-threshold"
+    }
+   ],
+   "lab:evaluatedOn": [
+    {
+     "@id": "lab:dataset/stamp-prints"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/distance-metric",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "거리 척도",
+     "@language": "ko"
+    },
+    {
+     "@value": "Distance metric",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "두 점(사람·글·도시)이 얼마나 먼지 재는 자. 자를 바꾸면 같은 두 사람의 거리가 달라진다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/distance-angle"
+    },
+    {
+     "@id": "lab:topic/metric-space"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/euclidean-distance",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "유클리드 거리",
+     "@language": "ko"
+    },
+    {
+     "@value": "Euclidean distance",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "곧게 잰 거리. 시아 (4, 0, 10)와 모아 (12, 5, 7)는 √98 = 9.899.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/distance-angle"
+    },
+    {
+     "@id": "lab:topic/euclidean-space"
+    },
+    {
+     "@id": "lab:topic/knn"
+    }
+   ],
+   "lab:instanceOf": [
+    {
+     "@id": "lab:concept/distance-metric"
+    }
+   ],
+   "lab:specialCaseOf": [
+    {
+     "@id": "lab:concept/minkowski-distance"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/manhattan-distance"
+    },
+    {
+     "@id": "lab:concept/trilateration"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:concept/cosine-similarity"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/manhattan-distance",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "맨해튼 거리",
+     "@language": "ko"
+    },
+    {
+     "@value": "Manhattan distance",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "축을 따라 꺾어 걷는 거리. 8 + 5 + 3 = 16.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/knn"
+    },
+    {
+     "@id": "lab:topic/metric-space"
+    },
+    {
+     "@id": "lab:topic/normed-spaces"
+    }
+   ],
+   "lab:instanceOf": [
+    {
+     "@id": "lab:concept/distance-metric"
+    }
+   ],
+   "lab:specialCaseOf": [
+    {
+     "@id": "lab:concept/minkowski-distance"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:concept/euclidean-distance"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/chebyshev-distance",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "체비쇼프 거리",
+     "@language": "ko"
+    },
+    {
+     "@value": "Chebyshev distance",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "가장 많이 움직인 축 하나의 거리. 8.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/normed-spaces"
+    }
+   ],
+   "lab:instanceOf": [
+    {
+     "@id": "lab:concept/distance-metric"
+    }
+   ],
+   "lab:specialCaseOf": [
+    {
+     "@id": "lab:concept/minkowski-distance"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/minkowski-distance",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "민코프스키 거리",
+     "@language": "ko"
+    },
+    {
+     "@value": "Minkowski distance",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "p로 모양이 바뀌는 자. p = 1이면 맨해튼, 2면 유클리드, p를 키울수록 체비쇼프 8에 다가간다(p = 1.5·3·4·8: 11.501·8.724·8.324·8.023).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/normed-spaces"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/unit-ball",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "거리가 1인 면",
+     "@language": "ko"
+    },
+    {
+     "@value": "Unit ball of a norm",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "민코프스키 p마다 원점에서 거리 1인 점을 모은 면. p에 따라 마름모에서 구, 상자 모양으로 바뀐다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/normed-spaces"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/minkowski-distance"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/haversine-distance",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "하버사인 거리",
+     "@language": "ko"
+    },
+    {
+     "@value": "Haversine distance",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "둥근 지구 위의 최단 거리. 서울–런던 8,857 km (지구 속 직선 8,161 km).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/geodesics"
+    }
+   ],
+   "lab:instanceOf": [
+    {
+     "@id": "lab:concept/distance-metric"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/metric-inequality",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "체비쇼프 ≤ 유클리드 ≤ 맨해튼",
+     "@language": "ko"
+    },
+    {
+     "@value": "Chebyshev ≤ Euclidean ≤ Manhattan",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "같은 두 점이면 이 순서가 늘 성립한다(8 ≤ 9.899 ≤ 16).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/normed-spaces"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/minkowski-distance"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/review-clustering",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "비슷한 후기 묶기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Grouping similar reviews",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "코사인으로 재면 후기 여섯 개가 표정(0.990)·도색(0.894)·배송(0.894) 세 묶음으로 모인다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/clustering"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/word-count-vector",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "낱말 횟수 벡터",
+     "@language": "ko"
+    },
+    {
+     "@value": "Word-count vector",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "후기를 (표정, 도색, 배송) 낱말이 나온 횟수로 바꾼 벡터.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/text-vectorization"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/cosine-similarity"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/hamming-distance",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "해밍 거리",
+     "@language": "ko"
+    },
+    {
+     "@value": "Hamming distance",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "같은 자리끼리 다른 점의 수. 박사 얼굴 도장 32×32 = 1,024점에서 시아 13점, 모아 67점.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/part2/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/metric-space"
+    }
+   ],
+   "lab:instanceOf": [
+    {
+     "@id": "lab:concept/distance-metric"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/hamming-threshold"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/jaccard-index",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "자카드 지수",
+     "@language": "ko"
+    },
+    {
+     "@value": "Jaccard index",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "겹친 부분 ÷ 합친 부분. 피규어 블록 모형에서 모아 정품 0.996, 시아 해적판 0.705.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/part2/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/sets"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:concept/sorensen-dice"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/sorensen-dice",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "쇠렌센-다이스 계수",
+     "@language": "ko"
+    },
+    {
+     "@value": "Sørensen–Dice coefficient",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "겹친 부분 × 2 ÷ 두 크기의 합. 모아 정품 0.998, 시아 해적판 0.827.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/part2/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/sets"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/set-overlap",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "집합 겹침",
+     "@language": "ko"
+    },
+    {
+     "@value": "Set overlap",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "두 블록 모형(24×24×24)을 블록 집합으로 보고 겹친 블록을 센다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/part2/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/sets"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/jaccard-index"
+    },
+    {
+     "@id": "lab:concept/sorensen-dice"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/hamming-threshold",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "해밍 기준선 판정",
+     "@language": "ko"
+    },
+    {
+     "@value": "Hamming threshold rule",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "다른 점이 26점 이상이면 위작. 어려운 판에서 정확도 0.900.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/part2/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/rule-vs-learning"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/accuracy"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/learning-curve",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "학습 곡선",
+     "@language": "ko"
+    },
+    {
+     "@value": "Learning curve",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "학습 장 수 2·4·8·16·600에서 정확도 0.695·0.820·0.850·1.000·1.000.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/part2/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/generalization"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/logistic-regression"
+    }
+   ]
+  },
+  {
+   "@id": "lab:dataset/stamp-prints",
+   "@type": [
+    "skos:Concept",
+    "lab:Dataset"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "도장 인영 800장",
+     "@language": "ko"
+    },
+    {
+     "@value": "800 stamp prints",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "진품 인쇄 400장(누르는 힘·번짐·잉크 빠짐)과 위작 400장(새김 1px 어긋남), 학습 600 · 시험 200.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/part2/index.html#stage"
+   }
+  },
+  {
    "@id": "lab:concept/limit-idea",
    "@type": [
     "skos:Concept",
@@ -994,6 +1714,871 @@
    "rdfs:isDefinedBy": {
     "@id": "https://adminmrobo.github.io/adminmrobo-lhopital_lab/12_final_review.html#lv3"
    }
+  },
+  {
+   "@id": "lab:method/01-duel-fly",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "모델 유지(연 3,600만 원)",
+     "@language": "ko"
+    },
+    {
+     "@value": "duel choice A 01",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "모델 유지(연 3,600만 원)",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/pacing_problem_lab/index.html#duel"
+   },
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/01-duel-robo"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/01-duel"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/01-duel-robo",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "쇼핑몰 창업(1억3천 − 1억)",
+     "@language": "ko"
+    },
+    {
+     "@value": "duel choice B 01",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "쇼핑몰 창업(1억3천 − 1억)",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/pacing_problem_lab/index.html#duel"
+   },
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/01-duel"
+    }
+   ]
+  },
+  {
+   "@id": "lab:metric/01-duel",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "1년 뒤 손에 남는 돈(만 원)",
+     "@language": "ko"
+    },
+    {
+     "@value": "duel metric 01",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "1년 뒤 손에 남는 돈(만 원)",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/pacing_problem_lab/index.html#duel"
+   }
+  },
+  {
+   "@id": "lab:concept/economic-growth",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "경제성장",
+     "@language": "ko"
+    },
+    {
+     "@value": "economic growth",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "생산가능곡선 자체가 바깥으로 이동하는 것.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/pacing_problem_lab/index.html#links"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/growth-accounting"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/ppf"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/solow-steady-state"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/production-functions-ai",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "생산함수와 AI 대체",
+     "@language": "ko"
+    },
+    {
+     "@value": "production functions and AI substitution",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "보완(레온티에프)부터 완전대체(선형)까지 생산함수 형태에 따라 AI 가격 변화가 노동수요에 주는 영향이 달라진다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/pacing_problem_lab/index.html#links"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/threshold-wage"
+    },
+    {
+     "@id": "lab:concept/competitive-equilibrium"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/technology-absorption"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/threshold-wage",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "임계임금과 절벽형 노동수요",
+     "@language": "ko"
+    },
+    {
+     "@value": "threshold wage and cliff-shaped labor demand",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "완전대체 기술에서 노동과 AI의 단위비용이 같아지는 임금. 이를 넘으면 노동수요가 0으로 떨어진다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/pacing_problem_lab/index.html#links"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/discouraged-worker"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/pacing-problem"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/conditional-labor-demand",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "조건부 노동수요함수",
+     "@language": "ko"
+    },
+    {
+     "@value": "Conditional Labor Demand Function",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "비용최소화 1계조건을 통해 자본 K를 소거하고 산출 Y와 상대가격 w/r로 구인수요를 도출하는 함수.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/pacing_problem_lab/index.html#links"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/factor-demand"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/counterfactual-analysis"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/technology-absorption"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/solow-steady-state",
+   "@type": [
+    "skos:Concept",
+    "lab:Theory"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "솔로우 모형과 정상상태",
+     "@language": "ko"
+    },
+    {
+     "@value": "Solow model and steady state",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "저축으로 새로 쌓는 자본과 닳고 나눠지는 자본이 같아지는 정상상태에서, 1인당 소득은 기술 성장률만큼 자란다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/pacing_problem_lab/index.html#lv1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/solow-model"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/technology-absorption"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/technology-absorption",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "기술 흡수 속도(사회 속도)",
+     "@language": "ko"
+    },
+    {
+     "@value": "technology absorption speed",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "최첨단 기술과 사회가 실제로 쓰는 기술의 격차를 해마다 메우는 몫. 오래 지나면 격차는 g ÷ λ에 머문다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/pacing_problem_lab/index.html#lv2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/technical-progress"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/pacing-problem"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/pacing-problem",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "페이싱 문제와 정책 시차",
+     "@language": "ko"
+    },
+    {
+     "@value": "pacing problem and policy lag",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "사회의 변화 속도와 정책의 대응 속도가 다를 때 생기는 틈. 오래 지나 남는 틈은 대략 두 속도의 비율(v ÷ μ)이 정한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/pacing_problem_lab/index.html#lv3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/unemployment-rate"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/hamiltonian-policy-speed"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/hamiltonian-policy-speed",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "해밀토니안과 그림자 가격",
+     "@language": "ko"
+    },
+    {
+     "@value": "current-value Hamiltonian and shadow price",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "고르는 값(정책 속도)과 쌓이는 값(보전 비율)을 그림자 가격으로 묶어, 해마다 가장 나은 선택을 찾는 최적 제어 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/pacing_problem_lab/index.html#lv4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/optimal-growth"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/solow-model",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "솔로우 모형",
+     "@language": "ko"
+    },
+    {
+     "@value": "Solow model",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "저축으로 자본을 쌓고 기술이 자라는 경제의 성장 모형(Solow, 1956). 장기 성장률은 기술 성장률이 정한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/pacing_problem_lab/index.html#lv1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/solow-model"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/solow-steady-state"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/steady-state",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "정상상태",
+     "@language": "ko"
+    },
+    {
+     "@value": "steady state",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "새로 쌓는 자본과 닳고 나눠지는 자본이 같아져 k가 더 변하지 않는 상태.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/pacing_problem_lab/index.html#lv1"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/solow-steady-state"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/technology-growth-rate",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "기술 성장률",
+     "@language": "ko"
+    },
+    {
+     "@value": "technology growth rate",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "최첨단 기술 수준이 해마다 자라는 비율. 이 페이지의 기술 속도(200km = 연 4%).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/pacing_problem_lab/index.html#lv1"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/solow-steady-state"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/absorption-speed",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "사회 속도",
+     "@language": "ko"
+    },
+    {
+     "@value": "absorption speed",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "최첨단과 실제로 쓰는 기술의 격차를 해마다 메우는 몫(50km = 0.25).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/pacing_problem_lab/index.html#lv2"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/technology-absorption"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/pacing-problem",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "페이싱 문제",
+     "@language": "ko"
+    },
+    {
+     "@value": "pacing problem",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "과학기술의 속도와 법·제도가 대응하는 속도 사이에 벌어지는 틈(Marchant 외 편, 2011).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/pacing_problem_lab/index.html#lv3"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/pacing-problem"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/coverage-gap",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "보전 공백",
+     "@language": "ko"
+    },
+    {
+     "@value": "coverage gap",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "실직 비율 u에서 정책이 보전하는 비율 T를 뺀 값.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/pacing_problem_lab/index.html#lv3"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/pacing-problem"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/policy-speed",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "정책 속도",
+     "@language": "ko"
+    },
+    {
+     "@value": "policy adjustment speed",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "보전 공백을 해마다 메우는 몫. 20km = 0.1.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/pacing_problem_lab/index.html#lv3"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/pacing-problem"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/unrest-threshold",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "불안 문턱",
+     "@language": "ko"
+    },
+    {
+     "@value": "unrest threshold",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "보전 공백이 이 값(기본 3%p)을 넘은 해를 불안이 커지는 해로 세는 이 페이지의 설명용 기준.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/pacing_problem_lab/index.html#lv3"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/pacing-problem"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/hamiltonian",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "해밀토니안",
+     "@language": "ko"
+    },
+    {
+     "@value": "Hamiltonian",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "그해의 손익에 그림자 가격 × 상태 변화를 더한 식. 최적 제어 문제를 해마다의 선택으로 나눠 푼다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/pacing_problem_lab/index.html#lv4"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/hamiltonian-policy-speed"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/shadow-price",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "그림자 가격",
+     "@language": "ko"
+    },
+    {
+     "@value": "shadow price (costate)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "쌓이는 값(보전 비율) 1단위를 더 가졌을 때 앞으로 아낄 수 있는 손실. 공동상태 변수.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/pacing_problem_lab/index.html#lv4"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/hamiltonian-policy-speed"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/automatic-stabilizer",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "자동 안정화 장치",
+     "@language": "ko"
+    },
+    {
+     "@value": "automatic stabilizer",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "법을 새로 만들지 않아도 경기가 나빠지거나 실직이 늘면 저절로 커지는 지출(예: 실업급여).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/pacing_problem_lab/index.html#lv4"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/hamiltonian-policy-speed"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/constant-returns-to-scale",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "규모에 대한 수익 불변",
+     "@language": "ko"
+    },
+    {
+     "@value": "constant returns to scale",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "모든 투입을 t배 하면 생산도 t배.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/pacing_problem_lab/index.html#links"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/solow-steady-state"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/euler-method",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "오일러 방법(계단 풀이)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Euler method",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "짧은 Δt마다 기울기 × Δt만큼 이동해 미분방정식을 푼다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/pacing_problem_lab/index.html#links"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/technology-absorption"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/transfer-income",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "이전소득",
+     "@language": "ko"
+    },
+    {
+     "@value": "transfer income",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "생산에 참여하지 않고 정부·단체로부터 받는 소득.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/pacing_problem_lab/index.html#links"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/pacing-problem"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/discounting",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "할인과 시간선호",
+     "@language": "ko"
+    },
+    {
+     "@value": "discounting and time preference",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "미래 금액을 1/(1 + r)ᵗ로 곱해 오늘 가치로 바꾸는 것.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/pacing_problem_lab/index.html#links"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/hamiltonian-policy-speed"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/lagrange-multipliers",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "라그랑주 승수",
+     "@language": "ko"
+    },
+    {
+     "@value": "Lagrange multipliers",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "제약이 있을 때 목표 − λ × 제약식을 만들어 편미분을 0으로 놓아 푼다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/pacing_problem_lab/index.html#links"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/hamiltonian-policy-speed"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/hamiltons-equations",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "해밀턴 식 (물리)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Hamilton's equations",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "위상 공간에서 상태가 움직이는 규칙. 경제학의 해밀토니안은 같은 수학 구조를 쓴다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/pacing_problem_lab/index.html#links"
+   },
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/hamiltonian-policy-speed"
+    }
+   ]
   },
   {
    "@id": "lab:concept/marginal-cost",
@@ -1986,6 +3571,11 @@
      "@id": "lab:method/lagrange-multipliers"
     }
    ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/logistic-regression"
+    }
+   ],
    "lab:hasPart": [
     {
      "@id": "lab:concept/learning-rate"
@@ -2504,6 +4094,11 @@
     {
      "@id": "lab:topic/activation-function"
     }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/logistic-regression"
+    }
    ]
   },
   {
@@ -2538,6 +4133,9 @@
     }
    ],
    "lab:partOf": [
+    {
+     "@id": "lab:method/logistic-regression"
+    },
     {
      "@id": "lab:concept/hyperparameter"
     }
@@ -7650,48 +9248,6 @@
    ]
   },
   {
-   "@id": "lab:concept/euclidean-distance",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "유클리드 거리",
-     "@language": "ko"
-    },
-    {
-     "@value": "Euclidean distance",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "두 점 사이의 직선 거리. 열별 차이의 제곱합의 제곱근.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/hello_space_lab/02_plane.html#s22"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/distance-angle"
-    },
-    {
-     "@id": "lab:topic/knn"
-    }
-   ],
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:concept/manhattan-distance"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/trilateration"
-    }
-   ]
-  },
-  {
    "@id": "lab:concept/knn",
    "@type": [
     "skos:Concept",
@@ -7911,43 +9467,6 @@
    "lab:partOf": [
     {
      "@id": "lab:concept/coordinate-plane"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/manhattan-distance",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "골목 거리(맨해튼 거리)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Manhattan distance",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "|Δx| + |Δy|.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/hello_space_lab/02_plane.html#s22"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/knn"
-    },
-    {
-     "@id": "lab:topic/metric-space"
-    }
-   ],
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:concept/euclidean-distance"
     }
    ]
   },
@@ -18811,93 +20330,6 @@
    ]
   },
   {
-   "@id": "lab:method/01-duel-fly",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "모델 유지(연 3,600만 원)",
-     "@language": "ko"
-    },
-    {
-     "@value": "duel choice A 01",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "모델 유지(연 3,600만 원)",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/labor_economics/01_what_is_labor_econ.html#duel"
-   },
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:method/01-duel-robo"
-    }
-   ],
-   "lab:evaluatedBy": [
-    {
-     "@id": "lab:metric/01-duel"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/01-duel-robo",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "쇼핑몰 창업(1억3천 − 1억)",
-     "@language": "ko"
-    },
-    {
-     "@value": "duel choice B 01",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "쇼핑몰 창업(1억3천 − 1억)",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/labor_economics/01_what_is_labor_econ.html#duel"
-   },
-   "lab:evaluatedBy": [
-    {
-     "@id": "lab:metric/01-duel"
-    }
-   ]
-  },
-  {
-   "@id": "lab:metric/01-duel",
-   "@type": [
-    "skos:Concept",
-    "lab:Metric"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "1년 뒤 손에 남는 돈(만 원)",
-     "@language": "ko"
-    },
-    {
-     "@value": "duel metric 01",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "1년 뒤 손에 남는 돈(만 원)",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/labor_economics/01_what_is_labor_econ.html#duel"
-   }
-  },
-  {
    "@id": "lab:method/02-duel-fly",
    "@type": [
     "skos:Concept",
@@ -20652,38 +22084,6 @@
    ]
   },
   {
-   "@id": "lab:concept/production-functions-ai",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "생산함수와 AI 대체",
-     "@language": "ko"
-    },
-    {
-     "@value": "production functions and AI substitution",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "보완(레온티에프)부터 완전대체(선형)까지 생산함수 형태에 따라 AI 가격 변화가 노동수요에 주는 영향이 달라진다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/labor_economics/04_labor_demand.html#lv3"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/threshold-wage"
-    },
-    {
-     "@id": "lab:concept/competitive-equilibrium"
-    }
-   ]
-  },
-  {
    "@id": "lab:term/marginal-product",
    "@type": [
     "skos:Concept",
@@ -20944,35 +22344,6 @@
     },
     {
      "@id": "lab:concept/threshold-wage"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/threshold-wage",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "임계임금과 절벽형 노동수요",
-     "@language": "ko"
-    },
-    {
-     "@value": "threshold wage and cliff-shaped labor demand",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "완전대체 기술에서 노동과 AI의 단위비용이 같아지는 임금. 이를 넘으면 노동수요가 0으로 떨어진다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/labor_economics/04s_special_ai_substitution.html#lv2"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/discouraged-worker"
     }
    ]
   },
@@ -23977,6 +25348,9 @@
     "@id": "https://adminmrobo.github.io/micro_economics/02_producer_choice.html#lv2"
    },
    "lab:partOf": [
+    {
+     "@id": "lab:method/logistic-regression"
+    },
     {
      "@id": "lab:method/cost-minimization"
     },
@@ -31899,38 +33273,6 @@
    ]
   },
   {
-   "@id": "lab:concept/cosine-similarity",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "코사인 유사도",
-     "@language": "ko"
-    },
-    {
-     "@value": "cosine similarity",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "두 벡터가 이루는 각도의 코사인. −1(반대)~1(같은 방향) 값을 가지며 벡터의 길이는 무시한다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/vector_analysis_lab/03_ai_ml.html#room-14"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/embedding-space"
-    },
-    {
-     "@id": "lab:topic/inner-product-orthogonality"
-    }
-   ]
-  },
-  {
    "@id": "lab:concept/vector",
    "@type": [
     "skos:Concept",
@@ -33641,6 +34983,11 @@
    "lab:topic": [
     {
      "@id": "lab:topic/data-leakage"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/accuracy"
     }
    ],
    "lab:relatedTo": [
@@ -38676,40 +40023,6 @@
    ]
   },
   {
-   "@id": "lab:concept/conditional-labor-demand",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "조건부 노동수요함수",
-     "@language": "ko"
-    },
-    {
-     "@value": "Conditional Labor Demand Function",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "비용최소화 1계조건을 통해 자본 K를 소거하고 산출 Y와 상대가격 w/r로 구인수요를 도출하는 함수.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/my_article_06_AI_effect_to_labor_demand/01_labor_demand_ai.html#lv2"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/factor-demand"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/counterfactual-analysis"
-    }
-   ]
-  },
-  {
    "@id": "lab:method/counterfactual-analysis",
    "@type": [
     "skos:Concept",
@@ -39451,40 +40764,6 @@
    "lab:topic": [
     {
      "@id": "lab:topic/opportunity-cost"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/ppf"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/economic-growth",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "경제성장",
-     "@language": "ko"
-    },
-    {
-     "@value": "economic growth",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "생산가능곡선 자체가 바깥으로 이동하는 것.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/basic_economic_lab/02_think_like_economist.html#lv2"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/growth-accounting"
     }
    ],
    "lab:partOf": [

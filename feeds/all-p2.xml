@@ -10,6 +10,24 @@
     <copyright>CC BY-NC 4.0 · 안상선 ((주)M-Robo)</copyright>
     <atom:link href="https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/all-p2.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>모델 채용 위원회 1차 공채 · 머신러닝</title>
+      <link>https://adminmrobo.github.io/ML_model_hiring_committee/</link>
+      <guid isPermaLink="false">ahnboat:ML_model_hiring_committee:5100ac79e3</guid>
+      <pubDate>Tue, 24 Nov 2026 14:17:01 +0000</pubDate>
+      <category>머신러닝</category>
+      <description><![CDATA[머신러닝 · 개념 74개
+개념: 비슷한 그림끼리 묶기, 베이즈 정리, PCA, t-SNE, 분류와 회귀, MAE, 회귀, 분류, 학습률, R² (결정계수), 정확도, 판단나무, SVM, 결정 트리, 프롬프트, 로지스틱 회귀 (다항), 서포트 벡터, 손실, 기울기, 시그모이드, 경사하강, 규제, 조기 종료, 경사하강법, 기계 학습, k-평균, k-평균++, 중심, 손글씨 숫자, 거리, 표준화, 덴드로그램, 분산, 복원, 거듭제곱법, 특징, 흩어짐(분산·표준편차), 사전 확률, 사후 확률, 가능도, 특성 중요도, KNN, 앙상블(배깅·부스팅·스태킹), 다항(비선형) 회귀, 특성공학(PolynomialFeatures), 가지치기, 실루엣 점수, 지니 불순도, 설명분산 비율, 판단 경계, 유클리드 거리, 매뉴얼 씨, KL 발산, 검증 몫, 여유 (margin), 축이 너무 많으면 모두 비슷하게 멀어진다, 최소제곱, 공분산, SVC, 교차검증, 랜덤 포레스트, k-최근접 이웃, 부트스트랩, 라쏘 회귀, 회귀 트리, 라쏘 회귀, 차원 축소 (접기), t-SNE·UMAP, 정규방정식, XGBoost, 나이브 베이즈, 플로우차트, 고유값(굽음), 커널 트릭]]></description>
+    </item>
+    <item>
+      <title>알고리즘 패밀리 3부 · 가문 회합</title>
+      <link>https://adminmrobo.github.io/ML_00_Algorithm-family-build_03/</link>
+      <guid isPermaLink="false">ahnboat:ML_00_Algorithm-family-build_03:a881b8c3f4</guid>
+      <pubDate>Tue, 24 Nov 2026 14:16:55 +0000</pubDate>
+      <category>머신러닝</category>
+      <description><![CDATA[머신러닝 · 개념 29개
+개념: PCA, t-SNE, 정밀도·재현율, 회귀, 분류, 데이터 누수, 정확도, 재현율, 정밀도, 시계열, 탐험, 프롬프트, 로지스틱 회귀 (다항), 혼동 행렬, k-평균, 중심, 표준화, 에이전트, 학습 곡선, 실루엣 점수, 강화학습, 교차검증, 검증 데이터, 점수 규칙(보상), 배포, 정밀도와 재현율, Q-러닝, 시험 데이터, 보상 설계]]></description>
+    </item>
+    <item>
       <title>알고리즘 패밀리 2부 · 조직원 명부</title>
       <link>https://adminmrobo.github.io/ML_00_Algorithm-family-build_02/</link>
       <guid isPermaLink="false">ahnboat:ML_00_Algorithm-family-build_02:3160e2b69e</guid>
@@ -466,7 +484,7 @@
       <pubDate>Mon, 23 Nov 2026 07:30:49 +0000</pubDate>
       <category>AI 감각·생성</category>
       <description><![CDATA[AI 감각·생성 · 개념 45개
-개념: 전이학습, 파인튜닝, 채널, ReLU, 최대 풀링, ResNet, 완전연결층, 파라미터 수, 역전파, 가중치 공유, 평균 풀링, 경사하강법, 합성곱 신경망, 겹친 비율, 통째 비교(자리 그대로 비교), 합성곱(교차 상관), 펼치기, 소프트맥스, 숫자판(픽셀 격자), 돋보기(필터·커널), 무늬 지도(특징 맵), 출력 크기 공식, 패딩(덧대기), 스트라이드(건너뛰기), 자리 변화에 견디기, 로짓, 손실(교차 엔트로피), 한 칸 밀린 얼굴 정확도, 8×8 도트 얼굴 장난감 데이터, LeNet-5, AlexNet, VGG, 건너뛰는 연결, 창 밀기, 겹친 상자 정리(NMS), 의미 분할, 개체 분할, 특징 추출, 후보부터 뽑는 탐지 (R-CNN 계열), 한 번에 내는 탐지 (YOLO·SSD), 경계 상자, 확신 점수, "없음" 답, 맞힘 · 놓침 · 헛짚음, 24×12 도트 얼굴 판 장난감 데이터]]></description>
+개념: 전이학습, 파인튜닝, 채널, ReLU, 최대 풀링, ResNet, 완전연결층, 파라미터 수, 역전파, 가중치 공유, 평균 풀링, 경사하강법, 합성곱 신경망, 겹친 비율, 특징 지도, 통째 비교(자리 그대로 비교), 합성곱(교차 상관), 펼치기, 소프트맥스, 숫자판(픽셀 격자), 돋보기(필터·커널), 출력 크기 공식, 패딩(덧대기), 스트라이드(건너뛰기), 자리 변화에 견디기, 로짓, 손실(교차 엔트로피), 한 칸 밀린 얼굴 정확도, 8×8 도트 얼굴 장난감 데이터, LeNet-5, AlexNet, VGG, 건너뛰는 연결, 창 밀기, 겹친 상자 정리(NMS), 의미 분할, 개체 분할, 특징 추출, 후보부터 뽑는 탐지 (R-CNN 계열), 한 번에 내는 탐지 (YOLO·SSD), 경계 상자, 확신 점수, "없음" 답, 맞힘 · 놓침 · 헛짚음, 24×12 도트 얼굴 판 장난감 데이터]]></description>
     </item>
     <item>
       <title>금융 이상탐지 모델 보안과 적대적 공격</title>

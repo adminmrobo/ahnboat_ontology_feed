@@ -9866,6 +9866,43 @@
    ]
   },
   {
+   "@id": "lab:concept/feature-map",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "특징 지도",
+     "@language": "ko"
+    },
+    {
+     "@value": "Feature map",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "필터 하나가 그림 전체를 훑은 결과. 필터 4개면 지도 4장.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/convolution"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/cross-correlation"
+    },
+    {
+     "@id": "lab:method/cnn"
+    }
+   ]
+  },
+  {
    "@id": "lab:method/template-matching",
    "@type": [
     "skos:Concept",
@@ -10080,38 +10117,6 @@
    "lab:partOf": [
     {
      "@id": "lab:method/cross-correlation"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/feature-map",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "무늬 지도(특징 맵)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Feature map",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "돋보기가 자리마다 매긴 점수를 모은 판.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/cnn_face_game_lab/index.html#r3"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:method/cross-correlation"
-    },
-    {
-     "@id": "lab:method/cnn"
     }
    ]
   },
