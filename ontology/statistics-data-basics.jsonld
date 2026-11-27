@@ -12,6 +12,738 @@
  "dct:creator": "안상선 (Ahn Sangsun)",
  "@graph": [
   {
+   "@id": "lab:concept/conditional-probability",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "조건부확률",
+     "@language": "ko"
+    },
+    {
+     "@value": "conditional probability",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "B가 일어났다는 조건 아래에서 A가 일어날 확률. P(A|B) = P(A∩B)/P(B).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/likelihood_vs_probability/court.html#intro"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/conditional-probability"
+    },
+    {
+     "@id": "lab:topic/probability-statistics"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/independence"
+    },
+    {
+     "@id": "lab:method/bayes-theorem"
+    },
+    {
+     "@id": "lab:concept/bayes"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/parameter",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "파라미터",
+     "@language": "ko"
+    },
+    {
+     "@value": "parameter",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "학습으로 정해지는 값(계수·가중치). ①층위.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/likelihood_vs_probability/court.html#lv1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/discrete-distributions"
+    },
+    {
+     "@id": "lab:topic/unbiasedness"
+    },
+    {
+     "@id": "lab:topic/weights-and-biases"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:distribution/binomial"
+    },
+    {
+     "@id": "lab:concept/population"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/estimation"
+    }
+   ]
+  },
+  {
+   "@id": "lab:distribution/binomial",
+   "@type": [
+    "skos:Concept",
+    "lab:Distribution"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "이항분포와 반복 시행",
+     "@language": "ko"
+    },
+    {
+     "@value": "binomial distribution",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "n번 독립 시행에서 성공 확률 p인 사건이 k번 일어날 확률의 분포. P(X=k) = nCk p^k (1−p)^(n−k).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/likelihood_vs_probability/court.html#lv1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/discrete-distributions"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:theory/bayes-theorem"
+    },
+    {
+     "@id": "lab:concept/probability"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/probability",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "확률",
+     "@language": "ko"
+    },
+    {
+     "@value": "probability",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "어떤 일이 일어날 가능성을 0과 1 사이의 숫자로 나타낸 것.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/likelihood_vs_probability/court.html#lv1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/probability-rules"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/conditional-probability"
+    }
+   ],
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/distributions"
+    },
+    {
+     "@id": "lab:concept/bayes"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/likelihood"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/likelihood",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "가능도",
+     "@language": "ko"
+    },
+    {
+     "@value": "likelihood",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "가설이 참일 때 이 증거가 나올 확률. 예: 감염자가 양성일 확률 90%",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/likelihood_vs_probability/court.html#lv2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/maximum-likelihood"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:theory/bayes-theorem"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/likelihood-ratio"
+    },
+    {
+     "@id": "lab:method/bayes-theorem"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/prior-distribution",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "사전분포",
+     "@language": "ko"
+    },
+    {
+     "@value": "prior distribution",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "데이터를 보기 전 값에 대한 믿음을 분포로 나타낸 것.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/likelihood_vs_probability/court.html#lv5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/prior-posterior"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:distribution/beta"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/posterior-distribution"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/posterior-distribution",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "사후분포",
+     "@language": "ko"
+    },
+    {
+     "@value": "posterior distribution",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "데이터를 반영한 뒤의 믿음을 분포로 나타낸 것.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/likelihood_vs_probability/court.html#lv5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/prior-posterior"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:distribution/beta"
+    }
+   ],
+   "lab:derivedFrom": [
+    {
+     "@id": "lab:concept/likelihood"
+    },
+    {
+     "@id": "lab:concept/prior-distribution"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/normalization",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "정규화(첫날=100)",
+     "@language": "ko"
+    },
+    {
+     "@value": "normalization to base 100",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "출발점이 다른 숫자를 비교할 때는 \"첫날 = 100\"으로 맞춘 뒤 그린다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/likelihood_vs_probability/court.html#lv5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/bayes-theorem"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/bayes-theorem"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/independent-trials",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "독립시행",
+     "@language": "ko"
+    },
+    {
+     "@value": "Independent trials",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "한 번의 결과가 다른 번의 결과에 영향을 주지 않는 시행.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/likelihood_vs_probability/court.html#lv1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/probability-rules"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:distribution/binomial"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/likelihood-area",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "가능도 곡선 넓이 1/11",
+     "@language": "ko"
+    },
+    {
+     "@value": "Area under the likelihood curve",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "n=10 이항 가능도 곡선 아래 넓이는 k와 상관없이 1/11로, 1이 아니므로 θ에 대한 확률분포가 아니다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/likelihood_vs_probability/court.html#lv3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/maximum-likelihood"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/likelihood-ratio",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "가능도 비율",
+     "@language": "ko"
+    },
+    {
+     "@value": "Likelihood ratio",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "두 후보의 가능도를 나눈 값. 한 후보가 다른 후보보다 데이터를 몇 배 더 잘 설명하는지 뜻한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/likelihood_vs_probability/court.html#lv4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/maximum-likelihood"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/maximum-likelihood-estimation"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/maximum-likelihood-estimation",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "최대가능도 추정",
+     "@language": "ko"
+    },
+    {
+     "@value": "Maximum likelihood estimation (MLE)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "가능도를 가장 크게 만드는 θ를 추정값으로 고르는 방법. 이항분포에서는 k/n.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/likelihood_vs_probability/court.html#lv4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/maximum-likelihood"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/bayes-theorem",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "베이즈 정리",
+     "@language": "ko"
+    },
+    {
+     "@value": "Bayes' theorem",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "P(θ|데이터) = P(데이터|θ)×P(θ) ÷ 전체 합.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/likelihood_vs_probability/court.html#lv5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/bayes-theorem"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/normalize-likelihood-column",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "세로줄을 1로 나눠 확률로 읽기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Normalize the likelihood column",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "가능도를 합으로 나눈 값을 θ의 확률로 읽는 방법. 균등 사전분포를 가정한 것과 같다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/likelihood_vs_probability/court.html#duel"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/prior-posterior"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/require-prior-information"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/posterior-probability-0p7"
+    }
+   ],
+   "lab:assumes": [
+    {
+     "@id": "lab:concept/prior-distribution"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/require-prior-information",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "사전 정보를 먼저 정하기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Specify the prior first",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "θ의 확률을 말하기 전에 사전분포를 밝히는 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/likelihood_vs_probability/court.html#duel"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/prior-posterior"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/posterior-probability-0p7"
+    }
+   ]
+  },
+  {
+   "@id": "lab:metric/posterior-probability-0p7",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "0.7 상자의 사후확률",
+     "@language": "ko"
+    },
+    {
+     "@value": "Posterior probability of θ=0.7",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/likelihood_vs_probability/court.html#duel"
+   }
+  },
+  {
+   "@id": "lab:concept/markov-matrix",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "마르코프 행렬",
+     "@language": "ko"
+    },
+    {
+     "@value": "Markov transition matrix",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "지금 상태를 고정했을 때 다음 상태의 분포를 가로줄로 적은 표. 가로줄 합이 1이다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/likelihood_vs_probability/court.html#sum"
+   },
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/probability"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/negative-log-likelihood",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "음의 로그가능도(교차 엔트로피)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Negative log-likelihood",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "분류 모델 손실. 학습은 가능도 최대화와 같다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/likelihood_vs_probability/court.html#sum"
+   },
+   "lab:derivedFrom": [
+    {
+     "@id": "lab:concept/likelihood"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/hidden-markov-model",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "은닉 마르코프 모델",
+     "@language": "ko"
+    },
+    {
+     "@value": "Hidden Markov model",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/likelihood_vs_probability/court.html#sum"
+   },
+   "lab:derivedFrom": [
+    {
+     "@id": "lab:concept/markov-matrix"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/likelihood"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/llm-pretraining-likelihood",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "LLM 사전학습과 가능도",
+     "@language": "ko"
+    },
+    {
+     "@value": "LLM pretraining as maximum likelihood",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/likelihood_vs_probability/court.html#sum"
+   },
+   "lab:derivedFrom": [
+    {
+     "@id": "lab:method/maximum-likelihood-estimation"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/prosecutors-fallacy",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "검사의 오류",
+     "@language": "ko"
+    },
+    {
+     "@value": "Prosecutor's fallacy",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "P(증거|무죄)를 P(무죄|증거)로 바꿔 읽는 실수.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/likelihood_vs_probability/court.html#lv3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/conditional-probability"
+    }
+   ],
+   "lab:addressedBy": [
+    {
+     "@id": "lab:method/likelihood-ratio"
+    }
+   ]
+  },
+  {
    "@id": "lab:term/funnel",
    "@type": [
     "skos:Concept",
@@ -16216,6 +16948,9 @@
    "lab:partOf": [
     {
      "@id": "lab:concept/dispersion"
+    },
+    {
+     "@id": "lab:concept/normalization"
     }
    ]
   },
@@ -25724,48 +26459,6 @@
    }
   },
   {
-   "@id": "lab:concept/parameter",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "파라미터",
-     "@language": "ko"
-    },
-    {
-     "@value": "parameter",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "학습으로 정해지는 값(계수·가중치). ①층위.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/statistics_note_ch04_Statistical-Estimation_01_a/index.html#lv1"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/unbiasedness"
-    },
-    {
-     "@id": "lab:topic/weights-and-biases"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/population"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/estimation"
-    }
-   ]
-  },
-  {
    "@id": "lab:concept/population",
    "@type": [
     "skos:Concept",
@@ -26733,46 +27426,6 @@
    ]
   },
   {
-   "@id": "lab:concept/conditional-probability",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "조건부확률",
-     "@language": "ko"
-    },
-    {
-     "@value": "conditional probability",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "B가 일어났다는 조건 아래에서 A가 일어날 확률. P(A|B) = P(A∩B)/P(B).",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/statistics_note/ch02/2-1_probability_basics.html#lv2"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/conditional-probability"
-    },
-    {
-     "@id": "lab:topic/probability-statistics"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/independence"
-    },
-    {
-     "@id": "lab:concept/bayes"
-    }
-   ]
-  },
-  {
    "@id": "lab:concept/base-rate",
    "@type": [
     "skos:Concept",
@@ -27048,48 +27701,6 @@
     },
     {
      "@id": "lab:concept/proportion-sampling"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/probability",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "확률",
-     "@language": "ko"
-    },
-    {
-     "@value": "probability",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "어떤 일이 일어날 가능성을 0과 1 사이의 숫자로 나타낸 것.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/statistics_note/ch02/2-1_probability_basics.html#lv1"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/probability-rules"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/conditional-probability"
-    }
-   ],
-   "lab:motivates": [
-    {
-     "@id": "lab:concept/distributions"
-    },
-    {
-     "@id": "lab:concept/bayes"
     }
    ]
   },
@@ -30499,40 +31110,6 @@
    ]
   },
   {
-   "@id": "lab:distribution/binomial",
-   "@type": [
-    "skos:Concept",
-    "lab:Distribution"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "이항분포와 반복 시행",
-     "@language": "ko"
-    },
-    {
-     "@value": "binomial distribution",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "n번 독립 시행에서 성공 확률 p인 사건이 k번 일어날 확률의 분포. P(X=k) = nCk p^k (1−p)^(n−k).",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/bayesian-statistics-for-data-scientists/02_probability.html#lv3"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/discrete-distributions"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:theory/bayes-theorem"
-    }
-   ]
-  },
-  {
    "@id": "lab:concept/frequentist-probability",
    "@type": [
     "skos:Concept",
@@ -30851,40 +31428,6 @@
    ]
   },
   {
-   "@id": "lab:concept/likelihood",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "가능도",
-     "@language": "ko"
-    },
-    {
-     "@value": "likelihood",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "가설이 참일 때 이 증거가 나올 확률. 예: 감염자가 양성일 확률 90%",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/bayesian-statistics-for-data-scientists/03_bayesian_thinking.html#lv1"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/maximum-likelihood"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:theory/bayes-theorem"
-    }
-   ]
-  },
-  {
    "@id": "lab:term/confusion-matrix",
    "@type": [
     "skos:Concept",
@@ -31186,74 +31729,6 @@
     },
     {
      "@id": "lab:method/collaborative-filtering"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/prior-distribution",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "사전분포",
-     "@language": "ko"
-    },
-    {
-     "@value": "prior distribution",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "데이터를 보기 전 값에 대한 믿음을 분포로 나타낸 것.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/bayesian-statistics-for-data-scientists/04_ab_test.html#lv3"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/prior-posterior"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:distribution/beta"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/posterior-distribution",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "사후분포",
-     "@language": "ko"
-    },
-    {
-     "@value": "posterior distribution",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "데이터를 반영한 뒤의 믿음을 분포로 나타낸 것.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/bayesian-statistics-for-data-scientists/04_ab_test.html#lv3"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/prior-posterior"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:distribution/beta"
     }
    ]
   },

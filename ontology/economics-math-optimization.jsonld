@@ -12,6 +12,486 @@
  "dct:creator": "안상선 (Ahn Sangsun)",
  "@graph": [
   {
+   "@id": "lab:concept/marginal-cost",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "한계 비용",
+     "@language": "ko"
+    },
+    {
+     "@value": "marginal cost",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "강도 1 MPa를 더 올릴 때 추가로 드는 돈(강의: 약 1,450원/t).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cost_theory_economic_view_lab/cost_theory/03_average_marginal_cost.html#lv2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/cost-curves"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/marginal-thinking"
+    },
+    {
+     "@id": "lab:concept/sunk-cost"
+    },
+    {
+     "@id": "lab:concept/shutdown-condition"
+    },
+    {
+     "@id": "lab:concept/profit-maximization"
+    },
+    {
+     "@id": "lab:concept/cost-function"
+    }
+   ],
+   "lab:derivedFrom": [
+    {
+     "@id": "lab:concept/marginal"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/explicit-implicit-cost",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "명시적·암묵적 비용과 경제적 이윤",
+     "@language": "ko"
+    },
+    {
+     "@value": "explicit and implicit cost, economic profit",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "장부에 적힌 명시적 비용에 포기한 대안의 값인 암묵적 비용을 더한 것이 경제학의 비용이고, 매출에서 둘을 모두 뺀 것이 경제적 이윤이다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cost_theory_economic_view_lab/cost_theory/01_what_is_cost.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/income-statement-steps"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/income-statement-steps",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "손익계산서 다섯 단계",
+     "@language": "ko"
+    },
+    {
+     "@value": "income statement profit steps",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "매출에서 매출원가를 빼 매출총이익, 판관비를 빼 영업이익, 영업외 항목과 법인세를 빼 당기순이익을 차례로 구하는 기능별 비용 분류.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cost_theory_economic_view_lab/cost_theory/01_what_is_cost.html#lv2"
+   }
+  },
+  {
+   "@id": "lab:concept/fixed-variable-total-cost",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "고정비·변동비·총비용",
+     "@language": "ko"
+    },
+    {
+     "@value": "fixed, variable and total cost",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "단기에 판매량과 상관없는 비용을 고정비, 판매량에 따라 변하는 비용을 변동비라 하며 둘의 합이 총비용 TC(q) = FC + VC(q)이다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cost_theory_economic_view_lab/cost_theory/02_fixed_variable_cost.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/mixed-cost-high-low"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/mixed-cost-high-low",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "혼합원가와 고저점법",
+     "@language": "ko"
+    },
+    {
+     "@value": "mixed cost and the high-low method",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "고정 몫과 변동 몫이 섞인 비용을 비용 = a + b × 조업도로 쪼개는 방법. 고저점법은 조업도 최고·최저 두 점, 회귀는 모든 점을 쓴다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cost_theory_economic_view_lab/cost_theory/02_fixed_variable_cost.html#lv2"
+   }
+  },
+  {
+   "@id": "lab:concept/average-costs",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "평균고정비·평균변동비·평균총비용",
+     "@language": "ko"
+    },
+    {
+     "@value": "average fixed, variable and total cost",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "고정비·변동비·총비용을 생산량으로 나눈 값. AFC는 생산량이 늘수록 계속 줄고, ATC = AFC + AVC는 U자 모양이다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cost_theory_economic_view_lab/cost_theory/03_average_marginal_cost.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/marginal-cost"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/contribution-margin",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "공헌이익 (= 가격 − 평균변동비)",
+     "@language": "ko"
+    },
+    {
+     "@value": "contribution margin (price minus AVC)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "매출에서 변동비만 뺀 몫. 고정비를 갚고 이익을 만드는 데 쓰인다. 한 단위로는 경제학의 가격 − 평균변동비와 같다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cost_theory_economic_view_lab/cost_theory/04_contribution_breakeven.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/break-even-mos"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/break-even-mos",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "손익분기점과 안전한계",
+     "@language": "ko"
+    },
+    {
+     "@value": "break-even point and margin of safety",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "영업이익이 0이 되는 판매량 F ÷ (P − v) 또는 매출 F ÷ CMR, 그리고 실제 판매가 그보다 얼마나 위에 있는지의 비율.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cost_theory_economic_view_lab/cost_theory/04_contribution_breakeven.html#lv2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/shutdown-price"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/shutdown-price",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "손익분기 가격과 조업중단 가격",
+     "@language": "ko"
+    },
+    {
+     "@value": "break-even price and shutdown price",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "가격이 ATC 최저점보다 높으면 이윤, ATC와 AVC 최저점 사이면 손실이지만 단기 영업, AVC 최저점보다 낮으면 단기에도 생산을 멈춘다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cost_theory_economic_view_lab/cost_theory/04_contribution_breakeven.html#lv3"
+   }
+  },
+  {
+   "@id": "lab:concept/industry-is-structure",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "업종별 손익 구조 (매출 100 기준)",
+     "@language": "ko"
+    },
+    {
+     "@value": "income statement structure by industry",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "매출을 100으로 규격화해 매출원가율·판관비율·영업이익률을 비교하면 업종마다 돈이 빠지는 곳(재료·사람·공간)이 드러난다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cost_theory_economic_view_lab/cost_theory/05_industry_cost_structure.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/industry-bep-mos"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/industry-bep-mos",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "업종별 고정비 비중과 안전한계",
+     "@language": "ko"
+    },
+    {
+     "@value": "fixed cost share and margin of safety by industry",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "업종 비용을 변동비·고정비로 나누면 손익분기 매출과 안전한계율이 업종마다 달라지며, 위험은 원가율이 아니라 공헌이익 대비 고정비의 크기가 정한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cost_theory_economic_view_lab/cost_theory/05_industry_cost_structure.html#lv2"
+   }
+  },
+  {
+   "@id": "lab:concept/degree-operating-leverage",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "영업레버리지도 (DOL)",
+     "@language": "ko"
+    },
+    {
+     "@value": "degree of operating leverage",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "공헌이익 ÷ 영업이익 = 영업이익 변화율 ÷ 매출 변화율. 고정비가 클수록 커지며 안전한계율의 역수와 같다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cost_theory_economic_view_lab/cost_theory/06_operating_leverage.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/labor-cost-assumption"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/labor-cost-assumption",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "노무비 가정과 고정·가변 투입",
+     "@language": "ko"
+    },
+    {
+     "@value": "labor cost assumption: fixed vs variable input",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "노무비를 고정비(가정 A)로 보느냐 변동비(가정 B)로 보느냐에 따라 손익분기점과 DOL이 달라진다. 경제학의 단기 고정 투입·가변 투입 구분과 대응한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cost_theory_economic_view_lab/cost_theory/06_operating_leverage.html#lv2"
+   }
+  },
+  {
+   "@id": "lab:concept/wage-automation-scenarios",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "인건비·외국인 노동·자동화 시나리오",
+     "@language": "ko"
+    },
+    {
+     "@value": "wage, migration and automation scenarios",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "임금 상승은 투입 가격 상승으로 비용 곡선을 위로 옮기고 급여 비중이 큰 업종을 더 아프게 한다. 자동화는 노동을 자본으로 대체해 변동비를 고정비로 옮긴다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cost_theory_economic_view_lab/cost_theory/07_future_scenarios.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/automation-breakeven-saving"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/automation-breakeven-saving",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "자동화의 경계 절감률 s*",
+     "@language": "ko"
+    },
+    {
+     "@value": "break-even labor saving rate for automation",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "자동화 전후 손익분기점이 같아지는 노무비 절감률 s* = DEP × CM ÷ (F × L). 실제 절감률이 이보다 작으면 자동화가 손익분기점을 높여 위험을 키운다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cost_theory_economic_view_lab/cost_theory/07_future_scenarios.html#lv2"
+   }
+  },
+  {
+   "@id": "lab:concept/long-run-average-cost",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "장기평균비용과 규모의 경제",
+     "@language": "ko"
+    },
+    {
+     "@value": "long-run average cost and economies of scale",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "모든 투입을 바꿀 수 있는 장기에 생산량마다 가장 싼 설비 규모를 고른 평균비용. 단기평균비용 곡선들의 아래 껍질이며, 내려가는 구간이 규모의 경제다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cost_theory_economic_view_lab/cost_theory/08_long_run_cost.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/sunk-cost-npv"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/sunk-cost-npv",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "매몰비용·관련원가와 NPV",
+     "@language": "ko"
+    },
+    {
+     "@value": "sunk cost, relevant cost and NPV",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "결정에는 대안에 따라 달라지는 미래의 비용·수익(관련원가)만 쓰고, 이미 써서 되돌릴 수 없는 매몰비용은 뺀다. 여러 해의 결정은 현재가치로 바꿔 NPV로 판단한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/cost_theory_economic_view_lab/cost_theory/08_long_run_cost.html#lv2"
+   }
+  },
+  {
    "@id": "lab:concept/regular-polygon",
    "@type": [
     "skos:Concept",
@@ -898,57 +1378,6 @@
    "lab:partOf": [
     {
      "@id": "lab:concept/feature-engineering"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/marginal-cost",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "한계 비용",
-     "@language": "ko"
-    },
-    {
-     "@value": "marginal cost",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "강도 1 MPa를 더 올릴 때 추가로 드는 돈(강의: 약 1,450원/t).",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/optimization_3d_map/first_step_1.html#s12"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/cost-curves"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/marginal-thinking"
-    },
-    {
-     "@id": "lab:concept/sunk-cost"
-    },
-    {
-     "@id": "lab:concept/shutdown-condition"
-    },
-    {
-     "@id": "lab:concept/profit-maximization"
-    },
-    {
-     "@id": "lab:concept/cost-function"
-    }
-   ],
-   "lab:derivedFrom": [
-    {
-     "@id": "lab:concept/marginal"
     }
    ]
   },

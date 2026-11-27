@@ -10022,6 +10022,40 @@
    ]
   },
   {
+   "@id": "lab:concept/skill-file",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "규칙 파일 (skill.md)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Skill file",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "에이전트가 일할 때마다 먼저 읽는 짧은 지시문. 원칙과 이유를 적고 긴 자료는 가리키기만 한다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/2-5_self_improving_loop.html#s3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/reproducibility"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/closed-learning-loop"
+    }
+   ]
+  },
+  {
    "@id": "lab:concept/dartmouth-ai",
    "@type": [
     "skos:Concept",
@@ -11830,40 +11864,6 @@
    "lab:partOf": [
     {
      "@id": "lab:method/hermes-agent"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/skill-file",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "스킬",
-     "@language": "ko"
-    },
-    {
-     "@value": "Skill file",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "성공한 작업 절차를 글로 저장해 다음에 꺼내 쓰는 업무 매뉴얼.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/rulebase_to_agent/2-5_self_improving_loop.html#s3"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/reproducibility"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/closed-learning-loop"
     }
    ]
   },
@@ -20602,6 +20602,9 @@
     "@id": "https://adminmrobo.github.io/Fish_Market_Data_Machine_Learning/1_classification_models.html#m9"
    },
    "lab:topic": [
+    {
+     "@id": "lab:topic/discrete-distributions"
+    },
     {
      "@id": "lab:topic/unbiasedness"
     },

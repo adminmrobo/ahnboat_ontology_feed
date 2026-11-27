@@ -7182,6 +7182,11 @@
    "rdfs:isDefinedBy": {
     "@id": "https://adminmrobo.github.io/fintech_data_analysis/hands_on_01.html#rC"
    },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/bayes-theorem"
+    }
+   ],
    "lab:prerequisiteOf": [
     {
      "@id": "lab:method/file-check"

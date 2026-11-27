@@ -7608,6 +7608,9 @@
    },
    "lab:topic": [
     {
+     "@id": "lab:topic/discrete-distributions"
+    },
+    {
      "@id": "lab:topic/unbiasedness"
     },
     {
@@ -7617,6 +7620,11 @@
    "lab:prerequisiteOf": [
     {
      "@id": "lab:concept/single-neuron"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:distribution/binomial"
     }
    ],
    "lab:contrastsWith": [
@@ -18776,6 +18784,35 @@
    ]
   },
   {
+   "@id": "lab:concept/contribution-margin",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "공헌이익 (= 가격 − 평균변동비)",
+     "@language": "ko"
+    },
+    {
+     "@value": "contribution margin (price minus AVC)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "매출에서 변동비만 뺀 몫. 고정비를 갚고 이익을 만드는 데 쓰인다. 한 단위로는 경제학의 가격 − 평균변동비와 같다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/python-accounting-analytics/11_managerial_accounting.html#lv2"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:method/cvp-analysis"
+    }
+   ]
+  },
+  {
    "@id": "lab:term/index",
    "@type": [
     "skos:Concept",
@@ -21551,35 +21588,6 @@
    ],
    "skos:definition": {
     "@value": "최고 조업도와 최저 조업도의 두 점으로 혼합원가를 변동비와 고정비로 나누는 방법.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/python-accounting-analytics/11_managerial_accounting.html#lv2"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:method/cvp-analysis"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/contribution-margin",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "공헌이익",
-     "@language": "ko"
-    },
-    {
-     "@value": "contribution margin",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "매출 − 변동비. 고정비를 덮고 이익을 만드는 데 공헌하는 몫.",
     "@language": "ko"
    },
    "rdfs:isDefinedBy": {
@@ -30667,6 +30675,11 @@
    "rdfs:isDefinedBy": {
     "@id": "https://adminmrobo.github.io/generative-ai-prompt-strategy/07_character_prompt.html#lv1"
    },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/bayes-theorem"
+    }
+   ],
    "lab:partOf": [
     {
      "@id": "lab:method/six-element-prompt"
