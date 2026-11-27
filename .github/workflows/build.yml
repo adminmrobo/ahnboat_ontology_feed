@@ -2,9 +2,9 @@ name: 온톨로지 피드 만들기
 
 on:
   schedule:
-    # 한 시간마다 원본(ahnboat_lab_cover_status)의 최신 커밋을 확인해,
-    # 지난번에 만든 뒤로 바뀌었을 때만 실제로 만든다 (원본 수집이 끝나면 늦어도 한 시간 안에 반영).
-    - cron: "43 * * * *"
+    # 15분마다 원본(ahnboat_lab_cover_status)의 최신 커밋을 확인해, 지난번에 만든 뒤로 바뀌었을 때만 실제로 만든다.
+    # 원본 수집이 끝나면 그쪽에서 바로 부르기도 한다(scripts/notify_downstream.py). 이 확인은 그게 안 될 때의 대비.
+    - cron: "7,22,37,52 * * * *"
   workflow_dispatch:
     inputs:
       force:
