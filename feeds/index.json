@@ -3,7 +3,7 @@
  "base": "https://adminmrobo.github.io/ahnboat_ontology_feed/",
  "all": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/all.xml",
  "site": {
-  "total": 184,
+  "total": 185,
   "other_racks": [
    {
     "name": "연구실 운영",
@@ -17,13 +17,13 @@
  },
  "summary": {
   "fields": 8,
-  "contents": 132,
-  "pages": 911,
-  "listed_indexed": 162,
-  "listed": 173,
-  "concepts": 5881,
-  "relations": 7060,
-  "shared": 569,
+  "contents": 133,
+  "pages": 921,
+  "listed_indexed": 163,
+  "listed": 174,
+  "concepts": 5908,
+  "relations": 7092,
+  "shared": 573,
   "domains": 18,
   "topic_linked": 1730
  },
@@ -35,18 +35,20 @@
    "rack": 1,
    "color": "#2f7d5b",
    "desc": "데이터에서 규칙을 배우는 머신러닝을 물고기 시장 데이터, 알고리즘 가계도, 모델 채용 위원회로 처음부터 익힙니다.",
-   "contents": 15,
-   "listed": 15,
-   "concepts": 551,
-   "relations": 779,
+   "contents": 16,
+   "listed": 16,
+   "concepts": 648,
+   "relations": 891,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/machine-learning.xml",
    "parts": [
-    "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/machine-learning.xml"
+    "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/machine-learning-p1.xml",
+    "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/machine-learning-p2.xml"
    ],
    "jsonld": "https://adminmrobo.github.io/ahnboat_ontology_feed/ontology/machine-learning.jsonld",
    "txt": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/txt/machine-learning.txt",
    "txt_parts": [
-    "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/txt/machine-learning.txt"
+    "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/txt/machine-learning-p1.txt",
+    "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/txt/machine-learning-p2.txt"
    ]
   },
   {
@@ -77,10 +79,10 @@
    "rack": 3,
    "color": "#c0613a",
    "desc": "AI가 이미지를 구분하고, 동작을 알아보고, 장면을 그려 내고, 글을 읽는 방식을 긴급 미션으로 풀어 봅니다.",
-   "contents": 15,
-   "listed": 15,
-   "concepts": 565,
-   "relations": 706,
+   "contents": 16,
+   "listed": 16,
+   "concepts": 592,
+   "relations": 738,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/ai-senses-generation.xml",
    "parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/ai-senses-generation.xml"
@@ -98,10 +100,10 @@
    "rack": 4,
    "color": "#2f5f9e",
    "desc": "대형 언어모델이 답을 만들어 내는 과정과, 그것을 빠르고 싸게 서빙하는 추론 엔지니어링을 스터디로 읽습니다.",
-   "contents": 28,
-   "listed": 28,
-   "concepts": 953,
-   "relations": 1113,
+   "contents": 26,
+   "listed": 26,
+   "concepts": 842,
+   "relations": 981,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/llm-inference-engineering.xml",
    "parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/llm-inference-engineering-p1.xml",
@@ -121,10 +123,10 @@
    "rack": 5,
    "color": "#8b5a2b",
    "desc": "경제학 이론과 경제 연구, 그리고 그 밑바탕인 최적화 모델·좌표 공간·선형대수를 함께 읽습니다. MR = MC에서 라그랑지안·해밀토니안, 벡터와 ∇까지 이어집니다.",
-   "contents": 27,
-   "listed": 29,
-   "concepts": 1345,
-   "relations": 1376,
+   "contents": 28,
+   "listed": 30,
+   "concepts": 1362,
+   "relations": 1385,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/economics-math-optimization.xml",
    "parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/economics-math-optimization-p1.xml",

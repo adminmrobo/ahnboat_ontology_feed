@@ -12,6 +12,880 @@
  "dct:creator": "안상선 (Ahn Sangsun)",
  "@graph": [
   {
+   "@id": "lab:concept/temperature",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "번짐 폭 τ",
+     "@language": "ko"
+    },
+    {
+     "@value": "blur width (temperature)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "경계를 얼마나 번지게 할지 정하는 숫자.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_06/05_body.html#s2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/activation-function"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/soft-silhouette"
+    }
+   ],
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/pain"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/face-parts",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "표정 부품 네 가지",
+     "@language": "ko"
+    },
+    {
+     "@value": "Four expression parts",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "눈썹·눈·입·기호. 조합 수 = 각 부품 가짓수의 곱",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_06/01_parts.html#s1"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/emotion-mix"
+    }
+   ],
+   "lab:explains": [
+    {
+     "@id": "lab:method/expr-prompt"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/emotion-mix",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "감정 섞기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Blending emotions",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "섞은 값 = 비율 × A + (1 − 비율) × B",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_06/01_parts.html#s2"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/brow-slope"
+    }
+   ],
+   "lab:explains": [
+    {
+     "@id": "lab:method/doki"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/brow-slope",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "눈썹 기울기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Eyebrow slope",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "안쪽 높이 − 바깥쪽 높이. +면 八자, −면 치켜뜬 눈썹",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_06/01_parts.html#s3"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/manga-marks"
+    }
+   ],
+   "lab:explains": [
+    {
+     "@id": "lab:concept/serious-vs-angry"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/manga-marks",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "만화 기호",
+     "@language": "ko"
+    },
+    {
+     "@value": "Manga symbols",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "홍조 빗금·땀·눈물·김. 빗금 개수가 세기를 말한다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_06/01_parts.html#s4"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/doki"
+    }
+   ],
+   "lab:explains": [
+    {
+     "@id": "lab:method/shy-scale"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/doki",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "두근거림과 철렁함",
+     "@language": "ko"
+    },
+    {
+     "@value": "Flustered and startled affection",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "기쁨+믿음은 두근, 놀람+기쁨은 철렁",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_06/02_love.html#s1"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/sad-vs-moved"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/sad-vs-moved",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "애틋함과 기뻐 울기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Bittersweet and happy tears",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "눈물은 같아도 입꼬리가 갈라 놓는다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_06/02_love.html#s2"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/shy-scale"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/shy-scale",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "쑥스러움에서 부끄러움까지",
+     "@language": "ko"
+    },
+    {
+     "@value": "From shy to embarrassed",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "세기에 따라 홍조 넓이·빗금·시선·입 물결이 함께 커진다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_06/02_love.html#s3"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/pout"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/pout",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "토라짐과 화",
+     "@language": "ko"
+    },
+    {
+     "@value": "Sulking versus anger",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "시선을 피하고 볼을 부풀리면 토라짐, 정면을 노려보면 화",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_06/02_love.html#s4"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/smile-key"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/smile-key",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "미소의 열쇠",
+     "@language": "ko"
+    },
+    {
+     "@value": "What makes a smile",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "눈썹·눈의 곡선. 수평이면 무표정",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_06/03_trust.html#s1"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/sparkle"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/sparkle",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "눈을 빛내기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Sparkling eyes",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "흰자 비율 = (눈 높이 − 검은자 지름) ÷ 눈 높이, 검은자는 줄이지 않는다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_06/03_trust.html#s2"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/serious-vs-angry"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/serious-vs-angry",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "진지함과 화남",
+     "@language": "ko"
+    },
+    {
+     "@value": "Serious versus angry",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "미간 주름이 있으면 화, 없으면 진지",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_06/03_trust.html#s3"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/confidence"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/confidence",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "자신감과 허세",
+     "@language": "ko"
+    },
+    {
+     "@value": "Confidence versus bluffing",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "입은 웃고 눈은 덜 웃는다. 미간 주름·땀이 끼면 허세",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_06/03_trust.html#s4"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/thinking"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/thinking",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "고민하는 얼굴",
+     "@language": "ko"
+    },
+    {
+     "@value": "Thinking face",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "시선을 위나 아래로, 손으로 머리를 받친다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_06/04_unease.html#s1"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/panic"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/panic",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "당황",
+     "@language": "ko"
+    },
+    {
+     "@value": "Panic",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "눈썹과 눈 사이가 벌어지고 검은자가 작아진다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_06/04_unease.html#s2"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/dodge-doubt"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/dodge-doubt",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "얼버무림과 의심",
+     "@language": "ko"
+    },
+    {
+     "@value": "Dodging and doubting",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "시선이 흔들리면 얼버무림, 한쪽 눈을 좁혀 정면을 보면 의심",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_06/04_unease.html#s3"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/head-angle"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/head-angle",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "고개 각도와 마음",
+     "@language": "ko"
+    },
+    {
+     "@value": "Head angle and attitude",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "고개를 들어 내려다보면 깔봄, 숙여 올려다보면 눈치·꿍꿍이",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_06/04_unease.html#s4"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/sleepy"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/sleepy",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "졸음과 멍함",
+     "@language": "ko"
+    },
+    {
+     "@value": "Sleepy and dazed",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "위 눈꺼풀이 무게로 내려와 검은자 위쪽을 가린다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_06/05_body.html#s1"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/temperature"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/pain",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "아픔과 참기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Illness and enduring",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "눈 밑 그늘·미간 주름·코뿌리 가로 주름",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_06/05_body.html#s3"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/eating"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/eating",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "먹고 마시는 얼굴",
+     "@language": "ko"
+    },
+    {
+     "@value": "Eating faces",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "맛있으면 눈을 감고 볼이 부풀고, 맛없으면 혐오 쪽 입",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_06/05_body.html#s4"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/shout"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/shout",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "외치기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Shouting",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "입을 크게 열면 입꼬리가 입 높이의 가운데로 온다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_06/06_drama.html#s1"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/under-light"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/under-light",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "아래에서 오는 빛",
+     "@language": "ko"
+    },
+    {
+     "@value": "Light from below",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "빛이 아래에서 오면 눈 위와 이마가 어두워진다",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_06/06_drama.html#s2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/light-shadow"
+    }
+   ],
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/impact"
+    },
+    {
+     "@id": "lab:concept/side-cast"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/impact",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "충격 받은 얼굴",
+     "@language": "ko"
+    },
+    {
+     "@value": "Taking a hit",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "좌우 눈 크기가 달라진다. 비대칭 비율로 세기를 조절",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_06/06_drama.html#s3"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:concept/faint-vs-sleep"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/faint-vs-sleep",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "쓰러짐과 잠",
+     "@language": "ko"
+    },
+    {
+     "@value": "Fainting versus sleeping",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "잠은 평온한 눈썹과 아래로 휜 감은 눈, 쓰러짐은 八자 눈썹",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_06/06_drama.html#s4"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/expr-prompt"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/expr-prompt",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "표정 문장",
+     "@language": "ko"
+    },
+    {
+     "@value": "Expression prompt",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "감정 낱말 + 눈썹·눈·입·기호 네 줄 + 세기",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_06/07_ai_faces.html#s1"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/same-face"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/same-face",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "같은 얼굴, 표정만",
+     "@language": "ko"
+    },
+    {
+     "@value": "Keeping identity across expressions",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "모두 맞을 확률 = (한 장 맞을 확률)^장수",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_06/07_ai_faces.html#s2"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/style-scale"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/style-scale",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "세기와 화풍",
+     "@language": "ko"
+    },
+    {
+     "@value": "Intensity and art style",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "애니풍은 기호와 크기로, 실사풍은 주름과 근육으로",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_06/07_ai_faces.html#s3"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/expr-sheet"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/expr-sheet",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "표정 시트 12장",
+     "@language": "ko"
+    },
+    {
+     "@value": "Twelve-expression sheet",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "기준 표정을 먼저 확정하고 한 번에 하나씩 부분 수정",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_06/07_ai_faces.html#s4"
+   },
+   "lab:motivates": [
+    {
+     "@id": "lab:method/expr-diagnosis"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/expr-diagnosis",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "표정 진단 순서",
+     "@language": "ko"
+    },
+    {
+     "@value": "Expression diagnosis order",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "감정 → 부품 → 세기 → 기호 → 고정값",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/drawing_lab_06/08_failure_lab.html#s1"
+   }
+  },
+  {
    "@id": "lab:method/four-beats",
    "@type": [
     "skos:Concept",
@@ -8605,40 +9479,6 @@
    ]
   },
   {
-   "@id": "lab:concept/under-light",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "아래에서 오는 빛",
-     "@language": "ko"
-    },
-    {
-     "@value": "Under-lighting",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "아랫면이 밝고 윗면이 어둡다",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/structure_first_drawing_lab_02/04_light_dir.html#s2"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/light-shadow"
-    }
-   ],
-   "lab:motivates": [
-    {
-     "@id": "lab:concept/side-cast"
-    }
-   ]
-  },
-  {
    "@id": "lab:concept/side-cast",
    "@type": [
     "skos:Concept",
@@ -14892,40 +15732,6 @@
    "lab:partOf": [
     {
      "@id": "lab:method/perceptron"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/temperature",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "번짐 폭 τ",
-     "@language": "ko"
-    },
-    {
-     "@value": "blur width (temperature)",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "경계를 얼마나 번지게 할지 정하는 숫자.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_rendering/part2/2-3_stairs_and_slides.html#lv2"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/activation-function"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/soft-silhouette"
     }
    ]
   },

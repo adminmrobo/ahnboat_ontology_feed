@@ -1178,6 +1178,4322 @@
    }
   },
   {
+   "@id": "lab:concept/language-model",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "언어 모델",
+     "@language": "ko"
+    },
+    {
+     "@value": "language model",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "단어의 순서(시퀀스)에 확률을 할당하는 모델. 다음 단어 예측과 문장의 그럴듯함 판정에 쓴다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-5_word_vectors.html#s2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/pretrained-lm"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/ngram"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/ngram",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "N-gram",
+     "@language": "ko"
+    },
+    {
+     "@value": "n-gram model",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "연속된 단어 N개 묶음의 빈도로 다음 단어 확률을 구하는 통계 모델.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-5_word_vectors.html#s3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/pretrained-lm"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/language-model"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/word-embedding",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "워드 임베딩",
+     "@language": "ko"
+    },
+    {
+     "@value": "word embedding",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "단어를 컴퓨터가 계산할 수 있는 숫자 벡터로 바꾸되, 단어 사이의 의미 관계까지 거리와 방향으로 담는 기술.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-5_word_vectors.html#s6"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/embedding-space"
+    },
+    {
+     "@id": "lab:topic/word-embedding"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/vector-analogy"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/distributional-hypothesis",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "분포 가설",
+     "@language": "ko"
+    },
+    {
+     "@value": "distributional hypothesis",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "비슷한 문맥에 등장하는 단어는 비슷한 의미를 가진다는 가설(J.R. 퍼스).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-5_word_vectors.html#s5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/word-embedding"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/word-embedding"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/rnn",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "RNN",
+     "@language": "ko"
+    },
+    {
+     "@value": "recurrent neural network",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "순환 신경망. 이전 은닉 상태를 다음 시점에 넘기며 순서를 처리.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-6_transformer.html#s1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/rnn"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/lstm"
+    },
+    {
+     "@id": "lab:method/gru"
+    },
+    {
+     "@id": "lab:method/transformer"
+    },
+    {
+     "@id": "lab:method/bptt"
+    }
+   ],
+   "lab:uses": [
+    {
+     "@id": "lab:concept/hidden-state"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/svm-senior"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/test-accuracy"
+    }
+   ],
+   "lab:evaluatedOn": [
+    {
+     "@id": "lab:dataset/digits"
+    }
+   ],
+   "lab:hasLimitation": [
+    {
+     "@id": "lab:concept/vanishing-gradient"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/lstm",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "LSTM",
+     "@language": "ko"
+    },
+    {
+     "@value": "long short-term memory",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "셀 상태와 망각·입력·출력 게이트로 장기 기억을 지키는 RNN.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-6_transformer.html#s1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/lstm-gru"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/gru"
+    },
+    {
+     "@id": "lab:method/svm-senior"
+    }
+   ],
+   "lab:specialCaseOf": [
+    {
+     "@id": "lab:method/rnn"
+    }
+   ],
+   "lab:uses": [
+    {
+     "@id": "lab:concept/cell-state"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/test-accuracy"
+    },
+    {
+     "@id": "lab:concept/sequence-scorecard"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/attention",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "어텐션 메커니즘",
+     "@language": "ko"
+    },
+    {
+     "@value": "attention mechanism",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "디코더의 현재 상태(Query)와 입력의 모든 은닉 상태(Key)의 유사도로 가중치를 구하고, 값(Value)의 가중 평균을 문맥 벡터로 쓰는 방법. 정보 병목을 해결한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-6_transformer.html#s2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/attention-mechanism"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/transformer"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/contextual-embedding"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/transformer",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "트랜스포머와 셀프 어텐션",
+     "@language": "ko"
+    },
+    {
+     "@value": "transformer and self-attention",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "RNN 없이 셀프 어텐션·멀티헤드 어텐션·포지셔널 인코딩·잔차 연결·층 정규화로 시퀀스를 처리하는 신경망 구조. 병렬 처리와 장거리 의존성에 강하다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-6_transformer.html#s5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/transformer"
+    }
+   ],
+   "lab:uses": [
+    {
+     "@id": "lab:concept/self-attention"
+    },
+    {
+     "@id": "lab:concept/positional-encoding"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/bert"
+    },
+    {
+     "@id": "lab:method/gpt"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/gpt",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "GPT",
+     "@language": "ko"
+    },
+    {
+     "@value": "generative pre-trained transformer",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "생성형 사전훈련 트랜스포머. 디코더로 다음 단어를 차례로 예측.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-6_transformer.html#s6"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/autoregressive-generation"
+    },
+    {
+     "@id": "lab:topic/pretrained-lm"
+    },
+    {
+     "@id": "lab:topic/transformer"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/bert"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/bert",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "BERT",
+     "@language": "ko"
+    },
+    {
+     "@value": "BERT",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "양방향 인코더 모델. 가린 단어를 앞뒤 문맥으로 맞히며 사전훈련.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-6_transformer.html#s6"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/pretrained-lm"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/gpt"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/rag",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "LLM과 RAG",
+     "@language": "ko"
+    },
+    {
+     "@value": "large language models and retrieval-augmented generation",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "대규모 언어모델에 벡터 데이터베이스에서 검색한 관련 문서를 함께 넣어, 최신·조직 고유 정보를 근거로 답을 생성하게 하는 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/2-2_context_harness.html#s3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/rag"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/context-engineering"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/orchestration",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "오케스트레이션",
+     "@language": "ko"
+    },
+    {
+     "@value": "Orchestration",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "여러 확인 도구의 신호를 순서대로 엮어 하나의 판단으로 모으는 일",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/2-4_orchestration.html#s2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/deployment"
+    },
+    {
+     "@id": "lab:topic/monitoring"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:concept/token-cost"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/overfitting",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "과적합",
+     "@language": "ko"
+    },
+    {
+     "@value": "Overfitting",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "학습 데이터의 잡음까지 외운 상태.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-2_machine_learning.html#s8"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/bias-variance"
+    },
+    {
+     "@id": "lab:topic/generalization"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/r2"
+    },
+    {
+     "@id": "lab:metric/train-test-gap"
+    }
+   ],
+   "lab:addressedBy": [
+    {
+     "@id": "lab:method/early-stopping"
+    },
+    {
+     "@id": "lab:method/dropout"
+    },
+    {
+     "@id": "lab:concept/train-test-split"
+    },
+    {
+     "@id": "lab:method/data-augmentation"
+    },
+    {
+     "@id": "lab:method/train-test-split"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:concept/underfitting"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/generalization"
+    }
+   ]
+  },
+  {
+   "@id": "lab:metric/accuracy",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "정확도",
+     "@language": "ko"
+    },
+    {
+     "@value": "Accuracy",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "맞힌 비율. 불균형 데이터에서 속기 쉽다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-2_machine_learning.html#s7"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/accuracy-metrics"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/confusion-matrix"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:concept/cross-entropy-loss"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:method/train-test-split"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/decision-tree",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "판단나무",
+     "@language": "ko"
+    },
+    {
+     "@value": "decision tree",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "예/아니오 질문을 차례로. 5주에 배움.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-2_machine_learning.html#s6"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/decision-tree"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/random-forest"
+    }
+   ],
+   "lab:hasLimitation": [
+    {
+     "@id": "lab:concept/overfitting"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/voting"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/bagging"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/gini-impurity"
+    }
+   ],
+   "lab:evaluatedOn": [
+    {
+     "@id": "lab:dataset/fish-market"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/perceptron",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "퍼셉트론",
+     "@language": "ko"
+    },
+    {
+     "@value": "Perceptron",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "여러 입력에 가중치를 곱해 더하고 편향을 더한 뒤 시그모이드로 0~1 확률로 바꾸는 뉴런 하나.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-3_deep_learning.html#s2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/perceptron"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/logistic-regression"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/mlp"
+    },
+    {
+     "@id": "lab:method/averaged-perceptron"
+    },
+    {
+     "@id": "lab:method/cnn"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/test-accuracy"
+    }
+   ],
+   "lab:evaluatedOn": [
+    {
+     "@id": "lab:dataset/concrete"
+    }
+   ]
+  },
+  {
+   "@id": "lab:dataset/fish-market",
+   "@type": [
+    "skos:Concept",
+    "lab:Dataset"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "Fish Market(도미 35·빙어 14)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Fish Market (bream 35, smelt 14)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "도미와 빙어의 길이(cm)·무게(g) 실측값. 교안 실습 데이터.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-2_machine_learning.html#s3"
+   },
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/data-inspection"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/prompt",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "프롬프트",
+     "@language": "ko"
+    },
+    {
+     "@value": "prompt",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "AI에게 무엇을 만들지 알려 주는 글.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/2-2_context_harness.html#s2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/prompting"
+    },
+    {
+     "@id": "lab:topic/system-prompts"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/context-engineering"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/logistic-regression",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "로지스틱 회귀 (다항)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Multinomial logistic regression",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "정답별 점수 → 소프트맥스 → 확률",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-2_machine_learning.html#s5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/glm-logistic"
+    },
+    {
+     "@id": "lab:topic/logistic-regression"
+    }
+   ],
+   "lab:evaluatedOn": [
+    {
+     "@id": "lab:dataset/fish-market"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/accuracy"
+    },
+    {
+     "@id": "lab:concept/cross-entropy-loss"
+    },
+    {
+     "@id": "lab:metric/f1"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/decision-tree"
+    },
+    {
+     "@id": "lab:method/knn"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/voting"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/multi-head",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "머리 (멀티헤드)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Multi-head attention",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "셀프 어텐션을 서로 다른 Q·K·V로 여러 번 하는 갈래. 이 편은 머리 4개를 쓴다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-6_transformer.html#s5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/multi-head-attention"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/vit"
+    },
+    {
+     "@id": "lab:method/attention"
+    },
+    {
+     "@id": "lab:method/transformer"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/mlp",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "다층 퍼셉트론",
+     "@language": "ko"
+    },
+    {
+     "@value": "Multilayer perceptron",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "입력과 출력 사이에 은닉층을 끼워 굽거나 띠 모양인 경계도 만드는 모델.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-3_deep_learning.html#s4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/mlp"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/cnn"
+    },
+    {
+     "@id": "lab:method/autoencoder"
+    },
+    {
+     "@id": "lab:method/ensemble"
+    },
+    {
+     "@id": "lab:method/plain-deep-network"
+    },
+    {
+     "@id": "lab:concept/deep-learning"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/rnn"
+    },
+    {
+     "@id": "lab:method/gbm-senior"
+    }
+   ],
+   "lab:evaluatedOn": [
+    {
+     "@id": "lab:dataset/concrete"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/accuracy"
+    },
+    {
+     "@id": "lab:metric/r2"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/backpropagation",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "역전파",
+     "@language": "ko"
+    },
+    {
+     "@value": "Backpropagation",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "출력의 오차를 누구 책임인가에 따라 거꾸로 나눠 주는 계산.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-3_deep_learning.html#s4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/backpropagation"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/mlp"
+    }
+   ],
+   "lab:solves": [
+    {
+     "@id": "lab:concept/gradient"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/adam"
+    },
+    {
+     "@id": "lab:method/gradient-descent"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/sigmoid",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "시그모이드",
+     "@language": "ko"
+    },
+    {
+     "@value": "Sigmoid",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "점수를 0~1 사이 확률로 바꾸는 함수.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-2_machine_learning.html#s5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/activation-function"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/perceptron"
+    },
+    {
+     "@id": "lab:method/logistic-regression"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/logistic-regression"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/loss-function",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "손실 함수",
+     "@language": "ko"
+    },
+    {
+     "@value": "Loss function",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "예측이 정답과 얼마나 다른지 숫자 하나로 잰 것. 회귀는 평균 제곱 오차, 분류는 교차 엔트로피를 쓴다. 학습은 이 숫자를 줄이는 일이다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-2_machine_learning.html#s5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/loss-function"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/backpropagation"
+    },
+    {
+     "@id": "lab:concept/step-vs-slope"
+    },
+    {
+     "@id": "lab:method/gradient-descent"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/optimization-layers"
+    }
+   ],
+   "lab:broader": [
+    {
+     "@id": "lab:concept/cross-entropy-loss"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/positional-encoding",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "위치 정보",
+     "@language": "ko"
+    },
+    {
+     "@value": "Positional encoding",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "한꺼번에 보느라 잃는 순서 정보를 숫자로 더해 주는 장치.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-6_transformer.html#s5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/positional-encoding"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/transformer"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/rule-based",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "규칙 기반",
+     "@language": "ko"
+    },
+    {
+     "@value": "Rule-based system",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "사람(또는 진화)이 미리 규칙을 써 두는 방식. 설명은 쉽지만 환경이 바뀌면 직접 고쳐야 한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-1_rulebase.html#s1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/rule-vs-learning"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/expert-system"
+    },
+    {
+     "@id": "lab:concept/machine-learning"
+    },
+    {
+     "@id": "lab:concept/rule-based-reward"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/rule-journey"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/gradient-descent",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "경사하강법",
+     "@language": "ko"
+    },
+    {
+     "@value": "Gradient descent",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "예측 → 오차 → 책임 나누기 → 반대 방향으로 조금 옮기기를 반복한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-2_machine_learning.html#s4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/gradient-descent"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/perceptron"
+    },
+    {
+     "@id": "lab:method/logistic-regression"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/backpropagation"
+    },
+    {
+     "@id": "lab:concept/engine-vs-model"
+    }
+   ],
+   "lab:hasPart": [
+    {
+     "@id": "lab:concept/learning-rate"
+    }
+   ],
+   "lab:relatedTo": [
+    {
+     "@id": "lab:metric/mse"
+    },
+    {
+     "@id": "lab:concept/gradient"
+    }
+   ],
+   "lab:broader": [
+    {
+     "@id": "lab:method/adam"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/cnn",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "합성곱 신경망",
+     "@language": "ko"
+    },
+    {
+     "@value": "Convolutional neural network",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "좁은 영역만 보는 같은 계산을 모든 위치에 반복하고, 층이 올라갈수록 보는 범위가 넓어진다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-3_deep_learning.html#s7"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/convolution"
+    }
+   ],
+   "lab:uses": [
+    {
+     "@id": "lab:concept/filter"
+    },
+    {
+     "@id": "lab:concept/weight-sharing"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/mlp"
+    },
+    {
+     "@id": "lab:method/svm-senior"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/data-augmentation"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/test-accuracy"
+    }
+   ],
+   "lab:evaluatedOn": [
+    {
+     "@id": "lab:dataset/digits"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/deep-learning"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/machine-learning",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "기계 학습",
+     "@language": "ko"
+    },
+    {
+     "@value": "machine learning",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "데이터에서 규칙을 배워 새 데이터를 다루는 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-2_machine_learning.html#s2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/rule-vs-learning"
+    },
+    {
+     "@id": "lab:topic/supervised-learning"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/logistic-regression"
+    }
+   ],
+   "lab:broader": [
+    {
+     "@id": "lab:concept/deep-learning"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/rlhf",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "사람 피드백 강화학습",
+     "@language": "ko"
+    },
+    {
+     "@value": "RLHF",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "사람이 더 좋은 답을 골라 준 결과로 보상을 주는 강화학습.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-8_rlhf.html#s2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/policy-gradient"
+    },
+    {
+     "@id": "lab:topic/reward"
+    },
+    {
+     "@id": "lab:topic/rlhf"
+    }
+   ],
+   "lab:broader": [
+    {
+     "@id": "lab:method/reinforcement-learning"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/dpo"
+    },
+    {
+     "@id": "lab:method/constitutional-ai"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/grpo",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "GRPO",
+     "@language": "ko"
+    },
+    {
+     "@value": "Group Relative Policy Optimization",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "같은 질문에 답을 여러 개 뽑아, 묶음 평균보다 나은 답을 밀어 주는 강화학습 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-9_reasoning_model.html#s6"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/policy-gradient"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/reasoning-model"
+    },
+    {
+     "@id": "lab:concept/aha-moment"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/llm-agent",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "에이전트",
+     "@language": "ko"
+    },
+    {
+     "@value": "LLM agent",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "목표를 받아 도구를 부르고 여러 단계를 스스로 실행하는 AI 시스템.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/2-1_agent.html#s1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/mdp"
+    },
+    {
+     "@id": "lab:topic/planning-agents"
+    },
+    {
+     "@id": "lab:topic/pretrained-lm"
+    },
+    {
+     "@id": "lab:topic/prompting"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/react"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/task-horizon"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/train-test-split",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "학습/시험 나누기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Train-test split",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "20%를 시험지로 봉인하고 80%로만 학습",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-2_machine_learning.html#s7"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/data-splitting"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/cross-validation"
+    },
+    {
+     "@id": "lab:concept/choose-k"
+    },
+    {
+     "@id": "lab:concept/data-leakage"
+    },
+    {
+     "@id": "lab:concept/accuracy-trap"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/optimization-layers"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/one-hot",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "원-핫",
+     "@language": "ko"
+    },
+    {
+     "@value": "One-hot encoding",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "어휘 수만큼 긴 줄에서 제 번호 자리에만 1",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-5_word_vectors.html#s4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/encoding-categorical"
+    },
+    {
+     "@id": "lab:topic/word-embedding"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/qkv",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "쿼리·키·밸류",
+     "@language": "ko"
+    },
+    {
+     "@value": "Query, key, value",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "찾는 질문(Q), 각 토큰의 꼬리표(K), 실제 내용(V).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-6_transformer.html#s3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/self-attention"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/self-attention"
+    },
+    {
+     "@id": "lab:method/attention"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/multi-head"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/context-engineering",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "컨텍스트",
+     "@language": "ko"
+    },
+    {
+     "@value": "Context (engineering)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "모델이 한 번에 보는 모든 것(지시, 대화, 문서, 도구 결과)을 고르고 배치하는 일.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/2-2_context_harness.html#s3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/prompting"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/harness"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/token",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "조각 (토큰)",
+     "@language": "ko"
+    },
+    {
+     "@value": "token",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "모델이 글을 읽는 단위. 낱말보다 잘게 나뉘기도 한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-5_word_vectors.html#s7"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/tokenization"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/language-model"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/self-consistency",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "자기일관성",
+     "@language": "ko"
+    },
+    {
+     "@value": "self-consistency",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "여러 답을 만들어 가장 일관된 결론을 고르는 방법. 교재는 세 접근의 가격 통합으로 응용한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-9_reasoning_model.html#s3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/prompting"
+    },
+    {
+     "@id": "lab:topic/self-consistency"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/test-time-compute"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/react",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "REACT (ReAct)",
+     "@language": "ko"
+    },
+    {
+     "@value": "ReAct",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "생각·행동·관찰을 반복하며 해법을 고치는 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/2-1_agent.html#s2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/prompting"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/reflexion"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/tool-use"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/reflexion",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "Reflexion",
+     "@language": "ko"
+    },
+    {
+     "@value": "Reflexion",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "실패를 글로 돌아보고 그 기록으로 다음 시도를 고치는 문헌의 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/2-3_loop_engineering.html#s5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/reward"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/loop-engineering"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/reinforcement-learning",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "강화학습",
+     "@language": "ko"
+    },
+    {
+     "@value": "reinforcement learning",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "행동을 해 보고 점수(보상)를 받으며 더 좋은 행동을 익히는 학습.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-4_reinforcement_learning.html#s1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:area/rl"
+    },
+    {
+     "@id": "lab:topic/reward"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/mdp"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/reward",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "점수 규칙(보상)",
+     "@language": "ko"
+    },
+    {
+     "@value": "reward",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "무엇을 하면 점수를 얼마나 받는지 정한 규칙.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-4_reinforcement_learning.html#s1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/reward"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/reinforcement-learning"
+    },
+    {
+     "@id": "lab:concept/reinforcement-learning"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/bpe",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "바이트 쌍 인코딩",
+     "@language": "ko"
+    },
+    {
+     "@value": "byte-pair encoding",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "자주 붙어 나오는 글자 조각을 묶어 토큰을 만드는 방법. 영-독 공용 어휘 약 37000.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-5_word_vectors.html#s7"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/tokenization"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/transformer"
+    },
+    {
+     "@id": "lab:concept/token"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/gpt"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/inference-engine",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "추론 엔진",
+     "@language": "ko"
+    },
+    {
+     "@value": "Inference engine",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "규칙을 사실과 맞춰 보며 결론을 이어 붙이는 장치.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-1_rulebase.html#s3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/rule-vs-learning"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/expert-system"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/token-cost",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "토큰 비용",
+     "@language": "ko"
+    },
+    {
+     "@value": "Token cost",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "AI 서비스 요금과 길이 제한은 토큰 수로 센다. 같은 문장도 토크나이저에 따라 토큰 수가 달라진다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/2-4_orchestration.html#s3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/monitoring"
+    },
+    {
+     "@id": "lab:topic/tokenization"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/contextual-embedding",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "문맥형 임베딩",
+     "@language": "ko"
+    },
+    {
+     "@value": "Contextual embedding",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "문장에 따라 같은 낱말의 숫자 줄이 바뀌는 임베딩",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-6_transformer.html#s4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/embedding-space"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/q-learning",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "Q-러닝",
+     "@language": "ko"
+    },
+    {
+     "@value": "Q-learning",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "상태-행동 가치 Q를 보상으로 고쳐 가는 강화학습 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-4_reinforcement_learning.html#s2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/q-learning"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/dqn"
+    }
+   ],
+   "lab:broader": [
+    {
+     "@id": "lab:method/reinforcement-learning"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/dqn",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "DQN",
+     "@language": "ko"
+    },
+    {
+     "@value": "Deep Q-Network",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-4_reinforcement_learning.html#s6"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/q-learning"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/alphago"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/flowchart",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "플로우차트",
+     "@language": "ko"
+    },
+    {
+     "@value": "Flowchart",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "마름모(조건)와 화살표로 판단 순서를 그린 그림.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-1_rulebase.html#s1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/rule-vs-learning"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/rule-based"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/deep-learning",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "딥러닝",
+     "@language": "ko"
+    },
+    {
+     "@value": "Deep learning",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "층을 여러 겹 쌓은 신경망으로 데이터에서 단서를 스스로 찾아 배우는 방법. 머신러닝의 한 갈래.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-3_deep_learning.html#s7"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/mlp"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/harness",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "하네스",
+     "@language": "ko"
+    },
+    {
+     "@value": "Agent harness",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "고정된 모델을 둘러싼 프롬프트·스킬·도구 규칙·메모리 묶음",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/2-2_context_harness.html#s5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/deployment"
+    },
+    {
+     "@id": "lab:topic/prompting"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/dartmouth-ai",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "다트머스 회의와 인공지능의 정의",
+     "@language": "ko"
+    },
+    {
+     "@value": "Dartmouth proposal",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-1_rulebase.html#s2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/rule-vs-learning"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/rule-based"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/expert-system",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "전문가 시스템",
+     "@language": "ko"
+    },
+    {
+     "@value": "Expert system",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "전문가의 지식을 규칙으로 모으고 추론 엔진이 차례로 적용하는 시스템.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-1_rulebase.html#s3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/rule-vs-learning"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/state-space-search"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/knowledge-base",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "지식 베이스",
+     "@language": "ko"
+    },
+    {
+     "@value": "Knowledge base",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-1_rulebase.html#s3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/rule-vs-learning"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/expert-system"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/if-then-formula",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "규칙의 수식 표현",
+     "@language": "ko"
+    },
+    {
+     "@value": "Rules as logic formulas",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-1_rulebase.html#s4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/rule-vs-learning"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/expert-system"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/state-space-search",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "상태공간 탐색",
+     "@language": "ko"
+    },
+    {
+     "@value": "State-space search",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "문제를 상태와 연결선의 그래프로 바꿔 길을 찾는 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-1_rulebase.html#s5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/rule-vs-learning"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/bfs",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "너비우선 탐색",
+     "@language": "ko"
+    },
+    {
+     "@value": "Breadth-first search",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "오픈 리스트를 큐로 써서 가까운 상태부터 넓게 훑는 탐색.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-1_rulebase.html#trFig"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/rule-vs-learning"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/state-space-search"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/dfs"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/dfs",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "깊이우선 탐색",
+     "@language": "ko"
+    },
+    {
+     "@value": "Depth-first search",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "오픈 리스트를 스택으로 써서 한 길을 끝까지 파고드는 탐색.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-1_rulebase.html#trFig"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/rule-vs-learning"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/state-space-search"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/dijkstra",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "다익스트라 알고리즘",
+     "@language": "ko"
+    },
+    {
+     "@value": "Dijkstra's algorithm",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "통로 길이를 더해 가며 가까운 곳부터 넓혀 실제 최단 경로를 찾는 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-1_rulebase.html#s5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/rule-vs-learning"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/state-space-search"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/a-star",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "A* 탐색",
+     "@language": "ko"
+    },
+    {
+     "@value": "A* search",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-1_rulebase.html#s5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/rule-vs-learning"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/state-space-search"
+    }
+   ]
+  },
+  {
+   "@id": "lab:term/open-closed-list",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "오픈 리스트·클로즈드 리스트",
+     "@language": "ko"
+    },
+    {
+     "@value": "Open and closed lists",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-1_rulebase.html#trFig"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/rule-vs-learning"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/state-space-search"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/fuzzy-logic",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "퍼지 이론",
+     "@language": "ko"
+    },
+    {
+     "@value": "Fuzzy logic",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "\"무겁다\"를 예·아니오 대신 0~1의 정도로 다루는 규칙.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-1_rulebase.html#sfz"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/fuzzy-logic"
+    },
+    {
+     "@id": "lab:topic/rule-vs-learning"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/fuzzy-control"
+    },
+    {
+     "@id": "lab:method/neuro-fuzzy"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/membership-function",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "소속 함수",
+     "@language": "ko"
+    },
+    {
+     "@value": "Membership function",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-1_rulebase.html#sfz"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/rule-vs-learning"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/fuzzy-logic"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/fuzzy-control",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "퍼지 제어",
+     "@language": "ko"
+    },
+    {
+     "@value": "Fuzzy control",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-1_rulebase.html#sfz"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/rule-vs-learning"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/neuro-fuzzy",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "뉴로-퍼지 (ANFIS)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Neuro-fuzzy (ANFIS)",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-1_rulebase.html#sfz"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/rule-vs-learning"
+    },
+    {
+     "@id": "lab:topic/supervised-learning"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/robot-journalism",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "규칙 기반 문장 생성(로봇 저널리즘)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Template-based news generation",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-1_rulebase.html#s7"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/rule-vs-learning"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/rule-based"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/probabilistic-thinking",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "결정론에서 확률로",
+     "@language": "ko"
+    },
+    {
+     "@value": "From determinism to probability",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-2_machine_learning.html#s1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/probability-statistics"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/machine-learning"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/tacit-knowledge",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "말로 설명할 수 없는 특징(암묵지)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Tacit knowledge",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-3_deep_learning.html#s1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/feature-engineering"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/learned-features"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/learned-features",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "기계가 스스로 만든 특징",
+     "@language": "ko"
+    },
+    {
+     "@value": "Learned features",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-3_deep_learning.html#s5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/embedding-space"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/deep-learning"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/mdp",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "상태·행동·보상의 순환",
+     "@language": "ko"
+    },
+    {
+     "@value": "Agent–environment loop (MDP)",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-4_reinforcement_learning.html#s2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/mdp"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/q-learning"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/epsilon-greedy",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "ε-탐욕 정책",
+     "@language": "ko"
+    },
+    {
+     "@value": "Epsilon-greedy",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "확률 ε만큼은 일부러 아무 방향이나 골라 탐험하는 전략.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-4_reinforcement_learning.html#s4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/exploration"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/q-learning"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/explore-exploit",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "탐험과 활용",
+     "@language": "ko"
+    },
+    {
+     "@value": "Exploration vs exploitation",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-4_reinforcement_learning.html#s4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/exploration"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/epsilon-greedy"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/alphago",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "알파고·알파고 제로",
+     "@language": "ko"
+    },
+    {
+     "@value": "AlphaGo / AlphaGo Zero",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-4_reinforcement_learning.html#s6"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/policy-gradient"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/vector-analogy",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "단어 계산기(벡터 유추)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Vector analogy",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-5_word_vectors.html#s6"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/embedding-space"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/causal-mask",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "미래 가리기(인과 마스크)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Causal mask",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-6_transformer.html#s6"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/self-attention"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/gpt"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/five-ingredients",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "갑자기가 아니었던 다섯 가지 재료",
+     "@language": "ko"
+    },
+    {
+     "@value": "Five ingredients of LLMs",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-7_scaling.html#s1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/pretrained-lm"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/gpt-series"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/gpt-series",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "GPT-1에서 ChatGPT까지",
+     "@language": "ko"
+    },
+    {
+     "@value": "GPT series",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-7_scaling.html#s2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/pretrained-lm"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/scaling-law"
+    },
+    {
+     "@id": "lab:concept/in-context-learning"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/scaling-law",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "스케일링 법칙",
+     "@language": "ko"
+    },
+    {
+     "@value": "Scaling laws",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "모델·데이터·계산을 키우면 손실이 예측 가능한 거듭제곱 곡선을 따라 줄어든다는 관찰.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-7_scaling.html#s3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/pretrained-lm"
+    },
+    {
+     "@id": "lab:topic/scaling-laws"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/compute-optimal"
+    },
+    {
+     "@id": "lab:concept/emergence"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/compute-optimal",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "계산 최적 배분(친칠라)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Compute-optimal training",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-7_scaling.html#s3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/pretrained-lm"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/training-compute",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "학습 계산량 C ≈ 6ND",
+     "@language": "ko"
+    },
+    {
+     "@value": "Training compute estimate",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-7_scaling.html#s5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/pretrained-lm"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/scaling-law"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/emergence",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "창발",
+     "@language": "ko"
+    },
+    {
+     "@value": "Emergent abilities",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-7_scaling.html#s6"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/pretrained-lm"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:concept/emergence-mirage"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/emergence-mirage",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "채점의 착시(신기루) 주장",
+     "@language": "ko"
+    },
+    {
+     "@value": "Emergence as metric artifact",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-7_scaling.html#s6"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/accuracy-metrics"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/in-context-learning",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "예시로 배우기(문맥 속 학습)",
+     "@language": "ko"
+    },
+    {
+     "@value": "In-context learning",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-7_scaling.html#s7"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/prompting"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/sft",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "시범 답 지도학습",
+     "@language": "ko"
+    },
+    {
+     "@value": "Supervised fine-tuning",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-8_rlhf.html#s2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/transfer-learning"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/reward-model"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/rlhf"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/reward-model",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "보상모델",
+     "@language": "ko"
+    },
+    {
+     "@value": "Reward model",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "두 답 중 사람이 무엇을 더 좋아할지 점수로 예측하는 모델.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-8_rlhf.html#s3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/reward"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/ppo"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/rlhf"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/bradley-terry",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "브래들리–테리 비교 모형",
+     "@language": "ko"
+    },
+    {
+     "@value": "Bradley–Terry model",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-8_rlhf.html#s3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/probability-statistics"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/reward-model"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/ppo",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "PPO",
+     "@language": "ko"
+    },
+    {
+     "@value": "Proximal policy optimization",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-8_rlhf.html#s2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/policy-gradient"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/rlhf"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/kl-rein",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "고삐 β(KL 제약)",
+     "@language": "ko"
+    },
+    {
+     "@value": "KL penalty β",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-8_rlhf.html#s5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/policy-gradient"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/ppo"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/constitutional-ai",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "헌법형 AI",
+     "@language": "ko"
+    },
+    {
+     "@value": "Constitutional AI",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-8_rlhf.html#s8"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/ai-safety"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/dpo",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "DPO",
+     "@language": "ko"
+    },
+    {
+     "@value": "Direct preference optimization",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-8_rlhf.html#s8"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/policy-gradient"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/chain-of-thought",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "생각의 사슬(CoT)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Chain-of-thought prompting",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "답 전에 풀이 과정을 글로 쓰게 해 정답률을 높이는 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-9_reasoning_model.html#s2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/prompting"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/self-consistency"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/zero-shot-cot",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "\"차근차근 생각해 보자\"",
+     "@language": "ko"
+    },
+    {
+     "@value": "Zero-shot CoT (let's think step by step)",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-9_reasoning_model.html#s1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/prompting"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/chain-of-thought"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/reasoning-model",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "추론 모델",
+     "@language": "ko"
+    },
+    {
+     "@value": "Reasoning model",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "풀이를 길게 쓰고 검산하도록 강화학습으로 훈련한 모델.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-9_reasoning_model.html#s4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/pretrained-lm"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/test-time-compute",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "생각하는 시간(추론 계산) 늘리기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Test-time compute scaling",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-9_reasoning_model.html#s4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/pretrained-lm"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/reasoning-model"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/rule-based-reward",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "규칙 채점 보상",
+     "@language": "ko"
+    },
+    {
+     "@value": "Rule-based reward",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "정답 일치·형식 같은 규칙으로 채점해 보상을 주는 방식.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-9_reasoning_model.html#s5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/reward"
+    },
+    {
+     "@id": "lab:topic/rule-vs-learning"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/grpo"
+    },
+    {
+     "@id": "lab:concept/rule-journey"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/permission-gate"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/aha-moment",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "\"아하\" 순간",
+     "@language": "ko"
+    },
+    {
+     "@value": "Aha moment",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-9_reasoning_model.html#s6"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/policy-gradient"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/tool-use",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "도구 호출(function calling)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Tool use / function calling",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "모델이 정해진 형식으로 함수 이름과 인자를 내면 프로그램이 실행해 주는 방식.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/2-1_agent.html#s4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/prompting"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/real-api-loop"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/toolformer",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "툴포머",
+     "@language": "ko"
+    },
+    {
+     "@value": "Toolformer",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/2-1_agent.html#s4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/self-supervised"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/tool-use"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/computer-use",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "컴퓨터 사용",
+     "@language": "ko"
+    },
+    {
+     "@value": "Computer use",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/2-1_agent.html#s4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/prompting"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/tool-use"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/agentic-rl",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "행동을 강화학습으로 배우기",
+     "@language": "ko"
+    },
+    {
+     "@value": "RL for agent behavior",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/2-1_agent.html#s5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/reward"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/llm-agent"
+    }
+   ]
+  },
+  {
+   "@id": "lab:metric/task-horizon",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "해낼 수 있는 일의 길이",
+     "@language": "ko"
+    },
+    {
+     "@value": "Task time horizon",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/2-1_agent.html#s6"
+   }
+  },
+  {
+   "@id": "lab:concept/real-api-loop",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "실제 API 에이전트 루프",
+     "@language": "ko"
+    },
+    {
+     "@value": "Real API agent loop",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/2-1_agent.html#api"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/deployment"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/permission-gate",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "권한 문지기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Permission gate",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/2-2_context_harness.html#s6"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/ai-safety"
+    },
+    {
+     "@id": "lab:topic/rule-vs-learning"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/harness"
+    },
+    {
+     "@id": "lab:concept/rule-journey"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/verifier"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/harness-engineering",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "하네스 엔지니어링",
+     "@language": "ko"
+    },
+    {
+     "@value": "Harness engineering",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/2-2_context_harness.html#s5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/deployment"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/harness"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/loop-engineering",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "루프 엔지니어링",
+     "@language": "ko"
+    },
+    {
+     "@value": "Loop engineering",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "에이전트에게 일을 시키고 확인하고 다시 시키는 반복 구조를 설계하는 일(업계 용어).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/2-3_loop_engineering.html#s1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/monitoring"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/verifier",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "외부 검증기",
+     "@language": "ko"
+    },
+    {
+     "@value": "External verifier",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "일이 끝났는지 에이전트 말이 아니라 테스트·계산으로 판정하는 장치.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/2-3_loop_engineering.html#s2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/accuracy-metrics"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/loop-engineering"
+    },
+    {
+     "@id": "lab:concept/rule-journey"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/verified-saving"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/stop-conditions",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "멈춤 조건",
+     "@language": "ko"
+    },
+    {
+     "@value": "Stop conditions",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "검증 통과면 완료, 반복 한도·비용 예산·진전 없음이면 사람에게 넘기는 규칙.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/2-3_loop_engineering.html#s3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/monitoring"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/loop-engineering"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/loop-cost",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "누적 비용",
+     "@language": "ko"
+    },
+    {
+     "@value": "Cumulative loop cost",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/2-3_loop_engineering.html#s3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/monitoring"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/stop-conditions"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/subagent",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "서브에이전트",
+     "@language": "ko"
+    },
+    {
+     "@value": "Subagent",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/2-4_orchestration.html#s2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/deployment"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/orchestration"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/coupling",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "일의 얽힘",
+     "@language": "ko"
+    },
+    {
+     "@value": "Task coupling",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/2-4_orchestration.html#s5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/deployment"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/orchestration"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/self-improving-agent",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "자가개선 에이전트",
+     "@language": "ko"
+    },
+    {
+     "@value": "Self-improving agent",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/2-5_self_improving_loop.html#s1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/monitoring"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/hermes-agent",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "헤르메스 에이전트",
+     "@language": "ko"
+    },
+    {
+     "@value": "Hermes Agent",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/2-5_self_improving_loop.html#s2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/deployment"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/self-improving-agent"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/closed-learning-loop",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "닫힌 학습 루프",
+     "@language": "ko"
+    },
+    {
+     "@value": "Closed learning loop",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "일의 성공·실패를 보고 스킬과 기억을 스스로 고쳐 가는 운용 중의 고리.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/2-5_self_improving_loop.html#s3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/monitoring"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/hermes-agent"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/skill-file",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "스킬",
+     "@language": "ko"
+    },
+    {
+     "@value": "Skill file",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "성공한 작업 절차를 글로 저장해 다음에 꺼내 쓰는 업무 매뉴얼.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/2-5_self_improving_loop.html#s3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/reproducibility"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/closed-learning-loop"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/agent-memory",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "기억 파일",
+     "@language": "ko"
+    },
+    {
+     "@value": "Agent memory file",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/2-5_self_improving_loop.html#s2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/reproducibility"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/hermes-agent"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/verified-saving",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "검증 후 저장",
+     "@language": "ko"
+    },
+    {
+     "@value": "Save only after verification",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/2-5_self_improving_loop.html#s6"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/accuracy-metrics"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/rule-journey"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/layered-security",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "겹겹 보안",
+     "@language": "ko"
+    },
+    {
+     "@value": "Layered security",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/2-5_self_improving_loop.html#s2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/ai-safety"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/hermes-agent"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/rl-thread",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "강화학습이라는 실(시도 → 평가 → 수정)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Try–evaluate–improve loop",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/2-6_reinforcement_thread.html#s2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/reward"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/rule-journey"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/rule-journey",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "규칙의 여정(판단→채점→문지기→검증기→기억의 문)",
+     "@language": "ko"
+    },
+    {
+     "@value": "The rule's journey",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/2-6_reinforcement_thread.html#s3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/rule-vs-learning"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/three-layers",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "구조·훈련·운용 세 층",
+     "@language": "ko"
+    },
+    {
+     "@value": "Architecture, training, operation layers",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/2-6_reinforcement_thread.html#s4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/deployment"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/human-role-shift"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/human-role-shift",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "사람의 자리 이동",
+     "@language": "ko"
+    },
+    {
+     "@value": "Shifting human role",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/2-6_reinforcement_thread.html#s5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/ai-safety"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/deployment-checklist"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/deployment-checklist",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "현장 도입 체크리스트",
+     "@language": "ko"
+    },
+    {
+     "@value": "Deployment checklist",
+     "@language": "en"
+    }
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/2-6_reinforcement_thread.html#s11"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/deployment"
+    }
+   ]
+  },
+  {
    "@id": "lab:term/hyperparameter",
    "@type": [
     "skos:Concept",
@@ -1672,54 +5988,6 @@
    "lab:partOf": [
     {
      "@id": "lab:concept/prompt-code-verify"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/train-test-split",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "학습/시험 나누기",
-     "@language": "ko"
-    },
-    {
-     "@value": "Train-test split",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "20%를 시험지로 봉인하고 80%로만 학습",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/python_machine_learning_lab/weeks/w02_classification_and_regression.html#lv3"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/data-splitting"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/cross-validation"
-    },
-    {
-     "@id": "lab:concept/choose-k"
-    },
-    {
-     "@id": "lab:concept/data-leakage"
-    },
-    {
-     "@id": "lab:concept/accuracy-trap"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/optimization-layers"
     }
    ]
   },
@@ -5357,126 +9625,6 @@
    ]
   },
   {
-   "@id": "lab:method/rnn",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "RNN",
-     "@language": "ko"
-    },
-    {
-     "@value": "recurrent neural network",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "순환 신경망. 이전 은닉 상태를 다음 시점에 넘기며 순서를 처리.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/DL_model_hiring_committee/6-6_rnn.html#m1"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/rnn"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/lstm"
-    },
-    {
-     "@id": "lab:method/gru"
-    },
-    {
-     "@id": "lab:method/bptt"
-    }
-   ],
-   "lab:uses": [
-    {
-     "@id": "lab:concept/hidden-state"
-    }
-   ],
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:method/svm-senior"
-    }
-   ],
-   "lab:evaluatedBy": [
-    {
-     "@id": "lab:metric/test-accuracy"
-    }
-   ],
-   "lab:evaluatedOn": [
-    {
-     "@id": "lab:dataset/digits"
-    }
-   ],
-   "lab:hasLimitation": [
-    {
-     "@id": "lab:concept/vanishing-gradient"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/lstm",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "LSTM",
-     "@language": "ko"
-    },
-    {
-     "@value": "long short-term memory",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "셀 상태와 망각·입력·출력 게이트로 장기 기억을 지키는 RNN.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/DL_model_hiring_committee/6-6_rnn.html#m4"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/lstm-gru"
-    }
-   ],
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:method/gru"
-    },
-    {
-     "@id": "lab:method/svm-senior"
-    }
-   ],
-   "lab:specialCaseOf": [
-    {
-     "@id": "lab:method/rnn"
-    }
-   ],
-   "lab:uses": [
-    {
-     "@id": "lab:concept/cell-state"
-    }
-   ],
-   "lab:evaluatedBy": [
-    {
-     "@id": "lab:metric/test-accuracy"
-    },
-    {
-     "@id": "lab:concept/sequence-scorecard"
-    }
-   ]
-  },
-  {
    "@id": "lab:method/gan",
    "@type": [
     "skos:Concept",
@@ -5615,172 +9763,6 @@
    }
   },
   {
-   "@id": "lab:concept/overfitting",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "과적합",
-     "@language": "ko"
-    },
-    {
-     "@value": "Overfitting",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "학습 데이터의 잡음까지 외운 상태.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/DL_model_hiring_committee/6-0_job_posting.html#overview"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/bias-variance"
-    },
-    {
-     "@id": "lab:topic/generalization"
-    }
-   ],
-   "lab:evaluatedBy": [
-    {
-     "@id": "lab:metric/r2"
-    },
-    {
-     "@id": "lab:metric/train-test-gap"
-    }
-   ],
-   "lab:addressedBy": [
-    {
-     "@id": "lab:method/early-stopping"
-    },
-    {
-     "@id": "lab:method/dropout"
-    },
-    {
-     "@id": "lab:concept/train-test-split"
-    },
-    {
-     "@id": "lab:method/data-augmentation"
-    },
-    {
-     "@id": "lab:method/train-test-split"
-    }
-   ],
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:concept/underfitting"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/generalization"
-    }
-   ]
-  },
-  {
-   "@id": "lab:metric/accuracy",
-   "@type": [
-    "skos:Concept",
-    "lab:Metric"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "정확도",
-     "@language": "ko"
-    },
-    {
-     "@value": "Accuracy",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "맞힌 비율. 불균형 데이터에서 속기 쉽다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/DL_model_hiring_committee/6-0_job_posting.html#m3"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/accuracy-metrics"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/confusion-matrix"
-    }
-   ],
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:concept/cross-entropy-loss"
-    }
-   ],
-   "lab:relatedTo": [
-    {
-     "@id": "lab:method/train-test-split"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/perceptron",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "퍼셉트론",
-     "@language": "ko"
-    },
-    {
-     "@value": "Perceptron",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "여러 입력에 가중치를 곱해 더하고 편향을 더한 뒤 시그모이드로 0~1 확률로 바꾸는 뉴런 하나.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/DL_model_hiring_committee/6-1_perceptron.html#m1"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/perceptron"
-    }
-   ],
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:method/logistic-regression"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/mlp"
-    },
-    {
-     "@id": "lab:method/averaged-perceptron"
-    },
-    {
-     "@id": "lab:method/cnn"
-    }
-   ],
-   "lab:evaluatedBy": [
-    {
-     "@id": "lab:metric/test-accuracy"
-    }
-   ],
-   "lab:evaluatedOn": [
-    {
-     "@id": "lab:dataset/concrete"
-    }
-   ]
-  },
-  {
    "@id": "lab:concept/standardization",
    "@type": [
     "skos:Concept",
@@ -5863,67 +9845,6 @@
    ]
   },
   {
-   "@id": "lab:method/logistic-regression",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "로지스틱 회귀 (다항)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Multinomial logistic regression",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "정답별 점수 → 소프트맥스 → 확률",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/DL_model_hiring_committee/6-1_perceptron.html#m5"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/glm-logistic"
-    },
-    {
-     "@id": "lab:topic/logistic-regression"
-    }
-   ],
-   "lab:evaluatedOn": [
-    {
-     "@id": "lab:dataset/fish-market"
-    }
-   ],
-   "lab:evaluatedBy": [
-    {
-     "@id": "lab:metric/accuracy"
-    },
-    {
-     "@id": "lab:concept/cross-entropy-loss"
-    },
-    {
-     "@id": "lab:metric/f1"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/decision-tree"
-    },
-    {
-     "@id": "lab:method/knn"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/voting"
-    }
-   ]
-  },
-  {
    "@id": "lab:method/cnn-junior",
    "@type": [
     "skos:Concept",
@@ -5997,104 +9918,6 @@
    ]
   },
   {
-   "@id": "lab:concept/multi-head",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "머리 (멀티헤드)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Multi-head attention",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "셀프 어텐션을 서로 다른 Q·K·V로 여러 번 하는 갈래. 이 편은 머리 4개를 쓴다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/DL_model_hiring_committee/6-9_transformer.html#m1"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/multi-head-attention"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/vit"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/mlp",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "다층 퍼셉트론",
-     "@language": "ko"
-    },
-    {
-     "@value": "Multilayer perceptron",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "입력과 출력 사이에 은닉층을 끼워 굽거나 띠 모양인 경계도 만드는 모델.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/DL_model_hiring_committee/6-11_autoencoder.html#m1"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/mlp"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/cnn"
-    },
-    {
-     "@id": "lab:method/autoencoder"
-    },
-    {
-     "@id": "lab:method/ensemble"
-    },
-    {
-     "@id": "lab:method/plain-deep-network"
-    }
-   ],
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:method/rnn"
-    },
-    {
-     "@id": "lab:method/gbm-senior"
-    }
-   ],
-   "lab:evaluatedOn": [
-    {
-     "@id": "lab:dataset/concrete"
-    }
-   ],
-   "lab:evaluatedBy": [
-    {
-     "@id": "lab:metric/accuracy"
-    },
-    {
-     "@id": "lab:metric/r2"
-    }
-   ]
-  },
-  {
    "@id": "lab:method/resnet",
    "@type": [
     "skos:Concept",
@@ -6140,53 +9963,6 @@
    "lab:evaluatedBy": [
     {
      "@id": "lab:metric/r2"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/backpropagation",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "역전파",
-     "@language": "ko"
-    },
-    {
-     "@value": "Backpropagation",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "출력의 오차를 누구 책임인가에 따라 거꾸로 나눠 주는 계산.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/DL_model_hiring_committee/6-0_job_posting.html#m5"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/backpropagation"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/mlp"
-    }
-   ],
-   "lab:solves": [
-    {
-     "@id": "lab:concept/gradient"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/adam"
-    },
-    {
-     "@id": "lab:method/gradient-descent"
     }
    ]
   },
@@ -6302,48 +10078,6 @@
    ]
   },
   {
-   "@id": "lab:concept/sigmoid",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "시그모이드",
-     "@language": "ko"
-    },
-    {
-     "@value": "Sigmoid",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "점수를 0~1 사이 확률로 바꾸는 함수.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/DL_model_hiring_committee/6-1_perceptron.html#m3"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/activation-function"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/perceptron"
-    },
-    {
-     "@id": "lab:method/logistic-regression"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/logistic-regression"
-    }
-   ]
-  },
-  {
    "@id": "lab:bio/mushroom-body",
    "@type": [
     "skos:Concept",
@@ -6374,56 +10108,6 @@
    "lab:bioAnalogueOf": [
     {
      "@id": "lab:method/artificial-neuron"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/loss-function",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "손실 함수",
-     "@language": "ko"
-    },
-    {
-     "@value": "Loss function",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "예측이 정답과 얼마나 다른지 숫자 하나로 잰 것. 회귀는 평균 제곱 오차, 분류는 교차 엔트로피를 쓴다. 학습은 이 숫자를 줄이는 일이다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/DL_model_hiring_committee/6-0_job_posting.html#overview"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/loss-function"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/backpropagation"
-    },
-    {
-     "@id": "lab:concept/step-vs-slope"
-    },
-    {
-     "@id": "lab:method/gradient-descent"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/optimization-layers"
-    }
-   ],
-   "lab:broader": [
-    {
-     "@id": "lab:concept/cross-entropy-loss"
     }
    ]
   },
@@ -6498,6 +10182,11 @@
    "lab:contrastsWith": [
     {
      "@id": "lab:method/early-stopping"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/transformer"
     }
    ]
   },
@@ -6825,69 +10514,6 @@
    ]
   },
   {
-   "@id": "lab:method/gradient-descent",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "경사하강법",
-     "@language": "ko"
-    },
-    {
-     "@value": "Gradient descent",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "예측 → 오차 → 책임 나누기 → 반대 방향으로 조금 옮기기를 반복한다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/DL_model_hiring_committee/6-0_job_posting.html#overview"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/gradient-descent"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/perceptron"
-    },
-    {
-     "@id": "lab:method/logistic-regression"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/backpropagation"
-    },
-    {
-     "@id": "lab:concept/engine-vs-model"
-    }
-   ],
-   "lab:hasPart": [
-    {
-     "@id": "lab:concept/learning-rate"
-    }
-   ],
-   "lab:relatedTo": [
-    {
-     "@id": "lab:metric/mse"
-    },
-    {
-     "@id": "lab:concept/gradient"
-    }
-   ],
-   "lab:broader": [
-    {
-     "@id": "lab:method/adam"
-    }
-   ]
-  },
-  {
    "@id": "lab:concept/hidden-layer",
    "@type": [
     "skos:Concept",
@@ -6923,66 +10549,6 @@
    "lab:prerequisiteOf": [
     {
      "@id": "lab:method/backpropagation"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/cnn",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "합성곱 신경망",
-     "@language": "ko"
-    },
-    {
-     "@value": "Convolutional neural network",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "좁은 영역만 보는 같은 계산을 모든 위치에 반복하고, 층이 올라갈수록 보는 범위가 넓어진다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/DL_model_hiring_committee/6-4_cnn.html#m1"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/convolution"
-    }
-   ],
-   "lab:uses": [
-    {
-     "@id": "lab:concept/filter"
-    },
-    {
-     "@id": "lab:concept/weight-sharing"
-    }
-   ],
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:method/mlp"
-    },
-    {
-     "@id": "lab:method/svm-senior"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/data-augmentation"
-    }
-   ],
-   "lab:evaluatedBy": [
-    {
-     "@id": "lab:metric/test-accuracy"
-    }
-   ],
-   "lab:evaluatedOn": [
-    {
-     "@id": "lab:dataset/digits"
     }
    ]
   },
@@ -7739,45 +11305,6 @@
    "lab:prerequisiteOf": [
     {
      "@id": "lab:concept/position-embedding"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/qkv",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "쿼리·키·밸류",
-     "@language": "ko"
-    },
-    {
-     "@value": "Query, key, value",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "찾는 질문(Q), 각 토큰의 꼬리표(K), 실제 내용(V).",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/DL_model_hiring_committee/6-9_transformer.html#m1"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/self-attention"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/self-attention"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/multi-head"
     }
    ]
   },
@@ -12955,97 +16482,6 @@
    }
   },
   {
-   "@id": "lab:method/decision-tree",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "판단나무",
-     "@language": "ko"
-    },
-    {
-     "@value": "decision tree",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "예/아니오 질문을 차례로. 5주에 배움.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ML_model_hiring_committee/5-7_random_forest.html#overview"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/decision-tree"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/random-forest"
-    }
-   ],
-   "lab:hasLimitation": [
-    {
-     "@id": "lab:concept/overfitting"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/voting"
-    }
-   ],
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:method/bagging"
-    }
-   ],
-   "lab:evaluatedBy": [
-    {
-     "@id": "lab:metric/gini-impurity"
-    }
-   ],
-   "lab:evaluatedOn": [
-    {
-     "@id": "lab:dataset/fish-market"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/prompt",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "프롬프트",
-     "@language": "ko"
-    },
-    {
-     "@value": "prompt",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "AI에게 무엇을 만들지 알려 주는 글.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ML_model_hiring_committee/5-0_job_posting.html#prompt"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/prompting"
-    },
-    {
-     "@id": "lab:topic/system-prompts"
-    }
-   ]
-  },
-  {
    "@id": "lab:concept/loss",
    "@type": [
     "skos:Concept",
@@ -13148,43 +16584,6 @@
    "lab:topic": [
     {
      "@id": "lab:topic/gradient-descent"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/machine-learning",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "기계 학습",
-     "@language": "ko"
-    },
-    {
-     "@value": "machine learning",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "데이터에서 규칙을 배워 새 데이터를 다루는 방법.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ML_model_hiring_committee/5-0_job_posting.html#overview"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/rule-vs-learning"
-    },
-    {
-     "@id": "lab:topic/supervised-learning"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/logistic-regression"
     }
    ]
   },
@@ -14065,40 +17464,6 @@
    ]
   },
   {
-   "@id": "lab:concept/flowchart",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "플로우차트",
-     "@language": "ko"
-    },
-    {
-     "@value": "Flowchart",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "마름모(조건)와 화살표로 판단 순서를 그린 그림.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ML_model_hiring_committee/5-0_job_posting.html#overview"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/rule-vs-learning"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/rule-based"
-    }
-   ]
-  },
-  {
    "@id": "lab:concept/curvature-eigenvalue",
    "@type": [
     "skos:Concept",
@@ -14426,44 +17791,6 @@
    ]
   },
   {
-   "@id": "lab:concept/llm-agent",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "에이전트",
-     "@language": "ko"
-    },
-    {
-     "@value": "LLM agent",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "목표를 받아 도구를 부르고 여러 단계를 스스로 실행하는 AI 시스템.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ML_00_Algorithm-family-build_03/4-14_rl_metrics.html#series"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/mdp"
-    },
-    {
-     "@id": "lab:topic/planning-agents"
-    },
-    {
-     "@id": "lab:topic/pretrained-lm"
-    },
-    {
-     "@id": "lab:topic/prompting"
-    }
-   ]
-  },
-  {
    "@id": "lab:method/learning-curve",
    "@type": [
     "skos:Concept",
@@ -14559,40 +17886,6 @@
    ]
   },
   {
-   "@id": "lab:concept/reward",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "점수 규칙(보상)",
-     "@language": "ko"
-    },
-    {
-     "@value": "reward",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "무엇을 하면 점수를 얼마나 받는지 정한 규칙.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ML_00_Algorithm-family-build_03/4-14_rl_metrics.html#series"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/reward"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/reinforcement-learning"
-    }
-   ]
-  },
-  {
    "@id": "lab:concept/deployment",
    "@type": [
     "skos:Concept",
@@ -14614,45 +17907,6 @@
    "lab:topic": [
     {
      "@id": "lab:topic/deployment"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/q-learning",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "Q-러닝",
-     "@language": "ko"
-    },
-    {
-     "@value": "Q-learning",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "상태-행동 가치 Q를 보상으로 고쳐 가는 강화학습 방법.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ML_00_Algorithm-family-build_03/4-14_rl_metrics.html#series"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/q-learning"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/dqn"
-    }
-   ],
-   "lab:broader": [
-    {
-     "@id": "lab:method/reinforcement-learning"
     }
    ]
   },
@@ -14819,31 +18073,6 @@
    "lab:topic": [
     {
      "@id": "lab:topic/bagging"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/dqn",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "DQN",
-     "@language": "ko"
-    },
-    {
-     "@value": "Deep Q-Network",
-     "@language": "en"
-    }
-   ],
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ML_00_Algorithm-family-build_02/4-9_rl_three.html#series"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/q-learning"
     }
    ]
   },
@@ -15018,35 +18247,6 @@
     },
     {
      "@id": "lab:topic/exploration"
-    }
-   ]
-  },
-  {
-   "@id": "lab:dataset/fish-market",
-   "@type": [
-    "skos:Concept",
-    "lab:Dataset"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "Fish Market(도미 35·빙어 14)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Fish Market (bream 35, smelt 14)",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "도미와 빙어의 길이(cm)·무게(g) 실측값. 교안 실습 데이터.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Fish_Market_Data_Machine_Learning/1_classification_models.html#outro-h"
-   },
-   "lab:relatedTo": [
-    {
-     "@id": "lab:concept/data-inspection"
     }
    ]
   },
@@ -15226,40 +18426,6 @@
    "lab:contrastsWith": [
     {
      "@id": "lab:concept/hyperparameter"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/rule-based",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "규칙 기반",
-     "@language": "ko"
-    },
-    {
-     "@value": "Rule-based system",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "사람(또는 진화)이 미리 규칙을 써 두는 방식. 설명은 쉽지만 환경이 바뀌면 직접 고쳐야 한다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Fish_Market_Data_Machine_Learning/1_classification_models.html#m1"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/rule-vs-learning"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/machine-learning"
     }
    ]
   },

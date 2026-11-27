@@ -1112,6 +1112,57 @@ p29 = 29 활용 5 · 위상 데이터 분석(TDA) — 오래 사는 구멍 찾�
 - 지속성 바코드 → 높이 거르기와 이산 모스 짝 : 먼저 알아야 함]]></description>
     </item>
     <item>
+      <title>그래프 이론 연구실 — 점과 선으로 관계를 보는 법 · 오리엔테이션</title>
+      <link>https://adminmrobo.github.io/graph_theory_lab/</link>
+      <guid isPermaLink="false">ahnboat:graph_theory_lab:b375f44d55</guid>
+      <pubDate>Wed, 25 Nov 2026 19:25:17 +0000</pubDate>
+      <category>경제·수학·최적화</category>
+      <description><![CDATA[분야: 경제·수학·최적화 · 학문 분야: - · 페이지 9쪽 · 개념 18개 · 관계 9개
+사이트: https://adminmrobo.github.io/graph_theory_lab/
+
+[페이지] 기호 = 제목 — 주소
+p1 = 01 그래프 기초 — 점과 선으로 관계 적기 — 그래프 이론 연구실 — 점과 선으로 관계를 보는 법 — https://adminmrobo.github.io/graph_theory_lab/01_graph_fundamentals.html
+p2 = 02 그래프 표현 — 같은 관계, 네 가지 모양 — 그래프 이론 연구실 — 점과 선으로 관계를 보는 법 — https://adminmrobo.github.io/graph_theory_lab/02_representations.html
+p3 = 03 경로와 연결 — 어디서 어디로 갈 수 있나 — 그래프 이론 연구실 — 점과 선으로 관계를 보는 법 — https://adminmrobo.github.io/graph_theory_lab/03_paths_connectivity.html
+p4 = 04 트리 — 사이클 없이 모두 잇기 — 그래프 이론 연구실 — 점과 선으로 관계를 보는 법 — https://adminmrobo.github.io/graph_theory_lab/04_trees.html
+p5 = 05 오일러와 해밀턴 — 모든 길인가, 모든 집인가 — 그래프 이론 연구실 — 점과 선으로 관계를 보는 법 — https://adminmrobo.github.io/graph_theory_lab/05_euler_hamilton.html
+p6 = 06 평면성과 색칠 — 겹치지 않게 그리고, 다른 색으로 나누기 — 그래프 이론 연구실 — 점과 선으로 관계를 보는 법 — https://adminmrobo.github.io/graph_theory_lab/06_planarity_coloring.html
+p7 = 07 매칭과 흐름 — 짝짓기와 실어 나르기 — 그래프 이론 연구실 — 점과 선으로 관계를 보는 법 — https://adminmrobo.github.io/graph_theory_lab/07_matching_flow.html
+p8 = 08 최단 경로 — 가장 적게 드는 길 찾기 — 그래프 이론 연구실 — 점과 선으로 관계를 보는 법 — https://adminmrobo.github.io/graph_theory_lab/08_shortest_paths.html
+p9 = 09 스펙트럼 그래프 이론 — 그래프의 숫자 지문 — 그래프 이론 연구실 — 점과 선으로 관계를 보는 법 — https://adminmrobo.github.io/graph_theory_lab/09_spectral_graph_theory.html
+
+[개념] 이름 (유형) — 정의 [출처 페이지 기호#위치]
+- 희소 표현과 밀집 표현 (개념) — 어휘 크기만큼 차원이 늘고 대부분이 0인 원핫(희소) 표현과, 낮은 고정 차원에 의미 정보를 압축한 워드 임베딩(밀집) 표현의 비교. [p2#lv2]
+- 차수와 악수 정리 (개념) — 점에 붙은 선의 수를 차수라 하고, 모든 차수의 합은 선 수의 두 배와 같다. [p1#lv1]
+- 방향·무게 있는 그래프 (개념) — 선에 방향(화살표)이나 무게(숫자)를 붙인 그래프. 차수도 들어오는/나가는 차수, 가중 차수로 나눠 센다. [p1#lv2]
+- 인접 리스트·인접 행렬·선 목록 (개념) — 같은 그래프를 점별 이웃 목록, n×n의 0/1 표, 선 한 줄씩의 목록으로 적는 세 가지 저장 방식. [p2#lv1]
+- 걷기·트레일·경로·사이클 (개념) — 그래프 위의 길을 겹침 조건으로 나눈 이름. 트레일은 선이, 경로는 점이 겹치지 않고, 사이클은 출발점으로 돌아오는 경로. [p3#lv1]
+- 연결 그래프와 연결 요소 (개념) — 모든 두 점 사이에 경로가 있으면 연결 그래프, 서로 경로가 있는 점들의 최대 덩어리를 연결 요소라 한다. [p3#lv2]
+- 트리 (개념) — 사이클이 없는 연결 그래프. 점 n개면 선 n − 1개, 두 점 사이 경로는 하나뿐이다. [p4#lv1]
+- 신장 트리와 최소 신장 트리 (개념) — 그래프의 모든 점을 잇는 트리 모양 부분 그래프. 무게 합이 가장 작은 것이 최소 신장 트리이며 크루스칼 방법으로 찾는다. [p4#lv2]
+- 오일러 회로와 트레일 (개념) — 모든 선을 정확히 한 번씩 지나는 닫힌 길(회로)·열린 길(트레일). 연결 그래프에서 홀수 차수 점이 0개면 회로, 2개면 트레일이 있다. [p5#lv1]
+- 해밀턴 사이클 (개념) — 모든 점을 정확히 한 번씩 지나 출발점으로 돌아오는 사이클. 존재 판정에 알려진 빠른 방법이 없다. [p5#lv2]
+- 평면 그래프와 오일러 공식 (개념) — 선이 엇갈리지 않게 평면에 그릴 수 있는 그래프. 연결된 평면 그래프는 V − E + F = 2를 만족하고 E ≤ 3V − 6이다. [p6#lv1]
+- 그래프 색칠과 채색수 (개념) — 이어진 점끼리 다른 색을 칠하는 것. 필요한 가장 적은 색 수를 채색수 χ(G)라 한다. [p6#lv2]
+- 매칭과 최대 매칭 (개념) — 끝점을 공유하지 않는 선들의 모음. 늘리는 길을 찾아 짝을 뒤집으며 최대 매칭을 찾는다. [p7#lv1]
+- 최대 흐름 최소 절단 (개념) — 용량 제한과 흐름 보존을 지키는 s–t 흐름의 최댓값은 s와 t를 가르는 자르는 선의 용량 합의 최솟값과 같다. [p7#lv2]
+- 다익스트라 최단 경로 (개념) — 무게가 0 이상인 그래프에서 대기 줄의 가장 가까운 점부터 확정하고 이웃 거리를 고쳐 출발점에서 모든 점까지 최단 거리를 구하는 방법. [p8#lv1]
+- 너비 우선 탐색(BFS) (개념) — 출발점에서 가까운 점부터 한 겹씩 방문하는 탐색. 무게가 같은 그래프에서 최단 걸음 수를 구한다. [p8#lv2]
+- 인접 행렬 스펙트럼 (개념) — 인접 행렬의 고윳값 모음. 합은 0, 제곱의 합은 선 수의 두 배이며, 좌우 대칭이면 이분 그래프이다. [p9#lv1]
+- 라플라시안과 둘째 고윳값 (개념) — L = D − A의 고윳값 0의 개수는 연결 요소 수와 같고, 둘째로 작은 고윳값과 그 고유벡터로 그래프를 두 무리로 나눈다. [p9#lv2]
+
+[관계] A → B, C : 관계
+- 차수와 악수 정리 → 방향·무게 있는 그래프 : 먼저 알아야 함
+- 인접 리스트·인접 행렬·선 목록 → 희소 표현과 밀집 표현 : 먼저 알아야 함
+- 걷기·트레일·경로·사이클 → 연결 그래프와 연결 요소 : 먼저 알아야 함
+- 트리 → 신장 트리와 최소 신장 트리 : 먼저 알아야 함
+- 오일러 회로와 트레일 → 해밀턴 사이클 : 먼저 알아야 함
+- 평면 그래프와 오일러 공식 → 그래프 색칠과 채색수 : 먼저 알아야 함
+- 매칭과 최대 매칭 → 최대 흐름 최소 절단 : 먼저 알아야 함
+- 다익스트라 최단 경로 → 너비 우선 탐색(BFS) : 먼저 알아야 함
+- 인접 행렬 스펙트럼 → 라플라시안과 둘째 고윳값 : 먼저 알아야 함]]></description>
+    </item>
+    <item>
       <title>큐브 교실 — 루빅스 큐브로 배우는 군·탐색·AI · 오리엔테이션</title>
       <link>https://adminmrobo.github.io/ai_cube_lab/</link>
       <guid isPermaLink="false">ahnboat:ai_cube_lab:504d30eb53</guid>
@@ -2375,9 +2426,9 @@ p35 = 정보 — https://adminmrobo.github.io/micro_economics/v2/25_information.
 - 역선택 → 도덕적 해이 : ~의 일부]]></description>
     </item>
     <item>
-      <title>하루의 첫 브리핑 — 리만 가설은 '약속'이다</title>
+      <title>하루의 첫 브리핑 — 리만 가설</title>
       <link>https://adminmrobo.github.io/riemann_hypothesis_lab/</link>
-      <guid isPermaLink="false">ahnboat:riemann_hypothesis_lab:3b8900f9e0</guid>
+      <guid isPermaLink="false">ahnboat:riemann_hypothesis_lab:a92e673c50</guid>
       <pubDate>Tue, 24 Nov 2026 15:26:54 +0000</pubDate>
       <category>경제·수학·최적화</category>
       <category domain="lab:domain">논리학</category>
@@ -2811,7 +2862,6 @@ p8 = 두 장의 지도 ⑦편 — 같은 공, 두 지도 — 대결 — https://
 p9 = 두 장의 지도 — 라그랑지안 vs 해밀토니안 — https://adminmrobo.github.io/lagrangian_hamiltonian_lab/index.html
 
 [개념] 이름 (유형) — 정의 [출처 페이지 기호#위치]
-- 해밀턴 사이클 (개념) — 모든 점을 정확히 한 번씩 지나 출발점으로 돌아오는 사이클. 존재 판정에 알려진 빠른 방법이 없다. [p1#r06]
 - 길 전체에 점수 매기기 — 작용 (개념) — 정의 없음 [p2#r02]
 - 두 가지 에너지 — 움직임과 높이 (개념) — 정의 없음 [p2#r01]
 - 점수 규칙에서 뉴턴 법칙이 나온다 (개념) — 정의 없음 [p2#r03]
@@ -2823,7 +2873,7 @@ p9 = 두 장의 지도 — 라그랑지안 vs 해밀토니안 — https://adminm
 - 두 지도 나란히 (개념) — 정의 없음 [p3#r08b]
 - 연산자가 된 해밀토니안 (개념) — 정의 없음 [p7#r19]
 - 평균 에너지는 바닥보다 낮을 수 없다 — 변분 원리 (개념) — 정의 없음 [p7#r20]
-- (이 피드 위쪽에 이미 정의된 개념) 라그랑지안
+- (이 피드 위쪽에 이미 정의된 개념) 해밀턴 사이클, 라그랑지안
 
 [관계] A → B, C : 관계
 - 해밀턴 사이클 → 위상 공간의 그릇, 그릇을 도는 화살표 — 해밀턴 식, 연산자가 된 해밀토니안, 평균 에너지는 바닥보다 낮을 수 없다 — 변분 원리 : usedIn

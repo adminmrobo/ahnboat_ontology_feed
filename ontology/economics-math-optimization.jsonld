@@ -14006,6 +14006,502 @@
    }
   },
   {
+   "@id": "lab:concept/sparse-vs-dense",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "희소 표현과 밀집 표현",
+     "@language": "ko"
+    },
+    {
+     "@value": "sparse vs dense word representations",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "어휘 크기만큼 차원이 늘고 대부분이 0인 원핫(희소) 표현과, 낮은 고정 차원에 의미 정보를 압축한 워드 임베딩(밀집) 표현의 비교.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/graph_theory_lab/02_representations.html#lv2"
+   }
+  },
+  {
+   "@id": "lab:concept/degree-handshake",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "차수와 악수 정리",
+     "@language": "ko"
+    },
+    {
+     "@value": "degree and handshake lemma",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "점에 붙은 선의 수를 차수라 하고, 모든 차수의 합은 선 수의 두 배와 같다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/graph_theory_lab/01_graph_fundamentals.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/graph-kinds"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/graph-kinds",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "방향·무게 있는 그래프",
+     "@language": "ko"
+    },
+    {
+     "@value": "directed and weighted graphs",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "선에 방향(화살표)이나 무게(숫자)를 붙인 그래프. 차수도 들어오는/나가는 차수, 가중 차수로 나눠 센다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/graph_theory_lab/01_graph_fundamentals.html#lv2"
+   }
+  },
+  {
+   "@id": "lab:concept/adjacency-representations",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "인접 리스트·인접 행렬·선 목록",
+     "@language": "ko"
+    },
+    {
+     "@value": "adjacency list, adjacency matrix, edge list",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "같은 그래프를 점별 이웃 목록, n×n의 0/1 표, 선 한 줄씩의 목록으로 적는 세 가지 저장 방식.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/graph_theory_lab/02_representations.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/sparse-vs-dense"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/walk-trail-path",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "걷기·트레일·경로·사이클",
+     "@language": "ko"
+    },
+    {
+     "@value": "walk, trail, path, cycle",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "그래프 위의 길을 겹침 조건으로 나눈 이름. 트레일은 선이, 경로는 점이 겹치지 않고, 사이클은 출발점으로 돌아오는 경로.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/graph_theory_lab/03_paths_connectivity.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/connected-components"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/connected-components",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "연결 그래프와 연결 요소",
+     "@language": "ko"
+    },
+    {
+     "@value": "connectivity and connected components",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "모든 두 점 사이에 경로가 있으면 연결 그래프, 서로 경로가 있는 점들의 최대 덩어리를 연결 요소라 한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/graph_theory_lab/03_paths_connectivity.html#lv2"
+   }
+  },
+  {
+   "@id": "lab:concept/tree",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "트리",
+     "@language": "ko"
+    },
+    {
+     "@value": "tree",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "사이클이 없는 연결 그래프. 점 n개면 선 n − 1개, 두 점 사이 경로는 하나뿐이다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/graph_theory_lab/04_trees.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/spanning-tree-mst"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/spanning-tree-mst",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "신장 트리와 최소 신장 트리",
+     "@language": "ko"
+    },
+    {
+     "@value": "spanning tree and minimum spanning tree",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "그래프의 모든 점을 잇는 트리 모양 부분 그래프. 무게 합이 가장 작은 것이 최소 신장 트리이며 크루스칼 방법으로 찾는다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/graph_theory_lab/04_trees.html#lv2"
+   }
+  },
+  {
+   "@id": "lab:concept/eulerian",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "오일러 회로와 트레일",
+     "@language": "ko"
+    },
+    {
+     "@value": "Eulerian circuit and trail",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "모든 선을 정확히 한 번씩 지나는 닫힌 길(회로)·열린 길(트레일). 연결 그래프에서 홀수 차수 점이 0개면 회로, 2개면 트레일이 있다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/graph_theory_lab/05_euler_hamilton.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/hamiltonian"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/hamiltonian",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "해밀턴 사이클",
+     "@language": "ko"
+    },
+    {
+     "@value": "Hamiltonian cycle",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "모든 점을 정확히 한 번씩 지나 출발점으로 돌아오는 사이클. 존재 판정에 알려진 빠른 방법이 없다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/graph_theory_lab/05_euler_hamilton.html#lv2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/hamiltonian"
+    }
+   ],
+   "lab:usedIn": [
+    {
+     "@id": "lab:room/r06"
+    },
+    {
+     "@id": "lab:room/r07"
+    },
+    {
+     "@id": "lab:room/r19"
+    },
+    {
+     "@id": "lab:room/r20"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/planar-graph",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "평면 그래프와 오일러 공식",
+     "@language": "ko"
+    },
+    {
+     "@value": "planar graph and Euler formula",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "선이 엇갈리지 않게 평면에 그릴 수 있는 그래프. 연결된 평면 그래프는 V − E + F = 2를 만족하고 E ≤ 3V − 6이다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/graph_theory_lab/06_planarity_coloring.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/graph-coloring"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/graph-coloring",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "그래프 색칠과 채색수",
+     "@language": "ko"
+    },
+    {
+     "@value": "graph coloring and chromatic number",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "이어진 점끼리 다른 색을 칠하는 것. 필요한 가장 적은 색 수를 채색수 χ(G)라 한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/graph_theory_lab/06_planarity_coloring.html#lv2"
+   }
+  },
+  {
+   "@id": "lab:concept/matching",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "매칭과 최대 매칭",
+     "@language": "ko"
+    },
+    {
+     "@value": "matching and maximum matching",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "끝점을 공유하지 않는 선들의 모음. 늘리는 길을 찾아 짝을 뒤집으며 최대 매칭을 찾는다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/graph_theory_lab/07_matching_flow.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/max-flow-min-cut"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/max-flow-min-cut",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "최대 흐름 최소 절단",
+     "@language": "ko"
+    },
+    {
+     "@value": "max-flow min-cut",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "용량 제한과 흐름 보존을 지키는 s–t 흐름의 최댓값은 s와 t를 가르는 자르는 선의 용량 합의 최솟값과 같다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/graph_theory_lab/07_matching_flow.html#lv2"
+   }
+  },
+  {
+   "@id": "lab:concept/dijkstra",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "다익스트라 최단 경로",
+     "@language": "ko"
+    },
+    {
+     "@value": "Dijkstra shortest path",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "무게가 0 이상인 그래프에서 대기 줄의 가장 가까운 점부터 확정하고 이웃 거리를 고쳐 출발점에서 모든 점까지 최단 거리를 구하는 방법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/graph_theory_lab/08_shortest_paths.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/bfs"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/bfs",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "너비 우선 탐색(BFS)",
+     "@language": "ko"
+    },
+    {
+     "@value": "breadth-first search",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "출발점에서 가까운 점부터 한 겹씩 방문하는 탐색. 무게가 같은 그래프에서 최단 걸음 수를 구한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/graph_theory_lab/08_shortest_paths.html#lv2"
+   }
+  },
+  {
+   "@id": "lab:concept/adjacency-spectrum",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "인접 행렬 스펙트럼",
+     "@language": "ko"
+    },
+    {
+     "@value": "adjacency spectrum",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "인접 행렬의 고윳값 모음. 합은 0, 제곱의 합은 선 수의 두 배이며, 좌우 대칭이면 이분 그래프이다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/graph_theory_lab/09_spectral_graph_theory.html#lv1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/laplacian-fiedler"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/laplacian-fiedler",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "라플라시안과 둘째 고윳값",
+     "@language": "ko"
+    },
+    {
+     "@value": "graph Laplacian and Fiedler value",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "L = D − A의 고윳값 0의 개수는 연결 요소 수와 같고, 둘째로 작은 고윳값과 그 고유벡터로 그래프를 두 무리로 나눈다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/graph_theory_lab/09_spectral_graph_theory.html#lv2"
+   }
+  },
+  {
    "@id": "lab:concept/cube-pieces",
    "@type": [
     "skos:Concept",
@@ -34824,49 +35320,6 @@
    "lab:topic": [
     {
      "@id": "lab:topic/distance-angle"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/hamiltonian",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "해밀턴 사이클",
-     "@language": "ko"
-    },
-    {
-     "@value": "Hamiltonian cycle",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "모든 점을 정확히 한 번씩 지나 출발점으로 돌아오는 사이클. 존재 판정에 알려진 빠른 방법이 없다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/lagrangian_hamiltonian_lab/00_orientation.html#r06"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/hamiltonian"
-    }
-   ],
-   "lab:usedIn": [
-    {
-     "@id": "lab:room/r06"
-    },
-    {
-     "@id": "lab:room/r07"
-    },
-    {
-     "@id": "lab:room/r19"
-    },
-    {
-     "@id": "lab:room/r20"
     }
    ]
   },
