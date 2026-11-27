@@ -12,6 +12,1845 @@
  "dct:creator": "안상선 (Ahn Sangsun)",
  "@graph": [
   {
+   "@id": "lab:method/backward-induction",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "역진적 귀납법",
+     "@language": "ko"
+    },
+    {
+     "@value": "backward induction",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "마지막 결정부터 최선의 선택과 그 값을 구해 앞 단계로 거꾸로 올라가는 풀이법.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/coin/index.html#c3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/calculus-optimization-math"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/one-plus-4n"
+    }
+   ],
+   "lab:solves": [
+    {
+     "@id": "lab:concept/take-away-game"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/learning-rate",
+   "@type": [
+    "skos:Concept",
+    "lab:Term"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "학습률",
+     "@language": "ko"
+    },
+    {
+     "@value": "Learning rate",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "새 나무의 예측을 반영하는 배수.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/coin/index.html#c4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/gradient-descent"
+    },
+    {
+     "@id": "lab:topic/learning-rate-schedule"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/gradient-boosting-regression"
+    },
+    {
+     "@id": "lab:method/gradient-descent"
+    },
+    {
+     "@id": "lab:concept/hyperparameter"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/q-learning-selfplay"
+    },
+    {
+     "@id": "lab:method/adam"
+    },
+    {
+     "@id": "lab:concept/batch-size"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/blackjack-hit-stand",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "블랙잭(받기·서기만)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Blackjack with hit/stand",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "21에 가깝게, 넘지 않게. 딜러는 17 이상이면 선다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/blackjack/index.html#c1"
+   }
+  },
+  {
+   "@id": "lab:concept/soft-hand",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "소프트(A를 11로 세는 손패)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Soft hand",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "받아도 A를 1로 바꾸면 되니 잘 안 터진다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/blackjack/index.html#c1"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/blackjack-hit-stand"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/dealer-outcome-distribution",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "딜러 최종 결과 분포",
+     "@language": "ko"
+    },
+    {
+     "@value": "Dealer outcome distribution",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "딜러의 보이는 카드만 알면 17~21·터짐의 확률을 끝까지 따질 수 있다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/blackjack/index.html#c3"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/expected-value"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/expected-value",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "기댓값",
+     "@language": "ko"
+    },
+    {
+     "@value": "Expected value",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "결과마다 몫 × 확률을 더한 값.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/blackjack/index.html#c4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/probability-statistics"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/expected-value-recursion"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/policy-table",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "정책(받기·서기 표)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Policy table",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "상황 200개마다 받기·서기를 정한 표.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/blackjack/index.html#c4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/reward"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/state-value",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "가치",
+     "@language": "ko"
+    },
+    {
+     "@value": "Value",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "그 상황에서 앞으로 가장 잘했을 때 얻을 기댓값.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/blackjack/index.html#c4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/value-function"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/expected-value-recursion"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/expected-value-recursion",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "기댓값 계산(벨만 방정식)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Expected-value recursion (Bellman)",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "받기의 기댓값 = 카드 확률 × 다음 상황의 가장 좋은 기댓값의 합.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/blackjack/index.html#c4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/mdp"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/policy-table"
+    }
+   ],
+   "lab:solves": [
+    {
+     "@id": "lab:concept/blackjack-hit-stand"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/monte-carlo-control",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "몬테카를로 학습(탐험 시작)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Monte Carlo control with exploring starts",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "해 보고 상황·행동마다 결과를 평균 내서 표를 배운다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/blackjack/index.html#c5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/value-function"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/policy-table"
+    }
+   ],
+   "lab:solves": [
+    {
+     "@id": "lab:concept/blackjack-hit-stand"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/expected-value-recursion"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/incremental-mean",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "평균 고치기(1 ÷ 횟수)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Incremental mean",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "새 평균 = 옛 평균 + (결과 − 옛 평균) ÷ 횟수.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/blackjack/index.html#c5"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/monte-carlo-control"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/exploring-starts",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "탐험 시작",
+     "@language": "ko"
+    },
+    {
+     "@value": "Exploring starts",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "판마다 무작위 상황·행동에서 시작해 모든 경우를 겪게 한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/blackjack/index.html#c5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/exploration"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/monte-carlo-control"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/house-edge",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "딜러의 우위",
+     "@language": "ko"
+    },
+    {
+     "@value": "House edge",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "플레이어가 먼저 두어 먼저 터지므로, 가장 좋은 표도 한 판 평균 약 2.4%를 잃는다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/blackjack/index.html#duel"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/blackjack-hit-stand"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/take-away-game",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "동전 1개 남기기(가져가기 게임)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Misère subtraction game",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "번갈아 1~3개를 가져가고, 마지막 동전을 가져가는 사람이 진다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/coin/index.html#c1"
+   }
+  },
+  {
+   "@id": "lab:concept/coin-sliding-puzzle",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "동전 옮기기 퍼즐",
+     "@language": "ko"
+    },
+    {
+     "@value": "Coin-sliding puzzle",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "이웃한 동전 2개를 순서 그대로 줄의 맨 끝으로 옮겨 같은 색끼리 모은다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/coin/index.html#c1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/breadth-first-search"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/winning-losing-position",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "이기는 자리·지는 자리",
+     "@language": "ko"
+    },
+    {
+     "@value": "Winning and losing positions",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "지금 차례인 사람이 이길 수 있는 개수와 무엇을 해도 지는 개수.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/coin/index.html#c3"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/backward-induction"
+    },
+    {
+     "@id": "lab:method/q-learning-selfplay"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/one-plus-4n",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "1 + 4N 필승 공식",
+     "@language": "ko"
+    },
+    {
+     "@value": "Leave 1 + 4N",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "상대 차례에 1, 5, 9, 13…개를 남기고, 두 사람 몫의 합을 4로 맞춘다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/coin/index.html#c3"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/take-away-game"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/game-tree",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "게임 나무",
+     "@language": "ko"
+    },
+    {
+     "@value": "Game tree",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "둘 수 있는 수를 나뭇가지처럼 펼친 그림.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/coin/index.html#c3"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/backward-induction"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/dynamic-programming",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "동적 계획법",
+     "@language": "ko"
+    },
+    {
+     "@value": "Dynamic programming",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "작은 답을 적어 두고 큰 답을 만든다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/coin/index.html#c3"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/backward-induction"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/q-learning-selfplay",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "스스로 두며 배우기(Q 학습)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Self-play Q-learning",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "자기 자신과 두며 수마다 점수를 고쳐 간다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/coin/index.html#c4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/q-learning"
+    },
+    {
+     "@id": "lab:topic/reward"
+    }
+   ],
+   "lab:solves": [
+    {
+     "@id": "lab:concept/take-away-game"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/backward-induction"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/exploration",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "탐험",
+     "@language": "ko"
+    },
+    {
+     "@value": "Exploration",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "가끔 일부러 아무 수나 둬서 새 길을 알아본다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/coin/index.html#c4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/exploration"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/q-learning-selfplay"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/breadth-first-search",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "넓이 우선 탐색",
+     "@language": "ko"
+    },
+    {
+     "@value": "Breadth-first search",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "가까운 배치부터 빠짐없이 훑어 가장 짧은 길을 찾는다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/coin/index.html#c5"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/shortest-solution"
+    }
+   ],
+   "lab:solves": [
+    {
+     "@id": "lab:concept/coin-sliding-puzzle"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/backward-induction"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/shortest-solution",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "가장 짧은 풀이(2수)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Shortest solution",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "금은금은금 → 1·2번 오른쪽 → 3·4번 왼쪽.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/coin/index.html#c5"
+   }
+  },
+  {
+   "@id": "lab:concept/poker-dice",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "다섯 주사위 포커(다이스)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Poker dice",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "주사위 다섯 개를 굴리고 한 번 다시 굴려 족보로 겨룬다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/dice/index.html#c1"
+   }
+  },
+  {
+   "@id": "lab:concept/poker-dice-hands",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "족보",
+     "@language": "ko"
+    },
+    {
+     "@value": "Hand ranking",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "파이브다이스·포다이스·풀하우스·스트레이트·트리플·투페어·원페어·노페어.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/dice/index.html#c1"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/poker-dice"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/counting-outcomes",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "경우의 수(7,776)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Counting outcomes",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "주사위 다섯 개의 모든 결과는 6을 다섯 번 곱한 7,776가지.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/dice/index.html#c3"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/classical-probability"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/classical-probability",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "확률 = 경우 수 ÷ 모든 경우",
+     "@language": "ko"
+    },
+    {
+     "@value": "Classical probability",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "모든 결과가 똑같이 잘 나올 때의 확률.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/dice/index.html#c3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/probability-statistics"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/exhaustive-enumeration"
+    },
+    {
+     "@id": "lab:method/monte-carlo"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/exhaustive-enumeration",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "모든 경우 세기(완전 열거)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Exhaustive enumeration",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "다시 굴릴 주사위의 결과를 빠짐없이 늘어놓고 이기는 비율을 센다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/dice/index.html#c4"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/win-probability-choice"
+    }
+   ],
+   "lab:solves": [
+    {
+     "@id": "lab:concept/poker-dice"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/win-probability-choice",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "이길 확률로 고르기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Choosing by win probability",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "남기기마다 상대 패를 넘을 확률을 구해 가장 높은 것을 고른다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/dice/index.html#c4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/value-function"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/expected-win-rate"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:concept/gut-heuristic"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/monte-carlo",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "몬테카를로 방법(굴려 보며 어림하기)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Monte Carlo method",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "무작위로 많이 시험해 보고 이긴 비율로 확률을 어림한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/dice/index.html#c5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/probability-statistics"
+    }
+   ],
+   "lab:solves": [
+    {
+     "@id": "lab:concept/poker-dice"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/exhaustive-enumeration"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/law-of-large-numbers",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "큰수의 법칙",
+     "@language": "ko"
+    },
+    {
+     "@value": "Law of large numbers",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "시험 횟수가 늘수록 비율이 진짜 확률에 가까워진다. 흔들림은 횟수의 제곱근에 반비례.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/dice/index.html#c5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/probability-statistics"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/monte-carlo"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/gut-heuristic",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "감(같은 숫자 남기기)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Keep-the-most-common heuristic",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "상대를 보지 않고 가장 많이 나온 숫자만 남기는 규칙.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/dice/index.html#c4"
+   }
+  },
+  {
+   "@id": "lab:concept/expected-win-rate",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "기대 승률",
+     "@language": "ko"
+    },
+    {
+     "@value": "Expected win rate",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "고른 선택의 이길 확률을 여러 판 평균한 값. 운을 걸러 낸 선택의 질.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/dice/index.html#duel"
+   }
+  },
+  {
+   "@id": "lab:concept/slime-race",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "연구실 슬라임 레이스",
+     "@language": "ko"
+    },
+    {
+     "@value": "Lab slime race",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "슬라임 다섯 마리, 그날의 상태, 고정 배당. 1등을 맞히면 배당만큼 쿠키.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/slime/index.html#c1"
+   }
+  },
+  {
+   "@id": "lab:concept/multi-armed-bandit",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "다중 슬롯머신 문제(밴딧)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Multi-armed bandit",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "보상 확률을 모르는 선택지 중 하나를 고르고, 결과를 보고 다시 고르는 문제.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/slime/index.html#c1"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/reward"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/exploration-exploitation"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/slime-race"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/expected-return-per-ticket",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "돌려받는 몫(확률 × 배당)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Expected return per ticket",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "1보다 작으면 길게 할수록 잃는다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/slime/index.html#c3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/probability-statistics"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/sample-average"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/exploration-exploitation",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "탐험과 활용",
+     "@language": "ko"
+    },
+    {
+     "@value": "Exploration vs exploitation",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "아는 것을 쓸지, 덜 알려진 것을 해 볼지의 줄다리기.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/slime/index.html#c3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:area/rl"
+    },
+    {
+     "@id": "lab:topic/exploration"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/epsilon-greedy"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/learning-curve"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/epsilon-greedy",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "ε-탐욕",
+     "@language": "ko"
+    },
+    {
+     "@value": "Epsilon-greedy",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "대개는 평균이 가장 높은 것, ε 비율로는 아무거나.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/slime/index.html#c3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/exploration"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/ucb1"
+    }
+   ],
+   "lab:solves": [
+    {
+     "@id": "lab:concept/multi-armed-bandit"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/ucb1",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "UCB(덜 해 본 쪽에 덤)",
+     "@language": "ko"
+    },
+    {
+     "@value": "UCB1",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "평균 + k × √(ln 전체 횟수 ÷ 그 선택 횟수).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/slime/index.html#c4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/exploration"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/contextual-bandit"
+    }
+   ],
+   "lab:solves": [
+    {
+     "@id": "lab:concept/multi-armed-bandit"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:method/epsilon-greedy"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/contextual-bandit",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "맥락 밴딧(상태 보고 고르기)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Contextual bandit",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "(슬라임 × 상태)마다 평균을 따로 적어 그날 상태로 고른다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/slime/index.html#c5"
+   },
+   "lab:solves": [
+    {
+     "@id": "lab:concept/slime-race"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/sample-average",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "평균으로 어림하기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Sample-average estimate",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "응원해 본 결과의 평균으로 진짜 몫을 어림한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/slime/index.html#c3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/value-function"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/epsilon-greedy"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/sudoku-rules",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "스도쿠 규칙",
+     "@language": "ko"
+    },
+    {
+     "@value": "Sudoku rules",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "가로줄·세로줄·굵은 선 묶음 안에 숫자가 한 번씩만 들어간다. 힌트는 바꿀 수 없다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/sudoku/index.html#g1"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/conflict-penalty"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/constraint-satisfaction"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/constraint-satisfaction",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "규칙을 지키는 배치 찾기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Constraint satisfaction",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "여러 규칙을 한꺼번에 지키는 배치를 찾는 문제. 시간표·근무표도 같은 모양.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/sudoku/index.html#g1"
+   }
+  },
+  {
+   "@id": "lab:concept/conflict-penalty",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "벌점(부딪힌 짝의 수)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Conflict penalty",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "같은 줄·같은 묶음에서 같은 숫자인 짝 하나당 1점. 정답만 0.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/sudoku/index.html#g2"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/energy-function"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/energy-function",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "에너지",
+     "@language": "ko"
+    },
+    {
+     "@value": "Energy function",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "답안마다 매기는 높이. 낮을수록 좋은 답.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/sudoku/index.html#g2"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/loss-function"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/energy-landscape"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/energy-landscape",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "에너지 그릇(지형)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Energy landscape",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "모든 답안을 벌점 높이로 세운 땅. 정답이 바닥.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/sudoku/index.html#g3"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/optimization"
+    },
+    {
+     "@id": "lab:method/energy-descent"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/local-minimum",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "작은 웅덩이(국소 최솟값)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Local minimum",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "정답은 아닌데 한 자리만 바꿔서는 벌점이 줄지 않는 곳.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/sudoku/index.html#g3"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/noise-temperature"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/energy-based-model",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "에너지 모델",
+     "@language": "ko"
+    },
+    {
+     "@value": "Energy-based model",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "답마다 에너지를 매기고, 학습으로 정답 자리를 깊게 만든 뒤 추론 때 에너지를 내려가 답을 찾는 모델.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/sudoku/index.html#g4"
+   },
+   "lab:relatedTo": [
+    {
+     "@id": "lab:concept/optimization"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:concept/looped-model"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/optimization",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "최적화(최솟값 찾기)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Optimization",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "가장 좋은(여기서는 가장 낮은) 곳을 찾는 일.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/sudoku/index.html#g4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/calculus-optimization-math"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/energy-descent"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/looped-model",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "반복형 모델",
+     "@language": "ko"
+    },
+    {
+     "@value": "Looped model",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "같은 계산 덩어리를 여러 번 되풀이해 답을 통째로 그려 내는 AI.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/sudoku/index.html#g4"
+   }
+  },
+  {
+   "@id": "lab:concept/pairwise-penalty-table",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "벌점표(자리 짝 가중치)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Pairwise weights",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "자리 두 개마다 숫자 짝의 벌점을 적은 표. 논문은 약 26만 개 숫자.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/sudoku/index.html#g5"
+   },
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/contrastive-energy-learning"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/energy-based-model"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/contrastive-energy-learning",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "그릇 빚기(정답은 낮추고 가짜 답은 올리기)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Lowering energy of solutions, raising negatives",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "정답 예시의 에너지는 낮추고 가짜 답의 에너지는 올려 벌점표를 배운다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/sudoku/index.html#g5"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/contrastive"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/energy-landscape"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/energy-based-model"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/energy-descent",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "공 굴리기(에너지 내려가기)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Energy descent inference",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "힌트 고정 → 빈자리 아무 숫자 → 벌점이 큰 자리를 벌점이 줄어드는 숫자로 → 가끔 흔들기 → 멈춤선에서 멈춤.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/sudoku/index.html#g6"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/gradient-descent"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/energy-based-model"
+    }
+   ],
+   "lab:hasLimitation": [
+    {
+     "@id": "lab:concept/local-minimum"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/noise-temperature",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "흔들기(온도)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Noise / temperature",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "가끔 일부러 아무 숫자로 바꿔 작은 웅덩이를 빠져나오는 것.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/sudoku/index.html#g6"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/exploration"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/energy-descent"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/stopping-threshold",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "멈춤선",
+     "@language": "ko"
+    },
+    {
+     "@value": "Stopping threshold",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "이 아래로 내려오면 다 풀었다고 스스로 멈추는 에너지 높이.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/sudoku/index.html#g6"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/early-stopping"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/energy-descent"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/clamped-clues",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "힌트 고정",
+     "@language": "ko"
+    },
+    {
+     "@value": "Clamped clues",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "문제로 주어진 숫자는 추론 내내 바꾸지 않는다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ai_game_lab/sudoku/index.html#g6"
+   },
+   "lab:partOf": [
+    {
+     "@id": "lab:method/energy-descent"
+    }
+   ]
+  },
+  {
    "@id": "lab:concept/sm-appA-01",
    "@type": [
     "skos:Concept",
@@ -4673,60 +6512,6 @@
    "lab:contrastsWith": [
     {
      "@id": "lab:concept/classification"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/learning-rate",
-   "@type": [
-    "skos:Concept",
-    "lab:Term"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "학습률",
-     "@language": "ko"
-    },
-    {
-     "@value": "Learning rate",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "새 나무의 예측을 반영하는 배수.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/how_to_make_ai_model_factory_version/classifier.html#w7"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/gradient-descent"
-    },
-    {
-     "@id": "lab:topic/learning-rate-schedule"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/gradient-boosting-regression"
-    },
-    {
-     "@id": "lab:method/gradient-descent"
-    },
-    {
-     "@id": "lab:concept/hyperparameter"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/q-learning-selfplay"
-    },
-    {
-     "@id": "lab:method/adam"
-    },
-    {
-     "@id": "lab:concept/batch-size"
     }
    ]
   },
@@ -9782,839 +11567,6 @@
    }
   },
   {
-   "@id": "lab:method/backward-induction",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "역진적 귀납법",
-     "@language": "ko"
-    },
-    {
-     "@value": "backward induction",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "마지막 결정부터 최선의 선택과 그 값을 구해 앞 단계로 거꾸로 올라가는 풀이법.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_game_lab/coin/index.html#c3"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/calculus-optimization-math"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/one-plus-4n"
-    }
-   ],
-   "lab:solves": [
-    {
-     "@id": "lab:concept/take-away-game"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/take-away-game",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "동전 1개 남기기(가져가기 게임)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Misère subtraction game",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "번갈아 1~3개를 가져가고, 마지막 동전을 가져가는 사람이 진다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_game_lab/coin/index.html#c1"
-   }
-  },
-  {
-   "@id": "lab:concept/coin-sliding-puzzle",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "동전 옮기기 퍼즐",
-     "@language": "ko"
-    },
-    {
-     "@value": "Coin-sliding puzzle",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "이웃한 동전 2개를 순서 그대로 줄의 맨 끝으로 옮겨 같은 색끼리 모은다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_game_lab/coin/index.html#c1"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/breadth-first-search"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/winning-losing-position",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "이기는 자리·지는 자리",
-     "@language": "ko"
-    },
-    {
-     "@value": "Winning and losing positions",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "지금 차례인 사람이 이길 수 있는 개수와 무엇을 해도 지는 개수.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_game_lab/coin/index.html#c3"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/backward-induction"
-    },
-    {
-     "@id": "lab:method/q-learning-selfplay"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/one-plus-4n",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "1 + 4N 필승 공식",
-     "@language": "ko"
-    },
-    {
-     "@value": "Leave 1 + 4N",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "상대 차례에 1, 5, 9, 13…개를 남기고, 두 사람 몫의 합을 4로 맞춘다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_game_lab/coin/index.html#c3"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/take-away-game"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/game-tree",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "게임 나무",
-     "@language": "ko"
-    },
-    {
-     "@value": "Game tree",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "둘 수 있는 수를 나뭇가지처럼 펼친 그림.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_game_lab/coin/index.html#c3"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/backward-induction"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/dynamic-programming",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "동적 계획법",
-     "@language": "ko"
-    },
-    {
-     "@value": "Dynamic programming",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "작은 답을 적어 두고 큰 답을 만든다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_game_lab/coin/index.html#c3"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/backward-induction"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/q-learning-selfplay",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "스스로 두며 배우기(Q 학습)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Self-play Q-learning",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "자기 자신과 두며 수마다 점수를 고쳐 간다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_game_lab/coin/index.html#c4"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/q-learning"
-    },
-    {
-     "@id": "lab:topic/reward"
-    }
-   ],
-   "lab:solves": [
-    {
-     "@id": "lab:concept/take-away-game"
-    }
-   ],
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:method/backward-induction"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/exploration",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "탐험",
-     "@language": "ko"
-    },
-    {
-     "@value": "Exploration",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "가끔 일부러 아무 수나 둬서 새 길을 알아본다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_game_lab/coin/index.html#c4"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/exploration"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/q-learning-selfplay"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/breadth-first-search",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "넓이 우선 탐색",
-     "@language": "ko"
-    },
-    {
-     "@value": "Breadth-first search",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "가까운 배치부터 빠짐없이 훑어 가장 짧은 길을 찾는다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_game_lab/coin/index.html#c5"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/shortest-solution"
-    }
-   ],
-   "lab:solves": [
-    {
-     "@id": "lab:concept/coin-sliding-puzzle"
-    }
-   ],
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:method/backward-induction"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/shortest-solution",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "가장 짧은 풀이(2수)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Shortest solution",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "금은금은금 → 1·2번 오른쪽 → 3·4번 왼쪽.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_game_lab/coin/index.html#c5"
-   }
-  },
-  {
-   "@id": "lab:concept/sudoku-rules",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "스도쿠 규칙",
-     "@language": "ko"
-    },
-    {
-     "@value": "Sudoku rules",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "가로줄·세로줄·굵은 선 묶음 안에 숫자가 한 번씩만 들어간다. 힌트는 바꿀 수 없다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_game_lab/sudoku/index.html#g1"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/conflict-penalty"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/constraint-satisfaction"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/constraint-satisfaction",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "규칙을 지키는 배치 찾기",
-     "@language": "ko"
-    },
-    {
-     "@value": "Constraint satisfaction",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "여러 규칙을 한꺼번에 지키는 배치를 찾는 문제. 시간표·근무표도 같은 모양.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_game_lab/sudoku/index.html#g1"
-   }
-  },
-  {
-   "@id": "lab:concept/conflict-penalty",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "벌점(부딪힌 짝의 수)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Conflict penalty",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "같은 줄·같은 묶음에서 같은 숫자인 짝 하나당 1점. 정답만 0.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_game_lab/sudoku/index.html#g2"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/energy-function"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/energy-function",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "에너지",
-     "@language": "ko"
-    },
-    {
-     "@value": "Energy function",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "답안마다 매기는 높이. 낮을수록 좋은 답.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_game_lab/sudoku/index.html#g2"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/loss-function"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/energy-landscape"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/energy-landscape",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "에너지 그릇(지형)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Energy landscape",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "모든 답안을 벌점 높이로 세운 땅. 정답이 바닥.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_game_lab/sudoku/index.html#g3"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/optimization"
-    },
-    {
-     "@id": "lab:method/energy-descent"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/local-minimum",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "작은 웅덩이(국소 최솟값)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Local minimum",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "정답은 아닌데 한 자리만 바꿔서는 벌점이 줄지 않는 곳.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_game_lab/sudoku/index.html#g3"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/noise-temperature"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/energy-based-model",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "에너지 모델",
-     "@language": "ko"
-    },
-    {
-     "@value": "Energy-based model",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "답마다 에너지를 매기고, 학습으로 정답 자리를 깊게 만든 뒤 추론 때 에너지를 내려가 답을 찾는 모델.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_game_lab/sudoku/index.html#g4"
-   },
-   "lab:relatedTo": [
-    {
-     "@id": "lab:concept/optimization"
-    }
-   ],
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:concept/looped-model"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/optimization",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "최적화(최솟값 찾기)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Optimization",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "가장 좋은(여기서는 가장 낮은) 곳을 찾는 일.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_game_lab/sudoku/index.html#g4"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/calculus-optimization-math"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/energy-descent"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/looped-model",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "반복형 모델",
-     "@language": "ko"
-    },
-    {
-     "@value": "Looped model",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "같은 계산 덩어리를 여러 번 되풀이해 답을 통째로 그려 내는 AI.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_game_lab/sudoku/index.html#g4"
-   }
-  },
-  {
-   "@id": "lab:concept/pairwise-penalty-table",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "벌점표(자리 짝 가중치)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Pairwise weights",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "자리 두 개마다 숫자 짝의 벌점을 적은 표. 논문은 약 26만 개 숫자.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_game_lab/sudoku/index.html#g5"
-   },
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/contrastive-energy-learning"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/energy-based-model"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/contrastive-energy-learning",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "그릇 빚기(정답은 낮추고 가짜 답은 올리기)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Lowering energy of solutions, raising negatives",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "정답 예시의 에너지는 낮추고 가짜 답의 에너지는 올려 벌점표를 배운다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_game_lab/sudoku/index.html#g5"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/contrastive"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/energy-landscape"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/energy-based-model"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/energy-descent",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "공 굴리기(에너지 내려가기)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Energy descent inference",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "힌트 고정 → 빈자리 아무 숫자 → 벌점이 큰 자리를 벌점이 줄어드는 숫자로 → 가끔 흔들기 → 멈춤선에서 멈춤.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_game_lab/sudoku/index.html#g6"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/gradient-descent"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/energy-based-model"
-    }
-   ],
-   "lab:hasLimitation": [
-    {
-     "@id": "lab:concept/local-minimum"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/noise-temperature",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "흔들기(온도)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Noise / temperature",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "가끔 일부러 아무 숫자로 바꿔 작은 웅덩이를 빠져나오는 것.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_game_lab/sudoku/index.html#g6"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/exploration"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/energy-descent"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/stopping-threshold",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "멈춤선",
-     "@language": "ko"
-    },
-    {
-     "@value": "Stopping threshold",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "이 아래로 내려오면 다 풀었다고 스스로 멈추는 에너지 높이.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_game_lab/sudoku/index.html#g6"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/early-stopping"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/energy-descent"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/clamped-clues",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "힌트 고정",
-     "@language": "ko"
-    },
-    {
-     "@value": "Clamped clues",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "문제로 주어진 숫자는 추론 내내 바꾸지 않는다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ai_game_lab/sudoku/index.html#g6"
-   },
-   "lab:partOf": [
-    {
-     "@id": "lab:method/energy-descent"
-    }
-   ]
-  },
-  {
    "@id": "lab:concept/discounted-return",
    "@type": [
     "skos:Concept",
@@ -10982,43 +11934,6 @@
    "lab:partOf": [
     {
      "@id": "lab:concept/average-reward-model-selection"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/exploration-exploitation",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "탐험과 활용",
-     "@language": "ko"
-    },
-    {
-     "@value": "Exploration and exploitation",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "영상과 대시보드",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Reinforcement-Learning-lab_project_01/ch9_general.html#s4"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:area/rl"
-    },
-    {
-     "@id": "lab:topic/exploration"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/learning-curve"
     }
    ]
   },

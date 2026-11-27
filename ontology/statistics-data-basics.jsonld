@@ -26498,6 +26498,35 @@
    ]
   },
   {
+   "@id": "lab:concept/house-edge",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "딜러의 우위",
+     "@language": "ko"
+    },
+    {
+     "@value": "House edge",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "플레이어가 먼저 두어 먼저 터지므로, 가장 좋은 표도 한 판 평균 약 2.4%를 잃는다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/statistics_note/ch02/2-1_probability_basics.html#lv4"
+   },
+   "lab:dependsOn": [
+    {
+     "@id": "lab:concept/law-large-numbers"
+    }
+   ]
+  },
+  {
    "@id": "lab:concept/standardization",
    "@type": [
     "skos:Concept",
@@ -27283,35 +27312,6 @@
    "rdfs:isDefinedBy": {
     "@id": "https://adminmrobo.github.io/statistics_note/ch02/2-1_probability_basics.html#lv3"
    }
-  },
-  {
-   "@id": "lab:concept/house-edge",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "하우스 엣지",
-     "@language": "ko"
-    },
-    {
-     "@value": "house edge",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "2.70%",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/statistics_note/ch02/2-1_probability_basics.html#lv4"
-   },
-   "lab:dependsOn": [
-    {
-     "@id": "lab:concept/law-large-numbers"
-    }
-   ]
   },
   {
    "@id": "lab:concept/law-large-numbers",

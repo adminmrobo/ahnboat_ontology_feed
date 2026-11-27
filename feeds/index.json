@@ -3,7 +3,7 @@
  "base": "https://adminmrobo.github.io/ahnboat_ontology_feed/",
  "all": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/all.xml",
  "site": {
-  "total": 190,
+  "total": 191,
   "other_racks": [
    {
     "name": "연구실 운영",
@@ -18,14 +18,14 @@
  "summary": {
   "fields": 8,
   "contents": 138,
-  "pages": 931,
+  "pages": 934,
   "listed_indexed": 168,
-  "listed": 179,
-  "concepts": 6018,
-  "relations": 7242,
-  "shared": 583,
+  "listed": 180,
+  "concepts": 6044,
+  "relations": 7276,
+  "shared": 585,
   "domains": 18,
-  "topic_linked": 1784
+  "topic_linked": 1798
  },
  "fields": [
   {
@@ -38,7 +38,7 @@
    "contents": 17,
    "listed": 17,
    "concepts": 702,
-   "relations": 951,
+   "relations": 952,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/machine-learning.xml",
    "parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/machine-learning-p1.xml",
@@ -172,7 +172,7 @@
    "color": "#1f8a8a",
    "desc": "확률분포, 추정, 시계열, 베이지안 통계와 파이썬·판다스·데이터베이스·데이터 시각화로 데이터 분석의 기초 체력을 기릅니다.",
    "contents": 16,
-   "listed": 16,
+   "listed": 17,
    "concepts": 1113,
    "relations": 1196,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/statistics-data-basics.xml",
@@ -196,8 +196,8 @@
    "desc": "제조 공정, 경영·회계, 생성형 AI 업무 활용, 이상탐지처럼 AI를 실제 현장 문제에 적용한 강의와 연구입니다.",
    "contents": 36,
    "listed": 37,
-   "concepts": 1055,
-   "relations": 1213,
+   "concepts": 1083,
+   "relations": 1247,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/applied-ai.xml",
    "parts": [
     "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/applied-ai-p1.xml",

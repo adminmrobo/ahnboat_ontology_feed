@@ -4060,6 +4060,40 @@
    ]
   },
   {
+   "@id": "lab:method/epsilon-greedy",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "ε-탐욕",
+     "@language": "ko"
+    },
+    {
+     "@value": "Epsilon-greedy",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "대개는 평균이 가장 높은 것, ε 비율로는 아무거나.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-4_reinforcement_learning.html#s4"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/exploration"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/q-learning"
+    }
+   ]
+  },
+  {
    "@id": "lab:method/perceptron",
    "@type": [
     "skos:Concept",
@@ -6040,40 +6074,6 @@
     }
    ],
    "lab:prerequisiteOf": [
-    {
-     "@id": "lab:method/q-learning"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/epsilon-greedy",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "ε-탐욕 정책",
-     "@language": "ko"
-    },
-    {
-     "@value": "Epsilon-greedy",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "확률 ε만큼은 일부러 아무 방향이나 골라 탐험하는 전략.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/rulebase_to_agent/1-4_reinforcement_learning.html#s4"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/exploration"
-    }
-   ],
-   "lab:partOf": [
     {
      "@id": "lab:method/q-learning"
     }
@@ -19756,6 +19756,43 @@
    ]
   },
   {
+   "@id": "lab:concept/exploration-exploitation",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "탐험과 활용",
+     "@language": "ko"
+    },
+    {
+     "@value": "Exploration vs exploitation",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "아는 것을 쓸지, 덜 알려진 것을 해 볼지의 줄다리기.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/ML_00_Algorithm-family-build_01/4-4_reinforcement.html#m3"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:area/rl"
+    },
+    {
+     "@id": "lab:topic/exploration"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:method/epsilon-greedy"
+    }
+   ]
+  },
+  {
    "@id": "lab:term/label",
    "@type": [
     "skos:Concept",
@@ -19899,38 +19936,6 @@
    "lab:contrastsWith": [
     {
      "@id": "lab:concept/test-set"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/exploration-exploitation",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "탐험과 활용",
-     "@language": "ko"
-    },
-    {
-     "@value": "Exploration and exploitation",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "영상과 대시보드",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/ML_00_Algorithm-family-build_01/4-4_reinforcement.html#m3"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:area/rl"
-    },
-    {
-     "@id": "lab:topic/exploration"
     }
    ]
   },
