@@ -267,12 +267,13 @@
 
     <div class="tstep" data-t="3" data-label="③ 문서 정보">
       <div class="say c-moa"><img class="px" src="../assets/char/moa_report.webp" alt="모아"><div class="bub"><b>모아</b>문서 자체는 AI 대화창에 직접 첨부할 거예요. 여기에는 제목과 제출처만 적어도 충분해요. 제출처를 적으면 AI가 "누구 눈으로 볼지"를 정확히 알아요.</div></div>
+      <div class="say c-moa"><img class="px" src="../assets/char/moa_tea.webp" alt="모아"><div class="bub"><b>모아</b>무엇을 첨부할지도 정해요. 논문은 초록, 제안서는 요약·개요, 사내 개선안은 1쪽 요약, 강의안은 강의 개요예요. 분량이 A4 2장(약 4,000자) 이내면 본문 전체를 첨부하세요. 파일 이름을 적어 두면 AI가 어떤 파일을 봐야 하는지 헷갈리지 않아요.</div></div>
       <div class="say c-moa"><img class="px" src="../assets/char/moa_guide.webp" alt="모아"><div class="bub"><b>모아</b>요약이나 목차를 붙여 주면 더 좋아요. 그걸로 연구실 개념 지도에서 관련 개념을 찾아 지시문에 넣어 두면, AI가 문서 속 개념 설명이 맞는지도 확인해요. 붙인 글은 이 브라우저 밖으로 나가지 않아요.</div></div>
       <div class="tnav"><button data-go="step3">③ 문서 정보로 가서 해 보기</button><button data-example>예시 불러오기</button></div>
     </div>
 
     <div class="tstep" data-t="4" data-label="④ 지시문 복사">
-      <div class="say c-asst"><img class="px" src="../assets/char/asst_report.webp" alt="하루"><div class="bub"><b>하루</b>'지시문 복사'를 누르고, AI 대화창에 평가할 문서를 <b style="display:inline;color:inherit">먼저 첨부</b>한 다음 지시문을 붙여 넣으세요. 첨부를 잊으면 AI가 문서 없이 지어낸 점수를 줄 수 있어요.</div></div>
+      <div class="say c-asst"><img class="px" src="../assets/char/asst_report.webp" alt="하루"><div class="bub"><b>하루</b>'지시문 복사'를 누르고, 생성 AI(ChatGPT·Claude·Gemini·Grok·Qwen·DeepSeek·뤼튼 등) 대화창에 평가할 문서를 <b style="display:inline;color:inherit">먼저 첨부</b>한 다음 같은 메시지에 지시문을 붙여 넣으세요. 첨부를 잊으면 AI가 문서 없이 지어낸 점수를 줄 수 있어요. 지시문에 "첨부를 못 열었으면 먼저 말하라"는 규칙이 들어 있어서, AI가 '첨부 확인 불가'라고 하면 '본문 붙여넣기'로 바꿔 다시 보내면 돼요.</div></div>
       <div class="say c-asst"><img class="px" src="../assets/char/asst_smile.webp" alt="하루"><div class="bub"><b>하루</b>아직 공개하지 않은 논문이나 회사 문서라면, 그 AI 서비스에 올려도 되는지 먼저 확인해 주세요. 그게 어려우면 민감한 부분을 지운 판으로 평가받아도 돼요.</div></div>
       <div class="tnav"><button data-go="step4">④ 지시문으로 가기</button></div>
     </div>
@@ -309,6 +310,7 @@
     </div>
     <textarea id="dSum" style="margin-top:10px" placeholder="요약·목차·핵심 주장 (선택). 붙인 글은 이 브라우저 안에서만 쓰입니다."></textarea>
     <div class="row2"><button data-example>예시 불러오기</button></div>
+    <div id="att"></div>
     <div class="found" id="found">
       <h3>관련 개념 미리 찾기</h3>
       <div class="note">요약에서 연구실 개념 지도의 관련 개념을 찾아 지시문에 넣습니다. AI가 문서 속 개념 설명이 맞는지 확인할 때 근거로 씁니다. 빼고 싶은 개념은 체크를 끄세요.</div>
@@ -330,7 +332,7 @@
     <div class="hint"><img class="px" src="../assets/char/asst_smile.webp" alt="">하루: 문서를 먼저 첨부하고, 그다음 지시문을 붙여 넣으세요.</div>
     <pre id="prompt"></pre>
     <div class="row2"><button class="primary" id="copy">지시문 복사</button><span class="note" id="copied"></span></div>
-    <p class="note">미공개 원고·회사 내부 문서는 그 AI 서비스에 올려도 되는지 먼저 확인하세요. 어렵다면 민감한 부분을 지운 판으로 평가받을 수 있습니다.</p>
+    <div id="how"></div>
   </div>
 
   <h2 id="step5">⑤ 점수 확인 도우미</h2>
@@ -403,6 +405,8 @@
 <script>
 (function () {
   var $ = function (id) { return document.getElementById(id); }, esc = LabKit.esc;
+  var att = LabKit.attachUI($("att"), { label: "평가할 문서", role: "평가 대상", kinds: ["paper", "proposal", "improvement", "lecture", "idea", "design"], kind: "paper", mode: "file", onChange: function () { render(); } });
+  var how = LabKit.howto($("how"), { after: "받은 답을 아래 ⑤ 점수 확인 도우미에 붙여 넣어 확인합니다." });
   LabKit.nav($("labnav"), "review", "../");
   LabKit.versionBox(document.querySelector("footer"), "review");
   LabKit.sprites("../");
@@ -439,7 +443,7 @@
   var TYPES = [], RUB = null, W = {}, JUDGE = {}, feedIndex = null, SX = null, found = [], foundOff = {}, timer = null;
   function loadRubric(id) {
     return fetch("../rubrics/" + id + ".json").then(function (r) { return r.json(); }).then(function (d) {
-      RUB = d; W = {}; JUDGE = {};
+      RUB = d; W = {}; JUDGE = {}; att.setKind(d.id);
       d.criteria.forEach(function (c) { W[c.id] = c.weight; });
       d.judges.forEach(function (j) { JUDGE[j.id] = true; });
       drawTypes(); drawRubric(); render();
@@ -526,9 +530,10 @@
         (fe.length ? "\n근거 피드(일반 텍스트): " + fe.map(function (f) { return (f.txt_parts || [f.txt]).join(" , "); }).join(" , ") : "") + "\n\n";
     }
     var title = $("dTitle").value.trim(), where = $("dWhere").value.trim(), sum = $("dSum").value.trim();
-    var ex = RUB.criteria[0].name;
-    $("prompt").textContent =
-      "너는 " + RUB.name + " 심사위원단이야. 내가 첨부한 문서를 아래 기준표로 평가해 줘. 첨부가 없으면 평가하지 말고 첨부해 달라고 말해 줘.\n\n" +
+    var ex = RUB.criteria[0].name, st = att.state();
+    st.need = true; how.update(st.mode === "file");
+    $("prompt").textContent = LabKit.promptHead("review", [st], "아래 기준표" + (on.length ? "와 [연구실 근거]" : "")) +
+      "너는 " + RUB.name + " 심사위원단이야. 첨부한 문서를 아래 기준표로 평가해 줘.\n\n" +
       "[평가 대상]\n- 종류: " + RUB.name + " — " + RUB.what + "\n" +
       (title ? "- 제목: " + title + "\n" : "") + (where ? "- 제출처·목적: " + where + " (이 독자·심사 관점에서 봐 줘)\n" : "") +
       (sum ? "- 요약·목차(작성자가 붙임):\n" + sum + "\n" : "") + "\n" +
@@ -538,7 +543,7 @@
       "- 점수마다 문서의 근거 위치(쪽·장·절·문단·슬라이드 번호)를 적고 근거를 짧게 요약해. 근거 위치를 댈 수 없는 항목은 점수 대신 '판단 불가'라고 써.\n" +
       "- 기준표의 점수 뜻에 맞춰 매겨. 5점은 그 항목의 5점 뜻을 모두 갖췄을 때만 줘.\n" +
       "- 장점과 같은 수 이상으로 약점을 찾아.\n" +
-      "- 문서를 읽지 못했거나 일부만 읽었다면 먼저 그 사실부터 알려 줘.\n\n" +
+      (st.mode !== "none" && st.scope !== "full" ? "- 첨부는 " + st.scopeName + "뿐이야. 그것만으로 판단할 수 없는 항목은 지어내지 말고 '판단 불가'로 둬.\n" : "") + "\n" +
       "[답 형식] " + LEN[lenVal()] + "\n" +
       "1. 한 줄 총평\n" +
       "2. 점수표 — 아래 표 모양 그대로, 항목 이름은 기준표 이름 그대로 써 줘:\n" +
@@ -547,7 +552,7 @@
       "4. 고칠 것 우선순위 표: | 순위 | 무엇을 | 어떻게 | 기대 효과 |\n" +
       "5. 가중 총점(100점 만점) = Σ(점수 ÷ 5 × 가중치)" + (s === 100 ? "" : " ÷ " + s + " × 100") + ". 계산식도 보여 줘. '판단 불가' 항목이 있으면 그 항목은 빼고, 남은 가중치 합으로 나눈 뒤 100을 곱해 비율을 맞춰.\n" +
       ($("optFix").checked ? "6. 점수가 가장 낮은 항목 하나에 대해, 문서의 실제 문장을 고친 예시(고치기 전 → 고친 뒤)\n" : "") +
-      ($("optPlain").checked ? "- 수식은 LaTeX 대신 일반 글자로 써 줘.\n" : "") + "\n" + LabKit.stamp("review");
+      ($("optPlain").checked ? "- 수식은 LaTeX 대신 일반 글자로 써 줘.\n" : "") + LabKit.attachBody(st) + "\n" + LabKit.stamp("review");
   }
 
   /* ---------- 점수 확인 도우미 ---------- */

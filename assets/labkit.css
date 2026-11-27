@@ -12,3 +12,17 @@
 .labver li{margin:2px 0}
 .labver li span{font-family:ui-monospace,Menlo,monospace;font-size:12px}
 .toolcard .vtag{font-family:ui-monospace,Menlo,monospace;font-size:12px;font-weight:700;border:1.5px solid #1f2224;border-radius:99px;padding:0 8px;margin-left:auto}
+/* 첨부 고르기·사람용 사용법 (v1.4) */
+.labatt{margin:12px 0 0;padding:10px 12px;border:1.5px dashed #1f2224;border-radius:12px;background:#fff;font-size:14px}
+.labatt .lab-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:4px 0}
+.labatt select,.labatt input[type=text]{font:inherit;padding:4px 8px;border:1.5px solid #1f2224;border-radius:8px;background:#fff}
+.labatt input[type=text]{width:100%;box-sizing:border-box;margin-top:2px}
+.labatt textarea{min-height:110px}
+.labatt .lab-rule,.labatt .lab-sec{margin:6px 0 0;font-size:13px}
+.labatt .lab-sec{color:#8a5a00}
+.labatt .lab-warn{color:#b26a00;font-weight:700}
+.labhow{margin:12px 0 0;padding:10px 14px;border:2px solid #1f2224;border-radius:12px;background:#fbfaf7;box-shadow:3px 3px 0 #1f2224;font-size:14px}
+.labhow .lab-hd{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.labhow ol{margin:6px 0;padding-left:22px}
+.labhow li{margin:3px 0}
+.labhow p{margin:4px 0 0;font-size:13px}

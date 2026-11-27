@@ -240,11 +240,12 @@
     <div class="tstep" data-t="2" data-label="② 아이디어 쓰기">
       <div class="say c-moa"><img class="px" src="../assets/char/moa_report.webp" alt="모아"><div class="bub"><b>모아</b>다음은 아이디어 적기예요. 길 필요 없어요. 한두 문단이면 충분해요. 저는 이렇게 모아 적는 걸 추천해요.</div></div>
       <div class="say c-moa"><img class="px" src="../assets/char/moa_guide.webp" alt="모아"><div class="bub"><b>모아</b>① 내가 본 것(“A와 B가 닮았다”) ② 그래서 드는 생각(“그렇다면 C도 되지 않을까?”) ③ 확인하고 싶은 질문 하나. 이 순서로 쓰면 AI가 무엇을 확인할지 헷갈리지 않아요. 처음이면 '예시 불러오기'로 모양부터 보세요.</div></div>
+      <div class="say c-moa"><img class="px" src="../assets/char/moa_tea.webp" alt="모아"><div class="bub"><b>모아</b>아이디어의 바탕이 된 논문이나 기사가 있으면 '참고 자료'로 첨부할 수 있어요(선택). 논문은 초록, 보고서는 개요만 첨부하고, 분량이 A4 2장(약 4,000자) 이내면 본문 전체도 괜찮아요. 첨부가 안 되는 AI라면 '본문 붙여넣기'를 고르세요.</div></div>
       <div class="tnav"><button data-go="step2">② 아이디어 쓰기로 가서 해 보기</button><button data-example>예시 불러오기</button></div>
     </div>
 
     <div class="tstep" data-t="3" data-label="③ 복사해서 붙이기">
-      <div class="say c-asst"><img class="px" src="../assets/char/asst_report.webp" alt="하루"><div class="bub"><b>하루</b>아래에 지시문이 저절로 만들어져요. '지시문 복사'를 누르고, 평소 쓰는 AI 대화창에 그대로 붙이면 돼요. 피드 주소와 지켜야 할 규칙이 이미 다 들어 있어요.</div></div>
+      <div class="say c-asst"><img class="px" src="../assets/char/asst_report.webp" alt="하루"><div class="bub"><b>하루</b>아래에 지시문이 저절로 만들어져요. '지시문 복사'를 누르고, 평소 쓰는 생성 AI(ChatGPT·Claude·Gemini·Grok·Qwen·DeepSeek·뤼튼 등) 대화창에 그대로 붙이면 돼요. 피드 주소와 지켜야 할 규칙이 이미 다 들어 있어요. 참고 자료를 첨부했다면 파일을 먼저 올리고, 같은 메시지에 지시문을 붙여 보내세요.</div></div>
       <div class="say c-asst"><img class="px" src="../assets/char/asst_smile.webp" alt="하루"><div class="bub"><b>하루</b>AI가 "링크를 열 수 없다"고 하면 당황하지 마세요. 아래 '피드 주소' 표에서 주소를 브라우저로 열고, 내용을 전부 복사해 지시문 밑에 붙이면 같은 효과가 나요.</div></div>
       <div class="tnav"><button data-go="step3">③ 지시문 복사로 가기</button></div>
     </div>
@@ -274,6 +275,7 @@
     <div class="hint"><img class="px" src="../assets/char/moa_guide.webp" alt="">모아: 본 것 → 드는 생각 → 확인하고 싶은 질문 하나.</div>
     <textarea id="idea" placeholder="예: 네트워크경제학의 네트워크와 신경망의 뉴런 연결이 많이 닮은 것 같다. 그렇다면 …"></textarea>
     <div class="row2"><button data-example>예시 불러오기</button></div>
+    <div id="att"></div>
     <div class="found" id="found">
       <h3>관련 개념 미리 찾기</h3>
       <div class="note">아이디어 글을 쓰면 연구실 개념 지도에서 관련 개념을 찾아 지시문에 함께 넣습니다. AI가 피드 링크를 읽지 못해도 근거가 전달됩니다. 빼고 싶은 개념은 체크를 끄세요.</div>
@@ -292,9 +294,10 @@
 
   <h2 id="step3">③ 지시문 복사하기</h2>
   <div class="tool" id="tool3">
-    <div class="hint"><img class="px" src="../assets/char/asst_smile.webp" alt="">하루: 복사해서 평소 쓰는 AI 대화창에 그대로 붙이세요.</div>
+    <div class="hint"><img class="px" src="../assets/char/asst_smile.webp" alt="">하루: 복사해서 평소 쓰는 생성 AI(ChatGPT·Claude·Gemini 등) 대화창에 그대로 붙이세요.</div>
     <pre id="prompt"></pre>
     <div class="row2"><button class="primary" id="copy">지시문 복사</button><span class="note" id="copied"></span></div>
+    <div id="how"></div>
     <p class="note">지시문에는 AI가 읽기 쉬운 텍스트판 피드(.txt)가 들어갑니다. 그래도 AI가 링크를 읽지 못한다고 하면, 피드 주소를 브라우저로 열어 내용을 복사해 지시문 아래에 붙여 주세요.</p>
   </div>
 
@@ -471,6 +474,8 @@
     "신경망처럼 연결의 세기를 학습하는 방식으로 추정할 수 있을까?";
   var EX_FIELDS = ["경제·수학·최적화", "딥러닝·뇌과학"];
   var $ = function (id) { return document.getElementById(id); };
+  var att = LabKit.attachUI($("att"), { label: "참고 자료 (선택)", role: "검토할 참고 자료", kinds: ["ref", "paper", "proposal", "idea"], kind: "ref", mode: "none", onChange: function () { render(); } });
+  var how = LabKit.howto($("how"), { after: "받은 답을 아래 ④ 답 확인 도우미에 붙여 넣어 확인합니다." });
 
   function selected() {
     if ($("all").checked) return [{ name: "전체 분야(요약)", parts: data.all_parts || [data.all], txt_parts: data.all_txt_parts }];
@@ -487,7 +492,8 @@
           return ps.map(function (u, i) { return "- " + u + "  (" + f.name + (ps.length > 1 ? " " + (i + 1) + "/" + ps.length : "") + ")"; }).join("\n");
         }).join("\n")
       : "- (분야를 하나 이상 골라 주세요)";
-    $("prompt").textContent =
+    var st = att.state(); how.update(st.mode === "file");
+    $("prompt").textContent = LabKit.promptHead("check", [st], "연구실 피드와 [미리 찾은 관련 개념]") +
       "너는 아이디어 검증 도우미야. 아래 ahnboat lab 온톨로지 피드(RSS)를 먼저 읽고, 그 안의 개념·정의·관계를 근거로 내 아이디어를 검증해 줘.\n\n" +
       "[근거 피드] — 일반 텍스트 파일이야. 주소가 여러 개면 모두 읽어 줘.\n" + feeds + "\n\n" +
       foundBlock() +
@@ -498,13 +504,14 @@
       "3. 아이디어가 성립하지 않을 수 있는 반례나 한계를 들어 줘.\n" +
       "4. 아이디어를 확인할 방법(데이터·실험·수식)을 제안해 줘.\n" +
       "5. 더 읽어 볼 ahnboat lab 페이지를 골라 줘.\n" +
-      ($("optNew").checked ? "6. 피드에는 없지만 이 아이디어에 필요한 개념을 '온톨로지에 추가할 개념 제안'으로 따로 적어 줘.\n" : "") + "\n" +
+      ($("optNew").checked ? "6. 피드에는 없지만 이 아이디어에 필요한 개념을 '온톨로지에 추가할 개념 제안'으로 따로 적어 줘.\n" : "") +
+      (st.mode !== "none" ? "- 덧붙여: 첨부한 참고 자료가 내 아이디어를 실제로 뒷받침하는지도 피드에 비춰 확인해 줘. 참고 자료의 주장과 피드 개념이 어긋나면 그 점을 따로 적어 줘.\n" : "") + "\n" +
       "[답 형식]\n" + LEN[lenVal()] + "\n" +
       ($("optPlain").checked ? "- 수식은 LaTeX 대신 일반 글자로 써 줘. 예: dQ/dP = ∂H/∂P − Q·∂Q/∂I\n" : "") + "\n" +
       "[규칙]\n" +
       "- 피드에서 가져온 내용에는 [피드], 너의 일반 지식에는 [일반 지식]이라고 표시해 줘.\n" +
       "- 피드에서 찾지 못한 것은 찾지 못했다고 말해 줘. 출처 링크를 지어내지 마.\n" +
-      "- 피드를 읽지 못했다면 답하기 전에 그 사실부터 알려 줘. 그때는 [미리 찾은 관련 개념] 목록만 [피드] 근거로 써.\n\n" + LabKit.stamp("check");
+      "- 피드를 읽지 못했다면 답하기 전에 그 사실부터 알려 줘. 그때는 [미리 찾은 관련 개념] 목록만 [피드] 근거로 써.\n" + LabKit.attachBody(st) + "\n" + LabKit.stamp("check");
   }
   var LEN = { short: "- 핵심만 짧게: 요청마다 2~3문장, 전체 한 화면 안팎.", mid: "- 보통 길이: 요청마다 한 단락 안팎, 표는 꼭 필요할 때만.",
               long: "- 보고서 형식: 소제목과 표를 써서 자세히." };

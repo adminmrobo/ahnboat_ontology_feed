@@ -8,29 +8,38 @@
    LabKit.findConcepts(SX, text, sel)  글에서 관련 개념 찾기 (+ 관계로 이어진 개념)
    LabKit.checkLinks(SX, text)     AI 답의 연구실 링크를 개념 지도와 대조
    LabKit.esc(t)                   HTML 이스케이프
+   LabKit.AIS                      지시문을 붙일 수 있는 생성 AI 이름 목록 (안내 문구에 함께 씀)
+   LabKit.attachUI(el, opt)        첨부 고르기 상자 (첨부 없음 / 파일 첨부 / 본문 붙여넣기 + 범위 규칙 + 보안 안내)
+   LabKit.promptHead(id, items)    지시문 맨 앞 'AI에게' 머리말 + [첨부 확인] 규칙
+   LabKit.attachBody(st)           '본문 붙여넣기'일 때 지시문 끝에 붙는 [첨부 본문]
+   LabKit.howto(el, opt)           사람용 사용법 카드 (지시문 바깥, 지시문에는 들어가지 않음)
 */
 (function () {
   "use strict";
   /* 버전 표시: 도구를 고칠 때마다 log 맨 앞에 [버전, 날짜, 바뀐 점] 한 줄을 더한다. 맨 앞 줄이 지금 버전이다. */
   var TOOLS = [
     { id: "home",   href: "",        name: "연구실 도구함",   short: "도구함",
-      log: [["v1.3", "2026-11-26", "세 번째 도구 '강의 PPT 지시서 만들기'(deck/) 추가"],
+      log: [["v1.4", "2026-11-27", "모든 도구 공통: 첨부 고르기(초록·개요, A4 2장 이내면 본문 전체), 지시문 머리말·첨부 확인 규칙, 사람용 사용법 카드, 생성 AI 이름 목록(ChatGPT·Claude·Gemini 등)"],
+            ["v1.3", "2026-11-26", "세 번째 도구 '강의 PPT 지시서 만들기'(deck/) 추가"],
             ["v1.2", "2026-11-26", "비포·애프터 그림 반영: 오리지널 'AI 손님 일곱'이 가이드 매뉴얼(도구함)을 받고 달라지는 두 컷"],
             ["v1.1", "2026-11-26", "'도구함이 하는 일' 비포·애프터 그림 자리 (그림을 올리면 자동으로 나타남)"],
             ["v1.0", "2026-11-26", "첫 판: 도구 목록, 공통 메뉴, 모든 도구가 함께 쓰는 코드(labkit)"]] },
     { id: "check",  href: "check/",  name: "아이디어 검증하기", short: "아이디어 검증", icon: "asst_spark",
       desc: "머릿속 아이디어를 연구실 개념 지도에 비춰, AI가 근거 있는 것과 없는 것을 나눠 답하게 합니다.",
-      log: [["v1.4", "2026-11-26", "연구실 도구함으로 옮김(check/), 공통 메뉴·버전 표시, 개념 찾기에서 숫자 낱말·예시 값 걸러 내기"],
+      log: [["v1.5", "2026-11-27", "참고 자료 첨부(선택)·본문 붙여넣기, 지시문 머리말과 [첨부 확인] 규칙, 사람용 사용법 카드(ChatGPT·Claude·Gemini 등)"],
+            ["v1.4", "2026-11-26", "연구실 도구함으로 옮김(check/), 공통 메뉴·버전 표시, 개념 찾기에서 숫자 낱말·예시 값 걸러 내기"],
             ["v1.3", "2026-11-24", "관계로 이어진 개념까지 찾기, 분야 카드에 색인 콘텐츠 수와 홈페이지 수를 함께 표시"],
             ["v1.2", "2026-11-24", "ChatGPT 시험 반영: 텍스트판 피드, 관련 개념 미리 찾기, 답 형식 선택, 답 확인 도우미"],
             ["v1.1", "2026-11-24", "Genspark 표지·무대 배경 그림, 공유 미리보기"],
             ["v1.0", "2026-11-24", "첫 판: 분야별 온톨로지 피드, 지시문 만들기, 하루·시아·모아 튜토리얼, AI 판단 코너"]] },
     { id: "review", href: "review/", name: "결과물 평가하기", short: "결과물 평가", icon: "sia_explain",
       desc: "아이디어·논문·제안서·사내 개선안·강의안·도안을 기준표로 채점하고, AI 점수가 부풀려졌는지 확인합니다.",
-      log: [["v1.0", "2026-11-26", "첫 판: 기준표 6종(항목 40개), 심사위원·반대 심사위원, 튜토리얼, 점수 확인 도우미"]] },
+      log: [["v1.1", "2026-11-27", "첨부 고르기: 종류별 범위(논문 초록·제안서 요약 등, A4 2장 이내면 본문 전체)·파일 이름·본문 붙여넣기, 지시문 머리말과 [첨부 확인] 규칙, 사람용 사용법 카드"],
+            ["v1.0", "2026-11-26", "첫 판: 기준표 6종(항목 40개), 심사위원·반대 심사위원, 튜토리얼, 점수 확인 도우미"]] },
     { id: "deck",   href: "deck/",   name: "강의 PPT 지시서 만들기", short: "강의 지시서", icon: "moa_report",
       desc: "강의 아이디어를 쓰면(급하면 3~4줄만) Genspark 같은 AI 슬라이드 도구에 맡길 강의 제작 지시서(md 파일)를 만들어 줍니다. 예시 지시서 2개 포함.",
-      log: [["v1.2", "2026-11-26", "3~4줄 자동 생성: 맨 위 상자에 형식 없이 3~4줄만 쓰면 쓰는 동안 완성된 md 지시서가 바로 만들어지고 내려받기 — 빈자리([AI가 채움])는 연구실 기본값으로 채움"],
+      log: [["v1.3", "2026-11-27", "빈자리 채우기 지시문에 머리말·[첨부 확인] 규칙, 참고 자료 첨부(강의계획서 개요 등), 사람용 사용법 카드"],
+            ["v1.2", "2026-11-26", "3~4줄 자동 생성: 맨 위 상자에 형식 없이 3~4줄만 쓰면 쓰는 동안 완성된 md 지시서가 바로 만들어지고 내려받기 — 빈자리([AI가 채움])는 연구실 기본값으로 채움"],
             ["v1.1", "2026-11-26", "빠른 만들기: 3~4줄(주제·대상과 장 수·실습과 질문·도구와 언어)만 쓰면 질문에 맞는 차트 추천, 주/보조 도구 역할 판별, 목표 장 수 맞추기까지 자동으로 지시서 생성"],
             ["v1.0", "2026-11-26", "첫 판: 아이디어 → 강의 틀(차트 이어 묻기형·대시보드형) → 언어판 → 지시서 md 내려받기, AI 빈자리 채우기 지시문, 지시서 점검 도우미, 예시 2개"]] }
   ];
@@ -203,5 +212,113 @@
     return { html: h, ok: ok, mid: mid, bad: bad, urls: urls, nFeed: nFeed, nGen: nGen, noLink: noLink };
   }
 
-  window.LabKit = { TOOLS: TOOLS, tool: tool, ver: ver, stamp: stamp, versionBox: versionBox, nav: nav, sprites: sprites, loadSX: loadSX, findConcepts: findConcepts, checkLinks: checkLinks, toks: toks, esc: esc };
+  /* ---------- 첨부·사용법 (v1.4 공통) ----------
+     원칙: 지시문 안에는 AI에게 하는 말만, 사람에게 하는 안내는 지시문 바깥(사용법 카드)에.
+     첨부 범위: 논문은 초록, 제안서는 요약·개요 … 분량이 A4 2장(약 4,000자) 이내면 본문 전체. */
+  var AIS = ["ChatGPT", "Claude", "Gemini", "Grok", "Copilot", "Qwen", "DeepSeek", "뤼튼"];
+  var FULL_MAX = 4000;
+  var KINDS = {
+    paper:       { name: "논문",            part: "초록(Abstract)" },
+    proposal:    { name: "제안서",          part: "요약·개요" },
+    improvement: { name: "사내 개선안",     part: "1쪽 요약" },
+    lecture:     { name: "강의안",          part: "강의 개요·강의계획서" },
+    idea:        { name: "아이디어 메모",   part: "메모 전체" },
+    design:      { name: "도안",            part: "도안 그림과 설명 1쪽" },
+    ref:         { name: "참고 자료(논문·기사·보고서)", part: "초록·개요" }
+  };
+  var attN = 0;
+  function attachUI(el, opt) {
+    if (!el) return null;
+    opt = opt || {};
+    var n = ++attN, kinds = opt.kinds || Object.keys(KINDS), kind = opt.kind || kinds[0];
+    var nm = "att" + n;
+    el.className = (el.className ? el.className + " " : "") + "labatt";
+    el.innerHTML =
+      '<div class="lab-row"><b>' + esc(opt.label || "첨부") + '</b>' +
+        '<label><input type="radio" name="' + nm + 'm" value="none"' + (opt.mode === "none" ? " checked" : "") + '> 첨부 없음</label>' +
+        '<label><input type="radio" name="' + nm + 'm" value="file"' + (opt.mode === "file" ? " checked" : "") + '> 파일로 첨부</label>' +
+        '<label><input type="radio" name="' + nm + 'm" value="paste"' + (opt.mode === "paste" ? " checked" : "") + '> 본문 붙여넣기 <small>(첨부가 안 되는 AI용)</small></label></div>' +
+      '<div class="lab-more">' +
+        '<div class="lab-row"><label>종류 <select data-k="kind">' + kinds.map(function (k) { return '<option value="' + k + '"' + (k === kind ? " selected" : "") + ">" + esc(KINDS[k].name) + "</option>"; }).join("") + '</select></label>' +
+        '<label>범위 <select data-k="scope"><option value="part"></option><option value="full">본문 전체 (A4 2장·약 4,000자 이내일 때)</option></select></label></div>' +
+        '<div class="lab-row lab-file"><label style="flex:1">파일 이름 <input type="text" data-k="file" placeholder="예: 초록_변동성분해.pdf (AI가 어떤 파일을 봐야 하는지 알려 줍니다)"></label></div>' +
+        '<div class="lab-paste"><textarea data-k="text" placeholder="초록·개요를 붙여 넣으세요. 분량이 A4 2장(약 4,000자) 이내면 본문 전체도 됩니다."></textarea><div class="note" data-k="cnt"></div></div>' +
+        '<p class="note lab-rule"></p>' +
+        '<p class="note lab-sec">⚠ AI 대화창에 첨부하거나 붙여 넣은 글은 그 AI 서비스로 보내집니다(이 페이지의 확인 도우미와 다릅니다). 미공개 원고·회사 문서는 올려도 되는지 먼저 확인하고, 어려우면 민감한 부분을 지운 판을 쓰세요.</p>' +
+      '</div>';
+    var q = function (k) { return el.querySelector('[data-k="' + k + '"]'); };
+    function mode() { var r = el.querySelector('input[name="' + nm + 'm"]:checked'); return r ? r.value : "none"; }
+    function draw() {
+      var m = mode(), k = KINDS[q("kind").value] || KINDS.ref, len = q("text").value.trim().length;
+      q("scope").options[0].textContent = k.part + " (권장)";
+      el.querySelector(".lab-more").style.display = m === "none" ? "none" : "";
+      el.querySelector(".lab-file").style.display = m === "file" ? "" : "none";
+      el.querySelector(".lab-paste").style.display = m === "paste" ? "" : "none";
+      el.querySelector(".lab-rule").textContent = "첨부 규칙: " + k.name + " → " + k.part + "만 첨부하세요. 분량이 A4 2장(약 4,000자) 이내라면 본문 전체를 첨부해도 됩니다. 그보다 길면 AI가 앞부분만 읽고 답할 수 있습니다.";
+      var c = q("cnt");
+      c.textContent = len ? len.toLocaleString() + "자" + (len > FULL_MAX ? " — 4,000자를 넘었어요. 본문 전체 대신 " + k.part + "만 붙이는 편이 안전해요." : "") : "";
+      c.className = "note" + (len > FULL_MAX ? " lab-warn" : "");
+    }
+    function state() {
+      var k = q("kind").value, sc = q("scope").value;
+      return { mode: mode(), kind: k, kindName: (KINDS[k] || KINDS.ref).name, scope: sc,
+               scopeName: sc === "full" ? "본문 전체" : (KINDS[k] || KINDS.ref).part,
+               file: q("file").value.trim(), text: q("text").value.trim(), role: opt.role || "검토 대상", label: opt.label || "첨부" };
+    }
+    el.addEventListener("input", function () { draw(); if (opt.onChange) opt.onChange(); });
+    el.addEventListener("change", function () { draw(); if (opt.onChange) opt.onChange(); });
+    draw();
+    return { el: el, state: state, setKind: function (k) { if (KINDS[k] && kinds.indexOf(k) >= 0) { q("kind").value = k; draw(); } },
+             setText: function (t) { q("text").value = t || ""; draw(); } };
+  }
+  /* 지시문 맨 앞 머리말. items: [{label, role, mode:'file'|'paste'|'inline'|'none', file, kindName, scopeName, need}] */
+  /* 받침 따라 '이야/야' */
+  function iya(w) { var c = String(w).charCodeAt(String(w).length - 1); return w + ((c >= 0xAC00 && c <= 0xD7A3 && (c - 0xAC00) % 28) ? "이야" : "야"); }
+  function promptHead(id, items, basis, opt) {
+    opt = opt || {};
+    var t = tool(id), L = [];
+    L.push("[생성 AI에게] 이 글은 ahnboat 연구실 도구함 「" + (t ? t.name : "도구") + "」가 만든 지시문이야. 사람이 복사해서 그대로 붙여 넣은 것이니, 이 글 전체를 너에게 주는 과제로 읽어 줘.");
+    var real = (items || []).filter(function (a) { return a && a.mode && a.mode !== "none"; });
+    var need = (items || []).filter(function (a) { return a && a.need && (!a.mode || a.mode === "none"); });
+    L.push("", "[첨부 확인]");
+    if (!real.length && !need.length) {
+      L.push("- 첨부파일: 없음. 첨부를 찾지 말고 이 글만으로 답해 줘." + (opt.inlineNote ? " " + opt.inlineNote : ""));
+      return L.join("\n") + "\n\n";
+    }
+    real.forEach(function (a, i) {
+      var what = (a.kindName ? a.kindName + " " : "") + (a.scopeName || "");
+      if (a.mode === "file") L.push("- 첨부 " + (i + 1) + " (" + a.role + "): " + what.trim() + " — 이 메시지에 파일로 첨부했어" + (a.file ? " (파일 이름: " + a.file + ")" : "") + ".");
+      else if (a.mode === "paste") L.push("- 첨부 " + (i + 1) + " (" + a.role + "): " + what.trim() + " — 파일 대신 이 글 맨 아래 [첨부 본문]에 붙여 넣었어.");
+      else if (a.mode === "inline") L.push("- 첨부 " + (i + 1) + " (" + a.role + "): " + what.trim() + " — 이 글 안 [" + (a.block || "첨부 본문") + "]에 함께 넣었어.");
+    });
+    need.forEach(function (a) { L.push("- " + a.label + ": 첨부했다고 표시하지 않았어. 첨부된 문서가 보이지 않으면 답하지 말고 첨부해 달라고 말해 줘."); });
+    L.push("- 답하기 전에 첨부부터 열어 확인해. 열지 못했거나 일부만 읽었다면 추측해서 답하지 말고, 답 첫 줄에 '첨부 확인 불가' 또는 '첨부 일부만 확인'이라고 쓰고 무엇을 읽지 못했는지 알려 줘.");
+    var role = (real[0] || need[0] || {}).role || "검토 대상";
+    if (basis) L.push("- 기준과 대상을 섞지 마. 판단 기준은 " + basis + "이고, 첨부는 " + iya(role) + ".");
+    if (!opt.noTag) L.push("- 첨부에서 가져온 내용에는 [첨부] 표시와 위치(쪽·장·절·문단)를 붙여 줘.");
+    else L.push("- 첨부 내용을 반영하되, 돌려줄 결과물 안에는 [첨부] 같은 표시를 넣지 마.");
+    return L.join("\n") + "\n\n";
+  }
+  function attachBody(st) {
+    if (!st || st.mode !== "paste") return "";
+    return "\n[첨부 본문 — " + st.kindName + " " + st.scopeName + "]\n" + (st.text || "(여기에 붙여 넣을 글이 비어 있어요)") + "\n";
+  }
+  /* 사람용 사용법 카드 — 지시문 바깥에 둔다 */
+  function howto(el, opt) {
+    if (!el) return null;
+    opt = opt || {};
+    el.className = (el.className ? el.className + " " : "") + "labhow";
+    el.innerHTML = '<div class="lab-hd"><b>사람용 사용법</b><span class="note">이 안내는 지시문에 들어가지 않아요</span></div><ol>' +
+      '<li>' + esc(opt.copy || "'지시문 복사'") + '를 누릅니다.</li>' +
+      '<li>평소 쓰는 생성 AI 대화창을 엽니다 — ' + AIS.map(function (a) { return "<b>" + esc(a) + "</b>"; }).join(" · ") + ' 등 어느 것이든 됩니다.</li>' +
+      '<li data-att>첨부할 파일이 있으면 <b>먼저</b> 대화창에 첨부합니다.</li>' +
+      '<li>같은 메시지에 지시문을 붙여 넣고 보냅니다. 첨부와 지시문을 따로 보내면 AI가 첨부를 보기 전에 답할 수 있어요.</li>' +
+      '<li>' + esc(opt.after || "받은 답을 아래 확인 도우미에 붙여 넣어 확인합니다.") + '</li></ol>' +
+      '<p class="note">AI가 "첨부 확인 불가"라고 답하면, 첨부 고르기에서 <b>본문 붙여넣기</b>로 바꾼 뒤 지시문을 다시 복사해 붙이세요.</p>';
+    var li = el.querySelector("[data-att]");
+    return { update: function (has) { li.innerHTML = has ? "첨부할 파일을 <b>먼저</b> 대화창에 첨부합니다. (지시문에 파일 이름이 적혀 있어요)" : "<s>파일 첨부</s> — 이번에는 첨부가 없거나 본문이 지시문 안에 들어 있어서 건너뜁니다."; } };
+  }
+
+  window.LabKit = { TOOLS: TOOLS, tool: tool, ver: ver, stamp: stamp, versionBox: versionBox, nav: nav, sprites: sprites, loadSX: loadSX, findConcepts: findConcepts, checkLinks: checkLinks, toks: toks, esc: esc,
+    AIS: AIS, KINDS: KINDS, attachUI: attachUI, promptHead: promptHead, attachBody: attachBody, howto: howto };
 })();
