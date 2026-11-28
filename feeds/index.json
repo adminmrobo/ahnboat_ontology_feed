@@ -3,7 +3,7 @@
  "base": "https://adminmrobo.github.io/ahnboat_ontology_feed/",
  "all": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/all.xml",
  "site": {
-  "total": 197,
+  "total": 200,
   "other_racks": [
    {
     "name": "연구실 운영",
@@ -20,7 +20,7 @@
   "contents": 147,
   "pages": 958,
   "listed_indexed": 177,
-  "listed": 186,
+  "listed": 189,
   "concepts": 6229,
   "relations": 7532,
   "shared": 596,
@@ -36,7 +36,7 @@
    "color": "#2f7d5b",
    "desc": "데이터에서 규칙을 배우는 머신러닝을 물고기 시장 데이터, 알고리즘 가계도, 모델 채용 위원회로 처음부터 익힙니다.",
    "contents": 17,
-   "listed": 17,
+   "listed": 20,
    "concepts": 718,
    "relations": 982,
    "feed": "https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/machine-learning.xml",
