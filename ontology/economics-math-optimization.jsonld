@@ -12,726 +12,6 @@
  "dct:creator": "안상선 (Ahn Sangsun)",
  "@graph": [
   {
-   "@id": "lab:concept/cosine-similarity",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "코사인 유사도",
-     "@language": "ko"
-    },
-    {
-     "@value": "cosine similarity",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "두 벡터가 이루는 각도의 코사인. −1(반대)~1(같은 방향) 값을 가지며 벡터의 길이는 무시한다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/index.html#stage"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/embedding-space"
-    },
-    {
-     "@id": "lab:topic/inner-product-orthogonality"
-    },
-    {
-     "@id": "lab:topic/vectors-geometry"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/review-clustering"
-    }
-   ]
-  },
-  {
-   "@id": "lab:metric/accuracy",
-   "@type": [
-    "skos:Concept",
-    "lab:Metric"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "정확도",
-     "@language": "ko"
-    },
-    {
-     "@value": "Accuracy",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "맞힌 비율. 불균형 데이터에서 속기 쉽다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/part2/index.html#stage"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/accuracy-metrics"
-    }
-   ]
-  },
-  {
-   "@id": "lab:method/logistic-regression",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "로지스틱 회귀 (다항)",
-     "@language": "ko"
-    },
-    {
-     "@value": "Multinomial logistic regression",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "정답별 점수 → 소프트맥스 → 확률",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/part2/index.html#stage"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/glm-logistic"
-    },
-    {
-     "@id": "lab:topic/logistic-regression"
-    }
-   ],
-   "lab:evaluatedBy": [
-    {
-     "@id": "lab:metric/accuracy"
-    }
-   ],
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:concept/hamming-threshold"
-    }
-   ],
-   "lab:evaluatedOn": [
-    {
-     "@id": "lab:dataset/stamp-prints"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/distance-metric",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "거리 척도",
-     "@language": "ko"
-    },
-    {
-     "@value": "Distance metric",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "두 점(사람·글·도시)이 얼마나 먼지 재는 자. 자를 바꾸면 같은 두 사람의 거리가 달라진다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/index.html#stage"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/distance-angle"
-    },
-    {
-     "@id": "lab:topic/metric-space"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/euclidean-distance",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "유클리드 거리",
-     "@language": "ko"
-    },
-    {
-     "@value": "Euclidean distance",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "곧게 잰 거리. 시아 (4, 0, 10)와 모아 (12, 5, 7)는 √98 = 9.899.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/index.html#stage"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/distance-angle"
-    },
-    {
-     "@id": "lab:topic/euclidean-space"
-    },
-    {
-     "@id": "lab:topic/knn"
-    }
-   ],
-   "lab:instanceOf": [
-    {
-     "@id": "lab:concept/distance-metric"
-    }
-   ],
-   "lab:specialCaseOf": [
-    {
-     "@id": "lab:concept/minkowski-distance"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/manhattan-distance"
-    },
-    {
-     "@id": "lab:concept/trilateration"
-    }
-   ],
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:concept/cosine-similarity"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/manhattan-distance",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "맨해튼 거리",
-     "@language": "ko"
-    },
-    {
-     "@value": "Manhattan distance",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "축을 따라 꺾어 걷는 거리. 8 + 5 + 3 = 16.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/index.html#stage"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/knn"
-    },
-    {
-     "@id": "lab:topic/metric-space"
-    },
-    {
-     "@id": "lab:topic/normed-spaces"
-    }
-   ],
-   "lab:instanceOf": [
-    {
-     "@id": "lab:concept/distance-metric"
-    }
-   ],
-   "lab:specialCaseOf": [
-    {
-     "@id": "lab:concept/minkowski-distance"
-    }
-   ],
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:concept/euclidean-distance"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/chebyshev-distance",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "체비쇼프 거리",
-     "@language": "ko"
-    },
-    {
-     "@value": "Chebyshev distance",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "가장 많이 움직인 축 하나의 거리. 8.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/index.html#stage"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/normed-spaces"
-    }
-   ],
-   "lab:instanceOf": [
-    {
-     "@id": "lab:concept/distance-metric"
-    }
-   ],
-   "lab:specialCaseOf": [
-    {
-     "@id": "lab:concept/minkowski-distance"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/minkowski-distance",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "민코프스키 거리",
-     "@language": "ko"
-    },
-    {
-     "@value": "Minkowski distance",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "p로 모양이 바뀌는 자. p = 1이면 맨해튼, 2면 유클리드, p를 키울수록 체비쇼프 8에 다가간다(p = 1.5·3·4·8: 11.501·8.724·8.324·8.023).",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/index.html#stage"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/normed-spaces"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/unit-ball",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "거리가 1인 면",
-     "@language": "ko"
-    },
-    {
-     "@value": "Unit ball of a norm",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "민코프스키 p마다 원점에서 거리 1인 점을 모은 면. p에 따라 마름모에서 구, 상자 모양으로 바뀐다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/index.html#stage"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/normed-spaces"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/minkowski-distance"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/haversine-distance",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "하버사인 거리",
-     "@language": "ko"
-    },
-    {
-     "@value": "Haversine distance",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "둥근 지구 위의 최단 거리. 서울–런던 8,857 km (지구 속 직선 8,161 km).",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/index.html#stage"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/geodesics"
-    }
-   ],
-   "lab:instanceOf": [
-    {
-     "@id": "lab:concept/distance-metric"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/metric-inequality",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "체비쇼프 ≤ 유클리드 ≤ 맨해튼",
-     "@language": "ko"
-    },
-    {
-     "@value": "Chebyshev ≤ Euclidean ≤ Manhattan",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "같은 두 점이면 이 순서가 늘 성립한다(8 ≤ 9.899 ≤ 16).",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/index.html#stage"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/normed-spaces"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:concept/minkowski-distance"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/review-clustering",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "비슷한 후기 묶기",
-     "@language": "ko"
-    },
-    {
-     "@value": "Grouping similar reviews",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "코사인으로 재면 후기 여섯 개가 표정(0.990)·도색(0.894)·배송(0.894) 세 묶음으로 모인다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/index.html#stage"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/clustering"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/word-count-vector",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "낱말 횟수 벡터",
-     "@language": "ko"
-    },
-    {
-     "@value": "Word-count vector",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "후기를 (표정, 도색, 배송) 낱말이 나온 횟수로 바꾼 벡터.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/index.html#stage"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/text-vectorization"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/cosine-similarity"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/hamming-distance",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "해밍 거리",
-     "@language": "ko"
-    },
-    {
-     "@value": "Hamming distance",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "같은 자리끼리 다른 점의 수. 박사 얼굴 도장 32×32 = 1,024점에서 시아 13점, 모아 67점.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/part2/index.html#stage"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/metric-space"
-    }
-   ],
-   "lab:instanceOf": [
-    {
-     "@id": "lab:concept/distance-metric"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/hamming-threshold"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/jaccard-index",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "자카드 지수",
-     "@language": "ko"
-    },
-    {
-     "@value": "Jaccard index",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "겹친 부분 ÷ 합친 부분. 피규어 블록 모형에서 모아 정품 0.996, 시아 해적판 0.705.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/part2/index.html#stage"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/sets"
-    }
-   ],
-   "lab:contrastsWith": [
-    {
-     "@id": "lab:concept/sorensen-dice"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/sorensen-dice",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "쇠렌센-다이스 계수",
-     "@language": "ko"
-    },
-    {
-     "@value": "Sørensen–Dice coefficient",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "겹친 부분 × 2 ÷ 두 크기의 합. 모아 정품 0.998, 시아 해적판 0.827.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/part2/index.html#stage"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/sets"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/set-overlap",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "집합 겹침",
-     "@language": "ko"
-    },
-    {
-     "@value": "Set overlap",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "두 블록 모형(24×24×24)을 블록 집합으로 보고 겹친 블록을 센다.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/part2/index.html#stage"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/sets"
-    }
-   ],
-   "lab:prerequisiteOf": [
-    {
-     "@id": "lab:concept/jaccard-index"
-    },
-    {
-     "@id": "lab:concept/sorensen-dice"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/hamming-threshold",
-   "@type": [
-    "skos:Concept",
-    "lab:Method"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "해밍 기준선 판정",
-     "@language": "ko"
-    },
-    {
-     "@value": "Hamming threshold rule",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "다른 점이 26점 이상이면 위작. 어려운 판에서 정확도 0.900.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/part2/index.html#stage"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/rule-vs-learning"
-    }
-   ],
-   "lab:evaluatedBy": [
-    {
-     "@id": "lab:metric/accuracy"
-    }
-   ]
-  },
-  {
-   "@id": "lab:concept/learning-curve",
-   "@type": [
-    "skos:Concept",
-    "lab:Concept"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "학습 곡선",
-     "@language": "ko"
-    },
-    {
-     "@value": "Learning curve",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "학습 장 수 2·4·8·16·600에서 정확도 0.695·0.820·0.850·1.000·1.000.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/part2/index.html#stage"
-   },
-   "lab:topic": [
-    {
-     "@id": "lab:topic/generalization"
-    }
-   ],
-   "lab:partOf": [
-    {
-     "@id": "lab:method/logistic-regression"
-    }
-   ]
-  },
-  {
-   "@id": "lab:dataset/stamp-prints",
-   "@type": [
-    "skos:Concept",
-    "lab:Dataset"
-   ],
-   "skos:prefLabel": [
-    {
-     "@value": "도장 인영 800장",
-     "@language": "ko"
-    },
-    {
-     "@value": "800 stamp prints",
-     "@language": "en"
-    }
-   ],
-   "skos:definition": {
-    "@value": "진품 인쇄 400장(누르는 힘·번짐·잉크 빠짐)과 위작 400장(새김 1px 어긋남), 학습 600 · 시험 200.",
-    "@language": "ko"
-   },
-   "rdfs:isDefinedBy": {
-    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/part2/index.html#stage"
-   }
-  },
-  {
    "@id": "lab:concept/limit-idea",
    "@type": [
     "skos:Concept",
@@ -1713,6 +993,726 @@
    },
    "rdfs:isDefinedBy": {
     "@id": "https://adminmrobo.github.io/adminmrobo-lhopital_lab/12_final_review.html#lv3"
+   }
+  },
+  {
+   "@id": "lab:concept/cosine-similarity",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "코사인 유사도",
+     "@language": "ko"
+    },
+    {
+     "@value": "cosine similarity",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "두 벡터가 이루는 각도의 코사인. −1(반대)~1(같은 방향) 값을 가지며 벡터의 길이는 무시한다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/embedding-space"
+    },
+    {
+     "@id": "lab:topic/inner-product-orthogonality"
+    },
+    {
+     "@id": "lab:topic/vectors-geometry"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/review-clustering"
+    }
+   ]
+  },
+  {
+   "@id": "lab:metric/accuracy",
+   "@type": [
+    "skos:Concept",
+    "lab:Metric"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "정확도",
+     "@language": "ko"
+    },
+    {
+     "@value": "Accuracy",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "맞힌 비율. 불균형 데이터에서 속기 쉽다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/part2/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/accuracy-metrics"
+    }
+   ]
+  },
+  {
+   "@id": "lab:method/logistic-regression",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "로지스틱 회귀 (다항)",
+     "@language": "ko"
+    },
+    {
+     "@value": "Multinomial logistic regression",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "정답별 점수 → 소프트맥스 → 확률",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/part2/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/glm-logistic"
+    },
+    {
+     "@id": "lab:topic/logistic-regression"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/accuracy"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:concept/hamming-threshold"
+    }
+   ],
+   "lab:evaluatedOn": [
+    {
+     "@id": "lab:dataset/stamp-prints"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/distance-metric",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "거리 척도",
+     "@language": "ko"
+    },
+    {
+     "@value": "Distance metric",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "두 점(사람·글·도시)이 얼마나 먼지 재는 자. 자를 바꾸면 같은 두 사람의 거리가 달라진다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/distance-angle"
+    },
+    {
+     "@id": "lab:topic/metric-space"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/euclidean-distance",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "유클리드 거리",
+     "@language": "ko"
+    },
+    {
+     "@value": "Euclidean distance",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "곧게 잰 거리. 시아 (4, 0, 10)와 모아 (12, 5, 7)는 √98 = 9.899.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/distance-angle"
+    },
+    {
+     "@id": "lab:topic/euclidean-space"
+    },
+    {
+     "@id": "lab:topic/knn"
+    }
+   ],
+   "lab:instanceOf": [
+    {
+     "@id": "lab:concept/distance-metric"
+    }
+   ],
+   "lab:specialCaseOf": [
+    {
+     "@id": "lab:concept/minkowski-distance"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/manhattan-distance"
+    },
+    {
+     "@id": "lab:concept/trilateration"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:concept/cosine-similarity"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/manhattan-distance",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "맨해튼 거리",
+     "@language": "ko"
+    },
+    {
+     "@value": "Manhattan distance",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "축을 따라 꺾어 걷는 거리. 8 + 5 + 3 = 16.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/knn"
+    },
+    {
+     "@id": "lab:topic/metric-space"
+    },
+    {
+     "@id": "lab:topic/normed-spaces"
+    }
+   ],
+   "lab:instanceOf": [
+    {
+     "@id": "lab:concept/distance-metric"
+    }
+   ],
+   "lab:specialCaseOf": [
+    {
+     "@id": "lab:concept/minkowski-distance"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:concept/euclidean-distance"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/chebyshev-distance",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "체비쇼프 거리",
+     "@language": "ko"
+    },
+    {
+     "@value": "Chebyshev distance",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "가장 많이 움직인 축 하나의 거리. 8.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/normed-spaces"
+    }
+   ],
+   "lab:instanceOf": [
+    {
+     "@id": "lab:concept/distance-metric"
+    }
+   ],
+   "lab:specialCaseOf": [
+    {
+     "@id": "lab:concept/minkowski-distance"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/minkowski-distance",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "민코프스키 거리",
+     "@language": "ko"
+    },
+    {
+     "@value": "Minkowski distance",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "p로 모양이 바뀌는 자. p = 1이면 맨해튼, 2면 유클리드, p를 키울수록 체비쇼프 8에 다가간다(p = 1.5·3·4·8: 11.501·8.724·8.324·8.023).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/normed-spaces"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/unit-ball",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "거리가 1인 면",
+     "@language": "ko"
+    },
+    {
+     "@value": "Unit ball of a norm",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "민코프스키 p마다 원점에서 거리 1인 점을 모은 면. p에 따라 마름모에서 구, 상자 모양으로 바뀐다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/normed-spaces"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/minkowski-distance"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/haversine-distance",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "하버사인 거리",
+     "@language": "ko"
+    },
+    {
+     "@value": "Haversine distance",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "둥근 지구 위의 최단 거리. 서울–런던 8,857 km (지구 속 직선 8,161 km).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/geodesics"
+    }
+   ],
+   "lab:instanceOf": [
+    {
+     "@id": "lab:concept/distance-metric"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/metric-inequality",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "체비쇼프 ≤ 유클리드 ≤ 맨해튼",
+     "@language": "ko"
+    },
+    {
+     "@value": "Chebyshev ≤ Euclidean ≤ Manhattan",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "같은 두 점이면 이 순서가 늘 성립한다(8 ≤ 9.899 ≤ 16).",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/normed-spaces"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:concept/minkowski-distance"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/review-clustering",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "비슷한 후기 묶기",
+     "@language": "ko"
+    },
+    {
+     "@value": "Grouping similar reviews",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "코사인으로 재면 후기 여섯 개가 표정(0.990)·도색(0.894)·배송(0.894) 세 묶음으로 모인다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/clustering"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/word-count-vector",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "낱말 횟수 벡터",
+     "@language": "ko"
+    },
+    {
+     "@value": "Word-count vector",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "후기를 (표정, 도색, 배송) 낱말이 나온 횟수로 바꾼 벡터.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/text-vectorization"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/cosine-similarity"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/hamming-distance",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "해밍 거리",
+     "@language": "ko"
+    },
+    {
+     "@value": "Hamming distance",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "같은 자리끼리 다른 점의 수. 박사 얼굴 도장 32×32 = 1,024점에서 시아 13점, 모아 67점.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/part2/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/metric-space"
+    }
+   ],
+   "lab:instanceOf": [
+    {
+     "@id": "lab:concept/distance-metric"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/hamming-threshold"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/jaccard-index",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "자카드 지수",
+     "@language": "ko"
+    },
+    {
+     "@value": "Jaccard index",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "겹친 부분 ÷ 합친 부분. 피규어 블록 모형에서 모아 정품 0.996, 시아 해적판 0.705.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/part2/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/sets"
+    }
+   ],
+   "lab:contrastsWith": [
+    {
+     "@id": "lab:concept/sorensen-dice"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/sorensen-dice",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "쇠렌센-다이스 계수",
+     "@language": "ko"
+    },
+    {
+     "@value": "Sørensen–Dice coefficient",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "겹친 부분 × 2 ÷ 두 크기의 합. 모아 정품 0.998, 시아 해적판 0.827.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/part2/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/sets"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/set-overlap",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "집합 겹침",
+     "@language": "ko"
+    },
+    {
+     "@value": "Set overlap",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "두 블록 모형(24×24×24)을 블록 집합으로 보고 겹친 블록을 센다.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/part2/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/sets"
+    }
+   ],
+   "lab:prerequisiteOf": [
+    {
+     "@id": "lab:concept/jaccard-index"
+    },
+    {
+     "@id": "lab:concept/sorensen-dice"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/hamming-threshold",
+   "@type": [
+    "skos:Concept",
+    "lab:Method"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "해밍 기준선 판정",
+     "@language": "ko"
+    },
+    {
+     "@value": "Hamming threshold rule",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "다른 점이 26점 이상이면 위작. 어려운 판에서 정확도 0.900.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/part2/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/rule-vs-learning"
+    }
+   ],
+   "lab:evaluatedBy": [
+    {
+     "@id": "lab:metric/accuracy"
+    }
+   ]
+  },
+  {
+   "@id": "lab:concept/learning-curve",
+   "@type": [
+    "skos:Concept",
+    "lab:Concept"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "학습 곡선",
+     "@language": "ko"
+    },
+    {
+     "@value": "Learning curve",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "학습 장 수 2·4·8·16·600에서 정확도 0.695·0.820·0.850·1.000·1.000.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/part2/index.html#stage"
+   },
+   "lab:topic": [
+    {
+     "@id": "lab:topic/generalization"
+    }
+   ],
+   "lab:partOf": [
+    {
+     "@id": "lab:method/logistic-regression"
+    }
+   ]
+  },
+  {
+   "@id": "lab:dataset/stamp-prints",
+   "@type": [
+    "skos:Concept",
+    "lab:Dataset"
+   ],
+   "skos:prefLabel": [
+    {
+     "@value": "도장 인영 800장",
+     "@language": "ko"
+    },
+    {
+     "@value": "800 stamp prints",
+     "@language": "en"
+    }
+   ],
+   "skos:definition": {
+    "@value": "진품 인쇄 400장(누르는 힘·번짐·잉크 빠짐)과 위작 400장(새김 1px 어긋남), 학습 600 · 시험 200.",
+    "@language": "ko"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://adminmrobo.github.io/Distance-metrics-tutorial/part2/index.html#stage"
    }
   },
   {
