@@ -1,6 +1,6 @@
 # ahnboat lab 온톨로지 — 통계·데이터 기초 (1/2)
-생성 AI가 한 번에 읽도록 나눈 1/2. 전체는 https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/statistics-data-basics.xml. 통계·데이터 기초 분야 공개 콘텐츠의 최신 지식 색인(개념·정의·관계). 기준일 2026-11-28. 확률분포, 추정, 시계열, 베이지안 통계와 파이썬·판다스·데이터베이스·데이터 시각화로 데이터 분석의 기초 체력을 기릅니다.
-기준: Sat, 28 Nov 2026 00:00:00 +0900 · 라이선스 CC BY-NC 4.0 · 원본 RSS: https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/statistics-data-basics-p1.xml
+생성 AI가 한 번에 읽도록 나눈 1/2. 전체는 https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/statistics-data-basics.xml. 통계·데이터 기초 분야 공개 콘텐츠의 최신 지식 색인(개념·정의·관계). 기준일 2026-11-29. 확률분포, 추정, 시계열, 베이지안 통계와 파이썬·판다스·데이터베이스·데이터 시각화로 데이터 분석의 기초 체력을 기릅니다.
+기준: Sun, 29 Nov 2026 00:00:00 +0900 · 라이선스 CC BY-NC 4.0 · 원본 RSS: https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/statistics-data-basics-p1.xml
 
 
 ## 확률 vs 가능도(우도) — 초파리의 케이크 상자 | 고급통계 연구실

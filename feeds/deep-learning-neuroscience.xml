@@ -3,9 +3,9 @@
   <channel>
     <title>ahnboat lab 온톨로지 — 딥러닝·뇌과학</title>
     <link>https://adminmrobo.github.io/ahnboat_ontology_feed/</link>
-    <description>딥러닝·뇌과학 분야 공개 콘텐츠의 최신 지식 색인(개념·정의·관계). 기준일 2026-11-28. 신경망이 어떻게 배우는지, 그리고 초파리 뇌 연구가 딥러닝에 주는 힌트를 함께 따라갑니다.</description>
+    <description>딥러닝·뇌과학 분야 공개 콘텐츠의 최신 지식 색인(개념·정의·관계). 기준일 2026-11-29. 신경망이 어떻게 배우는지, 그리고 초파리 뇌 연구가 딥러닝에 주는 힌트를 함께 따라갑니다.</description>
     <language>ko</language>
-    <lastBuildDate>Sat, 28 Nov 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 29 Nov 2026 00:00:00 +0900</lastBuildDate>
     <ttl>720</ttl>
     <copyright>CC BY-NC 4.0 · 안상선 ((주)M-Robo)</copyright>
     <atom:link href="https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/deep-learning-neuroscience.xml" rel="self" type="application/rss+xml"/>

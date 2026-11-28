@@ -1,6 +1,6 @@
 # ahnboat lab 온톨로지 — 인공지능 응용
-인공지능 응용 분야 공개 콘텐츠의 최신 지식 색인(개념·정의·관계). 기준일 2026-11-28. 제조 공정, 경영·회계, 생성형 AI 업무 활용, 이상탐지처럼 AI를 실제 현장 문제에 적용한 강의와 연구입니다.
-기준: Sat, 28 Nov 2026 00:00:00 +0900 · 라이선스 CC BY-NC 4.0 · 원본 RSS: https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/applied-ai.xml
+인공지능 응용 분야 공개 콘텐츠의 최신 지식 색인(개념·정의·관계). 기준일 2026-11-29. 제조 공정, 경영·회계, 생성형 AI 업무 활용, 이상탐지처럼 AI를 실제 현장 문제에 적용한 강의와 연구입니다.
+기준: Sun, 29 Nov 2026 00:00:00 +0900 · 라이선스 CC BY-NC 4.0 · 원본 RSS: https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/applied-ai.xml
 
 
 ## AI로 풀어보는 게임 시리즈 — 연구실 식구들과 게임으로 배우는 AI

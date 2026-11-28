@@ -3,9 +3,9 @@
   <channel>
     <title>ahnboat lab 온톨로지 — 인공지능 응용 (2/2)</title>
     <link>https://adminmrobo.github.io/ahnboat_ontology_feed/</link>
-    <description>생성 AI가 한 번에 읽도록 나눈 2/2. 전체는 https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/applied-ai.xml. 인공지능 응용 분야 공개 콘텐츠의 최신 지식 색인(개념·정의·관계). 기준일 2026-11-28. 제조 공정, 경영·회계, 생성형 AI 업무 활용, 이상탐지처럼 AI를 실제 현장 문제에 적용한 강의와 연구입니다.</description>
+    <description>생성 AI가 한 번에 읽도록 나눈 2/2. 전체는 https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/applied-ai.xml. 인공지능 응용 분야 공개 콘텐츠의 최신 지식 색인(개념·정의·관계). 기준일 2026-11-29. 제조 공정, 경영·회계, 생성형 AI 업무 활용, 이상탐지처럼 AI를 실제 현장 문제에 적용한 강의와 연구입니다.</description>
     <language>ko</language>
-    <lastBuildDate>Sat, 28 Nov 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 29 Nov 2026 00:00:00 +0900</lastBuildDate>
     <ttl>720</ttl>
     <copyright>CC BY-NC 4.0 · 안상선 ((주)M-Robo)</copyright>
     <atom:link href="https://adminmrobo.github.io/ahnboat_ontology_feed/feeds/applied-ai-p2.xml" rel="self" type="application/rss+xml"/>
